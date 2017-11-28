@@ -1,0 +1,16 @@
+{
+  "name": "Dimagi.com",
+  "description": "Dimagi's main website.",
+  "image": "heroku/python",
+  "repository": "https://github.com/dimagi/dimagi.com",
+  "keywords": ["python", "django" ],
+  "addons": [ "heroku-postgresql" ],
+  "environments": {
+    "test": {
+      "scripts": {
+        "test-setup": "python manage.py collectstatic --noinput",
+        "test": "python manage.py test"
+      }
+    }
+  }
+}
