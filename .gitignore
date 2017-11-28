@@ -102,3 +102,10 @@ ENV/
 
 # PyCharm
 .idea/*
+
+#Logging
+.log/*
+
+*.pyc
+staticfiles
+db.sqlite3
