@@ -1,0 +1,15 @@
+{
+  "name": "Dimagi.com",
+  "version": "0.0.1",
+  "repository": "https://github.com/dimagi/dimagi.com",
+  "description": "Dimagi.com Company Website",
+  "private": true,
+  "license": "UNLICENSED",
+  "dependencies": {
+    "eslint": "^4.12.0",
+    "lodash": "^4.17.4",
+    "jquery": "^3.2.1",
+    "knockout": "^3.4.2",
+    "blazy": "^1.8.2"
+  }
+}
