@@ -39,7 +39,6 @@ ENV/
 
 staticfiles/*
 db.sqlite3
-
 node_modules/*
-
 .sass-cache/*
+/resource_versions.py
