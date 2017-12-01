@@ -88,15 +88,16 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 # Allow all host headers
 ALLOWED_HOSTS = ['*']
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/1.8/howto/static-files/
+STATIC_ASSETS = os.path.join(PROJECT_ROOT, 'assets')
+STATIC_LIBS = os.path.join(PROJECT_ROOT, 'node_modules')
 
+# Static files (CSS, JavaScript, Images)
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
 STATIC_URL = '/static/'
-
-# Extra places for collectstatic to find static files.
+STATIC_CDN = ''
 STATICFILES_DIRS = (
-    os.path.join(PROJECT_ROOT, 'node_modules'),
+    STATIC_ASSETS,
+    ('js/lib', STATIC_LIBS),
 )
 STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.FileSystemFinder',
