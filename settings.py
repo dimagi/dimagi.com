@@ -105,7 +105,12 @@ STATICFILES_FINDERS = [
     'sass_processor.finders.CssFinder',
 ]
 
-# SASS
+# SASS Processor
+SASS_ASSETS = os.path.join(STATIC_ASSETS, 'scss')
+SASS_PROCESSOR_INCLUDE_DIRS = [
+    SASS_ASSETS,
+    STATIC_LIBS,
+]
 SASS_PRECISION = 8
 
 # Django Compressor
