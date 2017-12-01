@@ -1,0 +1,22 @@
+{
+    "browser": true,
+    "asi": false,
+    "bitwise": true,
+    "boss": false,
+    "eqeqeq": true,
+    "evil": false,
+    "forin": false,
+    "immed": true,
+    "latedef": "nofunc",
+    "laxbreak": false,
+    "loopfunc": true,
+    "noarg": true,
+    "nonew": true,
+    "undef": true,
+    "unused": "vars",
+    "globals": {
+        "define": false,
+        "require": false,
+        "requirejs": false
+    }
+}
