@@ -29,6 +29,7 @@ THIRD_PARTY_APPS = (
     'sass_processor',
 )
 PROJECT_APPS = (
+    'dimagi.utils',
     'dimagi.pages',
 )
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + PROJECT_APPS
