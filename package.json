@@ -1,15 +1,24 @@
 {
   "name": "Dimagi.com",
   "version": "0.0.1",
-  "repository": "https://github.com/dimagi/dimagi.com",
-  "description": "Dimagi.com Company Website",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dimagi/dimagi.com.git"
+  },
+  "author": {
+    "name": "Biyeun Buczyk",
+    "email": "biyeun@gmail.com"
+  },
+  "description": "Dimagi Company Website",
   "private": true,
   "license": "UNLICENSED",
   "dependencies": {
-    "eslint": "^4.12.0",
-    "lodash": "^4.17.4",
+    "blazy": "^1.8.2",
     "jquery": "^3.2.1",
+    "jshint": "^2.9.5",
     "knockout": "^3.4.2",
-    "blazy": "^1.8.2"
+    "lodash": "^4.17.4",
+    "requirejs": "^2.3.5",
+    "rjs": "^4.0.2"
   }
 }
