@@ -20,17 +20,19 @@ TEST_RUNNER = 'dimagi.heroku_test_runner.HerokuDiscoverRunner'
 
 
 # Application definition
-
-INSTALLED_APPS = (
+DJANGO_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
-    'sass_processor',
+)
+THIRD_PARTY_APPS = (
     'compressor',
-
+    'sass_processor',
+)
+PROJECT_APPS = (
     'dimagi.pages',
 )
+INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + PROJECT_APPS
 
 MIDDLEWARE_CLASSES = (
     # Simplified static file serving.
