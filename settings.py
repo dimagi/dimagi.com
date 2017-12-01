@@ -26,7 +26,6 @@ DJANGO_APPS = (
     'django.contrib.staticfiles',
 )
 THIRD_PARTY_APPS = (
-    'compressor',
     'sass_processor',
 )
 PROJECT_APPS = (
@@ -113,8 +112,6 @@ SASS_PROCESSOR_INCLUDE_DIRS = [
 ]
 SASS_PRECISION = 8
 
-# Django Compressor
-COMPRESS_ENABLED = True
 
 # Caching Services
 CACHES = {
