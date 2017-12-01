@@ -116,3 +116,14 @@ SASS_PRECISION = 8
 # Django Compressor
 COMPRESS_ENABLED = True
 
+# Caching Services
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
+        'LOCATION': '127.0.0.1:11211',
+    }
+}
+if not DEBUG:
+    CACHES['default'] = {
+        'BACKEND': 'django_bmemcached.memcached.BMemcached',
+    }
