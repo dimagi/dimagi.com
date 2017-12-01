@@ -10,9 +10,11 @@ dj-database-url = "*"
 Django = "*"
 gunicorn = "*"
 "psycopg2" = "*"
-whitenoise = "*"
 django_compressor = "*"
 django-sass-processor = "*"
+PyYAML = "*"
+python-memcached = "*"
+django-bmemcached = "*"
 
 
 [requires]
