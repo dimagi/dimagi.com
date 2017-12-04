@@ -1,4 +1,4 @@
-from django.contrib.auth.models import AnonymousUser, User
+from __future__ import absolute_import
 from django.test import TestCase, RequestFactory
 
 from dimagi.pages.views import home
@@ -12,7 +12,6 @@ class SimpleTest(TestCase):
     def test_details(self):
         # Create an instance of a GET request.
         request = self.factory.get('/')
-        request.user = AnonymousUser()
 
         # Test my_view() as if it were deployed at /customer/details
         response = home(request)

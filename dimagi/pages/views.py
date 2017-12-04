@@ -1,3 +1,4 @@
+from __future__ import absolute_import
 from django.shortcuts import render
 from dimagi.utils.decorators import no_index
 
