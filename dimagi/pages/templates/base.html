@@ -8,6 +8,9 @@
   <body>
     {% block content %}{% endblock %}
 
+    <script>
+      var STATIC_CDN = "{{ STATIC_CDN }}";
+    </script>
     <script src="{% static 'js/lib/requirejs/require.js' %}"></script>
     <script src="{% static 'js/requirejs-config.js' %}"></script>
 

@@ -1,5 +1,6 @@
+/* globals STATIC_CDN */
 requirejs.config({
-  baseUrl: '/static/js/',
+  baseUrl: STATIC_CDN + '/static/js/',
   paths: {
     "lib/jquery": "lib/jquery/jquery.min",
     "lib/knockout": "lib/knockout/knockout-latest",

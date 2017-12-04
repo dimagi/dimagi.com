@@ -53,6 +53,7 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.i18n',
                 'django.template.context_processors.static',
+                'dimagi.utils.context_processors.global_vars',
             ],
             'loaders': [
                 'django.template.loaders.filesystem.Loader',
