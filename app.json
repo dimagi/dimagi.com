@@ -4,7 +4,7 @@
   "image": "heroku/python",
   "repository": "https://github.com/dimagi/dimagi.com",
   "keywords": ["python", "django" ],
-  "addons": [ "heroku-postgresql" ],
+  "addons": [ "heroku-postgresql", "heroku-redis" ],
   "environments": {
     "test": {
       "scripts": {
