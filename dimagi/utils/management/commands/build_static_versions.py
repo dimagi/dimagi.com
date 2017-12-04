@@ -27,6 +27,8 @@ class Command(BaseCommand):
                     url = path
                 else:
                     url = os.path.join(storage.prefix, path)
+                if url.endswith('.scss'):
+                    continue
                 filename = os.path.join(storage.location, path)
                 resources[url] = self.get_hash(filename)
         self.output_resources(resources)
