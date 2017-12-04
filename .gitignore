@@ -23,7 +23,7 @@ coverage.xml
 *.pot
 
 # dotenv
-.env
+.env*
 
 # virtualenv
 .venv
@@ -42,3 +42,6 @@ db.sqlite3
 node_modules/*
 .sass-cache/*
 /static_versions.py
+assets/style/*.css
+
+dump.rdb
