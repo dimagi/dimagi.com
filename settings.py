@@ -1,38 +1,35 @@
 import os
-import dj_database_url
+import environ
 
+root = environ.Path(os.path.dirname(os.path.abspath(__file__)))
+base_dir = environ.Path(os.path.dirname(os.path.dirname(__file__)))
+env = environ.Env()
+env.read_env('.env')  # also reads from os.environ
 
-# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(__file__))
-PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+BASE_DIR = base_dir()
+PROJECT_ROOT = root()
 
+SECRET_KEY = env('SECRET_KEY', default='changeme')
+DEBUG = env.bool('DEBUG', default=False)
+AWS_ENABLED = env.bool('AWS_ENABLED', default=False)
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
-
-# SECURITY WARNING: change this before deploying to production!
-SECRET_KEY = 'i+acxn5(akgsn!sr4^qgf(^m&*@+g1@u^t@=8s@axc41ml*f=s'
-
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-TEST_RUNNER = 'dimagi.heroku_test_runner.HerokuDiscoverRunner'
-
-
-# Application definition
-DJANGO_APPS = (
+DEFAULT_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-)
-THIRD_PARTY_APPS = (
+]
+
+THIRD_PARTY_APPS = [
     'sass_processor',
-)
-PROJECT_APPS = (
+]
+if AWS_ENABLED:
+    THIRD_PARTY_APPS.append('storages')
+
+PROJECT_APPS = [
     'dimagi.utils',
     'dimagi.pages',
-)
-INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + PROJECT_APPS
+]
+INSTALLED_APPS = DEFAULT_APPS + THIRD_PARTY_APPS + PROJECT_APPS
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -68,14 +65,11 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'dimagi.wsgi.application'
 
-# Database
-# https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 # We aren't going to use a database just yet. Simplify.
 DATABASES = {}
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
-
 LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'UTC'
 USE_I18N = True
@@ -88,16 +82,16 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 # Allow all host headers
 ALLOWED_HOSTS = ['*']
 
-STATIC_ASSETS = os.path.join(PROJECT_ROOT, 'assets')
-STATIC_LIBS = os.path.join(PROJECT_ROOT, 'node_modules')
-
 # Static files (CSS, JavaScript, Images)
-STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
-STATIC_URL = '/static/'
-STATIC_CDN = ''
+static_assets_root = root.path('assets/')
+STATIC_ASSETS = static_assets_root()
+static_libs = root.path('node_modules/')
 STATICFILES_DIRS = (
     STATIC_ASSETS,
-    ('js/lib', STATIC_LIBS),
+    ('js/lib/blazy', static_libs('blazy')),
+    ('js/lib/jquery', static_libs('jquery/dist')),
+    ('js/lib/knockout', static_libs('knockout/build/output')),
+    ('js/lib/lodash', static_libs('lodash')),
 )
 STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.FileSystemFinder',
@@ -105,23 +99,30 @@ STATICFILES_FINDERS = [
     'sass_processor.finders.CssFinder',
 ]
 
-# SASS Processor
-SASS_ASSETS = os.path.join(STATIC_ASSETS, 'scss')
+STATIC_ROOT = root('staticfiles')
+STATIC_URL = env.str('STATIC_URL', default='/static/')
+STATIC_CDN = env.str('STATIC_CDN', default='')
+
+if AWS_ENABLED:
+    STATICFILES_STORAGE = env.str('STATICFILES_STORAGE', default='dimagi.storage.CachedS3BotoStorage')
+    COMPRESS_STORAGE = STATICFILES_STORAGE
+
+SASS_ASSETS = static_assets_root('style')
 SASS_PROCESSOR_INCLUDE_DIRS = [
     SASS_ASSETS,
-    STATIC_LIBS,
 ]
 SASS_PRECISION = 8
+SASS_PROCESSOR_ENABLED = True
 
+AWS_STORAGE_BUCKET_NAME = env.str('AWS_STORAGE_BUCKET_NAME', default='')
 
-# Caching Services
+if AWS_ENABLED:
+    AWS_ACCESS_KEY_ID = env.str('AWS_ACCESS_KEY_ID', default='')
+    AWS_SECRET_ACCESS_KEY = env.str('AWS_SECRET_ACCESS_KEY', default='')
+    AWS_S3_REGION_NAME = env.str('AWS_S3_REGION_NAME', default='')
+    AWS_S3_CUSTOM_DOMAIN = env.str('AWS_S3_CUSTOM_DOMAIN', default='')
+    AWS_LOCATION = STATIC_URL
+
 CACHES = {
-    'default': {
-        'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
-        'LOCATION': '127.0.0.1:11211',
-    }
+    'default': env.cache('REDIS_URL'),
 }
-if not DEBUG:
-    CACHES['default'] = {
-        'BACKEND': 'django_bmemcached.memcached.BMemcached',
-    }
