@@ -1,5 +1,15 @@
 {% extends "base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block stylesheets %}
+  <link href="{% sass_src 'style/pages/home.scss' %}" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+{% block js %}
+  <script src="{% static 'js/main.js' %}"></script>
+{% endblock %}
 
 {% block content %}
-Dimagi.com
+  <p class="dimagi-test">Dimagi.com</p>
 {% endblock %}
