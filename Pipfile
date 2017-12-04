@@ -7,14 +7,18 @@ verify_ssl = true
 [packages]
 
 dj-database-url = "*"
-Django = "*"
+django = "*"
 gunicorn = "*"
 "psycopg2" = "*"
-django_compressor = "*"
+django-compressor = "*"
 django-sass-processor = "*"
-PyYAML = "*"
+pyyaml = "*"
 python-memcached = "*"
-django-bmemcached = "*"
+django-environ = "*"
+boto = "*"
+"boto3" = "*"
+django-storages = "*"
+django-redis = "*"
 
 
 [requires]
