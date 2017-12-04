@@ -1,8 +1,8 @@
 requirejs.config({
   baseUrl: '/static/js/',
   paths: {
-    "lib/jquery": "lib/jquery/dist/jquery.min",
-    "lib/knockout": "lib/knockout/build/output/knockout-latest",
+    "lib/jquery": "lib/jquery/jquery.min",
+    "lib/knockout": "lib/knockout/knockout-latest",
     "lib/blazy": "lib/blazy/blazy",
     "lib/lodash": "lib/lodash/lodash"
   },
