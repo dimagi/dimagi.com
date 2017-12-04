@@ -1,5 +1,4 @@
 from __future__ import absolute_import
-from storages.backends.s3boto3 import S3Boto3Storage
 from dimagi.utils.config import setting
 from django.core.files.storage import get_storage_class
 from sass_processor.storage import SassS3Boto3Storage
