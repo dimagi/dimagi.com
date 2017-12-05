@@ -112,6 +112,7 @@ if AWS_ENABLED:
 SASS_ASSETS = static_assets_root('style')
 SASS_PROCESSOR_INCLUDE_DIRS = [
     SASS_ASSETS,
+    static_libs('bourbon/app/assets/stylesheets'),
 ]
 SASS_PRECISION = 8
 SASS_PROCESSOR_ENABLED = True
