@@ -1,0 +1,108 @@
+.badge {
+    display: inline-block;
+    padding: 6px 15px 7px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 999em;
+    font-size: 11px;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    color: #969799;
+    border-color: #e0e0e0
+}
+
+.chrome-android .badge {
+    white-space: nowrap
+}
+
+.badge.small {
+    padding-left: 9px;
+    padding-right: 9px
+}
+
+.badge.filled {
+    color: #fff;
+    border-color: #5f6a7d;
+    background-color: #5f6a7d
+}
+
+.badge.inverted,
+.inverted .badge {
+    color: #fff;
+    border-color: #fff
+}
+
+.badge.inverted.filled,
+.inverted .badge.filled {
+    color: #5f6a7d;
+    border-color: #fff;
+    background-color: #fff
+}
+
+.purple-theme .badge {
+    color: #8033cc;
+    border-color: #8033cc
+}
+
+.purple-theme .badge.filled {
+    color: #fff;
+    border-color: #8033cc;
+    background-color: #8033cc
+}
+
+.purple-theme .inverted .badge {
+    color: #fff;
+    border-color: #fff
+}
+
+.purple-theme .inverted .badge.filled {
+    color: #8033cc;
+    border-color: #fff;
+    background-color: #fff
+}
+
+.badge.badge-default {
+    color: #969799;
+    border-color: #e0e0e0
+}
+
+.badge.badge-default.filled {
+    color: #fff;
+    border-color: #5f6a7d;
+    background-color: #5f6a7d
+}
+
+.inverted .badge.badge-default {
+    color: #fff;
+    border-color: #fff
+}
+
+.inverted .badge.badge-default.filled {
+    color: #5f6a7d;
+    border-color: #fff;
+    background-color: #fff
+}
+
+.badge.badge-purple {
+    color: #8033cc;
+    border-color: #8033cc
+}
+
+.badge.badge-purple.filled {
+    color: #fff;
+    border-color: #8033cc;
+    background-color: #8033cc
+}
+
+.inverted .badge.badge-purple {
+    color: #fff;
+    border-color: #fff
+}
+
+.inverted .badge.badge-purple.filled {
+    color: #8033cc;
+    border-color: #fff;
+    background-color: #fff
+}

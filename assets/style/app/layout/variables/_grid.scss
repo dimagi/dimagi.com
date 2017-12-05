@@ -1,0 +1,30 @@
+$grid-spaces: (
+  base:   5px   0px,  // side, gap
+  line:   10px  10px,
+  small:  15px  20px,
+  medium: 30px  50px,
+  large:  40px  70px,
+  none:   0px   -10px,
+);
+
+$grid-sizes: (
+  extra-small: 374px,
+  small: 480px,
+  medium: 718px,
+  large: 1024px,
+  extra-large: 1292px,
+);
+
+$grid-align: (
+  left: flex-start,
+  center: center,
+  right: flex-end,
+  justify: space-between,
+);
+
+$grid-valign: (
+  left: flex-start,
+  center: center,
+  right: flex-end,
+  justify: flex-start,
+);

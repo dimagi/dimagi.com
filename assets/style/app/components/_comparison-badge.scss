@@ -1,0 +1,65 @@
+.comparison-badge>.column:first-child {
+    position: relative
+}
+
+.comparison-badge>.column:first-child:after {
+    content: attr(data-badge-content);
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: absolute;
+    z-index: 100;
+    top: 100%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 400;
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    background-color: #fff;
+    border: 1px dashed #636466
+}
+
+@media (min-width: 718px) {
+    .comparison-badge>.column:first-child:after {
+        top: 50%;
+        left: 100%
+    }
+}
+
+.purple-theme .comparison-badge>.column:first-child:after {
+    border-style: solid;
+    border-color: #8033cc;
+    color: #8033cc
+}
+
+@media (min-width: 718px) {
+    .comparison-badge-valign-top>.column:first-child:after {
+        top: 0%
+    }
+}
+
+@media (min-width: 718px) {
+    .comparison-badge-valign-middle>.column:first-child:after {
+        top: 50%
+    }
+}
+
+@media (min-width: 718px) {
+    .comparison-badge-valign-bottom>.column:first-child:after {
+        top: 100%
+    }
+}

@@ -1,0 +1,34 @@
+.grid-testimonial {
+    color: #2e3b4e
+}
+
+.grid-testimonial blockquote,
+.grid-testimonial .callout {
+    color: inherit;
+    padding: 30px;
+    margin-bottom: 0
+}
+
+@media (min-width: 718px) {
+    .grid-testimonial [class*="aspect-ratio-"] blockquote,
+    .grid-testimonial [class*="aspect-ratio-"] .callout {
+        font-size: 16px;
+        line-height: 22px
+    }
+}
+
+@media (min-width: 1024px) {
+    .grid-testimonial [class*="aspect-ratio-"] blockquote,
+    .grid-testimonial [class*="aspect-ratio-"] .callout {
+        font-size: 20px;
+        line-height: 30px
+    }
+}
+
+@media (min-width: 1292px) {
+    .grid-testimonial [class*="aspect-ratio-"] blockquote,
+    .grid-testimonial [class*="aspect-ratio-"] .callout {
+        font-size: 24px;
+        line-height: 30px
+    }
+}

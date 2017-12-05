@@ -1,0 +1,100 @@
+@import "app/layout/variables/grid";
+@import "variables/colors";
+@import "variables/headings";
+@import "variables/base";
+
+$min-width-lg: map-get($grid-sizes, large);
+
+h1, .h1 {
+  font-size: $font-size-h1;
+  line-height: $h-line-height;
+  margin-bottom: $base-margin;
+}
+
+@media (min-width: $min-width-lg) {
+  h1, .h1 {
+    font-size: $font-size-h1-lg;
+    line-height: $h-line-height-lg;
+    margin-bottom: $base-margin;
+  }
+}
+
+h2, .h2 {
+  font-size: $font-size-h2;
+  line-height: $h-line-height;
+  margin-bottom: $base-margin;
+}
+
+@media (min-width: $min-width-lg) {
+  h2, .h2 {
+    font-size: $font-size-h2-lg;
+    line-height: $h-line-height-lg;
+    margin-bottom: $base-margin;
+  }
+}
+
+h3, .h3 {
+  font-size: $font-size-h3;
+  line-height: $h-line-height;
+  margin-bottom: $base-margin;
+}
+
+@media (min-width: $min-width-lg) {
+  h3, .h3 {
+    font-size: $font-size-h3-lg;
+    line-height: $h-line-height;
+    margin-bottom: $base-margin;
+  }
+}
+
+h4, .h4 {
+  font-size: $font-size-h4;
+  line-height: $base-line-height;
+  margin-bottom: $base-margin;
+}
+
+h5, .h5 {
+  font-size: $font-size-h5;
+  line-height: $base-line-height;
+  margin-bottom: $base-margin/2;
+}
+
+h6, .h6 {
+  font-size: $font-size-h5;
+  line-height: $base-line-height;
+  margin-bottom: $base-margin/2;
+}
+
+h1, .h1, h2, .h2, h3, .h3 {
+  font-weight: 300;
+}
+
+h4, .h4, h5, .h5 {
+  font-weight: 400;
+}
+
+h6, .h6 {
+  font-weight: 600;
+}
+
+h6 strong, .h6 strong,
+h6 b, .h6 b {
+  font-weight: 700;
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  color: $color-text;
+}
+
+h1.inverted, .inverted.h1, .inverted h1, .inverted .h1,
+h2.inverted, .inverted.h2, .inverted h2, .inverted .h2,
+h3.inverted, .inverted.h3, .inverted h3, .inverted .h3,
+h4.inverted, .inverted.h4, .inverted h4, .inverted .h4,
+h5.inverted, .inverted.h5, .inverted h5, .inverted .h5,
+h6.inverted, .inverted.h6, .inverted h6, .inverted .h6 {
+  color: $color-white;
+}
+
+h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a, h6 a, .h6 a {
+  font-weight: inherit;
+}

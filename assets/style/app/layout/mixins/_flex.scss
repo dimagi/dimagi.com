@@ -1,0 +1,60 @@
+@mixin flex-box($important: false) {
+  display: -webkit-box if($important, !important, null);
+  display: -webkit-flex if($important, !important, null);
+  display: -ms-flexbox if($important, !important, null);
+  display: flex if($important, !important, null);
+}
+
+@mixin flex-wrap($wrap) {
+  -webkit-flex-wrap: $wrap;
+  -ms-flex-wrap: $wrap;
+  flex-wrap: $wrap;
+}
+
+@mixin flex-initial() {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+}
+
+@mixin flex-no-shrink() {
+  -webkit-flex-shrink: 0 !important;
+  -ms-flex-negative: 0 !important;
+  flex-shrink: 0 !important;
+}
+
+@mixin flex-row-reverse() {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+$flex-justify-aliases: (
+  flex-start: flex,
+  center: center,
+  flex-end: end,
+  space-between: justify,
+);
+
+@mixin justify-content($content, $important: true) {
+  -webkit-box-pack: map-get($flex-justify-aliases, $content) if($important, !important, null);
+  -webkit-justify-content: $content if($important, !important, null);
+  -ms-flex-pack: map-get($flex-justify-aliases, $content) if($important, !important, null);
+  justify-content: $content if($important, !important, null);
+}
+
+@mixin align-content($content, $important: true) {
+  -webkit-align-content: $content if($important, !important, null);
+  -ms-flex-line-pack: map-get($flex-justify-aliases, $content) if($important, !important, null);
+  align-content: $content if($important, !important, null);
+}
+
+@mixin align-items($items, $important: true) {
+  -webkit-box-align: map-get($flex-justify-aliases, $items) if($important, !important, null);
+  -webkit-align-items: $items if($important, !important, null);
+  -ms-flex-align: map-get($flex-justify-aliases, $items) if($important, !important, null);
+  align-items: $items if($important, !important, null);
+}

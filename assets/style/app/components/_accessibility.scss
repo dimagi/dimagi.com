@@ -1,0 +1,12 @@
+[role="tabpanel"],
+[role="tabpanel"][aria-hidden="true"] {
+    display: none
+}
+
+[role="tabpanel"][aria-hidden="false"] {
+    display: block
+}
+
+a[role="tab"][aria-selected="false"]:not(:hover):not(:focus):not(:active) {
+    color: #8f8f8f
+}

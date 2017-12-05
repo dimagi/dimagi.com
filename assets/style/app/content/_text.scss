@@ -1,0 +1,64 @@
+.fine-print {
+    font-size: 11px;
+    line-height: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600
+}
+
+.legal-text {
+    font-size: 11px;
+    line-height: 20px
+}
+
+.upperspaced {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600
+}
+
+.text-truncate {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.no-wrap {
+    white-space: nowrap
+}
+
+.font-weight-thin {
+    font-weight: 100 !important
+}
+
+.font-weight-light {
+    font-weight: 300 !important
+}
+
+.font-weight-regular {
+    font-weight: 400 !important
+}
+
+.font-weight-medium {
+    font-weight: 600 !important
+}
+
+.font-weight-bold {
+    font-weight: 700 !important
+}
+
+.uppercase {
+    text-transform: uppercase !important
+}
+
+.capitalize {
+    text-transform: capitalize !important
+}
+
+.lowercase {
+    text-transform: lowercase !important
+}
+
+.normalcase {
+    text-transform: none !important
+}

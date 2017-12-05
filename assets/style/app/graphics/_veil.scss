@@ -1,0 +1,34 @@
+.veil {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    opacity: 0;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: -200px;
+    z-index: 4;
+    overflow: hidden;
+    visibility: hidden
+}
+
+.show-time .veil {
+    background: #000;
+    -webkit-transition: visibility 0s 1200ms, opacity 600ms ease 600ms;
+    transition: visibility 0s 1200ms, opacity 600ms ease 600ms
+}
+
+.veil-active .veil {
+    -webkit-transition: visibility 0s 0s, opacity 300ms ease 0s;
+    transition: visibility 0s 0s, opacity 300ms ease 0s;
+    visibility: visible;
+    opacity: 1
+}
+
+.show-cta .veil {
+    opacity: .95
+}
+
+.veil-active body {
+    overflow: hidden
+}

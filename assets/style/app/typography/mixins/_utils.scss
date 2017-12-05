@@ -1,0 +1,47 @@
+@mixin hyphens($hyphen) {
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none
+}
+
+@mixin tab-size($tab) {
+  -moz-tab-size: $tab;
+  -o-tab-size: $tab;
+  tab-size: $tab;
+}
+
+@mixin transform($trans) {
+  -webkit-transform: $trans;
+  -ms-transform: $trans;
+  transform: $trans;
+}
+
+@mixin text-size-adjust($adjust) {
+  -webkit-text-size-adjust: $adjust;
+  -moz-text-size-adjust: $adjust;
+  -ms-text-size-adjust: $adjust;
+  text-size-adjust: $adjust;
+}
+
+@mixin font-smoothing() {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: always;
+}
+
+@mixin appearance($appear) {
+  -webkit-appearance: $appear;
+  -moz-appearance: $appear;
+  appearance: $appear;
+}
+
+@mixin box-shadow($shadow) {
+  -webkit-box-shadow: $shadow;
+  box-shadow: $shadow;
+}
+
+@mixin transition($trans) {
+  -webkit-transition: $trans;
+  transition: $trans;
+}

@@ -1,0 +1,7 @@
+@import "mixins/svg";
+
+@include make-svg-size(20);
+@include make-svg-size(32);
+@include make-svg-size(40);
+@include make-svg-size(68);
+@include make-svg-size(80);

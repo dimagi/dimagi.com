@@ -1,0 +1,128 @@
+.hero {
+    text-align: center;
+    overflow: hidden;
+    color: #fff;
+    background-color: #1b2126
+}
+
+.hero .content {
+    padding: 30px 0
+}
+
+@media (min-width: 718px) {
+    .hero .content {
+        padding: 60px 0
+    }
+}
+
+.purple-theme .hero {
+    color: #fff;
+    background-color: #9d73c7
+}
+
+.hero.hero-purple {
+    color: #fff;
+    background-color: #9d73c7
+}
+
+.hero h1,
+.hero .h1,
+.hero h2,
+.hero .h2,
+.hero h3,
+.hero .h3,
+.hero h4,
+.hero .h4,
+.hero h5,
+.hero .h5,
+.hero h6,
+.hero .h6,
+.hero p,
+.hero ul,
+.hero ol,
+.hero a:not(.button) {
+    color: inherit
+}
+
+.hero h1,
+.hero .h1,
+.hero h2,
+.hero .h2,
+.hero h3,
+.hero .h3,
+.hero h4,
+.hero .h4,
+.hero h5,
+.hero .h5,
+.hero h6,
+.hero .h6 {
+    font-weight: 300
+}
+
+.hero h2,
+.hero .h2 {
+    margin-bottom: 0;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px
+}
+
+@media (min-width: 1024px) {
+    .hero h2,
+    .hero .h2 {
+        font-size: 16px;
+        line-height: 20px
+    }
+}
+
+.hero p:not(.cta) {
+    margin-bottom: 20px;
+    margin-top: -10px
+}
+
+@media (min-width: 1024px) {
+    .hero p:not(.cta) {
+        font-size: 16px;
+        line-height: 20px
+    }
+}
+
+@media (min-width: 718px) {
+    .hero h1,
+    .hero .h1 {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 50%
+    }
+}
+
+.tucked-hero .hero {
+    margin-top: -42px;
+    padding-top: 42px
+}
+
+@media (min-width: 718px) {
+    .tucked-hero .hero {
+        margin-top: -73px;
+        padding-top: 73px
+    }
+}
+
+.product-page .hero {
+    padding-bottom: 0
+}
+
+@media (min-width: 718px) {
+    .product-page .hero {
+        height: 427px;
+        text-align: left
+    }
+    .product-page .hero h1,
+    .product-page .hero .h1 {
+        margin-left: 0;
+        margin-right: 0
+    }
+}

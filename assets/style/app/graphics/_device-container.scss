@@ -1,0 +1,39 @@
+.device-container {
+    position: relative;
+    background-color: #fff;
+    overflow: hidden;
+    border: 2px solid #e0e0e0;
+    border-radius: 5px 5px 0 0
+}
+
+.device-container .screen {
+    position: relative;
+    border-top: 1px solid #e0e0e0
+}
+
+.device-container .screen>* {
+    display: block;
+    width: 100%
+}
+
+.device-container.browser-ui:before {
+    content: " ";
+    display: block;
+    width: 0;
+    height: 0;
+    border-radius: 999em;
+    background-color: #e0e0e0;
+    padding: 3px;
+    margin: 6px;
+    -webkit-box-shadow: 9px 0 0 #e0e0e0, 18px 0 0 #e0e0e0;
+    box-shadow: 9px 0 0 #e0e0e0, 18px 0 0 #e0e0e0
+}
+
+@media (min-width: 480px) {
+    .device-container.browser-ui:before {
+        padding: 4px;
+        margin: 8px;
+        -webkit-box-shadow: 12px 0 0 #e0e0e0, 24px 0 0 #e0e0e0;
+        box-shadow: 12px 0 0 #e0e0e0, 24px 0 0 #e0e0e0
+    }
+}

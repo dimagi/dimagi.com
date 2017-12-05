@@ -1,0 +1,66 @@
+.button.button-purple,
+button.button-purple,
+input[type="button"].button-purple,
+input[type="submit"].button-purple,
+input[type="reset"].button-purple {
+    color: #fff;
+    background-color: #8033cc
+}
+
+.button.button-purple:hover,
+.button.button-purple:focus,
+button.button-purple:hover,
+button.button-purple:focus,
+input[type="button"].button-purple:hover,
+input[type="button"].button-purple:focus,
+input[type="submit"].button-purple:hover,
+input[type="submit"].button-purple:focus,
+input[type="reset"].button-purple:hover,
+input[type="reset"].button-purple:focus {
+    color: #fff;
+    background-color: #732eb8
+}
+
+.button.button-purple:active,
+button.button-purple:active,
+input[type="button"].button-purple:active,
+input[type="submit"].button-purple:active,
+input[type="reset"].button-purple:active {
+    color: #fff;
+    background-color: #6629a3
+}
+
+.button.button-purple.alt,
+button.button-purple.alt,
+input[type="button"].button-purple.alt,
+input[type="submit"].button-purple.alt,
+input[type="reset"].button-purple.alt {
+    color: #8033cc;
+    -webkit-box-shadow: inset 0 0 0 1px #8033cc;
+    box-shadow: inset 0 0 0 1px #8033cc
+}
+
+.button.button-purple.alt:hover,
+.button.button-purple.alt:focus,
+button.button-purple.alt:hover,
+button.button-purple.alt:focus,
+input[type="button"].button-purple.alt:hover,
+input[type="button"].button-purple.alt:focus,
+input[type="submit"].button-purple.alt:hover,
+input[type="submit"].button-purple.alt:focus,
+input[type="reset"].button-purple.alt:hover,
+input[type="reset"].button-purple.alt:focus {
+    color: #732eb8;
+    -webkit-box-shadow: inset 0 0 0 1px #732eb8;
+    box-shadow: inset 0 0 0 1px #732eb8
+}
+
+.button.button-purple.alt:active,
+button.button-purple.alt:active,
+input[type="button"].button-purple.alt:active,
+input[type="submit"].button-purple.alt:active,
+input[type="reset"].button-purple.alt:active {
+    color: #6629a3;
+    -webkit-box-shadow: inset 0 0 0 1px #6629a3;
+    box-shadow: inset 0 0 0 1px #6629a3
+}

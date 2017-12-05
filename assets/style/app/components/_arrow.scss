@@ -1,0 +1,125 @@
+.arrow,
+.arrow-right,
+.arrow-left,
+.arrow-down,
+.arrow-up {
+    position: relative
+}
+
+.arrow:before,
+.arrow:after,
+.arrow-right:before,
+.arrow-right:after,
+.arrow-left:before,
+.arrow-left:after,
+.arrow-down:before,
+.arrow-down:after,
+.arrow-up:before,
+.arrow-up:after {
+    pointer-events: none;
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-right-width: 1px;
+    border-right-style: solid
+}
+
+.arrow:after,
+.arrow:before,
+.arrow-right:after,
+.arrow-right:before,
+.arrow-left:after,
+.arrow-left:before {
+    position: relative;
+    vertical-align: middle
+}
+
+.arrow:after,
+.arrow-right:after {
+    content: " ";
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    margin-left: .3em
+}
+
+.arrow-left:before {
+    content: " ";
+    -webkit-transform: rotate(-135deg);
+    -ms-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+    margin-right: .3em
+}
+
+.arrow-up,
+.arrow-down {
+    position: relative
+}
+
+.arrow-up {
+    padding-top: 10px
+}
+
+.arrow-up:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    -webkit-transform: translate(-50%, 50%) rotate(-45deg);
+    -ms-transform: translate(-50%, 50%) rotate(-45deg);
+    transform: translate(-50%, 50%) rotate(-45deg)
+}
+
+.arrow-down {
+    padding-bottom: 10px
+}
+
+.arrow-down:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    -webkit-transform: translate(-50%, -50%) rotate(135deg);
+    -ms-transform: translate(-50%, -50%) rotate(135deg);
+    transform: translate(-50%, -50%) rotate(135deg)
+}
+
+.arrow[data-transition-target],
+[data-transition-target] .arrow {
+    padding-right: 1.3em
+}
+
+.arrow[data-transition-target]:after,
+[data-transition-target] .arrow:after {
+    width: 1ex;
+    height: 1ex;
+    position: absolute;
+    top: 0;
+    right: 0
+}
+
+.show-time .arrow[data-transition-target]:after,
+.show-time [data-transition-target] .arrow:after {
+    -webkit-transition: border-color 150ms, -webkit-transform 150ms;
+    transition: border-color 150ms, -webkit-transform 150ms;
+    transition: border-color 150ms, transform 150ms;
+    transition: border-color 150ms, transform 150ms, -webkit-transform 150ms
+}
+
+.arrow[data-transition-target][data-transition-state="off"]:after,
+[data-transition-target][data-transition-state="off"] .arrow:after {
+    -webkit-transform: translate(-50%, 115%) rotate(-45deg);
+    -ms-transform: translate(-50%, 115%) rotate(-45deg);
+    transform: translate(-50%, 115%) rotate(-45deg)
+}
+
+.arrow[data-transition-target][data-transition-state="on"]:after,
+[data-transition-target][data-transition-state="on"] .arrow:after {
+    -webkit-transform: translate(-50%, 65%) rotate(135deg);
+    -ms-transform: translate(-50%, 65%) rotate(135deg);
+    transform: translate(-50%, 65%) rotate(135deg)
+}

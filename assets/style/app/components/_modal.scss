@@ -1,0 +1,272 @@
+html.modal-active {
+    overflow: hidden
+}
+
+html.touch {
+    -webkit-transition: height 0s;
+    transition: height 0s;
+    height: auto;
+    position: relative
+}
+
+html.touch.modal-active {
+    height: 100%;
+    -webkit-transition: height 0s 300ms;
+    transition: height 0s 300ms
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+    pointer-events: none;
+    overflow: hidden
+}
+
+@media (min-width: 480px) {
+    .modal {
+        background-color: rgba(0, 0, 0, 0.5)
+    }
+}
+
+.show-time .modal {
+    -webkit-transition: opacity 0s 300ms, visibility 0s 300ms, z-index 0s 300ms;
+    transition: opacity 0s 300ms, visibility 0s 300ms, z-index 0s 300ms
+}
+
+@media (min-width: 480px) {
+    .show-time .modal {
+        -webkit-transition: opacity 150ms, visibility 150ms, z-index 150ms;
+        transition: opacity 150ms, visibility 150ms, z-index 150ms
+    }
+}
+
+.modal[data-active="true"] {
+    opacity: 1;
+    visibility: visible;
+    z-index: 99;
+    pointer-events: auto;
+    overflow: auto;
+    -webkit-transition: visibility 0s, z-index 0s;
+    transition: visibility 0s, z-index 0s
+}
+
+@media (min-width: 480px) {
+    .modal[data-active="true"] {
+        -webkit-transition: opacity 150ms, visibility 0s, z-index 0s;
+        transition: opacity 150ms, visibility 0s, z-index 0s
+    }
+}
+
+.touch .modal[data-active="true"] {
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch
+}
+
+.modal-wrapper {
+    overflow-x: hidden;
+    position: relative;
+    min-height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #fff;
+    -webkit-transform: translate(0, 100%);
+    -ms-transform: translate(0, 100%);
+    transform: translate(0, 100%)
+}
+
+@media (min-width: 480px) {
+    .modal-wrapper {
+        min-height: 0;
+        margin-top: 21px;
+        margin-bottom: 21px;
+        border-radius: 5px
+    }
+}
+
+@media (min-width: 718px) {
+    .modal-wrapper {
+        margin-top: 36.5px;
+        margin-bottom: 36.5px
+    }
+}
+
+@media (min-width: 480px) {
+    .modal-wrapper {
+        max-width: 424px
+    }
+}
+
+@media (min-width: 718px) {
+    .modal-wrapper {
+        max-width: 680px
+    }
+}
+
+@media (min-width: 1024px) {
+    .modal-wrapper {
+        max-width: 868px
+    }
+}
+
+@media (min-width: 1292px) {
+    .modal-wrapper {
+        max-width: 1016px
+    }
+}
+
+.show-time .modal-wrapper {
+    -webkit-transition: -webkit-transform 300ms ease-out;
+    transition: -webkit-transform 300ms ease-out;
+    transition: transform 300ms ease-out;
+    transition: transform 300ms ease-out, -webkit-transform 300ms ease-out
+}
+
+@media (min-width: 480px) {
+    .modal-wrapper {
+        -webkit-transform: translate(0, -15px);
+        -ms-transform: translate(0, -15px);
+        transform: translate(0, -15px)
+    }
+    .show-time .modal-wrapper {
+        -webkit-transition: -webkit-transform 150ms ease-out;
+        transition: -webkit-transform 150ms ease-out;
+        transition: transform 150ms ease-out;
+        transition: transform 150ms ease-out, -webkit-transform 150ms ease-out
+    }
+}
+
+[data-active="true"] .modal-wrapper {
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
+    -webkit-transition: -webkit-transform 300ms ease-out;
+    transition: -webkit-transform 300ms ease-out;
+    transition: transform 300ms ease-out;
+    transition: transform 300ms ease-out, -webkit-transform 300ms ease-out
+}
+
+@media (min-width: 480px) {
+    [data-active="true"] .modal-wrapper {
+        -webkit-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+        transform: translate(0, 0);
+        -webkit-transition: -webkit-transform 150ms ease-out;
+        transition: -webkit-transform 150ms ease-out;
+        transition: transform 150ms ease-out;
+        transition: transform 150ms ease-out, -webkit-transform 150ms ease-out
+    }
+}
+
+@media (min-width: 480px) {
+    .dialog .modal-wrapper {
+        min-height: 0;
+        max-height: -webkit-calc(100% - 42px);
+        max-height: calc(100% - 42px);
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -webkit-calc(-50% - 15px));
+        -ms-transform: translate(-50%, calc(-50% - 15px));
+        transform: translate(-50%, calc(-50% - 15px));
+        overflow: auto
+    }
+    .touch .dialog .modal-wrapper {
+        overflow-y: scroll;
+        -webkit-overflow-scrolling: touch
+    }
+}
+
+@media (min-width: 718px) {
+    .dialog .modal-wrapper {
+        max-height: -webkit-calc(100% - 73px);
+        max-height: calc(100% - 73px)
+    }
+}
+
+@media (min-width: 480px) {
+    .dialog .modal-wrapper {
+        width: 424px
+    }
+}
+
+@media (min-width: 718px) {
+    .dialog .modal-wrapper {
+        width: 680px
+    }
+}
+
+@media (min-width: 480px) {
+    .dialog[data-active="true"] .modal-wrapper {
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%)
+    }
+}
+
+@media (min-width: 480px) {
+    .dialog.shake .modal-wrapper {
+        -webkit-animation-name: shake-dialog;
+        animation-name: shake-dialog;
+        -webkit-animation-duration: 300ms;
+        animation-duration: 300ms
+    }
+}
+
+.modal-content {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 276px
+}
+
+@media (min-width: 480px) {
+    .modal-content {
+        max-width: 324px
+    }
+}
+
+@media (min-width: 718px) {
+    .modal-content {
+        max-width: 424px
+    }
+}
+
+@media (min-width: 1024px) {
+    .modal-content {
+        max-width: 680px
+    }
+}
+
+@media (min-width: 1292px) {
+    .modal-content {
+        max-width: 868px
+    }
+}
+
+@media (min-width: 718px) {
+    .dialog .modal-content {
+        max-width: 424px !important
+    }
+}
+
+.modal-close-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 60px;
+    height: 60px;
+    background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCIgd2lkdGg9IjIwIiBoZWlnaHQ9IjIwIj4KICA8cGF0aCBmaWxsPSIjMkUzQjRFIiBkPSJNMTEuNDE0LDEwbDYuMjkzLTYuMjkzYzAuMzkxLTAuMzkxLDAuMzkxLTEuMDIzLDAtMS40MTRzLTEuMDIzLTAuMzkxLTEuNDE0LDBMMTAsOC41ODZMMy43MDcsMi4yOTMgYy0wLjM5MS0wLjM5MS0xLjAyMy0wLjM5MS0xLjQxNCwwcy0wLjM5MSwxLjAyMywwLDEuNDE0TDguNTg2LDEwbC02LjI5Myw2LjI5M2MtMC4zOTEsMC4zOTEtMC4zOTEsMS4wMjMsMCwxLjQxNCBzMS4wMjMsMC4zOTEsMS40MTQsMEwxMCwxMS40MTRsNi4yOTMsNi4yOTNjMC4zOTEsMC4zOTEsMS4wMjMsMC4zOTEsMS40MTQsMHMwLjM5MS0xLjAyMywwLTEuNDE0TDExLjQxNCwxMHoiIC8+Cjwvc3ZnPgo=") center center no-repeat
+}

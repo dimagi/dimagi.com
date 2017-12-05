@@ -1,0 +1,128 @@
+@import "app/layout/variables/grid";
+@import "mixins/utils";
+@import "variables/lists";
+
+ul, ol {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+ul>li,
+ol>li {
+  position: relative;
+  padding-left: $list-padding;
+}
+
+ul>li:nth-last-child(1n+2),
+ol>li:nth-last-child(1n+2) {
+  margin-bottom: 20px;
+}
+
+ul>li:before,
+ol>li:before {
+  overflow: hidden;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: $list-delim-width;
+}
+
+ul ul,
+ol ul,
+ul ol,
+ol ol {
+  margin-top: 20px;
+}
+
+ul.inline-list>li,
+ol.inline-list>li {
+  display: inline;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+ul.inline-list>li:before,
+ol.inline-list>li:before {
+  display: inline;
+  position: static;
+  width: auto;
+}
+
+ul.inline-list>li:nth-last-child(1n+2):after,
+ul.inline-list.space>li:nth-last-child(1n+2):after,
+ol.inline-list>li:nth-last-child(1n+2):after,
+ol.inline-list.space>li:nth-last-child(1n+2):after {
+  content: " ";
+}
+
+ul.inline-list.comma>li:nth-last-child(1n+2):after,
+ol.inline-list.comma>li:nth-last-child(1n+2):after {
+  content: ", ";
+}
+
+ul.inline-list.bullet>li:nth-last-child(1n+2):after,
+ol.inline-list.bullet>li:nth-last-child(1n+2):after {
+  content: "•";
+  padding-left: $list-delim-width/2;
+  padding-right: $list-delim-width/2;
+}
+
+ul.inline-list.pipe>li:nth-last-child(1n+2):after,
+ol.inline-list.pipe>li:nth-last-child(1n+2):after {
+  content: "|";
+  padding-left: $list-delim-width/2;
+  padding-right: $list-delim-width/2;
+}
+
+ul.grid:not(.reset):not(.graphical)>li,
+ul[class*="grid-"]:not(.reset):not(.graphical)>li,
+ol.grid:not(.reset):not(.graphical)>li,
+ol[class*="grid-"]:not(.reset):not(.graphical)>li {
+    padding-left: -webkit-calc(10px + #{$list-padding});
+    padding-left: calc(10px + #{$list-padding});
+}
+
+ul.grid:not(.reset):not(.graphical)>li:before,
+ul[class*="grid-"]:not(.reset):not(.graphical)>li:before,
+ol.grid:not(.reset):not(.graphical)>li:before,
+ol[class*="grid-"]:not(.reset):not(.graphical)>li:before {
+    left: 10px;
+}
+
+@each $type, $spec in $grid-spaces {
+  $space: nth($spec, 1);
+
+  ul.grid:not(.reset):not(.graphical).grid-space-#{$type} > li,
+  ul.grid:not(.reset):not(.graphical).grid-col-space-#{$type} > li,
+  ul[class*="grid-"]:not(.reset):not(.graphical).grid-space-#{$type} > li,
+  ul[class*="grid-"]:not(.reset):not(.graphical).grid-col-space-#{$type} > li,
+  ol.grid:not(.reset):not(.graphical).grid-space-#{$type} > li,
+  ol.grid:not(.reset):not(.graphical).grid-col-space-#{$type} > li,
+  ol[class*="grid-"]:not(.reset):not(.graphical).grid-space-#{$type} > li,
+  ol[class*="grid-"]:not(.reset):not(.graphical).grid-col-space-#{$type} > li {
+    padding-left: -webkit-calc(#{$space} + #{$list-padding});
+    padding-left: calc(#{$space} + #{$list-padding});
+  }
+
+  ul.grid:not(.reset):not(.graphical).grid-space-#{$type} > li:before,
+  ul.grid:not(.reset):not(.graphical).grid-col-space-#{$type} > li:before,
+  ul[class*="grid-"]:not(.reset):not(.graphical).grid-space-#{$type} > li:before,
+  ul[class*="grid-"]:not(.reset):not(.graphical).grid-col-space-#{$type} > li:before,
+  ol.grid:not(.reset):not(.graphical).grid-space-#{$type} > li:before,
+  ol.grid:not(.reset):not(.graphical).grid-col-space-#{$type} > li:before,
+  ol[class*="grid-"]:not(.reset):not(.graphical).grid-space-#{$type} > li:before,
+  ol[class*="grid-"]:not(.reset):not(.graphical).grid-col-space-#{$type} > li:before {
+    left: $space;
+  }
+}
+
+ul>li:before,
+ul.bullet>li:before {
+  content: "●";
+}
+
+ul.inline-list>li:before {
+  content: none;
+}
+

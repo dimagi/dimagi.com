@@ -1,0 +1,14 @@
+ul.reset>li:before,
+ol.reset>li:before {
+    content: none;
+}
+
+ul.reset>li,
+ol.reset>li {
+    margin-bottom: 0;
+}
+
+ul.reset:not(.grid):not([class*="grid-"])>li,
+ol.reset:not(.grid):not([class*="grid-"])>li {
+    padding-left: 0;
+}

@@ -1,0 +1,168 @@
+.tile {
+    display: block;
+    padding: 30px;
+    background: #fff;
+    position: relative
+}
+
+.tile:before {
+    pointer-events: none;
+    content: " ";
+    display: block;
+    position: absolute;
+    z-index: 99;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: inherit;
+    border: 1px solid rgba(0, 0, 0, 0.12)
+}
+
+.tile .theme-icon+* {
+    margin-top: 10px
+}
+
+.tile .purple-icon+* {
+    margin-top: 10px
+}
+
+.tile.full-bleed {
+    padding: 0
+}
+
+.tile.full-bleed .copy {
+    padding: 30px
+}
+
+a.tile {
+    font-weight: inherit;
+    color: inherit;
+    border-radius: 5px;
+    position: relative
+}
+
+a.tile:after {
+    pointer-events: none;
+    content: " ";
+    display: block;
+    position: absolute;
+    z-index: 99;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: inherit;
+    border: 2px solid #2996cc
+}
+
+a.tile:after {
+    opacity: 0
+}
+
+.show-time a.tile:after {
+    -webkit-transition: border 300ms, opacity 300ms;
+    transition: border 300ms, opacity 300ms
+}
+
+a.tile:hover,
+a.tile:focus {
+    color: inherit
+}
+
+a.tile:hover:after,
+a.tile:focus:after {
+    opacity: 1
+}
+
+.purple-theme a.tile:after {
+    border-color: #8033cc
+}
+
+.purple-theme a.tile:hover:after,
+.purple-theme a.tile:focus:after {
+    border-color: #8033cc
+}
+
+a.tile.purple-border:after {
+    border-color: #8033cc !important
+}
+
+a.tile.purple-border:hover:after,
+a.tile.purple-border:focus:after {
+    border-color: #8033cc !important
+}
+
+a.tile.full-bleed .image {
+    z-index: 100;
+    background-color: #fff;
+    overflow: hidden;
+    position: relative;
+    position: relative
+}
+
+a.tile.full-bleed .image:first-child {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px
+}
+
+a.tile.full-bleed .image:first-child:not(:last-child):before,
+a.tile.full-bleed .image:first-child:not(:last-child):after {
+    bottom: -2px
+}
+
+a.tile.full-bleed .image:last-child {
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px
+}
+
+a.tile.full-bleed .image:last-child:not(:first-child):before,
+a.tile.full-bleed .image:last-child:not(:first-child):after {
+    top: -2px
+}
+
+a.tile.full-bleed .image:before {
+    pointer-events: none;
+    content: " ";
+    display: block;
+    position: absolute;
+    z-index: 99;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: inherit;
+    border: 1px solid rgba(0, 0, 0, 0.12)
+}
+
+a.tile.full-bleed .image:after {
+    pointer-events: none;
+    content: " ";
+    display: block;
+    position: absolute;
+    z-index: 99;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: inherit;
+    border: 2px solid #000
+}
+
+a.tile.full-bleed .image:after {
+    opacity: 0
+}
+
+.show-time a.tile.full-bleed .image:after {
+    -webkit-transition: opacity 300ms;
+    transition: opacity 300ms
+}
+
+a.tile.full-bleed:hover .image:after,
+a.tile.full-bleed:focus .image:after {
+    opacity: .2
+}
+
+a.tile.full-bleed:active .image:after {
+    opacity: .25
+}

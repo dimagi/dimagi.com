@@ -1,0 +1,107 @@
+body {
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0)
+}
+
+a {
+    text-decoration: none
+}
+
+a,
+a .link {
+    color: #2996cc;
+    font-weight: 600
+}
+
+.inverted a,
+.inverted a .link {
+    color: #fff !important
+}
+
+.show-time a,
+.show-time a .link {
+    -webkit-transition: color 150ms linear;
+    transition: color 150ms linear
+}
+
+a:hover,
+a:hover .link,
+a:focus,
+a:focus .link {
+    color: #2586b7
+}
+
+a:active {
+    outline: 0
+}
+
+a:active,
+a:active .link {
+    color: #2077a2
+}
+
+// todo theming
+.purple-theme a,
+.purple-theme a .link {
+    color: #8033cc
+}
+
+.purple-theme a:hover,
+.purple-theme a:hover .link,
+.purple-theme a:focus,
+.purple-theme a:focus .link {
+    color: #732eb8
+}
+
+.purple-theme a:active {
+    outline: 0
+}
+
+.purple-theme a:active,
+.purple-theme a:active .link {
+    color: #6629a3
+}
+
+a.inverted,
+a.inverted .link,
+.inverted a,
+.inverted a .link {
+    color: #fff
+}
+
+a.inverted:hover,
+a.inverted:hover .link,
+a.inverted:focus,
+a.inverted:focus .link,
+.inverted a:hover,
+.inverted a:hover .link,
+.inverted a:focus,
+.inverted a:focus .link {
+    color: #fff
+}
+
+a.inverted:active,
+.inverted a:active {
+    outline: 0
+}
+
+a.inverted:active,
+a.inverted:active .link,
+.inverted a:active,
+.inverted a:active .link {
+    color: #fff
+}
+
+a.hotspot {
+    display: block;
+    font-weight: inherit;
+    color: inherit
+}
+
+a.hotspot:hover,
+a.hotspot:focus {
+    color: inherit
+}
+
+a.hotspot:active {
+    color: inherit
+}

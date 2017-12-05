@@ -1,0 +1,33 @@
+@import "variables/check-list";
+@import "variables/colors";
+
+ul.check-list>li:before {
+  content: " ";
+  width: $check-width;
+  height: .5em;
+  top: $check-margin;
+  @include transform(rotate(-45deg));
+  border-style: solid;
+  border-top-width: 0;
+  border-right-width: 0;
+  border-left-width: 2px;
+  border-bottom-width: 2px;
+  color: #5f6a7d;
+}
+
+@import "themes/check-list";
+
+ul.check-list.inline-list>li:nth-last-child(1n+2) {
+  margin-right: $check-width;
+}
+
+ul.check-list.inline-list>li:before {
+  display: inline-block;
+  vertical-align: $check-margin;
+  margin-right: $check-margin;
+}
+
+ul.check-list.inverted>li:before,
+.inverted ul.check-list>li:before {
+    color: $color-white;
+}

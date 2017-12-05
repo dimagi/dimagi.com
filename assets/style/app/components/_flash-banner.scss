@@ -1,0 +1,90 @@
+.flash-banner {
+    visibility: hidden;
+    position: fixed;
+    z-index: 98;
+    width: 100%;
+    max-width: 1680px;
+    margin-bottom: 0 auto;
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 700;
+    color: #fff;
+    background-color: #5f6a7d
+}
+
+.show-time .flash-banner {
+    -webkit-transition: background-color 300ms, visibility 0s 300ms, -webkit-transform 300ms;
+    transition: background-color 300ms, visibility 0s 300ms, -webkit-transform 300ms;
+    transition: transform 300ms, background-color 300ms, visibility 0s 300ms;
+    transition: transform 300ms, background-color 300ms, visibility 0s 300ms, -webkit-transform 300ms
+}
+
+.flash-banner[data-position='top'] {
+    top: 0;
+    -webkit-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    transform: translateY(-100%)
+}
+
+.flash-banner[data-position='bottom'] {
+    bottom: 0;
+    -webkit-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    transform: translateY(100%)
+}
+
+.flash-banner.active {
+    visibility: visible;
+    -webkit-transition: background-color 300ms, visibility 0s 0s, -webkit-transform 300ms;
+    transition: background-color 300ms, visibility 0s 0s, -webkit-transform 300ms;
+    transition: transform 300ms, background-color 300ms, visibility 0s 0s;
+    transition: transform 300ms, background-color 300ms, visibility 0s 0s, -webkit-transform 300ms;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0)
+}
+
+.flash-banner.info {
+    background-color: #2996cc
+}
+
+.flash-banner.success {
+    background-color: #24b524
+}
+
+.flash-banner.warning {
+    background-color: #edb312
+}
+
+.flash-banner.error {
+    background-color: #df3320
+}
+
+.flash-banner .content {
+    position: relative;
+    min-height: 42px;
+    padding: 11px 40px
+}
+
+@media (min-width: 718px) {
+    .flash-banner .content {
+        min-height: 73px;
+        padding: 26.5px 40px
+    }
+}
+
+.flash-banner a {
+    font-weight: inherit;
+    color: inherit;
+    text-decoration: underline
+}
+
+.flash-banner .close-icon {
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    right: 0;
+    margin-top: -10px
+}

@@ -1,0 +1,24 @@
+@import "app/typography/variables/base";
+@import "app/typography/variables/colors";
+@import "app/typography/mixins/utils";
+
+label {
+  display: block;
+  width: 100%;
+  font-size: 12px;
+  line-height: $base-line-height;
+  font-weight: 600;
+  color: #5f6a7d
+}
+
+.show-time label {
+  @include transition(color 300ms);
+}
+
+.error label {
+  color: $color-red;
+}
+
+.validated label {
+  color: $color-green;
+}

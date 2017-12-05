@@ -1,0 +1,160 @@
+@import "variables/circle-list";
+@import "app/layout/variables/grid";
+
+ol,
+ol.decimal {
+    counter-reset: list-counter 0
+}
+
+ol>li:before,
+ol.decimal>li:before {
+    content: counter(list-counter, decimal) ". "
+}
+
+ol>li,
+ol.decimal>li {
+    counter-increment: list-counter
+}
+
+ol.circle-list>li:before,
+ol.decimal.circle-list>li:before {
+    content: counter(list-counter, decimal)
+}
+
+ol.alpha,
+ol.upper-alpha {
+    counter-reset: list-counter 0
+}
+
+ol.alpha>li:before,
+ol.upper-alpha>li:before {
+    content: counter(list-counter, upper-alpha) ". "
+}
+
+ol.alpha>li,
+ol.upper-alpha>li {
+    counter-increment: list-counter
+}
+
+ol.alpha.circle-list>li:before,
+ol.upper-alpha.circle-list>li:before {
+    content: counter(list-counter, upper-alpha)
+}
+
+ol.lower-alpha {
+    counter-reset: list-counter 0
+}
+
+ol.lower-alpha>li:before {
+    content: counter(list-counter, lower-alpha) ". "
+}
+
+ol.lower-alpha>li {
+    counter-increment: list-counter
+}
+
+ol.lower-alpha.circle-list>li:before {
+    content: counter(list-counter, lower-alpha)
+}
+
+ol.roman,
+ol.upper-roman {
+    counter-reset: list-counter 0
+}
+
+ol.roman>li:before,
+ol.upper-roman>li:before {
+    content: counter(list-counter, upper-roman) ". "
+}
+
+ol.roman>li,
+ol.upper-roman>li {
+    counter-increment: list-counter
+}
+
+ol.roman.circle-list>li:before,
+ol.upper-roman.circle-list>li:before {
+    content: counter(list-counter, upper-roman)
+}
+
+ol.lower-roman {
+    counter-reset: list-counter 0
+}
+
+ol.lower-roman>li:before {
+    content: counter(list-counter, lower-roman) ". "
+}
+
+ol.lower-roman>li {
+    counter-increment: list-counter
+}
+
+ol.lower-roman.circle-list>li:before {
+    content: counter(list-counter, lower-roman)
+}
+
+ol.circle-list>li {
+    padding-left: $circle-list-padding;
+}
+
+ol.circle-list>li:before {
+    width: $circle-size;
+    height: $circle-size;
+    line-height: -webkit-calc(#{$circle-size} - 2px);
+    line-height: calc(#{$circle-size} - 2px);
+    margin-top: -0.18182em;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 50%;
+    text-align: center;
+    color: #5f6a7d;
+    font-weight: 600;
+    font-size: .78571em;
+}
+
+@import "themes/circle-list";
+
+ol.circle-list.inline-list>li {
+  padding-left: 0;
+}
+
+ol.circle-list.inline-list>li:nth-last-child(1n+2) {
+  margin-right: .71429em;
+}
+
+ol.circle-list.inline-list>li:before {
+  display: inline-block;
+  margin-right: .45455em;
+  vertical-align: middle;
+}
+
+ol.circle-list.inline-list>li {
+  padding-left: 0;
+}
+
+ol.circle-list.inline-list>li:nth-last-child(1n+2) {
+  margin-right: .71429em;
+}
+
+ol.circle-list.inline-list>li:before {
+  display: inline-block;
+  margin-right: .45455em;
+  vertical-align: middle;
+}
+
+ol.grid:not(.reset):not(.graphical).circle-list>li,
+ol[class*="grid-"]:not(.reset):not(.graphical).circle-list>li {
+    padding-left: -webkit-calc(10px + #{$circle-list-padding});
+    padding-left: calc(10px + #{$circle-list-padding});
+}
+
+@each $type, $spec in $grid-spaces {
+  $space: nth($spec, 1);
+  ol.grid:not(.reset):not(.graphical).grid-space-#{$type}.circle-list>li,
+  ol.grid:not(.reset):not(.graphical).grid-col-space-#{$type}.circle-list>li,
+  ol[class*="grid-"]:not(.reset):not(.graphical).grid-space-#{$type}.circle-list>li,
+  ol[class*="grid-"]:not(.reset):not(.graphical).grid-col-space-#{$type}.circle-list>li {
+      padding-left: -webkit-calc(#{$space} + #{$circle-list-padding});
+      padding-left: calc(#{$space} + #{$circle-list-padding});
+  }
+}

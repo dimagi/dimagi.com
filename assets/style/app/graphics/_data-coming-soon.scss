@@ -1,0 +1,10 @@
+[data-coming-soon]:after {
+    content: attr(data-coming-soon);
+    font-weight: 400;
+    margin-left: .7ex;
+    color: #2996cc
+}
+
+.purple-theme [data-coming-soon]:after {
+    color: #8033cc
+}

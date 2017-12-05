@@ -1,6 +1,958 @@
-@import "dimagi/colors";
+.home-page .hero {
+    background-image: url(/assets/pages/home/hero-062fd75e1ea4397f8e38516d74088b9d094fa28c58ae5223ea7b93e4f4243ad9.jpg);
+    height: 500px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 100%;
+    text-align: center
+}
 
-body {
-  font-weight: bold;
-  font-size: 100px;
+.country-US .home-page .hero {
+    background-image: url(/assets/pages/home/hero.us-1ba76c38695f739da70b5b19c879599524fba5476097c7804542b1bedea70611.jpg);
+    height: 500px
+}
+
+@media (min-width: 480px) {
+    .country-US .home-page .hero {
+        background-image: url(/assets/pages/home/hero.small.us-f03f3120e190e26f67f83f4df0eea84d5e77c5465a5a173e332734090dd9eef2.jpg);
+        height: 500px
+    }
+}
+
+@media (min-width: 480px) {
+    .home-page .hero {
+        background-image: url(/assets/pages/home/hero.small-ef3575c273c15e0b6df1b6aec3c43fada778cd482a825e86c8e7f8626ac78a1f.jpg);
+        height: 500px
+    }
+}
+
+@media (min-width: 718px) {
+    .country-US .home-page .hero {
+        background-image: url(/assets/pages/home/hero.medium.us-db6f49af3aeb96c3260121f1f33554e7d66aa093ab0bd99fc4b5c73e6339c666.jpg);
+        height: 500px
+    }
+}
+
+@media (min-width: 718px) {
+    .home-page .hero {
+        background-image: url(/assets/pages/home/hero.medium-ec208679220cda9082c69f29225f62c1795d8a722d1757e3f0ed37087e95e2d9.jpg);
+        height: 500px
+    }
+}
+
+@media (min-width: 1024px) {
+    .country-US .home-page .hero {
+        background-image: url(/assets/pages/home/hero.large.us-173923d8d0389878613349a544ff465a93ce437ba5dec7bb114d17b69839ff09.jpg);
+        height: 500px
+    }
+}
+
+@media (min-width: 1024px) {
+    .home-page .hero {
+        background-image: url(/assets/pages/home/hero.large-642272cdbda030d3363010d74b2407286cc74352987144afa59d8fd99e9329d3.jpg);
+        height: 500px
+    }
+}
+
+@media (min-width: 1292px) {
+    .country-US .home-page .hero {
+        background-image: url(/assets/pages/home/hero.extra-large.us-8dc223ff7514c6016360ab51456726e73bd799a7b8a2c091a867e071813e8d69.jpg);
+        height: 500px
+    }
+}
+
+@media (min-width: 1292px) {
+    .home-page .hero {
+        background-image: url(/assets/pages/home/hero.extra-large-db86212d93212939b04dd37ca41457292a1474637e81696e3f5f01eb93337399.jpg);
+        height: 500px
+    }
+}
+
+.home-page .hero h1,
+.home-page .hero .h1 {
+    max-width: 100%
+}
+
+@media (min-width: 1292px) {
+    .home-page .hero {
+        padding-top: 80px
+    }
+}
+
+.home-page .hero .outgoing-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background-size: auto 100%;
+    background-position: center;
+    opacity: 1;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0)
+}
+
+.home-page .hero .outgoing-image[data-loading="false"] {
+    opacity: 0;
+    -webkit-transition: opacity 300ms ease-in;
+    transition: opacity 300ms ease-in
+}
+
+.home-page .verticals .intro {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 19em
+}
+
+@media (min-width: 718px) {
+    .home-page .verticals .intro {
+        max-width: 30em
+    }
+}
+
+@media (min-width: 1024px) {
+    .home-page .verticals .intro {
+        max-width: 100%
+    }
+}
+
+.home-page .verticals .image {
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.35)
+}
+
+.home-page .verticals .bakery {
+    background-image: url(/assets/pages/home/verticals/bakery-a89c8ef7c12dd0f01546405bdd72bea9d8b4549f875d75d52c2fc878f0e92bf7.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    padding-top: 52.12264%
+}
+
+.home-page .verticals .beauty {
+    background-image: url(/assets/pages/home/verticals/beauty-f4ef7d9136458cf9ef2c132006fb277ae89c0570fcb31c92bb67249b29d9d751.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    padding-top: 52.12264%
+}
+
+.home-page .verticals .cafe {
+    background-image: url(/assets/pages/home/verticals/cafe-7b88656acb34c5effa1e055581d9aa24c243003a0bb36fa9137da2297f71ca62.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    padding-top: 52.12264%
+}
+
+.home-page .verticals .food {
+    background-image: url(/assets/pages/home/verticals/food-and-drink-4cf63d92c36b56b17054c3d865316e06e44f4c0396bf59e355ae333a521b1a6b.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    padding-top: 52.12264%
+}
+
+.home-page .verticals .health {
+    background-image: url(/assets/pages/home/verticals/health-and-fitness-cf02baa1c5e5382438dc9e1f3e42a9b9178d0c126441f5991ccaac42d1ed0b53.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    padding-top: 52.12264%
+}
+
+.home-page .verticals .repair {
+    background-image: url(/assets/pages/home/verticals/home-and-repair-2a680d445d0c752bb0f39350f011281de7f94bc520f9893d18442c65a47fa96e.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    padding-top: 52.12264%
+}
+
+.home-page .verticals .leisure {
+    background-image: url(/assets/pages/home/verticals/leisure-and-entertainment-76e625e9ce07f34bb35699d3477ff80314e36b3299fdce87e7ac9c23f00a148a.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    padding-top: 52.12264%
+}
+
+.home-page .verticals .markets {
+    background-image: url(/assets/pages/home/verticals/markets-af003fb733747d391e47b0672c74ca655ad80487e1d4ffaa7657948a1fe1b54a.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    padding-top: 52.12264%
+}
+
+.home-page .verticals .organizations {
+    background-image: url(/assets/pages/home/verticals/organizations-2fee08c61961fa166996f2b7924de30784c6a87f2f53d1dd71b2f07de47dfcd2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    padding-top: 52.12264%
+}
+
+.home-page .verticals .professional {
+    background-image: url(/assets/pages/home/verticals/professional-service-c5a37f31c75e94e5a9e2a9f7f8c5a2815a7a711fcfea5bbfeef12e88fab9e7e0.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    padding-top: 52.12264%
+}
+
+.home-page .verticals .retail {
+    background-image: url(/assets/pages/home/verticals/retail-42393c4e97a0a5ffbd1c3d69980655e683be993843a2b50a05702c385ad2a99b.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    padding-top: 52.12264%
+}
+
+.home-page .verticals .transportation {
+    background-image: url(/assets/pages/home/verticals/transportation-da95d8c9f25aa4faefe2bc6b53385c348b552bafa9bc135e748e490559910879.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    padding-top: 52.12264%
+}
+
+.home-page .tools .intro {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 22em
+}
+
+@media (min-width: 718px) {
+    .home-page .tools .intro {
+        max-width: 100%
+    }
+}
+
+.home-page .tools .stand {
+    background-image: url(/assets/pages/home/products/stand-7fdc1ef5c127ee650168a0af09e506253a9a2d7cecd250550103e9bb6583b360.jpg);
+    height: 234px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 100%
+}
+
+.country-US .home-page .tools .stand {
+    background-image: url(/assets/pages/home/products/stand.us-9e85f0c92c4f168300840b1eca9cf4bf1d25bdd081f646c93521645313896923.jpg);
+    height: 180px
+}
+
+.locale-fr-CA .home-page .tools .stand {
+    background-image: url(/assets/pages/home/products/stand.fr-ca-30179956f03daa7edae1a89df41abb18040ae51399fc46f8842b27872d54f6a0.jpg);
+    height: 234px
+}
+
+.locale-es-US .home-page .tools .stand {
+    background-image: url(/assets/pages/home/products/stand.es-us-4cab8f23662dac37246f9abf32b944d6651f848de9fe9003772d0ed3d04c3397.jpg);
+    height: 234px
+}
+
+@media (min-width: 480px) {
+    .country-US .home-page .tools .stand {
+        background-image: url(/assets/pages/home/products/stand.small.us-0b973ca87af35cbf6a4b5c819646bdf3de4dff2346ad0d990a45313fd5ce81b4.jpg);
+        height: 167px
+    }
+}
+
+@media (min-width: 480px) {
+    .home-page .tools .stand {
+        background-image: url(/assets/pages/home/products/stand.small-031cbec60da97a59a9fe89b91bb0f69337dd0e72a2d3cbd065e5f0f0b26c94e6.jpg);
+        height: 227px
+    }
+}
+
+@media (min-width: 480px) {
+    .locale-fr-CA .home-page .tools .stand {
+        background-image: url(/assets/pages/home/products/stand.small.fr-ca-64905f1700095794c5fd610637a4d88dc881e0465f2e5f378955abebc714a1de.jpg);
+        height: 227px
+    }
+}
+
+@media (min-width: 480px) {
+    .locale-es-US .home-page .tools .stand {
+        background-image: url(/assets/pages/home/products/stand.small.es-us-9088a7a042f1dd1226525b99bab1e86026882d26de31cec28587b86b0e2b6710.jpg);
+        height: 227px
+    }
+}
+
+@media (min-width: 718px) {
+    .country-US .home-page .tools .stand {
+        background-image: url(/assets/pages/home/products/stand.medium.us-1b4c1017f293e3546c8898c26c416f404242e520ccc079703df551c7c3ac3f15.jpg);
+        height: 139px
+    }
+}
+
+@media (min-width: 718px) {
+    .home-page .tools .stand {
+        background-image: url(/assets/pages/home/products/stand.medium-47e60db180f4c461a4ac40732e89394055137acae9a8b0f1a46800c700b7dd9f.jpg);
+        height: 227px
+    }
+}
+
+@media (min-width: 718px) {
+    .locale-fr-CA .home-page .tools .stand {
+        background-image: url(/assets/pages/home/products/stand.medium.fr-ca-a7cb51c51013a21041c7ed49ba910745ccfc16972e199d850227b129f65a3f4d.jpg);
+        height: 227px
+    }
+}
+
+@media (min-width: 718px) {
+    .locale-es-US .home-page .tools .stand {
+        background-image: url(/assets/pages/home/products/stand.medium.es-us-ff57478955906cb027ee0bd4b5a59ad84a770477d8b45bc49e10ff2de029c17e.jpg);
+        height: 227px
+    }
+}
+
+@media (min-width: 1024px) {
+    .country-US .home-page .tools .stand {
+        background-image: url(/assets/pages/home/products/stand.large.us-0c10860a5576ae89efc1093f80d491eec791e73cdbe0e97f108336f4302ee30c.jpg);
+        height: 180px
+    }
+}
+
+@media (min-width: 1024px) {
+    .home-page .tools .stand {
+        background-image: url(/assets/pages/home/products/stand.large-2503a0de7ea587987305c45d11519103001af049cad435c9d250a44c547e7a9e.jpg);
+        height: 260px
+    }
+}
+
+@media (min-width: 1024px) {
+    .locale-fr-CA .home-page .tools .stand {
+        background-image: url(/assets/pages/home/products/stand.large.fr-ca-ac9a84e44a692ba5739f9721589093356870c5d42c856030d95f6a3ad5e64502.jpg);
+        height: 260px
+    }
+}
+
+@media (min-width: 1024px) {
+    .locale-es-US .home-page .tools .stand {
+        background-image: url(/assets/pages/home/products/stand.large.es-us-153eb0ba8610beb41616d81aebe713ab7a544d6fccf77e1043dfa794553a9627.jpg);
+        height: 260px
+    }
+}
+
+@media (min-width: 1292px) {
+    .country-US .home-page .tools .stand {
+        background-image: url(/assets/pages/home/products/stand.extra-large.us-86fc0f4ff88d0fa8bec30f6d787573b958d660e915ee6afd5a93d8dfb10f2ee6.jpg);
+        height: 202px
+    }
+}
+
+@media (min-width: 1292px) {
+    .home-page .tools .stand {
+        background-image: url(/assets/pages/home/products/stand.extra-large-b8caa82d80fe8f881553bb6ead0a178a4734669c9b34727be848023de05ea655.jpg);
+        height: 260px
+    }
+}
+
+@media (min-width: 1292px) {
+    .locale-fr-CA .home-page .tools .stand {
+        background-image: url(/assets/pages/home/products/stand.extra-large.fr-ca-65ef19ced4ed0dd0015630b6e7bfe47939f858ed28a61806dc56787e51acbbdd.jpg);
+        height: 260px
+    }
+}
+
+@media (min-width: 1292px) {
+    .locale-es-US .home-page .tools .stand {
+        background-image: url(/assets/pages/home/products/stand.extra-large.es-us-f33e13a9a640ebb872ecac9bc2258e05dbd625dde0e9166dc39b2a5dd61efa85.jpg);
+        height: 260px
+    }
+}
+
+.home-page .tools .magstripe-reader {
+    background-image: url(/assets/pages/home/products/reader-magstripe-8b3519738626fe21698217fe04e05240e25462f914fce512fb7439367362f5ec.jpg);
+    height: 234px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 100%
+}
+
+.country-US .home-page .tools .magstripe-reader {
+    background-image: url(/assets/pages/home/products/reader-magstripe.us-59634a180b9564c92f3e3a5b355e6f10fc74f8a8627c227a203ee95cf246e323.jpg);
+    height: 180px
+}
+
+@media (min-width: 480px) {
+    .country-US .home-page .tools .magstripe-reader {
+        background-image: url(/assets/pages/home/products/reader-magstripe.small.us-3a1eb05d2ae9f6c10ac8e4b31bcbfa565c554bb85d06bd47f7318151c6acb8a8.jpg);
+        height: 167px
+    }
+}
+
+@media (min-width: 480px) {
+    .home-page .tools .magstripe-reader {
+        background-image: url(/assets/pages/home/products/reader-magstripe.small-83278f8e46dacaf42fc1866a69847b3f34fc77a3c94c3b2e87430d7dca0f6de7.jpg);
+        height: 227px
+    }
+}
+
+@media (min-width: 718px) {
+    .country-US .home-page .tools .magstripe-reader {
+        background-image: url(/assets/pages/home/products/reader-magstripe.medium.us-ad6274674360d14943547e142bf15877b2d471626806634dd6f47f438372e362.jpg);
+        height: 139px
+    }
+}
+
+@media (min-width: 718px) {
+    .home-page .tools .magstripe-reader {
+        background-image: url(/assets/pages/home/products/reader-magstripe.medium-f90f5e98622fefe8ee1bb6945a671a3e6614c15610acc62168053e7191c766d2.jpg);
+        height: 227px
+    }
+}
+
+@media (min-width: 1024px) {
+    .country-US .home-page .tools .magstripe-reader {
+        background-image: url(/assets/pages/home/products/reader-magstripe.large.us-40aea3bd2c473fe704c8a69638a9a00c0d79f4264aa3652d42010bc925843b2e.jpg);
+        height: 180px
+    }
+}
+
+@media (min-width: 1024px) {
+    .home-page .tools .magstripe-reader {
+        background-image: url(/assets/pages/home/products/reader-magstripe.large-f17caae4ce99fde179f9ce5d77d1d066c51570dcf3f38923cd4ea4e1e10ea93a.jpg);
+        height: 260px
+    }
+}
+
+@media (min-width: 1292px) {
+    .country-US .home-page .tools .magstripe-reader {
+        background-image: url(/assets/pages/home/products/reader-magstripe.extra-large.us-39ab2c1110c06b02f382442d6846a1bfe142ceb3a0e2ae3e88eef3d0a69fd876.jpg);
+        height: 202px
+    }
+}
+
+@media (min-width: 1292px) {
+    .home-page .tools .magstripe-reader {
+        background-image: url(/assets/pages/home/products/reader-magstripe.extra-large-a4ec2bce1846e7eee5f32b5b9bb1fac0a35b0587ea561cf0784061d65e2218a0.jpg);
+        height: 260px
+    }
+}
+
+.home-page .tools .chip-reader {
+    background-image: url(/assets/pages/home/products/reader-chip-307ba60f38a420fd31908c5732cfb12d847c583978d6cb0d16a3e7999d287d70.jpg);
+    height: 200px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 100%
+}
+
+.country-AU .home-page .tools .chip-reader {
+    background-image: url(/assets/pages/home/products/reader-chip.au-54ab16602382e4989328cca3d3d2cb33f4bd13d86b19970b77b6f3bad85c4ee5.jpg);
+    height: 155px
+}
+
+@media (min-width: 480px) {
+    .country-AU .home-page .tools .chip-reader {
+        background-image: url(/assets/pages/home/products/reader-chip.small.au-c03c5fa1981882938b317c388dd1eaea2094dd901b28e2ab038e881b6599438b.jpg);
+        height: 200px
+    }
+}
+
+@media (min-width: 718px) {
+    .home-page .tools .chip-reader {
+        background-image: url(/assets/pages/home/products/reader-chip.medium-30363932e566ed842f44b6565514fefc7fd6340d44d6633645e5f286702a2e94.jpg);
+        height: 220px
+    }
+}
+
+@media (min-width: 718px) {
+    .country-AU .home-page .tools .chip-reader {
+        background-image: url(/assets/pages/home/products/reader-chip.medium.au-22156c24741f6d073a8cbf82a6ebc488e06a92f3ac4ac31cc58b20f204998617.jpg);
+        height: 155px
+    }
+}
+
+@media (min-width: 1024px) {
+    .home-page .tools .chip-reader {
+        background-image: url(/assets/pages/home/products/reader-chip.large-9cd4d3001b994dd503e54d9e4767242cd7b78996a3569897d078ec6a2b8d7e89.jpg);
+        height: 260px
+    }
+}
+
+@media (min-width: 1024px) {
+    .country-AU .home-page .tools .chip-reader {
+        background-image: url(/assets/pages/home/products/reader-chip.large.au-b9c8aae52b3e473b13d7a44041dace378cdc936a4d19e30929034fe63c043061.jpg);
+        height: 200px
+    }
+}
+
+@media (min-width: 1292px) {
+    .country-AU .home-page .tools .chip-reader {
+        background-image: url(/assets/pages/home/products/reader-chip.extra-large.au-f2ad6c2ae5f32dbb0012147504a3af6ae9d71b2c9fd25efa0cbcb1218cb6318a.jpg);
+        height: 250px
+    }
+}
+
+.home-page .tools .contactless-reader {
+    background-image: url(/assets/pages/home/products/reader-contactless-41af58e81e789eddcd58db52aec44e1579749bfbc6a0b96bfdede12151e4e254.jpg);
+    height: 180px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 100%
+}
+
+.country-AU .home-page .tools .contactless-reader {
+    background-image: url(/assets/pages/home/products/reader-contactless.au-8190d5895a402a38eb71bd49fc0918e62f9092ba9b8c18d9b8f6f172c36c812f.jpg);
+    height: 155px
+}
+
+@media (min-width: 480px) {
+    .home-page .tools .contactless-reader {
+        background-image: url(/assets/pages/home/products/reader-contactless.small-96888fc7faa2a889188ce7839b42c16a47be3db42cfba587896d8c01a18b627e.jpg);
+        height: 167px
+    }
+}
+
+@media (min-width: 480px) {
+    .country-AU .home-page .tools .contactless-reader {
+        background-image: url(/assets/pages/home/products/reader-contactless.small.au-75d68f44519c31a4588755fdd303e4866cf9b16879408e328221e957baa6cfef.jpg);
+        height: 200px
+    }
+}
+
+@media (min-width: 718px) {
+    .home-page .tools .contactless-reader {
+        background-image: url(/assets/pages/home/products/reader-contactless.medium-535e5e0e18124c93bd088ed2def21df34fe432607aaaafc30df137cd0b18b8f2.jpg);
+        height: 139px
+    }
+}
+
+@media (min-width: 718px) {
+    .country-AU .home-page .tools .contactless-reader {
+        background-image: url(/assets/pages/home/products/reader-contactless.medium.au-0b77c2856f3d00720512d80258006d8721cc7286b24f542e2f5e114283047b26.jpg);
+        height: 155px
+    }
+}
+
+@media (min-width: 1024px) {
+    .home-page .tools .contactless-reader {
+        background-image: url(/assets/pages/home/products/reader-contactless.large-26ea5fb5541e8fa7a9866d4f631b91e68f03960026dea970947bd3b82ae0f558.jpg);
+        height: 180px
+    }
+}
+
+@media (min-width: 1024px) {
+    .country-AU .home-page .tools .contactless-reader {
+        background-image: url(/assets/pages/home/products/reader-contactless.large.au-646fc47eefa550510c2788138408977d566aa3a5ed38c898e9dffe8e07e1294c.jpg);
+        height: 200px
+    }
+}
+
+@media (min-width: 1292px) {
+    .home-page .tools .contactless-reader {
+        background-image: url(/assets/pages/home/products/reader-contactless.extra-large-f8926239b80c8f4859f00bb1a56a32c081f621e716cc65c808d717a8fa5b34c6.jpg);
+        height: 202px
+    }
+}
+
+@media (min-width: 1292px) {
+    .country-AU .home-page .tools .contactless-reader {
+        background-image: url(/assets/pages/home/products/reader-contactless.extra-large.au-f0386b1991c8051fcb05de95b9088eb78573cb4588612522d05a1873318f7fee.jpg);
+        height: 250px
+    }
+}
+
+.home-page .narrative .intro {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 18em
+}
+
+@media (min-width: 718px) {
+    .home-page .narrative .intro {
+        max-width: 100%
+    }
+}
+
+.home-page .narrative .start {
+    background-image: url(/assets/pages/home/narratives/start-e798d4d966193caf1175e0a3aa9c4edfdbe035a1bf1204e2a61360ffce6d6b5a.jpg);
+    height: 150px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 100%
+}
+
+@media (min-width: 374px) {
+    .home-page .narrative .start {
+        background-image: url(/assets/pages/home/narratives/start.extra-small-888d1bbac089a266890f2d50984c940ab29534aa9433a6286051790edfc74fd6.jpg);
+        height: 150px
+    }
+}
+
+@media (min-width: 480px) {
+    .home-page .narrative .start {
+        background-image: url(/assets/pages/home/narratives/start.small-c48d5091da480a73473e717090d82ba14cc2194ee7ed02c319b08f511aaac4ff.jpg);
+        height: 150px
+    }
+}
+
+@media (min-width: 718px) {
+    .home-page .narrative .start {
+        background-image: url(/assets/pages/home/narratives/start.medium-67c77d266075767cd0f75f817c1e8f53452738d4feb09276a725d07a7448391d.jpg);
+        height: 150px
+    }
+}
+
+@media (min-width: 1024px) {
+    .home-page .narrative .start {
+        background-image: url(/assets/pages/home/narratives/start.large-50498f1c4dc71084ee46e688513bc607aff148f023cc3265e91f9ee07140b662.jpg);
+        height: 170px
+    }
+}
+
+@media (min-width: 1292px) {
+    .home-page .narrative .start {
+        background-image: url(/assets/pages/home/narratives/start.extra-large-6972efaddbaf605ebdfe1b4c2786ec7517b71da2cc4875311891118b6f5d1697.jpg);
+        height: 170px
+    }
+}
+
+.home-page .narrative .run {
+    background-image: url(/assets/pages/home/narratives/run-90c9af4da2dba99c82e7e379ed7139061ff1c79e97927fbd7efbd8d03ebd9b0f.jpg);
+    height: 150px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 100%
+}
+
+@media (min-width: 374px) {
+    .home-page .narrative .run {
+        background-image: url(/assets/pages/home/narratives/run.extra-small-9dcb881f60389a241824b2478ce1972c2150fd8747c6805bc723c38ca6466cd0.jpg);
+        height: 150px
+    }
+}
+
+@media (min-width: 480px) {
+    .home-page .narrative .run {
+        background-image: url(/assets/pages/home/narratives/run.small-7ae1984004db4f841125c0a02912f30967ae1c48eb3866d4a553599a37988da0.jpg);
+        height: 150px
+    }
+}
+
+@media (min-width: 718px) {
+    .home-page .narrative .run {
+        background-image: url(/assets/pages/home/narratives/run.medium-c079994c28a95a80828880d733c540ecb01b09030ce987c3f8cf59089317ac8e.jpg);
+        height: 150px
+    }
+}
+
+@media (min-width: 1024px) {
+    .home-page .narrative .run {
+        background-image: url(/assets/pages/home/narratives/run.large-5fb49e3bf2294c44e0df854533c1ab4a626fea817400cd4cc1ad759fca36ea0c.jpg);
+        height: 170px
+    }
+}
+
+@media (min-width: 1292px) {
+    .home-page .narrative .run {
+        background-image: url(/assets/pages/home/narratives/run.extra-large-1aafb03947d7216da18fc117318dcdc5fc7c9850d930810f9332ddd6ce08555e.jpg);
+        height: 170px
+    }
+}
+
+.home-page .narrative .grow {
+    background-image: url(/assets/pages/home/narratives/grow-e9a51a329b1790f3efc496be16cefd317e1608f09c352770af56d5bcdb667a41.jpg);
+    height: 150px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 100%
+}
+
+@media (min-width: 374px) {
+    .home-page .narrative .grow {
+        background-image: url(/assets/pages/home/narratives/grow.extra-small-646864d1c80dbefd9f4949c66af9ca79a9da09e715842280eaeb99b3ba88d9ae.jpg);
+        height: 150px
+    }
+}
+
+@media (min-width: 480px) {
+    .home-page .narrative .grow {
+        background-image: url(/assets/pages/home/narratives/grow.small-60b5cd91a2cd9f116876855f51dd21ff45f3b1c9fd8e5e221578d68f03a9cc3e.jpg);
+        height: 150px
+    }
+}
+
+@media (min-width: 718px) {
+    .home-page .narrative .grow {
+        background-image: url(/assets/pages/home/narratives/grow.medium-fc4af80db59edce159e37fba7557e9e8da4bb29d4696d760bcf52b83bd7546fe.jpg);
+        height: 150px
+    }
+}
+
+@media (min-width: 1024px) {
+    .home-page .narrative .grow {
+        background-image: url(/assets/pages/home/narratives/grow.large-0f42309cb201bf42bebeda3147c4bc53fcb6409e9ed841a547cf41040168fd74.jpg);
+        height: 170px
+    }
+}
+
+@media (min-width: 1292px) {
+    .home-page .narrative .grow {
+        background-image: url(/assets/pages/home/narratives/grow.extra-large-8daf2f876f8596cc62097b95a30ea3793bb169ee0d75633231fadee9f4e4d7b9.jpg);
+        height: 170px
+    }
+}
+
+.home-page .signup h4,
+.home-page .signup .h4 {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 17em
+}
+
+@media (min-width: 718px) {
+    .country-JP .home-page .hero {
+        text-align: left
+    }
+    .country-JP .home-page .hero h1,
+    .country-JP .home-page .hero .h1 {
+        margin-left: 0;
+        max-width: 9em
+    }
+}
+
+.country-US .home-page .tools .contactless-column {
+    -webkit-box-ordinal-group: 2;
+    -webkit-order: 1;
+    -ms-flex-order: 1;
+    order: 1
+}
+
+.country-US .home-page .tools .magstripe-column {
+    -webkit-box-ordinal-group: 3;
+    -webkit-order: 2;
+    -ms-flex-order: 2;
+    order: 2
+}
+
+.country-US .home-page .tools .stand-column {
+    -webkit-box-ordinal-group: 4;
+    -webkit-order: 3;
+    -ms-flex-order: 3;
+    order: 3
+}
+
+@media (min-width: 718px) {
+    .country-US .home-page .tools .stand-column {
+        -webkit-box-ordinal-group: 2;
+        -webkit-order: 1;
+        -ms-flex-order: 1;
+        order: 1
+    }
+    .country-US .home-page .tools .contactless-column {
+        -webkit-box-ordinal-group: 3;
+        -webkit-order: 2;
+        -ms-flex-order: 2;
+        order: 2
+    }
+    .country-US .home-page .tools .magstripe-column {
+        -webkit-box-ordinal-group: 4;
+        -webkit-order: 3;
+        -ms-flex-order: 3;
+        order: 3
+    }
+}
+
+.country-JP .home-page .hero {
+    background-image: url(/assets/pages/home/jp/hero-c3fdaa89de43fd3eee6f73813bf90b41b0cd0ad1482cfc1bccb15935af35f435.jpg);
+    height: 500px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 100%
+}
+
+@media (min-width: 480px) {
+    .country-JP .home-page .hero {
+        background-image: url(/assets/pages/home/jp/hero.small-b2466195899beace40994ade062bd97329a0833a8eacf8ff8679adba4694d537.jpg);
+        height: 500px
+    }
+}
+
+@media (min-width: 718px) {
+    .country-JP .home-page .hero {
+        background-image: url(/assets/pages/home/jp/hero.medium-366701468ff728d602500aaa418a8e73c6ced68b43687e53b2cfa52c74457168.jpg);
+        height: 500px
+    }
+}
+
+@media (min-width: 1024px) {
+    .country-JP .home-page .hero {
+        background-image: url(/assets/pages/home/jp/hero.large-e680248815fb0606bcf320873684e223edca6b6f477c8e1930d6ccbf6e116255.jpg);
+        height: 500px
+    }
+}
+
+@media (min-width: 1292px) {
+    .country-JP .home-page .hero {
+        background-image: url(/assets/pages/home/jp/hero.extra-large-2b461a05dbfb0e111ab7ec363392748c9500e61364aab77c8add0899985aece5.jpg);
+        height: 500px
+    }
+}
+
+.country-JP .home-page .card-brands .icon svg>* {
+    fill: #5f6a7d
+}
+
+.country-JP .home-page .announcement .image {
+    background-image: url(/assets/pages/home/jp/banner-1482c121a9f02a295774340d17fcdc85c2b466a9c77a6e9ca597492dfa273cb4.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 110px;
+    width: 170px
+}
+
+@media (min-width: 718px) {
+    .country-JP .home-page .announcement .image {
+        height: 100%
+    }
+}
+
+@media (min-width: 1024px) {
+    .country-JP .home-page .announcement .image {
+        height: 110px
+    }
+}
+
+.country-JP .home-page .announcement h4,
+.country-JP .home-page .announcement .h4,
+.country-JP .home-page .announcement p {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 21em
+}
+
+@media (min-width: 718px) {
+    .country-JP .home-page .announcement h4,
+    .country-JP .home-page .announcement .h4,
+    .country-JP .home-page .announcement p {
+        margin-left: 0
+    }
+}
+
+.country-JP .home-page .card-brands .cards {
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 20em
+}
+
+@media (min-width: 718px) {
+    .country-JP .home-page .card-brands .cards {
+        max-width: 100%
+    }
+}
+
+.country-JP .home-page .reasons .image {
+    background-image: url(/assets/pages/home/jp/reasons-b14814c827c97765be3fa7f0130edfedd4513a2f231da07df63c5b1fa1547a9d.jpg);
+    height: 360px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 100%
+}
+
+.country-JP .home-page .reader .image {
+    background-image: url(/assets/pages/home/jp/reader-35900ee8e26a6f8f4ccf5cdcd312a4524566f96fbca4b277b322e9527ef2fc67.jpg);
+    height: 245px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 100%
+}
+
+@media (min-width: 480px) {
+    .country-JP .home-page .reader .image {
+        background-image: url(/assets/pages/home/jp/reader.small-4f42f909a66e22b8dfb77f571570b02f70f12362a2256c19ce45176db01066a8.jpg);
+        height: 341px
+    }
+}
+
+@media (min-width: 718px) {
+    .country-JP .home-page .reader .image {
+        background-image: url(/assets/pages/home/jp/reader.medium-3b0e314cf6dfc83954d5ed8f293cb1899a25bb2fa14d8c91f0144401883a7480.jpg);
+        height: 282px
+    }
+}
+
+@media (min-width: 1024px) {
+    .country-JP .home-page .reader .image {
+        background-image: url(/assets/pages/home/jp/reader.large-3b638798af93201b48ffe3d4f22637f32203583778b819cb6bba177ef2da8b73.jpg);
+        height: 348px
+    }
+}
+
+@media (min-width: 1292px) {
+    .country-JP .home-page .reader .image {
+        background-image: url(/assets/pages/home/jp/reader.extra-large-17a31754c2a4e7bd66042e99e2890994ce3504ec2bfc787190e9809b099703c6.jpg);
+        height: 398px
+    }
+}
+
+.country-JP .home-page .features .image {
+    background-image: url(/assets/pages/home/jp/features-90f8d39160003b65750466907ad09c7d84588b20636d6327473982d093271493.jpg);
+    height: 150px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 100%
+}
+
+@media (min-width: 480px) {
+    .country-JP .home-page .features .image {
+        background-image: url(/assets/pages/home/jp/features.small-019d104083d0f0c3090a476b891267bdc647249fad09c4509ee800ba8c9ca279.jpg);
+        height: 230px
+    }
+}
+
+@media (min-width: 718px) {
+    .country-JP .home-page .features .image {
+        background-image: url(/assets/pages/home/jp/features.medium-a1022c5df3eff1a85b71db1eb7b967b4688cfd4e7553fb10060aa3fbaabe89bf.jpg);
+        height: 352px
+    }
+}
+
+@media (min-width: 1024px) {
+    .country-JP .home-page .features .image {
+        background-image: url(/assets/pages/home/jp/features.large-6324db0647a5da2bc5e9d1f00b17180fb236cea526bab2bd33f3ac9a0436924a.jpg);
+        height: 429px
+    }
+}
+
+@media (min-width: 1292px) {
+    .country-JP .home-page .features .image {
+        background-image: url(/assets/pages/home/jp/features.extra-large-d1869e38091c38053ffc49d31db694fe9e03264c052acd055ab166cf208f9b66.jpg);
+        height: 458px
+    }
+}
+
+.country-JP .home-page .pricing .card-brands .icon svg>* {
+    fill: #fff
+}
+
+.country-JP .home-page .pricing .card-brands .cards {
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 14em
+}
+
+@media (min-width: 1024px) {
+    .country-JP .home-page .pricing .card-brands .cards {
+        max-width: 100%
+    }
+}
+
+.country-JP .home-page .contact .image {
+    background-image: url(/assets/pages/home/jp/contact-484bca925412385bce2201f77ca6cf7daa3d5a02eda5f391fc4b73eec35bf31f.jpg);
+    height: 498px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 100%
 }

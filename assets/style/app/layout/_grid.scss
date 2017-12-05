@@ -1,0 +1,226 @@
+@import "mixins/flex";
+@import "variables/grid";
+
+// Set up flexbox for our grid system
+.grid, [class*="grid-"] {
+  @include flex-box();
+  @include flex-wrap(wrap);
+  margin-left: -10px;
+  margin-right: -10px;
+  margin-bottom: -20px !important;
+}
+
+// All nested grid elements.
+.grid > *, [class*="grid-"] > * {
+  @include flex-initial();
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 20px !important;
+}
+
+.grid > *, [class*="grid-"] > * {
+  width: 100%;
+}
+
+.grid > *, [class*="grid-"] > * {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.grid > *, [class*="grid-"] > * {
+  margin-bottom: 20px !important;
+}
+
+// .grid.grid-gap-*
+@each $type, $spec in $grid-spaces {
+  .grid.gap-#{$type},
+  .grid.gap-vert-#{$type},
+  .grid.gap-bottom-#{$type},
+  [class*="grid-"].gap-#{$type},
+  [class*="grid-"].gap-vert-#{$type},
+  [class*="grid-"].gap-bottom-#{$type} {
+    margin-bottom: nth($spec, 2) - 10px !important;
+  }
+}
+
+.grid-reverse {
+  @include flex-row-reverse();
+}
+
+.grid-row-equal-heights > * {
+  @include flex-box();
+  @include flex-wrap(wrap);
+}
+
+.grid-row-equal-heights > * > * {
+  @include flex-initial();
+  width: 100%;
+}
+
+.no-shrink {
+  @include flex-no-shrink();
+}
+
+.grid-auto > *,
+.grid-flex > * {
+  width: auto;
+}
+
+.grid-flex {
+  @include flex-box();
+  @include flex-wrap(nowrap);
+}
+
+.grid-flex > * {
+  @include flex-initial();
+}
+
+// .grid-1, .grid-2, etc.
+@for $gridNum from 1 through 5 {
+  .grid-#{$gridNum} > * {
+    width: 100%/$gridNum;
+  }
+}
+
+// .grid-space-base, .grid-col-space-base, .grid-row-space-base, etc.
+@each $type, $spec in $grid-spaces {
+  $side: nth($spec, 1);
+
+  .grid-space-#{$type},
+  .grid-col-space-#{$type} {
+    margin-left: -$side;
+    margin-right: -$side;
+  }
+
+  .grid-space-#{$type} > *,
+  .grid-col-space-#{$type} > * {
+    padding-left: $side;
+    padding-right: $side;
+  }
+
+  .grid-space-#{$type},
+  .grid-row-space-#{$type} {
+    margin-bottom: $side * -2 !important;
+  }
+
+  .grid-space-#{$type} > *,
+  .grid-row-space-#{$type} > * {
+    margin-bottom: $side * 2 !important;
+  }
+
+  $gap: nth($spec, 2);
+  @each $sub-type, $sub-spec in $grid-spaces {
+    $sub-gap: nth($sub-spec, 2);
+    .grid-space-#{$type}.gap-#{$sub-type},
+    .grid-space-#{$type}.gap-vert-#{$sub-type},
+    .grid-space-#{$type}.gap-bottom-#{$sub-type},
+    .grid-row-space-#{$type}.gap-#{$sub-type},
+    .grid-row-space-#{$type}.gap-vert-#{$sub-type},
+    .grid-row-space-#{$type}.gap-bottom-#{$sub-type} {
+      margin-bottom: -$gap + $sub-gap !important;
+    }
+  }
+}
+
+@each $justify, $content in $grid-align {
+  .grid-align-#{$justify},
+  .flex-align-#{$justify} {
+    @include flex-box(true);
+    @include justify-content($content);
+  }
+}
+
+@each $justify, $items in $grid-valign {
+  .grid-valign-#{$justify},
+  .flex-valign-#{$justify} {
+    @include flex-box(true);
+    @include align-content(map-get($grid-align, $justify));
+    @include align-items($items);
+  }
+}
+
+@each $size, $min-width in $grid-sizes {
+  @media (min-width: $min-width) {
+
+    $suffix: -at-#{$size};
+
+    .grid-auto-at-#{$size} > *,
+    .grid-flex-at-#{$size} > * {
+      width: auto;
+    }
+
+    .grid-flex-at-#{$size} {
+      @include flex-box();
+      @include flex-wrap(nowrap);
+    }
+
+    .grid-flex-at-#{$size} > * {
+      @include flex-initial();
+    }
+
+    // .grid-1, .grid-2, etc.
+    @for $gridNum from 1 through 5 {
+      .grid-#{$gridNum}-at-#{$size} > * {
+        width: 100%/$gridNum;
+      }
+    }
+
+    // .grid-space-base, .grid-col-space-base, .grid-row-space-base, etc.
+    @each $type, $spec in $grid-spaces {
+      $side: nth($spec, 1);
+
+      .grid-space-#{$type}-at-#{$size},
+      .grid-col-space-#{$type}-at-#{$size} {
+        margin-left: -$side;
+        margin-right: -$side;
+      }
+
+      .grid-space-#{$type}-at-#{$size} > *,
+      .grid-col-space-#{$type}-at-#{$size} > * {
+        padding-left: $side;
+        padding-right: $side;
+      }
+
+      .grid-space-#{$type}-at-#{$size},
+      .grid-row-space-#{$type}-at-#{$size} {
+        margin-bottom: $side * -2 !important;
+      }
+
+      .grid-space-#{$type}-at-#{$size} > *,
+      .grid-row-space-#{$type}-at-#{$size} > * {
+        margin-bottom: $side * 2 !important;
+      }
+
+      $gap: nth($spec, 2);
+      @each $sub-type, $sub-spec in $grid-spaces {
+        $sub-gap: nth($sub-spec, 2);
+        .grid-space-#{$type}-at-#{$size}.gap-#{$sub-type},
+        .grid-space-#{$type}-at-#{$size}.gap-vert-#{$sub-type},
+        .grid-space-#{$type}-at-#{$size}.gap-bottom-#{$sub-type},
+        .grid-row-space-#{$type}-at-#{$size}.gap-#{$sub-type},
+        .grid-row-space-#{$type}-at-#{$size}.gap-vert-#{$sub-type},
+        .grid-row-space-#{$type}-at-#{$size}.gap-bottom-#{$sub-type} {
+          margin-bottom: -$gap + $sub-gap !important;
+        }
+      }
+    }
+
+    @each $justify, $content in $grid-align {
+      .grid-align-#{$justify}-at-#{$size},
+      .flex-align-#{$justify}-at-#{$size} {
+        @include flex-box(true);
+        @include justify-content($content);
+      }
+    }
+
+    @each $justify, $items in $grid-valign {
+      .grid-valign-#{$justify}-at-#{$size},
+      .flex-valign-#{$justify}-at-#{$size} {
+        @include flex-box(true);
+        @include align-content(map-get($grid-align, $justify));
+        @include align-items($items);
+      }
+    }
+  }
+}

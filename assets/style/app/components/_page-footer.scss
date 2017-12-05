@@ -1,0 +1,140 @@
+.page-footer {
+    background-color: #1b2126;
+    color: #6c7980;
+    font-size: 14px;
+    line-height: 20px
+}
+
+.page-footer [fill]:not([fill="none"]):not([fill^=url]) {
+    fill: #fff
+}
+
+.page-footer [stroke]:not([stroke="transparent"]) {
+    stroke: #fff
+}
+
+.page-footer a {
+    color: #fff
+}
+
+.page-footer a:hover,
+.page-footer a:focus {
+    color: #fff
+}
+
+.page-footer h1,
+.page-footer .h1,
+.page-footer h1 a,
+.page-footer .h1 a,
+.page-footer h2,
+.page-footer .h2,
+.page-footer h2 a,
+.page-footer .h2 a,
+.page-footer h3,
+.page-footer .h3,
+.page-footer h3 a,
+.page-footer .h3 a,
+.page-footer h4,
+.page-footer .h4,
+.page-footer h4 a,
+.page-footer .h4 a,
+.page-footer h5,
+.page-footer .h5,
+.page-footer h5 a,
+.page-footer .h5 a,
+.page-footer h6,
+.page-footer .h6,
+.page-footer h6 a,
+.page-footer .h6 a {
+    color: #6c7980
+}
+
+.page-footer h1:hover,
+.page-footer .h1:hover,
+.page-footer h1:focus,
+.page-footer .h1:focus,
+.page-footer h1 a:hover,
+.page-footer .h1 a:hover,
+.page-footer h1 a:focus,
+.page-footer .h1 a:focus,
+.page-footer h2:hover,
+.page-footer .h2:hover,
+.page-footer h2:focus,
+.page-footer .h2:focus,
+.page-footer h2 a:hover,
+.page-footer .h2 a:hover,
+.page-footer h2 a:focus,
+.page-footer .h2 a:focus,
+.page-footer h3:hover,
+.page-footer .h3:hover,
+.page-footer h3:focus,
+.page-footer .h3:focus,
+.page-footer h3 a:hover,
+.page-footer .h3 a:hover,
+.page-footer h3 a:focus,
+.page-footer .h3 a:focus,
+.page-footer h4:hover,
+.page-footer .h4:hover,
+.page-footer h4:focus,
+.page-footer .h4:focus,
+.page-footer h4 a:hover,
+.page-footer .h4 a:hover,
+.page-footer h4 a:focus,
+.page-footer .h4 a:focus,
+.page-footer h5:hover,
+.page-footer .h5:hover,
+.page-footer h5:focus,
+.page-footer .h5:focus,
+.page-footer h5 a:hover,
+.page-footer .h5 a:hover,
+.page-footer h5 a:focus,
+.page-footer .h5 a:focus,
+.page-footer h6:hover,
+.page-footer .h6:hover,
+.page-footer h6:focus,
+.page-footer .h6:focus,
+.page-footer h6 a:hover,
+.page-footer .h6 a:hover,
+.page-footer h6 a:focus,
+.page-footer .h6 a:focus {
+    color: #6c7980
+}
+
+.page-footer .destination-links {
+    font-size: 12px;
+    line-height: 20px
+}
+
+.page-footer .destination-links li {
+    margin-bottom: 5px
+}
+
+.page-footer .primary {
+    margin-bottom: 30px
+}
+
+.page-footer .tertiary {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12)
+}
+
+@media (min-width: 480px) {
+    .page-footer [data-transition-target] {
+        cursor: default;
+        pointer-events: none
+    }
+    .page-footer [data-transition-target]:after {
+        display: none
+    }
+}
+
+@media (min-width: 480px) {
+    .page-footer [data-transition-types="collapse fade"] {
+        overflow: hidden !important;
+        opacity: 1 !important;
+        height: auto !important
+    }
+}
