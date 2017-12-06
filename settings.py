@@ -21,6 +21,7 @@ DEFAULT_APPS = [
 
 THIRD_PARTY_APPS = [
     'sass_processor',
+    'compressor',
 ]
 if AWS_ENABLED:
     THIRD_PARTY_APPS.append('storages')
@@ -83,6 +84,7 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 # Allow all host headers
 ALLOWED_HOSTS = ['*']
 
+DEFAULT_PROTOCOL = env.str('DEFAULT_PROTOCOL', default='http')
 
 CACHES = {
     'default': env.cache('REDIS_URL'),
@@ -104,14 +106,14 @@ STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
     'sass_processor.finders.CssFinder',
+    'compressor.finders.CompressorFinder',
 ]
 
 STATIC_ROOT = root('staticfiles')
 STATIC_URL = env.str('STATIC_URL', default='/static/')
-STATIC_CDN = env.str('STATIC_CDN', default='')
 
 if AWS_ENABLED:
-    STATICFILES_STORAGE = env.str('STATICFILES_STORAGE', default='dimagi.storage.CachedS3BotoStorage')
+    STATICFILES_STORAGE = "dimagi.storage.StaticFileStorage"
     COMPRESS_STORAGE = STATICFILES_STORAGE
 
 SASS_ASSETS = static_assets_root('style')
@@ -123,11 +125,25 @@ SASS_PRECISION = 8
 SASS_PROCESSOR_ENABLED = True
 
 AWS_STORAGE_BUCKET_NAME = env.str('AWS_STORAGE_BUCKET_NAME', default='')
+AWS_CLOUDFRONT_DOMAIN = env.str('AWS_CLOUDFRONT_DOMAIN', default='')
 
 if AWS_ENABLED:
     AWS_ACCESS_KEY_ID = env.str('AWS_ACCESS_KEY_ID', default='')
     AWS_SECRET_ACCESS_KEY = env.str('AWS_SECRET_ACCESS_KEY', default='')
     AWS_S3_REGION_NAME = env.str('AWS_S3_REGION_NAME', default='')
-    AWS_S3_CUSTOM_DOMAIN = env.str('AWS_S3_CUSTOM_DOMAIN', default='')
+    AWS_S3_CUSTOM_DOMAIN = AWS_CLOUDFRONT_DOMAIN
     AWS_LOCATION = STATIC_URL
+
+COMPRESS_CSS_FILTERS = (
+    'compressor_postcss.PostCSSFilter',
+    'compressor.filters.css_default.CssAbsoluteFilter',
+)
+COMPRESS_POSTCSS_PLUGINS = (
+    'autoprefixer',
+)
+COMPRESS_ENABLED = env.bool('COMPRESS_ENABLED', default=True)
+COMPRESS_OFFLINE = env.bool('COMPRESS_OFFLINE', default=True)
+
+STATIC_CDN = "{}://{}".format(DEFAULT_PROTOCOL, AWS_CLOUDFRONT_DOMAIN)
+COMPRESS_URL = STATIC_CDN + STATIC_URL
 
