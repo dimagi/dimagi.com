@@ -3,7 +3,8 @@ import json
 from django import template
 from django.http import QueryDict
 from django.utils.safestring import mark_safe
-from dimagi.utils.sass import CDNSassSrcNode
+from compressor.templatetags.compress import compress as original_compress
+from sass_processor.templatetags.sass_tags import SassSrcNode
 from dimagi.utils.web import json_handler, get_static_url
 
 try:
@@ -16,7 +17,7 @@ register = template.Library()
 
 @register.tag(name='sass_src')
 def render_sass_src(parser, token):
-    return CDNSassSrcNode.handle_token(parser, token)
+    return SassSrcNode.handle_token(parser, token)
 
 
 @register.filter
@@ -56,3 +57,8 @@ def BOOL(obj):
     except AttributeError:
         pass
     return 'true' if obj else 'false'
+
+
+@register.tag
+def compress(parser, token):
+    return original_compress(parser, token)
