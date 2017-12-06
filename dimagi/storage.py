@@ -22,3 +22,15 @@ class S3BotoStorage(SassS3Boto3Storage):
 
 class CompressedFileStorage(CompressorFileStorage):
     base_url = STATIC_URL
+
+
+class CachedS3BotoStorage(S3BotoStorage):
+
+    def __init__(self, *args, **kwargs):
+        super(CachedS3BotoStorage, self).__init__(*args, **kwargs)
+        self.local_storage = CompressedFileStorage()
+
+    def _save(self, name, content):
+        self.local_storage._save(name, content)
+        super(S3BotoStorage, self)._save(name, self.local_storage._open(name))
+        return name
