@@ -1,9 +1,10 @@
 from __future__ import absolute_import
-from django.conf import settings
+import json
 from django import template
-from sass_processor.templatetags.sass_tags import SassSrcNode
-
-from dimagi.utils.sass import CDNSassProcessor
+from django.http import QueryDict
+from django.utils.safestring import mark_safe
+from dimagi.utils.sass import CDNSassSrcNode
+from dimagi.utils.web import json_handler, get_static_url
 
 try:
     from static_versions import static_versions
@@ -11,11 +12,6 @@ except (ImportError, SyntaxError):
     static_versions = {}
 
 register = template.Library()
-
-
-class CDNSassSrcNode(SassSrcNode):
-    def __init__(self, path):
-        self.sass_processor = CDNSassProcessor(path)
 
 
 @register.tag(name='sass_src')
@@ -29,8 +25,7 @@ def static(url):
     """
     Handle the rendering of the static file path and bump it to a CDN if applicable.
     """
-    static_url = settings.STATIC_CDN + settings.STATIC_URL + url
-
+    static_url = get_static_url(url)
     version = static_versions.get(url)
     if version:
         static_url = "{}?version={}".format(static_url, version)
