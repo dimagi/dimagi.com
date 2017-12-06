@@ -139,6 +139,7 @@ if AWS_ENABLED:
 COMPRESS_CSS_FILTERS = (
     'compressor_postcss.PostCSSFilter',
     'compressor.filters.css_default.CssAbsoluteFilter',
+    'compressor.filters.cssmin.rCSSMinFilter',
 )
 COMPRESS_POSTCSS_PLUGINS = (
     'autoprefixer',
