@@ -19,6 +19,8 @@ boto = "*"
 "boto3" = "*"
 django-storages = "*"
 django-redis = "*"
+django-compressor-postcss = "*"
+autoprefixer = "*"
 
 
 [requires]
