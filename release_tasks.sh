@@ -1,6 +1,5 @@
 #!/bin/sh
 
-yarn install
 rm -r ./staticfiles
 python manage.py compilescss
 python manage.py collectstatic --ignore=*.scss --clear --no-input

@@ -5,10 +5,13 @@
   "repository": "https://github.com/dimagi/dimagi.com",
   "keywords": ["python", "django" ],
   "addons": [ "heroku-postgresql", "heroku-redis" ],
+  "buildpacks": [
+    { "url": "heroku/nodejs" },
+    { "url": "heroku/python" }
+  ],
   "environments": {
     "test": {
       "scripts": {
-        "test-setup": "python manage.py collectstatic --noinput",
         "test": "python manage.py test"
       }
     }
