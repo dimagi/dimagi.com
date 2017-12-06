@@ -113,7 +113,7 @@ STATIC_URL = env.str('STATIC_URL', default='/static/')
 
 if AWS_ENABLED:
     STATICFILES_STORAGE = "dimagi.storage.StaticFileStorage"
-    COMPRESS_STORAGE = 'dimagi.storage.S3BotoStorage'
+    COMPRESS_STORAGE = "dimagi.storage.CompressedFileStorage"
 
 SASS_ASSETS = static_assets_root('style')
 SASS_PROCESSOR_INCLUDE_DIRS = [
