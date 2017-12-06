@@ -1,7 +1,7 @@
 from __future__ import absolute_import, print_function
 import os
 import boto3
-from datetime import time
+import time
 from django.core.management.base import BaseCommand
 from dimagi.storage import S3BotoStorage, StaticFileStorage
 from dimagi.utils.config import setting
@@ -54,5 +54,5 @@ class Command(BaseCommand):
                     'Quantity': 1,
                     'Items': [self.static_url + '*']
                 },
-                'CallerReference': str(time()),
+                'CallerReference': str(time.time()),
             })
