@@ -47,7 +47,7 @@ class Command(BaseCommand):
 
     def invalidate_cdn(self):
         client = boto3.client('cloudfront')
-        client.create_invalidation(
+        invalidation_response = client.create_invalidation(
             DistributionId=self.cloudfront_distribution_id,
             InvalidationBatch={
                 'Paths': {
@@ -56,3 +56,12 @@ class Command(BaseCommand):
                 },
                 'CallerReference': str(time.time()),
             })
+        invalidation_id = invalidation_response['Invalidation']['Id']
+        print("-\nCloudFront Invalidation Started: %s" % invalidation_id)
+        waiter = client.get_waiter('invalidation_completed')
+        print("Waiting for Invalidation to Complete")
+        waiter.wait(
+            DistributionId=self.cloudfront_distribution_id,
+            Id=invalidation_id,
+        )
+        print("Invalidation Complete. CDN is ready.")
