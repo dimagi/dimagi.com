@@ -85,6 +85,8 @@ ALLOWED_HOSTS = ['*']
 
 DEFAULT_PROTOCOL = env.str('DEFAULT_PROTOCOL', default='http')
 
+DEPLOY_ENVIRONMENT = env.str('DEPLOY_ENVIRONMENT', default='dev')
+
 CACHES = {
     'default': env.cache('REDIS_URL'),
 }

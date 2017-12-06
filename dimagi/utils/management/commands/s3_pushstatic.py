@@ -5,6 +5,7 @@ import time
 from django.core.management.base import BaseCommand
 from dimagi.storage import S3BotoStorage, StaticFileStorage
 from dimagi.utils.config import setting
+from dimagi.utils.environment import is_production_environment
 
 
 class Command(BaseCommand):
@@ -27,7 +28,8 @@ class Command(BaseCommand):
             files_to_push.extend(filepaths)
         for path in files_to_push:
             self.push_file(path)
-        self.invalidate_cdn()
+        if is_production_environment():
+            self.invalidate_cdn()
 
     def push_file(self, path):
         """
