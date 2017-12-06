@@ -83,6 +83,11 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 # Allow all host headers
 ALLOWED_HOSTS = ['*']
 
+
+CACHES = {
+    'default': env.cache('REDIS_URL'),
+}
+
 # Static files (CSS, JavaScript, Images)
 static_assets_root = root.path('assets/')
 STATIC_ASSETS = static_assets_root()
@@ -126,6 +131,3 @@ if AWS_ENABLED:
     AWS_S3_CUSTOM_DOMAIN = env.str('AWS_S3_CUSTOM_DOMAIN', default='')
     AWS_LOCATION = STATIC_URL
 
-CACHES = {
-    'default': env.cache('REDIS_URL'),
-}
