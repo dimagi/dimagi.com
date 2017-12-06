@@ -23,12 +23,20 @@ class Command(BaseCommand):
             files_to_push.extend(filepaths)
 
         for path in files_to_push:
-            self.copy_file(path)
+            self.push_file(path)
 
-    def copy_file(self, path):
+    def push_file(self, path):
         """
-        Attempt to copy ``path`` with storage
+        Push file at path to S3.
         """
         prefixed_path = path.replace(self.staticfiles_dir, '').lstrip('/')
-        print("Copying '%s'" % path)
-        self.storage.save(prefixed_path, self.local_storage.open(prefixed_path))
+        exists = self.storage.exists(prefixed_path)
+        is_js_lib = prefixed_path.startswith('js/lib')
+
+        if not exists:
+            print("* Pushing to S3: '%s'" % prefixed_path)
+            self.storage.save(prefixed_path, self.local_storage.open(prefixed_path))
+        elif exists and not is_js_lib:
+            print("- Updating existing file on S3: '%s'" % prefixed_path)
+            self.storage.delete(prefixed_path)
+            self.storage.save(prefixed_path, self.local_storage.open(prefixed_path))
