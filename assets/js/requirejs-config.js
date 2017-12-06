@@ -1,6 +1,5 @@
-/* globals STATIC_CDN */
 requirejs.config({
-  baseUrl: STATIC_CDN + '/static/js/',
+  baseUrl: document.querySelector("meta[property='dimagi:baseUrl']").getAttribute("content") + 'js/',
   paths: {
     "lib/jquery": "lib/jquery/jquery.min",
     "lib/knockout": "lib/knockout/knockout-latest",

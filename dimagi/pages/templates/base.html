@@ -4,6 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, shrink-to-fit=no, viewport-fit=cover">
     <meta name="format-detection" content="telephone=no">
+    <meta property="dimagi:baseUrl" content="{{ meta.baseUrl }}">
     <title>Dimagi.com</title>
     <link href="{% sass_src 'style/app.scss' %}" rel="stylesheet" media="screen" type="text/css" />
     {% block stylesheets %}{% endblock %}
@@ -150,9 +151,6 @@
       </footer>
     </main>
 
-    <script>
-      var STATIC_CDN = "{{ STATIC_CDN }}";
-    </script>
     <script src="{% static 'js/lib/requirejs/require.js' %}"></script>
     <script src="{% static 'js/requirejs-config.js' %}"></script>
 
