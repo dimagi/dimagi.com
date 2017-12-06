@@ -1,4 +1,4 @@
-{% load i18n %}{% load dimagidotcom %}<!DOCTYPE html>
+{% load compress %}{% load i18n %}{% load dimagidotcom %}<!DOCTYPE html>
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -6,7 +6,9 @@
     <meta name="format-detection" content="telephone=no">
     <meta property="dimagi:baseUrl" content="{{ meta.baseUrl }}">
     <title>Dimagi.com</title>
+    {% compress css %}
     <link href="{% sass_src 'style/app.scss' %}" rel="stylesheet" media="screen" type="text/css" />
+    {% endcompress %}
     {% block stylesheets %}{% endblock %}
   </head>
   <body class="home-page tucked-hero split-home-page">
