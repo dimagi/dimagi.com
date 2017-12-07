@@ -1,16 +1,19 @@
+@import 'app/variables/colors';
+@import 'app/variables/sizes';
+
 html {
-    background-color: #161b1f
+  background-color: $color-bg-html;
 }
 
 body {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1680px;
-    overflow-x: hidden;
-    min-width: 320px;
-    background-color: #fff
+  background-color: $color-bg;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: $body-width-max;
+  min-width: $body-width-min;
+  overflow-x: hidden;
 }
 
 .main-content {
-    overflow-x: hidden
+  overflow-x: hidden;
 }
