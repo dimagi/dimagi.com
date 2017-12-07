@@ -1,6 +1,6 @@
 @import "mixins/utils";
 @import "variables/base";
-@import "variables/colors";
+@import "app/variables/colors";
 
 html {
   @include text-size-adjust(100%);
