@@ -13,7 +13,7 @@ linters:
   BangFormat:
     enabled: true
   ColorKeyword:
-    enabled: true
+    enabled: false
   ColorVariable:
     enabled: true
   Comment:
@@ -67,7 +67,7 @@ linters:
   PseudoElement:
     enabled: true
   QualifyingElement:
-    enabled: true
+    enabled: false
   SelectorDepth:
     enabled: true
   SelectorFormat:

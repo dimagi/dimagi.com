@@ -1,19 +1,19 @@
-@import "mixins/utils";
-@import "variables/base";
-@import "app/variables/colors";
+@import 'app/variables/colors';
+@import 'app/variables/sizes';
+@import 'app/variables/type';
 
 html {
-  @include text-size-adjust(100%);
+  text-size-adjust: 100%;
 }
 
 body {
-  @include font-smoothing();
-  text-rendering: optimizeLegibility;
-  font-size: $base-font-size;
-  line-height: $base-line-height;
-  font-family: $base-font-family;
-  font-weight: 300;
   color: $color-text;
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  font-smoothing: always;
+  font-weight: 300;
+  line-height: $line-height-base;
+  text-rendering: optimizeLegibility;
 }
 
 article {
@@ -22,18 +22,19 @@ article {
 }
 
 p {
-  margin-bottom: $base-margin;
+  margin-bottom: $margin-base;
 }
 
-strong, b {
+strong,
+b {
   font-weight: 600;
 }
 
 em {
-    font-style: italic;
+  font-style: italic;
 }
 
 sup {
-    vertical-align: super;
-    font-size: .5em;
+  font-size: .5em;
+  vertical-align: super;
 }

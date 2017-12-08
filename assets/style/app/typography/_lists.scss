@@ -1,128 +1,251 @@
-@import "app/layout/variables/grid";
-@import "mixins/utils";
-@import "variables/lists";
+@import 'app/variables/colors';
+@import 'app/variables/sizes';
 
-ul, ol {
+ul,
+ol {
   list-style: none;
-  margin-bottom: 20px;
+  margin-bottom: $margin-base;
 }
 
-ul>li,
-ol>li {
-  position: relative;
+ul > li,
+ol > li {
   padding-left: $list-padding;
+  position: relative;
 }
 
-ul>li:nth-last-child(1n+2),
-ol>li:nth-last-child(1n+2) {
-  margin-bottom: 20px;
+ul > li:nth-last-child(1n+2),
+ol > li:nth-last-child(1n+2) {
+  margin-bottom: $margin-base;
 }
 
-ul>li:before,
-ol>li:before {
-  overflow: hidden;
+ul > li::before,
+ol > li::before {
   display: block;
+  left: 0;
+  overflow: hidden;
   position: absolute;
   top: 0;
-  left: 0;
-  width: $list-delim-width;
+  width: $list-icon-width;
 }
 
 ul ul,
 ol ul,
 ul ol,
 ol ol {
-  margin-top: 20px;
+  margin-top: $margin-base;
 }
 
-ul.inline-list>li,
-ol.inline-list>li {
+ul.inline-list > li,
+ol.inline-list > li {
   display: inline;
-  padding-left: 0;
   margin-bottom: 0;
+  padding-left: 0;
 }
 
-ul.inline-list>li:before,
-ol.inline-list>li:before {
+ul.inline-list > li::before,
+ol.inline-list > li::before {
   display: inline;
   position: static;
   width: auto;
 }
 
-ul.inline-list>li:nth-last-child(1n+2):after,
-ul.inline-list.space>li:nth-last-child(1n+2):after,
-ol.inline-list>li:nth-last-child(1n+2):after,
+ul.inline-list > li:nth-last-child(1n+2):after,
+ul.inline-list.space > li:nth-last-child(1n+2):after,
+ol.inline-list > li:nth-last-child(1n+2):after,
 ol.inline-list.space>li:nth-last-child(1n+2):after {
-  content: " ";
+  content: ' ';
 }
 
 ul.inline-list.comma>li:nth-last-child(1n+2):after,
 ol.inline-list.comma>li:nth-last-child(1n+2):after {
-  content: ", ";
+  content: ', ';
 }
 
 ul.inline-list.bullet>li:nth-last-child(1n+2):after,
 ol.inline-list.bullet>li:nth-last-child(1n+2):after {
-  content: "•";
-  padding-left: $list-delim-width/2;
-  padding-right: $list-delim-width/2;
+  content: '•';
+  padding-left: $list-icon-width/2;
+  padding-right: $list-icon-width/2;
 }
 
 ul.inline-list.pipe>li:nth-last-child(1n+2):after,
 ol.inline-list.pipe>li:nth-last-child(1n+2):after {
-  content: "|";
-  padding-left: $list-delim-width/2;
-  padding-right: $list-delim-width/2;
+  content: '|';
+  padding-left: $list-icon-width/2;
+  padding-right: $list-icon-width/2;
 }
 
 ul.grid:not(.reset):not(.graphical)>li,
 ul[class*="grid-"]:not(.reset):not(.graphical)>li,
 ol.grid:not(.reset):not(.graphical)>li,
 ol[class*="grid-"]:not(.reset):not(.graphical)>li {
-    padding-left: -webkit-calc(10px + #{$list-padding});
-    padding-left: calc(10px + #{$list-padding});
+  padding-left: calc(#{$grid-pad} + #{$list-padding});
 }
 
-ul.grid:not(.reset):not(.graphical)>li:before,
-ul[class*="grid-"]:not(.reset):not(.graphical)>li:before,
-ol.grid:not(.reset):not(.graphical)>li:before,
-ol[class*="grid-"]:not(.reset):not(.graphical)>li:before {
-    left: 10px;
+ul.grid:not(.reset):not(.graphical)>li::before,
+ul[class*="grid-"]:not(.reset):not(.graphical)>li::before,
+ol.grid:not(.reset):not(.graphical)>li::before,
+ol[class*="grid-"]:not(.reset):not(.graphical)>li::before {
+  left: 10px;
 }
 
-@each $type, $spec in $grid-spaces {
-  $space: nth($spec, 1);
-
-  ul.grid:not(.reset):not(.graphical).grid-space-#{$type} > li,
-  ul.grid:not(.reset):not(.graphical).grid-col-space-#{$type} > li,
-  ul[class*="grid-"]:not(.reset):not(.graphical).grid-space-#{$type} > li,
-  ul[class*="grid-"]:not(.reset):not(.graphical).grid-col-space-#{$type} > li,
-  ol.grid:not(.reset):not(.graphical).grid-space-#{$type} > li,
-  ol.grid:not(.reset):not(.graphical).grid-col-space-#{$type} > li,
-  ol[class*="grid-"]:not(.reset):not(.graphical).grid-space-#{$type} > li,
-  ol[class*="grid-"]:not(.reset):not(.graphical).grid-col-space-#{$type} > li {
-    padding-left: -webkit-calc(#{$space} + #{$list-padding});
-    padding-left: calc(#{$space} + #{$list-padding});
+@each $_type, $_pad in $pads-by-type {
+  ul.grid:not(.reset):not(.graphical).grid-space-#{$_type} > li,
+  ul.grid:not(.reset):not(.graphical).grid-col-space-#{$_type} > li,
+  ul[class*="grid-"]:not(.reset):not(.graphical).grid-space-#{$_type} > li,
+  ul[class*="grid-"]:not(.reset):not(.graphical).grid-col-space-#{$_type} > li,
+  ol.grid:not(.reset):not(.graphical).grid-space-#{$_type} > li,
+  ol.grid:not(.reset):not(.graphical).grid-col-space-#{$_type} > li,
+  ol[class*="grid-"]:not(.reset):not(.graphical).grid-space-#{$_type} > li,
+  ol[class*="grid-"]:not(.reset):not(.graphical).grid-col-space-#{$_type} > li {
+    padding-left: calc(#{$_pad} + #{$list-padding});
   }
 
-  ul.grid:not(.reset):not(.graphical).grid-space-#{$type} > li:before,
-  ul.grid:not(.reset):not(.graphical).grid-col-space-#{$type} > li:before,
-  ul[class*="grid-"]:not(.reset):not(.graphical).grid-space-#{$type} > li:before,
-  ul[class*="grid-"]:not(.reset):not(.graphical).grid-col-space-#{$type} > li:before,
-  ol.grid:not(.reset):not(.graphical).grid-space-#{$type} > li:before,
-  ol.grid:not(.reset):not(.graphical).grid-col-space-#{$type} > li:before,
-  ol[class*="grid-"]:not(.reset):not(.graphical).grid-space-#{$type} > li:before,
-  ol[class*="grid-"]:not(.reset):not(.graphical).grid-col-space-#{$type} > li:before {
-    left: $space;
+  ul.grid:not(.reset):not(.graphical).grid-space-#{$_type} > li::before,
+  ul.grid:not(.reset):not(.graphical).grid-col-space-#{$_type} > li::before,
+  ul[class*="grid-"]:not(.reset):not(.graphical).grid-space-#{$_type} > li::before,
+  ul[class*="grid-"]:not(.reset):not(.graphical).grid-col-space-#{$_type} > li::before,
+  ol.grid:not(.reset):not(.graphical).grid-space-#{$_type} > li::before,
+  ol.grid:not(.reset):not(.graphical).grid-col-space-#{$_type} > li::before,
+  ol[class*="grid-"]:not(.reset):not(.graphical).grid-space-#{$_type} > li::before,
+  ol[class*="grid-"]:not(.reset):not(.graphical).grid-col-space-#{$_type} > li::before {
+    left: $_pad;
   }
 }
 
-ul>li:before,
-ul.bullet>li:before {
-  content: "●";
+ul>li::before,
+ul.bullet>li::before {
+  content: '●';
 }
 
-ul.inline-list>li:before {
+ul.inline-list>li::before {
   content: none;
 }
 
+ul.check-list > li::before { // scss-lint:disable PropertyCount
+  border-bottom-width: 2px;
+  border-left-width: 2px;
+  border-right-width: 0;
+  border-style: solid;
+  border-top-width: 0;
+  color: map-get($colors-by-theme, $default-theme);
+  content: ' ';
+  height: .5em;
+  top: $list-check-margin;
+  transform: rotate(-45deg);
+  width: $list-check-width;
+}
+
+@each $_name, $_color in $colors-by-theme {
+  .#{$_name}-theme ul.check-list > li::before {
+    color: $_color;
+  }
+}
+
+ul.check-list.inline-list>li:nth-last-child(1n+2) {
+  margin-right: $list-check-width;
+}
+
+ul.check-list.inline-list>li::before {
+  display: inline-block;
+  margin-right: $list-check-margin;
+  vertical-align: $list-check-margin;
+}
+
+ul.check-list.inverted>li::before,
+.inverted ul.check-list>li::before {
+    color: $color-white;
+}
+
+@each $_name, $_content in (
+  decimal: decimal,
+  alpha: upper-alpha,
+  upper-alpha: upper-alpha,
+  lower-alpha: lower-alpha,
+  roman: upper-roman,
+  upper-roman: upper-roman,
+  lower-roman: lower-roman,
+) {
+  ol.#{$_name} {
+    counter-reset: list-counter 0;
+
+    > li::before {
+      content: counter(list-counter, $_content) '. ';
+    }
+
+    > li {
+      counter-increment: list-counter;
+    }
+
+    &.circle-list > li::before {
+      content: counter(list-counter, $_content);
+    }
+  }
+}
+
+ol.circle-list > li {
+  padding-left: $list-circle-padding;
+  
+  &::before { // scss-lint:disable PropertyCount
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 1px;
+    color: map-get($colors-by-theme, $default-theme);
+    font-size: .78571em;
+    font-weight: 600;
+    height: $list-circle-size;
+    line-height: calc(#{$list-circle-size} - 2px);
+    margin-top: -.18182em;
+    text-align: center;
+    width: $list-circle-size;
+  }
+}
+
+@each $_name, $_color in $colors-by-theme {
+  .#{$_name}-theme ol.circle-list > li::before {
+    color: $_color;
+  }
+}
+
+ol.circle-list.inline-list>li {
+  padding-left: 0;
+
+  &:nth-last-child(1n+2) {
+    margin-right: .71429em;
+  }
+
+  &::before {
+    display: inline-block;
+    margin-right: .45455em;
+    vertical-align: middle;
+  }
+}
+
+ol.grid:not(.reset):not(.graphical).circle-list>li,
+ol[class*="grid-"]:not(.reset):not(.graphical).circle-list>li {
+  padding-left: calc(10px + #{$list-circle-padding});
+}
+
+@each $_type, $_gap in $gaps-by-type {
+  ol.grid:not(.reset):not(.graphical).grid-space-#{$_type}.circle-list>li,
+  ol.grid:not(.reset):not(.graphical).grid-col-space-#{$_type}.circle-list>li,
+  ol[class*="grid-"]:not(.reset):not(.graphical).grid-space-#{$_type}.circle-list>li,
+  ol[class*="grid-"]:not(.reset):not(.graphical).grid-col-space-#{$_type}.circle-list>li {
+    padding-left: calc(#{$_gap} + #{$list-circle-padding});
+  }
+}
+
+ul.reset>li:before,
+ol.reset>li:before {
+  content: none;
+}
+
+ul.reset>li,
+ol.reset>li {
+  margin-bottom: 0;
+}
+
+ul.reset:not(.grid):not([class*="grid-"])>li,
+ol.reset:not(.grid):not([class*="grid-"])>li {
+  padding-left: 0;
+}

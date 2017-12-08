@@ -1,3 +1,5 @@
+@import 'app/functions/colors';
+
 $color-bg:          #ffffff;
 $color-bg-html:     #161b1f;
 $color-text:        #181715;
@@ -5,33 +7,79 @@ $color-text:        #181715;
 $color-white:       #ffffff;
 
 $color-neutral:     #685c53;
-$color-neutral-hi:  #d6d6d4;
-$color-neutral-low: #373534;
+$color-neutral-light:  #d6d6d4;
+$color-neutral-dark: #373534;
 
 $color-blue:        #004ebc;
-$color-blue-hi:     #bcdeff;
-$color-blue-low:    #002c5f;
+$color-blue-light:     #bcdeff;
+$color-blue-dark:    #002c5f;
 
 $color-turquoise:     #00bdc5;
-$color-turquoise-hi:  #ccf3f4;
-$color-turquoise-low: #00799a;
+$color-turquoise-light:  #ccf3f4;
+$color-turquoise-dark: #00799a;
 
 $color-purple:      #9060c8;
-$color-purple-hi:   #d6c5ea;
-$color-purple-low:  #5d3f82;
+$color-purple-light:   #d6c5ea;
+$color-purple-dark:  #5d3f82;
 
 $color-orange:      #ff8400;
-$color-orange-hi:   #ffe3c2;
-$color-orange-low:  #994f00;
+$color-orange-light:   #ffe3c2;
+$color-orange-dark:  #994f00;
 
 $color-yellow:      #f9c700;
-$color-yellow-hi:   #f8ecbd;
-$color-yellow-low:  #685300;
+$color-yellow-light:   #f8ecbd;
+$color-yellow-dark:  #685300;
 
 $color-green:       #47b700;
-$color-green-hi:    #d5eaca;
-$color-green-low:   #216f00;
+$color-green-light:    #d5eaca;
+$color-green-dark:   #216f00;
 
 $color-red:         #e53e30;
-$color-red-hi:      #efcfcb;
-$color-red-low:     #812627;
+$color-red-light:      #efcfcb;
+$color-red-dark:     #812627;
+
+$color-code-text:   $color-blue-dark;
+$color-code-bg:     #f0f0f0;
+
+$color-header: $color-text;
+$color-header-inverted: $color-white;
+
+$color-tap-highlight: rgba(255, 255, 255, 0);
+
+$colors-by-theme: (
+  blue: $color-blue,
+  purple: $color-purple,
+);
+
+$colors-by-theme-inverted: (
+  blue: $color-blue-light,
+  purple: $color-purple-light,
+);
+
+$colors-by-theme-text: (
+  blue: $color-white,
+  purple: $color-white,
+);
+
+$colors-by-theme-muted: (
+  blue: mute-color($color-blue),
+  purple: mute-color($color-purple),
+);
+
+$colors-by-theme-banner: (
+  blue: $color-blue,
+  purple: #9d73c7,
+);
+
+$default-theme: blue;
+
+$color-link: map-get($colors-by-theme, $default-theme);
+$color-link-inverted: $color-white;
+
+$color-inverted: $color-white;
+$color-header: $color-blue-dark;
+$color-body: #5f6a7d;
+$color-link-gray: #6c7980;
+$color-header-bg: $color-header;
+$color-body-bg: $color-body;
+

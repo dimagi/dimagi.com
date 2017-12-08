@@ -1,0 +1,131 @@
+@import 'app/variables/colors';
+
+@each $_name, $_color in $colors-by-theme {
+  .#{$_name}-theme {
+    .theme-color {
+      color: $_color !important; // scss-lint:disable ImportantRule
+    }
+
+    .theme-muted-color {
+      color: map-get($colors-by-theme-muted, $_name) !important; // scss-lint:disable ImportantRule
+    }
+
+    .theme-ui-color {
+      color: $_color !important; // scss-lint:disable ImportantRule
+    }
+
+    .theme-text-color {
+      color: map-get($colors-by-theme-text, $_name) !important; // scss-lint:disable ImportantRule
+    }
+
+    .theme-border {
+      border-color: $_color !important; // scss-lint:disable ImportantRule
+    }
+
+    .theme-icon [fill]:not([fill="none"]):not([fill^=url]) {
+      fill: $_color !important; // scss-lint:disable ImportantRule
+    }
+
+    .theme-icon [stroke]:not([stroke="transparent"]) {
+      stroke: $_color !important; // scss-lint:disable ImportantRule
+    }
+
+    .theme-bg {
+      background-color: $_color !important; // scss-lint:disable ImportantRule
+      color: $color-white !important; // scss-lint:disable ImportantRule
+    }
+
+    .theme-muted-bg {
+      background-color: map-get($colors-by-theme-muted, $_name) !important; // scss-lint:disable ImportantRule
+      color: $color-white !important; // scss-lint:disable ImportantRule
+    }
+  }
+
+  .#{$_name},
+  .#{$_name}-color {
+    color: $_color !important; // scss-lint:disable ImportantRule
+  }
+
+  .#{$_name}-muted {
+    color: map-get($colors-by-theme-muted, $_name) !important; // scss-lint:disable ImportantRule
+  }
+
+  .#{$_name}-ui-color {
+    color: $_color !important; // scss-lint:disable ImportantRule
+  }
+
+  .#{$_name}-text-color {
+    color: $color-white !important; // scss-lint:disable ImportantRule
+  }
+
+  .#{$_name}-border {
+    border-color: $color-purple !important; // scss-lint:disable ImportantRule
+  }
+
+  .#{$_name}-icon [fill]:not([fill="none"]):not([fill^=url]) {
+    fill: $color-purple !important; // scss-lint:disable ImportantRule
+  }
+
+  .#{$_name}-icon [stroke]:not([stroke="transparent"]) {
+    stroke: $color-purple !important; // scss-lint:disable ImportantRule
+  }
+
+  .#{$_name}-icon.inverted [fill]:not([fill="none"]):not([fill^=url]),
+  .inverted .#{$_name}-icon [fill]:not([fill="none"]):not([fill^=url]) {
+    fill: $color-white !important; // scss-lint:disable ImportantRule
+  }
+
+  .#{$_name}-icon.inverted [stroke]:not([stroke="transparent"]),
+  .inverted .#{$_name}-icon [stroke]:not([stroke="transparent"]) {
+    stroke: $color-white !important; // scss-lint:disable ImportantRule
+  }
+
+  .#{$_name}-bg {
+    background-color: $color-purple !important; // scss-lint:disable ImportantRule
+  }
+
+  .#{$_name}-muted-bg {
+    background-color: map-get($colors-by-theme-muted, $_name) !important; // scss-lint:disable ImportantRule
+  }
+
+}
+
+.inverted {
+  color: $color-white !important; // scss-lint:disable ImportantRule
+
+  .theme-icon [fill]:not([fill="none"]):not([fill^=url]) {
+    fill: $color-white !important; // scss-lint:disable ImportantRule
+  }
+
+  .theme-icon [stroke]:not([stroke="transparent"]) {
+    stroke: $color-white !important; // scss-lint:disable ImportantRule
+  }
+}
+
+.white {
+  color: $color-white !important; // scss-lint:disable ImportantRule
+}
+
+.header-color {
+  color: $color-header !important; // scss-lint:disable ImportantRule
+}
+
+.body-color {
+  color: $color-body !important; // scss-lint:disable ImportantRule
+}
+
+.link-gray {
+  color: $color-link-gray !important; // scss-lint:disable ImportantRule
+}
+
+.white-bg {
+  background-color: $color-white !important; // scss-lint:disable ImportantRule
+}
+
+.header-color-bg {
+  background-color: $color-header-bg !important; // scss-lint:disable ImportantRule
+}
+
+.body-color-bg {
+  background-color: $color-body-bg !important; // scss-lint:disable ImportantRule
+}

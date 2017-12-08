@@ -1,18 +1,18 @@
-@import "app/typography/variables/base";
 @import "app/variables/colors";
-@import "app/typography/mixins/utils";
+@import "app/variables/sizes";
+@import "app/variables/type";
 
 label {
   display: block;
   width: 100%;
   font-size: 12px;
-  line-height: $base-line-height;
+  line-height: $line-height-base;
   font-weight: 600;
   color: #5f6a7d
 }
 
 .show-time label {
-  @include transition(color 300ms);
+  transition: color 300ms;
 }
 
 .error label {

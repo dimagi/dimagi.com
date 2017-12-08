@@ -29,3 +29,21 @@ $pads-by-type: (
   large: 40px,
   none: 0,
 );
+
+$margin-base: $grid-gap;
+
+$line-height-base: 20px;
+$line-height-header: 30px;
+$line-height-header-lg: 30px;
+
+$list-padding: 2.14286em;
+$list-icon-width: 1.42857em;
+
+$list-check-width: 1.07143em;
+$list-check-margin: .28571em;
+
+$list-circle-size: 2.18182em;
+$list-circle-padding: 2.42857em;
+$list-circle-margin: .45455em;
+
+$pre-max-height: 424px;

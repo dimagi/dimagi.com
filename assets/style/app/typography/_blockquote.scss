@@ -1,42 +1,44 @@
-@import "app/layout/variables/grid";
-@import "variables/headings";
-@import "variables/base";
+@import 'app/variables/sizes';
+@import 'app/variables/type';
 
-$min-width-lg: map-get($grid-sizes, large);
+$_min-width-lg: map-get($widths-by-size, large);
 
-blockquote, .callout {
-  margin-bottom: $base-margin;
-  font-size: 20px;
-  line-height: $h-line-height;
-  font-weight: 300;
+blockquote,
+.callout {
+  font-size: $font-size-blockquote;
+  font-weight: $font-weight-normal;
+  line-height: $line-height-header;
+  margin-bottom: $margin-base;
 }
 
-@media (min-width: $min-width-lg) {
-  blockquote, .callout {
+@media (min-width: $_min-width-lg) {
+  blockquote,
+  .callout {
     font-size: 24px;
-    line-height: $h-line-height;
+    line-height: $line-height-header-lg;
   }
 }
 
-blockquote p, .callout p {
+blockquote p,
+.callout p {
   position: relative;
 }
 
-blockquote p:before {
-  content: "“";
+blockquote p::before {
+  content: '“';
+  margin-left: -.8ex;
   position: relative;
-  margin-left: -0.8ex;
 }
 
-blockquote p:after {
-  content: "”";
+blockquote p::after {
+  content: '“';
 }
 
 blockquote cite {
   display: block;
   font-size: 11px;
-  line-height: $base-line-height;
-  text-transform: uppercase;
-  letter-spacing: 1px;
   font-weight: 600;
+  letter-spacing: 1px;
+  line-height: $line-height-base;
+  text-transform: uppercase;
 }

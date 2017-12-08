@@ -1,108 +1,117 @@
+@import 'app/variables/colors';
+
 .badge {
-    display: inline-block;
-    padding: 6px 15px 7px;
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 999em;
-    font-size: 11px;
-    line-height: 1;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: 600;
-    color: #969799;
-    border-color: #e0e0e0
+  display: inline-block;
+  padding: 6px 15px 7px;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 999em;
+  font-size: 11px;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  color: #969799;
+  border-color: #e0e0e0
 }
 
 .chrome-android .badge {
-    white-space: nowrap
+  white-space: nowrap
 }
 
 .badge.small {
-    padding-left: 9px;
-    padding-right: 9px
+  padding-left: 9px;
+  padding-right: 9px
 }
 
 .badge.filled {
-    color: #fff;
-    border-color: #5f6a7d;
-    background-color: #5f6a7d
+  color: #fff;
+  border-color: #5f6a7d;
+  background-color: #5f6a7d
 }
 
 .badge.inverted,
 .inverted .badge {
-    color: #fff;
-    border-color: #fff
+  color: #fff;
+  border-color: #fff
 }
 
 .badge.inverted.filled,
 .inverted .badge.filled {
-    color: #5f6a7d;
-    border-color: #fff;
-    background-color: #fff
+  color: #5f6a7d;
+  border-color: #fff;
+  background-color: #fff
 }
 
-.purple-theme .badge {
-    color: #8033cc;
-    border-color: #8033cc
-}
+@each $_name, $_color in $colors-by-theme {
+  .#{$_name}-theme {
 
-.purple-theme .badge.filled {
-    color: #fff;
-    border-color: #8033cc;
-    background-color: #8033cc
-}
+    .badge {
+      border-color: $_color;
+      color: $_color;
 
-.purple-theme .inverted .badge {
-    color: #fff;
-    border-color: #fff
-}
+      &.filled {
+        background-color: $_color;
+        border-color: $_color;
+        color: $color-white;
+      }
+    }
+    .inverted .badge {
+      border-color: $color-white;
+      color: $color-white;
 
-.purple-theme .inverted .badge.filled {
-    color: #8033cc;
-    border-color: #fff;
-    background-color: #fff
+      &.filled {
+        color: $_color;
+        border-color: $color-white;
+        background-color: $color-white;
+      }
+    }
+
+  }
 }
 
 .badge.badge-default {
-    color: #969799;
-    border-color: #e0e0e0
+  color: #969799;
+  border-color: #e0e0e0
 }
 
 .badge.badge-default.filled {
-    color: #fff;
-    border-color: #5f6a7d;
-    background-color: #5f6a7d
+  color: #fff;
+  border-color: #5f6a7d;
+  background-color: #5f6a7d
 }
 
 .inverted .badge.badge-default {
-    color: #fff;
-    border-color: #fff
+  color: #fff;
+  border-color: #fff
 }
 
 .inverted .badge.badge-default.filled {
-    color: #5f6a7d;
-    border-color: #fff;
-    background-color: #fff
+  color: #5f6a7d;
+  border-color: #fff;
+  background-color: #fff
 }
 
-.badge.badge-purple {
-    color: #8033cc;
-    border-color: #8033cc
-}
+@each $_name, $_color in $colors-by-theme {
+  .badge.badge-#{$_name} {
+    color: $_color;
+    border-color: $_color;
 
-.badge.badge-purple.filled {
-    color: #fff;
-    border-color: #8033cc;
-    background-color: #8033cc
-}
+    &.filled {
+      border-color: $_color;
+      background-color: $_color;
+      color: $color-white;
+    }
+  }
 
-.inverted .badge.badge-purple {
-    color: #fff;
-    border-color: #fff
-}
+  .inverted .badge.badge-#{$_name} {
+    color: $color-white;
+    border-color: $color-white;
 
-.inverted .badge.badge-purple.filled {
-    color: #8033cc;
-    border-color: #fff;
-    background-color: #fff
+    &.filled {
+      color: $_color;
+      border-color: $color-white;
+      background-color: $color-white;
+    }
+  }
 }

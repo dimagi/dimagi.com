@@ -1,7 +1,16 @@
-@import "mixins/svg";
+@mixin _make-svg-size($size) {
+  svg[width="{$size}"],
+  svg[width="{$size}px"] {
+    width: $size px;
+  }
+  svg[height="{$size}"],
+  svg[height="{$size}px"] {
+    height: $size px;
+  }
+}
 
-@include make-svg-size(20);
-@include make-svg-size(32);
-@include make-svg-size(40);
-@include make-svg-size(68);
-@include make-svg-size(80);
+@include _make-svg-size(20);
+@include _make-svg-size(32);
+@include _make-svg-size(40);
+@include _make-svg-size(68);
+@include _make-svg-size(80);

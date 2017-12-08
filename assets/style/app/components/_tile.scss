@@ -1,3 +1,5 @@
+@import 'app/variables/colors';
+
 .tile {
     display: block;
     padding: 30px;
@@ -75,23 +77,27 @@ a.tile:focus:after {
     opacity: 1
 }
 
-.purple-theme a.tile:after {
-    border-color: #8033cc
+@each $_name, $_color in $colors-by-theme {
+  .#{$_name}-theme a.tile:after {
+    border-color: $_color;
+  }
+
+  .#{$_name}-theme a.tile:hover:after,
+  .#{$_name}-theme a.tile:focus:after {
+    border-color: $_color;
+  }
+
+  a.tile.#{$_name}-border:after {
+    border-color: $_color !important; // scss-lint:disable ImportantRule
+  }
+
+  a.tile.#{$_name}-border:hover:after,
+  a.tile.#{$_name}-border:focus:after {
+    border-color: $_color !important; // scss-lint:disable ImportantRule
+  }
 }
 
-.purple-theme a.tile:hover:after,
-.purple-theme a.tile:focus:after {
-    border-color: #8033cc
-}
 
-a.tile.purple-border:after {
-    border-color: #8033cc !important
-}
-
-a.tile.purple-border:hover:after,
-a.tile.purple-border:focus:after {
-    border-color: #8033cc !important
-}
 
 a.tile.full-bleed .image {
     z-index: 100;

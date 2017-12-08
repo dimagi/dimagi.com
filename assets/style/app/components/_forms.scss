@@ -1,5 +1,4 @@
-@import "app/typography/variables/base";
-@import "app/typography/mixins/utils";
+@import 'app/variables/type';
 
 input[type="text"],
 input[type="password"],
@@ -21,7 +20,7 @@ textarea {
     padding: 10px;
     font-size: 14px;
     line-height: 18px;
-    font-family: $base-font-family;
+    font-family: $font-family-base;
     font-weight: 300;
     background: #fff;
     color: #5f6a7d;
@@ -104,7 +103,7 @@ select {
     padding: 10px;
     font-size: 14px;
     line-height: 18px;
-    font-family: $base-font-family;
+    font-family: $font-family-base;
     font-weight: 300;
     background: #fff;
     color: #5f6a7d;
@@ -806,7 +805,7 @@ textarea {
     padding: 10px;
     font-size: 14px;
     line-height: 18px;
-    font-family: $base-font-family;
+    font-family: $font-family-base;
     font-weight: 300;
     background: #fff;
     color: #5f6a7d;

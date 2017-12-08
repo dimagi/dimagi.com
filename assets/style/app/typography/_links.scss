@@ -1,71 +1,60 @@
+@import 'app/variables/colors';
+@import 'app/variables/sizes';
+@import 'app/variables/type';
+
+@mixin _link-hover-color($_base-color) {
+  color: darken($_base-color, 20);
+}
+
+@mixin _link-active-color($_base-color) {
+  color: darken($_base-color, 30);
+}
+
 body {
-    -webkit-tap-highlight-color: rgba(255, 255, 255, 0)
+  -webkit-tap-highlight-color: $color-tap-highlight;
 }
 
 a {
-    text-decoration: none
+  text-decoration: none;
 }
 
 a,
 a .link {
-    color: #2996cc;
-    font-weight: 600
+  color: $color-link;
+  font-weight: $font-weight-link;
 }
 
 .inverted a,
 .inverted a .link {
-    color: #fff !important
+  color: $color-link-inverted !important; // scss-lint:disable ImportantRule
 }
 
 .show-time a,
 .show-time a .link {
-    -webkit-transition: color 150ms linear;
-    transition: color 150ms linear
+  transition: color 150ms linear;
 }
 
 a:hover,
 a:hover .link,
 a:focus,
 a:focus .link {
-    color: #2586b7
+  @include _link-hover-color($color-link);
 }
 
 a:active {
-    outline: 0
+  outline: 0;
 }
 
 a:active,
 a:active .link {
-    color: #2077a2
-}
-
-// todo theming
-.purple-theme a,
-.purple-theme a .link {
-    color: #8033cc
-}
-
-.purple-theme a:hover,
-.purple-theme a:hover .link,
-.purple-theme a:focus,
-.purple-theme a:focus .link {
-    color: #732eb8
-}
-
-.purple-theme a:active {
-    outline: 0
-}
-
-.purple-theme a:active,
-.purple-theme a:active .link {
-    color: #6629a3
+  @include _link-active-color($color-link);
 }
 
 a.inverted,
 a.inverted .link,
 .inverted a,
 .inverted a .link {
-    color: #fff
+  color: $color-link-inverted;
 }
 
 a.inverted:hover,
@@ -76,32 +65,88 @@ a.inverted:focus .link,
 .inverted a:hover .link,
 .inverted a:focus,
 .inverted a:focus .link {
-    color: #fff
+  color: $color-link-inverted;
 }
 
 a.inverted:active,
 .inverted a:active {
-    outline: 0
+  outline: 0;
 }
 
 a.inverted:active,
 a.inverted:active .link,
 .inverted a:active,
 .inverted a:active .link {
-    color: #fff
+  color: $color-link-inverted;
+}
+
+@each $_name, $_color in $colors-by-theme {
+  .#{$_name}-theme {
+    a,
+    a .link {
+      color: $_color;
+    }
+
+    a:hover,
+    a:hover .link,
+    a:focus,
+    a:focus .link {
+      color: hover-color($_color);
+    }
+
+    a:active {
+      outline: 0;
+    }
+
+    a:active,
+    a:active .link {
+      color: active-color($_color);
+    }
+
+    a.inverted,
+    a.inverted .link,
+    .inverted a,
+    .inverted a .link {
+      color: $color-white;
+    }
+
+    a.inverted:hover,
+    a.inverted:hover .link,
+    a.inverted:focus,
+    a.inverted:focus .link,
+    .inverted a:hover,
+    .inverted a:hover .link,
+    .inverted a:focus,
+    .inverted a:focus .link {
+      color: $color-link-inverted;
+    }
+
+    a.inverted:active,
+    .inverted a:active {
+      outline: 0;
+    }
+
+    a.inverted:active,
+    a.inverted:active .link,
+    .inverted a:active,
+    .inverted a:active .link {
+      color: $color-link-inverted;
+    }
+  }
+
 }
 
 a.hotspot {
-    display: block;
-    font-weight: inherit;
-    color: inherit
-}
+  color: inherit;
+  display: block;
+  font-weight: inherit;
 
-a.hotspot:hover,
-a.hotspot:focus {
-    color: inherit
-}
+  &:hover,
+  &:focus {
+    color: inherit;
+  }
 
-a.hotspot:active {
-    color: inherit
+  &:active {
+    color: inherit;
+  }
 }

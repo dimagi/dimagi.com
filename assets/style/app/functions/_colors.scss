@@ -1,0 +1,11 @@
+@function mute-color($_color) {
+  @return lighten($_color, 20);
+}
+
+@function hover-color($_color) {
+  @return darken($_color, 20);
+}
+
+@function active-color($_color) {
+  @return darken($_color, 30);
+}
