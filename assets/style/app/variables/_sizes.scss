@@ -1,2 +1,31 @@
 $body-width-max: 1680px;
 $body-width-min: 320px;
+
+$widths-by-size: (
+  extra-small: 374px,
+  small: 480px,
+  medium: 718px,
+  large: 1024px,
+  extra-large: 1292px,
+);
+
+$grid-pad: 10px;
+$grid-gap: $grid-pad * 2;
+
+$gaps-by-type: (
+  base: 0,
+  line: 10px,
+  small: 20px,
+  medium: 50px,
+  large: 70px,
+  none: -10px,
+);
+
+$pads-by-type: (
+  base: 5px,
+  line: 10px,
+  small: 15px,
+  medium: 30px,
+  large: 40px,
+  none: 0,
+);
