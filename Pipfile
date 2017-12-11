@@ -21,6 +21,8 @@ django-storages = "*"
 django-redis = "*"
 django-compressor-postcss = "*"
 autoprefixer = "*"
+django-imagekit = "*"
+pillow = "*"
 
 
 [requires]

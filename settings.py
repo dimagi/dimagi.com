@@ -22,6 +22,7 @@ DEFAULT_APPS = [
 THIRD_PARTY_APPS = [
     'sass_processor',
     'compressor',
+    'imagekit',
 ]
 if AWS_ENABLED:
     THIRD_PARTY_APPS.append('storages')
