@@ -63,18 +63,7 @@
           </div>
         </nav>
       </header>
-      <section class="hero hero-purple" id="hero">
-        <div class="outgoing-image" data-loading="false"></div>
-        <div class="content inverted align-center display-flex flex-valign-middle expand-vertical offset-top-medium flex-align-center">
-          <div class="copy expand position-relative">
-            <h1><strong>Digital Solutions Designed for Impact.</strong></h1>
-            <div class="headline mcc-headline grid-2-at-medium grid-row-space-none content-width-large">
-
-
-            </div>
-          </div>
-        </div>
-      </section>
+      {% block hero %}<section class="hero hero-purple" id="hero"></section>{% endblock hero %}
       {% block content %}{% endblock %}
       <footer class="page-footer" id="footer" role="footer">
         <div class="content pad-vert-medium" role="contentinfo">
