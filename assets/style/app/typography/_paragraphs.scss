@@ -1,251 +1,40 @@
 p+.cta {
-    margin-top: -10px
+  margin-top: -10px;
 }
 
 .center-horizontally {
-    margin-left: auto;
-    margin-right: auto
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.align-left {
-    text-align: left !important
+@mixin _align-at($_size: null) {
+  $_suffix: if($_size != null, -at-#{$_size}, null);
+
+  @each $_align in (
+    left, center, right, justify
+  ) {
+    .align-#{$_align}#{$_suffix} {
+      text-align: $_align !important; // scss-lint:disable ImportantRule
+    }
+  }
+
+  @each $_valign in (
+    baseline, top, middle, bottom
+  ) {
+    .valign-#{$_valign}#{$_suffix} {
+      vertical-align: $_valign !important; // scss-lint:disable ImportantRule
+    }
+
+    .valign-#{$_valign}#{$_suffix} * {
+      vertical-align: inherit;
+    }
+  }
 }
 
-.align-center {
-    text-align: center !important
-}
+@include _align-at();
 
-.align-right {
-    text-align: right !important
-}
-
-.align-justify {
-    text-align: justify !important
-}
-
-.valign-baseline {
-    vertical-align: baseline !important
-}
-
-.valign-baseline * {
-    vertical-align: inherit
-}
-
-.valign-top {
-    vertical-align: top !important
-}
-
-.valign-top * {
-    vertical-align: inherit
-}
-
-.valign-middle {
-    vertical-align: middle !important
-}
-
-.valign-middle * {
-    vertical-align: inherit
-}
-
-.valign-bottom {
-    vertical-align: bottom !important
-}
-
-.valign-bottom * {
-    vertical-align: inherit
-}
-
-@media (min-width: 374px) {
-    .align-left-at-extra-small {
-        text-align: left !important
-    }
-    .align-center-at-extra-small {
-        text-align: center !important
-    }
-    .align-right-at-extra-small {
-        text-align: right !important
-    }
-    .align-justify-at-extra-small {
-        text-align: justify !important
-    }
-    .valign-baseline-at-extra-small {
-        vertical-align: baseline !important
-    }
-    .valign-baseline-at-extra-small * {
-        vertical-align: inherit
-    }
-    .valign-top-at-extra-small {
-        vertical-align: top !important
-    }
-    .valign-top-at-extra-small * {
-        vertical-align: inherit
-    }
-    .valign-middle-at-extra-small {
-        vertical-align: middle !important
-    }
-    .valign-middle-at-extra-small * {
-        vertical-align: inherit
-    }
-    .valign-bottom-at-extra-small {
-        vertical-align: bottom !important
-    }
-    .valign-bottom-at-extra-small * {
-        vertical-align: inherit
-    }
-}
-
-@media (min-width: 480px) {
-    .align-left-at-small {
-        text-align: left !important
-    }
-    .align-center-at-small {
-        text-align: center !important
-    }
-    .align-right-at-small {
-        text-align: right !important
-    }
-    .align-justify-at-small {
-        text-align: justify !important
-    }
-    .valign-baseline-at-small {
-        vertical-align: baseline !important
-    }
-    .valign-baseline-at-small * {
-        vertical-align: inherit
-    }
-    .valign-top-at-small {
-        vertical-align: top !important
-    }
-    .valign-top-at-small * {
-        vertical-align: inherit
-    }
-    .valign-middle-at-small {
-        vertical-align: middle !important
-    }
-    .valign-middle-at-small * {
-        vertical-align: inherit
-    }
-    .valign-bottom-at-small {
-        vertical-align: bottom !important
-    }
-    .valign-bottom-at-small * {
-        vertical-align: inherit
-    }
-}
-
-@media (min-width: 718px) {
-    .align-left-at-medium {
-        text-align: left !important
-    }
-    .align-center-at-medium {
-        text-align: center !important
-    }
-    .align-right-at-medium {
-        text-align: right !important
-    }
-    .align-justify-at-medium {
-        text-align: justify !important
-    }
-    .valign-baseline-at-medium {
-        vertical-align: baseline !important
-    }
-    .valign-baseline-at-medium * {
-        vertical-align: inherit
-    }
-    .valign-top-at-medium {
-        vertical-align: top !important
-    }
-    .valign-top-at-medium * {
-        vertical-align: inherit
-    }
-    .valign-middle-at-medium {
-        vertical-align: middle !important
-    }
-    .valign-middle-at-medium * {
-        vertical-align: inherit
-    }
-    .valign-bottom-at-medium {
-        vertical-align: bottom !important
-    }
-    .valign-bottom-at-medium * {
-        vertical-align: inherit
-    }
-}
-
-@media (min-width: 1024px) {
-    .align-left-at-large {
-        text-align: left !important
-    }
-    .align-center-at-large {
-        text-align: center !important
-    }
-    .align-right-at-large {
-        text-align: right !important
-    }
-    .align-justify-at-large {
-        text-align: justify !important
-    }
-    .valign-baseline-at-large {
-        vertical-align: baseline !important
-    }
-    .valign-baseline-at-large * {
-        vertical-align: inherit
-    }
-    .valign-top-at-large {
-        vertical-align: top !important
-    }
-    .valign-top-at-large * {
-        vertical-align: inherit
-    }
-    .valign-middle-at-large {
-        vertical-align: middle !important
-    }
-    .valign-middle-at-large * {
-        vertical-align: inherit
-    }
-    .valign-bottom-at-large {
-        vertical-align: bottom !important
-    }
-    .valign-bottom-at-large * {
-        vertical-align: inherit
-    }
-}
-
-@media (min-width: 1292px) {
-    .align-left-at-extra-large {
-        text-align: left !important
-    }
-    .align-center-at-extra-large {
-        text-align: center !important
-    }
-    .align-right-at-extra-large {
-        text-align: right !important
-    }
-    .align-justify-at-extra-large {
-        text-align: justify !important
-    }
-    .valign-baseline-at-extra-large {
-        vertical-align: baseline !important
-    }
-    .valign-baseline-at-extra-large * {
-        vertical-align: inherit
-    }
-    .valign-top-at-extra-large {
-        vertical-align: top !important
-    }
-    .valign-top-at-extra-large * {
-        vertical-align: inherit
-    }
-    .valign-middle-at-extra-large {
-        vertical-align: middle !important
-    }
-    .valign-middle-at-extra-large * {
-        vertical-align: inherit
-    }
-    .valign-bottom-at-extra-large {
-        vertical-align: bottom !important
-    }
-    .valign-bottom-at-extra-large * {
-        vertical-align: inherit
-    }
+@each $_size, $_width in $widths-by-size {
+  @media (min-width: $_width) {
+    @include _align-at($_size);
+  }
 }

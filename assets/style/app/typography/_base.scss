@@ -11,14 +11,14 @@ body {
   font-family: $font-family-base;
   font-size: $font-size-base;
   font-smoothing: always;
-  font-weight: 300;
+  font-weight: $font-weight-normal;
   line-height: $line-height-base;
   text-rendering: optimizeLegibility;
 }
 
 article {
-  font-size: 16px;
-  line-height: 30px;
+  font-size: $font-size-article;
+  line-height: $line-height-header;
 }
 
 p {
@@ -27,7 +27,7 @@ p {
 
 strong,
 b {
-  font-weight: 600;
+  font-weight: $font-weight-bold;
 }
 
 em {

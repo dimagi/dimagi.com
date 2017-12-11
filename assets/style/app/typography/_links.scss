@@ -2,14 +2,6 @@
 @import 'app/variables/sizes';
 @import 'app/variables/type';
 
-@mixin _link-hover-color($_base-color) {
-  color: darken($_base-color, 20);
-}
-
-@mixin _link-active-color($_base-color) {
-  color: darken($_base-color, 30);
-}
-
 body {
   -webkit-tap-highlight-color: $color-tap-highlight;
 }
@@ -20,13 +12,7 @@ a {
 
 a,
 a .link {
-  color: $color-link;
   font-weight: $font-weight-link;
-}
-
-.inverted a,
-.inverted a .link {
-  color: $color-link-inverted !important; // scss-lint:disable ImportantRule
 }
 
 .show-time a,
@@ -34,106 +20,65 @@ a .link {
   transition: color 150ms linear;
 }
 
-a:hover,
-a:hover .link,
-a:focus,
-a:focus .link {
-  @include _link-hover-color($color-link);
+@mixin _make-link($_color) {
+  a,
+  a .link {
+    color: $_color;
+  }
+
+  a:hover,
+  a:hover .link,
+  a:focus,
+  a:focus .link {
+    color: color-hover($_color);
+  }
+
+  a:active {
+    outline: 0;
+  }
+
+  a:active,
+  a:active .link {
+    color: color-active($_color);
+  }
+
+  a.inverted,
+  a.inverted .link,
+  .inverted a,
+  .inverted a .link {
+    color: color-invert($_color);
+  }
+
+  a.inverted:hover,
+  a.inverted:hover .link,
+  a.inverted:focus,
+  a.inverted:focus .link,
+  .inverted a:hover,
+  .inverted a:hover .link,
+  .inverted a:focus,
+  .inverted a:focus .link {
+    color: color-invert-hover($_color);
+  }
+
+  a.inverted:active,
+  .inverted a:active {
+    outline: 0;
+  }
+
+  a.inverted:active,
+  a.inverted:active .link,
+  .inverted a:active,
+  .inverted a:active .link {
+    color: color-invert-active($_color);
+  }
 }
 
-a:active {
-  outline: 0;
-}
-
-a:active,
-a:active .link {
-  @include _link-active-color($color-link);
-}
-
-a.inverted,
-a.inverted .link,
-.inverted a,
-.inverted a .link {
-  color: $color-link-inverted;
-}
-
-a.inverted:hover,
-a.inverted:hover .link,
-a.inverted:focus,
-a.inverted:focus .link,
-.inverted a:hover,
-.inverted a:hover .link,
-.inverted a:focus,
-.inverted a:focus .link {
-  color: $color-link-inverted;
-}
-
-a.inverted:active,
-.inverted a:active {
-  outline: 0;
-}
-
-a.inverted:active,
-a.inverted:active .link,
-.inverted a:active,
-.inverted a:active .link {
-  color: $color-link-inverted;
-}
+@include _make-link($color-link);
 
 @each $_name, $_color in $colors-by-theme {
   .#{$_name}-theme {
-    a,
-    a .link {
-      color: $_color;
-    }
-
-    a:hover,
-    a:hover .link,
-    a:focus,
-    a:focus .link {
-      color: hover-color($_color);
-    }
-
-    a:active {
-      outline: 0;
-    }
-
-    a:active,
-    a:active .link {
-      color: active-color($_color);
-    }
-
-    a.inverted,
-    a.inverted .link,
-    .inverted a,
-    .inverted a .link {
-      color: $color-white;
-    }
-
-    a.inverted:hover,
-    a.inverted:hover .link,
-    a.inverted:focus,
-    a.inverted:focus .link,
-    .inverted a:hover,
-    .inverted a:hover .link,
-    .inverted a:focus,
-    .inverted a:focus .link {
-      color: $color-link-inverted;
-    }
-
-    a.inverted:active,
-    .inverted a:active {
-      outline: 0;
-    }
-
-    a.inverted:active,
-    a.inverted:active .link,
-    .inverted a:active,
-    .inverted a:active .link {
-      color: $color-link-inverted;
-    }
+    @include _make-link($_color);
   }
-
 }
 
 a.hotspot {

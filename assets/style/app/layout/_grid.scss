@@ -47,7 +47,7 @@
   flex-shrink: 0 !important; // scss-lint:disable ImportantRule
 }
 
-@mixin make-grid-at($_size: null) {
+@mixin _make-grid-at($_size: null) {
 
   $_suffix: if($_size != null, -at-#{$_size}, null);
 
@@ -140,10 +140,10 @@
 
 }
 
-@include make-grid-at();
+@include _make-grid-at();
 
 @each $_size, $_width in $widths-by-size {
   @media (min-width: $_width) {
-    @include make-grid-at($_size);
+    @include _make-grid-at($_size);
   }
 }

@@ -1,5 +1,3 @@
-@import 'app/functions/colors';
-
 $color-bg:          #ffffff;
 $color-bg-html:     #161b1f;
 $color-text:        #181715;
@@ -62,8 +60,8 @@ $colors-by-theme-text: (
 );
 
 $colors-by-theme-muted: (
-  blue: mute-color($color-blue),
-  purple: mute-color($color-purple),
+  blue: color-mute($color-blue),
+  purple: color-mute($color-purple),
 );
 
 $colors-by-theme-banner: (
@@ -74,12 +72,34 @@ $colors-by-theme-banner: (
 $default-theme: blue;
 
 $color-link: map-get($colors-by-theme, $default-theme);
-$color-link-inverted: $color-white;
 
-$color-inverted: $color-white;
 $color-header: $color-blue-dark;
 $color-body: #5f6a7d;
 $color-link-gray: #6c7980;
 $color-header-bg: $color-header;
 $color-body-bg: $color-body;
+
+@function color-mute($_color) {
+  @return lighten($_color, 20);
+}
+
+@function color-hover($_color) {
+  @return darken($_color, 20);
+}
+
+@function color-active($_color) {
+  @return darken($_color, 30);
+}
+
+@function color-invert($_color) {
+  @return $color-white;
+}
+
+@function color-invert-hover($_color) {
+  @return $color-white;
+}
+
+@function color-invert-active($_color) {
+  @return $color-white;
+}
 

@@ -49,43 +49,43 @@ ol.inline-list > li::before {
   width: auto;
 }
 
-ul.inline-list > li:nth-last-child(1n+2):after,
-ul.inline-list.space > li:nth-last-child(1n+2):after,
-ol.inline-list > li:nth-last-child(1n+2):after,
-ol.inline-list.space>li:nth-last-child(1n+2):after {
+ul.inline-list > li:nth-last-child(1n+2)::after,
+ul.inline-list.space > li:nth-last-child(1n+2)::after,
+ol.inline-list > li:nth-last-child(1n+2)::after,
+ol.inline-list.space>li:nth-last-child(1n+2)::after {
   content: ' ';
 }
 
-ul.inline-list.comma>li:nth-last-child(1n+2):after,
-ol.inline-list.comma>li:nth-last-child(1n+2):after {
+ul.inline-list.comma > li:nth-last-child(1n+2)::after,
+ol.inline-list.comma > li:nth-last-child(1n+2)::after {
   content: ', ';
 }
 
-ul.inline-list.bullet>li:nth-last-child(1n+2):after,
-ol.inline-list.bullet>li:nth-last-child(1n+2):after {
+ul.inline-list.bullet > li:nth-last-child(1n+2)::after,
+ol.inline-list.bullet > li:nth-last-child(1n+2)::after {
   content: '•';
   padding-left: $list-icon-width/2;
   padding-right: $list-icon-width/2;
 }
 
-ul.inline-list.pipe>li:nth-last-child(1n+2):after,
-ol.inline-list.pipe>li:nth-last-child(1n+2):after {
+ul.inline-list.pipe>li:nth-last-child(1n+2)::after,
+ol.inline-list.pipe>li:nth-last-child(1n+2)::after {
   content: '|';
   padding-left: $list-icon-width/2;
   padding-right: $list-icon-width/2;
 }
 
-ul.grid:not(.reset):not(.graphical)>li,
-ul[class*="grid-"]:not(.reset):not(.graphical)>li,
-ol.grid:not(.reset):not(.graphical)>li,
-ol[class*="grid-"]:not(.reset):not(.graphical)>li {
+ul.grid:not(.reset):not(.graphical) > li,
+ul[class*="grid-"]:not(.reset):not(.graphical) > li,
+ol.grid:not(.reset):not(.graphical) > li,
+ol[class*="grid-"]:not(.reset):not(.graphical) > li {
   padding-left: calc(#{$grid-pad} + #{$list-padding});
 }
 
-ul.grid:not(.reset):not(.graphical)>li::before,
-ul[class*="grid-"]:not(.reset):not(.graphical)>li::before,
-ol.grid:not(.reset):not(.graphical)>li::before,
-ol[class*="grid-"]:not(.reset):not(.graphical)>li::before {
+ul.grid:not(.reset):not(.graphical) > li::before,
+ul[class*="grid-"]:not(.reset):not(.graphical) > li::before,
+ol.grid:not(.reset):not(.graphical) > li::before,
+ol[class*="grid-"]:not(.reset):not(.graphical) > li::before {
   left: 10px;
 }
 
@@ -142,18 +142,18 @@ ul.check-list > li::before { // scss-lint:disable PropertyCount
   }
 }
 
-ul.check-list.inline-list>li:nth-last-child(1n+2) {
+ul.check-list.inline-list > li:nth-last-child(1n+2) {
   margin-right: $list-check-width;
 }
 
-ul.check-list.inline-list>li::before {
+ul.check-list.inline-list > li::before {
   display: inline-block;
   margin-right: $list-check-margin;
   vertical-align: $list-check-margin;
 }
 
-ul.check-list.inverted>li::before,
-.inverted ul.check-list>li::before {
+ul.check-list.inverted > li::before,
+.inverted ul.check-list > li::before {
     color: $color-white;
 }
 
@@ -207,7 +207,7 @@ ol.circle-list > li {
   }
 }
 
-ol.circle-list.inline-list>li {
+ol.circle-list.inline-list > li {
   padding-left: 0;
 
   &:nth-last-child(1n+2) {
@@ -221,31 +221,31 @@ ol.circle-list.inline-list>li {
   }
 }
 
-ol.grid:not(.reset):not(.graphical).circle-list>li,
-ol[class*="grid-"]:not(.reset):not(.graphical).circle-list>li {
+ol.grid:not(.reset):not(.graphical).circle-list > li,
+ol[class*="grid-"]:not(.reset):not(.graphical).circle-list > li {
   padding-left: calc(10px + #{$list-circle-padding});
 }
 
 @each $_type, $_gap in $gaps-by-type {
-  ol.grid:not(.reset):not(.graphical).grid-space-#{$_type}.circle-list>li,
-  ol.grid:not(.reset):not(.graphical).grid-col-space-#{$_type}.circle-list>li,
-  ol[class*="grid-"]:not(.reset):not(.graphical).grid-space-#{$_type}.circle-list>li,
-  ol[class*="grid-"]:not(.reset):not(.graphical).grid-col-space-#{$_type}.circle-list>li {
+  ol.grid:not(.reset):not(.graphical).grid-space-#{$_type}.circle-list > li,
+  ol.grid:not(.reset):not(.graphical).grid-col-space-#{$_type}.circle-list > li,
+  ol[class*="grid-"]:not(.reset):not(.graphical).grid-space-#{$_type}.circle-list > li,
+  ol[class*="grid-"]:not(.reset):not(.graphical).grid-col-space-#{$_type}.circle-list > li {
     padding-left: calc(#{$_gap} + #{$list-circle-padding});
   }
 }
 
-ul.reset>li:before,
-ol.reset>li:before {
+ul.reset > li:before,
+ol.reset > li:before {
   content: none;
 }
 
-ul.reset>li,
-ol.reset>li {
+ul.reset > li,
+ol.reset > li {
   margin-bottom: 0;
 }
 
-ul.reset:not(.grid):not([class*="grid-"])>li,
-ol.reset:not(.grid):not([class*="grid-"])>li {
+ul.reset:not(.grid):not([class*="grid-"]) > li,
+ol.reset:not(.grid):not([class*="grid-"]) > li {
   padding-left: 0;
 }
