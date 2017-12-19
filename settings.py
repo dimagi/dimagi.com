@@ -84,8 +84,6 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 # Allow all host headers
 ALLOWED_HOSTS = ['*']
 
-DEFAULT_PROTOCOL = env.str('DEFAULT_PROTOCOL', default='http')
-
 DEPLOY_ENVIRONMENT = env.str('DEPLOY_ENVIRONMENT', default='dev')
 
 CACHES = {
@@ -145,7 +143,7 @@ COMPRESS_ENABLED = env.bool('COMPRESS_ENABLED', default=True)
 COMPRESS_OFFLINE = env.bool('COMPRESS_OFFLINE', default=True)
 
 if AWS_CLOUDFRONT_DOMAIN:
-    STATIC_CDN = "{}://{}".format(DEFAULT_PROTOCOL, AWS_CLOUDFRONT_DOMAIN)
+    STATIC_CDN = "//{}".format(AWS_CLOUDFRONT_DOMAIN)
 else:
     STATIC_CDN = ''
 
