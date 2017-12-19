@@ -1,6 +1,7 @@
 from __future__ import absolute_import
 from compressor.css import CssCompressor
 from compressor.exceptions import UncompressableFileError
+from compressor.filters.css_default import CssAbsoluteFilter
 from django.core.files.base import ContentFile
 from django.utils.safestring import mark_safe
 from dimagi.utils.config import setting
@@ -31,3 +32,13 @@ class S3CssCompressor(CssCompressor):
         basename = url.replace(base_url, "", 1)
         # drop the querystring, which is used for non-compressed cache-busting.
         return basename.split("?", 1)[0]
+
+
+class ImagekitCssAbsoluteFilter(CssAbsoluteFilter):
+
+    def post_process_url(self, url):
+        """
+        Extra URL processing, to be overridden in subclasses.
+        """
+        # todo process url for image compressor
+        return url

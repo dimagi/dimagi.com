@@ -114,10 +114,6 @@ STATICFILES_FINDERS = [
 STATIC_ROOT = root('staticfiles')
 STATIC_URL = env.str('STATIC_URL', default='/static/')
 
-if AWS_ENABLED:
-    STATICFILES_STORAGE = "dimagi.storage.StaticFileStorage"
-    COMPRESS_STORAGE = "dimagi.storage.CachedS3BotoStorage"
-
 SASS_ASSETS = static_assets_root('style')
 SASS_PROCESSOR_INCLUDE_DIRS = [
     SASS_ASSETS,
@@ -139,7 +135,7 @@ if AWS_ENABLED:
 
 COMPRESS_CSS_FILTERS = (
     'compressor_postcss.PostCSSFilter',
-    'compressor.filters.css_default.CssAbsoluteFilter',
+    'dimagi.compress.ImagekitCssAbsoluteFilter',
     'compressor.filters.cssmin.rCSSMinFilter',
 )
 COMPRESS_POSTCSS_PLUGINS = (
@@ -156,5 +152,10 @@ else:
 COMPRESS_ROOT = STATIC_ROOT
 COMPRESS_URL = STATIC_CDN + STATIC_URL
 COMPRESS_CSS_HASHING_METHOD = 'content'
-COMPRESS_CSS_COMPRESSOR = 'dimagi.compress.S3CssCompressor'
 
+
+
+if AWS_ENABLED:
+    STATICFILES_STORAGE = "dimagi.storage.StaticFileStorage"
+    COMPRESS_STORAGE = "dimagi.storage.CachedS3BotoStorage"
+    COMPRESS_CSS_COMPRESSOR = 'dimagi.compress.S3CssCompressor'
