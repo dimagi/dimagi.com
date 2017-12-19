@@ -134,7 +134,12 @@
   @each $_justify, $_items in $_grid-valign {
     .grid-valign-#{$_justify}#{$_suffix},
     .flex-valign-#{$_justify}#{$_suffix} {
-      align-content: map-get($_grid-align, $_justify) !important; // scss-lint:disable ImportantRule
+      $_content: map-get($_grid-align, $_justify);
+      @if $_content == null {
+        $_content: $_items;
+      }
+
+      align-content: $_content !important; // scss-lint:disable ImportantRule
       align-items: $_items !important; // scss-lint:disable ImportantRule
       display: flex !important; // scss-lint:disable ImportantRule
     }
