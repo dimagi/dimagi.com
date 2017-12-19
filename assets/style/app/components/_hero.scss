@@ -1,128 +1,124 @@
+@import 'app/variables/colors';
+@import 'app/variables/sizes';
+@import 'app/variables/type';
+
 .hero {
-    text-align: center;
-    overflow: hidden;
-    color: #fff;
-    background-color: #1b2126
-}
+  background-color: $color-hero;
+  color: color-invert($color-hero);
+  overflow: hidden;
+  text-align: center;
 
-.hero .content {
-    padding: 30px 0
-}
+  .content {
+    padding-bottom: $hero-content-padding;
+    padding-top: $hero-content-padding;
+  }
 
-@media (min-width: 718px) {
-    .hero .content {
-        padding: 60px 0
-    }
-}
+  .headline {
+    font-size: $font-size-headline;
+    line-height: $line-height-headline;
+  }
 
-.purple-theme .hero {
-    color: #fff;
-    background-color: #9d73c7
-}
+  h1,
+  .h1,
+  h2,
+  .h2,
+  h3,
+  .h3,
+  h4,
+  .h4,
+  h5,
+  .h5,
+  h6,
+  .h6,
+  p,
+  ul,
+  ol,
+  a:not(.button) {
+    color: inherit;
+  }
 
-.hero.hero-purple {
-    color: #fff;
-    background-color: #9d73c7
-}
+  h1,
+  .h1,
+  h2,
+  .h2,
+  h3,
+  .h3,
+  h4,
+  .h4,
+  h5,
+  .h5,
+  h6,
+  .h6 {
+    font-weight: $font-weight-normal;
+  }
 
-.hero h1,
-.hero .h1,
-.hero h2,
-.hero .h2,
-.hero h3,
-.hero .h3,
-.hero h4,
-.hero .h4,
-.hero h5,
-.hero .h5,
-.hero h6,
-.hero .h6,
-.hero p,
-.hero ul,
-.hero ol,
-.hero a:not(.button) {
-    color: inherit
-}
-
-.hero h1,
-.hero .h1,
-.hero h2,
-.hero .h2,
-.hero h3,
-.hero .h3,
-.hero h4,
-.hero .h4,
-.hero h5,
-.hero .h5,
-.hero h6,
-.hero .h6 {
-    font-weight: 300
-}
-
-.hero h2,
-.hero .h2 {
-    margin-bottom: 0;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: 600;
+  h2,
+  .h2 {
     font-size: 14px;
-    line-height: 20px
+    font-weight: $font-weight-bold;
+    letter-spacing: 1px;
+    line-height: $line-height-base;
+    margin-bottom: 0;
+    text-transform: uppercase;
+  }
+
+  p:not(.cta) {
+    margin-bottom: $space-line;
+    margin-top: -$space-base;
+  }
 }
 
-@media (min-width: 1024px) {
-    .hero h2,
-    .hero .h2 {
-        font-size: 16px;
-        line-height: 20px
+@media (min-width: $width-desktop) {
+  .hero {
+    .content {
+      padding-bottom: $hero-content-padding * 2;
+      padding-top: $hero-content-padding * 2;
     }
-}
 
-.hero p:not(.cta) {
-    margin-bottom: 20px;
-    margin-top: -10px
-}
-
-@media (min-width: 1024px) {
-    .hero p:not(.cta) {
-        font-size: 16px;
-        line-height: 20px
+    h1,
+    .h1 {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 50%;
     }
+  }
 }
 
-@media (min-width: 718px) {
-    .hero h1,
-    .hero .h1 {
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 50%
+@media (min-width: $width-desktop-lg) {
+  .hero {
+    h2,
+    .h2 {
+      font-size: $font-size-hero-h2;
+      line-height: $line-height-hero-h2;
     }
+
+    p:not(.cta) {
+      font-size: $font-size-hero-h2;
+      line-height: $line-height-hero-h2;
+    }
+  }
+}
+
+@each $_theme, $_color in $colors-by-theme {
+  .#{$_theme}-theme .hero {
+    background-color: $_color;
+    color: color-invert($_color);
+  }
+
+  .hero.hero-#{$_theme} {
+    background-color: $_color;
+    color: color-invert($_color);
+  }
 }
 
 .tucked-hero .hero {
-    margin-top: -42px;
-    padding-top: 42px
+  margin-top: -$tucked-hero-margin-top-mobile;
+  padding-top: $tucked-hero-margin-top-mobile;
 }
 
-@media (min-width: 718px) {
-    .tucked-hero .hero {
-        margin-top: -73px;
-        padding-top: 73px
-    }
-}
-
-.product-page .hero {
-    padding-bottom: 0
-}
-
-@media (min-width: 718px) {
-    .product-page .hero {
-        height: 427px;
-        text-align: left
-    }
-    .product-page .hero h1,
-    .product-page .hero .h1 {
-        margin-left: 0;
-        margin-right: 0
-    }
+@media (min-width: $width-desktop) {
+  .tucked-hero .hero {
+    margin-top: -$tucked-hero-margin-top-desktop;
+    padding-top: $tucked-hero-margin-top-desktop;
+  }
 }

@@ -8,16 +8,16 @@ h1,
 .h1 {
   font-size: $font-size-h1;
   font-weight: $font-weight-h1;
-  line-height: $line-height-header;
-  margin-bottom: $margin-base;
+  line-height: $line-height-h1;
+  margin-bottom: $space-line;
 }
 
 @media (min-width: $min-width-lg) {
   h1,
   .h1 {
     font-size: $font-size-h1-lg;
-    line-height: $line-height-header-lg;
-    margin-bottom: $margin-base;
+    line-height: $line-height-h1-lg;
+    margin-bottom: $space-line;
   }
 }
 
@@ -26,7 +26,7 @@ h2,
   font-size: $font-size-h2;
   font-weight: $font-weight-h2;
   line-height: $line-height-header;
-  margin-bottom: $margin-base;
+  margin-bottom: $space-line;
 }
 
 @media (min-width: $min-width-lg) {
@@ -34,7 +34,7 @@ h2,
   .h2 {
     font-size: $font-size-h2-lg;
     line-height: $line-height-header-lg;
-    margin-bottom: $margin-base;
+    margin-bottom: $space-line;
   }
 }
 
@@ -43,7 +43,7 @@ h3,
   font-size: $font-size-h3;
   font-weight: $font-weight-h3;
   line-height: $line-height-header;
-  margin-bottom: $margin-base;
+  margin-bottom: $space-line;
 }
 
 @media (min-width: $min-width-lg) {
@@ -51,7 +51,7 @@ h3,
   .h3 {
     font-size: $font-size-h3-lg;
     line-height: $line-height-header;
-    margin-bottom: $margin-base;
+    margin-bottom: $space-line;
   }
 }
 
@@ -60,7 +60,7 @@ h4,
   font-size: $font-size-h4;
   font-weight: $font-weight-h4;
   line-height: $line-height-base;
-  margin-bottom: $margin-base;
+  margin-bottom: $space-line;
 }
 
 h5,
@@ -68,7 +68,7 @@ h5,
   font-size: $font-size-h5;
   font-weight: $font-weight-h5;
   line-height: $line-height-base;
-  margin-bottom: $margin-base/2;
+  margin-bottom: $space-line/2;
 }
 
 h6,
@@ -76,7 +76,7 @@ h6,
   font-size: $font-size-h6;
   font-weight: $font-weight-h6;
   line-height: $line-height-base;
-  margin-bottom: $margin-base/2;
+  margin-bottom: $space-line/2;
 
   strong,
   b {

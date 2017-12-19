@@ -1,98 +1,35 @@
+@import 'app/variables/sizes';
+
 .content {
-    margin-left: auto;
-    margin-right: auto;
-    width: 276px
+  margin-left: auto;
+  margin-right: auto;
+  width: $content-width-base;
 }
 
-@media (min-width: 374px) {
+@each $_size, $_width in $widths-by-size {
+  @media (min-width: $_width) {
     .content {
-        width: 324px
+      width: map-get($content-widths-by-size, $_size);
     }
+  }
 }
 
-@media (min-width: 480px) {
-    .content {
-        width: 424px
-    }
-}
-
-@media (min-width: 718px) {
-    .content {
-        width: 680px
-    }
-}
-
-@media (min-width: 1024px) {
-    .content {
-        width: 868px
-    }
-}
-
-@media (min-width: 1292px) {
-    .content {
-        width: 1016px
-    }
-}
-
-.content-width-base {
+@each $_size, $_width in $content-widths-by-size {
+  .content-width-#{$_size} {
     margin-left: auto;
     margin-right: auto;
-    max-width: 276px !important
+    max-width: $_width !important; // scss-lint:disable ImportantRule
+  }
 }
 
-.content-width-extra-small {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 324px !important
-}
-
-.content-width-small {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 424px !important
-}
-
-.content-width-medium {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 680px !important
-}
-
-.content-width-large {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 868px !important
-}
-
-.content-width-extra-large {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1016px !important
-}
-
-@media (min-width: 718px) {
+@each $_size, $_pad in $content-cell-padding-by-size {
+  @media (min-width: map-get($widths-by-size, $_size)) {
     .content-cell-padding-left {
-        padding-left: 40px
+      padding-left: $_pad;
     }
-    .content-cell-padding-right {
-        padding-right: 40px
-    }
-}
 
-@media (min-width: 1024px) {
-    .content-cell-padding-left {
-        padding-left: 60px
-    }
     .content-cell-padding-right {
-        padding-right: 60px
+      padding-right: $_pad;
     }
-}
-
-@media (min-width: 1292px) {
-    .content-cell-padding-left {
-        padding-left: 80px
-    }
-    .content-cell-padding-right {
-        padding-right: 80px
-    }
+  }
 }

@@ -4,7 +4,7 @@
 ul,
 ol {
   list-style: none;
-  margin-bottom: $margin-base;
+  margin-bottom: $space-line;
 }
 
 ul > li,
@@ -15,7 +15,7 @@ ol > li {
 
 ul > li:nth-last-child(1n+2),
 ol > li:nth-last-child(1n+2) {
-  margin-bottom: $margin-base;
+  margin-bottom: $space-line;
 }
 
 ul > li::before,
@@ -32,7 +32,7 @@ ul ul,
 ol ul,
 ul ol,
 ol ol {
-  margin-top: $margin-base;
+  margin-top: $space-line;
 }
 
 ul.inline-list > li,
@@ -79,7 +79,7 @@ ul.grid:not(.reset):not(.graphical) > li,
 ul[class*="grid-"]:not(.reset):not(.graphical) > li,
 ol.grid:not(.reset):not(.graphical) > li,
 ol[class*="grid-"]:not(.reset):not(.graphical) > li {
-  padding-left: calc(#{$grid-pad} + #{$list-padding});
+  padding-left: calc(#{$space-base} + #{$list-padding});
 }
 
 ul.grid:not(.reset):not(.graphical) > li::before,
@@ -89,7 +89,10 @@ ol[class*="grid-"]:not(.reset):not(.graphical) > li::before {
   left: 10px;
 }
 
-@each $_type, $_pad in $pads-by-type {
+@each $_type, $_space in $space-by-type {
+
+  $_margin: space-margin($_space);
+
   ul.grid:not(.reset):not(.graphical).grid-space-#{$_type} > li,
   ul.grid:not(.reset):not(.graphical).grid-col-space-#{$_type} > li,
   ul[class*="grid-"]:not(.reset):not(.graphical).grid-space-#{$_type} > li,
@@ -98,7 +101,7 @@ ol[class*="grid-"]:not(.reset):not(.graphical) > li::before {
   ol.grid:not(.reset):not(.graphical).grid-col-space-#{$_type} > li,
   ol[class*="grid-"]:not(.reset):not(.graphical).grid-space-#{$_type} > li,
   ol[class*="grid-"]:not(.reset):not(.graphical).grid-col-space-#{$_type} > li {
-    padding-left: calc(#{$_pad} + #{$list-padding});
+    padding-left: calc(#{$_margin} + #{$list-padding});
   }
 
   ul.grid:not(.reset):not(.graphical).grid-space-#{$_type} > li::before,
@@ -109,7 +112,7 @@ ol[class*="grid-"]:not(.reset):not(.graphical) > li::before {
   ol.grid:not(.reset):not(.graphical).grid-col-space-#{$_type} > li::before,
   ol[class*="grid-"]:not(.reset):not(.graphical).grid-space-#{$_type} > li::before,
   ol[class*="grid-"]:not(.reset):not(.graphical).grid-col-space-#{$_type} > li::before {
-    left: $_pad;
+    left: $_margin;
   }
 }
 
@@ -226,7 +229,9 @@ ol[class*="grid-"]:not(.reset):not(.graphical).circle-list > li {
   padding-left: calc(10px + #{$list-circle-padding});
 }
 
-@each $_type, $_gap in $gaps-by-type {
+@each $_type, $_space in $space-by-type {
+  $_gap: space-gap-list($_space);
+
   ol.grid:not(.reset):not(.graphical).grid-space-#{$_type}.circle-list > li,
   ol.grid:not(.reset):not(.graphical).grid-col-space-#{$_type}.circle-list > li,
   ol[class*="grid-"]:not(.reset):not(.graphical).grid-space-#{$_type}.circle-list > li,

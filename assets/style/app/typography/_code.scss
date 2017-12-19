@@ -21,11 +21,11 @@ code {
 
 pre {
   display: block;
-  margin-bottom: $margin-base;
+  margin-bottom: $space-line;
   max-height: $pre-max-height;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
-  padding: $margin-base;
+  padding: $space-line;
   tab-size: 2;
   text-align: left;
   width: 100%;

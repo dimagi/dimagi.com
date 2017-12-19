@@ -9,41 +9,75 @@ $widths-by-size: (
   extra-large: 1292px,
 );
 
-$grid-pad: 10px;
-$grid-gap: $grid-pad * 2;
-
-$gaps-by-type: (
-  base: 0,
-  line: 10px,
-  small: 20px,
-  medium: 50px,
-  large: 70px,
-  none: -10px,
+$content-widths-by-size: (
+  base: 276px,
+  extra-small: 324px,
+  small: 424px,
+  medium: 680px,
+  large: 868px,
+  extra-large: 1016px,
 );
 
-$pads-by-type: (
-  base: 5px,
-  line: 10px,
-  small: 15px,
-  medium: 30px,
-  large: 40px,
+$content-cell-padding-by-size: (
+  medium: 40px,
+  large: 60px,
+  extra-large: 80px,
+);
+
+$content-width-base: map-get($content-widths-by-size, base);
+
+$width-mobile: map-get($widths-by-size, small);
+$width-desktop: map-get($widths-by-size, medium);
+$width-desktop-lg: map-get($widths-by-size, large);
+
+$min-width-button: 200px;
+$border-radius-button: 3px;
+
+$space-by-type: (
+  base: 10px,
+  line: 20px,
+  small: 30px,
+  medium: 60px,
+  large: 80px,
   none: 0,
 );
 
-$margin-base: $grid-gap;
-
-$line-height-base: 20px;
-$line-height-header: 30px;
-$line-height-header-lg: 30px;
+$space-base: map-get($space-by-type, base);
+$space-line: map-get($space-by-type, line);
 
 $list-padding: 2.14286em;
 $list-icon-width: 1.42857em;
-
 $list-check-width: 1.07143em;
 $list-check-margin: .28571em;
-
 $list-circle-size: 2.18182em;
 $list-circle-padding: 2.42857em;
 $list-circle-margin: .45455em;
 
 $pre-max-height: 424px;
+
+$banner-pad-mobile: 5px;
+$banner-pad-desktop: 15px;
+
+$banner-height-desktop: 73px;
+
+$banner-logo-height-mobile: 30px;
+$banner-logo-width-mobile: 60px;
+
+$banner-logo-height-desktop: 30px;
+$banner-logo-width-desktop: 60px;
+
+$hero-content-padding: 30px;
+$tucked-hero-margin-top-mobile: 42px;
+$tucked-hero-margin-top-desktop: 73px;
+
+@function space-margin($_space) {
+  @return $_space / 2;
+}
+
+@function space-gap-grid($_space) {
+  @return $_space - 20px;
+}
+
+@function space-gap-list($_space) {
+  @return $_space - 10px;
+}

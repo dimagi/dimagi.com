@@ -1,0 +1,28 @@
+@import 'app/variables/sizes';
+
+@mixin background-cover($bgUrl) {
+  background-image: url('#{$bgUrl}');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@mixin make-bg($_class, $_bg, $_height-base, $_height-by-size, $_extension: '.jpg') {
+  .#{$_class} {
+    background-image: url(quote($_bg + $_extension));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    height: $_height-base;
+    text-align: center;
+  }
+
+  @each $_size, $_height in $_height-by-size {
+    @media (min-width: map-get($widths-by-size, $_size)) {
+      .#{$_class} {
+        background-image: url(quote($_bg + '.' + $_size + $_extension));
+        height: $_height;
+      }
+    }
+  };
+};

@@ -8,7 +8,7 @@ blockquote,
   font-size: $font-size-blockquote;
   font-weight: $font-weight-normal;
   line-height: $line-height-header;
-  margin-bottom: $margin-base;
+  margin-bottom: $space-line;
 }
 
 @media (min-width: $_min-width-lg) {
@@ -31,7 +31,7 @@ blockquote p::before {
 }
 
 blockquote p::after {
-  content: '“';
+  content: '”';
 }
 
 blockquote cite {

@@ -22,7 +22,8 @@ a .link {
 
 @mixin _make-link($_color) {
   a,
-  a .link {
+  a .link,
+  a:visited {
     color: $_color;
   }
 

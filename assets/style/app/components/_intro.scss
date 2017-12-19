@@ -1,46 +1,56 @@
+@import 'app/variables/colors';
+@import 'app/variables/sizes';
+@import 'app/variables/type';
+
 .intro {
-    text-align: center;
-    margin-bottom: 30px;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 40em
-}
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 40em;
+  text-align: center;
 
-@media (min-width: 718px) {
-    .intro {
-        margin-bottom: 60px
-    }
-}
-
-.intro h1,
-.intro .h1,
-.intro h2,
-.intro .h2,
-.intro h3,
-.intro .h3 {
+  h1,
+  .h1,
+  h2,
+  .h2,
+  h3,
+  .h3 {
     font-size: 32px;
     line-height: 40px;
+    margin-bottom: 10px;
     text-transform: uppercase;
-    margin-bottom: 10px
-}
+  }
 
-.purple-theme .intro h1,
-.purple-theme .intro .h1,
-.purple-theme .intro h2,
-.purple-theme .intro .h2,
-.purple-theme .intro h3,
-.purple-theme .intro .h3 {
-    color: #8033cc
-}
-
-.intro h4,
-.intro .h4,
-.intro h5,
-.intro .h5,
-.intro h6,
-.intro .h6 {
+  h4,
+  .h4,
+  h5,
+  .h5,
+  h6,
+  .h6 {
     font-size: 28px;
-    line-height: 30px;
     font-weight: 300;
-    margin-bottom: 10px
+    line-height: $line-height-header;
+    margin-bottom: 10px;
+  }
 }
+
+@media (min-width: $width-desktop) {
+  .intro {
+    margin-bottom: 40px;
+  }
+}
+
+@each $_name, $_color in $colors-by-theme {
+  .#{$_name}-theme .intro {
+    h1,
+    .h1,
+    h2,
+    .h2,
+    h3,
+    .h3 {
+      color: $_color;
+    }
+  }
+}
+
+

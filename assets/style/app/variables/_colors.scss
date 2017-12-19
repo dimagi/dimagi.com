@@ -1,28 +1,28 @@
 $color-bg:          #ffffff;
 $color-bg-html:     #161b1f;
-$color-text:        #181715;
+$color-text:        #5f6a7d;
 
-$color-white:       #ffffff;
+$color-white:         #ffffff;
 
-$color-neutral:     #685c53;
-$color-neutral-light:  #d6d6d4;
-$color-neutral-dark: #373534;
+$color-neutral:       #685c53;
+$color-neutral-light: #d6d6d4;
+$color-neutral-dark:  #373534;
 
-$color-blue:        #004ebc;
-$color-blue-light:     #bcdeff;
-$color-blue-dark:    #002c5f;
+$color-blue:          #004ebc;
+$color-blue-light:    #bcdeff;
+$color-blue-dark:     #002c5f;
 
-$color-turquoise:     #00bdc5;
-$color-turquoise-light:  #ccf3f4;
-$color-turquoise-dark: #00799a;
+$color-turquoise:       #00bdc5;
+$color-turquoise-light: #ccf3f4;
+$color-turquoise-dark:  #00799a;
 
-$color-purple:      #9060c8;
-$color-purple-light:   #d6c5ea;
-$color-purple-dark:  #5d3f82;
+$color-purple:        #9060c8;
+$color-purple-light:  #d6c5ea;
+$color-purple-dark:   #5d3f82;
 
-$color-orange:      #ff8400;
-$color-orange-light:   #ffe3c2;
-$color-orange-dark:  #994f00;
+$color-orange:        #ff8400;
+$color-orange-light:  #ffe3c2;
+$color-orange-dark:   #994f00;
 
 $color-yellow:      #f9c700;
 $color-yellow-light:   #f8ecbd;
@@ -42,42 +42,33 @@ $color-code-bg:     #f0f0f0;
 $color-header: $color-text;
 $color-header-inverted: $color-white;
 
+$color-accent-gray: #fafafa;
+
 $color-tap-highlight: rgba(255, 255, 255, 0);
 
 $colors-by-theme: (
   blue: $color-blue,
   purple: $color-purple,
-);
-
-$colors-by-theme-inverted: (
-  blue: $color-blue-light,
-  purple: $color-purple-light,
-);
-
-$colors-by-theme-text: (
-  blue: $color-white,
-  purple: $color-white,
-);
-
-$colors-by-theme-muted: (
-  blue: color-mute($color-blue),
-  purple: color-mute($color-purple),
-);
-
-$colors-by-theme-banner: (
-  blue: $color-blue,
-  purple: #9d73c7,
+  accent-gray: $color-accent-gray,
 );
 
 $default-theme: blue;
 
 $color-link: map-get($colors-by-theme, $default-theme);
 
-$color-header: $color-blue-dark;
+$color-header: #2e3b4e;
 $color-body: #5f6a7d;
 $color-link-gray: #6c7980;
 $color-header-bg: $color-header;
 $color-body-bg: $color-body;
+$color-banner: #1b2126;
+$color-hero: #1b2126;
+
+$color-button: $color-blue;
+$color-button-disabled: #e0e0e0;
+
+$color-device-container-border: #e0e0e0;
+
 
 @function color-mute($_color) {
   @return lighten($_color, 20);
@@ -101,5 +92,13 @@ $color-body-bg: $color-body;
 
 @function color-invert-active($_color) {
   @return $color-white;
+}
+
+@function color-button-hover($_color) {
+  @return darken($_color, 20);
+}
+
+@function color-button-active($_color) {
+  @return darken($_color, 25);
 }
 

@@ -4,28 +4,30 @@
 [class*="grid-"] {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: -$grid-gap !important; // scss-lint:disable ImportantRule
-  margin-left: -$grid-pad;
-  margin-right: -$grid-pad;
+  margin-bottom: -$space-line !important; // scss-lint:disable ImportantRule
+  margin-left: -$space-base;
+  margin-right: -$space-base;
 }
 
 .grid > *,
 [class*="grid-"] > * {
   flex: 0 1 auto;
-  margin-bottom: $grid-gap !important; // scss-lint:disable ImportantRule
-  padding-left: $grid-pad;
-  padding-right: $grid-pad;
+  margin-bottom: $space-line !important; // scss-lint:disable ImportantRule
+  padding-left: $space-base;
+  padding-right: $space-base;
   width: 100%;
 }
 
-@each $_type, $_gap in $gaps-by-type {
+@each $_type, $_space in $space-by-type {
+  $_gap: space-gap-grid($_space);
+
   .grid.gap-#{$_type},
   .grid.gap-vert-#{$_type},
   .grid.gap-bottom-#{$_type},
   [class*="grid-"].gap-#{$_type},
   [class*="grid-"].gap-vert-#{$_type},
   [class*="grid-"].gap-bottom-#{$_type} {
-    margin-bottom: $_gap - $grid-pad !important; // scss-lint:disable ImportantRule
+    margin-bottom: $_gap !important; // scss-lint:disable ImportantRule
   }
 }
 
@@ -71,38 +73,38 @@
     }
   }
 
-  @each $_type, $_pad in $pads-by-type {
+  @each $_type, $_space in $space-by-type {
+    $_margin: space-margin($_space);
+
     .grid-space-#{$_type}#{$_suffix},
     .grid-col-space-#{$_type}#{$_suffix} {
-      margin-left: -$_pad;
-      margin-right: -$_pad;
-    }
 
-    .grid-space-#{$_type}#{$_suffix} > *,
-    .grid-col-space-#{$_type}#{$_suffix} > * {
-      padding-left: $_pad;
-      padding-right: $_pad;
+      margin-left: -$_margin;
+      margin-right: -$_margin;
+
+      > * {
+        padding-left: $_margin;
+        padding-right: $_margin;
+      }
     }
 
     .grid-space-#{$_type}#{$_suffix},
     .grid-row-space-#{$_type}#{$_suffix} {
-      margin-bottom: $_pad * -2 !important; // scss-lint:disable ImportantRule
+      margin-bottom: $_space !important; // scss-lint:disable ImportantRule
+
+      > * {
+        margin-bottom: $_space !important; // scss-lint:disable ImportantRule
+      }
     }
 
-    .grid-space-#{$_type}#{$_suffix} > *,
-    .grid-row-space-#{$_type}#{$_suffix} > * {
-      margin-bottom: $_pad * 2 !important; // scss-lint:disable ImportantRule
-    }
-
-    $_gap: map-get($gaps-by-type, $_type);
-    @each $_sub-type, $_sub-gap in $gaps-by-type {
+    @each $_sub-type, $_sub-space in $space-by-type {
       .grid-space-#{$_type}#{$_suffix}.gap-#{$_sub-type},
       .grid-space-#{$_type}#{$_suffix}.gap-vert-#{$_sub-type},
       .grid-space-#{$_type}#{$_suffix}.gap-bottom-#{$_sub-type},
       .grid-row-space-#{$_type}#{$_suffix}.gap-#{$_sub-type},
       .grid-row-space-#{$_type}#{$_suffix}.gap-vert-#{$_sub-type},
       .grid-row-space-#{$_type}#{$_suffix}.gap-bottom-#{$_sub-type} {
-        margin-bottom: -$_gap + $_sub-gap !important; // scss-lint:disable ImportantRule
+        margin-bottom: $_space - $_sub-space !important; // scss-lint:disable ImportantRule
       }
     }
   }
@@ -123,10 +125,10 @@
   }
 
   $_grid-valign: (
-    left: flex-start,
-    center: center,
-    right: flex-end,
-    justify: flex-start,
+    top: flex-start,
+    middle: center,
+    bottom: flex-end,
+    justify: space-between,
   );
 
   @each $_justify, $_items in $_grid-valign {

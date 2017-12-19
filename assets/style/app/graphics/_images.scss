@@ -1,8 +1,25 @@
+img,
+svg {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+img.max-width-none,
+svg.max-width-none {
+  max-width: none !important; // scss-lint:disable ImportantRule
+}
+
+img {
+  display: block;
+}
+
 @mixin _make-svg-size($size) {
   svg[width="{$size}"],
   svg[width="{$size}px"] {
     width: $size px;
   }
+
   svg[height="{$size}"],
   svg[height="{$size}px"] {
     height: $size px;
@@ -14,3 +31,5 @@
 @include _make-svg-size(40);
 @include _make-svg-size(68);
 @include _make-svg-size(80);
+@include _make-svg-size(100);
+@include _make-svg-size(200);

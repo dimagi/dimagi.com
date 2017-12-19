@@ -7,7 +7,7 @@
     }
 
     .theme-muted-color {
-      color: map-get($colors-by-theme-muted, $_name) !important; // scss-lint:disable ImportantRule
+      color: color-mute($_color) !important; // scss-lint:disable ImportantRule
     }
 
     .theme-ui-color {
@@ -15,7 +15,7 @@
     }
 
     .theme-text-color {
-      color: map-get($colors-by-theme-text, $_name) !important; // scss-lint:disable ImportantRule
+      color: color-mute($_color) !important; // scss-lint:disable ImportantRule
     }
 
     .theme-border {
@@ -36,7 +36,7 @@
     }
 
     .theme-muted-bg {
-      background-color: map-get($colors-by-theme-muted, $_name) !important; // scss-lint:disable ImportantRule
+      background-color: color-mute($_color) !important; // scss-lint:disable ImportantRule
       color: $color-white !important; // scss-lint:disable ImportantRule
     }
   }
@@ -47,7 +47,7 @@
   }
 
   .#{$_name}-muted {
-    color: map-get($colors-by-theme-muted, $_name) !important; // scss-lint:disable ImportantRule
+    color: color-mute($_color) !important; // scss-lint:disable ImportantRule
   }
 
   .#{$_name}-ui-color {
@@ -59,33 +59,33 @@
   }
 
   .#{$_name}-border {
-    border-color: $color-purple !important; // scss-lint:disable ImportantRule
+    border-color: $_color !important; // scss-lint:disable ImportantRule
   }
 
   .#{$_name}-icon [fill]:not([fill="none"]):not([fill^=url]) {
-    fill: $color-purple !important; // scss-lint:disable ImportantRule
+    fill: $_color !important; // scss-lint:disable ImportantRule
   }
 
   .#{$_name}-icon [stroke]:not([stroke="transparent"]) {
-    stroke: $color-purple !important; // scss-lint:disable ImportantRule
+    stroke: $_color !important; // scss-lint:disable ImportantRule
   }
 
   .#{$_name}-icon.inverted [fill]:not([fill="none"]):not([fill^=url]),
   .inverted .#{$_name}-icon [fill]:not([fill="none"]):not([fill^=url]) {
-    fill: $color-white !important; // scss-lint:disable ImportantRule
+    fill: $_color !important; // scss-lint:disable ImportantRule
   }
 
   .#{$_name}-icon.inverted [stroke]:not([stroke="transparent"]),
   .inverted .#{$_name}-icon [stroke]:not([stroke="transparent"]) {
-    stroke: $color-white !important; // scss-lint:disable ImportantRule
+    stroke: $_color !important; // scss-lint:disable ImportantRule
   }
 
   .#{$_name}-bg {
-    background-color: $color-purple !important; // scss-lint:disable ImportantRule
+    background-color: $_color !important; // scss-lint:disable ImportantRule
   }
 
   .#{$_name}-muted-bg {
-    background-color: map-get($colors-by-theme-muted, $_name) !important; // scss-lint:disable ImportantRule
+    background-color: color-mute($_color) !important; // scss-lint:disable ImportantRule
   }
 
 }
