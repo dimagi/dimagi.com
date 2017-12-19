@@ -34,6 +34,6 @@ class Command(BaseCommand):
         self.output_resources(resources)
 
     def get_hash(self, filename):
-        with open(filename, encoding='utf-8') as f:
-            file_hash = hashlib.sha1(f.read().encode('utf-8')).hexdigest()[:7]
+        with open(filename, 'rb') as f:
+            file_hash = hashlib.sha1(f.read()).hexdigest()[:7]
         return file_hash
