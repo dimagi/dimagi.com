@@ -15,4 +15,24 @@
 
 4. Install the [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli)
 
- 
+todo: fill in the rest of this
+
+
+## PR Approval Guidelines
+
+### HTML
+
+Are `</div>` (and other deeply nested) tags properly commented with a selector for easy identification?
+```
+<div class="content">
+  ...
+</div> {# .content #}
+```
+
+
+Is all human readable text in a `{% blocktrans %}`?
+```
+{% blocktrans %}
+  Human Readable Text!
+{% endblocktrans %}
+```
