@@ -45,3 +45,8 @@ node_modules/*
 assets/style/*.css
 
 dump.rdb
+
+local_release_tasks.sh
+assets/style/_test.scss
+
+*.DS_Store
