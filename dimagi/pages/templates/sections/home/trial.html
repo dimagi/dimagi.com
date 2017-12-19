@@ -1,0 +1,40 @@
+{% load i18n %}
+
+<section class="trial border-top accent-gray-bg"
+         id="trial">
+  <div class="content content-width-medium pad-vert-medium">
+    <div class="intro gap-bottom-small">
+      <h4>
+        {% blocktrans %}
+          Try a FREE 30-day CommCare trial.
+        {% endblocktrans %}
+      </h4>
+    </div>{# .intro #}
+
+    <div class="grid-2">
+
+      <div class="column flex-align-right">
+        <p>
+          <a class="button alt"
+             href="#todo">
+            {% blocktrans %}
+              Request a demo
+            {% endblocktrans %}
+          </a>
+        </p>
+      </div>{# .column #}
+
+      <div class="column flex-align-left">
+        <p>
+          <a class="button"
+           href="#todo">
+            {% blocktrans %}
+              Let's get started
+            {% endblocktrans %}
+          </a>
+        </p>
+      </div>{#  .column #}
+
+    </div>{# .grid-2 #}
+  </div>{# .content #}
+</section>

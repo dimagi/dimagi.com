@@ -1,0 +1,54 @@
+{% load dimagidotcom %}
+{% load i18n %}
+
+<section class="build" id="build">
+  <div class="content pad-vert-medium border-top">
+
+    <div class="intro gap-bottom-small">
+      <h4>
+        {% blocktrans %}
+          Build powerful mobile applications.
+        {% endblocktrans %}
+      </h4>
+      <p class="gap-bottom-base">
+        {% blocktrans %}
+          Create smarter, beautiful mobile applications with our robust
+          feature set, all without writing a single line of code.
+          Collect data offline, track data over time, incorporate multimedia,
+          build in multiple languages, and much more.
+        {% endblocktrans %}
+      </p>
+      <p>
+        <a class="arrow"
+           href="#todo">
+          {% blocktrans %}
+            Learn more about CommCare's powerful App Builder
+          {% endblocktrans %}
+        </a>
+      </p>
+    </div>{# .intro #}
+
+    <div class="content-width-large pad-horz-small-at-small pad-horz-none-at-extra-large gap-top-small">
+      <div class="grid-flex-at-medium">
+
+        <div class="column flex-valign-middle-at-medium">
+          <div class="device-container browser-ui">
+            <div class="screen">
+              <img src="{% static 'pages/home/app-builder.jpg' %}">
+            </div>{# .screen #}
+          </div>{# .device-container.browser-ui #}
+        </div>{# .column #}
+
+        <div class="column">
+          <div class="device-container mobile-ui">
+            <div class="screen">
+              <img src="{% static 'pages/home/mobile-screen.jpg' %}">
+            </div>{# .screen #}
+          </div>{# .device-container.mobile-ui #}
+        </div>{# .content #}
+
+      </div>{# .grid-flex-at-medium #}
+    </div>{# .content-width-large #}
+
+  </div>{# .content #}
+</section>

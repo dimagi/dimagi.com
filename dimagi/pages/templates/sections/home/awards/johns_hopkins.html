@@ -1,0 +1,23 @@
+{% extends 'snippets/icon_with_text_cta.html' %}
+{% load i18n %}
+
+{% block icon %}
+  {% include "svg/home/icon/johns_hopkins.html" %}
+{% endblock %}
+
+{% block header %}{% blocktrans %}
+  Empowers frontline health workers
+{% endblocktrans %}{% endblock %}
+
+{% block content %}{% blocktrans %}
+  CommCare was the most popular mobile platform among
+  frontline health workers in developing countries.
+{% endblocktrans %}{% endblock %}
+
+{% block cta_link %}
+  #todo
+{% endblock %}
+
+{% block cta_text %}{% blocktrans %}
+  Read the Johns Hopkins University study
+{% endblocktrans %}{% endblock %}

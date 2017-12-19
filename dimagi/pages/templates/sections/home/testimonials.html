@@ -1,0 +1,39 @@
+{% load i18n %}
+
+<section class="testimonials border-top"
+         id="testimonials">
+  <div class="content pad-vert-medium">
+
+    <div class="intro">
+      <h4>
+        {% blocktrans %}
+          What our customers are saying.
+        {% endblocktrans %}
+      </h4>
+      <p class="content-width-small">
+        {% blocktrans %}
+          Hundreds of organizations of all sizes, working across sectors,
+          use CommCare to maximize their impact.
+        {% endblocktrans %}
+      </p>
+    </div>{# .intro #}
+
+    <div class="column">
+      <blockquote class="align-center-at-medium">
+        <p>
+          {% blocktrans %}
+            We used to run paper-based impact evaluation and monitoring and
+            evaluation projects, which were very inefficient and painful to
+            manage. CommCare made our lives easier.
+          {% endblocktrans %}
+        </p>
+        <cite>
+          {% blocktrans %}
+            Prachi Patel, Manager of Technology for Development at Avahan
+          {% endblocktrans %}
+        </cite>
+      </blockquote>
+    </div>{# .column #}
+
+  </div>{# .content #}
+</section>

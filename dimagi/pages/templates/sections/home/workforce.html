@@ -1,0 +1,84 @@
+{% load dimagidotcom %}
+{% load i18n %}
+
+<section class="workforce border-top blue-theme"
+         id="workforce">
+  <div class="content pad-vert-medium">
+
+    <div class="intro">
+      <h3>
+        {% blocktrans %}
+          Empower Your Workforce
+        {% endblocktrans %}
+      </h3>
+      <p class="content-width-extra-small gap-bottom-base">
+        {% blocktrans %}
+          Give your workforce a tool that will guide them to do
+          their best work and maximize their impact.
+        {% endblocktrans %}
+      </p>
+      <p>
+        <a class="arrow"
+           href="#todo">
+          {% blocktrans %}
+            Learn more about CommCare's Design Philosophy
+          {% endblocktrans %}
+        </a>
+      </p>
+    </div>{# .intro #}
+
+    <div class="grid-testimonial">
+      <div class="column">
+        <div class="grid-2-at-medium">
+
+          <div class="column">
+            <div class="grid-1">
+
+              <div class="column">
+                <div class="aspect-ratio-rect-at-medium theme-bg">
+                  <blockquote>
+                    <p>
+                      {% blocktrans %}
+                        Our philosophy, Design Under the Mango Tree, puts end users first.
+                      {% endblocktrans %}
+                    </p>
+                    <cite>
+                      {% blocktrans %}
+                        Jonathan Jackson, CEO of Dimagi
+                      {% endblocktrans %}
+                    </cite>
+                  </blockquote>
+                </div>{# .aspect-ratio-rect-at-medium #}
+              </div>{# .column #}
+
+              <div class="column">
+                <div class="grid-2">
+
+                  <div class="column">
+                    <div class="image aspect-ratio-square testimonial2"></div>{# .workforce .image.testimonial2 {} => home.scss #}
+                  </div>{# .column #}
+
+                  <div class="column">
+                    <div class="image aspect-ratio-square testimonial3"></div>{# .workforce .image.testimonial3 {} => home.scss #}
+                  </div>{# .column #}
+
+                </div>{# .grid-2 #}
+              </div>{# .column #}
+
+            </div>{# .grid-1 #}
+          </div>{# .column #}
+
+          <div class="column">
+            <div class="grid-1">
+              <div class="column">
+                <div class="image aspect-ratio-square testimonial1"></div>{# .workforce .image.testimonial1 {} => home.scss #}
+              </div>{# .column #}
+            </div>{# .grid-1 #}
+          </div>{# .column #}
+
+        </div>{# .grid-2-at-medium #}
+      </div>{# .column #}
+    </div>{# .grid-workforce #}
+
+  </div>{# .content #}
+</section>

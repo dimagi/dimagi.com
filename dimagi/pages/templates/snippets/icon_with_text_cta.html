@@ -1,0 +1,22 @@
+<div class="column">
+  <div class="grid-flex">
+
+    <div class="column no-shrink">
+      <div class="theme-icon">
+        {% block icon %}{% endblock %} {# usually an embeded svg #}
+      </div>{# .theme-icon #}
+    </div>{# .column.no-shrink #}
+
+    <div class="column">
+      <h6>{% block header %}{% endblock %}</h6>
+      <p>{% block content %}{% endblock %}</p>
+      <p class="cta">
+        <a class="arrow"
+           href="{% block cta_link %}{% endblock %}">
+          {% block cta_text %}{% endblock %}
+        </a>
+      </p>
+    </div>{# .column #}
+
+  </div>{# .grid-flex #}
+</div>{# .column #}

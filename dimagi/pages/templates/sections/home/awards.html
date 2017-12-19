@@ -1,0 +1,40 @@
+{% load i18n %}
+
+<section class="awards border-top blue-theme" id="awards">
+  <div class="content pad-top-medium">
+
+    <div class="intro">
+      <h3>
+        {% blocktrans %}
+          How CommCare Stacks Up
+        {% endblocktrans %}
+      </h3>
+    </div>{# .intro #}
+
+    <div class="grid-2-at-medium grid-reverse">
+
+      <div class="copy">
+        <div class="grid-1 grid-row-space-small">
+
+          <div class="column">
+            <h3>
+              {% blocktrans %}
+                More than 500 projects across 60 countries use CommCare today.
+              {% endblocktrans %}
+            </h3>
+          </div>{# .column #}
+
+          {% include 'sections/home/awards/kopernik.html' %}
+          {% include 'sections/home/awards/johns_hopkins.html' %}
+          {% include 'sections/home/awards/australian_gov.html' %}
+          {% include 'sections/home/awards/studies.html' %}
+
+        </div>{# .grid-flex #}
+      </div>{# .copy #}
+
+      <div class="image"></div>{# .awards .image {} => home.scss #}
+
+    </div>{# .grid-2-at-medium #}
+
+  </div>{# .content #}
+</section>

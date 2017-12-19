@@ -1,0 +1,39 @@
+{% load dimagidotcom %}
+{% load i18n %}
+
+<section class="data"
+         id="data">
+  <div class="content pad-vert-medium border-top">
+
+    <div class="intro gap-bottom-small">
+      <h4>
+        {% blocktrans %}
+          Make data-driven decisions.
+        {% endblocktrans %}
+      </h4>
+      <p class="gap-bottom-base content-width-extra-small">
+        {% blocktrans %}
+          Collect clean, quality data you can trust to make informed decisions that maximize your impact.
+        {% endblocktrans %}
+      </p>
+      <p>
+        <a class="arrow"
+           href="#todo">
+          {% blocktrans %}
+            Learn more about Data in CommCare
+          {% endblocktrans %}
+        </a>
+      </p>
+    </div>{# .intro #}
+
+    <div class="content-width-large pad-horz-small-at-small pad-horz-none-at-extra-large gap-top-small">
+      <div class="device-container browser-ui">
+        <div class="screen">
+          {# todo replace placeholder #}
+          <img src="{% static 'pages/home/excel-dashboard.jpg' %}">
+        </div>{# .screen #}
+      </div>{# .device-container #}
+    </div>{# .content-width-large #}
+
+  </div>{# .content #}
+</section>

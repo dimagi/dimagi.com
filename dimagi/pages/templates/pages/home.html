@@ -2,431 +2,55 @@
 {% load i18n %}
 {% load dimagidotcom %}
 
-{% block stylesheets %}
-    <link href="{% sass_src 'style/pages/home.scss' %}" rel="stylesheet" media="screen" type="text/css" />
-    <link href="{% sass_src 'style/pages/home-variants.scss' %}" rel="stylesheet" media="screen" type="text/css" />
-{% endblock %}
+{% block body_class %}home-page tucked-hero{% endblock %}
 
-{% block js %}
-  <script src="{% static 'js/main.js' %}"></script>
+{% block stylesheets %}
+  {% compress css %}
+    <link href="{% sass_src 'style/pages/home.scss' %}" rel="stylesheet" media="screen" type="text/css" />
+  {% endcompress %}
 {% endblock %}
 
 {% block hero %}
-<section class="hero hero-purple" id="hero">
-  <div class="outgoing-image" data-loading="false"></div>
-  <div class="content inverted align-center display-flex flex-valign-middle expand-vertical offset-top-medium flex-align-center">
+<section class="hero hero-home" id="hero">
+  <div class="content content-width-large inverted align-center display-flex flex-valign-middle expand-vertical offset-top-medium flex-align-center">
     <div class="copy expand position-relative">
-      <h1><strong>Digital Solutions Designed for Impact.</strong></h1>
-      <div class="headline mcc-headline grid-2-at-medium grid-row-space-none content-width-large">
 
+      <h1 class="font-weight-bold">
+        {% blocktrans %}
+          Digital Solutions Designed for Impact.
+        {% endblocktrans %}
+      </h1>
 
-      </div>
-    </div>
-  </div>
+      <div class="headline content-width-small">
+        {% blocktrans %}
+          We’re on a mission to improve the efficiency
+          and quality of impact-driven work globally.
+        {% endblocktrans %}
+      </div>{# .headline #}
+
+      <div class="cta gap-vert-line">
+        <a class="button alt inverted"
+           href="#todo" >
+          {% blocktrans %}
+            Find Out How
+          {% endblocktrans %}
+        </a>
+      </div>{# .home-cta #}
+
+    </div>{# .copy #}
+  </div>{# .content #}
 </section>
 {% endblock %}
 
 {% block content %}
   <section class="homepage-container">
-    <section class="accent-gray-bg border-bottom">
-      <div class="content pad-vert-small align-center">
-        <div class="grid-auto grid-align-center">
-          <div class="column">
-            partner logo
-          </div>
-          <div class="column">
-            partner logo
-          </div>
-          <div class="column">
-            partner logo
-          </div>
-          <div class="column">
-            partner logo
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="x2-announcement pad-vert-small pad-vert-line-at-medium border-bottom" id="announcement">
-      <div class="content content-width-medium pad-horz-large-at-medium align-center">
-        <div class="grid-flex-at-medium">
-          <div class="column flex-align-center flex-align-right-at-medium">
-            <a class="border-rounded-large image play-icon-small alt" href="#"></a>
-          </div>
-          <div class="column flex-valign-middle-at-medium align-left-at-medium">
-            <div class="copy">
-              <h4 class="gap-bottom-base">Introducing CommCare</h4>
-              <p>
-                CommCare, developed by Dimagi, is the world’s most powerful mobile data collection platform.
-                CommCare helps our customers collect better data and give their workforce new tools to deliver better services.
-              </p>
-              <a class="arrow" href="#">Learn More About CommCare</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="section-a border-bottom" id="section-a">
-      <div class="content pad-vert-medium">
-        <div class="intro">
-          <h4>Build powerful mobile applications.</h4>
-          <p>Create smarter, beautiful mobile applications with our robust feature set,
-all without writing a single line of code. Collect data offline, track data over time,
-incorporate multimedia, build in multiple languages, and much more. </p>
-        </div>
-        <div class="grid-2-at-medium gap-bottom-small">
-          <div class="column">
-            <h4>Insert image here</h4>
-            <a class="arrow" href="#">Learn More About CommCare</a>
-          </div>
-        </div>
-        <div class="eco-image"></div>
-      </div>
-    </section>
-    <section class="section-b indigo-theme" id="section-b"><div class="content pad-top-medium">
-      <div class="intro">
-        <h4>commcare commcare commcare</h4>
-        <p>Commcare is obviously the best</p>
-      </div>
-      <ul class="check-list grid-2 grid-4-at-large">
-        <li><strong>CommCare is Awesome</strong></li>
-        <li><strong>CommCare is Awesome</strong></li>
-        <li><strong>CommCare is Awesome</strong></li>
-        <li><strong>CommCare is Awesome</strong></li>
-        <li><strong>CommCare is Awesome</strong></li>
-        <li><strong>CommCare is Awesome</strong></li>
-        <li><strong>CommCare is Awesome</strong></li>
-        <li><strong>CommCare is Awesome</strong></li>
-      </ul>
-      <div class="tile pad-vert-medium align-center accent-gray-bg gap-top-medium">
-        <div class="content-width-medium">
-          <h4>Let’s talk about a CommCare.</h4>
-          <p>We can create custom pricing packages for you.</p>
-          <h4>
-            <a class="arrow" href="#">Get in touch</a>
-          </h4>
-          <h3>
-            <a href="tel:1800COMCARE">1 (800) COM-CARE</a>
-          </h3>
-        </div>
-      </div>
-    </div>
-    </section>
-    <section class="section-c" id="section-c">
-      <div class="content pad-vert-medium">
-        <div class="intro">
-          <h4>CommCare runs on android.</h4>
-          <p>Acessible everywhere.</p>
-        </div>
-        <div class="grid-2-at-medium">
-          <div class="column">
-            <div class="register-image gap-bottom-small"></div>
-            <h4>Commcare is in the field.</h4>
-            <ul>
-              <li>We are built and tested app builders.</li>
-              <li>We are built and tested app builders.</li>
-              <li>We are built and tested app builders.</li>
-            </ul>
-            <a class="display-flex flex-valign-middle blue-theme" href="#">
-              <div class="theme-icon no-shrink">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
-                  <path fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M8 23H6c-2.8 0-5-2.2-5-5V6c0-2.8 2.2-5 5-5h20c2.8 0 5 2.2 5 5v12c0 2.8-2.2 5-5 5h-2"></path>
-                  <polygon fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" points="8 15 8 31 24 31 24 15"></polygon>
-                  <line fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" x1="24" y1="27" x2="8" y2="27"></line>
-                  <path fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M17.6 23c0.3-0.6 0.5-1.3 0.5-2 0-0.8-0.2-1.4-0.5-2"></path>
-                  <path fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M14 19.6c0.4 0.4 0.6 1 0.6 1.5 0 0.5-0.3 1.1-0.6 1.5"></path>
-                </svg>
-              </div>
-              <div class="gap-left-base arrow">Learn more about CommCare</div>
-            </a>
-          </div>
-          <div class="column">
-            <div class="pos-image gap-bottom-small"></div>
-            <h4>Transform your Data Collection.</h4>
-            <ul>
-              <li>We are the best data collection.</li>
-              <li>We are the best data collection.</li>
-              <li>We are the best data collection.</li>
-            </ul>
-            <a class="display-flex flex-valign-middle blue-theme" href="#">
-              <div class="theme-icon no-shrink">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
-                  <path fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" d="M26,30c2.8,0,4-1.2,4-4V6 c0-2.8-1.2-4-4-4H6C3.2,2,2,3.2,2,6v20c0,2.8,1.2,4,4,4H26z"></path>
-                  <path fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M17,18.5c0,0,1-0.5,1-2.5c0-2-1-2.5-1-2.5"></path>
-                  <path fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M13.5,14.5c0,0,0.5,0.5,0.5,1.5s-0.5,1.5-0.5,1.5"></path>
-                  <polygon fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="23,23 9,23 9,9 23,9"></polygon>
-                </svg>
-              </div>
-              <div class="gap-left-base arrow">Learn More about CommCare</div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="section-d accent-gray-bg border-top" id="section-d">
-      <div class="content pad-vert-medium">
-        <div class="intro">
-          <h4>Save money with our services.</h4>
-          <p>Our team knows what we're doing.</p>
-        </div>
-        <div class="grid-2-at-medium grid-row-space-small">
-          <div class="column">
-            <h4 class="display-flex flex-valign-middle gap-bottom-base">
-              <div class="theme-icon no-shrink gap-right-base">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
-                <path fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M25,17c0-2.8-2.2-5-5-5c-2.8,0-5,2.2-5,5c0,0-0.2,4,5,9C25.2,21,25,17,25,17z"></path>
-                  <circle fill="#2E3B4E" cx="20" cy="17" r="2"></circle>
-                  <circle fill="#2E3B4E" cx="16" cy="27" r="1"></circle>
-                  <circle fill="#2E3B4E" cx="16" cy="13" r="1"></circle>
-                  <circle fill="#2E3B4E" cx="16" cy="23" r="1"></circle>
-                  <path fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" d="M5,6c0,0,0-0.1,0-0.1L2,5 l0,0v22l14,4l14-4V5L16,9l-1.5-0.4"></path>
-                  <circle fill="#2E3B4E" cx="10" cy="6" r="2"></circle>
-                  <path fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M15,6c0-2.8-2.2-5-5-5C7.2,1,5,3.2,5,6c0,0-0.2,4,5,9C15.2,10,15,6,15,6z"></path>
-                </svg>
-              </div>
-              <span>Track real-time data for multiple locations on the go.</span>
-            </h4>
-            <p>GPS right to your CommCare</p>
-            <p class="cta">
-              <a class="arrow" href="#">Learn more about CommCare</a>
-            </p>
-          </div>
-          <div class="column">
-            <h4 class="display-flex flex-valign-middle gap-bottom-base">
-              <div class="theme-icon no-shrink gap-right-base">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
-                  <circle fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="16" cy="16" r="15"></circle>
-                  <circle fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="16" cy="16" r="7"></circle>
-                  <line fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" x1="12.7" y1="1.4" x2="14.3" y2="9.6"></line>
-                  <line fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" x1="19.3" y1="1.4" x2="17.7" y2="9.6"></line>
-                  <line fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" x1="12.7" y1="30.6" x2="14.3" y2="22.5"></line>
-                  <line fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" x1="19.3" y1="30.6" x2="17.7" y2="22.5"></line>
-                  <line fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" x1="1.4" y1="19.4" x2="9.5" y2="17.7"></line>
-                  <line fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" x1="1.4" y1="12.7" x2="9.5" y2="14.4"></line>
-                  <line fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" x1="30.6" y1="19.4" x2="22.4" y2="17.7"></line>
-                  <line fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" x1="30.6" y1="12.7" x2="22.4" y2="14.4"></line>
-                  <path fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" d="M29.4,9.2l0.6-2.9 c0.5-2.5-1.7-4.7-4.2-4.2l-2.9,0.6"></path>
-                  <path fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" d="M9.2,2.7L6.2,2.1 C3.7,1.6,1.5,3.8,2,6.3l0.6,2.9"></path>
-                  <path fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" d="M22.7,29.4l3,0.6 c2.5,0.5,4.7-1.7,4.2-4.2l-0.6-3"></path>
-                  <path fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" d="M2.6,22.8L2,25.7 c-0.5,2.5,1.7,4.7,4.2,4.2l2.9-0.6"></path>
-                </svg>
-              </div>
-              <span>Our Support Team Throws You a Life Raft.</span>
-            </h4>
-            <p>Solve issues quickly and easily with free around-the-clock support from our Customer Support specialists via phone or email. Contact Sales to see if you qualify.</p>
-            <p class="cta">
-              <a class="arrow" href="#">Learn more about the Support Team</a>
-            </p>
-          </div>
-          <div class="column">
-            <h4 class="display-flex flex-valign-middle gap-bottom-base">
-              <div class="theme-icon no-shrink gap-right-base">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
-                  <path fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M25 15v-5c0-5-4-9-9-9s-9 4-9 9v5"></path>
-                  <path fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M19 15v-5c0-1.7-1.3-3-3-3s-3 1.3-3 3v5"></path>
-                  <path fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M1 16.2C1 15.5 1.5 15 2.2 15h27.6c0.7 0 1.2 0.5 1.2 1.2v13.7c0 0.6-0.5 1.2-1.2 1.2H2.2C1.5 31 1 30.5 1 29.8V16.2z"></path>
-                  <circle fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="16" cy="22" r="2"></circle>
-                  <line fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="16" y1="26" x2="16" y2="24"></line>
-                </svg>
-              </div>
-              <span>Serious data security.</span>
-            </h4>
-            <p>We do the HIPAA</p>
-            <p class="cta">
-              <a class="arrow" href="#">Learn more about Dimagi Security</a>
-            </p>
-          </div>
-          <div class="column">
-            <h4 class="display-flex flex-valign-middle gap-bottom-base">
-              <div class="theme-icon no-shrink gap-right-base">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
-                  <line fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="8.1" y1="17.8" x2="6" y2="15.6"></line>
-                  <path fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M9.3,21.6c-0.7,0.7-1.8,0.7-2.5,0s-0.7-1.8,0-2.5l2.7-2.7"></path>
-                  <path fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M11.8,24.1c-0.7,0.7-1.8,0.7-2.5,0s-0.7-1.8,0-2.5l2.7-2.7"></path>
-                  <path fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M9.6,16.3c0.7-0.7,1.8-0.7,2.5,0c0.7,0.7,0.7,1.8,0,2.5"></path>
-                  <path fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M12.1,18.8c0.7-0.7,1.8-0.7,2.5,0s0.7,1.8,0,2.5"></path>
-                  <path fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M14.5,21.3c0.7-0.7,1.8-0.7,2.5,0s0.7,1.8,0,2.5l-2.8,2.8c-0.7,0.7-1.8,0.7-2.5,0s-0.7-1.8,0-2.5L14.5,21.3"></path>
-                  <path fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M21.1,25.8c0.7,0.7,0.7,1.8,0,2.5s-1.8,0.7-2.5,0l-3-3"></path>
-                  <path fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M23.6,23.3c0.7,0.7,0.7,1.8,0,2.5s-1.8,0.7-2.5,0l-0.9-0.9"></path>
-                  <path fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M19,8c-4,0-6.1,0.9-7.6,2.4c-0.6,0.6-0.8,1.4-0.3,2.1c0.5,0.8,2,1.3,4.5,0.5c2-0.7,3.6,0.9,3.6,0.9l4.8,4.8l2,2 c0.7,0.7,0.7,1.8,0,2.5s-1.8,0.7-2.5,0l-1-1"></path>
-                  <line fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" x1="24" y1="19" x2="27" y2="16"></line>
-                  <polygon fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="4,17 1,14 11,4 14,7"></polygon>
-                  <polygon fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="31,14 28,17 18,7 21,4"></polygon>
-                </svg>
-              </div>
-              <span>We Work With You.</span>
-            </h4>
-            <p>To get stuff done...</p>
-            <p class="cta">
-              <a class="arrow" href="#">Learn more about Our Team</a>
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="section-e accent-gray-bg" id="section-e">
-      <div class="content pad-vert-medium border-top align-center">
-        <div class="intro">
-          <h4>Tools to help you grow.</h4>
-          <p>Scaling your app to the max</p>
-        </div>
-        <a class="tile full-bleed yellow-muted-bg gap-bottom-small" href="#">
-          <div class="image"><div class="play-icon-medium alt expand pin-middle-center"></div>
-          </div>
-        </a>
-        <div class="grid-2-at-medium grid-4-at-large grid-row-equal-heights gap-bottom-small">
-          <div class="column">
-            <a class="tile green-border" href="#">
-              <div class="gap-bottom-base green-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80">
-                  <path fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M38.7 9L6.1 22.2C4.8 22.7 4 23.8 4 25l0 0c0 1.7 1.5 3 3.4 3h65.3c1.9 0 3.4-1.3 3.4-3l0 0c0-1.2-0.8-2.3-2.1-2.8L41.3 9C40.5 8.7 39.5 8.7 38.7 9z"></path>
-                  <polyline fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" points="8 64 8 60 72 60 72 64 "></polyline>
-                  <path fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" d="M72 28v4H8v-4"></path>
-                  <polyline fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" points="5 68 5 64 75 64 75 68 "></polyline>
-                  <path fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M2 68h76v4H2V68z"></path>
-                  <polygon fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points=" 12 36 11 32 21 32 20 36 20 56 21 60 11 60 12 56 "></polygon>
-                  <line fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="15" y1="36" x2="17" y2="36"></line>
-                  <line fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="15" y1="56" x2="17" y2="56"></line>
-                  <polygon fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points=" 60 36 59 32 69 32 68 36 68 56 69 60 59 60 60 56 "></polygon>
-                  <line fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="63" y1="36" x2="65" y2="36"></line>
-                  <line fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="63" y1="56" x2="65" y2="56"></line>
-                  <polygon fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points=" 44 36 43 32 53 32 52 36 52 56 53 60 43 60 44 56 "></polygon>
-                  <line fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="47" y1="36" x2="49" y2="36"></line>
-                  <line fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="47" y1="56" x2="49" y2="56"></line>
-                  <polygon fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points=" 28 36 27 32 37 32 36 36 36 56 37 60 27 60 28 56 "></polygon>
-                  <line fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="31" y1="36" x2="33" y2="36"></line>
-                  <line fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="31" y1="56" x2="33" y2="56"></line>
-                  <circle fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="40" cy="20" r="3"></circle>
-                </svg>
-              </div>
-              <h5 class="green">Buildings</h5>
-              <p>We like them.</p>
-              <p class="cta">
-                <span class="link arrow green">Learn More</span>
-              </p>
-            </a>
-          </div>
-          <div class="column">
-            <a class="tile yellow-border" href="#">
-              <div class="gap-bottom-base yellow-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80">
-                  <path fill="none" stroke="#2E3B4E" stroke-width="2" stroke-miterlimit="10" d="M4,65c-1.7,0-3-1.4-3-3V18c0-1.6,1.3-3,3-3h72 c1.7,0,3,1.4,3,3v44c0,1.6-1.3,3-3,3H4z"></path>
-                  <polyline fill="none" stroke="#2E3B4E" stroke-width="2" stroke-miterlimit="10" points="2,16 40,44 78,16"></polyline>
-                  <line fill="none" stroke="#2E3B4E" stroke-width="2" stroke-miterlimit="10" x1="2" y1="64" x2="34" y2="40"></line>
-                  <line fill="none" stroke="#2E3B4E" stroke-width="2" stroke-miterlimit="10" x1="78" y1="64" x2="46" y2="40"></line>
-                </svg>
-              </div>
-              <h5 class="yellow">Envelopes</h5>
-              <p>We like them too.</p>
-              <p class="cta">
-                <span class="link arrow yellow">Learn More</span>
-              </p>
-            </a>
-          </div>
-          <div class="column">
-            <a class="tile indigo-border" href="#">
-              <div class="gap-bottom-base indigo-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80">
-                  <path fill="none" stroke="#2E3B4E" stroke-width="2" stroke-miterlimit="10" d="M9,4c0-1.7,1.4-3,3-3h56c1.7,0,3,1.3,3,3v72 c0,1.7-1.3,3-3,3H12c-1.6,0-3-1.3-3-3V4z"></path>
-                  <line fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="55" y1="33" x2="61" y2="33"></line>
-                  <line fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="55" y1="39" x2="61" y2="39"></line>
-                  <line fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="19" y1="33" x2="25" y2="33"></line>
-                  <line fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="19" y1="39" x2="25" y2="39"></line>
-                  <line fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="37" y1="33" x2="43" y2="33"></line>
-                  <line fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="37" y1="39" x2="43" y2="39"></line>
-                  <line fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" x1="49" y1="25" x2="49" y2="57"></line>
-                  <line fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" x1="31" y1="25" x2="31" y2="57"></line>
-                  <line fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="55" y1="69" x2="61" y2="69"></line>
-                  <line fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="55" y1="63" x2="61" y2="63"></line>
-                  <line fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="19" y1="25" x2="61" y2="25"></line>
-                  <line fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="19" y1="57" x2="61" y2="57"></line>
-                  <line fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="51" y1="9" x2="61" y2="9"></line>
-                  <line fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="51" y1="15" x2="61" y2="15"></line>
-                  <circle fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="22" cy="12" r="3"></circle>
-                </svg>
-              </div>
-              <h5 class="indigo">Invoices</h5>
-              <p>Our ops team likes them.</p>
-              <p class="cta">
-                <span class="link arrow indigo">Learn More</span>
-              </p>
-            </a>
-          </div>
-          <div class="column">
-            <a class="tile indigo-border" href="#">
-              <div class="gap-bottom-base indigo-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80">
-                  <line fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" x1="1" y1="40" x2="79" y2="40"></line>
-                  <line fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" x1="40" y1="13" x2="40" y2="67"></line>
-                  <path fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M52.9,34.5C50.4,37.1,40,40.1,40,40.1s2.9-10.4,5.4-12.9c2.5-2.5,6.2-2.9,8.2-0.9C55.7,28.3,55.4,32,52.9,34.5z"></path>
-                  <path fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M27.1,34.5c2.5,2.5,12.9,5.6,12.9,5.6s-2.9-10.4-5.4-12.9c-2.5-2.5-6.2-2.9-8.2-0.9C24.3,28.3,24.6,32,27.1,34.5z"></path>
-                  <path fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M40,40c0,0-2.2,8-15,8"></path>
-                  <path fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M40,40c0,0,2.2,8,15,8"></path>
-                  <path fill="none" stroke="#2E3B4E" stroke-width="2" stroke-miterlimit="10" d="M79,62c0,2.8-2.2,5-5,5H6c-2.8,0-5-2.2-5-5V18 c0-2.8,2.2-5,5-5h68c2.8,0,5,2.2,5,5V62z"></path>
-                </svg>
-              </div>
-              <h5 class="indigo">Present</h5>
-              <p>We give you present.</p>
-              <p class="cta"><span class="link arrow indigo">Learn More</span></p>
-            </a>
-          </div>
-        </div>
-        <a class="arrow" href="#">See all our software products</a>
-      </div>
-    </section>
-    <section class="section-f border-top" id="section-f">
-      <div class="content pad-vert-medium">
-        <div class="grid-testimonial gap-bottom-medium">
-          <div class="column">
-            <div class="grid-2-at-medium">
-              <div class="column">
-                <div class="image aspect-ratio-square testimonial1"></div>
-              </div>
-              <div class="column">
-                <div class="grid-1">
-                  <div class="column">
-                    <div class="aspect-ratio-rect-at-medium blue-bg inverted">
-                      <blockquote>
-                        <p>CommCare is Obviously the best CommCare on the planet</p>
-                        <cite>Jon Jackson</cite>
-                      </blockquote>
-                    </div>
-                  </div>
-                  <div class="column">
-                    <div class="grid-2">
-                      <div class="column">
-                        <div class="image aspect-ratio-square testimonial2"></div>
-                      </div>
-                      <div class="column">
-                        <div class="image aspect-ratio-square testimonial3"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="intro expand">
-          <h4>One More thing.</h4>
-          <p>In case you missed the other thing....</p>
-        </div>
-        <div class="logo-image"></div>
-      </div>
-    </section>
-    <section class="section-f border-top accent-gray-bg" id="section-f">
-      <div class="content pad-vert-medium"><div class="content-width-medium pad-horz-large-at-medium align-center gap-bottom-small">
-        <h3>We are here to help you.</h3>
-        <p>Chat with Ryan. He's friendly.</p>
-      </div>
-        <div class="grid-auto grid-align-center">
-          <div class="column">
-            <a class="button" href="#">Contact Ryan</a>
-          </div>
-          <div class="column">
-            <a class="button alt" href="#">or Sign up today</a>
-          </div>
-        </div>
-      </div>
-    </section>
+    {% include "sections/home/partners.html" %}
+    {% include "sections/home/video.html" %}
+    {% include "sections/home/build.html" %}
+    {% include "sections/home/workforce.html" %}
+    {% include "sections/home/data.html" %}
+    {% include "sections/home/awards.html" %}
+    {% include "sections/home/testimonials.html" %}
+    {% include "sections/home/trial.html" %}
   </section>
 {% endblock %}
