@@ -1,4 +1,13 @@
 {% load i18n %}{% load dimagidotcom %}<!DOCTYPE html>
+{# todo add .js if js is active .no-js if js is not active #}
+{# todo menu-active #}
+{# todo add .touch if touch is active .no-touch if not active #}
+{# todo add .cssanimations, .csstransforms3d, csstransitions, .video .audio, .svg, .inlinesvg, .pointerevents .show-time #}
+{# note: app.js adds classes to <html> to trigger certain css behaviors. #}
+{# These classes are: #}
+{#     js, no-js, touch, no-touch, cssanimations, #}
+{#     csstransformations3d, csstransitions, video, audio, svg, inlinesvg #}
+{#     pointerevents, show-time #}
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -8,6 +17,8 @@
 
     <title>Dimagi.com</title>
 
+
+    {# todo bring font offline and load from CDN #}
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,500,700,900" rel="stylesheet">
 
     {% compress css %}
