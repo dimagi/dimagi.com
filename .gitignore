@@ -48,5 +48,6 @@ dump.rdb
 
 local_release_tasks.sh
 assets/style/_test.scss
+assets/js/test.js
 
 *.DS_Store
