@@ -1,0 +1,37 @@
+{% load i18n %}
+
+<div class="hide-until-large display-flex flex-valign-middle">
+  <a class="menu-open-sibling gap-right-base gap-right-line-at-extra-large"
+     href="#todo">
+    {% blocktrans %}
+      Products
+    {% endblocktrans %}
+  </a>
+
+  <a class="menu-open-sibling gap-right-base gap-right-line-at-extra-large"
+     href="#todo">
+    {% blocktrans %}
+      Services
+    {% endblocktrans %}
+  </a>
+
+  <a class="menu-open"
+     data-drawer="menu-drawer"
+     href="#">
+    {% blocktrans %}
+      More
+    {% endblocktrans %}
+  </a>
+</div>{# .hide-until-large #}
+
+<a class="menu-open hide-at-large"
+   data-drawer="menu-drawer"
+   href="#">
+  {% blocktrans %}
+    More
+  {% endblocktrans %}
+</a>
+
+<a class="menu-link menu-close" href="#">
+  {% include 'svg/close.html' %}
+</a>

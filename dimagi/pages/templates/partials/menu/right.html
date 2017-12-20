@@ -1,0 +1,27 @@
+{% load i18n %}
+
+<a class="login-link"
+   href="#todo">
+  <div class="hide-at-medium">
+    {% include "svg/sign_in.html" %}
+  </div>{# .hide-at-medium #}
+
+  <div class="hide-until-medium">
+    {% blocktrans %}
+      Sign in
+    {% endblocktrans %}
+  </div>{# .hide-until-medium #}
+</a>
+
+<a class="trial-link"
+   href="#todo">
+  <div class="hide-at-medium">
+    {% include "svg/trial.html" %}
+  </div>{# .hide-at-medium #}
+
+  <div class="hide-until-medium">
+    {% blocktrans %}
+      Start CommCare Trial
+    {% endblocktrans %}
+  </div>{# .hide-until-medium #}
+</a>
