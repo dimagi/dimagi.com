@@ -15,8 +15,9 @@
     <meta name="format-detection" content="telephone=no">
     <meta property="dimagi:baseUrl" content="{{ meta.baseUrl }}">
 
-    <title>Dimagi.com</title>
+    {% block meta %}{% endblock %}
 
+    <title>{% block title %}Dimagi.com{% endblock %}</title>
 
     {# todo bring font offline and load from CDN #}
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,500,700,900" rel="stylesheet">
