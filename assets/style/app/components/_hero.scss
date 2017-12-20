@@ -112,13 +112,13 @@
 }
 
 .tucked-hero .hero {
-  margin-top: -$tucked-hero-margin-top-mobile;
-  padding-top: $tucked-hero-margin-top-mobile;
+  margin-top: -$menu-pad-top-mobile;
+  padding-top: $menu-pad-top-mobile;
 }
 
 @media (min-width: $width-desktop) {
   .tucked-hero .hero {
-    margin-top: -$tucked-hero-margin-top-desktop;
-    padding-top: $tucked-hero-margin-top-desktop;
+    margin-top: -$menu-pad-top-desktop;
+    padding-top: $menu-pad-top-desktop;
   }
 }

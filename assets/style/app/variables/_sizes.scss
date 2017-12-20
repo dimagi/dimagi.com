@@ -67,8 +67,9 @@ $banner-logo-height-desktop: 30px;
 $banner-logo-width-desktop: 60px;
 
 $hero-content-padding: 30px;
-$tucked-hero-margin-top-mobile: 42px;
-$tucked-hero-margin-top-desktop: 73px;
+
+$menu-pad-top-mobile: 42px;
+$menu-pad-top-desktop: 73px;
 
 @function space-margin($_space) {
   @return $_space / 2;
