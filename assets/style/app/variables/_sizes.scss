@@ -24,6 +24,20 @@ $content-cell-padding-by-size: (
   extra-large: 80px,
 );
 
+$modal-wrapper-widths-by-size: (
+  small: 424px,
+  medium: 680px,
+  large: 868px,
+  extra-large: 1016px,
+);
+
+$modal-content-widths-by-size: (
+  small: 324px,
+  medium: 424px,
+  large: 680px,
+  extra-large: 868px,
+);
+
 $content-width-base: map-get($content-widths-by-size, base);
 
 $width-mobile: map-get($widths-by-size, small);
@@ -44,6 +58,7 @@ $space-by-type: (
 
 $space-base: map-get($space-by-type, base);
 $space-line: map-get($space-by-type, line);
+$space-medium: map-get($space-by-type, medium);
 
 $list-padding: 2.14286em;
 $list-icon-width: 1.42857em;
