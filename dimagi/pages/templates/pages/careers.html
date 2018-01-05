@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block body_class %}careers-page tucked-hero{% endblock %}
+
+{% block stylesheets %}
+  {% compress css %}
+    <link href="{% sass_src 'style/pages/careers.scss' %}" rel="stylesheet" media="screen" type="text/css" />
+  {% endcompress %}
+{% endblock %}
+
+{% block hero %}
+<section class="hero hero-careers" id="hero">
+  <div class="content content-width-large inverted align-center display-flex flex-valign-middle expand-vertical offset-top-medium flex-align-center">
+    <div class="copy expand position-relative">
+
+      <h1 class="font-weight-bold">
+        {% blocktrans %}
+          Careers Page Placeholder
+        {% endblocktrans %}
+      </h1>
+
+      <div class="headline content-width-small">
+        {% blocktrans %}
+
+        {% endblocktrans %}
+      </div>{# .headline #}
+
+    </div>{# .copy #}
+  </div>{# .content #}
+</section>
+{% endblock %}
+
+{% block content %}
+  <section class="careers-container">
+  </section>
+{% endblock %}

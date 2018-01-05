@@ -46,3 +46,8 @@ def blog(request):
 @no_index
 def about(request):
     return render(request, 'pages/about.html')
+
+
+@no_index
+def careers(request):
+    return render(request, 'pages/careers.html')
