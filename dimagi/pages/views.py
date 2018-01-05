@@ -9,10 +9,15 @@ def home(request):
 
 
 @no_index
-def products(request):
-    return render(request, 'pages/products.html')
+def products_commcare(request):
+    return render(request, 'pages/products/commcare.html')
 
 
 @no_index
 def services(request):
     return render(request, 'pages/services.html')
+
+
+@no_index
+def pricing_commcare(request):
+    return render(request, 'pages/pricing/commcare.html')

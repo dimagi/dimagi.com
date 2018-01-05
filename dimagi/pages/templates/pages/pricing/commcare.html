@@ -2,22 +2,22 @@
 {% load i18n %}
 {% load dimagidotcom %}
 
-{% block body_class %}services-page tucked-hero{% endblock %}
+{% block body_class %}pricing-commcare-page tucked-hero{% endblock %}
 
 {% block stylesheets %}
   {% compress css %}
-    <link href="{% sass_src 'style/pages/services.scss' %}" rel="stylesheet" media="screen" type="text/css" />
+    <link href="{% sass_src 'style/pages/pricing/commcare.scss' %}" rel="stylesheet" media="screen" type="text/css" />
   {% endcompress %}
 {% endblock %}
 
 {% block hero %}
-<section class="hero hero-services" id="hero">
+<section class="hero hero-pricing-commcare" id="hero">
   <div class="content content-width-large inverted align-center display-flex flex-valign-middle expand-vertical offset-top-medium flex-align-center">
     <div class="copy expand position-relative">
 
       <h1 class="font-weight-bold">
         {% blocktrans %}
-          Services Page Placeholder
+          CommCare Pricing Page Placeholder
         {% endblocktrans %}
       </h1>
 
@@ -33,6 +33,6 @@
 {% endblock %}
 
 {% block content %}
-  <section class="services-container">
+  <section class="pricing-commcare-container">
   </section>
 {% endblock %}

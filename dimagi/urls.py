@@ -4,7 +4,12 @@ import dimagi.pages.views as pages
 
 
 urlpatterns = [
-    url(r'^$', pages.home, name='home'),
-    url(r'^products/$', pages.products, name='products'),
-    url(r'^services/$', pages.services, name='services'),
+    url(r'^$', pages.home,
+        name='home'),
+    url(r'^products/commcare/$', pages.products_commcare,
+        name='products_commcare'),
+    url(r'^products/commcare/pricing/$', pages.pricing_commcare,
+        name='pricing_commcare'),
+    url(r'^services/$', pages.services,
+        name='services'),
 ]
