@@ -31,3 +31,8 @@ def pricing_services(request):
 @no_index
 def case_studies(request):
     return render(request, 'pages/case_studies.html')
+
+
+@no_index
+def toolkits(request):
+    return render(request, 'pages/toolkits.html')

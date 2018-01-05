@@ -16,4 +16,6 @@ urlpatterns = [
         name='pricing_services'),
     url(r'^case_studies/$', pages.case_studies,
         name='case_studies'),
+    url(r'^toolkits/$', pages.toolkits,
+        name='toolkits'),
 ]
