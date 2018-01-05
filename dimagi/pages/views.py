@@ -11,3 +11,8 @@ def home(request):
 @no_index
 def products(request):
     return render(request, 'pages/products.html')
+
+
+@no_index
+def services(request):
+    return render(request, 'pages/services.html')
