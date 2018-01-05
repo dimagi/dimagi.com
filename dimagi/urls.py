@@ -20,4 +20,6 @@ urlpatterns = [
         name='toolkits'),
     url(r'^blog/$', pages.blog,
         name='blog'),
+    url(r'^about/$', pages.about,
+        name='about'),
 ]
