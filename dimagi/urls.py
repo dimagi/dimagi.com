@@ -5,4 +5,5 @@ import dimagi.pages.views as pages
 
 urlpatterns = [
     url(r'^$', pages.home, name='page_home'),
+    url(r'^products/$', pages.products, name='page_products'),
 ]

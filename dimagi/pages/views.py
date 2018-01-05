@@ -8,3 +8,6 @@ def home(request):
     return render(request, 'pages/home.html')
 
 
+@no_index
+def products(request):
+    return render(request, 'pages/products.html')
