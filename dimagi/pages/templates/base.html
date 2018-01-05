@@ -39,7 +39,9 @@
 
     <script src="{% static 'js/lib/requirejs/require.js' %}"></script>
     <script src="{% static 'js/requirejs-config.js' %}"></script>
-    <script src="{% static 'js/main.js' %}"></script>
+    {% compress js %}
+    <script src="{% static 'js/app.js' %}"></script>
+    {% endcompress %}
 
     {% block js %}{% endblock %}
 
