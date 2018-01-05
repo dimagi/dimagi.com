@@ -26,3 +26,8 @@ def pricing_commcare(request):
 @no_index
 def pricing_services(request):
     return render(request, 'pages/pricing/services.html')
+
+
+@no_index
+def case_studies(request):
+    return render(request, 'pages/case_studies.html')
