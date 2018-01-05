@@ -18,4 +18,6 @@ urlpatterns = [
         name='case_studies'),
     url(r'^toolkits/$', pages.toolkits,
         name='toolkits'),
+    url(r'^blog/$', pages.blog,
+        name='blog'),
 ]

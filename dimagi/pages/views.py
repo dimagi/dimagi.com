@@ -36,3 +36,8 @@ def case_studies(request):
 @no_index
 def toolkits(request):
     return render(request, 'pages/toolkits.html')
+
+
+@no_index
+def blog(request):
+    return render(request, 'pages/blog.html')
