@@ -56,6 +56,7 @@ TEMPLATES = [
                 'django.template.context_processors.i18n',
                 'django.template.context_processors.static',
                 'dimagi.utils.context_processors.metas',
+                'dimagi.utils.context_processors.external_urls',
             ],
             'loaders': [
                 'django.template.loaders.filesystem.Loader',
@@ -150,8 +151,6 @@ else:
 COMPRESS_ROOT = STATIC_ROOT
 COMPRESS_URL = STATIC_CDN + STATIC_URL
 COMPRESS_CSS_HASHING_METHOD = 'content'
-
-
 
 if AWS_ENABLED:
     STATICFILES_STORAGE = "dimagi.storage.StaticFileStorage"

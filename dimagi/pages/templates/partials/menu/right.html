@@ -1,7 +1,7 @@
 {% load i18n %}
 
 <a class="login-link"
-   href="#todo">
+   href="{{ URL_LOGIN }}">
   <div class="hide-at-medium">
     {% include "svg/sign_in.html" %}
   </div>{# .hide-at-medium #}
@@ -14,7 +14,7 @@
 </a>
 
 <a class="trial-link"
-   href="#todo">
+   href="{{ URL_TRIAL }}">
   <div class="hide-at-medium">
     {% include "svg/trial.html" %}
   </div>{# .hide-at-medium #}
