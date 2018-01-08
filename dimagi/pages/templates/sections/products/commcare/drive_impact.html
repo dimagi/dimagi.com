@@ -1,0 +1,32 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="drive-impact accent-gray-bg"
+         id="drive-impact">
+  <div class="content pad-vert-medium border-top align-center">
+    <div class="intro">
+      <h4>
+        {% blocktrans %}
+          Drive Impact
+        {% endblocktrans %}
+      </h4>
+      <p>
+        {% blocktrans %}
+          How our customers use CommCare for good.
+        {% endblocktrans %}
+      </p>
+    </div>
+    <div class="grid-2-at-medium grid-4-at-large grid-row-equal-heights gap-bottom-small">
+      {% include "sections/products/commcare/drive_impact/child_health.html" %}
+      {% include "sections/products/commcare/drive_impact/agriculture.html" %}
+      {% include "sections/products/commcare/drive_impact/malaria.html" %}
+      {% include "sections/products/commcare/drive_impact/retail.html" %}
+    </div>
+    <a class="arrow"
+       href="#todo">
+      {% blocktrans %}
+        See our research
+      {% endblocktrans %}
+    </a>
+  </div>
+</section>
