@@ -5,6 +5,7 @@
   background: $color-white;
   display: block;
   padding: $space-small;
+  padding-bottom: $space-small * 2;
   position: relative;
 
   &:before { // scss-lint:disable PropertyCount
