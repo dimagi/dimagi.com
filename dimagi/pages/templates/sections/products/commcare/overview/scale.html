@@ -1,0 +1,22 @@
+{% extends "snippets/icon_with_text_simple.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block icon %}
+  {% include "svg/products/commcare/icon/globe.html" %}
+{% endblock %}
+
+{% block header %}
+  {% blocktrans %}
+    Start small and scale
+  {% endblocktrans %}
+{% endblock %}
+
+{% block content %}
+  {% blocktrans %}
+    You need a digital solution that is flexible enough to
+    grow with your work. Invest in a solution that will
+    keep pace with your growth.
+  {% endblocktrans %}
+{% endblock %}
+

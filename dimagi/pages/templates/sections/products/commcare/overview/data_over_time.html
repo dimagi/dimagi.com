@@ -1,0 +1,22 @@
+{% extends "snippets/icon_with_text_simple.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block icon %}
+  {% include "svg/products/commcare/icon/data_over_time.html" %}
+{% endblock %}
+
+{% block header %}
+  {% blocktrans %}
+    Track data over time
+  {% endblocktrans %}
+{% endblock %}
+
+{% block content %}
+  {% blocktrans %}
+    Build smarter apps that allow you to
+    collect and track data over time with
+    CommCare’s case management feature.
+  {% endblocktrans %}
+{% endblock %}
+

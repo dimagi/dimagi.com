@@ -14,7 +14,6 @@
     background-repeat: no-repeat;
     background-size: auto 100%;
     height: $_height-base;
-    text-align: center;
   }
 
   @each $_size, $_height in $_height-by-size {

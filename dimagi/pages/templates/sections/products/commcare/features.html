@@ -1,0 +1,41 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="awards border-top blue-theme" id="awards">
+  <div class="content pad-top-medium">
+
+    <div class="intro">
+      <h3>
+        {% blocktrans %}
+          A powerful platform to fit all your needs.
+        {% endblocktrans %}
+      </h3>
+    </div>{# .intro #}
+
+    <div class="grid-2-at-medium grid-reverse">
+
+      <div class="copy">
+        <div class="grid-1 grid-row-space-small">
+
+          <div class="column">
+            <h3>
+              {% blocktrans %}
+                Our robust set of features allow you to build sophisticated
+                mobile apps that will fit your needs today
+                &mdash; and for many years to come.
+              {% endblocktrans %}
+            </h3>
+          </div>{# .column #}
+
+          {% include 'sections/products/commcare/features/multimedia.html' %}
+          {% include 'sections/products/commcare/features/data_storage.html' %}
+
+        </div>{# .grid-flex #}
+      </div>{# .copy #}
+
+      <div class="image"></div>{# .awards .image {} => home.scss #}
+
+    </div>{# .grid-2-at-medium #}
+
+  </div>{# .content #}
+</section>

@@ -11,28 +11,37 @@
 {% endblock %}
 
 {% block hero %}
-<section class="hero hero-products-commcare" id="hero">
-  <div class="content content-width-large inverted align-center display-flex flex-valign-middle expand-vertical offset-top-medium flex-align-center">
-    <div class="copy expand position-relative">
-
-      <h1 class="font-weight-bold">
+  <div id="top"></div>
+  <section class="hero hero-products-commcare" id="hero">
+    <div class="content offset-top-extra-large align-left-at-medium align-center">
+      <h2>
+        {% include "svg/products/commcare/logo.html" %}
+      </h2>
+      <h1>
         {% blocktrans %}
-          CommCare Products Page Placeholder
+          The world's most powerful mobile data collection platform.
         {% endblocktrans %}
       </h1>
-
-      <div class="headline content-width-small">
+      <a class="button alt inverted"
+         href="#todo">
         {% blocktrans %}
-
+          Start Free Trial
         {% endblocktrans %}
-      </div>{# .headline #}
-
-    </div>{# .copy #}
-  </div>{# .content #}
-</section>
+      </a>
+      <p class="cta">
+        <a class="play-icon-small alt"
+           href="#todo">
+          {% blocktrans %}
+            Watch the video
+          {% endblocktrans %}
+        </a>
+      </p>
+    </div> {# .content #}
+  </section>
 {% endblock %}
 
 {% block content %}
-  <section class="products-commcare-container">
-  </section>
+  {% include "sections/products/commcare/sub_nav.html" %}
+  {% include "sections/products/commcare/overview.html" %}
+  {% include "sections/products/commcare/how_commcare_works.html" %}
 {% endblock %}
