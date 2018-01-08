@@ -3,6 +3,7 @@ $color-bg-html:     #161b1f;
 $color-text:        #5f6a7d;
 
 $color-white:         #ffffff;
+$color-black:         #000000;
 
 $color-neutral:       #685c53;
 $color-neutral-light: #d6d6d4;
@@ -54,6 +55,8 @@ $color-tap-highlight: rgba(255, 255, 255, 0);
 
 $colors-by-theme: (
   blue: $color-blue,
+  green: $color-green,
+  turquoise: $color-turquoise,
   purple: $color-purple,
   accent-gray: $color-accent-gray,
 );

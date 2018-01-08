@@ -1,83 +1,93 @@
 @import 'app/variables/colors';
+@import 'app/variables/sizes';
 
 .tile {
-    display: block;
-    padding: 30px;
-    background: #fff;
-    position: relative
-}
+  background: $color-white;
+  display: block;
+  padding: $space-small;
+  position: relative;
 
-.tile:before {
-    pointer-events: none;
-    content: " ";
-    display: block;
-    position: absolute;
-    z-index: 99;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+  &:before { // scss-lint:disable PropertyCount
+    border: 1px solid rgba(0, 0, 0, .12);
     border-radius: inherit;
-    border: 1px solid rgba(0, 0, 0, 0.12)
-}
+    bottom: 0;
+    content: ' ';
+    display: block;
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 99;
+  }
 
-.tile .theme-icon+* {
-    margin-top: 10px
-}
+  .theme-icon + * {
+    margin-top: $space-base;
+  }
 
-.tile .purple-icon+* {
-    margin-top: 10px
-}
+  &.full-bleed {
+    padding: 0;
 
-.tile.full-bleed {
-    padding: 0
-}
+    .copy {
+      padding: $space-small;
+    }
+  }
 
-.tile.full-bleed .copy {
-    padding: 30px
+  .button-container {
+    height: $space-small;
+    position: relative;
+  }
+
+  .button {
+    bottom: $space-small;
+    left: $space-small;
+    min-width: calc(100% - 60px);
+    position: absolute;
+  }
 }
 
 a.tile {
-    font-weight: inherit;
-    color: inherit;
-    border-radius: 5px;
-    position: relative
-}
+  border-radius: 5px;
+  color: inherit;
+  font-weight: inherit;
+  position: relative;
 
-a.tile:after {
-    pointer-events: none;
-    content: " ";
-    display: block;
-    position: absolute;
-    z-index: 99;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+  &:after { // scss-lint:disable PropertyCount
+    border: 2px solid $color-blue;
     border-radius: inherit;
-    border: 2px solid #2996cc
-}
-
-a.tile:after {
-    opacity: 0
+    bottom: 0;
+    content: ' ';
+    display: block;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 99;
+  }
 }
 
 .show-time a.tile:after {
-    -webkit-transition: border 300ms, opacity 300ms;
-    transition: border 300ms, opacity 300ms
+  transition: border 300ms, opacity 300ms;
 }
 
 a.tile:hover,
 a.tile:focus {
-    color: inherit
+  color: inherit;
 }
 
 a.tile:hover:after,
 a.tile:focus:after {
-    opacity: 1
+  opacity: 1;
 }
 
 @each $_name, $_color in $colors-by-theme {
+
+  .tile .#{$_name}-icon+* {
+    margin-top: $space-base;
+  }
+
   .#{$_name}-theme a.tile:after {
     border-color: $_color;
   }
@@ -97,78 +107,71 @@ a.tile:focus:after {
   }
 }
 
+a.tile.full-bleed .image { // scss-lint:disable MergeableSelector
+  background-color: $color-white;
+  overflow: hidden;
+  position: relative;
+  z-index: 100;
 
-
-a.tile.full-bleed .image {
-    z-index: 100;
-    background-color: #fff;
-    overflow: hidden;
-    position: relative;
-    position: relative
-}
-
-a.tile.full-bleed .image:first-child {
+  &::first-child {
     border-top-left-radius: 4px;
-    border-top-right-radius: 4px
-}
+    border-top-right-radius: 4px;
+  }
 
-a.tile.full-bleed .image:first-child:not(:last-child):before,
-a.tile.full-bleed .image:first-child:not(:last-child):after {
-    bottom: -2px
-}
+  &:first-child:not(:last-child):before,
+  &:first-child:not(:last-child):after {
+    bottom: -2px;
+  }
 
-a.tile.full-bleed .image:last-child {
+  &:last-child {
     border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px
-}
+    border-bottom-right-radius: 4px;
+  }
 
-a.tile.full-bleed .image:last-child:not(:first-child):before,
-a.tile.full-bleed .image:last-child:not(:first-child):after {
-    top: -2px
-}
+  &:last-child:not(:first-child):before,
+  &:last-child:not(:first-child):after {
+    top: -2px;
+  }
 
-a.tile.full-bleed .image:before {
-    pointer-events: none;
-    content: " ";
-    display: block;
-    position: absolute;
-    z-index: 99;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+  &:before { // scss-lint:disable PropertyCount
+    border: 1px solid rgba(0, 0, 0, .12);
     border-radius: inherit;
-    border: 1px solid rgba(0, 0, 0, 0.12)
-}
-
-a.tile.full-bleed .image:after {
-    pointer-events: none;
-    content: " ";
-    display: block;
-    position: absolute;
-    z-index: 99;
-    top: 0;
-    right: 0;
     bottom: 0;
+    content: ' ';
+    display: block;
     left: 0;
-    border-radius: inherit;
-    border: 2px solid #000
-}
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 99;
+  }
 
-a.tile.full-bleed .image:after {
-    opacity: 0
+  &:after { // scss-lint:disable PropertyCount
+    border: 2px solid $color-black;
+    border-radius: inherit;
+    bottom: 0;
+    content: ' ';
+    display: block;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 99;
+  }
 }
 
 .show-time a.tile.full-bleed .image:after {
-    -webkit-transition: opacity 300ms;
-    transition: opacity 300ms
+  transition: opacity 300ms;
 }
 
 a.tile.full-bleed:hover .image:after,
 a.tile.full-bleed:focus .image:after {
-    opacity: .2
+  opacity: .2;
 }
 
-a.tile.full-bleed:active .image:after {
-    opacity: .25
+a.tile.full-bleed:active .image:after { // scss-lint:disable MergeableSelector
+  opacity: .25;
 }

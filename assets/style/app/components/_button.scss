@@ -180,71 +180,71 @@ input[type="reset"].alt.inverted,
   color: $color-white !important; // scss-lint:disable ImportantRule
 }
 
-@each $_name, $_color in $colors-by-theme {
-  .#{$_name}-theme {
+@each $_theme, $_color in $colors-by-theme {
+  .#{$_theme}-theme {
     @include _make-button-color($_color);
   }
   
-  .button.button-#{$_name},
-  button.button-#{$_name},
-  input[type="button"].button-#{$_color},
-  input[type="submit"].button-#{$_color},
-  input[type="reset"].button-#{$_color} {
+  .button.button-#{$_theme},
+  button.button-#{$_theme},
+  input[type="button"].button-#{$_theme},
+  input[type="submit"].button-#{$_theme},
+  input[type="reset"].button-#{$_theme} {
     background-color: $_color;
     color: color-invert($_color);
   }
   
-  .button.button-#{$_name}:hover,
-  .button.button-#{$_name}:focus,
-  button.button-#{$_name}:hover,
-  button.button-#{$_name}:focus,
-  input[type="button"].button-#{$_name}:hover,
-  input[type="button"].button-#{$_name}:focus,
-  input[type="submit"].button-#{$_name}:hover,
-  input[type="submit"].button-#{$_name}:focus,
-  input[type="reset"].button-#{$_name}:hover,
-  input[type="reset"].button-#{$_name}:focus {
+  .button.button-#{$_theme}:hover,
+  .button.button-#{$_theme}:focus,
+  button.button-#{$_theme}:hover,
+  button.button-#{$_theme}:focus,
+  input[type="button"].button-#{$_theme}:hover,
+  input[type="button"].button-#{$_theme}:focus,
+  input[type="submit"].button-#{$_theme}:hover,
+  input[type="submit"].button-#{$_theme}:focus,
+  input[type="reset"].button-#{$_theme}:hover,
+  input[type="reset"].button-#{$_theme}:focus {
     background-color: color-hover($_color);
     color: color-invert($_color);
   }
   
-  .button.button-#{$_name}:active,
-  button.button-#{$_name}:active,
-  input[type="button"].button-#{$_name}:active,
-  input[type="submit"].button-#{$_name}:active,
-  input[type="reset"].button-#{$_name}:active {
+  .button.button-#{$_theme}:active,
+  button.button-#{$_theme}:active,
+  input[type="button"].button-#{$_theme}:active,
+  input[type="submit"].button-#{$_theme}:active,
+  input[type="reset"].button-#{$_theme}:active {
     background-color: color-active($_color);
     color: color-invert($_color);
   }
   
-  .button.button-#{$_name}.alt,
-  button.button-#{$_name}.alt,
-  input[type="button"].button-#{$_name}.alt,
-  input[type="submit"].button-#{$_name}.alt,
-  input[type="reset"].button-#{$_name}.alt {
+  .button.button-#{$_theme}.alt,
+  button.button-#{$_theme}.alt,
+  input[type="button"].button-#{$_theme}.alt,
+  input[type="submit"].button-#{$_theme}.alt,
+  input[type="reset"].button-#{$_theme}.alt {
     box-shadow: inset 0 0 0 1px $_color;
     color: $_color;
   }
   
-  .button.button-#{$_name}.alt:hover,
-  .button.button-#{$_name}.alt:focus,
-  button.button-#{$_name}.alt:hover,
-  button.button-#{$_name}.alt:focus,
-  input[type="button"].button-#{$_name}.alt:hover,
-  input[type="button"].button-#{$_name}.alt:focus,
-  input[type="submit"].button-#{$_name}.alt:hover,
-  input[type="submit"].button-#{$_name}.alt:focus,
-  input[type="reset"].button-#{$_name}.alt:hover,
-  input[type="reset"].button-#{$_name}.alt:focus {
+  .button.button-#{$_theme}.alt:hover,
+  .button.button-#{$_theme}.alt:focus,
+  button.button-#{$_theme}.alt:hover,
+  button.button-#{$_theme}.alt:focus,
+  input[type="button"].button-#{$_theme}.alt:hover,
+  input[type="button"].button-#{$_theme}.alt:focus,
+  input[type="submit"].button-#{$_theme}.alt:hover,
+  input[type="submit"].button-#{$_theme}.alt:focus,
+  input[type="reset"].button-#{$_theme}.alt:hover,
+  input[type="reset"].button-#{$_theme}.alt:focus {
     box-shadow: inset 0 0 0 1px color-hover($_color);
     color: color-hover($_color);
   }
   
-  .button.button-#{$_name}.alt:active,
-  button.button-#{$_name}.alt:active,
-  input[type="button"].button-#{$_name}.alt:active,
-  input[type="submit"].button-#{$_name}.alt:active,
-  input[type="reset"].button-#{$_name}.alt:active {
+  .button.button-#{$_theme}.alt:active,
+  button.button-#{$_theme}.alt:active,
+  input[type="button"].button-#{$_theme}.alt:active,
+  input[type="submit"].button-#{$_theme}.alt:active,
+  input[type="reset"].button-#{$_theme}.alt:active {
     box-shadow: inset 0 0 0 1px color-active($_color);
     color: color-active($_color);
   }

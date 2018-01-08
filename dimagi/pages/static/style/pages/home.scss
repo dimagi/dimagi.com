@@ -23,8 +23,6 @@
     extra-large: 589px,
   );
   @include make-bg(image, '../../pages/home/phone', $_base-height, $_height-by-size);
-
-  text-align: center;
 }
 
 .video-intro .image {
