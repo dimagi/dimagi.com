@@ -1,0 +1,19 @@
+<div class="column">
+  <a class="tile {{ theme }}-border"
+     href="{% block link %}{% endblock %}">
+    <div class="pad-top-small pad-bottom-base">
+      <h3 class="{{ theme }}">
+        {% block name %}{% endblock %}
+      </h3>
+    </div>{# .intro #}
+    <p class="font-weight-bold">
+      {% block price %}{% endblock %}
+    </p>
+    <p>{% block description %}{% endblock %}</p>
+    <p class="button-container gap-top-medium">
+      <div class="button button-{{ theme }}">
+        {% block button_text %}{% endblock %}
+      </div>{# .button #}
+    </p>
+  </a>
+</div>{# .column #}

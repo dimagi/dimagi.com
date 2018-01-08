@@ -2,17 +2,9 @@
 {% load i18n %}
 {% load dimagidotcom %}
 
-{% block cta_link %}
-  #todo
-{% endblock %}
-
-{% block icon_class %}{% endblock %}
-
 {% block icon %}
   {% include "svg/products/commcare/icon/heart_health.html" %}
 {% endblock %}
-
-{% block header_class %}blue{% endblock %}
 
 {% block header %}{% blocktrans %}
   Child Health
@@ -24,7 +16,9 @@
   in Burkina Faso.
 {% endblocktrans %}{% endblock %}
 
-{% block link_class %}blue{% endblock %}
+{% block cta_link %}
+  #todo
+{% endblock %}
 
 {% block cta_text %}{% blocktrans %}
   Watch video

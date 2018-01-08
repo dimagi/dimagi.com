@@ -1,0 +1,38 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="testimonials border-top"
+         id="testimonials">
+  <div class="content pad-vert-medium">
+    <div class="intro">
+      <h4>
+        {% blocktrans %}
+          Testimonials.
+        {% endblocktrans %}
+      </h4
+    </div>{# .intro #}
+  </div>{# .content #}
+
+  <div class="carousel pad-bottom-small"
+       data-loading="false">
+    <div class="carousel-container">
+      <div class="spinner spinner-large"></div>
+      <div class="carousel-slider"
+           data-animating="false"
+           style="transform: translateX(332px);">
+
+        {% include "sections/products/commcare/testimonials/ag_impact.html" %}
+        {% include "sections/products/commcare/testimonials/ag_impact.html" %}
+        {% include "sections/products/commcare/testimonials/ag_impact.html" %}
+
+      </div>{# .carousel-slider #}
+    </div>{# .carousel-container #}
+
+    <nav class="carousel-dots">
+      <span data-dot="1" data-active="true"></span>
+      <span data-dot="2" data-active="false"></span>
+      <span data-dot="3" data-active="false"></span>
+    </nav>
+
+  </div>{# .carousel #}
+</section>

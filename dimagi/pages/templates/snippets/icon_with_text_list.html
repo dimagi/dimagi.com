@@ -3,12 +3,12 @@
 
     <div class="column no-shrink">
       <div class="theme-icon">
-        {% block icon %}{% endblock %} {# usually an embeded svg #}
+        {% block icon %}{% endblock %} {# an embeded svg #}
       </div>{# .theme-icon #}
     </div>{# .column.no-shrink #}
 
     <div class="column">
-      <h6>{% block header %}{% endblock %}</h6>
+      <h6 class="gap-bottom-none">{% block header %}{% endblock %}</h6>
       <p>{% block content %}{% endblock %}</p>
     </div>{# .column #}
 

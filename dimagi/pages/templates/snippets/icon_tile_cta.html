@@ -1,15 +1,15 @@
 <div class="column">
-  <a class="tile yellow-border"
+  <a class="tile {{ theme }}-border"
      href="{% block cta_link %}{% endblock %}">
-    <div class="gap-bottom-base {% block icon_class %}{% endblock %}">
+    <div class="gap-bottom-base {{ theme }}-icon">
       {% block icon %}{% endblock %}
     </div>
-    <h5 class="{% block header_class %}{% endblock %}">
+    <h5 class="{{ theme }}">
       {% block header %}{% endblock %}
     </h5>
     <p>{% block content %}{% endblock %}</p>
     <p class="cta">
-      <span class="link arrow {% block link_class %}{% endblock %}">
+      <span class="link arrow {{ theme }}">
         {% block cta_text %}{% endblock %}
       </span>
     </p>
