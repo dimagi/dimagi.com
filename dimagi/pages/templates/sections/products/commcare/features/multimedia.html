@@ -1,25 +1,16 @@
-{% extends 'snippets/icon_with_text_cta.html' %}
+{% extends 'snippets/icon_with_text_list.html' %}
 {% load i18n %}
 
 {% block icon %}
-  {% include "svg/home/icon/ribbon.html" %}
+  {% include "svg/products/commcare/icon/camera.html" %}
 {% endblock %}
 
 {% block header %}{% blocktrans %}
-  A powerful research tool
+  Incorporate multimedia
 {% endblocktrans %}{% endblock %}
 
 {% block content %}{% blocktrans %}
-  CommCare was selected as the best mobile data collection solution
-  for agriculture research projects in a study funded by the
-  Australian government.
-{% endblocktrans %}{% endblock %}
-
-{% block cta_link %}
-  #todo
-{% endblock %}
-
-{% block cta_text %}{% blocktrans %}
-  Read the study by the Australian government
+  CommCare supports video, audio messages, images,
+  GPS and signature capture.
 {% endblocktrans %}{% endblock %}
 

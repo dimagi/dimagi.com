@@ -1,13 +1,13 @@
 {% load i18n %}
 {% load dimagidotcom %}
 
-<section class="awards border-top blue-theme" id="awards">
+<section class="features border-top blue-theme" id="features">
   <div class="content pad-top-medium">
 
     <div class="intro">
       <h3>
         {% blocktrans %}
-          A powerful platform to fit all your needs.
+          Features
         {% endblocktrans %}
       </h3>
     </div>{# .intro #}
@@ -20,15 +20,23 @@
           <div class="column">
             <h3>
               {% blocktrans %}
+                A powerful platform to fit all your needs.
+              {% endblocktrans %}
+            </h3>
+            <p>
+              {% blocktrans %}
                 Our robust set of features allow you to build sophisticated
                 mobile apps that will fit your needs today
                 &mdash; and for many years to come.
               {% endblocktrans %}
-            </h3>
+            </p>
           </div>{# .column #}
 
           {% include 'sections/products/commcare/features/multimedia.html' %}
           {% include 'sections/products/commcare/features/data_storage.html' %}
+          {% include 'sections/products/commcare/features/accounts.html' %}
+          {% include 'sections/products/commcare/features/languages.html' %}
+          {% include 'sections/products/commcare/features/messaging.html' %}
 
         </div>{# .grid-flex #}
       </div>{# .copy #}
