@@ -24,9 +24,6 @@
 
     {% block stylesheets %}{% endblock %}
 
-    {% compress js %}
-    <script src="{% static 'js/modernizr.js' %}"></script>
-    {% endcompress %}
   </head>
   <body class="{% block body_class %}{% endblock %}">
     <main class="main-content position-relative" id="main-content" role="main">
