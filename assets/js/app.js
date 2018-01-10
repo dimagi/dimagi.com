@@ -8,6 +8,8 @@ require([
   'app/resize',
   'app/subNav',
   'app/smoothScroll',
+  'app/carousel',
+  'app/imageLoader',
   'modernizr',
 ], function (
     $,
@@ -18,7 +20,9 @@ require([
     Pipeline,
     Resize,
     SubNav,
-    SmoothScroll
+    SmoothScroll,
+    Carousel,
+    ImageLoader
 ) {
   $(function () {
     _.each([
@@ -29,6 +33,8 @@ require([
       Resize,
       SubNav,
       SmoothScroll,
+      Carousel,
+      ImageLoader,
     ], function (m) {
       m.initialize();
     });
