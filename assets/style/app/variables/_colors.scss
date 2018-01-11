@@ -74,10 +74,13 @@ $color-body-bg: $color-body;
 $color-banner: #1b2126;
 $color-hero: #1b2126;
 
+$color-sub-nav: #5f6a7d;
+
 $color-button: $color-blue;
 $color-button-disabled: #e0e0e0;
 
 $color-device-container-border: #e0e0e0;
+$color-border: #e0e0e0;
 
 
 @function color-mute($_color) {

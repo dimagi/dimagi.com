@@ -1,251 +1,245 @@
+@import 'app/variables/colors';
+@import 'app/variables/sizes';
+@import 'app/variables/type';
+
 .sub-nav-fixed-bottom body {
-    padding-bottom: 60px
+  padding-bottom: $space-medium;
 }
 
 .sub-nav {
-    position: fixed;
-    width: 100%;
-    z-index: 2;
-    max-width: 1680px;
-    min-height: 60px;
-    background-color: #fafafa;
-    border-top: 1px solid #e0e0e0;
-    border-bottom: 1px solid #e0e0e0
+  background-color: $color-accent-gray;
+  border-bottom: 1px solid $color-border;
+  border-top: 1px solid $color-border;
+  max-width: 1680px;
+  min-height: $space-medium;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+
+  a {
+    color: $color-sub-nav;
+    display: block;
+    font-size: $font-size-standard;
+    font-weight: $font-weight-bold;
+    letter-spacing: 1px;
+    line-height: $space-medium;
+    margin-right: 20px;
+    text-transform: uppercase;
+
+    &:hover,
+    &:focus {
+      color: $color-link;
+    }
+
+    &:active {
+      color: $color-link;
+    }
+  }
 }
 
 .sub-nav:before,
 .sub-nav:after {
-    content: " ";
-    display: table;
-    width: 100%;
-    clear: both
+  clear: both;
+  content: ' ';
+  display: table;
+  width: 100%;
 }
 
-.sub-nav a {
-    display: block;
-    margin-right: 20px;
-    font-size: 11px;
-    line-height: 60px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: 600;
-    color: #5f6a7d
-}
-
-@media (min-width: 718px) {
-    .sub-nav a {
-        display: inline-block
-    }
-}
-
-.sub-nav a:hover,
-.sub-nav a:focus {
-    color: #2586b7
-}
-
-.sub-nav a:active {
-    color: #2077a2
-}
-
-.purple-theme .sub-nav a {
-    color: #5f6a7d
-}
-
-.purple-theme .sub-nav a:hover,
-.purple-theme .sub-nav a:focus {
-    color: #732eb8
-}
-
-.purple-theme .sub-nav a:active {
-    color: #6629a3
-}
-
-.touch .purple-theme .sub-nav a.primary span,
-.no-touch.sub-nav-fixed-top .purple-theme .sub-nav a.primary span {
-    color: #fff;
-    background-color: #8033cc;
-    border-color: #8033cc
-}
-
-.touch .purple-theme .sub-nav a.primary span:hover,
-.touch .purple-theme .sub-nav a.primary span:focus,
-.no-touch.sub-nav-fixed-top .purple-theme .sub-nav a.primary span:hover,
-.no-touch.sub-nav-fixed-top .purple-theme .sub-nav a.primary span:focus {
-    color: #fff;
-    background-color: #732eb8
-}
-
-.touch .purple-theme .sub-nav a.primary span:active,
-.no-touch.sub-nav-fixed-top .purple-theme .sub-nav a.primary span:active {
-    color: #fff;
-    background-color: #6629a3
-}
-
-.sub-nav a.primary {
-    margin-right: 0
-}
-
-.sub-nav a.primary span {
+@media (min-width: $width-desktop) {
+  .sub-nav a {
     display: inline-block;
-    line-height: 30px;
+  }
+}
+
+@each $_theme, $_color in $colors-by-theme {
+  .#{$_theme}-theme .sub-nav a {
+    color: $color-sub-nav;
+
+    &:hover,
+    &:focus {
+      color: $_color;
+    }
+
+    &:active {
+      color: $_color;
+    }
+
+  }
+
+  .touch .#{$_theme}-theme .sub-nav a,
+  .no-touch.sub-nav-fixed-top .#{$_theme}-theme .sub-nav a {
+    &.primary span {
+      background-color: $_color;
+      border-color: $_color;
+      color: color-invert($_color);
+
+      &:hover,
+      &:focus {
+        background-color: color-hover($_color);
+        color: color-invert($_color);
+      }
+
+      &:active {
+        background-color: color-active($_color);
+        color: color-invert($_color);
+      }
+    }
+  }
+}
+
+.sub-nav a.primary { // scss-lint:disable MergeableSelector
+  margin-right: 0;
+
+  span {
     border-radius: 3px;
-    padding: 0 14px
+    display: inline-block;
+    line-height: $line-height-base;
+    padding: 0 14px;
+  }
 }
 
-.chrome-android .sub-nav a.primary span {
-    white-space: nowrap
+.chrome-android .sub-nav a.primary span { // scss-lint:disable SelectorDepth
+  white-space: nowrap;
 }
 
-.show-time .sub-nav a.primary span {
-    -webkit-transition: border-color 150ms ease-in-out, background-color 150ms ease-in-out, color 150ms ease-in-out;
-    transition: border-color 150ms ease-in-out, background-color 150ms ease-in-out, color 150ms ease-in-out
+.show-time .sub-nav a.primary span { // scss-lint:disable SelectorDepth
+  transition: border-color 150ms ease-in-out, background-color 150ms ease-in-out, color 150ms ease-in-out;
 }
 
-.no-touch .sub-nav a.primary span {
-    border: 1px solid #e0e0e0
+.no-touch .sub-nav a.primary span { // scss-lint:disable SelectorDepth
+  border: 1px solid $color-border;
 }
 
-.touch .sub-nav a.primary span,
-.no-touch.sub-nav-fixed-top .sub-nav a.primary span {
-    color: #fff;
-    background-color: #2996cc;
-    border-color: #2996cc
+.touch .sub-nav a.primary span, // scss-lint:disable SelectorDepth
+.no-touch.sub-nav-fixed-top .sub-nav a.primary span {  // scss-lint:disable SelectorDepth
+  background-color: $color-link;
+  border-color: $color-link;
+  color: color-invert($color-link);
 }
 
 .touch .sub-nav a.primary span:hover,
 .touch .sub-nav a.primary span:focus,
 .no-touch.sub-nav-fixed-top .sub-nav a.primary span:hover,
 .no-touch.sub-nav-fixed-top .sub-nav a.primary span:focus {
-    color: #fff;
-    background-color: #2586b7
+  background-color: color-hover($color-link);
+  color: color-invert($color-link);
 }
 
 .touch .sub-nav a.primary span:active,
 .no-touch.sub-nav-fixed-top .sub-nav a.primary span:active {
-    color: #fff;
-    background-color: #2077a2
+  background-color: color-active($color-link);
+  color: color-invert($color-link);
 }
 
-.sub-nav a.secondary {
-    display: none
+.sub-nav a.secondary { // scss-lint:disable MergeableSelector
+  display: none;
 }
 
-@media (min-width: 718px) {
-    .sub-nav a.secondary {
-        display: inline-block
-    }
+@media (min-width: $width-desktop) {
+  .sub-nav a.secondary {
+    display: inline-block;
+  }
+
+  .sub-nav a.prompt-link {
+    display: none;
+  }
 }
 
-@media (min-width: 718px) {
-    .sub-nav a.prompt-link {
-        display: none
-    }
+.sub-nav .actions { // scss-lint:disable MergeableSelector
+  float: right;
+  position: relative;
+  z-index: 2;
+
+  a {
+    line-height: $space-medium;
+  }
 }
 
-.sub-nav .actions {
-    float: right;
-    position: relative;
-    z-index: 2
-}
-
-.sub-nav .actions a {
-    line-height: 60px
-}
-
-.sub-nav .destinations {
-    padding: 0 0 10px;
-    position: absolute;
-    left: 0;
-    bottom: 61px;
-    border-top: 1px solid #e0e0e0;
-    width: 100%;
-    background-color: #fff;
-    visibility: hidden;
-    opacity: 0;
-    -webkit-transform: translate3d(0, 10px, 0);
-    transform: translate3d(0, 10px, 0)
+.sub-nav .destinations { // scss-lint:disable MergeableSelector, PropertyCount
+  background-color: $color-white;
+  border-top: 1px solid $color-border;
+  bottom: $space-medium + 1;
+  left: 0;
+  opacity: 0;
+  padding: 0 0 $space-base;
+  position: absolute;
+  transform: translate3d(0, $space-base, 0);
+  visibility: hidden;
+  width: 100%;
 }
 
 .no-touch .sub-nav .destinations {
-    top: 61px;
-    bottom: auto;
-    border-top: none;
-    border-bottom: 1px solid #e0e0e0
+  bottom: auto;
+  border-top: none;
+  border-bottom: 1px solid $color-border;
+  top: $space-medium + 1;
 }
 
 .show-time .sub-nav .destinations {
-    -webkit-transition: visibility 0s 300ms, opacity 150ms ease-in-out, -webkit-transform 150ms ease-in-out;
-    transition: visibility 0s 300ms, opacity 150ms ease-in-out, -webkit-transform 150ms ease-in-out;
-    transition: visibility 0s 300ms, opacity 150ms ease-in-out, transform 150ms ease-in-out;
-    transition: visibility 0s 300ms, opacity 150ms ease-in-out, transform 150ms ease-in-out, -webkit-transform 150ms ease-in-out
+  transition: visibility 0s 300ms, opacity 150ms ease-in-out, transform 150ms ease-in-out;
 }
 
 .sub-nav-menu-active .sub-nav .destinations {
-    visibility: visible;
-    opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-    -webkit-transition: visibility 0s 0s, opacity 150ms ease-in-out, -webkit-transform 150ms ease-in-out;
-    transition: visibility 0s 0s, opacity 150ms ease-in-out, -webkit-transform 150ms ease-in-out;
-    transition: visibility 0s 0s, opacity 150ms ease-in-out, transform 150ms ease-in-out;
-    transition: visibility 0s 0s, opacity 150ms ease-in-out, transform 150ms ease-in-out, -webkit-transform 150ms ease-in-out
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  transition: visibility 0s 0s, opacity 150ms ease-in-out, transform 150ms ease-in-out;
+  visibility: visible;
 }
 
-@media (min-width: 718px) {
-    .sub-nav .destinations {
-        border: none;
-        padding: 0;
-        -webkit-transition: none;
-        transition: none;
-        visibility: visible;
-        opacity: 1;
-        -webkit-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0);
-        position: relative;
-        background-color: transparent;
-        bottom: 0
-    }
-    .no-touch .sub-nav .destinations {
-        top: 0;
-        bottom: auto;
-        border: none
-    }
+@media (min-width: $width-desktop) {
+  .sub-nav .destinations {
+    background-color: transparent;
+    border: none;
+    bottom: 0;
+    opacity: 1;
+    padding: 0;
+    position: relative;
+    transform: translate3d(0, 0, 0);
+    transition: none;
+    visibility: visible;
+  }
+
+  .no-touch .sub-nav .destinations {
+    top: 0;
+    bottom: auto;
+    border: none;
+  }
 }
 
 .sub-nav .destinations a {
-    display: block;
-    width: 100%;
-    margin-top: 10px;
-    line-height: 30px
+  display: block;
+  line-height: $space-small;
+  margin-top: $space-base;
+  width: 100%;
 }
 
-@media (min-width: 718px) {
-    .sub-nav .destinations a {
-        margin-top: 0;
-        display: inline-block;
-        line-height: 60px;
-        width: auto
-    }
+@media (min-width: $width-desktop) {
+  .sub-nav .destinations a {
+    display: inline-block;
+    line-height: $space-medium;
+    margin-top: 0;
+    width: auto;
+  }
 }
 
 .sub-nav.sub-nav-fixed {
-    top: 0;
-    display: none
+  display: none;
+  top: 0;
 }
 
 .sub-nav-fixed-top .sub-nav.sub-nav-fixed {
-    display: block
+  display: block;
 }
 
 .sub-nav:not(.sub-nav-fixed) {
-    bottom: 0
+  bottom: 0;
 }
 
 .no-touch .sub-nav:not(.sub-nav-fixed) {
-    position: relative;
-    bottom: auto
+  bottom: auto;
+  position: relative;
 }
 
 .sub-nav-fixed-top .sub-nav:not(.sub-nav-fixed) .destinations {
-    display: none
+  display: none;
 }
