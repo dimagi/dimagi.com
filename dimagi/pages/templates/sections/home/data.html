@@ -3,26 +3,18 @@
 
 <section class="data"
          id="data">
-  <div class="content pad-vert-medium border-top">
+  <div class="content border-top pad-vert-medium">
 
     <div class="intro gap-bottom-small">
-      <h4>
+      <h2 class="normalcase">
         {% blocktrans %}
-          Make data-driven decisions.
+          Make Data-Driven Decisions
         {% endblocktrans %}
-      </h4>
-      <p class="gap-bottom-base content-width-extra-small">
+      </h2>
+      <p class="content-width-extra-small">
         {% blocktrans %}
           Collect clean, quality data you can trust to make informed decisions that maximize your impact.
         {% endblocktrans %}
-      </p>
-      <p>
-        <a class="arrow"
-           href="{% url 'products_commcare' %}#data">
-          {% blocktrans %}
-            Learn more about Data in CommCare
-          {% endblocktrans %}
-        </a>
       </p>
     </div>{# .intro #}
 
@@ -34,6 +26,15 @@
         </div>{# .screen #}
       </div>{# .device-container #}
     </div>{# .content-width-large #}
+
+    <p class="pad-top-small align-center">
+      <a class="arrow"
+         href="{% url 'products_commcare' %}#data">
+        {% blocktrans %}
+          Learn about CommCare’s reporting tools
+        {% endblocktrans %}
+      </a>
+    </p>
 
   </div>{# .content #}
 </section>

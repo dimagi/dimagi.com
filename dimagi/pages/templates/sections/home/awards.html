@@ -3,25 +3,22 @@
 <section class="awards border-top blue-theme" id="awards">
   <div class="content pad-top-medium">
 
-    <div class="intro">
-      <h3>
-        {% blocktrans %}
-          How CommCare Stacks Up
-        {% endblocktrans %}
-      </h3>
-    </div>{# .intro #}
-
     <div class="grid-2-at-medium grid-reverse">
 
       <div class="copy">
         <div class="grid-1 grid-row-space-small">
 
           <div class="column">
-            <h3>
+            <h2>
+              {% blocktrans %}
+                How CommCare Stacks Up
+              {% endblocktrans %}
+            </h2>
+            <p>
               {% blocktrans %}
                 More than 500 projects across 60 countries use CommCare today.
               {% endblocktrans %}
-            </h3>
+            </p>
           </div>{# .column #}
 
           {% include 'sections/home/awards/kopernik.html' %}

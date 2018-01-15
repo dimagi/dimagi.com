@@ -1,53 +1,37 @@
 {% load dimagidotcom %}
 {% load i18n %}
 
-<section class="workforce border-top blue-theme"
+<section class="workforce"
          id="workforce">
-  <div class="content pad-vert-medium">
+  <div class="content border-top pad-vert-medium">
 
-    <div class="intro">
-      <h3>
+    <div class="intro gap-bottom-small">
+      <h2 class="normalcase">
         {% blocktrans %}
           Empower Your Workforce
         {% endblocktrans %}
-      </h3>
-      <p class="content-width-extra-small gap-bottom-base">
+      </h2>
+      <p class="content-width-extra-small">
         {% blocktrans %}
           Give your workforce a tool that will guide them to do
           their best work and maximize their impact.
         {% endblocktrans %}
       </p>
-      <p>
-        <a class="arrow"
-           href="{% url 'products_commcare' %}#design">
-          {% blocktrans %}
-            Learn more about CommCare's Design Philosophy
-          {% endblocktrans %}
-        </a>
-      </p>
     </div>{# .intro #}
 
-    <div class="grid-testimonial">
+    <div class="grid-testimonial blue-theme">
       <div class="column">
         <div class="grid-2-at-medium">
 
           <div class="column">
             <div class="grid-1">
-
               <div class="column">
                 <div class="aspect-ratio-rect-at-medium theme-bg">
-                  <blockquote>
-                    <p>
-                      {% blocktrans %}
-                        Our philosophy, Design Under the Mango Tree, puts end users first.
-                      {% endblocktrans %}
-                    </p>
-                    <cite>
-                      {% blocktrans %}
-                        Jonathan Jackson, CEO of Dimagi
-                      {% endblocktrans %}
-                    </cite>
-                  </blockquote>
+                  <p class="h3 white pad-horz-small">
+                    {% blocktrans %}
+                      Our philosophy, Design Under the Mango Tree, puts end users first.
+                    {% endblocktrans %}
+                  </p>
                 </div>{# .aspect-ratio-rect-at-medium #}
               </div>{# .column #}
 
@@ -79,6 +63,15 @@
         </div>{# .grid-2-at-medium #}
       </div>{# .column #}
     </div>{# .grid-workforce #}
+
+    <p class="pad-top-small align-center">
+      <a class="arrow"
+         href="{% url 'products_commcare' %}#design">
+        {% blocktrans %}
+          Build an app your workforce will love
+        {% endblocktrans %}
+      </a>
+    </p>
 
   </div>{# .content #}
 </section>
