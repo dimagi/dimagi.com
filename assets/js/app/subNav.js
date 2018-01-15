@@ -99,7 +99,7 @@ define([
         self.enableMenu();
 
         if (Modernizr.touch) {
-          self.$html.addClass(this.CLASSES.FIXED_BOTTOM);
+          self.$html.addClass(self.CLASSES.FIXED_BOTTOM);
           self.fixedToBottom = true;
         } else {
           self.enableFixedNav();
