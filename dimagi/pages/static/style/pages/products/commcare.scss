@@ -14,6 +14,19 @@
   @include make-bg(hero, '../../../pages/products/commcare/hero', $_base-height, $_height-by-size);
 }
 
+.overview {
+  $_base-height: 175px;
+  $_height-by-size: (
+    extra-small: 205px,
+    small: 270px,
+    medium: 210px,
+    large: 265px,
+    extra-large: 320px,
+  );
+  @include make-bg(analyze-data-image, '../../../pages/products/commcare/analyze', $_base-height, $_height-by-size);
+  @include make-bg(collect-data-image, '../../../pages/products/commcare/collect', $_base-height, $_height-by-size);
+}
+
 .features {
   $_base-height: 400px;
   $_height-by-size: (
@@ -48,3 +61,5 @@
     max-width: 55%;
   }
 }
+
+
