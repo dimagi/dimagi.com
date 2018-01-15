@@ -1,10 +1,10 @@
 .inline-icon-link {
   align-items: center;
   display: flex;
-}
 
-.inline-icon-link svg {
-  flex-shrink: 0;
+  svg {
+    flex-shrink: 0;
+  }
 }
 
 .icon {
