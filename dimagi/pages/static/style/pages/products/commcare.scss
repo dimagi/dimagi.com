@@ -25,6 +25,11 @@
   );
   @include make-bg(analyze-data-image, '../../../pages/products/commcare/analyze', $_base-height, $_height-by-size);
   @include make-bg(collect-data-image, '../../../pages/products/commcare/collect', $_base-height, $_height-by-size);
+
+  .device-container,
+  .screen {
+    width: 100%;
+  }
 }
 
 .features {
