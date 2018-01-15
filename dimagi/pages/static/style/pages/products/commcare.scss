@@ -14,6 +14,33 @@
   @include make-bg(hero, '../../../pages/products/commcare/hero', $_base-height, $_height-by-size);
 }
 
+.features {
+  $_base-height: 400px;
+  $_height-by-size: (
+    small: 440px,
+    medium: 720px,
+    large: 660px,
+    extra-large: 625px,
+  );
+  @include make-bg(image, '../../../pages/products/commcare/features', $_base-height, $_height-by-size);
+
+  @media (min-width: $width-desktop) {
+    .off-grid {
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      right: auto;
+      width: 100%;
+      z-index: 1;
+    }
+
+    .content {
+      position: relative;
+      z-index: 2;
+    }
+  }
+}
+
 @media (min-width: $width-desktop) {
   .products-commcare-page .hero h1 {
     margin-left: 0;
