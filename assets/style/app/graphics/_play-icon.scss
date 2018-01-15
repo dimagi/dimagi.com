@@ -31,7 +31,7 @@
   }
 
   &.alt:before {
-    background-color: transparent !important; // scss-lint:disable ImportantRule;
+    background-color: transparent !important; // scss-lint:disable ImportantRule
     border: 2px solid $color-white;
   }
 }
@@ -104,6 +104,6 @@ $_sqrts-by-type: (
 
   .cta .play-icon-#{$_type}:before,
   .cta .play-icon-#{$_type}:after {
-    left: $_space;
+    left: $_space / 2;
   }
 }
