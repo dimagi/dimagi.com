@@ -13,5 +13,5 @@
              fullscreenButton=false
              controlsVisibleOnLoad=false
              popoverContent=link">
-  <a class="border-rounded-large image play-icon-small alt"></a>
+  <a class="{% if show_image %}border-rounded-large image {% endif %}{% if show_play %}play-icon-small alt{% endif %}">{{ text }}</a>
 </span>

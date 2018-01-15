@@ -5,13 +5,10 @@
          id="sub-nav">
   <div class="content">
     <div class="actions">
-      <a href="#todo">
-        {% blocktrans %}
-          Watch Demo
-        {% endblocktrans %}
-      </a>
+      {% trans "Watch Demo" as demo_text %}
+      {% include "partials/wistia_popover.html" with wistia_id='9uvnpbecdy' text=demo_text %}
       <a class="primary"
-         href="#todo">
+         href="{{ URL_TRIAL }}">
         <span>
           {% blocktrans %}
             Start Trial

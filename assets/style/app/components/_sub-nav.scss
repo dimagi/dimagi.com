@@ -16,6 +16,10 @@
   width: 100%;
   z-index: 2;
 
+  .wistia_click_to_play {
+    display: inline;
+  }
+
   a {
     color: $color-body-text;
     display: block;

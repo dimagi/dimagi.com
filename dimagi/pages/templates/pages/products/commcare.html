@@ -23,18 +23,14 @@
         {% endblocktrans %}
       </h1>
       <a class="button alt inverted"
-         href="#todo">
+         href="{{ URL_TRIAL }}">
         {% blocktrans %}
           Start Free Trial
         {% endblocktrans %}
       </a>
       <p class="cta">
-        <a class="play-icon-small alt"
-           href="#todo">
-          {% blocktrans %}
-            Watch the video
-          {% endblocktrans %}
-        </a>
+        {% trans 'Watch the video' as video_text %}
+        {% include "partials/wistia_popover.html" with wistia_id='9uvnpbecdy' show_play=True text=video_text %}
       </p>
     </div> {# .content #}
   </section>
