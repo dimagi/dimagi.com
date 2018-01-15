@@ -67,4 +67,16 @@
   }
 }
 
+.testimonials {
+  $_sizes: (
+    extra-small: (w: 276px, h: 135px),
+    small: (w: 424px, h: 158px),
+    medium: (w: 680px, h: 277px),
+    large: (w: 868px, h: 333px),
+    extra-large: (w: 1016px, h: 408px),
+  );
+
+  @include make-carousel-slide(image-agimpact, $_sizes, '../../../pages/products/commcare/testimonial1.jpg');
+}
+
 

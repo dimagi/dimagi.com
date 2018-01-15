@@ -1,9 +1,13 @@
 <div class="carousel-slide">
   <div class="{% block class_image %}image{% endblock %}"></div>
-  <blockquote class="pad-top-base">
-    {% block quote %}{% endblock %}
-  </blockquote>
-  <cite>
-    {% block cite %}{% endblock %}
-  </cite>
+  <div class="desc">
+    <blockquote class="gap-top-small">
+      <p>
+        {% block quote %}{% endblock %}
+      </p>
+      <cite>
+        {% block cite %}{% endblock %}
+      </cite>
+    </blockquote>
+  </div>
 </div>{# .carousel-slide #}

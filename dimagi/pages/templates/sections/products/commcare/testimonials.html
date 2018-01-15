@@ -3,17 +3,45 @@
 
 <section class="testimonials border-top blue-theme"
          id="testimonials">
-  <div class="content pad-vert-medium">
+  <div class="content pad-top-medium pad-bottom-small">
     <div class="intro">
       <h2>
         {% blocktrans %}
           Testimonials
         {% endblocktrans %}
-      </h2
+      </h2>
+      <p>
+        {% blocktrans %}
+          Customer love for CommCare.
+        {% endblocktrans %}
+      </p>
     </div>{# .intro #}
   </div>{# .content #}
 
-  <div class="carousel pad-bottom-small">
+  <div class="content pad-bottom-small align-center">
+    <div class="grid-6-at-medium grid-4 grid-align-center grid-flex-at-medium">
+      <div class="column">
+        {% include "svg/home/partner/gates.html" %}
+      </div>{# .column #}
+      <div class="column">
+        {% include "svg/home/partner/usaid.html" %}
+      </div>{# .column #}
+      <div class="column">
+        {% include "svg/home/partner/agimpact.html" %}
+      </div>{# .column #}
+      <div class="column">
+        {% include "svg/home/partner/tdh.html" %}
+      </div>{# .column #}
+      <div class="column hide-until-medium">
+        {% include "svg/home/partner/usaid.html" %}
+      </div>{# .column #}
+      <div class="column hide-until-medium">
+        {% include "svg/home/partner/gates.html" %}
+      </div>{# .column #}
+    </div>{# .grid-4 #}
+  </div>{# .content #}
+
+  <div class="carousel carousel-fade-inactive pad-bottom-large">
     <div class="carousel-container">
       <div class="spinner spinner-large"></div>
       <div class="carousel-slider">

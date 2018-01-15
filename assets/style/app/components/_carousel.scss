@@ -43,7 +43,7 @@ html.show-time .carousel-slider[data-animating="true"] {
   margin-right: $space-base;
   max-width: $content-width-base;
   position: relative;
-  transition: opacity 225ms cubic-bezier(0, 0, .2, 1) 195ms;
+  transition: opacity 225ms ease-in-out 195ms;
   vertical-align: top;
   white-space: normal;
 }
@@ -58,6 +58,19 @@ html.show-time .carousel-slider[data-animating="true"] {
 
 .carousel[data-loading="true"] .carousel-slide {
   opacity: 0;
+}
+
+.carousel-fade-inactive {
+
+  .carousel-slide[data-active="true"] {
+    opacity: 1;
+  }
+
+  .carousel-slide:not([data-active="true"]) {
+    cursor: pointer;
+    opacity: .5;
+  }
+
 }
 
 .carousel-slide:not([data-active="true"]) {

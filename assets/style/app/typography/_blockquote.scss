@@ -43,11 +43,17 @@ blockquote cite {
   text-transform: uppercase;
 }
 
-.blockquote-small {
+.carousel blockquote {
   font-size: $font-size-medium;
   line-height: $space-line;
 
   p {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  cite {
+    font-size: $font-size-small;
+    padding-left: 10px;
   }
 }

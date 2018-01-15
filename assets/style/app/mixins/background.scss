@@ -25,3 +25,32 @@
     }
   };
 };
+
+
+@mixin make-carousel-slide($_class-name, $_sizes, $_url) {
+  .carousel .carousel-slide .#{$_class-name} {
+    $_base: map-get($_sizes, extra-small);
+    $_w: map-get($_base, w);
+    $_h: map-get($_base, h);
+
+    background-color: $color-border;
+    background-image: url(quote($_url));
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: $_h;
+    width: $_w;
+  }
+
+  @each $_size, $_screen-width in $widths-by-size {
+    @media (min-width: $_screen-width) {
+      .carousel .carousel-slide .#{$_class-name} {
+        $_dimensions: map-get($_sizes, $_size);
+        $_w: map-get($_dimensions, w);
+        $_h: map-get($_dimensions, h);
+
+        height: $_h;
+        width: $_w;
+      }
+    }
+  }
+}
