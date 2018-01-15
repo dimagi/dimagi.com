@@ -1,13 +1,25 @@
 {% load i18n %}
 {% load dimagidotcom %}
 
-<section class="overview align-center blue-theme" id="brief-overview">
-  <div class="content pad-top-medium">
-    <div class="grid-2-at-small grid-4-at-large grid-row-space-small">
-      {% include "sections/products/commcare/overview/data_over_time.html" %}
-      {% include "sections/products/commcare/overview/work_offline.html" %}
-      {% include "sections/products/commcare/overview/empower_users.html" %}
-      {% include "sections/products/commcare/overview/scale.html" %}
-    </div>{# .grid-2-at-small #}
-  </div>{# .content #}
+<section class="overview border-top"
+         id="overview">
+  <div class="content pad-vert-medium ">
+    <div class="intro content-width-small">
+      <h2 class="blue">
+        {% blocktrans %}
+          How CommCare Works
+        {% endblocktrans %}
+      </h2>
+      <p>
+        {% blocktrans %}
+          Let's add some more descriptive text here to give just a brief
+          overview of what we'll discuss in the bullet point sections below.
+        {% endblocktrans %}
+      </p>
+    </div>{# .intro #}
+    {% include "sections/products/commcare/overview/app_builder.html" %}
+    {% include "sections/products/commcare/overview/collect_data.html" %}
+    {% include "sections/products/commcare/overview/analyze_data.html" %}
+  </div> {# .content #}
+{#  <div class="image off-grid"></div>#}
 </section>
