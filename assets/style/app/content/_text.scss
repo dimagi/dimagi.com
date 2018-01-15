@@ -1,64 +1,67 @@
+@import 'app/variables/sizes';
+@import 'app/variables/type';
+
 .fine-print {
-    font-size: 11px;
-    line-height: 20px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: 600
+  font-size: $font-size-small;
+  font-weight: $font-weight-medium;
+  letter-spacing: 1px;
+  line-height: $space-line;
+  text-transform: uppercase;
 }
 
 .legal-text {
-    font-size: 11px;
-    line-height: 20px
+  font-size: $font-size-small;
+  line-height: $space-line;
 }
 
 .upperspaced {
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: 600
+  font-weight: $font-weight-medium;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 .text-truncate {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .no-wrap {
-    white-space: nowrap
+  white-space: nowrap;
 }
 
 .font-weight-thin {
-    font-weight: 100 !important
+  font-weight: $font-weight-thin !important; //scss-lint:disable ImportantRule
 }
 
 .font-weight-light {
-    font-weight: 300 !important
+  font-weight: $font-weight-light !important; //scss-lint:disable ImportantRule
 }
 
 .font-weight-regular {
-    font-weight: 400 !important
+  font-weight: $font-weight-regular !important; //scss-lint:disable ImportantRule
 }
 
 .font-weight-medium {
-    font-weight: 600 !important
+  font-weight: $font-weight-medium !important; //scss-lint:disable ImportantRule
 }
 
 .font-weight-bold {
-    font-weight: 700 !important
+  font-weight: $font-weight-bold !important; //scss-lint:disable ImportantRule
 }
 
 .uppercase {
-    text-transform: uppercase !important
+  text-transform: uppercase !important; //scss-lint:disable ImportantRule
 }
 
 .capitalize {
-    text-transform: capitalize !important
+  text-transform: capitalize !important; //scss-lint:disable ImportantRule
 }
 
 .lowercase {
-    text-transform: lowercase !important
+  text-transform: lowercase !important; //scss-lint:disable ImportantRule
 }
 
 .normalcase {
-    text-transform: none !important
+  text-transform: none !important; //scss-lint:disable ImportantRule
 }

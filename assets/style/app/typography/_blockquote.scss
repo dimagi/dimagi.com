@@ -6,7 +6,7 @@ $_min-width-lg: map-get($widths-by-size, large);
 blockquote,
 .callout {
   font-size: $font-size-blockquote;
-  font-weight: $font-weight-normal;
+  font-weight: $font-weight-text;
   line-height: $line-height-header;
   margin-bottom: $space-line;
 }
@@ -36,16 +36,16 @@ blockquote p::after {
 
 blockquote cite {
   display: block;
-  font-size: $font-size-standard;
-  font-weight: $font-weight-bold;
+  font-size: $font-size-small;
+  font-weight: $font-weight-medium;
   letter-spacing: 1px;
-  line-height: $line-height-base;
+  line-height: $space-line;
   text-transform: uppercase;
 }
 
 .blockquote-small {
-  font-size: $font-size-base;
-  line-height: $line-height-base;
+  font-size: $font-size-medium;
+  line-height: $space-line;
 
   p {
     margin-bottom: 5px;

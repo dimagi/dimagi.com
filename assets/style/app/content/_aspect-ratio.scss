@@ -1,0 +1,34 @@
+@import 'app/variables/sizes';
+
+@mixin _make-aspect-ratio-at($_size: null) {
+  $_suffix: if($_size != null, -at-#{$_size}, null);
+
+  .aspect-ratio-square#{$_suffix} {
+    padding-top: 100%;
+  }
+
+  .aspect-ratio-rect#{$_suffix} {
+    padding-top: calc(50% - 10px);
+  }
+
+  .aspect-ratio-square#{$_suffix},
+  .aspect-ratio-rect#{$_suffix} {
+    height: 0;
+    position: relative;
+  }
+
+  .aspect-ratio-square#{$_suffix} > *,
+  .aspect-ratio-rect#{$_suffix} > * {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+  }
+}
+
+@include _make-aspect-ratio-at();
+
+@each $_size, $_width in $widths-by-size {
+  @include _make-aspect-ratio-at($_size);
+}

@@ -1,125 +1,103 @@
+@import 'app/variables/sizes';
+
 .arrow,
 .arrow-right,
 .arrow-left,
 .arrow-down,
 .arrow-up {
-    position: relative
-}
+  position: relative;
 
-.arrow:before,
-.arrow:after,
-.arrow-right:before,
-.arrow-right:after,
-.arrow-left:before,
-.arrow-left:after,
-.arrow-down:before,
-.arrow-down:after,
-.arrow-up:before,
-.arrow-up:after {
-    pointer-events: none;
-    display: inline-block;
-    width: 6px;
-    height: 6px;
-    border-top-width: 1px;
-    border-top-style: solid;
+  &:before,
+  &:after {
+    border-right-style: solid;
     border-right-width: 1px;
-    border-right-style: solid
+    border-top-style: solid;
+    border-top-width: 1px;
+    display: inline-block;
+    height: 6px;
+    pointer-events: none;
+    width: 6px;
+  }
 }
 
-.arrow:after,
-.arrow:before,
-.arrow-right:after,
-.arrow-right:before,
-.arrow-left:after,
-.arrow-left:before {
+.arrow,
+.arrow-right,
+.arrow-left {
+  &:before,
+  &:after {
     position: relative;
-    vertical-align: middle
+    vertical-align: middle;
+  }
 }
 
 .arrow:after,
 .arrow-right:after {
-    content: " ";
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-    margin-left: .3em
+  content: ' ';
+  margin-left: .3em;
+  transform: rotate(45deg);
 }
 
 .arrow-left:before {
-    content: " ";
-    -webkit-transform: rotate(-135deg);
-    -ms-transform: rotate(-135deg);
-    transform: rotate(-135deg);
-    margin-right: .3em
+  content: ' ';
+  margin-right: .3em;
+  transform: rotate(-135deg);
 }
 
 .arrow-up,
 .arrow-down {
-    position: relative
+  position: relative;
 }
 
 .arrow-up {
-    padding-top: 10px
-}
+  padding-top: $space-base;
 
-.arrow-up:before {
-    content: " ";
+  &:before {
+    content: ' ';
     display: block;
-    position: absolute;
     left: 50%;
+    position: absolute;
     top: 0;
-    -webkit-transform: translate(-50%, 50%) rotate(-45deg);
-    -ms-transform: translate(-50%, 50%) rotate(-45deg);
-    transform: translate(-50%, 50%) rotate(-45deg)
+    transform: translate(-50%, 50%) rotate(-45deg);
+  }
 }
 
 .arrow-down {
-    padding-bottom: 10px
-}
+  padding-bottom: $space-base;
 
-.arrow-down:after {
-    content: " ";
-    display: block;
-    position: absolute;
-    left: 50%;
+  :after {
     bottom: 0;
-    -webkit-transform: translate(-50%, -50%) rotate(135deg);
-    -ms-transform: translate(-50%, -50%) rotate(135deg);
-    transform: translate(-50%, -50%) rotate(135deg)
+    content: ' ';
+    display: block;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%) rotate(135deg);
+  }
 }
 
 .arrow[data-transition-target],
 [data-transition-target] .arrow {
-    padding-right: 1.3em
-}
+  padding-right: 1.3em;
 
-.arrow[data-transition-target]:after,
-[data-transition-target] .arrow:after {
-    width: 1ex;
+  &:after {
     height: 1ex;
     position: absolute;
+    right: 0;
     top: 0;
-    right: 0
+    width: 1ex;
+  }
 }
 
 .show-time .arrow[data-transition-target]:after,
 .show-time [data-transition-target] .arrow:after {
-    -webkit-transition: border-color 150ms, -webkit-transform 150ms;
-    transition: border-color 150ms, -webkit-transform 150ms;
-    transition: border-color 150ms, transform 150ms;
-    transition: border-color 150ms, transform 150ms, -webkit-transform 150ms
+  transition: border-color 150ms, transform 150ms;
 }
 
 .arrow[data-transition-target][data-transition-state="off"]:after,
 [data-transition-target][data-transition-state="off"] .arrow:after {
-    -webkit-transform: translate(-50%, 115%) rotate(-45deg);
-    -ms-transform: translate(-50%, 115%) rotate(-45deg);
-    transform: translate(-50%, 115%) rotate(-45deg)
+  transform: translate(-50%, 115%) rotate(-45deg);
 }
 
 .arrow[data-transition-target][data-transition-state="on"]:after,
 [data-transition-target][data-transition-state="on"] .arrow:after {
-    -webkit-transform: translate(-50%, 65%) rotate(135deg);
-    -ms-transform: translate(-50%, 65%) rotate(135deg);
-    transform: translate(-50%, 65%) rotate(135deg)
+  transform: translate(-50%, 65%) rotate(135deg);
 }

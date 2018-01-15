@@ -1,13 +1,11 @@
 picture.apropos {
-    overflow: hidden
-}
+  overflow: hidden;
 
-picture.apropos img {
-    max-width: none;
-    -webkit-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    transform: translateX(-50%);
+  img {
     left: 50%;
+    max-width: none;
     position: relative;
-    z-index: -1
+    transform: translateX(-50%);
+    z-index: -1;
+  }
 }

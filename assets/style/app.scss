@@ -14,15 +14,17 @@
 @import 'app/typography/paragraphs';
 
 @import 'app/content/content';
+@import 'app/content/animation';
 @import 'app/content/amount';
+@import 'app/content/border';
 @import 'app/content/display';
 @import 'app/content/float';
 @import 'app/content/parts';
 @import 'app/content/position';
 @import 'app/content/spacing';
 @import 'app/content/text';
+@import 'app/content/aspect-ratio';
 
-@import 'app/components/accessibility';
 @import 'app/components/arrow';
 @import 'app/components/badge';
 @import 'app/components/banner';
@@ -47,14 +49,10 @@
 @import 'app/components/table';
 @import 'app/components/tile';
 
-@import 'app/graphics/animation';
-@import 'app/graphics/aspect-ratio';
-@import 'app/graphics/border';
 @import 'app/graphics/data-coming-soon';
 @import 'app/graphics/device-container';
 @import 'app/graphics/frame';
 @import 'app/graphics/graphical';
-@import 'app/graphics/hero-inline-img';
 @import 'app/graphics/icon';
 @import 'app/graphics/picture';
 @import 'app/graphics/play-icon';

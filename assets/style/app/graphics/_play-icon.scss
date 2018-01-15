@@ -1,187 +1,109 @@
-[class*="play-icon-"] {
-    display: block;
-    position: relative
-}
+@import 'app/variables/colors';
+@import 'app/variables/sizes';
 
-[class*="play-icon-"]:before,
-[class*="play-icon-"]:after {
-    content: " ";
+[class*="play-icon-"] {
+  display: block;
+  position: relative;
+
+  &:before,
+  &:after {
+    content: ' ';
     display: block;
+    left: 50%;
     position: absolute;
     top: 50%;
-    left: 50%
-}
+  }
 
-[class*="play-icon-"]:before {
-    z-index: 2;
+  &:before {
+    background-color: $color-link;
     border-radius: 100%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    background-color: #2996cc
+    z-index: 2;
+  }
+
+  &:after {
+    border-color: transparent;
+    border-left-color: $color-white;
+    border-right-width: 0;
+    border-style: solid;
+    transform: translate(-28%, -50%) rotate(360deg);
+    z-index: 3;
+  }
+
+  &.alt:before {
+    background-color: transparent !important; // scss-lint:disable ImportantRule;
+    border: 2px solid $color-white;
+  }
 }
 
 .show-time [class*="play-icon-"]:before {
-    -webkit-transition: background-color 300ms;
-    transition: background-color 300ms
-}
-
-[class*="play-icon-"]:after {
-    z-index: 3;
-    border-style: solid;
-    border-color: transparent;
-    border-left-color: #fff;
-    border-right-width: 0;
-    -webkit-transform: translate(-28%, -50%) rotate(360deg);
-    -ms-transform: translate(-28%, -50%) rotate(360deg);
-    transform: translate(-28%, -50%) rotate(360deg)
-}
-
-[class*="play-icon-"].alt:before {
-    border: 2px solid #fff;
-    background-color: transparent !important
+  transition: background-color 300ms;
 }
 
 a:hover[class*="play-icon-"]:before,
 a:hover [class*="play-icon-"]:before,
 a:focus[class*="play-icon-"]:before,
 a:focus [class*="play-icon-"]:before {
-    background-color: #2586b7
+  background-color: color-hover($color-link);
 }
 
 a:active[class*="play-icon-"]:before,
 a:active [class*="play-icon-"]:before {
-    background-color: #2077a2
+  background-color: color-active($color-link);
 }
 
-.purple-theme [class*="play-icon-"]:before {
-    background-color: #8033cc
+@each $_theme, $_color in $colors-by-theme {
+  .#{$_theme}-theme {
+    [class*="play-icon-"]:before {
+      background-color: $_color;
+    }
+
+    a:hover[class*="play-icon-"]:before,
+    a:hover [class*="play-icon-"]:before,
+    a:focus[class*="play-icon-"]:before,
+    a:focus [class*="play-icon-"]:before {
+      background-color: color-hover($_color);
+    }
+
+
+    a:active[class*="play-icon-"]:before,
+    a:active [class*="play-icon-"]:before {
+      background-color: color-active($_color);
+    }
+  }
 }
 
-.purple-theme a:hover[class*="play-icon-"]:before,
-.purple-theme a:hover [class*="play-icon-"]:before,
-.purple-theme a:focus[class*="play-icon-"]:before,
-.purple-theme a:focus [class*="play-icon-"]:before {
-    background-color: #732eb8
-}
 
-.purple-theme a:active[class*="play-icon-"]:before,
-.purple-theme a:active [class*="play-icon-"]:before {
-    background-color: #6629a3
-}
+$_sqrts-by-type: (
+  line: 5.65685px,
+  small: 8.48528px,
+  medium: 16.97056px,
+  large: 22.62742px,
+);
 
-.play-icon-line:before {
-    width: 20px;
-    height: 20px
-}
+@each $_type, $_sqrt in $_sqrts-by-type {
+  $_space: map-get($space-by-type, $_type);
 
-.play-icon-line:after {
-    border-top-width: 4px;
-    border-bottom-width: 4px;
-    border-left-width: 5.65685px
-}
+  .play-icon-#{$_type}:before {
+    height: $_space;
+    width: $_space;
+  }
 
-.cta .play-icon-line {
-    display: -webkit-inline-box;
-    display: -webkit-inline-flex;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
+  .play-icon-#{$_type}:after {
+    border-bottom-width: $_space / 5;
+    border-left-width: $_sqrt;
+    border-top-width: $_space / 5;
+  }
+
+  .cta .play-icon-#{$_type} {
     align-items: center;
-    min-height: 20px;
-    padding-left: 30px
-}
-
-.cta .play-icon-line:before,
-.cta .play-icon-line:after {
-    left: 10px
-}
-
-.play-icon-small:before {
-    width: 30px;
-    height: 30px
-}
-
-.play-icon-small:after {
-    border-top-width: 6px;
-    border-bottom-width: 6px;
-    border-left-width: 8.48528px
-}
-
-.cta .play-icon-small {
-    display: -webkit-inline-box;
-    display: -webkit-inline-flex;
-    display: -ms-inline-flexbox;
     display: inline-flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-    min-height: 30px;
-    padding-left: 40px
-}
+    min-height: $_space;
+    padding-left: $_space + 10px;
+  }
 
-.cta .play-icon-small:before,
-.cta .play-icon-small:after {
-    left: 15px
-}
-
-.play-icon-medium:before {
-    width: 60px;
-    height: 60px
-}
-
-.play-icon-medium:after {
-    border-top-width: 12px;
-    border-bottom-width: 12px;
-    border-left-width: 16.97056px
-}
-
-.cta .play-icon-medium {
-    display: -webkit-inline-box;
-    display: -webkit-inline-flex;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-    min-height: 60px;
-    padding-left: 70px
-}
-
-.cta .play-icon-medium:before,
-.cta .play-icon-medium:after {
-    left: 30px
-}
-
-.play-icon-large:before {
-    width: 80px;
-    height: 80px
-}
-
-.play-icon-large:after {
-    border-top-width: 16px;
-    border-bottom-width: 16px;
-    border-left-width: 22.62742px
-}
-
-.cta .play-icon-large {
-    display: -webkit-inline-box;
-    display: -webkit-inline-flex;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-    min-height: 80px;
-    padding-left: 90px
-}
-
-.cta .play-icon-large:before,
-.cta .play-icon-large:after {
-    left: 40px
+  .cta .play-icon-#{$_type}:before,
+  .cta .play-icon-#{$_type}:after {
+    left: $_space;
+  }
 }

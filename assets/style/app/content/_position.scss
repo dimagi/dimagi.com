@@ -1,459 +1,88 @@
-.position-fixed {
-    position: fixed !important
-}
+@import 'app/variables/sizes';
 
-.position-absolute {
-    position: absolute !important
-}
+@mixin _make-position-at($_size: null) {
+  $_suffix: if($_size != null, -at-#{$_size}, null);
 
-.position-relative {
-    position: relative !important
-}
+  .position-fixed#{$_suffix} {
+    position: fixed !important; //scss-lint:disable ImportantRule
+  }
 
-.position-static {
-    position: static !important
-}
+  .position-absolute#{$_suffix} {
+    position: absolute !important; //scss-lint:disable ImportantRule
+  }
 
-.pin-top-left {
-    position: absolute;
+  .position-relative#{$_suffix} {
+    position: relative !important; //scss-lint:disable ImportantRule
+  }
+
+  .position-static#{$_suffix} {
+    position: static !important; //scss-lint:disable ImportantRule
+  }
+
+  .pin-top-left#{$_suffix} {
     left: 0;
-    top: 0
-}
-
-.pin-top-center {
     position: absolute;
-    -webkit-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    transform: translateX(-50%);
-    left: 50%;
-    top: 0
-}
+    top: 0;
+  }
 
-.pin-top-right {
+  .pin-top-center#{$_suffix} {
+    left: 50%;
+    position: absolute;
+    top: 0;
+    transform: translateX(-50%);
+  }
+
+  .pin-top-right#{$_suffix} {
     position: absolute;
     right: 0;
     top: 0
-}
+  }
 
-.pin-middle-left {
-    position: absolute;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
+  .pin-middle-left#{$_suffix} {
     left: 0;
-    top: 50%
-}
-
-.pin-middle-center {
     position: absolute;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .pin-middle-center#{$_suffix} {
+    left: 50%;
+    position: absolute;
+    top: 50%;
     transform: translate(-50%, -50%);
-    left: 50%;
-    top: 50%
-}
+  }
 
-.pin-middle-right {
+  .pin-middle-right#{$_suffix} {
     position: absolute;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
+    right: 0;
+    top: 50%;
     transform: translateY(-50%);
-    right: 0;
-    top: 50%
-}
+  }
 
-.pin-bottom-left {
-    position: absolute;
+  .pin-bottom-left#{$_suffix} {
+    bottom: 0;
     left: 0;
-    bottom: 0
-}
-
-.pin-bottom-center {
     position: absolute;
-    -webkit-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    transform: translateX(-50%);
-    left: 50%;
-    bottom: 0
-}
+  }
 
-.pin-bottom-right {
+  .pin-bottom-center#{$_suffix} {
+    bottom: 0;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+  }
+
+  .pin-bottom-right#{$_suffix} {
+    bottom: 0;
     position: absolute;
     right: 0;
-    bottom: 0
+  }
 }
 
-@media (min-width: 374px) {
-    .position-fixed-at-extra-small {
-        position: fixed !important
-    }
-    .position-absolute-at-extra-small {
-        position: absolute !important
-    }
-    .position-relative-at-extra-small {
-        position: relative !important
-    }
-    .position-static-at-extra-small {
-        position: static !important
-    }
-    .pin-top-left-at-extra-small {
-        position: absolute;
-        left: 0;
-        top: 0
-    }
-    .pin-top-center-at-extra-small {
-        position: absolute;
-        -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-        transform: translateX(-50%);
-        left: 50%;
-        top: 0
-    }
-    .pin-top-right-at-extra-small {
-        position: absolute;
-        right: 0;
-        top: 0
-    }
-    .pin-middle-left-at-extra-small {
-        position: absolute;
-        -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-        transform: translateY(-50%);
-        left: 0;
-        top: 50%
-    }
-    .pin-middle-center-at-extra-small {
-        position: absolute;
-        -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-        left: 50%;
-        top: 50%
-    }
-    .pin-middle-right-at-extra-small {
-        position: absolute;
-        -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-        transform: translateY(-50%);
-        right: 0;
-        top: 50%
-    }
-    .pin-bottom-left-at-extra-small {
-        position: absolute;
-        left: 0;
-        bottom: 0
-    }
-    .pin-bottom-center-at-extra-small {
-        position: absolute;
-        -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-        transform: translateX(-50%);
-        left: 50%;
-        bottom: 0
-    }
-    .pin-bottom-right-at-extra-small {
-        position: absolute;
-        right: 0;
-        bottom: 0
-    }
-}
+@include _make-position-at();
 
-@media (min-width: 480px) {
-    .position-fixed-at-small {
-        position: fixed !important
-    }
-    .position-absolute-at-small {
-        position: absolute !important
-    }
-    .position-relative-at-small {
-        position: relative !important
-    }
-    .position-static-at-small {
-        position: static !important
-    }
-    .pin-top-left-at-small {
-        position: absolute;
-        left: 0;
-        top: 0
-    }
-    .pin-top-center-at-small {
-        position: absolute;
-        -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-        transform: translateX(-50%);
-        left: 50%;
-        top: 0
-    }
-    .pin-top-right-at-small {
-        position: absolute;
-        right: 0;
-        top: 0
-    }
-    .pin-middle-left-at-small {
-        position: absolute;
-        -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-        transform: translateY(-50%);
-        left: 0;
-        top: 50%
-    }
-    .pin-middle-center-at-small {
-        position: absolute;
-        -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-        left: 50%;
-        top: 50%
-    }
-    .pin-middle-right-at-small {
-        position: absolute;
-        -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-        transform: translateY(-50%);
-        right: 0;
-        top: 50%
-    }
-    .pin-bottom-left-at-small {
-        position: absolute;
-        left: 0;
-        bottom: 0
-    }
-    .pin-bottom-center-at-small {
-        position: absolute;
-        -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-        transform: translateX(-50%);
-        left: 50%;
-        bottom: 0
-    }
-    .pin-bottom-right-at-small {
-        position: absolute;
-        right: 0;
-        bottom: 0
-    }
-}
-
-@media (min-width: 718px) {
-    .position-fixed-at-medium {
-        position: fixed !important
-    }
-    .position-absolute-at-medium {
-        position: absolute !important
-    }
-    .position-relative-at-medium {
-        position: relative !important
-    }
-    .position-static-at-medium {
-        position: static !important
-    }
-    .pin-top-left-at-medium {
-        position: absolute;
-        left: 0;
-        top: 0
-    }
-    .pin-top-center-at-medium {
-        position: absolute;
-        -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-        transform: translateX(-50%);
-        left: 50%;
-        top: 0
-    }
-    .pin-top-right-at-medium {
-        position: absolute;
-        right: 0;
-        top: 0
-    }
-    .pin-middle-left-at-medium {
-        position: absolute;
-        -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-        transform: translateY(-50%);
-        left: 0;
-        top: 50%
-    }
-    .pin-middle-center-at-medium {
-        position: absolute;
-        -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-        left: 50%;
-        top: 50%
-    }
-    .pin-middle-right-at-medium {
-        position: absolute;
-        -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-        transform: translateY(-50%);
-        right: 0;
-        top: 50%
-    }
-    .pin-bottom-left-at-medium {
-        position: absolute;
-        left: 0;
-        bottom: 0
-    }
-    .pin-bottom-center-at-medium {
-        position: absolute;
-        -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-        transform: translateX(-50%);
-        left: 50%;
-        bottom: 0
-    }
-    .pin-bottom-right-at-medium {
-        position: absolute;
-        right: 0;
-        bottom: 0
-    }
-}
-
-@media (min-width: 1024px) {
-    .position-fixed-at-large {
-        position: fixed !important
-    }
-    .position-absolute-at-large {
-        position: absolute !important
-    }
-    .position-relative-at-large {
-        position: relative !important
-    }
-    .position-static-at-large {
-        position: static !important
-    }
-    .pin-top-left-at-large {
-        position: absolute;
-        left: 0;
-        top: 0
-    }
-    .pin-top-center-at-large {
-        position: absolute;
-        -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-        transform: translateX(-50%);
-        left: 50%;
-        top: 0
-    }
-    .pin-top-right-at-large {
-        position: absolute;
-        right: 0;
-        top: 0
-    }
-    .pin-middle-left-at-large {
-        position: absolute;
-        -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-        transform: translateY(-50%);
-        left: 0;
-        top: 50%
-    }
-    .pin-middle-center-at-large {
-        position: absolute;
-        -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-        left: 50%;
-        top: 50%
-    }
-    .pin-middle-right-at-large {
-        position: absolute;
-        -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-        transform: translateY(-50%);
-        right: 0;
-        top: 50%
-    }
-    .pin-bottom-left-at-large {
-        position: absolute;
-        left: 0;
-        bottom: 0
-    }
-    .pin-bottom-center-at-large {
-        position: absolute;
-        -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-        transform: translateX(-50%);
-        left: 50%;
-        bottom: 0
-    }
-    .pin-bottom-right-at-large {
-        position: absolute;
-        right: 0;
-        bottom: 0
-    }
-}
-
-@media (min-width: 1292px) {
-    .position-fixed-at-extra-large {
-        position: fixed !important
-    }
-    .position-absolute-at-extra-large {
-        position: absolute !important
-    }
-    .position-relative-at-extra-large {
-        position: relative !important
-    }
-    .position-static-at-extra-large {
-        position: static !important
-    }
-    .pin-top-left-at-extra-large {
-        position: absolute;
-        left: 0;
-        top: 0
-    }
-    .pin-top-center-at-extra-large {
-        position: absolute;
-        -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-        transform: translateX(-50%);
-        left: 50%;
-        top: 0
-    }
-    .pin-top-right-at-extra-large {
-        position: absolute;
-        right: 0;
-        top: 0
-    }
-    .pin-middle-left-at-extra-large {
-        position: absolute;
-        -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-        transform: translateY(-50%);
-        left: 0;
-        top: 50%
-    }
-    .pin-middle-center-at-extra-large {
-        position: absolute;
-        -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-        left: 50%;
-        top: 50%
-    }
-    .pin-middle-right-at-extra-large {
-        position: absolute;
-        -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-        transform: translateY(-50%);
-        right: 0;
-        top: 50%
-    }
-    .pin-bottom-left-at-extra-large {
-        position: absolute;
-        left: 0;
-        bottom: 0
-    }
-    .pin-bottom-center-at-extra-large {
-        position: absolute;
-        -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-        transform: translateX(-50%);
-        left: 50%;
-        bottom: 0
-    }
-    .pin-bottom-right-at-extra-large {
-        position: absolute;
-        right: 0;
-        bottom: 0
-    }
+@each $_size, $_width in $widths-by-size {
+  @media (min-width: $_width) {
+    @include _make-position-at($_size);
+  }
 }

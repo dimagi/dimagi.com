@@ -3,13 +3,13 @@
 
 .device-container {
   background-color: $color-white;
-  border: 2px solid $color-device-container-border;
+  border: 2px solid $color-border;
   border-radius: 5px 5px 0 0;
   overflow: hidden;
   position: relative;
 
   .screen {
-    border-top: 1px solid $color-device-container-border;
+    border-top: 1px solid $color-border;
     position: relative;
 
     > * {
@@ -20,9 +20,9 @@
 
   &.browser-ui {
     &::before {
-      background-color: $color-device-container-border;
+      background-color: $color-border;
       border-radius: 999em;
-      box-shadow: 9px 0 0 $color-device-container-border, 18px 0 0 $color-device-container-border;
+      box-shadow: 9px 0 0 $color-border, 18px 0 0 $color-border;
       content: ' ';
       display: block;
       height: 0;
@@ -36,7 +36,7 @@
     border-radius: 15px;
 
     .screen {
-      border: 1px solid $color-device-container-border;
+      border: 1px solid $color-border;
       margin-left: $space-base;
       margin-right: $space-base;
     }
@@ -49,7 +49,7 @@
     }
 
     &::after { // scss-lint:disable PropertyCount
-      border: 1px solid $color-device-container-border;
+      border: 1px solid $color-border;
       border-radius: 999em;
       content: ' ';
       display: block;
@@ -66,7 +66,7 @@
 
 @media (min-width: $width-mobile) {
   .device-container.browser-ui:before {
-    box-shadow: 12px 0 0 $color-device-container-border, 24px 0 0 $color-device-container-border;
+    box-shadow: 12px 0 0 $color-border, 24px 0 0 $color-border;
     margin: 8px;
     padding: 4px;
   }

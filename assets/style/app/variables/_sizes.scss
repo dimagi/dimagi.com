@@ -9,6 +9,10 @@ $widths-by-size: (
   extra-large: 1292px,
 );
 
+$width-mobile: map-get($widths-by-size, small);
+$width-desktop: map-get($widths-by-size, medium);
+$width-desktop-lg: map-get($widths-by-size, large);
+
 $content-widths-by-size: (
   base: 276px,
   extra-small: 324px,
@@ -40,12 +44,9 @@ $modal-content-widths-by-size: (
 
 $content-width-base: map-get($content-widths-by-size, base);
 
-$width-mobile: map-get($widths-by-size, small);
-$width-desktop: map-get($widths-by-size, medium);
-$width-desktop-lg: map-get($widths-by-size, large);
-
 $min-width-button: 200px;
-$border-radius-button: 3px;
+$border-radius: 3px;
+$border-radius-lg: 5px;
 
 $space-by-type: (
   base: 10px,

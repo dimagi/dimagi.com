@@ -1,0 +1,89 @@
+@import 'app/variables/colors';
+@import 'app/variables/sizes';
+
+@mixin _make-border-at($_size: null) {
+  $_suffix: if($_size != null, -at-#{$_size}, null);
+
+  .border-rounded#{$_suffix} {
+    border-radius: $border-radius !important; // scss-lint:disable ImportantRule
+  }
+
+  .border-rounded-large#{$_suffix} {
+    border-radius: $border-radius-lg !important; // scss-lint:disable ImportantRule
+  }
+
+  .border-all#{$_suffix} {
+    border-bottom: 1px solid $color-border !important; // scss-lint:disable ImportantRule
+    border-left: 1px solid $color-border !important; // scss-lint:disable ImportantRule
+    border-right: 1px solid $color-border !important; // scss-lint:disable ImportantRule
+    border-top: 1px solid $color-border !important; // scss-lint:disable ImportantRule
+  }
+
+  .border-none#{$_suffix} {
+    border-bottom: none !important; // scss-lint:disable ImportantRule
+    border-left: none !important; // scss-lint:disable ImportantRule
+    border-right: none !important; // scss-lint:disable ImportantRule
+    border-top: none !important; // scss-lint:disable ImportantRule
+  }
+
+  .border-vert#{$_suffix} {
+    border-bottom: 1px solid $color-border !important; // scss-lint:disable ImportantRule
+    border-top: 1px solid $color-border !important; // scss-lint:disable ImportantRule
+  }
+
+  .border-vert-none#{$_suffix} {
+    border-bottom: none !important; // scss-lint:disable ImportantRule
+    border-top: none !important; // scss-lint:disable ImportantRule
+  }
+
+  .border-horz#{$_suffix} {
+    border-left: 1px solid $color-border !important; // scss-lint:disable ImportantRule
+    border-right: 1px solid $color-border !important; // scss-lint:disable ImportantRule
+  }
+
+  .border-horz-none#{$_suffix} {
+    border-left: none !important; // scss-lint:disable ImportantRule
+    border-right: none !important; // scss-lint:disable ImportantRule
+  }
+
+  .border-top#{$_suffix} {
+    border-top: 1px solid $color-border !important; // scss-lint:disable ImportantRule
+  }
+
+  .border-top-none#{$_suffix} {
+    border-top: none !important; // scss-lint:disable ImportantRule
+  }
+
+  .border-bottom#{$_suffix} {
+    border-bottom: 1px solid $color-border !important; // scss-lint:disable ImportantRule
+  }
+
+  .border-bottom-none#{$_suffix} {
+    border-bottom: none !important; // scss-lint:disable ImportantRule
+  }
+
+  .border-left#{$_suffix} {
+    border-left: 1px solid $color-border !important; // scss-lint:disable ImportantRule
+  }
+
+  .border-left-none#{$_suffix} {
+    border-left: none !important; // scss-lint:disable ImportantRule
+  }
+
+  .border-right#{$_suffix} {
+    border-right: 1px solid $color-border !important; // scss-lint:disable ImportantRule
+  }
+
+  .border-right-none#{$_suffix} {
+    border-right: none !important; // scss-lint:disable ImportantRule
+  }
+
+}
+
+@include _make-border-at();
+
+@each $_size, $_width in $widths-by-size {
+  @media (min-width: $_width) {
+    @include _make-border-at($_size);
+  }
+}

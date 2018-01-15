@@ -9,15 +9,15 @@ html {
 body {
   color: $color-text;
   font-family: $font-family-base;
-  font-size: $font-size-base;
+  font-size: $font-size-medium;
   font-smoothing: always;
-  font-weight: $font-weight-normal;
-  line-height: $line-height-base;
+  font-weight: $font-weight-text;
+  line-height: $space-line;
   text-rendering: optimizeLegibility;
 }
 
 article {
-  font-size: $font-size-article;
+  font-size: $font-size-large;
   line-height: $line-height-header;
 }
 
@@ -27,7 +27,7 @@ p {
 
 strong,
 b {
-  font-weight: $font-weight-bold;
+  font-weight: $font-weight-medium;
 }
 
 em {

@@ -1,102 +1,76 @@
-
-@-webkit-keyframes spin {
-    0% {
-        -webkit-transform: rotate(0deg);
-        transform: rotate(0deg)
-    }
-    100% {
-        -webkit-transform: rotate(360deg);
-        transform: rotate(360deg)
-    }
-}
+@import 'app/variables/colors';
+@import 'app/variables/sizes';
 
 @keyframes spin {
-    0% {
-        -webkit-transform: rotate(0deg);
-        transform: rotate(0deg)
-    }
-    100% {
-        -webkit-transform: rotate(360deg);
-        transform: rotate(360deg)
-    }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .spinner {
-    pointer-events: none;
-    position: relative;
-    display: inline-block;
-    vertical-align: middle;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    -webkit-transition: opacity 225ms cubic-bezier(0, 0, 0.2, 1);
-    transition: opacity 225ms cubic-bezier(0, 0, 0.2, 1)
+  border-radius: 50%;
+  display: inline-block;
+  height: $space-line;
+  pointer-events: none;
+  position: relative;
+  transition: opacity 225ms cubic-bezier(0, 0, .2, 1);
+  vertical-align: middle;
+  width: $space-line;
 }
 
 [data-loading="false"] .spinner {
-    opacity: 0;
-    -webkit-transition: opacity 195ms cubic-bezier(0.4, 0, 1, 1);
-    transition: opacity 195ms cubic-bezier(0.4, 0, 1, 1)
+  opacity: 0;
+  transition: opacity 195ms cubic-bezier(.4, 0, 1, 1);
 }
 
-.spinner:before,
+.spinner:before, // scss-lint:disable PropertyCount
 .spinner:after {
-    content: " ";
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: block;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    border-width: 2px;
-    border-style: solid;
-    -webkit-animation: spin 1s infinite linear;
-    animation: spin 1s infinite linear
+  animation: spin 1s infinite linear;
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 2px;
+  content: ' ';
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
 
 .spinner:before {
-    opacity: .25
+  opacity: .25;
 }
 
 .spinner:after {
-    border-color: transparent;
-    border-top-color: initial
+  border-color: transparent;
+  border-top-color: initial;
 }
 
 .field .spinner,
 .button .spinner,
 button .spinner {
-    position: absolute;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    right: 0;
-    top: 50%;
-    z-index: 2;
-    margin-right: 10px
+  margin-right: $space-base;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
 }
 
 .field.error .spinner {
-    margin-right: 40px
+  margin-right: 40px;
 }
 
-.spinner.spinner-line {
-    width: 20px;
-    height: 20px
-}
+@each $_type in (line, small, medium, large) {
+  $_space: map-get($space-by-type, $_type);
 
-.spinner.spinner-small {
-    width: 30px;
-    height: 30px
-}
-
-.spinner.spinner-medium {
-    width: 60px;
-    height: 60px
-}
-
-.spinner.spinner-large {
-    width: 80px;
-    height: 80px
+  .spinner.spinner-#{$_type} {
+    height: $_space;
+    width: $_space;
+  }
 }

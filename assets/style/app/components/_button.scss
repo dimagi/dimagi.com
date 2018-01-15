@@ -9,15 +9,15 @@ input[type="submit"],
 input[type="reset"] {
   appearance: none;
   border: none;
-  border-radius: $border-radius-button;
+  border-radius: $border-radius;
   cursor: pointer;
   display: inline-block;
   font-family: $font-family-base;
-  font-size: $font-size-standard;
+  font-size: $font-size-small;
   font-smoothing: always;
   font-weight: $font-weight-button;
   letter-spacing: 1px;
-  line-height: $line-height-base;
+  line-height: $space-line;
   margin-bottom: $space-line;
   max-width: 100%;
   min-height: $space-line * 2;

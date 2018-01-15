@@ -17,10 +17,10 @@
   z-index: 2;
 
   a {
-    color: $color-sub-nav;
+    color: $color-body-text;
     display: block;
-    font-size: $font-size-standard;
-    font-weight: $font-weight-bold;
+    font-size: $font-size-small;
+    font-weight: $font-weight-medium;
     letter-spacing: 1px;
     line-height: $space-medium;
     margin-right: 20px;
@@ -53,7 +53,7 @@
 
 @each $_theme, $_color in $colors-by-theme {
   .#{$_theme}-theme .sub-nav a {
-    color: $color-sub-nav;
+    color: $color-body-text;
 
     &:hover,
     &:focus {
@@ -93,7 +93,7 @@
   span {
     border-radius: 3px;
     display: inline-block;
-    line-height: $line-height-base;
+    line-height: $space-line;
     padding: 0 14px;
   }
 }

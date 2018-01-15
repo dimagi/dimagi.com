@@ -1,6 +1,8 @@
+@import 'app/variables/colors';
+@import 'app/variables/sizes';
 @import 'app/variables/type';
 
-input[type="text"],
+input[type="text"], //scss-lint:disable PropertyCount
 input[type="password"],
 input[type="email"],
 input[type="search"],
@@ -8,25 +10,23 @@ input[type="url"],
 input[type="tel"],
 input[type="number"],
 textarea {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    position: relative;
-    z-index: 0;
-    display: block;
-    width: 100%;
-    margin: 0;
-    height: 40px;
-    padding: 10px;
-    font-size: 14px;
-    line-height: 18px;
-    font-family: $font-family-base;
-    font-weight: 300;
-    background: #fff;
-    color: #5f6a7d;
-    outline: none;
-    border: 1px solid #c4c4c4;
-    border-radius: 3px
+  appearance: none;
+  background: $color-white;
+  border: 1px solid $color-border-input;
+  border-radius: $border-radius;
+  color: $color-text;
+  display: block;
+  font-family: $font-family-base;
+  font-size: $font-size-medium;
+  font-weight: $font-weight-light;
+  height: 40px;
+  line-height: 18px;
+  margin: 0;
+  outline: none;
+  padding: $space-base;
+  position: relative;
+  width: 100%;
+  z-index: 0;
 }
 
 input[type="text"]:focus,
@@ -37,8 +37,8 @@ input[type="url"]:focus,
 input[type="tel"]:focus,
 input[type="number"]:focus,
 textarea:focus {
-    border-color: #2996cc;
-    z-index: 1
+  border-color: color-hover($color-default);
+  z-index: 1;
 }
 
 .show-time input[type="text"],
@@ -49,8 +49,7 @@ textarea:focus {
 .show-time input[type="tel"],
 .show-time input[type="number"],
 .show-time textarea {
-    -webkit-transition: color 300ms, border-color 300ms, background-color 300ms;
-    transition: color 300ms, border-color 300ms, background-color 300ms
+  transition: color 300ms, border-color 300ms, background-color 300ms;
 }
 
 .error input[type="text"],
@@ -61,12 +60,11 @@ textarea:focus {
 .error input[type="tel"],
 .error input[type="number"],
 .error textarea {
-    z-index: 1;
-    border-color: #df3320;
-    background-color: #fff;
-    background: #fff -webkit-calc(100% - 10px) 50% no-repeat;
-    background: #fff  calc(100% - 10px) 50% no-repeat;
-    padding-right: 40px
+  background: $color-white  calc(100% - 10px) 50% no-repeat;
+  background-color: $color-white;
+  border-color: $color-error;
+  padding-right: 40px;
+  z-index: 1;
 }
 
 .validated input[type="text"],
@@ -77,9 +75,9 @@ textarea:focus {
 .validated input[type="tel"],
 .validated input[type="number"],
 .validated textarea {
-    z-index: 1;
-    border-color: #24b524;
-    background-color: #fff
+  background-color: $color-white;
+  border-color: $color-validated;
+  z-index: 1;
 }
 
 input[type="text"]:disabled,
@@ -90,237 +88,197 @@ input[type="url"]:disabled,
 input[type="tel"]:disabled,
 input[type="number"]:disabled,
 textarea:disabled {
-    opacity: 1
+  opacity: 1;
 }
 
 select {
-    position: relative;
-    z-index: 0;
-    display: block;
-    width: 100%;
-    margin: 0;
-    height: 40px;
-    padding: 10px;
-    font-size: 14px;
-    line-height: 18px;
-    font-family: $font-family-base;
-    font-weight: 300;
-    background: #fff;
-    color: #5f6a7d;
-    outline: none;
-    border: 1px solid #c4c4c4;
-    border-radius: 3px
+  background: $color-white;
+  border: 1px solid $color-border-input;
+  border-radius: $border-radius;
+  color: $color-text;
+  display: block;
+  font-family: $font-family-base;
+  font-size: $font-size-medium;
+  font-weight: $font-weight-light;
+  height: 40px;
+  line-height: 18px;
+  margin: 0;
+  outline: none;
+  padding: $space-base;
+  position: relative;
+  width: 100%;
+  z-index: 0;
 }
 
 select:focus {
-    border-color: #2996cc;
-    z-index: 1
+  border-color: color-hover($color-default);
+  z-index: 1
 }
 
 .show-time select {
-    -webkit-transition: color 300ms, border-color 300ms, background-color 300ms;
-    transition: color 300ms, border-color 300ms, background-color 300ms
+  transition: color 300ms, border-color 300ms, background-color 300ms;
 }
 
 .error select {
-    z-index: 1;
-    border-color: #df3320;
-    background-color: #fff
+  background-color: $color-white;
+  border-color: $color-error;
+  z-index: 1;
 }
 
 .validated select {
-    z-index: 1;
-    border-color: #24b524;
-    background-color: #fff
+  background-color: $color-white;
+  border-color: $color-validated;
+  z-index: 1;
 }
 
 select:disabled {
-    opacity: 1
+  opacity: 1;
 }
 
 ::-webkit-input-placeholder {
-    color: #c4c4c4;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-smoothing: always;
-    text-rendering: optimizeLegibility;
-    font-size: inherit;
-    line-height: inherit;
-    font-weight: inherit
+  color: $color-border-input;
+  font-smoothing: always;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  text-rendering: optimizeLegibility;
 }
 
-::-moz-placeholder {
-    color: #c4c4c4;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-smoothing: always;
-    text-rendering: optimizeLegibility;
-    font-size: inherit;
-    line-height: inherit;
-    font-weight: inherit
-}
-
-:-ms-input-placeholder {
-    color: #c4c4c4;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-smoothing: always;
-    text-rendering: optimizeLegibility;
-    font-size: inherit;
-    line-height: inherit;
-    font-weight: inherit
-}
-
-::-ms-input-placeholder {
-    color: #c4c4c4;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-smoothing: always;
-    text-rendering: optimizeLegibility;
-    font-size: inherit;
-    line-height: inherit;
-    font-weight: inherit
-}
-
+::-webkit-input-placeholder,
+::-moz-placeholder,
+:-ms-input-placeholder,
 ::placeholder {
-    color: #c4c4c4;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-smoothing: always;
-    text-rendering: optimizeLegibility;
-    font-size: inherit;
-    line-height: inherit;
-    font-weight: inherit
+  color: $color-border-input;
+  font-smoothing: always;
+  font-size: inherit;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: inherit;
+  line-height: inherit;
+  text-rendering: optimizeLegibility;
 }
 
 :invalid {
-    -webkit-box-shadow: none;
-    box-shadow: none
+  box-shadow: none;
 }
 
 :-moz-submit-invalid {
-    box-shadow: none
+  box-shadow: none;
 }
 
 :-moz-ui-invalid {
-    box-shadow: none
+  box-shadow: none;
 }
 
 ::-ms-clear,
 ::-ms-reveal {
-    display: none
+  display: none;
 }
 
 .field:not(.range-field) {
-    position: relative
+  position: relative;
 }
 
 .field:not(.range-field):before,
 .field:not(.range-field):after {
-    content: " ";
-    display: none;
-    -webkit-transition: background-color 300ms, border-color 300ms, opacity 300ms, visibility 0s 300ms, -webkit-transform 300ms;
-    transition: background-color 300ms, border-color 300ms, opacity 300ms, visibility 0s 300ms, -webkit-transform 300ms;
-    transition: background-color 300ms, border-color 300ms, opacity 300ms, transform 300ms, visibility 0s 300ms;
-    transition: background-color 300ms, border-color 300ms, opacity 300ms, transform 300ms, visibility 0s 300ms, -webkit-transform 300ms;
-    pointer-events: none
+  content: ' ';
+  display: none;
+  pointer-events: none;
+  transition: background-color 300ms, border-color 300ms, opacity 300ms, transform 300ms, visibility 0s 300ms;
 }
 
 .no-touch .field:not(.range-field):before,
 .no-touch .field:not(.range-field):after {
-    display: block;
-    visibility: hidden;
-    opacity: 0;
-    position: absolute;
-    z-index: 2;
-    top: 100%;
-    -webkit-transform: translateY(5px);
-    -ms-transform: translateY(5px);
-    transform: translateY(5px)
+  display: block;
+  opacity: 0;
+  position: absolute;
+  top: 100%;
+  transform: translateY(5px);
+  visibility: hidden;
+  z-index: 2;
 }
 
 .field:not(.range-field):before {
-    width: 0;
-    height: 0;
-    border-bottom: 4px solid #c4c4c4;
-    border-right: 5px solid transparent;
-    border-left: 5px solid transparent;
-    margin-top: 1px;
-    left: 20px
+  width: 0;
+  height: 0;
+  border-bottom: 4px solid $color-border-input;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  margin-top: 1px;
+  left: 20px
 }
 
 .field:not(.range-field):after {
-    width: 100%;
-    margin-top: -1px;
-    padding: 6px 12px;
-    color: #fff;
-    font-size: 11px;
-    line-height: 16px;
-    text-align: left;
-    font-weight: 700;
-    border-radius: 0 0 3px 3px;
-    background-color: #c4c4c4
+  background-color: $color-border-input;
+  border-radius: 0 0 $border-radius $border-radius;
+  color: $color-white;
+  font-size: $font-size-small;
+  font-weight: $font-weight-bold;
+  line-height: 16px;
+  margin-top: -1px;
+  padding: 6px 12px;
+  text-align: left;
+  width: 100%;
 }
 
 .no-touch .field:not(.range-field):after {
-    margin-top: 4px
+  margin-top: 4px;
 }
 
 .no-touch .field:not(.range-field):after {
-    border-radius: 3px
+  border-radius: $border-radius;
 }
 
 .field:not(.range-field).active-field:before {
-    border-bottom-color: #2996cc
+  border-bottom-color: $color-default;
 }
 
 .field:not(.range-field).active-field:after {
-    background-color: #2996cc
+  background-color: $color-default;
 }
 
 .field:not(.range-field).error:before {
-    border-bottom-color: #df3320
+  border-bottom-color: $color-error;
 }
 
 .field:not(.range-field).error:after {
-    background-color: #df3320
+  background-color: $color-error;
 }
 
 .field:not(.range-field).validated:before {
-    border-bottom-color: #24b524
+  border-bottom-color: $color-validated
 }
 
 .field:not(.range-field).validated:after {
-    background-color: #24b524
+  background-color: $color-validated
 }
 
 .field:not(.range-field)[data-validation-message]:after {
-    content: attr(data-validation-message);
-    display: block;
-    word-wrap: break-word
+  content: attr(data-validation-message);
+  display: block;
+  word-wrap: break-word
 }
 
 .no-touch .field:not(.range-field)[data-validation-message].active-field:before,
 .no-touch .field:not(.range-field)[data-validation-message].active-field:after {
-    visibility: visible;
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    -ms-transform: translateY(0);
-    transform: translateY(0);
-    -webkit-transition: background-color 300ms, border-color 300ms, opacity 300ms, visibility 0s, -webkit-transform 300ms;
-    transition: background-color 300ms, border-color 300ms, opacity 300ms, visibility 0s, -webkit-transform 300ms;
-    transition: background-color 300ms, border-color 300ms, opacity 300ms, transform 300ms, visibility 0s;
-    transition: background-color 300ms, border-color 300ms, opacity 300ms, transform 300ms, visibility 0s, -webkit-transform 300ms
+  visibility: visible;
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+  -webkit-transition: background-color 300ms, border-color 300ms, opacity 300ms, visibility 0s, -webkit-transform 300ms;
+  transition: background-color 300ms, border-color 300ms, opacity 300ms, visibility 0s, -webkit-transform 300ms;
+  transition: background-color 300ms, border-color 300ms, opacity 300ms, transform 300ms, visibility 0s;
+  transition: background-color 300ms, border-color 300ms, opacity 300ms, transform 300ms, visibility 0s, -webkit-transform 300ms
 }
 
 .field:not(.range-field).disabled:before,
 .disabled .field:not(.range-field):before {
-    border-bottom-color: #c4c4c4
+  border-bottom-color: #c4c4c4
 }
 
 .field:not(.range-field).disabled:after,
 .disabled .field:not(.range-field):after {
-    background-color: #c4c4c4
+  background-color: #c4c4c4
 }
 
 .field:not(.range-field).disabled input,
@@ -329,558 +287,558 @@ select:disabled {
 .disabled .field:not(.range-field) input,
 .disabled .field:not(.range-field) select,
 .disabled .field:not(.range-field) textarea {
-    cursor: not-allowed;
-    color: #c4c4c4 !important;
-    border-color: #c4c4c4 !important;
-    background-color: #fafafa !important
+  cursor: not-allowed;
+  color: #c4c4c4 !important;
+  border-color: #c4c4c4 !important;
+  background-color: #fafafa !important
 }
 
 .no-touch .field:not(.range-field).disabled[data-validation-message]:hover:before,
 .no-touch .field:not(.range-field).disabled[data-validation-message]:hover:after,
 .no-touch .disabled .field:not(.range-field)[data-validation-message]:hover:before,
 .no-touch .disabled .field:not(.range-field)[data-validation-message]:hover:after {
-    visibility: visible;
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    -ms-transform: translateY(0);
-    transform: translateY(0);
-    -webkit-transition: background-color 300ms, border-color 300ms, opacity 300ms, visibility 0s, -webkit-transform 300ms;
-    transition: background-color 300ms, border-color 300ms, opacity 300ms, visibility 0s, -webkit-transform 300ms;
-    transition: background-color 300ms, border-color 300ms, opacity 300ms, transform 300ms, visibility 0s;
-    transition: background-color 300ms, border-color 300ms, opacity 300ms, transform 300ms, visibility 0s, -webkit-transform 300ms
+  visibility: visible;
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+  -webkit-transition: background-color 300ms, border-color 300ms, opacity 300ms, visibility 0s, -webkit-transform 300ms;
+  transition: background-color 300ms, border-color 300ms, opacity 300ms, visibility 0s, -webkit-transform 300ms;
+  transition: background-color 300ms, border-color 300ms, opacity 300ms, transform 300ms, visibility 0s;
+  transition: background-color 300ms, border-color 300ms, opacity 300ms, transform 300ms, visibility 0s, -webkit-transform 300ms
 }
 
 .input-element {
-    position: relative
+  position: relative
 }
 
 .password-input {
-    position: static;
-    background-color: #fff;
-    border: 1px solid #c4c4c4;
-    border-radius: 3px
+  position: static;
+  background-color: #fff;
+  border: 1px solid #c4c4c4;
+  border-radius: 3px
 }
 
 .active-field .password-input {
-    border-color: #2996cc
+  border-color: #2996cc
 }
 
 .validated .password-input {
-    border-color: #24b524
+  border-color: #24b524
 }
 
 .error .password-input {
-    border-color: #df3320
+  border-color: #df3320
 }
 
 .password-input.disabled button.toggle-password,
 .disabled .password-input button.toggle-password {
-    display: none
+  display: none
 }
 
 .password-input input {
-    height: 38px;
-    background: none;
-    border: none
+  height: 38px;
+  background: none;
+  border: none
 }
 
 button.toggle-password {
-    display: block;
-    position: relative;
-    height: 20px;
-    width: 20px;
-    min-width: 0;
-    min-height: 0;
-    padding: 0;
-    margin: 9px 9px 9px 0;
-    background: none !important;
-    outline: none;
-    line-height: 1;
-    opacity: .25;
-    -webkit-transition: opacity 300ms;
-    transition: opacity 300ms
+  display: block;
+  position: relative;
+  height: 20px;
+  width: 20px;
+  min-width: 0;
+  min-height: 0;
+  padding: 0;
+  margin: 9px 9px 9px 0;
+  background: none !important;
+  outline: none;
+  line-height: 1;
+  opacity: .25;
+  -webkit-transition: opacity 300ms;
+  transition: opacity 300ms
 }
 
 button.toggle-password:hover,
 button.toggle-password:focus {
-    opacity: 1
+  opacity: 1
 }
 
 button.toggle-password .icon-eye-closed {
-    display: none
+  display: none
 }
 
 button.toggle-password.visible .icon-eye-open {
-    display: none
+  display: none
 }
 
 button.toggle-password.visible .icon-eye-closed {
-    display: block
+  display: block
 }
 
 .select-field .select {
-    position: relative
+  position: relative
 }
 
 .pointerevents .select-field .select:after {
-    content: " ";
-    display: block;
-    position: absolute;
-    z-index: 1;
-    top: 1px;
-    right: 1px;
-    width: 38px;
-    height: 38px;
-    background: #fff;
-    border-radius: 3px;
-    pointer-events: none;
-    -webkit-transition: background-color 300ms;
-    transition: background-color 300ms
+  content: " ";
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 1px;
+  right: 1px;
+  width: 38px;
+  height: 38px;
+  background: #fff;
+  border-radius: 3px;
+  pointer-events: none;
+  -webkit-transition: background-color 300ms;
+  transition: background-color 300ms
 }
 
 .pointerevents .select-field .select i {
-    display: block;
-    position: absolute;
-    z-index: 2;
-    top: 14px;
-    right: 16px;
-    width: 8px;
-    height: 8px;
-    border-right: 1px solid #c4c4c4;
-    border-bottom: 1px solid #c4c4c4;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-    pointer-events: none
+  display: block;
+  position: absolute;
+  z-index: 2;
+  top: 14px;
+  right: 16px;
+  width: 8px;
+  height: 8px;
+  border-right: 1px solid #c4c4c4;
+  border-bottom: 1px solid #c4c4c4;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  pointer-events: none
 }
 
 .pointerevents .select-field select {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    padding-right: 38px
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding-right: 38px
 }
 
 .pointerevents .select-field select::-ms-expand {
-    display: none
+  display: none
 }
 
 .select-field select:focus+i {
-    border-color: #2996cc
+  border-color: #2996cc
 }
 
 .validated .select-field i,
 .select-field.validated i {
-    border-color: #24b524 !important
+  border-color: #24b524 !important
 }
 
 .error .select-field i,
 .select-field.error i {
-    border-color: #df3320 !important
+  border-color: #df3320 !important
 }
 
 .disabled .select-field .select:after,
 .select-field.disabled .select:after {
-    background-color: #fafafa !important
+  background-color: #fafafa !important
 }
 
 .disabled .select-field i,
 .select-field.disabled i {
-    border-color: #c4c4c4 !important
+  border-color: #c4c4c4 !important
 }
 
 .select-field.filterable input {
-    border-radius: 3px 3px 0 0
+  border-radius: 3px 3px 0 0
 }
 
 .select-field.filterable .select select {
-    border-top: 0;
-    border-radius: 0 0 3px 3px
+  border-top: 0;
+  border-radius: 0 0 3px 3px
 }
 
 .option-field label {
-    position: relative;
-    min-height: 20px;
-    min-width: 20px;
-    margin: 0;
-    padding-left: 30px;
-    font-size: 14px;
-    line-height: 20px;
-    font-weight: 400;
-    color: #5f6a7d;
-    cursor: pointer
+  position: relative;
+  min-height: 20px;
+  min-width: 20px;
+  margin: 0;
+  padding-left: 30px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #5f6a7d;
+  cursor: pointer
 }
 
 .option-field label:after,
 .option-field label:before,
 .option-field label *:not(a) {
-    pointer-events: none
+  pointer-events: none
 }
 
 .show-time .option-field label {
-    -webkit-transition: color 150ms cubic-bezier(0.4, 0, 0.6, 1);
-    transition: color 150ms cubic-bezier(0.4, 0, 0.6, 1)
+  -webkit-transition: color 150ms cubic-bezier(0.4, 0, 0.6, 1);
+  transition: color 150ms cubic-bezier(0.4, 0, 0.6, 1)
 }
 
 .option-field label:empty {
-    padding-left: 0
+  padding-left: 0
 }
 
 .option-field label:before,
 .option-field label:after {
-    content: " ";
-    position: absolute;
-    pointer-events: none
+  content: " ";
+  position: absolute;
+  pointer-events: none
 }
 
 .show-time .option-field label:before,
 .show-time .option-field label:after {
-    -webkit-transition: all 150ms cubic-bezier(0.4, 0, 0.6, 1);
-    transition: all 150ms cubic-bezier(0.4, 0, 0.6, 1)
+  -webkit-transition: all 150ms cubic-bezier(0.4, 0, 0.6, 1);
+  transition: all 150ms cubic-bezier(0.4, 0, 0.6, 1)
 }
 
 .option-field label:before {
-    display: block;
-    top: 0px;
-    left: 0;
-    width: 20px;
-    height: 20px;
-    border: 1px solid #c4c4c4;
-    background: #fff
+  display: block;
+  top: 0px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #c4c4c4;
+  background: #fff
 }
 
 .option-field label:after {
-    display: none;
-    border: 0 solid #fff
+  display: none;
+  border: 0 solid #fff
 }
 
 .option-field input[type="radio"],
 .option-field input[type="checkbox"] {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    position: absolute;
-    opacity: 0;
-    width: 0;
-    height: 0
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0
 }
 
 .option-field input[type="radio"]+label:before {
-    border-radius: 50%
+  border-radius: 50%
 }
 
 .option-field input[type="radio"]+label:after {
-    width: 18px;
-    height: 18px;
-    top: 1px;
-    left: 1px;
-    border-width: 2px;
-    border-radius: 50%
+  width: 18px;
+  height: 18px;
+  top: 1px;
+  left: 1px;
+  border-width: 2px;
+  border-radius: 50%
 }
 
 .option-field input[type="checkbox"]+label:before {
-    border-radius: 3px
+  border-radius: 3px
 }
 
 .option-field input[type="checkbox"]+label:after {
-    width: 14px;
-    height: 8px;
-    top: 4px;
-    left: 3px;
-    border-left-width: 2px;
-    border-bottom-width: 2px;
-    -webkit-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
-    transform: rotate(-45deg)
+  width: 14px;
+  height: 8px;
+  top: 4px;
+  left: 3px;
+  border-left-width: 2px;
+  border-bottom-width: 2px;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg)
 }
 
 .option-field label:hover:before,
 .option-field input[type="radio"]:focus+label:before,
 .option-field input[type="checkbox"]:focus+label:before {
-    border-color: #2996cc
+  border-color: #2996cc
 }
 
 .option-field input:checked+label:before {
-    border-color: #2996cc;
-    background-color: #2996cc
+  border-color: #2996cc;
+  background-color: #2996cc
 }
 
 .option-field input:checked+label:after {
-    display: block
+  display: block
 }
 
 .option-field.validated label:before,
 .validated .option-field label:before {
-    border-color: #24b524 !important
+  border-color: #24b524 !important
 }
 
 .option-field.validated input:checked+label:before,
 .validated .option-field input:checked+label:before {
-    border-color: #24b524 !important;
-    background-color: #24b524 !important
+  border-color: #24b524 !important;
+  background-color: #24b524 !important
 }
 
 .option-field.error label:before,
 .error .option-field label:before {
-    border-color: #df3320 !important
+  border-color: #df3320 !important
 }
 
 .option-field.error input:checked+label:before,
 .error .option-field input:checked+label:before {
-    border-color: #df3320 !important;
-    background-color: #df3320 !important
+  border-color: #df3320 !important;
+  background-color: #df3320 !important
 }
 
 .option-field.disabled label,
 .disabled .option-field label {
-    cursor: default
+  cursor: default
 }
 
 .option-field.disabled label:before,
 .disabled .option-field label:before {
-    border-color: #c4c4c4 !important
+  border-color: #c4c4c4 !important
 }
 
 .option-field.disabled input:checked+label:before,
 .disabled .option-field input:checked+label:before {
-    border-color: #c4c4c4 !important;
-    background-color: #c4c4c4 !important
+  border-color: #c4c4c4 !important;
+  background-color: #c4c4c4 !important
 }
 
 .switch-field {
-    background: #fff;
-    border: 1px solid #c4c4c4;
-    border-radius: 3px;
-    overflow: hidden
+  background: #fff;
+  border: 1px solid #c4c4c4;
+  border-radius: 3px;
+  overflow: hidden
 }
 
 .show-time .switch-field {
-    -webkit-transition: border-color 300ms, background-color 300ms;
-    transition: border-color 300ms, background-color 300ms
+  -webkit-transition: border-color 300ms, background-color 300ms;
+  transition: border-color 300ms, background-color 300ms
 }
 
 .switch-field .option-field {
-    border-bottom: 1px solid #c4c4c4
+  border-bottom: 1px solid #c4c4c4
 }
 
 .switch-field .option-field:last-of-type {
-    border-bottom: none
+  border-bottom: none
 }
 
 .show-time .switch-field .option-field {
-    -webkit-transition: border-color 300ms;
-    transition: border-color 300ms
+  -webkit-transition: border-color 300ms;
+  transition: border-color 300ms
 }
 
 .switch-field label {
-    padding: 9px 9px 9px 38px;
-    color: #c4c4c4
+  padding: 9px 9px 9px 38px;
+  color: #c4c4c4
 }
 
 .switch-field label:before {
-    top: 9px;
-    left: 9px
+  top: 9px;
+  left: 9px
 }
 
 .switch-field input[type="radio"]+label:after {
-    top: 10px;
-    left: 10px
+  top: 10px;
+  left: 10px
 }
 
 .switch-field input[type="checkbox"]+label:after {
-    top: 13px;
-    left: 12px
+  top: 13px;
+  left: 12px
 }
 
 .switch-field label:hover,
 .switch-field input[type="radio"]:focus+label,
 .switch-field input[type="checkbox"]:focus+label {
-    color: #5f6a7d
+  color: #5f6a7d
 }
 
 .switch-field input[type="radio"]:checked+label,
 .switch-field input[type="checkbox"]:checked+label {
-    color: #5f6a7d
+  color: #5f6a7d
 }
 
 .validated .switch-field,
 .switch-field.validated {
-    border-color: #24b524 !important
+  border-color: #24b524 !important
 }
 
 .validated .switch-field .option-field,
 .switch-field.validated .option-field {
-    border-color: #24b524 !important
+  border-color: #24b524 !important
 }
 
 .error .switch-field,
 .switch-field.error {
-    border-color: #df3320 !important
+  border-color: #df3320 !important
 }
 
 .error .switch-field .option-field,
 .switch-field.error .option-field {
-    border-color: #df3320 !important
+  border-color: #df3320 !important
 }
 
 .disabled .switch-field,
 .switch-field.disabled {
-    background-color: #fafafa !important
+  background-color: #fafafa !important
 }
 
 textarea {
-    width: 100%;
-    max-width: 100%;
-    overflow: auto;
-    height: auto;
-    min-height: 120px
+  width: 100%;
+  max-width: 100%;
+  overflow: auto;
+  height: auto;
+  min-height: 120px
 }
 
 .checkbox-tile,
 .radio-tile {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap
 }
 
 .checkbox-tile>*,
 .radio-tile>* {
-    -webkit-box-flex: 0;
-    -webkit-flex: 0 1 auto;
-    -ms-flex: 0 1 auto;
-    flex: 0 1 auto
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto
 }
 
 .checkbox-tile>*,
 .radio-tile>* {
-    width: 100%
+  width: 100%
 }
 
 .checkbox-tile:before,
 .checkbox-tile:after,
 .radio-tile:before,
 .radio-tile:after {
-    display: none !important
+  display: none !important
 }
 
 .checkbox-tile .option,
 .radio-tile .option {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap
 }
 
 .checkbox-tile .option>*,
 .radio-tile .option>* {
-    -webkit-box-flex: 0;
-    -webkit-flex: 0 1 auto;
-    -ms-flex: 0 1 auto;
-    flex: 0 1 auto
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto
 }
 
 .checkbox-tile .option>*,
 .radio-tile .option>* {
-    width: 100%
+  width: 100%
 }
 
 .checkbox-tile label,
 .radio-tile label {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    position: relative;
-    z-index: 0;
-    display: block;
-    width: 100%;
-    margin: 0;
-    height: 40px;
-    padding: 10px;
-    font-size: 14px;
-    line-height: 18px;
-    font-family: $font-family-base;
-    font-weight: 300;
-    background: #fff;
-    color: #5f6a7d;
-    outline: none;
-    border: 1px solid #c4c4c4;
-    border-radius: 3px;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    display: flex;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    display: flex;
-    -webkit-align-content: center;
-    -ms-flex-line-pack: center;
-    align-content: center;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-    height: auto;
-    min-height: 40px;
-    border: none;
-    text-align: center;
-    cursor: pointer
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: relative;
+  z-index: 0;
+  display: block;
+  width: 100%;
+  margin: 0;
+  height: 40px;
+  padding: 10px;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: $font-family-base;
+  font-weight: 300;
+  background: #fff;
+  color: #5f6a7d;
+  outline: none;
+  border: 1px solid #c4c4c4;
+  border-radius: 3px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  display: flex;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: auto;
+  min-height: 40px;
+  border: none;
+  text-align: center;
+  cursor: pointer
 }
 
 .checkbox-tile label:focus,
 .radio-tile label:focus {
-    border-color: #2996cc;
-    z-index: 1
+  border-color: #2996cc;
+  z-index: 1
 }
 
 .show-time .checkbox-tile label,
 .show-time .radio-tile label {
-    -webkit-transition: color 300ms, border-color 300ms, background-color 300ms;
-    transition: color 300ms, border-color 300ms, background-color 300ms
+  -webkit-transition: color 300ms, border-color 300ms, background-color 300ms;
+  transition: color 300ms, border-color 300ms, background-color 300ms
 }
 
 .error .checkbox-tile label,
 .error .radio-tile label {
-    z-index: 1;
-    border-color: #df3320;
-    background-color: #fff
+  z-index: 1;
+  border-color: #df3320;
+  background-color: #fff
 }
 
 .validated .checkbox-tile label,
 .validated .radio-tile label {
-    z-index: 1;
-    border-color: #24b524;
-    background-color: #fff
+  z-index: 1;
+  border-color: #24b524;
+  background-color: #fff
 }
 
 .checkbox-tile label:disabled,
 .radio-tile label:disabled {
-    opacity: 1
+  opacity: 1
 }
 
 .checkbox-tile label>*,
 .radio-tile label>* {
-    -webkit-box-flex: 0;
-    -webkit-flex: 0 1 auto;
-    -ms-flex: 0 1 auto;
-    flex: 0 1 auto
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto
 }
 
 .checkbox-tile label>*,
 .radio-tile label>* {
-    width: 100%
+  width: 100%
 }
 
 .checkbox-tile label:after,
@@ -889,13 +847,13 @@ textarea {
 .radio-tile label:after,
 .radio-tile label:before,
 .radio-tile label *:not(a) {
-    pointer-events: none
+  pointer-events: none
 }
 
 .show-time .checkbox-tile label,
 .show-time .radio-tile label {
-    -webkit-transition: color 300ms, background-color 300ms;
-    transition: color 300ms, background-color 300ms
+  -webkit-transition: color 300ms, background-color 300ms;
+  transition: color 300ms, background-color 300ms
 }
 
 .checkbox-tile label h1,
@@ -922,87 +880,87 @@ textarea {
 .radio-tile label .h5,
 .radio-tile label h6,
 .radio-tile label .h6 {
-    color: inherit !important
+  color: inherit !important
 }
 
 .checkbox-tile label:before,
 .checkbox-tile label:after,
 .radio-tile label:before,
 .radio-tile label:after {
-    content: " ";
-    display: block;
-    position: absolute;
-    z-index: 2;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    border-radius: inherit
+  content: " ";
+  display: block;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: inherit
 }
 
 .show-time .checkbox-tile label:before,
 .show-time .checkbox-tile label:after,
 .show-time .radio-tile label:before,
 .show-time .radio-tile label:after {
-    -webkit-transition: opacity 300ms, border-color 300ms;
-    transition: opacity 300ms, border-color 300ms
+  -webkit-transition: opacity 300ms, border-color 300ms;
+  transition: opacity 300ms, border-color 300ms
 }
 
 .checkbox-tile label:before,
 .radio-tile label:before {
-    border: 1px solid rgba(0, 0, 0, 0.12)
+  border: 1px solid rgba(0, 0, 0, 0.12)
 }
 
 .checkbox-tile label:after,
 .radio-tile label:after {
-    border: 2px solid #2996cc;
-    opacity: 0
+  border: 2px solid #2996cc;
+  opacity: 0
 }
 
 .checkbox-tile input[type="checkbox"],
 .checkbox-tile input[type="radio"],
 .radio-tile input[type="checkbox"],
 .radio-tile input[type="radio"] {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    position: absolute;
-    opacity: 0;
-    width: 0;
-    height: 0
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0
 }
 
 .checkbox-tile input[type="checkbox"]:checked+label,
 .checkbox-tile input[type="radio"]:checked+label,
 .radio-tile input[type="checkbox"]:checked+label,
 .radio-tile input[type="radio"]:checked+label {
-    color: #2996cc
+  color: #2996cc
 }
 
 .checkbox-tile input[type="checkbox"]:checked+label:after,
 .checkbox-tile input[type="radio"]:checked+label:after,
 .radio-tile input[type="checkbox"]:checked+label:after,
 .radio-tile input[type="radio"]:checked+label:after {
-    opacity: 1
+  opacity: 1
 }
 
 .checkbox-tile.reset label,
 .radio-tile.reset label {
-    padding: 0;
-    line-height: 20px
+  padding: 0;
+  line-height: 20px
 }
 
 .checkbox-tile.reset label img,
 .radio-tile.reset label img {
-    border-radius: 4px
+  border-radius: 4px
 }
 
 .validated .checkbox-tile label,
 .checkbox-tile.validated label,
 .validated .radio-tile label,
 .radio-tile.validated label {
-    color: #24b524 !important;
-    background-color: #fff !important
+  color: #24b524 !important;
+  background-color: #fff !important
 }
 
 .validated .checkbox-tile label:before,
@@ -1013,15 +971,15 @@ textarea {
 .validated .radio-tile label:after,
 .radio-tile.validated label:before,
 .radio-tile.validated label:after {
-    border-color: #24b524 !important
+  border-color: #24b524 !important
 }
 
 .error .checkbox-tile label,
 .checkbox-tile.error label,
 .error .radio-tile label,
 .radio-tile.error label {
-    color: #df3320 !important;
-    background-color: #fff !important
+  color: #df3320 !important;
+  background-color: #fff !important
 }
 
 .error .checkbox-tile label:before,
@@ -1032,7 +990,7 @@ textarea {
 .error .radio-tile label:after,
 .radio-tile.error label:before,
 .radio-tile.error label:after {
-    border-color: #df3320 !important
+  border-color: #df3320 !important
 }
 
 .disabled .checkbox-tile label,
@@ -1052,7 +1010,7 @@ textarea {
 .disabled .radio-tile label:after,
 .radio-tile.disabled label:before,
 .radio-tile.disabled label:after {
-    border-color: #c4c4c4 !important
+  border-color: #c4c4c4 !important
 }
 
 .range-field .slider {
@@ -1087,363 +1045,363 @@ textarea {
 
 .validated .range-field .slider:before,
 .range-field.validated .slider:before {
-    background-color: #24b524
+  background-color: #24b524
 }
 
 .error .range-field .slider:before,
 .range-field.error .slider:before {
-    background-color: #df3320
+  background-color: #df3320
 }
 
 .disabled .range-field .slider:before,
 .range-field.disabled .slider:before {
-    background-color: #bbbdbf
+  background-color: #bbbdbf
 }
 
 input[type="range"] {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    position: relative;
-    display: block;
-    height: 40px;
-    margin: 0;
-    padding: 0;
-    border: none;
-    background: transparent;
-    outline: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    width: 100%;
-    cursor: pointer
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  width: 100%;
+  cursor: pointer
 }
 
 input[type="range"]::-ms-fill-lower {
-    display: none
+  display: none
 }
 
 input[type="range"]::-ms-fill-upper {
-    display: none
+  display: none
 }
 
 input[type="range"]::-ms-tooltip {
-    display: none
+  display: none
 }
 
 input[type="range"]::-moz-focus-outer {
-    border: none
+  border: none
 }
 
 input[type="range"]::-webkit-slider-runnable-track {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    position: relative;
-    display: block;
-    height: 40px;
-    margin: 0;
-    padding: 0;
-    border: none;
-    background: transparent;
-    outline: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    width: 100%;
-    color: transparent
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  width: 100%;
+  color: transparent
 }
 
 input[type="range"]::-moz-range-track {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    position: relative;
-    display: block;
-    height: 40px;
-    margin: 0;
-    padding: 0;
-    border: none;
-    background: transparent;
-    outline: none;
-    box-shadow: none;
-    width: 100%;
-    color: transparent
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  outline: none;
+  box-shadow: none;
+  width: 100%;
+  color: transparent
 }
 
 input[type="range"]::-ms-track {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    box-sizing: border-box;
-    position: relative;
-    display: block;
-    height: 40px;
-    margin: 0;
-    padding: 0;
-    border: none;
-    background: transparent;
-    outline: none;
-    box-shadow: none;
-    width: 100%;
-    color: transparent
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  outline: none;
+  box-shadow: none;
+  width: 100%;
+  color: transparent
 }
 
 input[type="range"]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    position: relative;
-    display: block;
-    height: 40px;
-    margin: 0;
-    padding: 0;
-    border: none;
-    background: transparent;
-    outline: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    border-color: #c4c4c4;
-    background-color: #fff;
-    background-image: -webkit-linear-gradient(left, #c4c4c4 0, #c4c4c4 2px, transparent 2px, transparent 12px, #c4c4c4 12px, #c4c4c4 14px), -webkit-linear-gradient(left, #c4c4c4 0, #c4c4c4 2px);
-    background-image: linear-gradient(to right, #c4c4c4 0, #c4c4c4 2px, transparent 2px, transparent 12px, #c4c4c4 12px, #c4c4c4 14px), linear-gradient(to right, #c4c4c4 0, #c4c4c4 2px);
-    background-size: 14px 14px, 2px 20px;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 40px;
-    border-width: 2px;
-    border-style: solid;
-    border-radius: 999em
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-color: #c4c4c4;
+  background-color: #fff;
+  background-image: -webkit-linear-gradient(left, #c4c4c4 0, #c4c4c4 2px, transparent 2px, transparent 12px, #c4c4c4 12px, #c4c4c4 14px), -webkit-linear-gradient(left, #c4c4c4 0, #c4c4c4 2px);
+  background-image: linear-gradient(to right, #c4c4c4 0, #c4c4c4 2px, transparent 2px, transparent 12px, #c4c4c4 12px, #c4c4c4 14px), linear-gradient(to right, #c4c4c4 0, #c4c4c4 2px);
+  background-size: 14px 14px, 2px 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 40px;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 999em
 }
 
 input[type="range"]::-moz-range-thumb {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    position: relative;
-    display: block;
-    height: 40px;
-    margin: 0;
-    padding: 0;
-    border: none;
-    background: transparent;
-    outline: none;
-    box-shadow: none;
-    border-color: #c4c4c4;
-    background-color: #fff;
-    background-image: linear-gradient(to right, #c4c4c4 0, #c4c4c4 2px, transparent 2px, transparent 12px, #c4c4c4 12px, #c4c4c4 14px), linear-gradient(to right, #c4c4c4 0, #c4c4c4 2px);
-    background-size: 14px 14px, 2px 20px;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 40px;
-    border-width: 2px;
-    border-style: solid;
-    border-radius: 999em
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  outline: none;
+  box-shadow: none;
+  border-color: #c4c4c4;
+  background-color: #fff;
+  background-image: linear-gradient(to right, #c4c4c4 0, #c4c4c4 2px, transparent 2px, transparent 12px, #c4c4c4 12px, #c4c4c4 14px), linear-gradient(to right, #c4c4c4 0, #c4c4c4 2px);
+  background-size: 14px 14px, 2px 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 40px;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 999em
 }
 
 input[type="range"]::-ms-thumb {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    box-sizing: border-box;
-    position: relative;
-    display: block;
-    height: 40px;
-    margin: 0;
-    padding: 0;
-    border: none;
-    background: transparent;
-    outline: none;
-    box-shadow: none;
-    border-color: #c4c4c4;
-    background-color: #fff;
-    background-image: linear-gradient(to right, #c4c4c4 0, #c4c4c4 2px, transparent 2px, transparent 12px, #c4c4c4 12px, #c4c4c4 14px), linear-gradient(to right, #c4c4c4 0, #c4c4c4 2px);
-    background-size: 14px 14px, 2px 20px;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 40px;
-    border-width: 2px;
-    border-style: solid;
-    border-radius: 999em
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  outline: none;
+  box-shadow: none;
+  border-color: #c4c4c4;
+  background-color: #fff;
+  background-image: linear-gradient(to right, #c4c4c4 0, #c4c4c4 2px, transparent 2px, transparent 12px, #c4c4c4 12px, #c4c4c4 14px), linear-gradient(to right, #c4c4c4 0, #c4c4c4 2px);
+  background-size: 14px 14px, 2px 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 40px;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 999em
 }
 
 input[type="range"]:focus::-webkit-slider-thumb,
 input[type="range"]:active::-webkit-slider-thumb {
-    border-color: #2996cc;
-    background-color: #fff;
-    background-image: -webkit-linear-gradient(left, #2996cc 0, #2996cc 2px, transparent 2px, transparent 12px, #2996cc 12px, #2996cc 14px), -webkit-linear-gradient(left, #2996cc 0, #2996cc 2px);
-    background-image: linear-gradient(to right, #2996cc 0, #2996cc 2px, transparent 2px, transparent 12px, #2996cc 12px, #2996cc 14px), linear-gradient(to right, #2996cc 0, #2996cc 2px);
-    background-size: 14px 14px, 2px 20px;
-    background-repeat: no-repeat;
-    background-position: center
+  border-color: #2996cc;
+  background-color: #fff;
+  background-image: -webkit-linear-gradient(left, #2996cc 0, #2996cc 2px, transparent 2px, transparent 12px, #2996cc 12px, #2996cc 14px), -webkit-linear-gradient(left, #2996cc 0, #2996cc 2px);
+  background-image: linear-gradient(to right, #2996cc 0, #2996cc 2px, transparent 2px, transparent 12px, #2996cc 12px, #2996cc 14px), linear-gradient(to right, #2996cc 0, #2996cc 2px);
+  background-size: 14px 14px, 2px 20px;
+  background-repeat: no-repeat;
+  background-position: center
 }
 
 input[type="range"]:focus::-moz-range-thumb,
 input[type="range"]:active::-moz-range-thumb {
-    border-color: #2996cc;
-    background-color: #fff;
-    background-image: linear-gradient(to right, #2996cc 0, #2996cc 2px, transparent 2px, transparent 12px, #2996cc 12px, #2996cc 14px), linear-gradient(to right, #2996cc 0, #2996cc 2px);
-    background-size: 14px 14px, 2px 20px;
-    background-repeat: no-repeat;
-    background-position: center
+  border-color: #2996cc;
+  background-color: #fff;
+  background-image: linear-gradient(to right, #2996cc 0, #2996cc 2px, transparent 2px, transparent 12px, #2996cc 12px, #2996cc 14px), linear-gradient(to right, #2996cc 0, #2996cc 2px);
+  background-size: 14px 14px, 2px 20px;
+  background-repeat: no-repeat;
+  background-position: center
 }
 
 input[type="range"]:focus::-ms-thumb,
 input[type="range"]:active::-ms-thumb {
-    border-color: #2996cc;
-    background-color: #fff;
-    background-image: linear-gradient(to right, #2996cc 0, #2996cc 2px, transparent 2px, transparent 12px, #2996cc 12px, #2996cc 14px), linear-gradient(to right, #2996cc 0, #2996cc 2px);
-    background-size: 14px 14px, 2px 20px;
-    background-repeat: no-repeat;
-    background-position: center
+  border-color: #2996cc;
+  background-color: #fff;
+  background-image: linear-gradient(to right, #2996cc 0, #2996cc 2px, transparent 2px, transparent 12px, #2996cc 12px, #2996cc 14px), linear-gradient(to right, #2996cc 0, #2996cc 2px);
+  background-size: 14px 14px, 2px 20px;
+  background-repeat: no-repeat;
+  background-position: center
 }
 
 // todo insert theming
 .purple-theme input[type="range"]::-webkit-slider-thumb {
-    border-color: #8033cc;
-    background-color: #fff;
-    background-image: -webkit-linear-gradient(left, #8033cc 0, #8033cc 2px, transparent 2px, transparent 12px, #8033cc 12px, #8033cc 14px), -webkit-linear-gradient(left, #8033cc 0, #8033cc 2px);
-    background-image: linear-gradient(to right, #8033cc 0, #8033cc 2px, transparent 2px, transparent 12px, #8033cc 12px, #8033cc 14px), linear-gradient(to right, #8033cc 0, #8033cc 2px);
-    background-size: 14px 14px, 2px 20px;
-    background-repeat: no-repeat;
-    background-position: center
+  border-color: #8033cc;
+  background-color: #fff;
+  background-image: -webkit-linear-gradient(left, #8033cc 0, #8033cc 2px, transparent 2px, transparent 12px, #8033cc 12px, #8033cc 14px), -webkit-linear-gradient(left, #8033cc 0, #8033cc 2px);
+  background-image: linear-gradient(to right, #8033cc 0, #8033cc 2px, transparent 2px, transparent 12px, #8033cc 12px, #8033cc 14px), linear-gradient(to right, #8033cc 0, #8033cc 2px);
+  background-size: 14px 14px, 2px 20px;
+  background-repeat: no-repeat;
+  background-position: center
 }
 
 .purple-theme input[type="range"]::-moz-range-thumb {
-    border-color: #8033cc;
-    background-color: #fff;
-    background-image: linear-gradient(to right, #8033cc 0, #8033cc 2px, transparent 2px, transparent 12px, #8033cc 12px, #8033cc 14px), linear-gradient(to right, #8033cc 0, #8033cc 2px);
-    background-size: 14px 14px, 2px 20px;
-    background-repeat: no-repeat;
-    background-position: center
+  border-color: #8033cc;
+  background-color: #fff;
+  background-image: linear-gradient(to right, #8033cc 0, #8033cc 2px, transparent 2px, transparent 12px, #8033cc 12px, #8033cc 14px), linear-gradient(to right, #8033cc 0, #8033cc 2px);
+  background-size: 14px 14px, 2px 20px;
+  background-repeat: no-repeat;
+  background-position: center
 }
 
 .purple-theme input[type="range"]::-ms-thumb {
-    border-color: #8033cc;
-    background-color: #fff;
-    background-image: linear-gradient(to right, #8033cc 0, #8033cc 2px, transparent 2px, transparent 12px, #8033cc 12px, #8033cc 14px), linear-gradient(to right, #8033cc 0, #8033cc 2px);
-    background-size: 14px 14px, 2px 20px;
-    background-repeat: no-repeat;
-    background-position: center
+  border-color: #8033cc;
+  background-color: #fff;
+  background-image: linear-gradient(to right, #8033cc 0, #8033cc 2px, transparent 2px, transparent 12px, #8033cc 12px, #8033cc 14px), linear-gradient(to right, #8033cc 0, #8033cc 2px);
+  background-size: 14px 14px, 2px 20px;
+  background-repeat: no-repeat;
+  background-position: center
 }
 
 .validated input[type="range"]:focus::-webkit-slider-thumb,
 .validated input[type="range"]:active::-webkit-slider-thumb,
 input[type="range"].validated:focus::-webkit-slider-thumb,
 input[type="range"].validated:active::-webkit-slider-thumb {
-    border-color: #24b524;
-    background-color: #fff;
-    background-image: -webkit-linear-gradient(left, #24b524 0, #24b524 2px, transparent 2px, transparent 12px, #24b524 12px, #24b524 14px), -webkit-linear-gradient(left, #24b524 0, #24b524 2px);
-    background-image: linear-gradient(to right, #24b524 0, #24b524 2px, transparent 2px, transparent 12px, #24b524 12px, #24b524 14px), linear-gradient(to right, #24b524 0, #24b524 2px);
-    background-size: 14px 14px, 2px 20px;
-    background-repeat: no-repeat;
-    background-position: center
+  border-color: #24b524;
+  background-color: #fff;
+  background-image: -webkit-linear-gradient(left, #24b524 0, #24b524 2px, transparent 2px, transparent 12px, #24b524 12px, #24b524 14px), -webkit-linear-gradient(left, #24b524 0, #24b524 2px);
+  background-image: linear-gradient(to right, #24b524 0, #24b524 2px, transparent 2px, transparent 12px, #24b524 12px, #24b524 14px), linear-gradient(to right, #24b524 0, #24b524 2px);
+  background-size: 14px 14px, 2px 20px;
+  background-repeat: no-repeat;
+  background-position: center
 }
 
 .validated input[type="range"]:focus::-moz-range-thumb,
 .validated input[type="range"]:active::-moz-range-thumb,
 input[type="range"].validated:focus::-moz-range-thumb,
 input[type="range"].validated:active::-moz-range-thumb {
-    border-color: #24b524;
-    background-color: #fff;
-    background-image: linear-gradient(to right, #24b524 0, #24b524 2px, transparent 2px, transparent 12px, #24b524 12px, #24b524 14px), linear-gradient(to right, #24b524 0, #24b524 2px);
-    background-size: 14px 14px, 2px 20px;
-    background-repeat: no-repeat;
-    background-position: center
+  border-color: #24b524;
+  background-color: #fff;
+  background-image: linear-gradient(to right, #24b524 0, #24b524 2px, transparent 2px, transparent 12px, #24b524 12px, #24b524 14px), linear-gradient(to right, #24b524 0, #24b524 2px);
+  background-size: 14px 14px, 2px 20px;
+  background-repeat: no-repeat;
+  background-position: center
 }
 
 .validated input[type="range"]:focus::-ms-thumb,
 .validated input[type="range"]:active::-ms-thumb,
 input[type="range"].validated:focus::-ms-thumb,
 input[type="range"].validated:active::-ms-thumb {
-    border-color: #24b524;
-    background-color: #fff;
-    background-image: linear-gradient(to right, #24b524 0, #24b524 2px, transparent 2px, transparent 12px, #24b524 12px, #24b524 14px), linear-gradient(to right, #24b524 0, #24b524 2px);
-    background-size: 14px 14px, 2px 20px;
-    background-repeat: no-repeat;
-    background-position: center
+  border-color: #24b524;
+  background-color: #fff;
+  background-image: linear-gradient(to right, #24b524 0, #24b524 2px, transparent 2px, transparent 12px, #24b524 12px, #24b524 14px), linear-gradient(to right, #24b524 0, #24b524 2px);
+  background-size: 14px 14px, 2px 20px;
+  background-repeat: no-repeat;
+  background-position: center
 }
 
 .error input[type="range"]:focus::-webkit-slider-thumb,
 .error input[type="range"]:active::-webkit-slider-thumb,
 input[type="range"].error:focus::-webkit-slider-thumb,
 input[type="range"].error:active::-webkit-slider-thumb {
-    border-color: #df3320;
-    background-color: #fff;
-    background-image: -webkit-linear-gradient(left, #df3320 0, #df3320 2px, transparent 2px, transparent 12px, #df3320 12px, #df3320 14px), -webkit-linear-gradient(left, #df3320 0, #df3320 2px);
-    background-image: linear-gradient(to right, #df3320 0, #df3320 2px, transparent 2px, transparent 12px, #df3320 12px, #df3320 14px), linear-gradient(to right, #df3320 0, #df3320 2px);
-    background-size: 14px 14px, 2px 20px;
-    background-repeat: no-repeat;
-    background-position: center
+  border-color: #df3320;
+  background-color: #fff;
+  background-image: -webkit-linear-gradient(left, #df3320 0, #df3320 2px, transparent 2px, transparent 12px, #df3320 12px, #df3320 14px), -webkit-linear-gradient(left, #df3320 0, #df3320 2px);
+  background-image: linear-gradient(to right, #df3320 0, #df3320 2px, transparent 2px, transparent 12px, #df3320 12px, #df3320 14px), linear-gradient(to right, #df3320 0, #df3320 2px);
+  background-size: 14px 14px, 2px 20px;
+  background-repeat: no-repeat;
+  background-position: center
 }
 
 .error input[type="range"]:focus::-moz-range-thumb,
 .error input[type="range"]:active::-moz-range-thumb,
 input[type="range"].error:focus::-moz-range-thumb,
 input[type="range"].error:active::-moz-range-thumb {
-    border-color: #df3320;
-    background-color: #fff;
-    background-image: linear-gradient(to right, #df3320 0, #df3320 2px, transparent 2px, transparent 12px, #df3320 12px, #df3320 14px), linear-gradient(to right, #df3320 0, #df3320 2px);
-    background-size: 14px 14px, 2px 20px;
-    background-repeat: no-repeat;
-    background-position: center
+  border-color: #df3320;
+  background-color: #fff;
+  background-image: linear-gradient(to right, #df3320 0, #df3320 2px, transparent 2px, transparent 12px, #df3320 12px, #df3320 14px), linear-gradient(to right, #df3320 0, #df3320 2px);
+  background-size: 14px 14px, 2px 20px;
+  background-repeat: no-repeat;
+  background-position: center
 }
 
 .error input[type="range"]:focus::-ms-thumb,
 .error input[type="range"]:active::-ms-thumb,
 input[type="range"].error:focus::-ms-thumb,
 input[type="range"].error:active::-ms-thumb {
-    border-color: #df3320;
-    background-color: #fff;
-    background-image: linear-gradient(to right, #df3320 0, #df3320 2px, transparent 2px, transparent 12px, #df3320 12px, #df3320 14px), linear-gradient(to right, #df3320 0, #df3320 2px);
-    background-size: 14px 14px, 2px 20px;
-    background-repeat: no-repeat;
-    background-position: center
+  border-color: #df3320;
+  background-color: #fff;
+  background-image: linear-gradient(to right, #df3320 0, #df3320 2px, transparent 2px, transparent 12px, #df3320 12px, #df3320 14px), linear-gradient(to right, #df3320 0, #df3320 2px);
+  background-size: 14px 14px, 2px 20px;
+  background-repeat: no-repeat;
+  background-position: center
 }
 
 .disabled input[type="range"],
 input[type="range"].disabled,
 input[type="range"]:disabled {
-    opacity: 1;
-    cursor: not-allowed;
-    pointer-events: none
+  opacity: 1;
+  cursor: not-allowed;
+  pointer-events: none
 }
 
 .disabled input[type="range"]::-webkit-slider-thumb,
 input[type="range"].disabled::-webkit-slider-thumb,
 input[type="range"]:disabled::-webkit-slider-thumb {
-    background-color: #fafafa !important
+  background-color: #fafafa !important
 }
 
 .disabled input[type="range"]::-moz-range-thumb,
 input[type="range"].disabled::-moz-range-thumb,
 input[type="range"]:disabled::-moz-range-thumb {
-    background-color: #fafafa !important
+  background-color: #fafafa !important
 }
 
 .disabled input[type="range"]::-ms-thumb,
 input[type="range"].disabled::-ms-thumb,
 input[type="range"]:disabled::-ms-thumb {
-    background-color: #fafafa !important
+  background-color: #fafafa !important
 }
 
 ::-moz-selection {
-    color: #282d35;
-    text-shadow: none;
-    background: #cce7f5
+  color: #282d35;
+  text-shadow: none;
+  background: #cce7f5
 }
 
 ::selection {
-    color: #282d35;
-    text-shadow: none;
-    background: #cce7f5
+  color: #282d35;
+  text-shadow: none;
+  background: #cce7f5
 }

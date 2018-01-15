@@ -49,15 +49,15 @@
   .h5,
   h6,
   .h6 {
-    font-weight: $font-weight-normal;
+    font-weight: $font-weight-text;
   }
 
   h2,
   .h2 {
     font-size: 14px;
-    font-weight: $font-weight-bold;
+    font-weight: $font-weight-medium;
     letter-spacing: 1px;
-    line-height: $line-height-base;
+    line-height: $space-line;
     margin-bottom: 0;
     text-transform: uppercase;
   }
@@ -120,5 +120,29 @@
   .tucked-hero .hero {
     margin-top: -$menu-pad-top-desktop;
     padding-top: $menu-pad-top-desktop;
+  }
+}
+
+.hero-inline-image-to-bg .hero,
+.hero-inline-image-to-bg .banner {
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: $width-desktop - 1px) {
+  .hero-inline-image-to-bg .banner {
+    background-image: none !important; // scss-lint:disable ImportantRule
+  }
+}
+
+.hero-inline-image-to-bg .hero {
+  background-position: center bottom;
+  padding-bottom: 0;
+}
+
+@media (min-width: $width-desktop) {
+  .hero-inline-image-to-bg .hero {
+    background-image: none;
+    overflow: hidden;
   }
 }
