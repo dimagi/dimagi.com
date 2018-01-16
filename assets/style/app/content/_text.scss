@@ -65,3 +65,35 @@
 .normalcase {
   text-transform: none !important; //scss-lint:disable ImportantRule
 }
+
+@mixin _make-font-sizes($_size: null, $_at-or-until: at) {
+  $_suffix: if($_size != null, -#{$_at-or-until}-#{$_size}, null);
+  .font-size-small#{$_suffix} {
+    font-size: $font-size-small  !important; //scss-lint:disable ImportantRule
+    line-height: $space-line !important; //scss-lint:disable ImportantRule
+  }
+  .font-size-medium#{$_suffix} {
+    font-size: $font-size-medium !important; //scss-lint:disable ImportantRule
+    line-height: $space-line !important; //scss-lint:disable ImportantRule
+  }
+  .font-size-large#{$_suffix} {
+    font-size: $font-size-large  !important; //scss-lint:disable ImportantRule
+    line-height: $space-line !important; //scss-lint:disable ImportantRule
+  }
+  .font-size-extra-large#{$_suffix} {
+    font-size: $font-size-extra-large  !important; //scss-lint:disable ImportantRule
+    line-height: $space-line !important; //scss-lint:disable ImportantRule
+  }
+}
+
+@include _make-font-sizes();
+
+@each $_size, $_width in $widths-by-size {
+  @media (min-width: $_width) {
+    @include _make-font-sizes($_size);
+  }
+  @media (max-width: $_width - 1px) {
+    @include _make-font-sizes($_size, until);
+  }
+}
+
