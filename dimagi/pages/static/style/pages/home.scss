@@ -14,15 +14,16 @@
   @include make-bg(hero, '../../pages/home/hero', $_base-height, $_height-by-size);
 }
 
-.awards {
-  $_base-height: 482px;
+.build {
+  $_base-height: 122px;
   $_height-by-size: (
-    small: 554px,
-    medium: 574px,
-    large: 629px,
-    extra-large: 589px,
+    small: 186px,
+    medium: 298px,
+    large: 362px,
+    extra-large: 442px,
   );
-  @include make-bg(image, '../../pages/home/phone', $_base-height, $_height-by-size);
+  width: 100%;
+  @include make-bg(image, '../../pages/home/build', $_base-height, $_height-by-size);
 }
 
 .video-intro .image {
@@ -41,4 +42,31 @@
 
 .workforce .image.testimonial3 {
   @include background-cover('../../pages/home/workforce-3.jpg');
+}
+
+.awards {
+  $_base-height: 315px;
+  $_height-by-size: (
+    small: 360px,
+    medium: 750px,
+    large: 655px,
+    extra-large: 610px,
+  );
+  @include make-bg(image, '../../pages/home/awards', $_base-height, $_height-by-size);
+
+  @media (min-width: $width-desktop) {
+    .off-grid {
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      right: auto;
+      width: 100%;
+      z-index: 1;
+    }
+
+    .content {
+      position: relative;
+      z-index: 2;
+    }
+  }
 }

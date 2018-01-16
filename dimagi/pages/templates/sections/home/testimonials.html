@@ -1,11 +1,11 @@
 {% load i18n %}
 
-<section class="testimonials blue-bg white"
+<section class="testimonials border-top white-bg"
          id="testimonials">
   <div class="content pad-top-medium pad-bottom-large">
 
     <div class="intro">
-      <h2 class="normalcase white">
+      <h2 class="normalcase">
         {% blocktrans %}
           What Our Customers Are Saying
         {% endblocktrans %}
@@ -19,7 +19,38 @@
     </div>{# .intro #}
 
     <div class="column">
-      <blockquote class="align-center-at-medium">
+
+      <div class="content pad-bottom-small align-center">
+        <div class="grid-4 grid-6-at-large grid-align-center grid-flex-at-medium">
+
+          <div class="column">
+            {% include "svg/home/partner/gates.html" %}
+          </div>{# .column #}
+
+          <div class="column">
+            {% include "svg/home/partner/usaid.html" %}
+          </div>{# .column #}
+
+          <div class="column">
+            {% include "svg/home/partner/agimpact.html" %}
+          </div>{# .column #}
+
+          <div class="column">
+            {% include "svg/home/partner/tdh.html" %}
+          </div>{# .column #}
+
+          <div class="column hide-until-large">
+            {% include "svg/home/partner/usaid.html" %}
+          </div>{# .column #}
+
+          <div class="column hide-until-large">
+            {% include "svg/home/partner/gates.html" %}
+          </div>{# .column #}
+
+        </div>{# .grid-4 #}
+      </div>{# .content #}
+
+      <blockquote class="align-center blue-bg pad-small white">
         <p>
           {% blocktrans %}
             We used to run paper-based impact evaluation and monitoring and

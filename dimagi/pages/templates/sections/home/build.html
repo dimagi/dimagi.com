@@ -19,37 +19,19 @@
           build in multiple languages, and much more.
         {% endblocktrans %}
       </p>
-      <p>
-        <a class="arrow"
-           href="{% url 'products_commcare' %}#app-builder">
-          {% blocktrans %}
-            Learn about CommCare's powerful App Builder
-          {% endblocktrans %}
-        </a>
-      </p>
     </div>{# .intro #}
 
     <div class="content-width-large pad-horz-small-at-small pad-horz-none-at-extra-large gap-top-small">
-      <div class="grid-flex-at-medium">
-
-        <div class="column flex-valign-middle-at-medium">
-          <div class="device-container browser-ui">
-            <div class="screen">
-              <img src="{% static 'pages/home/app-builder.jpg' %}">
-            </div>{# .screen #}
-          </div>{# .device-container.browser-ui #}
-        </div>{# .column #}
-
-        <div class="column">
-          <div class="device-container mobile-ui">
-            <div class="screen">
-              <img src="{% static 'pages/home/mobile-screen.jpg' %}">
-            </div>{# .screen #}
-          </div>{# .device-container.mobile-ui #}
-        </div>{# .content #}
-
-      </div>{# .grid-flex-at-medium #}
+      <div class="image"></div>
     </div>{# .content-width-large #}
 
+    <p class="align-center pad-top-small">
+      <a class="arrow"
+         href="{% url 'products_commcare' %}#app-builder">
+        {% blocktrans %}
+          Learn about CommCare's powerful App Builder
+        {% endblocktrans %}
+      </a>
+    </p>
   </div>{# .content #}
 </section>
