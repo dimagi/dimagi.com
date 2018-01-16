@@ -77,6 +77,9 @@
   );
 
   @include make-carousel-slide(image-agimpact, $_sizes, '../../../pages/products/commcare/testimonial1.jpg');
+  @include make-carousel-slide(image-nou-kod, $_sizes, '../../../pages/products/commcare/testimonial2.jpg');
+  @include make-carousel-slide(image-delivery-services, $_sizes, '../../../pages/products/commcare/testimonial3.jpg');
+  @include make-carousel-slide(image-cleaning-data, $_sizes, '../../../pages/products/commcare/testimonial4.jpg');
 }
 
 
