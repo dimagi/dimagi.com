@@ -32,7 +32,6 @@ STAFF = Category(
     slug="staff",
 )
 
-
 ARCHIVE = Category(
     name=ugettext_lazy("Archive"),
     description=ugettext_lazy(
