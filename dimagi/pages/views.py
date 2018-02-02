@@ -39,11 +39,6 @@ def toolkits(request):
 
 
 @no_index
-def blog(request):
-    return render(request, 'pages/blog.html')
-
-
-@no_index
 def about(request):
     return render(request, 'pages/about.html')
 

@@ -1,0 +1,35 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+
+<section class="post-content">
+  <div class="content content-width-medium pad-vert-medium">
+    <h1>
+      {{ post.title }}
+    </h1>
+    <p>
+      {% include 'blog/partials/social.html' %}
+    </p>
+    <div>
+      {{ post.content|safe }}
+    </div>
+    <div class="border-top gap-top-line pad-top-small theme-border">
+      <div class="grid-2">
+        <div class="column">
+          <p>
+            {% include 'blog/partials/social.html' %}
+          </p>
+        </div>
+        <div class="column align-right">
+          {% blocktrans %}
+            Read more from:
+          {% endblocktrans %}
+          <br />
+          <a href="{% url 'blog_archive' post.category.slug %}">
+            {{ post.category.name }}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>{# .content #}
+</section>

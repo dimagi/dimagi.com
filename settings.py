@@ -30,6 +30,7 @@ if AWS_ENABLED:
 PROJECT_APPS = [
     'dimagi.utils',
     'dimagi.pages',
+    'dimagi.blog',
 ]
 INSTALLED_APPS = DEFAULT_APPS + THIRD_PARTY_APPS + PROJECT_APPS
 
@@ -156,3 +157,11 @@ if AWS_ENABLED:
     STATICFILES_STORAGE = "dimagi.storage.StaticFileStorage"
     COMPRESS_STORAGE = "dimagi.storage.CachedS3BotoStorage"
     COMPRESS_CSS_COMPRESSOR = 'dimagi.compress.S3CssCompressor'
+
+WORDPRESS_API_URL = env.str('WORDPRESS_API_URL', default='')
+WORDPRESS_API_USER_AGENT = env.str(
+    'WORDPRESS_API_USER_AGENT',
+    default='dimagidotcom/prod'
+)
+
+SITE_URL = env.str('SITE_URL', default='http://dimagi.com')

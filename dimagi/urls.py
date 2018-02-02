@@ -1,5 +1,5 @@
 from __future__ import absolute_import
-from django.conf.urls import url
+from django.conf.urls import url, include
 import dimagi.pages.views as pages
 
 
@@ -18,8 +18,8 @@ urlpatterns = [
         name='case_studies'),
     url(r'^toolkits/$', pages.toolkits,
         name='toolkits'),
-    url(r'^blog/$', pages.blog,
-        name='blog'),
+    url(r'^blog/',
+        include('dimagi.blog.urls')),
     url(r'^about/$', pages.about,
         name='about'),
     url(r'^careers/$', pages.careers,

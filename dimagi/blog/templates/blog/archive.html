@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block body_class %}blog-page orange-theme tucked-hero{% endblock %}
+
+{% block stylesheets %}
+  {% compress css %}
+    <link href="{% sass_src 'style/blog/home.scss' %}" rel="stylesheet" media="screen" type="text/css" />
+  {% endcompress %}
+{% endblock %}
+
+{% block hero %}
+<section class="hero hero-blog" id="hero">
+  <div class="content content-width-large inverted align-center display-flex flex-valign-middle expand-vertical offset-top-small flex-align-center">
+    <div class="copy expand position-relative">
+
+      <h2 class="gap-bottom-line">
+        {% blocktrans %}
+          The ICT4D Corner
+        {% endblocktrans %}
+      </h2>
+
+      <h1>
+        {{ category.name }}
+      </h1>
+
+      <p class="headline content-width-small">
+        {{ category.description|safe }}
+      </p>{# .headline #}
+
+    </div>{# .copy #}
+  </div>{# .content #}
+</section>
+{% endblock %}
+
+{% block content %}
+  <section class="blog-container">
+    {% include 'blog/sections/sub_nav.html' %}
+    {% include 'blog/sections/archive_page.html' %}
+    {% include 'blog/sections/categories.html' %}
+  </section>
+{% endblock %}

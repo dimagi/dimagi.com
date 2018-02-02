@@ -1,0 +1,89 @@
+from urllib.parse import quote
+
+from django.urls import reverse
+from django.utils.dateparse import parse_datetime
+
+from dimagi.blog.categories import get_category_by_slug
+from dimagi.utils.config import setting
+
+
+class BlogPost(object):
+
+    def __init__(self, data):
+        self.title = data['title']
+
+        self.category = get_category_by_slug(data['category'])
+
+        self.authors = map(lambda x: Author(x), data['authors'])
+
+        self.date = parse_datetime(data['date_gmt'])
+        self.slug = data['slug']
+        self.thumbnail = data['thumbnail']
+        self.wistia = data['wistia']
+
+        self.excerpt = data.get('excerpt')
+        self.content = data.get('content')
+
+    def __str__(self):
+        return "[{category} - {date}] {title}".format(
+            category=self.category.slug,
+            date=self.date_human,
+            title=self.title,
+        )
+
+    @property
+    def date_human(self):
+        return self.date.strftime("%B %-d, %Y")
+
+    @property
+    def url(self):
+        return reverse('blog_post', args=[self.category.slug, self.slug])
+
+    @property
+    def url_share(self):
+        return "{}{}".format(
+            setting('SITE_URL'),
+            self.url
+        )
+
+    @property
+    def url_twitter(self):
+        hashtags = [
+            'ict4d',
+            'dimagi',
+            'MobileDataCollection'
+        ]
+        return (
+            "https://twitter.com/share?"
+            "url={url}&"
+            "via=dimagi&"
+            "hashtags={hashtags}&"
+            "text={text}&".format(
+                url=quote(self.url_share).replace('/', '%2F'),
+                hashtags="%2C".join(hashtags),
+                text=quote(self.title),
+            ))
+
+    @property
+    def url_facebook(self):
+        return (
+            "https://www.facebook.com/sharer.php?"
+            "u={url}".format(
+                url=quote(self.url_share).replace('/', '%2F'),
+            ))
+
+    @property
+    def url_linkedin(self):
+        return (
+            "https://www.linkedin.com/cws/share?"
+            "url={url}".format(
+                url=quote(self.url_share).replace('/', '%2F'),
+            ))
+
+
+class Author(object):
+
+    def __init__(self, data):
+        self.image = data['image']
+        self.name = data['name']
+        self.role = data['role']

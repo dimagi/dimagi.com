@@ -1,0 +1,27 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="{% if not hide_class %}border-vert accent-gray-bg {% endif %}blog-cta"
+         id="cta">
+  <div class="content pad-vert-medium align-center">
+    <h3>
+      {% blocktrans %}
+        Get the latest news delivered<br />
+        straight to your inbox
+      {% endblocktrans %}
+    </h3>
+    <form action="#"
+          class="grid-2-at-medium content-width-medium pad-vert-base"
+          method="post">
+      <div class="col two-thirds-at-medium">
+        <input name="email"
+               placeholder="{% trans 'Enter your email to subscribe' %}"
+               type="email">
+      </div>
+      <div class="col one-third-at-medium">
+        <input class="button expand"
+               type="submit"
+               value="{% trans 'Get News' %}">
+      </div>
+    </form>
+</section>

@@ -1,0 +1,37 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="blog-latest" id="latest">
+  <div class="content pad-vert-medium">
+
+    <div class="grid-2 grid-row-space-none grid-valign-bottom">
+
+      <div class="column">
+        <h3>
+          {% blocktrans %}
+          Popular Articles
+          {% endblocktrans %}
+        </h3>
+      </div>{# .column #}
+
+      <div class="column align-right">
+        <a class="arrow"
+           href="{% url 'blog_archive' 'archive' %}">
+          {% blocktrans %}
+            View All
+          {% endblocktrans %}
+        </a>
+      </div>{# .column #}
+
+    </div>{# .grid-2 #}
+
+    <div class="grid-2-at-medium grid-row-space-line gap-top-small">
+      {% for post in popular %}
+        <div class="column">
+          {% include "blog/partials/summary.html" with post=post ratio='rect' %}
+        </div>{# .column #}
+      {% endfor %}
+    </div>{# .grid-2-at-medium #}
+
+  </div>{# .content #}
+</section>

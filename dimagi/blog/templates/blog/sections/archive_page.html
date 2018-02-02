@@ -1,0 +1,44 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="blog-latest" id="latest">
+  <div class="content pad-vert-medium">
+
+    <div class="grid-4-at-medium grid-row-space-small">
+      {% for post in posts %}
+        <div class="column">
+          {% include "blog/partials/summary.html" with post=post ratio='square' hide_cat=True %}
+        </div>
+      {% endfor %}
+    </div>
+
+    <div class="border-top theme-border gap-top-line pad-top-small">
+      <div class="grid-flex">
+        <div class="content align-left">
+          {% if previous_url %}
+          <a class="arrow-left" href="{{ previous_url }}">
+            {% trans "Newer" %}
+          </a>
+          {% endif %}
+        </div>
+        <div class="content align-center">
+          <h4>
+            {% blocktrans %}
+              Page {{ page }}
+            {% endblocktrans %}
+          </h4>
+        </div>
+        <div class="content align-right">
+          {% if next_url %}
+          <a class="arrow" href="{{ next_url }}">
+            {% trans "Older" %}
+          </a>
+          {% endif %}
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>{# .content #}
+</section>

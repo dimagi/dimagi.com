@@ -1,0 +1,39 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="border-top accent-gray-bg blog-categories"
+         id="categories">
+  <div class="content pad-vert-medium align-center">
+    <div class="intro">
+      <h3>
+        {% blocktrans %}
+          Categories
+        {% endblocktrans %}
+      </h3>
+    </div>
+
+  <div class="grid-3-at-medium row-equal-heights gap-bottom-small">
+    {% for cat in categories %}
+      <div class="column">
+        <a class="tile"
+           href="{% url 'blog_archive' cat.slug %}">
+          <div class="gap-bottom-base">
+          </div>
+          <h5>
+            {{ cat.name }}
+          </h5>
+          <p class="body-color">
+            {{ cat.description|safe }}
+          </p>
+          <p class="cta">
+            <span class="link arrow orange">
+              {% blocktrans %}
+                Browse Articles
+              {% endblocktrans %}
+            </span>
+          </p>
+        </a>
+      </div>{# .column #}
+    {% endfor %}
+  </div>{# .grid-3-at-medium #}
+</section>
