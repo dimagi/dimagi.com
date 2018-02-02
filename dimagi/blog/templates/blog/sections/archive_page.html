@@ -22,11 +22,16 @@
           {% endif %}
         </div>
         <div class="content align-center">
-          <h4>
+          <h4 class="gap-bottom-base">
             {% blocktrans %}
-              Page {{ page }}
+              Page {{ page }} of {{ total_pages }}
             {% endblocktrans %}
           </h4>
+          <p class="gap-top-base">
+            {% blocktrans %}
+              Showing {{ from_post }} - {{ to_post }} of {{ total_posts }} articles
+            {% endblocktrans %}
+          </p>
         </div>
         <div class="content align-right">
           {% if next_url %}
