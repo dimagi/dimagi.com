@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block body_class %}sectors-page tucked-hero {% block sector_theme %}{% endblock %}{% endblock %}
+
+{% block hero %}
+<section class="hero"
+         id="hero">
+  <div class="content content-width-large inverted align-center display-flex flex-valign-middle expand-vertical offset-top-small flex-align-center">
+    <div class="copy expand position-relative">
+
+      <h2 class="gap-bottom-line">
+        {% blocktrans %}
+          Sectors
+        {% endblocktrans %}
+      </h2>
+
+      <h1>
+        {% block sector_name %}{% endblock %}
+      </h1>
+
+      <p class="headline content-width-small">
+        {% block sector_description %}{% endblock %}
+      </p>{# .headline #}
+
+    </div>{# .copy #}
+  </div>{# .content #}
+</section>
+{% endblock %}

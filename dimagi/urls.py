@@ -20,6 +20,8 @@ urlpatterns = [
         name='toolkits'),
     url(r'^blog/',
         include('dimagi.blog.urls')),
+    url(r'^sectors/',
+        include('dimagi.sectors.urls')),
     url(r'^about/$', pages.about,
         name='about'),
     url(r'^careers/$', pages.careers,

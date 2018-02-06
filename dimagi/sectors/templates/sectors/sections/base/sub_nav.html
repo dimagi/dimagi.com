@@ -1,0 +1,43 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="sub-nav"
+         id="sub-nav">
+  <div class="content">
+    <div class="actions">
+      <a class="primary"
+         href="{{ URL_TRIAL }}">
+        <span>
+          {% blocktrans %}
+            Start Trial
+          {% endblocktrans %}
+        </span>
+      </a>
+    </div>{# .actions #}
+    <a class="prompt-link"
+       href="#">
+      {% blocktrans %}
+        Browse
+      {% endblocktrans %}
+    </a>
+    <div class="destinations">
+      <div class="content">
+        <a href="#overview">
+          {% blocktrans %}
+            Overview
+          {% endblocktrans %}
+        </a>
+        <a href="#projects">
+          {% blocktrans %}
+            Projects
+          {% endblocktrans %}
+        </a>
+        <a href="#case-studies">
+          {% blocktrans %}
+            Case Studies
+          {% endblocktrans %}
+        </a>
+      </div>{# .content #}
+    </div>{# .destinations #}
+  </div>{# .content #}
+</section>

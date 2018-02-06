@@ -1,0 +1,38 @@
+{% extends "sectors/sections/base/two_column.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block section_title %}{% blocktrans %}
+  Child Health Clinics
+{% endblocktrans %}{% endblock %}
+
+{% block section_content %}
+  <p>
+    <strong>{% trans "Problem" %}</strong>:
+    {% blocktrans %}
+      Mechanisms are often not in place to support referrals;
+      clinics often lack medicine to treat child illness.
+    {% endblocktrans %}
+  </p>
+  <ul class="check-list gap-bottom-small">
+    <li>
+      {% blocktrans %}
+        Child <strong>health records</strong> can be sent to referral facilities,
+        decreasing the likelihood of children falling out of the
+        program due to health worker non-compliance or attrition.
+      {% endblocktrans %}
+    </li>
+    <li>
+      {% blocktrans %}
+        Applications consider <strong>available stock</strong> while performing
+        automatic prescription in accordance with IMCI, based
+        on entered symptoms.
+      {% endblocktrans %}
+    </li>
+    <li>
+      {% blocktrans %}
+        <strong>SMS interactions</strong> allow stockouts to be reported before they occur.
+      {% endblocktrans %}
+    </li>
+  </ul>
+{% endblock %}

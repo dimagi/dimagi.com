@@ -1,0 +1,54 @@
+{% extends "sectors/sections/base/two_column.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block section_title %}{% blocktrans %}
+  Child Health Programs
+{% endblocktrans %}{% endblock %}
+
+{% block section_content %}
+  <p>
+    <strong>{% trans "Problem" %}</strong>:
+    {% blocktrans %}
+      Child health programs require extensive health worker trainings.
+      It is difficult to share child health data among stakeholders.
+    {% endblocktrans %}
+  </p>
+  <ul class="check-list gap-bottom-small">
+    <li>
+      {% blocktrans %}
+        <strong>Mobile applications</strong> can supplement health worker trainings
+        with multimedia-enabled training modules
+      {% endblocktrans %}
+    </li>
+    <li>
+      {% blocktrans %}
+        Programs can <strong>remotely update</strong> IMCI and CCM
+        applications, enabling smoother programmatic adjustments
+      {% endblocktrans %}
+    </li>
+    <li>
+      {% blocktrans %}
+        <strong>Supervisors</strong> can detect data irregularities and
+        oversee health workers’ activities, including frequency of visits,
+        speed of follow up, number of cases identified, length of counseling
+        sessions, and health workers that aren’t adhering to IMCI and
+        CCM protocols
+      {% endblocktrans %}
+    </li>
+    <li>
+      {% blocktrans %}
+        <strong>Program managers</strong> can conduct health surveillance,
+        monitoring, and evaluation of IMCI/ CCM programs, activating timely
+        response where IMCI implementation is not successful
+      {% endblocktrans %}
+    </li>
+    <li>
+      {% blocktrans %}
+        <strong>Ministries of health</strong> can access easy-to-read
+        reports on child health data by geographic area and make the
+        appropriate programmatic decisions
+      {% endblocktrans %}
+    </li>
+  </ul>
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends "sectors/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block sector_theme %}
+  purple-theme
+{% endblock %}
+
+{% block sector_name %}{% blocktrans %}
+  Child Health
+{% endblocktrans %}{% endblock %}
+
+{% block sector_description %}{% blocktrans %}
+  Use CommCare to monitor and improve antenatal, natal, and postnatal care.
+{% endblocktrans %}{% endblock %}
+
+{% block content %}
+  <section class="sections-container">
+    {% include "sectors/sections/base/sub_nav.html" %}
+    {% include "sectors/sections/child_health/intro.html" %}
+    {% include "sectors/sections/child_health/programs.html" with slug="programs" %}
+    {% include "sectors/sections/child_health/clinics.html" with slug="clinics" reverse=True %}
+    {% include "sectors/sections/child_health/patients.html" with slug="patients" %}
+    {% include "sectors/sections/child_health/projects.html" %}
+    {% include "sectors/sections/base/case_studies.html" %}
+  </section>
+{% endblock %}
+
+{% block stylesheets %}
+  {% compress css %}
+    <link href="{% sass_src 'style/sectors/child_health.scss' %}" rel="stylesheet" media="screen" type="text/css" />
+  {% endcompress %}
+{% endblock %}
