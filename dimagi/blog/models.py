@@ -1,10 +1,7 @@
-from urllib.parse import quote
-
 from django.urls import reverse
 from django.utils.dateparse import parse_datetime
 
 from dimagi.blog.categories import get_category_by_slug
-from dimagi.utils.config import setting
 
 
 class BlogPost(object):
@@ -38,47 +35,6 @@ class BlogPost(object):
     @property
     def url(self):
         return reverse('blog_post', args=[self.category.slug, self.slug])
-
-    @property
-    def url_share(self):
-        return "{}{}".format(
-            setting('SITE_URL'),
-            self.url
-        )
-
-    @property
-    def url_twitter(self):
-        hashtags = [
-            'ict4d',
-            'dimagi',
-            'MobileDataCollection'
-        ]
-        return (
-            "https://twitter.com/share?"
-            "url={url}&"
-            "via=dimagi&"
-            "hashtags={hashtags}&"
-            "text={text}&".format(
-                url=quote(self.url_share).replace('/', '%2F'),
-                hashtags="%2C".join(hashtags),
-                text=quote(self.title),
-            ))
-
-    @property
-    def url_facebook(self):
-        return (
-            "https://www.facebook.com/sharer.php?"
-            "u={url}".format(
-                url=quote(self.url_share).replace('/', '%2F'),
-            ))
-
-    @property
-    def url_linkedin(self):
-        return (
-            "https://www.linkedin.com/cws/share?"
-            "url={url}".format(
-                url=quote(self.url_share).replace('/', '%2F'),
-            ))
 
 
 class Author(object):
