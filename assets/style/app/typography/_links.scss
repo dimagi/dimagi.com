@@ -96,3 +96,37 @@ a.hotspot {
     color: inherit;
   }
 }
+
+.links-social {
+  span {
+    color: $color-body-text;
+    display: inline-block;
+    font-size: $font-size-small;
+    font-weight: $font-weight-bold;
+    padding-right: 5px;
+    text-transform: uppercase;
+    vertical-align: middle;
+  }
+
+  a:hover {
+    [fill]:not([fill="none"]):not([fill^=url]) {
+      fill: $color-body-text !important; // scss-lint:disable ImportantRule
+    }
+
+    [stroke]:not([stroke="transparent"]) {
+      stroke: $color-body-text !important; // scss-lint:disable ImportantRule
+    }
+  }
+}
+
+.show-time .links-social {
+  a {
+    [fill]:not([fill="none"]):not([fill^=url]) { // scss-lint:disable SelectorDepth
+      transition: fill .5s ease-in-out;
+    }
+
+    [stroke]:not([stroke="transparent"]) { // scss-lint:disable SelectorDepth
+      transition: stroke .5s ease-in-out;
+    }
+  }
+}

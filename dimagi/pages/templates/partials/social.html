@@ -1,0 +1,9 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<div class="links-social">
+  <span>{% trans "Share" %}</span>
+  {% twitter_link url text hashtags %}
+  {% facebook_link url %}
+  {% linkedin_link url %}
+</div>

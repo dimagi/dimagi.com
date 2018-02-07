@@ -1,7 +1,9 @@
 from __future__ import absolute_import
 import json
 from django import template
+from urllib.parse import quote
 from django.http import QueryDict
+from django.template.loader import render_to_string
 from django.utils.safestring import mark_safe
 from compressor.templatetags.compress import compress as original_compress
 from sass_processor.templatetags.sass_tags import SassSrcNode
@@ -62,3 +64,73 @@ def BOOL(obj):
 @register.tag
 def compress(parser, token):
     return original_compress(parser, token)
+
+
+def _render_social_link(share_url, icon):
+    return mark_safe(render_to_string("partials/social_link.html", {
+        'share_url': share_url,
+        'icon': icon,
+    }))
+
+
+@register.simple_tag
+def twitter_link(url, text=None, hashtags=None):
+    """
+    Renders a link for sharing via twitter, including icon.
+    :param url - the url to share
+    :param text - (optional) the text / title to share
+    :param hashtags - (optional) string of hashtags separated by commas
+    """
+    hashtags = quote(hashtags) or "idt4d,dimagi,MobileDataCollection"
+
+    share_url = (
+        "https://twitter.com/share?"
+        "url={url}&"
+        "via=dimagi&"
+        "hashtags={hashtags}&"
+        "text={text}&".format(
+            url=quote(url).replace('/', '%2F'),
+            hashtags=hashtags.replace(',', '%2C'),
+            text=quote(text or ""),
+        ))
+
+    icon = "svg/social/twitter.html"
+
+    return _render_social_link(share_url, icon)
+
+
+@register.simple_tag
+def facebook_link(url):
+    """
+    Renders a link for sharing via facebook, including icon.
+    :param url - the url to share
+    """
+
+    share_url = (
+        "https://www.facebook.com/sharer.php?"
+        "u={url}".format(
+            url=quote(url).replace('/', '%2F'),
+        ))
+
+    icon = "svg/social/facebook.html"
+
+    return _render_social_link(share_url, icon)
+
+
+@register.simple_tag
+def linkedin_link(url):
+    """
+    Renders a link for sharing via linkedIn, including icon.
+    :param url - the url to share
+    """
+
+    share_url = (
+        "https://www.linkedin.com/cws/share?"
+        "url={url}".format(
+            url=quote(url).replace('/', '%2F'),
+        ))
+
+    icon = "svg/social/linkedin.html"
+
+    return _render_social_link(share_url, icon)
+
