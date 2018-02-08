@@ -43,4 +43,5 @@ STUDY = CaseStudy(
         ugettext_lazy("custom reporting"),
     ],
     slug="mhealth-malaria-mozambique",
+    download_url="https://www.dropbox.com/s/trffquc2e3ra0gw/mhealth-malaria-mozambique.pdf?dl=1",
 )

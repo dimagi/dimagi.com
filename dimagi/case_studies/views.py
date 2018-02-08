@@ -42,7 +42,7 @@ def download(request, slug):
     email = request.POST.get('email')
     response = {}
     if email:
-        response['pdf'] = static('case_studies/pdfs/{}.pdf'.format(study.slug))
+        response['download_url'] = study.download_url
     else:
         response['error'] = ugettext(
             "An email is required to download this Case Study."

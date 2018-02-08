@@ -54,4 +54,5 @@ STUDY = CaseStudy(
         ugettext_lazy("SMS reminders"),
     ],
     slug="mhealth-world-vision-motech",
+    download_url="https://www.dropbox.com/s/68duqq2gnitl9dq/mhealth-world-vision-motech.pdf?dl=1",
 )

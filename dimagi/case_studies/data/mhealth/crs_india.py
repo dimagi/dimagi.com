@@ -38,4 +38,5 @@ STUDY = CaseStudy(
         ugettext_lazy("SMS Reminders"),
     ],
     slug="mhealth-crs-india",
+    download_url="https://www.dropbox.com/s/lg8fd0x2z7x7py5/mhealth-crs-india.pdf?dl=1",
 )

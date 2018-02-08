@@ -28,4 +28,5 @@ STUDY = CaseStudy(
     ],
     features=[],
     slug="mhealth-supply-chain-tanzania",
+    download_url="https://www.dropbox.com/s/suffsfn81ybp41q/mhealth-supply-chain-tanzania.pdf?dl=1",
 )

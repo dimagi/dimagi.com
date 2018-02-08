@@ -39,4 +39,5 @@ STUDY = CaseStudy(
 
     ],
     slug="mhealth-tdh-burkinafaso",
+    download_url="https://www.dropbox.com/s/oakh337uexf4zgj/mhealth-tdh-burkinafaso.pdf?dl=1",
 )

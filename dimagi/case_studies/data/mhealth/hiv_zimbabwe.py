@@ -34,4 +34,5 @@ STUDY = CaseStudy(
         ugettext_lazy("process adherence"),
     ],
     slug="mhealth-hiv-zimbabwe",
+    download_url="https://www.dropbox.com/s/2f8y8khz8amuios/mhealth-hiv-zimbabwe.pdf?dl=1",
 )

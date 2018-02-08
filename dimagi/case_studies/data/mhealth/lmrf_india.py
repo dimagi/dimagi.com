@@ -39,4 +39,5 @@ STUDY = CaseStudy(
         ugettext_lazy("data editing feature"),
     ],
     slug="mhealth-lmrf-india",
+    download_url="https://www.dropbox.com/s/kc43w1s2yb2mau0/mhealth-lmrf-india.pdf?dl=1",
 )

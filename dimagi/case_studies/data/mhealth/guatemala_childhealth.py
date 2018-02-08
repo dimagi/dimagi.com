@@ -38,4 +38,5 @@ STUDY = CaseStudy(
         ugettext_lazy("referral followup"),
     ],
     slug="mhealth-guatemala-childhealth",
+    download_url="https://www.dropbox.com/s/gehewi5z55xkaw3/mhealth-guatemala-childhealth.pdf?dl=1",
 )

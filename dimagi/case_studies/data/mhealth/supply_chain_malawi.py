@@ -36,4 +36,5 @@ STUDY = CaseStudy(
     ],
     features=[],
     slug="mhealth-supply-chain-malawi",
+    download_url="https://www.dropbox.com/s/s67h8pbnogbo1vq/mhealth-supply-chain-malawi.pdf?dl=1",
 )
