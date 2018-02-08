@@ -1,0 +1,14 @@
+@import 'app/mixins/background';
+@import 'app/variables/colors';
+@import 'app/variables/sizes';
+@import 'app/variables/type';
+
+
+.study-image {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 395px;
+  position: relative;
+  width: 305px;
+}

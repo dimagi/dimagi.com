@@ -1,0 +1,23 @@
+  {% load i18n %}
+{% load dimagidotcom %}
+
+
+<section class="overview" id="overview">
+  <div class="content pad-vert-medium">
+
+    <h3 class="gap-bottom-small">
+      {% blocktrans %}
+        Case Studies
+      {% endblocktrans %}
+    </h3>
+
+    <div class="grid-4-at-medium grid-row-space-small">
+      {% for study in studies %}
+        <div class="column">
+          {% include "case_studies/partials/brief.html" with study=study %}
+        </div>
+      {% endfor %}
+    </div>{# .grid-4-at-medium #}
+
+  </div>{# .content #}
+</section>

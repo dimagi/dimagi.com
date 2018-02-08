@@ -1,0 +1,85 @@
+  {% load i18n %}
+{% load dimagidotcom %}
+
+
+<section class="overview" id="overview">
+  <div class="content pad-vert-medium content-width-medium">
+    <h4 class="uppercase gap-bottom-base">
+      {% blocktrans %}
+        Case Study
+      {% endblocktrans %}
+    </h4>
+    <h1>
+      {{ study.title }}
+    </h1>
+
+    <p>
+      {% include 'partials/social.html' with url=request.build_absolute_uri %}
+    </p>
+
+    <h4>
+      {% blocktrans %}
+        Project Overview
+      {% endblocktrans %}
+    </h4>
+    <div class="grid-2-at-medium grid-reverse">
+      <div class="column">
+        <div class="study-image gap-bottom-line"
+             style="background-image: url('{% static "case_studies/covers/"|add:study.slug|add:".jpg" %}');"></div>
+      </div>{# .column #}
+
+      <div class="column">
+        <p>
+          {{ study.summary }}
+        </p>
+
+        <p class="gap-bottom-base">
+          <strong>
+            {% blocktrans %}
+              Implementing Partners:
+            {% endblocktrans %}
+          </strong>
+          {{ study.partners|JOIN:", " }}
+        </p>
+
+        <p class="gap-bottom-base">
+          <strong>
+            {% blocktrans %}
+              Countries:
+            {% endblocktrans %}
+          </strong>
+          {% for country in study.countries %}
+            {{ country }}{% if not forloop.last %},{% endif %}
+          {% endfor %}
+        </p>
+
+        <p class="gap-bottom-small">
+          <strong>
+            {% blocktrans %}
+              Sectors:
+            {% endblocktrans %}
+          </strong>
+          {% for sector in study.sectors %}
+            {{ sector }}{% if not forloop.last %},{% endif %}
+          {% endfor %}
+        </p>
+
+      </div>{# .column #}
+
+    </div>{# .grid-2-at-medium #}
+
+    {% if study.features %}
+      <h4>
+        {% blocktrans %}
+          Features
+        {% endblocktrans %}
+      </h4>
+      <ul class="check-list grid-4-at-small grid-2">
+        {% for feature in study.features %}
+          <li>{{ feature }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+
+  </div>{# .content #}
+</section>

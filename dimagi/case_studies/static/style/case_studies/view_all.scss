@@ -1,0 +1,47 @@
+@import 'app/mixins/background';
+@import 'app/variables/colors';
+@import 'app/variables/sizes';
+@import 'app/variables/type';
+
+.case-studies-page {
+  $_base-height: 500px;
+  $_height-by-size: (
+    small: 500px,
+    medium: 500px,
+    large: 500px,
+    extra-large: 500px,
+  );
+
+  @include make-bg(hero, '../../blog/hero', $_base-height, $_height-by-size);
+}
+
+.study-thumbnail {
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  padding-top: 126%;
+
+  &:after {
+    background-color: $color-orange;
+    content: ' ';
+    display: block;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    transition: opacity .5s;
+    width: 100%;
+  }
+}
+
+a.study {
+  color: $color-text !important; // scss-lint:disable ImportantRule
+  font-weight: $font-weight-regular;
+
+  &:hover {
+    .study-thumbnail:after {
+      opacity: .5;
+    }
+  }
+}

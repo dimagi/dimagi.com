@@ -1,0 +1,17 @@
+{% load dimagidotcom %}
+{% load i18n %}
+
+<a class="study" href="{% url 'case_study' study.slug %}">
+  <div class="aspect-ratio-square study-thumbnail gap-bottom-line"
+       style="background-image: url('{% static "case_studies/covers/"|add:study.slug|add:".jpg" %}');"></div>
+
+  <h6>{{ study.title }}</h6>
+</a>
+<p class="gap-top-base">
+  {{ study.partners.0 }}<br />
+  {% if study.countries|length > 1 %}
+    {{ study.countries|length }}+ {% trans "countries" %}
+  {% else %}
+    {{ study.countries.0 }}
+  {% endif %}
+</p>
