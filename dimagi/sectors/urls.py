@@ -6,5 +6,5 @@ from dimagi.sectors.views import (
 
 urlpatterns = [
     url(r'^child-health/$', child_health,
-        name='child_health'),
+        name='sector_child_health'),
 ]
