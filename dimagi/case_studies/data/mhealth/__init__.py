@@ -1,4 +1,4 @@
-from dimagi.case_studies.mhealth import (
+from dimagi.case_studies.data.mhealth import (
     crs_india,
     guatemala_childhealth,
     hiv_zimbabwe,
