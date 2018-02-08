@@ -37,5 +37,5 @@ STUDY = CaseStudy(
         ugettext_lazy("Multimedia Counselling"),
         ugettext_lazy("SMS Reminders"),
     ],
-    slug="crs-india",
+    slug="mhealth-crs-india",
 )
