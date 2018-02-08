@@ -1,0 +1,31 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="slides "
+         id="slides">
+  <div class="content pad-top-none">
+
+    <div class="carousel carousel-fade-inactive pad-bottom-medium">
+      <div class="carousel-container">
+        <div class="spinner spinner-large"></div>
+        <div class="carousel-slider">
+
+          {% for slide in sector.slides %}
+            <div class="carousel-slide">
+              <div class="pad-horz-large pad-top-medium
+                          tile pad-bottom-small gap-horz-small">
+                <div class="content-width-medium">
+                  {% include slide %}
+                </div>
+              </div>
+            </div>{# .carousel-slide #}
+          {% endfor %}
+
+        </div>{# .carousel-slider #}
+      </div>{# .carousel-container #}
+    </div>{# .carousel #}
+
+  </div> {# .content #}
+</section>
+{% load i18n %}
+{% load dimagidotcom %}

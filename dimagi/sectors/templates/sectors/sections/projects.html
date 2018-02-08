@@ -1,0 +1,53 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="projects border-top"
+         id="projects">
+  <div class="content pad-top-medium pad-bottom-none">
+
+    <div class="intro gap-bottom-line">
+      <h2>
+        {% blocktrans %}
+          Highlighted Projects
+        {% endblocktrans %}
+      </h2>
+    </div>{# .intro #}
+
+    <div class="carousel carousel-fade-inactive pad-bottom-medium">
+      <div class="carousel-container">
+        <div class="spinner spinner-large"></div>
+        <div class="carousel-slider">
+
+          {% for project in sector.projects %}
+            <div class="carousel-slide">
+              <div class="content-width-small align-center gap-horz-small">
+                <div class="theme-icon gap-vert-line">
+                  {% include project.country.icon %}
+                </div>{# .theme-icon #}
+                <h3 class="gap-bottom-base">
+                  {{ project.name }}
+                </h3>
+                <h6 class="uppercase gap-bottom-small">
+                  {{ project.country.name }}
+                </h6>
+                <p class="align-left">
+                  {{ project.description }}
+                </p>
+              {% if project.video_url %}
+                <div class="cta align-left">
+                  <a href="{{ project.video_url }}"
+                     class="play-icon-small">{% trans "Watch Video" %}</a>
+                </div>
+              {% endif %}
+              </div>
+            </div>{# .carousel-slide #}
+          {% endfor %}
+
+        </div>{# .carousel-slider #}
+      </div>{# .carousel-container #}
+    </div>{# .carousel #}
+
+  </div> {# .content #}
+</section>
+{% load i18n %}
+{% load dimagidotcom %}

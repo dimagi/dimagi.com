@@ -1,10 +1,10 @@
 from django.conf.urls import url
 
 from dimagi.sectors.views import (
-    child_health,
+    view_single,
 )
 
 urlpatterns = [
-    url(r'^child-health/$', child_health,
-        name='sector_child_health'),
+    url(r'^(?P<slug>[\w-]+)/$', view_single,
+        name='sector'),
 ]

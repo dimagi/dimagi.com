@@ -1,0 +1,49 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="case-studies border-top"
+         id="case-studies">
+  <div class="content pad-top-medium pad-bottom-none">
+
+    <div class="intro gap-bottom-line">
+      <h2>
+        {% blocktrans %}
+          Case Studies
+        {% endblocktrans %}
+      </h2>
+    </div>{# .intro #}
+
+    <div class="carousel carousel-fade-inactive pad-bottom-medium">
+      <div class="carousel-container">
+        <div class="spinner spinner-large"></div>
+        <div class="carousel-slider">
+
+          {% for study in sector.case_studies %}
+            <div class="carousel-slide">
+              <div class="content-width-extra-small align-center gap-horz-small">
+                <a class="study" href="{% url 'case_study' study.slug %}">
+                  <div class="aspect-ratio-square study-thumbnail gap-bottom-line"
+                       style="background-image: url('{% static "case_studies/covers/"|add:study.slug|add:".jpg" %}');"></div>
+
+                  <h4>{{ study.title }}</h4>
+                </a>
+                <h5 class="gap-top-base">{{ study.partners.0 }} </h5>
+                <p class="gap-top-none">
+                  {% if study.countries|length > 1 %}
+                    {{ study.countries|length }}+ {% trans "countries" %}
+                  {% else %}
+                    {{ study.countries.0 }}
+                  {% endif %}
+                </p>
+              </div>{# .content-width-small #}
+            </div>{# .carousel-slide #}
+          {% endfor %}
+
+        </div>{# .carousel-slider #}
+      </div>{# .carousel-container #}
+    </div>{# .carousel #}
+
+  </div> {# .content #}
+</section>
+{% load i18n %}
+{% load dimagidotcom %}
