@@ -29,11 +29,6 @@ def pricing_services(request):
 
 
 @no_index
-def toolkits(request):
-    return render(request, 'pages/toolkits.html')
-
-
-@no_index
 def about(request):
     return render(request, 'pages/about.html')
 
