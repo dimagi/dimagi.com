@@ -4,6 +4,7 @@ from dimagi.toolkits.data import (
     commcare_evidence_base,
     business_development,
     commcare_managing_data,
+    managing_devices_ebook,
 )
 
 
@@ -13,4 +14,5 @@ toolkits = (
     commcare_evidence_base,
     business_development,
     commcare_managing_data,
+    managing_devices_ebook,
 )
