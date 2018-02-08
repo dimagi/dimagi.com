@@ -29,4 +29,6 @@ urlpatterns = [
         name='about'),
     url(r'^careers/$', pages.careers,
         name='careers'),
+    url(r'^contact/$', pages.contact,
+        name='contact'),
 ]

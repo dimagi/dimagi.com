@@ -42,3 +42,8 @@ def about(request):
 def careers(request):
     return render(request, 'pages/careers.html')
 
+
+@no_index
+def contact(request):
+    return render(request, 'pages/contact.html')
+
