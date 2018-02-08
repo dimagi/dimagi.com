@@ -12,6 +12,6 @@ TOOLKIT = Toolkit(
         "CommCare"
     ),
     template="toolkits/summaries/commcare_managing_data.html",
-    slug="business-development",
-    download_url="https://www.dropbox.com/s/n61uasvfxr44uzu/Dimagi%27s%20BD%20Toolkit.zip?dl=1",
+    slug="commcare-managing-data",
+    download_url="https://www.dropbox.com/s/lguz3gth6kovw62/M%26E%20Starter%20Guide.pdf?dl=1",
 )
