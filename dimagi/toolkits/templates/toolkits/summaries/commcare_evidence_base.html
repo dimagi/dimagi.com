@@ -1,0 +1,29 @@
+{% load dimagidotcom %}
+{% load i18n %}
+
+<h5>
+  {% blocktrans %}
+    Abstract
+  {% endblocktrans %}
+</h5>
+
+<p>
+  {% blocktrans %}
+    The CommCare Evidence Base is a high-level analysis of 51 studies that
+    explore CommCare’s impact on frontline programs in low-resource settings.
+    The Evidence Base categorizes all available studies into four research
+    themes: CommCare's impact on client health behaviors, frontline worker
+    performance & quality of care, program efficiency, and the applicability
+    and feasibility of deploying CommCare.
+  {% endblocktrans %}
+</p>
+
+<p>
+  {% url 'contact' as contact_url %}
+  {% blocktrans %}
+    To read a full analysis of how CommCare and mobile tools in
+    general can impact frontline programs at the last mile, please
+    download the CommCare Evidence Base. For questions, please
+    <a href="{{ contact_url }}">get in touch</a> with us.
+  {% endblocktrans %}
+</p>
