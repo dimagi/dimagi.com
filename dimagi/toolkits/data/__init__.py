@@ -3,6 +3,7 @@ from dimagi.toolkits.data import (
     total_cost_ownership,
     commcare_evidence_base,
     business_development,
+    commcare_managing_data,
 )
 
 
@@ -11,4 +12,5 @@ toolkits = (
     total_cost_ownership,
     commcare_evidence_base,
     business_development,
+    commcare_managing_data,
 )
