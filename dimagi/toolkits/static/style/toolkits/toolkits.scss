@@ -1,0 +1,16 @@
+@import 'app/mixins/background';
+@import 'app/variables/colors';
+@import 'app/variables/sizes';
+@import 'app/variables/type';
+
+.toolkits-page {
+  $_base-height: 500px;
+  $_height-by-size: (
+    small: 500px,
+    medium: 500px,
+    large: 500px,
+    extra-large: 500px,
+  );
+
+  @include make-bg(hero, '../../blog/hero', $_base-height, $_height-by-size);
+}

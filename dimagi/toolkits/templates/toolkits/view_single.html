@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block body_class %}case-study-page tucked-hero orange-theme{% endblock %}
+
+{% block stylesheets %}
+  {% compress css %}
+    <link href="{% sass_src 'style/case_studies/view_single.scss' %}" rel="stylesheet" media="screen" type="text/css" />
+  {% endcompress %}
+{% endblock %}
+
+{% block hero %}
+<section class="hero hero-case-study" id="hero"></section>
+{% endblock %}
+
+{% block content %}
+  <section class="case-study-container">
+    {% include 'toolkits/sections/sub_nav.html' %}
+    {% include 'toolkits/sections/summary.html' %}
+    {% include 'toolkits/sections/download.html' %}
+  </section>
+{% endblock %}

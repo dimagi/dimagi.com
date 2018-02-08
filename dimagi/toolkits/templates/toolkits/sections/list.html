@@ -1,0 +1,23 @@
+  {% load i18n %}
+{% load dimagidotcom %}
+
+
+<section class="overview" id="overview">
+  <div class="content pad-vert-medium">
+
+    <h3 class="gap-bottom-small">
+      {% blocktrans %}
+        Toolkits
+      {% endblocktrans %}
+    </h3>
+
+    <div class="grid-4-at-medium grid-row-space-small">
+      {% for toolkit in toolkits %}
+        <div class="column">
+          {% include "toolkits/partials/brief.html" with toolkit=toolkit %}
+        </div>
+      {% endfor %}
+    </div>{# .grid-4-at-medium #}
+
+  </div>{# .content #}
+</section>

@@ -1,0 +1,26 @@
+  {% load i18n %}
+{% load dimagidotcom %}
+
+
+<section class="overview" id="overview">
+  <div class="content pad-vert-medium content-width-medium">
+    <h4 class="uppercase gap-bottom-base">
+      {% blocktrans %}
+        Toolkit
+      {% endblocktrans %}
+    </h4>
+    <h1 class="gap-bottom-base">
+      {{ toolkit.title }}
+    </h1>
+    <h4>
+      {{ toolkit.tagline }}
+    </h4>
+
+    <p>
+      {% include 'partials/social.html' with url=request.build_absolute_uri %}
+    </p>
+
+    {% include toolkit.template %}
+
+  </div>{# .content #}
+</section>

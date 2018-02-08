@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block body_class %}toolkits-page tucked-hero orange-theme{% endblock %}
+
+{% block stylesheets %}
+  {% compress css %}
+    <link href="{% sass_src 'style/toolkits/toolkits.scss' %}" rel="stylesheet" media="screen" type="text/css" />
+  {% endcompress %}
+{% endblock %}
+
+{% block hero %}
+<section class="hero hero-toolkits" id="hero">
+  <div class="content content-width-large inverted align-center display-flex flex-valign-middle expand-vertical offset-top-small flex-align-center">
+    <div class="copy expand position-relative">
+
+      <h1>
+        {% blocktrans %}
+          Toolkits
+        {% endblocktrans %}
+      </h1>
+
+      <div class="headline content-width-small">
+        {% blocktrans %}
+          Drawing from 10+ years of experience, Dimagi has developed
+          several resources to support users in implementing digital
+          solutions. Download the toolkits below to help you plan and
+          implement your digital project!
+        {% endblocktrans %}
+      </div>{# .headline #}
+
+    </div>{# .copy #}
+  </div>{# .content #}
+</section>
+{% endblock %}
+
+{% block content %}
+  <section class="toolkits-container">
+    {% include 'toolkits/sections/list.html' %}
+  </section>
+{% endblock %}

@@ -1,0 +1,15 @@
+from dimagi.toolkits.data import toolkits
+
+
+def get_toolkit_by_slug(slug):
+    toolkit_by_slug = dict((t.TOOLKIT.slug, t.TOOLKIT) for t in toolkits)
+    return toolkit_by_slug.get(slug)
+
+
+def get_tookits_page(page):
+    first_index = (page - 1) * 20
+    last_index = max(first_index + 20, len(toolkits))
+
+    if last_index > first_index:
+        page_toolkits = toolkits[first_index:last_index]
+        return [t.TOOLKIT for t in page_toolkits]
