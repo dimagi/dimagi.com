@@ -61,6 +61,11 @@ def BOOL(obj):
     return 'true' if obj else 'false'
 
 
+@register.filter
+def JOIN(value, arg):
+    return arg.join(value)
+
+
 @register.tag
 def compress(parser, token):
     return original_compress(parser, token)
@@ -133,4 +138,3 @@ def linkedin_link(url):
     icon = "svg/social/linkedin.html"
 
     return _render_social_link(share_url, icon)
-
