@@ -6,7 +6,7 @@ def get_sector_by_slug(slug):
     return sector_by_slug.get(slug)
 
 
-def get_tookits_page(page):
+def get_sectors_page(page):
     first_index = (page - 1) * 20
     last_index = max(first_index + 20, len(all_sectors))
 

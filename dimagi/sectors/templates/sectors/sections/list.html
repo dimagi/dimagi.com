@@ -1,0 +1,23 @@
+  {% load i18n %}
+{% load dimagidotcom %}
+
+
+<section class="overview" id="overview">
+  <div class="content pad-vert-medium">
+
+    <h3 class="gap-bottom-small">
+      {% blocktrans %}
+        Sectors
+      {% endblocktrans %}
+    </h3>
+
+    <div class="grid-4-at-medium grid-row-space-small">
+      {% for sector in sectors %}
+        <div class="column">
+          {% include "sectors/partials/brief.html" with sector=sector %}
+        </div>
+      {% endfor %}
+    </div>{# .grid-4-at-medium #}
+
+  </div>{# .content #}
+</section>
