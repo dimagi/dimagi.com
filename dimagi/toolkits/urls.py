@@ -6,7 +6,7 @@ urlpatterns = [
     url(r'^$', view_all,
         name='toolkits'),
     url(r'^(?P<slug>[\w-]+)/$', view_single,
-        name='toolkit_view'),
+        name='toolkit'),
     url(r'^(?P<slug>[\w-]+)/download/$', download,
         name='toolkit_download'),
 ]
