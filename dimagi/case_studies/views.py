@@ -9,7 +9,6 @@ from dimagi.case_studies.utils import (
     get_case_studies_page,
 )
 from dimagi.utils.decorators import no_index
-from dimagi.utils.templatetags.dimagidotcom import static
 
 
 @no_index
