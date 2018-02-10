@@ -1,0 +1,61 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="advisory accent-gray-bg"
+         id="advisory">
+  <div class="content pad-vert-medium">
+    <div class="intro gap-bottom-small">
+      <h2>
+        {% blocktrans %}
+          Advisory Services
+        {% endblocktrans %}
+      </h2>
+      <p>
+        {% blocktrans %}
+          Flexible services to support your team in specific areas.
+        {% endblocktrans %}
+      </p>
+    </div>{# .intro #}
+
+    <div class="content pad-vert-medium theme-bg gap-bottom-small">
+      <h3 class="white align-center content-width-medium">
+        {% blocktrans %}
+          Lead your own application design, build and launch,
+          but receive targeted support where you need it.
+        {% endblocktrans %}
+      </h3>
+    </div>{# .content #}
+
+    <div class="grid-2-at-medium gap-bottom-small">
+      <div class="column border-right-at-medium pad-horz-medium-at-medium pad-top-small">
+        {% include "sections/services/advisory/program.html" %}
+      </div>{# .column #}
+
+      <div class="column pad-horz-medium-at-medium pad-top-small">
+        {% include "sections/services/advisory/technology.html" %}
+      </div>{# .column #}
+    </div>{# .grid-2-at-medium #}
+
+    <p class="font-weight-bold align-center gap-bottom-base">
+      {% blocktrans %}
+        Contact for Pricing
+      {% endblocktrans %}
+    </p>
+    <p class="align-center">
+      <a class="button" href="{% url 'contact' %}">
+        {% blocktrans %}
+          Contact Us
+        {% endblocktrans %}
+      </a>{# .button #}
+    </p>
+
+    <p class="align-center content-width-large">
+      {% blocktrans %}
+        Each service requires a monthly CommCare subscription and
+        includes two weeks of on-site or remote support from a dedicated
+        Dimagi Services team member. See implementation packages above
+        for app building support.
+      {% endblocktrans %}
+    </p>
+  </div>{# .content #}
+</section>

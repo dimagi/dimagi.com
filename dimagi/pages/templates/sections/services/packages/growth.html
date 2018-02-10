@@ -1,0 +1,28 @@
+{% extends "sections/services/packages/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block icon %}
+  {% include 'svg/services/icon/launch.html' %}
+{% endblock %}
+
+{% block name %}{% blocktrans %}
+  Growth
+{% endblocktrans %}{% endblock %}
+
+{% block description %}{% blocktrans %}
+  Prepare for scale with our Growth bundle. Our team will manage
+  app building and launch for the second release of your app,
+  as well as train your team on key skills.
+{% endblocktrans %}{% endblock %}
+
+{% block includes %}{% blocktrans %}
+  All of Boost,<br/>
+  support with the second
+  release app build and launch,<br />
+  +3 additional services
+{% endblocktrans %}{% endblock %}
+
+{% block pricing %}{% blocktrans %}
+  Contact for pricing
+{% endblocktrans %}{% endblock %}

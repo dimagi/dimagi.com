@@ -11,28 +11,38 @@
 {% endblock %}
 
 {% block hero %}
-<section class="hero hero-services" id="hero">
-  <div class="content content-width-large inverted align-center display-flex flex-valign-middle expand-vertical offset-top-medium flex-align-center">
-    <div class="copy expand position-relative">
-
-      <h1 class="font-weight-bold">
+  <div id="top"></div>
+  <section class="hero hero-services"
+           id="hero">
+    <div class="content align-left-at-medium align-center">
+      <h2 class="gap-vert-line">
         {% blocktrans %}
-          Services Page Placeholder
+          Dimagi Global Services
+        {% endblocktrans %}
+      </h2>
+      <h1>
+        {% blocktrans %}
+          An Experienced Team to Help You Maximize Your Impact
         {% endblocktrans %}
       </h1>
-
-      <div class="headline content-width-small">
+      <a class="button alt inverted"
+         href="{% url 'contact' %}">
         {% blocktrans %}
-
+          Contact Us
         {% endblocktrans %}
-      </div>{# .headline #}
-
-    </div>{# .copy #}
-  </div>{# .content #}
-</section>
+      </a>
+    </div> {# .content #}
+  </section>
 {% endblock %}
 
 {% block content %}
-  <section class="services-container">
+  <section class="services-container turquoise-theme">
+    {% include "sections/services/sub_nav.html" %}
+    {% include "sections/services/brief_overview.html" %}
+    {% include "sections/services/overview.html" %}
+    {% include "sections/services/packages.html" %}
+    {% include "sections/services/advisory.html" %}
+    {% include "sections/services/testimonials.html" %}
+    {% include "sections/services/learn_more.html" %}
   </section>
 {% endblock %}

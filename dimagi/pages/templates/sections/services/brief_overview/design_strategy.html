@@ -1,0 +1,21 @@
+{% extends "sections/services/brief_overview/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block icon %}
+  {% include "svg/products/commcare/icon/no_wifi.html" %}
+{% endblock %}
+
+{% block header %}
+  {% blocktrans %}
+    Design and strategy
+  {% endblocktrans %}
+{% endblock %}
+
+{% block content %}
+  {% blocktrans %}
+    Following an on-site scoping visit, we will assess your needs
+    and design an application based on your requirements.
+  {% endblocktrans %}
+{% endblock %}
+

@@ -1,0 +1,46 @@
+{% load i18n %}
+
+<div class="column">
+  <a class="tile turquoise-border packages-tile"
+     href="{% url 'contact' %}">
+
+    <div class="gap-bottom-base turquoise-icon">
+      {% block icon %}{% endblock %}
+    </div>
+
+    <div class="pad-bottom-line">
+      <h3 class="turquoise">
+        {% block name %}{% endblock %}
+      </h3>
+    </div>{# .intro #}
+
+    <p class="body-color packages-body">
+      {% block description %}{% endblock %}
+    </p>
+
+    <div class="packages-includes">
+      <p class="body-color
+                border-top
+                pad-top-line">
+        <strong class="turquoise">
+          {% trans "Includes" %}:
+        </strong><br />
+        {% block includes %}{% endblock %}
+      </p>
+    </div>
+
+    <div class="packages-pricing">
+      <p class="body-color
+                font-weight-bold">
+        {% block pricing %}{% endblock %}
+      </p>
+    </div>
+    <p class="button-container gap-top-small">
+      <div class="button button-turquoise">
+        {% blocktrans %}
+          Contact Us
+        {% endblocktrans %}
+      </div>{# .button #}
+    </p>
+  </a>
+</div>{# .column #}

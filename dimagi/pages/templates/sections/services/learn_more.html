@@ -1,0 +1,21 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="learn-more align-center accent-gray-bg border-top"
+         id="learn-more">
+  <div class="content pad-vert-medium">
+    <h3 class="theme-color">
+      {% blocktrans %}
+        Want to learn more about our Global Services?
+      {% endblocktrans %}
+    </h3>
+    <p>
+      <a href="{% url 'contact' %}"
+         class="button">
+        {% blocktrans%}
+          Contact Us
+        {% endblocktrans %}
+      </a>
+    </p>
+  </div>{# .content #}
+</section>

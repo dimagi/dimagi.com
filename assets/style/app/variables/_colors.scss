@@ -16,6 +16,7 @@ $color-blue-dark:     #002c5f;
 $color-turquoise:       #00bdc5;
 $color-turquoise-light: #ccf3f4;
 $color-turquoise-dark:  #00799a;
+$color-turquoise-muted: #ccf3f4;
 
 $color-purple:        #9060c8;
 $color-purple-light:  #d6c5ea;
@@ -89,6 +90,9 @@ $color-validated: $color-green;
 
 
 @function color-mute($_color) {
+  @if $_color == $color-turquoise {
+    @return $color-turquoise-muted;
+  }
   @return lighten($_color, 20);
 }
 

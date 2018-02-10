@@ -2,3 +2,73 @@
 @import 'app/variables/colors';
 @import 'app/variables/sizes';
 @import 'app/variables/type';
+
+.services-page {
+  $_base-height: 500px;
+  $_height-by-size: (
+    small: 500px,
+    medium: 500px,
+    large: 500px,
+    extra-large: 500px,
+  );
+  @include make-bg(hero, '../../pages/products/commcare/hero', $_base-height, $_height-by-size);
+}
+
+@media (min-width: $width-desktop) {
+  .services-page .hero h1 {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 55%;
+  }
+}
+
+.overview .image.testimonial1 {
+  @include background-cover('../../pages/home/workforce-1.jpg');
+}
+
+.overview .image.testimonial2 {
+  @include background-cover('../../pages/home/workforce-2.jpg');
+}
+
+.overview .image.testimonial3 {
+  @include background-cover('../../pages/home/workforce-3.jpg');
+}
+
+
+.testimonials .image.testimonial1 {
+  @include background-cover('../../pages/home/workforce-1.jpg');
+}
+
+.testimonials .image.testimonial2 {
+  @include background-cover('../../pages/home/workforce-2.jpg');
+}
+
+.testimonials .image.testimonial3 {
+  @include background-cover('../../pages/home/workforce-3.jpg');
+}
+
+
+.packages-body {
+  margin-bottom: 200px;
+}
+
+.packages-pricing,
+.packages-includes {
+  left: 0;
+  position: absolute;
+  width: 100%;
+
+  p {
+    margin-left: $space-small;
+    margin-right: $space-small;
+  }
+}
+
+.packages-pricing {
+  bottom: 100px;
+}
+
+.packages-includes {
+  bottom: 130px;
+  height: 150px;
+}

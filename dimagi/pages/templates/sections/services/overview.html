@@ -1,0 +1,46 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="overview border-top"
+         id="overview">
+  <div class="content pad-top-medium gap-bottom-small">
+    <div class="intro content-width-medium">
+      <h2>
+        {% blocktrans %}
+          We're here to help
+        {% endblocktrans %}
+      </h2>
+      <p>
+        {% blocktrans %}
+          Dimagi offers more than 10+ years of experience designing,
+          building and launching digital systems.
+          We work with organizations of all sizes on all types of projects
+          from pilot launches to large, national scale solutions.
+        {% endblocktrans %}
+      </p>
+    </div>{# .intro #}
+
+    {% include "sections/services/overview/grid.html" %}
+
+    <div class="grid-4 grid-align-center grid-flex-at-medium gap-top-small gap-bottom-medium">
+
+      <div class="column">
+        {% include "svg/home/partner/gates.html" %}
+      </div>{# .column #}
+
+      <div class="column">
+        {% include "svg/home/partner/usaid.html" %}
+      </div>{# .column #}
+
+      <div class="column">
+        {% include "svg/home/partner/agimpact.html" %}
+      </div>{# .column #}
+
+      <div class="column">
+        {% include "svg/home/partner/tdh.html" %}
+      </div>{# .column #}
+
+    </div>{# .grid-4 #}
+
+  </div> {# .content #}
+</section>

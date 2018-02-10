@@ -1,0 +1,21 @@
+{% extends "sections/services/brief_overview/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block icon %}
+  {% include "svg/products/commcare/icon/globe.html" %}
+{% endblock %}
+
+{% block header %}
+  {% blocktrans %}
+    Capacity building
+  {% endblocktrans %}
+{% endblock %}
+
+{% block content %}
+  {% blocktrans %}
+    We offer in-person training packages to help your team learn CommCare, and
+    develop the skills they need to manage your application.
+  {% endblocktrans %}
+{% endblock %}
+

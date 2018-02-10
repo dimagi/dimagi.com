@@ -1,0 +1,36 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="packages theme-muted-bg"
+         id="packages">
+  <div class="content pad-vert-medium align-center">
+    <div class="intro gap-bottom-small">
+      <h2>
+        {% blocktrans %}
+          Implementation Packages
+        {% endblocktrans %}
+      </h2>
+      <p class="theme-color">
+        {% blocktrans %}
+          Flexible packages to support your program from launch to scale.
+        {% endblocktrans %}
+      </p>
+    </div>{# .intro #}
+
+    <div class="content pad-vert-medium theme-bg gap-bottom-small">
+      <h3 class="white align-center content-width-medium">
+        {% blocktrans %}
+          Dimagi leads application design, build and launch,
+          while training your team to build capacity.
+        {% endblocktrans %}
+      </h3>
+    </div>{# .content #}
+
+    <div class="grid-2-at-medium grid-4-at-large grid-row-equal-heights gap-bottom-small">
+      {% include "sections/services/packages/launch.html" %}
+      {% include "sections/services/packages/boost.html" %}
+      {% include "sections/services/packages/growth.html" %}
+      {% include "sections/services/packages/scale.html" %}
+    </div>{# .grid-2-at-medium #}
+  </div>{# .content #}
+</section>

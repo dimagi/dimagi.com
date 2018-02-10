@@ -1,0 +1,71 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="testimonials border-top"
+         id="testimonials">
+  <div class="content pad-vert-medium">
+    <div class="intro content-width-medium">
+      <h2>
+        {% blocktrans %}
+          Testimonials
+        {% endblocktrans %}
+      </h2>
+    </div>{# .intro #}
+
+    <div class="grid-testimonial blue-theme">
+      <div class="column">
+        <div class="grid-2-at-medium grid-reverse">
+
+          <div class="column">
+            <div class="grid-1">
+              <div class="column">
+                <div class="aspect-ratio-rect-at-medium theme-bg">
+                  <blockquote>
+                    <p>
+                      {% blocktrans %}
+                        This program is having a tremendous impact on the
+                        lives of some of the most vulnerable women and
+                        their families in Uttar Pradesh.
+                      {% endblocktrans %}
+                    </p>
+                    <cite>
+                      {% blocktrans %}
+                        Jaya Menon, Monitoring & Evaluation Manager<br />
+                        Catholic Relief Services
+                      {% endblocktrans %}
+                    </cite>
+                  </blockquote>
+                </div>{# .aspect-ratio-rect-at-medium #}
+              </div>{# .column #}
+
+              <div class="column">
+                <div class="grid-2">
+
+                  <div class="column">
+                    <div class="image aspect-ratio-square testimonial2"></div>{# .testimonials .image.testimonial2 {} => home.scss #}
+                  </div>{# .column #}
+
+                  <div class="column">
+                    <div class="image aspect-ratio-square testimonial3"></div>{# .testimonials .image.testimonial3 {} => home.scss #}
+                  </div>{# .column #}
+
+                </div>{# .grid-2 #}
+              </div>{# .column #}
+
+            </div>{# .grid-1 #}
+          </div>{# .column #}
+
+          <div class="column">
+            <div class="grid-1">
+              <div class="column">
+                <div class="image aspect-ratio-square testimonial1"></div>{# .testimonials .image.testimonial1 {} => home.scss #}
+              </div>{# .column #}
+            </div>{# .grid-1 #}
+          </div>{# .column #}
+
+        </div>{# .grid-2-at-medium #}
+      </div>{# .column #}
+    </div>{# .grid-testimonial #}
+
+  </div> {# .content #}
+</section>
