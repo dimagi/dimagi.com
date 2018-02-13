@@ -27,16 +27,20 @@
             Overview
           {% endblocktrans %}
         </a>
-        <a href="#projects">
-          {% blocktrans %}
-            Projects
-          {% endblocktrans %}
-        </a>
-        <a href="#case-studies">
-          {% blocktrans %}
-            Case Studies
-          {% endblocktrans %}
-        </a>
+        {% if sector.projects %}
+          <a href="#projects">
+            {% blocktrans %}
+              Projects
+            {% endblocktrans %}
+          </a>
+        {% endif %}
+        {% if sector.case_studies %}
+          <a href="#case-studies">
+            {% blocktrans %}
+              Case Studies
+            {% endblocktrans %}
+          </a>
+        {% endif %}
       </div>{# .content #}
     </div>{# .destinations #}
   </div>{# .content #}
