@@ -42,3 +42,35 @@ NIGER = Country(
     icon="svg/countries/niger.html",
 )
 
+
+THAILAND = Country(
+    name=ugettext_lazy(
+        "Thailand"
+    ),
+    icon="svg/countries/todo.html",
+)
+
+
+GHANA = Country(
+    name=ugettext_lazy(
+        "Ghana"
+    ),
+    icon="svg/countries/todo.html",
+)
+
+
+HAITI = Country(
+    name=ugettext_lazy(
+        "Haiti"
+    ),
+    icon="svg/countries/todo.html",
+)
+
+
+INDIA = Country(
+    name=ugettext_lazy(
+        "India"
+    ),
+    icon="svg/countries/todo.html",
+)
+
