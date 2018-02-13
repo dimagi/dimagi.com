@@ -11,28 +11,37 @@
 {% endblock %}
 
 {% block hero %}
-<section class="hero hero-pricing-commcare" id="hero">
-  <div class="content content-width-large inverted align-center display-flex flex-valign-middle expand-vertical offset-top-medium flex-align-center">
-    <div class="copy expand position-relative">
-
-      <h1 class="font-weight-bold">
+  <div id="top"></div>
+  <section class="hero hero-products-commcare" id="hero">
+    <div class="content offset-top-extra-large align-left-at-medium align-center">
+      <h2>
+        {% include "svg/products/commcare/logo.html" %}
+      </h2>
+      <h1>
         {% blocktrans %}
-          CommCare Pricing Page Placeholder
+          Affordable Pricing Plans to Fit Your Budget and Needs
         {% endblocktrans %}
       </h1>
-
-      <div class="headline content-width-small">
+      <a class="button alt inverted"
+         href="{{ URL_TRIAL }}">
         {% blocktrans %}
-
+          Start Free Trial
         {% endblocktrans %}
-      </div>{# .headline #}
-
-    </div>{# .copy #}
-  </div>{# .content #}
-</section>
+      </a>
+      <p class="cta">
+        {% trans 'Watch a demo' as video_text %}
+        {% include "partials/wistia_popover.html" with wistia_id='9uvnpbecdy' show_play=True text=video_text %}
+      </p>
+    </div> {# .content #}
+  </section>
 {% endblock %}
 
 {% block content %}
-  <section class="pricing-commcare-container">
+  <section class="pricing-commcare-container blue-theme">
+    {% include "sections/pricing/commcare/sub_nav.html" %}
+    {% include "sections/pricing/commcare/brief_overview.html" %}
+    {% include "sections/pricing/commcare/plans.html" %}
+    {% include "sections/pricing/commcare/faq.html" %}
+    {% include "sections/pricing/commcare/experience.html" %}
   </section>
 {% endblock %}

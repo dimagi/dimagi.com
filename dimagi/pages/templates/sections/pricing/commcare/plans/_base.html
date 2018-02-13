@@ -1,0 +1,67 @@
+{% load i18n %}
+
+<div class="column">
+  <a class="tile {{ theme }}-border plans-tile{% if highlight %} plan-highlight{% endif %}"
+     href="{% block link %}{% endblock %}">
+
+    <div class="pad-top-small pad-bottom-line">
+      <h3 class="{{ theme }}">
+        {% block name %}{% endblock %}
+      </h3>
+    </div>{# .intro #}
+
+    <div class="plans-price-monthly">
+      <p class="h3
+                font-weight-medium
+                body-color
+                gap-bottom-none">
+        {% block price_monthly %}{% endblock %}
+      </p>
+      <p>
+        {% block text_monthly %}
+          {% blocktrans %}
+            monthly
+          {% endblocktrans %}
+        {% endblock %}
+      </p>
+    </div>{# .plans-price-monthly #}
+
+    <p class="body-color
+              plans-description
+              border-top
+              gap-top-small
+              pad-top-line">
+      {% block description %}{% endblock %}
+    </p>
+
+    <div class="plans-features">
+      <p class="body-color
+                border-top
+                font-weight-bold
+                pad-top-line">
+        {% trans "Core Features" %}:
+      </p>
+      <ul class="reset features-list">
+        {% block features %}{% endblock %}
+      </ul>
+    </div>
+
+
+    <p class="button-container gap-top-small">
+      <div class="button button-{{ theme }}">
+        {% blocktrans %}
+          Sign Up
+        {% endblocktrans %}
+      </div>{# .button #}
+    </p>
+
+    <div class="plans-popular">
+      <span>
+        {% blocktrans %}
+          Most Popular Plan
+        {% endblocktrans %}
+      </span>
+    </div>
+
+  </a>
+</div>{# .column #}

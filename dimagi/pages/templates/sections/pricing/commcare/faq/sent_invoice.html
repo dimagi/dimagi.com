@@ -1,0 +1,14 @@
+{% extends "sections/pricing/commcare/faq/_base.html" %}
+{% load i18n %}
+
+{% block question %}{% blocktrans %}
+  Who will my invoice be sent to?
+{% endblocktrans %}{% endblock %}
+
+{% block answer %}{% blocktrans %}
+  Please note that your invoice will be sent to your billing contact.
+  To make sure the billing contact information is accurate, visit your
+  Project Settings > Billing Information page. If there is not a billing
+  contact listed, invoices will by default be sent to the web admin users
+  on the project.
+{% endblocktrans %}{% endblock %}

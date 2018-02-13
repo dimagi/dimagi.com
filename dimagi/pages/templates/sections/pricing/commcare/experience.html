@@ -1,0 +1,52 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="experience align-center border-top"
+         id="experience">
+  <div class="content pad-vert-medium">
+
+    <h3>
+      {% blocktrans %}
+        Experience the World's Most Powerful<br />
+        Mobile Data Collection Platform
+      {% endblocktrans %}
+    </h3>
+
+    <div class="grid-4 grid-align-center grid-flex-at-medium gap-bottom-small">
+
+      <div class="column">
+        {% include "svg/home/partner/gates.html" %}
+      </div>{# .column #}
+
+      <div class="column">
+        {% include "svg/home/partner/usaid.html" %}
+      </div>{# .column #}
+
+      <div class="column">
+        {% include "svg/home/partner/agimpact.html" %}
+      </div>{# .column #}
+
+      <div class="column">
+        {% include "svg/home/partner/tdh.html" %}
+      </div>{# .column #}
+
+    </div>{# .grid-4 #}
+
+    <p>
+      {% blocktrans %}
+        Request a free demo and find out why more than 500 projects<br />
+        across 60+ countries rely on CommCare for their data collection
+        and reporting needs.
+      {% endblocktrans %}
+    </p>
+
+    <p>
+      <a class="button"
+         href="#todo">
+        {% blocktrans %}
+          Request a Demo
+        {% endblocktrans %}
+      </a>
+    </p>
+  </div>{# .content #}
+</section>
