@@ -40,7 +40,11 @@
     {% include "sectors/sections/sub_nav.html" %}
     {% include sector.template%}
     {% include "sectors/sections/slides.html" %}
-    {% include "sectors/sections/projects.html" %}
-    {% include "sectors/sections/case_studies.html" %}
+    {% if sector.projects %}
+      {% include "sectors/sections/projects.html" %}
+    {% endif %}
+    {% if sector.case_studies %}
+      {% include "sectors/sections/case_studies.html" %}
+    {% endif %}
   </section>
 {% endblock %}
