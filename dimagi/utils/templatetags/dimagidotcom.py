@@ -51,6 +51,10 @@ def JSON(obj):
     except TypeError as e:
         raise e
 
+@register.filter
+def META_STR(str):
+    return str.replace('"', '\"')
+
 
 @register.filter
 def BOOL(obj):
