@@ -11,6 +11,10 @@
     <meta name="format-detection" content="telephone=no">
     <meta property="dimagi:baseUrl" content="{{ meta.baseUrl }}">
 
+    <meta property="dimagi:trackingConfig" content="{{ meta.trackingConfig|JSON|META_STR }}">
+    <meta property="dimagi:tracking" content="{{ meta.tracking|JSON|META_STR }}">
+    <meta property="dimagi:trackingAB" content="{{ meta.trackingAB|JSON|META_STR }}">
+
     {% block meta %}{% endblock %}
 
     <title>{% block title %}Dimagi.com{% endblock %}</title>

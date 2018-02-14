@@ -1,3 +1,5 @@
+from dimagi.utils.ab_tests import ACTIVE_AB_TESTS
+from dimagi.utils.config import setting
 from dimagi.utils.web import get_static_url
 
 
@@ -6,7 +8,16 @@ def metas(request):
     Used for outputting as JSON to the <meta name="dimagi:*"> tags.
     """
     _metas = {}
+
     _metas["baseUrl"] = get_static_url('')
+    _metas["tracking"] = setting('TRACKING')
+    _metas["trackingConfig"] = {
+        'logLevel': setting('TRACKING_LOG_LEVEL', ''),
+        'enabled': setting('TRACKING_ENABLED', False),
+        'userId': 'test',  # todo generate user id
+    }
+    _metas["trackingAB"] = [ab.context for ab in ACTIVE_AB_TESTS]
+
     return {
         "meta": _metas,
     }

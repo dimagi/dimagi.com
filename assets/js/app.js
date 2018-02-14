@@ -10,6 +10,7 @@ require([
   'app/smoothScroll',
   'app/carousel',
   'app/imageLoader',
+  'app/tracking',
   'modernizr',
 ], function (
     $,
@@ -22,7 +23,8 @@ require([
     SubNav,
     SmoothScroll,
     Carousel,
-    ImageLoader
+    ImageLoader,
+    Tracking
 ) {
   $(function () {
     _.each([
@@ -35,6 +37,7 @@ require([
       SmoothScroll,
       Carousel,
       ImageLoader,
+      Tracking,
     ], function (m) {
       m.initialize();
     });
