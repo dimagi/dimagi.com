@@ -32,12 +32,14 @@ define([
    * @param {object} eventParameters - (optional) Extra event parameters
    * @param {function} eventCallback - (optional) Event callback fn
    */
-  var trackEvent = function (eventCategory,
-                             eventAction,
-                             eventLabel,
-                             eventValue,
-                             eventParameters,
-                             eventCallback) {
+  var trackEvent = function (
+      eventCategory,
+      eventAction,
+      eventLabel,
+      eventValue,
+      eventParameters,
+      eventCallback
+  ) {
     self.ready.done(function () {
       var params = {
         event_category: eventCategory,
@@ -78,12 +80,14 @@ define([
    * @param {string} eventValue - (optional) The event value
    * @param {object} eventParameters - (optional) Extra event parameters
    */
-  var trackClick = function (element,
-                             eventCategory,
-                             eventAction,
-                             eventLabel,
-                             eventValue,
-                             eventParameters) {
+  var trackClick = function (
+    element,
+    eventCategory,
+    eventAction,
+    eventLabel,
+    eventValue,
+    eventParameters
+  ) {
     self.ready.done(function () {
       Utils.trackClickHelper(
           element,
