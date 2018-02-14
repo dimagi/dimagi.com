@@ -142,6 +142,25 @@ define([
     };
   };
 
+
+  var bindEvents = function () {
+
+    _.each($('[data-ga="true"]'), function ($elem) {
+
+      $elem = $($elem);
+
+      var category = $elem.attr('data-ga-category'),
+          action = $elem.attr('data-ga-action'),
+          label = $elem.attr('data-ga-label'),
+          value = $elem.attr('data-ga-value'),
+          params = $.parseJSON($elem.attr('data-ga-params') || "{}");
+
+      trackClick($elem, category, action, label, value, params);
+
+    });
+
+  };
+
   return {
     initialize: function () {
       var apiId = Utils.getApiId('GOOGLE'),
@@ -164,6 +183,8 @@ define([
 
         // Configure Gtag with User Info
         _gtag('config', apiId, user);
+
+        bindEvents();
       });
     },
     track: {
