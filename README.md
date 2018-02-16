@@ -1,24 +1,52 @@
-# dimagi.com
+# Dimagi.com
 
-## Getting Started
+1. [Getting Started Locally](#getting-started-locally)
+2. [Pushing to Heroku](#pushing-to-heroku)
+3. [PR Guidelines](#pr-guidelines)
 
-1. Install `virtualenv` for `Python 3.6` and `pip3` and make your virtual environment.
-2. Install `pipenv`
- ```
- pip3 install pipenv
- ```
+## Getting Started Locally
+
+1. `git clone` this repo to your machine.
+
+1. Install `virtualenv` for `Python 3.6` and `pip3` and make your virtual environment. If you have `virtualenv` installed for
+    ```
+    virtualenv -p python3 .venv
+    source .venv/bin/activate
+    ```
+
+1. Install `pipenv`
+    ```
+    pip3 install pipenv
+    ```
  
-3. Install from `Pipfile`
- ```
- pipenv install
- ```
+1. Install `Pipfile` dependencies
+    ```
+    pipenv install
+    ```
 
-4. Install the [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli)
+1. Install [Yarn](https://yarnpkg.com/en/docs/install) dependencies
+    ```
+    yarn install
+    ```
 
-todo: fill in the rest of this
+1. Install & Run [Redis](https://redis.io/).
+
+1. Create a `.env` file, and make any necessary edits.
+    ```
+    cp dev.env .env
+    ```
+
+1. Run the server using
+    ```
+    manage.py runserver
+    ```
 
 
-## PR Approval Guidelines
+## Pushing to Heroku
+
+Todo
+
+## PR Guidelines
 
 ### HTML
 
