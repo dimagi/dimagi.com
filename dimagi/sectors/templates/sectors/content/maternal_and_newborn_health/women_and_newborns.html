@@ -1,0 +1,41 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<h3>
+  {% blocktrans %}
+    Women and Newborns
+  {% endblocktrans %}
+</h3>
+
+<p>
+  <strong>{% trans "Problem" %}</strong>:
+  {% blocktrans %}
+    In many countries, women are required to keep track of
+    their own paper medical records, which can be lost or damaged.
+    In many cases, if a woman forgets or loses her medical records
+    the facility staff will refuse to see her or her baby.
+    Additionally, women may lose track of time between
+    ANC or PNC appointments.
+  {% endblocktrans %}
+</p>
+<ul class="check-list gap-bottom-small grid-2-at-medium">
+  <li>
+    {% blocktrans %}
+      Mobile applications eliminate the need for paper medical
+      records by storing medical information for each woman and
+      newborn registered through the application.
+    {% endblocktrans %}
+  </li>
+  <li>
+    {% blocktrans %}
+      Case management allows women and newborns to rely
+      on their CHW to recall the details of their medical histories.
+    {% endblocktrans %}
+  </li>
+  <li>
+    {% blocktrans %}
+      SMS reminders enable women to be notified about upcoming
+      appointments without requiring CHW prompting.
+    {% endblocktrans %}
+  </li>
+</ul>
