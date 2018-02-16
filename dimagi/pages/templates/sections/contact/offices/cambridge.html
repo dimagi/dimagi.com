@@ -1,0 +1,35 @@
+{% extends "sections/contact/offices/_base.html" %}
+{% load i18n %}
+
+{% block icon %}
+  {% include "svg/countries/todo.html" %}
+{% endblock %}
+
+{% block city %}{% blocktrans %}
+  Cambridge, MA
+{% endblocktrans %}{% endblock %}
+
+{% block country %}{% blocktrans %}
+  United States
+{% endblocktrans %}{% endblock %}
+
+{% block contact_info %}
+  <li>
+    585 Massachusetts Ave.
+  </li>
+  <li>
+    Suite 4
+  </li>
+  <li>
+    Cambridge, MA 02139
+  </li>
+  <li>
+    t: +1.617.649.2214
+  </li>
+  <li>
+    f: +1.617.274.8393
+  </li>
+  <li>
+    info@dimagi.com
+  </li>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends "sections/contact/directory/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block icon %}
+  {% include "svg/products/commcare/icon/heart_health.html" %}
+{% endblock %}
+
+{% block name %}{% blocktrans %}
+  Sales
+{% endblocktrans %}{% endblock %}
+
+{% block description %}
+  <p>
+    {% blocktrans %}
+      Interested in CommCare?<br />
+      Talk to a sales representative.
+    {% endblocktrans %}
+  </p>
+  <p>
+    <a class="orange"
+       href="mailto:sales@dimagi.com">
+      Sales@Dimagi.com
+    </a>
+  </p>
+{% endblock %}

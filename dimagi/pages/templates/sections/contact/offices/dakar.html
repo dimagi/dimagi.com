@@ -1,0 +1,35 @@
+{% extends "sections/contact/offices/_base.html" %}
+{% load i18n %}
+
+{% block icon %}
+  {% include "svg/countries/todo.html" %}
+{% endblock %}
+
+{% block city %}{% blocktrans %}
+  Dakar
+{% endblocktrans %}{% endblock %}
+
+{% block country %}{% blocktrans %}
+  Senegal
+{% endblocktrans %}{% endblock %}
+
+{% block contact_info %}
+  <li>
+    Apartment N°8
+  </li>
+  <li>
+    Lot N°24959
+  </li>
+  <li>
+    Cambridge, MA 02139
+  </li>
+  <li>
+    Ngor, Dakar, Senegal
+  </li>
+  <li>
+    +221 33 8207375
+  </li>
+  <li>
+    info@dimagi.com
+  </li>
+{% endblock %}

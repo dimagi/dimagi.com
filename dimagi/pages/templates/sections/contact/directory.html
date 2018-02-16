@@ -1,0 +1,23 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="directory accent-gray-bg border-vert"
+         id="directory">
+  <div class="content pad-vert-medium align-center">
+
+    <p class="content-width-medium">
+      {% blocktrans %}
+        In order to keep our free products free, the Customer Support email is only available for paying customers.
+        If you’re on our free Community plan, help is still available on the CommCare Users Group and our Help Site.
+      {% endblocktrans %}
+    </p>
+
+    <div class="grid-2-at-medium grid-4-at-large grid-row-equal-heights gap-bottom-small gap-top-medium">
+      {% include "sections/contact/directory/sales.html" %}
+      {% include "sections/contact/directory/customer_support.html" %}
+      {% include "sections/contact/directory/community_support.html" %}
+      {% include "sections/contact/directory/general.html" %}
+    </div>{# .grid-2-at-medium #}
+
+  </div>{# .content #}
+</section>

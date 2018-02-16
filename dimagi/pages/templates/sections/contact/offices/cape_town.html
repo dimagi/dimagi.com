@@ -1,0 +1,35 @@
+{% extends "sections/contact/offices/_base.html" %}
+{% load i18n %}
+
+{% block icon %}
+  {% include "svg/countries/todo.html" %}
+{% endblock %}
+
+{% block city %}{% blocktrans %}
+  Cape Town
+{% endblocktrans %}{% endblock %}
+
+{% block country %}{% blocktrans %}
+  South Africa
+{% endblocktrans %}{% endblock %}
+
+{% block contact_info %}
+  <li>
+    56 Barnet Street
+  </li>
+  <li>
+    Gardens
+  </li>
+  <li>
+    Cape Town, South Africa
+  </li>
+  <li>
+    ZA 8001
+  </li>
+  <li>
+    +27 21 461 4294
+  </li>
+  <li>
+    info@dimagi.com
+  </li>
+{% endblock %}

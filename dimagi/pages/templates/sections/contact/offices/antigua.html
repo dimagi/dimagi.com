@@ -1,0 +1,29 @@
+{% extends "sections/contact/offices/_base.html" %}
+{% load i18n %}
+
+{% block icon %}
+  {% include "svg/countries/todo.html" %}
+{% endblock %}
+
+{% block city %}{% blocktrans %}
+  Antigua
+{% endblocktrans %}{% endblock %}
+
+{% block country %}{% blocktrans %}
+  Guatemala
+{% endblocktrans %}{% endblock %}
+
+{% block contact_info %}
+  <li>
+    Impact Hub Antigua
+  </li>
+  <li>
+    Avenida Norte #12A
+  </li>
+  <li>
+    Antigua, Guatemala 03001
+  </li>
+  <li>
+    info@dimagi.com
+  </li>
+{% endblock %}

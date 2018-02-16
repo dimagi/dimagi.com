@@ -1,0 +1,36 @@
+{% extends "sections/contact/directory/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block icon %}
+  {% include "svg/products/commcare/icon/heart_health.html" %}
+{% endblock %}
+
+{% block name %}{% blocktrans %}
+  General Inquiries
+{% endblocktrans %}{% endblock %}
+
+{% block description %}
+  <p>
+    {% blocktrans %}
+      All of your other Dimagi and CommCare needs.
+    {% endblocktrans %}
+  </p>
+  <p class="orange font-weight-bold">
+    <a class="orange"
+       href="mailto:info@dimagi.com">
+      Info@Dimagi.com
+    </a><br />
+    <a class="orange"
+       href="tel:1-888-710-5830">
+      +1 (888) 710-5830
+    </a>
+  </p>
+  <p>
+    {% url 'careers' as careers_url %}
+    {% blocktrans %}
+      For any career inquiries, please see our
+      <a class="orange" href="{{ careers_url }}">Careers Page</a>.
+    {% endblocktrans %}
+  </p>
+{% endblock %}

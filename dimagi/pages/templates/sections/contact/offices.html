@@ -1,0 +1,59 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="offices align-center"
+         id="offices">
+  <div class="content pad-vert-medium">
+
+    <div class="intro content-width-medium">
+      <h2>
+        {% blocktrans %}
+          Our Offices
+        {% endblocktrans %}
+      </h2>
+      <p>
+        {% blocktrans %}
+          Dimagi’s 125+ team of product development and implementation staff<br />
+          are based across six offices, with additional staff around the world.
+        {% endblocktrans %}
+      </p>
+    </div>
+
+    <h5 class="orange gap-bottom-none">
+      {% blocktrans %}
+        Headquarters
+      {% endblocktrans %}
+    </h5>
+
+    <p class="gap-bottom-medium">
+      {% blocktrans %}
+        Cambridge, MA, USA
+      {% endblocktrans %}
+    </p>
+
+    <h3 class="gap-bottom-small">
+      {% blocktrans %}
+        All Dimagi Locations
+      {% endblocktrans %}
+    </h3>
+
+    <div class="grid-4-at-medium grid-3-at-small grid-row-space-small">
+      {% include "sections/contact/offices/cambridge.html" %}
+      {% include "sections/contact/offices/dakar.html" %}
+      {% include "sections/contact/offices/delhi.html" %}
+      {% include "sections/contact/offices/cape_town.html" %}
+    </div>{# .grid-2-at-medium #}
+
+    <h3 class="gap-bottom-small gap-top-medium">
+      {% blocktrans %}
+        Satellite Offices
+      {% endblocktrans %}
+    </h3>
+
+    <div class="grid-4-at-medium grid-3-at-small grid-row-space-small">
+      {% include "sections/contact/offices/washington.html" %}
+      {% include "sections/contact/offices/antigua.html" %}
+    </div>{# .grid-2-at-medium #}
+
+  </div>{# .content #}
+</section>

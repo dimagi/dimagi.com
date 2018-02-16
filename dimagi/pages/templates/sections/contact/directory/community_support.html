@@ -1,0 +1,31 @@
+{% extends "sections/contact/directory/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block icon %}
+  {% include "svg/products/commcare/icon/heart_health.html" %}
+{% endblock %}
+
+{% block name %}{% blocktrans %}
+  Community Support
+{% endblocktrans %}{% endblock %}
+
+{% block description %}
+  <p>
+    {% blocktrans %}
+      Share questions and answers with the
+      <a class="orange"
+         href="https://forum.dimagi.com/"
+         target="_blank">
+        CommCare Users Group</a>,
+      or go directly to our
+      <a class="orange"
+         href="https://help.commcarehq.org/"
+         target="_blank">Help Site</a>.
+    {% endblocktrans %}
+  </p>
+{% endblock %}
+
+
+
+

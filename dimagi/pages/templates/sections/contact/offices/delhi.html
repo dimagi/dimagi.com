@@ -1,0 +1,35 @@
+{% extends "sections/contact/offices/_base.html" %}
+{% load i18n %}
+
+{% block icon %}
+  {% include "svg/countries/todo.html" %}
+{% endblock %}
+
+{% block city %}{% blocktrans %}
+  New Delhi
+{% endblocktrans %}{% endblock %}
+
+{% block country %}{% blocktrans %}
+  India
+{% endblocktrans %}{% endblock %}
+
+{% block contact_info %}
+  <li>
+    D - 1/28 Vasant Vihar
+  </li>
+  <li>
+    Lot N°24959
+  </li>
+  <li>
+    New Delhi 110057
+  </li>
+  <li>
+    India
+  </li>
+  <li>
+    +91 1146704670
+  </li>
+  <li>
+    info@dimagi.com
+  </li>
+{% endblock %}

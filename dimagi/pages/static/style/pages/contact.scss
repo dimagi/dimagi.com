@@ -2,3 +2,27 @@
 @import 'app/variables/colors';
 @import 'app/variables/sizes';
 @import 'app/variables/type';
+
+.contact-page {
+  $_base-height: 500px;
+  $_height-by-size: (
+    small: 500px,
+    medium: 500px,
+    large: 500px,
+    extra-large: 500px,
+  );
+  @include make-bg(hero, '../../pages/products/commcare/hero', $_base-height, $_height-by-size);
+}
+
+@media (min-width: $width-desktop) {
+  .contact-page .hero h1 {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 55%;
+  }
+}
+
+.office-country-icon svg {
+  height: 60px;
+  width: 60px;
+}
