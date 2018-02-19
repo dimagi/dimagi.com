@@ -1,0 +1,45 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="benefits border-top"
+         id="benefits">
+  <div class="content pad-vert-medium">
+
+    <div class="intro">
+      <h2>
+        {% blocktrans %}
+          Benefits
+        {% endblocktrans %}
+      </h2>
+      <p>
+        {% blocktrans %}
+          We care about our team’s happiness.
+        {% endblocktrans %}
+      </p>
+    </div>
+
+    <div class="grid-3-at-medium grid-2-at-small grid-row-space-small">
+      {% include "sections/careers/benefits/fulfilling_work.html" %}
+      {% include "sections/careers/benefits/flexible_work.html" %}
+      {% include "sections/careers/benefits/time_off.html" %}
+
+      {% include "sections/careers/benefits/travel.html" %}
+      {% include "sections/careers/benefits/play.html" %}
+      {% include "sections/careers/benefits/retirement.html" %}
+
+      {% include "sections/careers/benefits/insurance.html" %}
+      {% include "sections/careers/benefits/stock.html" %}
+      {% include "sections/careers/benefits/parental_leave.html" %}
+    </div>{# .grid-2-at-medium #}
+
+    <p class="align-center pad-bottom-small">
+      <a href="#open-positions"
+         class="button">
+        {% blocktrans %}
+          View Open Positions
+        {% endblocktrans %}
+      </a>
+    </p>
+
+  </div>{# .content #}
+</section>

@@ -1,0 +1,20 @@
+<div class="column">
+  <a class="post"
+     href="{% block link %}{% endblock %}">
+    <div class="aspect-ratio-square
+                gap-bottom-line
+                post-thumbnail
+                image {% block image %}{% endblock %}"></div>
+
+    <h6>
+      {% block name %}{% endblock %}
+    </h6>
+    <p>
+      {% block description %}{% endblock %}
+    </p>
+    <p>
+      {% block area %}{% endblock %}
+    </p>
+  </a>
+</div>{# .column #}
+

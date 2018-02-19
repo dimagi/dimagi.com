@@ -10,29 +10,39 @@
   {% endcompress %}
 {% endblock %}
 
-{% block hero %}
-<section class="hero hero-careers" id="hero">
-  <div class="content content-width-large inverted align-center display-flex flex-valign-middle expand-vertical offset-top-medium flex-align-center">
-    <div class="copy expand position-relative">
 
-      <h1 class="font-weight-bold">
+{% block hero %}
+  <div id="top"></div>
+  <section class="hero hero-careers"
+           id="hero">
+    <div class="content align-left-at-medium align-center">
+      <h2 class="gap-vert-line">
         {% blocktrans %}
-          Careers Page Placeholder
+          Work at Dimagi
+        {% endblocktrans %}
+      </h2>
+      <h1>
+        {% blocktrans %}
+           Dimagi Careers
         {% endblocktrans %}
       </h1>
-
-      <div class="headline content-width-small">
+      <a class="button alt inverted"
+         href="#open-positions">
         {% blocktrans %}
-
+          View Open Positions
         {% endblocktrans %}
-      </div>{# .headline #}
-
-    </div>{# .copy #}
-  </div>{# .content #}
-</section>
+      </a>
+    </div> {# .content #}
+  </section>
 {% endblock %}
 
 {% block content %}
-  <section class="careers-container">
+  <section class="careers-container orange-theme">
+    {% include "sections/careers/sub_nav.html" %}
+    {% include "sections/careers/overview.html" %}
+    {% include "sections/careers/benefits.html" %}
+    {% include "sections/careers/awards.html" %}
+    {% include "sections/careers/life.html" %}
+    {% include "sections/contact/offices.html" %}
   </section>
 {% endblock %}
