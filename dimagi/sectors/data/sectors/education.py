@@ -41,6 +41,8 @@ SECTOR = Sector(
     100 users.
             """),
             video_url=None,
+            published_study_url=None,
+            commcare_app_url=None,
         ),
         Project(
             name=ugettext_lazy(
@@ -58,6 +60,8 @@ SECTOR = Sector(
     indicators.
             """),
             video_url=None,
+            published_study_url=None,
+            commcare_app_url=None,
         ),
         Project(
             name=ugettext_lazy(
@@ -75,6 +79,8 @@ SECTOR = Sector(
     with teachers.
             """),
             video_url=None,
+            published_study_url=None,
+            commcare_app_url=None,
         ),
         Project(
             name=ugettext_lazy(
@@ -90,6 +96,8 @@ SECTOR = Sector(
     social issues within their communities.
             """),
             video_url=None,
+            published_study_url=None,
+            commcare_app_url=None,
         ),
     ],
 )

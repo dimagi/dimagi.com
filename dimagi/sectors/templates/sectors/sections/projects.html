@@ -39,6 +39,18 @@
                      class="play-icon-small">{% trans "Watch Video" %}</a>
                 </div>
               {% endif %}
+              {% if project.published_study_url %}
+                <div class="cta align-left">
+                  <a href="{{ project.published_study_url }}"
+                     target="_blank">{% trans "Published study" %}</a>
+                </div>
+              {% endif %}
+              {% if project.commcare_app_url %}
+                <div class="cta align-left">
+                  <a href="{{ project.commcare_app_url }}"
+                     target="_blank">{% trans "CommCare application" %}</a>
+                </div>
+              {% endif %}
               </div>
             </div>{# .carousel-slide #}
           {% endfor %}

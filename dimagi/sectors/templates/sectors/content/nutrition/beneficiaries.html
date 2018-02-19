@@ -1,0 +1,41 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<h3>
+  {% blocktrans %}
+    Beneficiaries
+  {% endblocktrans %}
+</h3>
+
+<p>
+  <strong>{% trans "Problem" %}</strong>:
+  {% blocktrans %}
+    Patients sometimes do not have a record of health histories
+    and have had varied exposure to behavior change messaging.
+  {% endblocktrans %}
+</p>
+<ul class="check-list gap-bottom-small grid-2-at-medium">
+  <li>
+    {% blocktrans %}
+      Registration enables beneficiaries to be easily tracked across
+      multiple visits, facilitating a continuum of personalized care
+      according to individuals’ specific anthropometric status
+      (weight-for-age, growth faltering, and MUAC).
+    {% endblocktrans %}
+  </li>
+  <li>
+    {% blocktrans %}
+      Automatic calculation of anthropometric status
+      enables beneficiaries to be referred to
+      appropriate nutritional facilities.
+    {% endblocktrans %}
+  </li>
+  <li>
+    {% blocktrans %}
+      Multimedia-enabled behavior change messaging
+      engages beneficiaries about positive health
+      practices and notifies them of the availability
+      of local nutritional programs.
+    {% endblocktrans %}
+  </li>
+</ul>

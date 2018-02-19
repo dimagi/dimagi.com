@@ -1,0 +1,50 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<h3>
+  {% blocktrans %}
+    Frontline Workers
+  {% endblocktrans %}
+</h3>
+
+<p>
+  <strong>{% trans "Problem" %}</strong>:
+  {% blocktrans %}
+    Frontline workers must calculate anthropometric data in
+    the field or return later for referral, which is time
+    consuming and results in delays in services.
+  {% endblocktrans %}
+</p>
+<ul class="check-list gap-bottom-small grid-2-at-medium">
+  <li>
+    {% blocktrans %}
+      Complex anthropometric calculations (e.g. weight-for-age tables,
+      breath rate counting, etc) are automatically carried out to
+      simplify health workers’ workflow.
+    {% endblocktrans %}
+  </li>
+  <li>
+    {% blocktrans %}
+      Basic data validation reduces common data errors
+      (e.g. birthdates in the future, parameter errors).
+    {% endblocktrans %}
+  </li>
+  <li>
+    {% blocktrans %}
+      Interactive multimedia empowers low-literate workers
+      to deliver appropriate nutritional counseling.
+    {% endblocktrans %}
+  </li>
+  <li>
+    {% blocktrans %}
+      Skip logic hides irrelevant questions and reduces
+      frontline workers’ time spent on data entry.
+    {% endblocktrans %}
+  </li>
+  <li>
+    {% blocktrans %}
+      Frontline workers input data as they visit beneficiaries,
+      ensuring protocol adherence and data completeness at point of entry.
+    {% endblocktrans %}
+  </li>
+</ul>
