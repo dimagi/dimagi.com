@@ -74,3 +74,10 @@ INDIA = Country(
     icon="svg/countries/todo.html",
 )
 
+TANZANIA = Country(
+    name=ugettext_lazy(
+        "Tanzania"
+    ),
+    icon="svg/countries/todo.html",
+)
+
