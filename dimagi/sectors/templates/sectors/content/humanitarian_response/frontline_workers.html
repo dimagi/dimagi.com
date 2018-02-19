@@ -1,0 +1,52 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<h3>
+  {% blocktrans %}
+    Frontline Workers
+  {% endblocktrans %}
+</h3>
+
+<p>
+  <strong>{% trans "Problem" %}</strong>:
+  {% blocktrans %}
+    Most mHRs have been designed by technologists rather than HROs and are not tailored to the needs of their users. Responders must juggle a number of information sources that are often poorly coordinated.
+  {% endblocktrans %}
+</p>
+<ul class="check-list gap-bottom-small grid-2-at-medium">
+  <li>
+    {% blocktrans %}
+      Combined mobile data collection, interactive SMS applications, and inventory tracking improve response coordination and service delivery.
+    {% endblocktrans %}
+  </li>
+  <li>
+    {% blocktrans %}
+      Integrated, comprehensive functionality allows features to be turned on or off (e.g. cash transfer programs, preparedness training, beneficiary feedback systems).
+    {% endblocktrans %}
+  </li>
+  <li>
+    {% blocktrans %}
+      Methods for sharing data between users off of local servers (e.g. “hastily formed networks” on local Wi-Fi or SD card transfer) enable use while domestic mobile networks are down.
+    {% endblocktrans %}
+  </li>
+  <li>
+    {% blocktrans %}
+      Data collection on mobile applications can continue outside of network coverage, and will automatically sync with a cloud-server once connectivity is available.
+    {% endblocktrans %}
+  </li>
+  <li>
+    {% blocktrans %}
+      Integrated map-based visualization leverages third party applications, better enabling responders to identify when and where activities are taking place in real-time.
+    {% endblocktrans %}
+  </li>
+    <li>
+    {% blocktrans %}
+        Built-in QR code reader compatibility enables tagged lab results to be input automatically.
+    {% endblocktrans %}
+  </li>
+    <li>
+    {% blocktrans %}
+        Point-of-service functionalities in mobile applications for post-crisis sustain efforts after immediate response has been carried out (e.g. case tracking, decision support, and embedded multimedia for counseling).
+    {% endblocktrans %}
+  </li>
+</ul>
