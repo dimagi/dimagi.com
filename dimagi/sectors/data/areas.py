@@ -10,3 +10,10 @@ HEALTH = Area(
     theme="purple-theme",
 )
 
+
+AGRICULTURE = Area(
+    name=ugettext_lazy(
+        "Agriculture"
+    ),
+    theme="green-theme",
+)
