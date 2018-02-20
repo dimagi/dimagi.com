@@ -1,0 +1,44 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<h3>
+  {% blocktrans %}
+    HIV/AIDS Clinics & Clinicians
+  {% endblocktrans %}
+</h3>
+
+<p>
+  <strong>{% trans "Problem" %}</strong>:
+  {% blocktrans %}
+    Mechanisms are often not in place to support HIV/AIDS referrals,
+    and clinics often lack necessary ARTs
+  {% endblocktrans %}
+</p>
+<ul class="check-list gap-bottom-small grid-2-at-medium">
+  <li>
+    {% blocktrans %}
+      Health records can be sent to referral facilities, decreasing the
+      likelihood of patients falling out of the program due to health
+      worker non-compliance or attrition.
+    {% endblocktrans %}
+  </li>
+  <li>
+    {% blocktrans %}
+      Applications consider available ART stock while performing
+      automatic prescription in accordance with ART regulations,
+      based on entered symptoms.
+    {% endblocktrans %}
+  </li>
+  <li>
+    {% blocktrans %}
+      SMS interactions allow stockouts to be reported before they occur.
+    {% endblocktrans %}
+  </li>
+  <li>
+    {% blocktrans %}
+      Program managers can conduct health surveillance, monitoring,
+      and evaluation of HIV/AIDS programs, activating timely
+      response where treatment is not successful
+    {% endblocktrans %}
+  </li>
+</ul>
