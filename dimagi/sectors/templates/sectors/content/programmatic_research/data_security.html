@@ -1,0 +1,27 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<h3>
+  {% blocktrans %}
+    Data Security
+  {% endblocktrans %}
+</h3>
+
+<p>
+  <strong>{% trans "Problem" %}</strong>:
+  {% blocktrans %}
+    Data collection often entails the exchange of information
+    from study participants to research staff in the field,
+    and the exchange of data between research personnel.
+    These exchanges introduce challenges in maintaining
+    data security.
+  {% endblocktrans %}
+</p>
+<ul class="check-list gap-bottom-small grid-2-at-medium">
+  <li>
+    {% blocktrans %}
+      Encryption of information on mobile devices ensures
+      safety of data as it is collected in the field
+    {% endblocktrans %}
+  </li>
+</ul>
