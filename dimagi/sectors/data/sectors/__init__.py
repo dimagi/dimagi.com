@@ -3,6 +3,7 @@ from dimagi.sectors.data.sectors import (
     education,
     agricultural_cooperatives,
     mlabor,
+    programmatic_research,
     hiv_aids,
 )
 
@@ -12,5 +13,6 @@ all_sectors = (
     education,
     agricultural_cooperatives,
     mlabor,
+    programmatic_research,
     hiv_aids,
 )

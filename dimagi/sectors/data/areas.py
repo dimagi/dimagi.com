@@ -16,3 +16,11 @@ AGRICULTURE = Area(
     ),
     theme="green-theme",
 )
+
+
+DEVELOPMENT = Area(
+    name=ugettext_lazy(
+        "Development"
+    ),
+    theme="blue-theme",
+)
