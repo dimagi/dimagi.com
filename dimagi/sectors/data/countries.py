@@ -89,3 +89,27 @@ TANZANIA = Country(
     ),
     icon="svg/countries/todo.html",
 )
+
+
+ZIMBABWE = Country(
+    name=ugettext_lazy(
+        "Zimbabwe"
+    ),
+    icon="svg/countries/todo.html",
+)
+
+
+MALI = Country(
+    name=ugettext_lazy(
+        "Mail"
+    ),
+    icon="svg/countries/todo.html",
+)
+
+
+SOUTH_AFRICA = Country(
+    name=ugettext_lazy(
+        "South Africa"
+    ),
+    icon="svg/countries/todo.html",
+)

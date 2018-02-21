@@ -4,6 +4,8 @@ from dimagi.sectors.data.sectors import (
     mlabor,
     agricultural_cooperatives,
     logistics,
+    programmatic_research,
+    hiv_aids,
 )
 
 
@@ -13,4 +15,6 @@ all_sectors = (
     mlabor,
     agricultural_cooperatives,
     logistics,
+    programmatic_research,
+    hiv_aids,
 )
