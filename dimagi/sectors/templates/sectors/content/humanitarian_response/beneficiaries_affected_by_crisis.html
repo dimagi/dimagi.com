@@ -1,0 +1,33 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<h3>
+  {% blocktrans %}
+    Beneficiaries Affected by Crisis
+  {% endblocktrans %}
+</h3>
+
+<p>
+  <strong>{% trans "Problem" %}</strong>:
+  {% blocktrans %}
+    People affected by a crisis relying on a humanitarian response frequently
+    lack information on services available. Family reunification is stalled
+    due to difficulties in communication between shelters.
+  {% endblocktrans %}
+</p>
+<ul class="check-list gap-bottom-small grid-2-at-medium">
+  <li>
+    {% blocktrans %}
+      In areas of network connectivity, beneficiaries can interact
+      with coordinated response servers to find whereabouts of family
+      and friends.
+    {% endblocktrans %}
+  </li>
+  <li>
+    {% blocktrans %}
+      Mass messaging from HROs to beneficiaries can ensure beneficiaries
+      receive accurate information on where to seek help and shelter,
+      resulting in an automated, efficient information sharing network.
+    {% endblocktrans %}
+  </li>
+</ul>

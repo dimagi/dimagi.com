@@ -1,0 +1,36 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="life border-vert"
+         id="life">
+  <div class="content pad-vert-medium">
+
+      <h3 class="gap-bottom-base align-center">
+        {% blocktrans %}
+          Life at Dimagi
+        {% endblocktrans %}
+      </h3>
+      <p class="align-center">
+        {% blocktrans %}
+          Feel inspired by your work and your colleagues
+        {% endblocktrans %}
+      </p>
+
+    <div class="grid-4-at-medium grid-2-at-small grid-row-space-small">
+      {% include "careers/sections/life/tedx_talk.html" %}
+      {% include "careers/sections/life/away_month.html" %}
+      {% include "careers/sections/life/core_values.html" %}
+      {% include "careers/sections/life/global_services.html" %}
+    </div>{# .grid-4-at-medium #}
+
+    <p class="align-center pad-bottom-small">
+      <a href="#open-positions"
+         class="button">
+        {% blocktrans %}
+          View Open Positions
+        {% endblocktrans %}
+      </a>
+    </p>
+
+  </div>{# .content #}
+</section>

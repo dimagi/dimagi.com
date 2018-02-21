@@ -1,0 +1,51 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<h3>
+  {% blocktrans %}
+    Diagnostics and Lab Tracking
+  {% endblocktrans %}
+</h3>
+
+<p>
+  <strong>{% trans "Problem" %}</strong>:
+  {% blocktrans %}
+    During outbreaks, labs are established hastily
+    and results to patients are delayed.
+  {% endblocktrans %}
+</p>
+<ul class="check-list gap-bottom-small grid-2-at-medium">
+  <li>
+    {% blocktrans %}
+      CommCare data entered at the lab site will be automatically
+      uploaded as soon as a connection is available
+    {% endblocktrans %}
+  </li>
+  <li>
+    {% blocktrans %}
+      CommCare enables different authorization levels, for personnel
+      to access data on a web-based platform to consult results in
+      real time and to upload new test results
+    {% endblocktrans %}
+  </li>
+  <li>
+    {% blocktrans %}
+      CommCare supports user-configurable reports that can be exported
+      via CSV or to third party analytics software such as Tableau
+      via APIs
+    {% endblocktrans %}
+  </li>
+  <li>
+    {% blocktrans %}
+      Test results can be automatically sent via SMS from the central
+      database to recipients
+    {% endblocktrans %}
+  </li>
+  <li>
+    {% blocktrans %}
+      CommCare is compatible with QR code readers, and can be configured to
+      receive data from laboratory and point-of-care devices with digital
+      outputs via APIs
+    {% endblocktrans %}
+  </li>
+</ul>

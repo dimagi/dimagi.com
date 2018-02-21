@@ -1,0 +1,48 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<h3>
+  {% blocktrans %}
+    Humanitarian Response Organizations
+  {% endblocktrans %}
+</h3>
+
+<p>
+  <strong>{% trans "Problem" %}</strong>:
+  {% blocktrans %}
+    Most mHRs are developed during crises, rather than before,
+    limiting training and evaluation. Current mHRs focus on a
+    single functionality even though several integrated
+    functionalities are needed. Current mHRs lack methods
+    to allow data sharing within and between HROs, and can
+    be inhibited by mobile network failures.
+  {% endblocktrans %}
+</p>
+<ul class="check-list gap-bottom-small grid-2-at-medium">
+  <li>
+    {% blocktrans %}
+      CommCare’s application building tools enable non-programmers
+      to configure and deploy mobile applications with point-of-service
+      functions, and remotely update applications instantly.
+    {% endblocktrans %}
+  </li>
+  <li>
+    {% blocktrans %}
+      Applications are tailored to each HRO, using specifications of expressed needs
+    {% endblocktrans %}
+  </li>
+  <li>
+    {% blocktrans %}
+      mHRs built with CommCare are interoperable via MOTECH with other
+      tools built by HROs. This enables apps to be tested prior to a crisis,
+      and reduces complications arising from multiple data systems that must
+      be coordinated with different parties.
+    {% endblocktrans %}
+  </li>
+  <li>
+    {% blocktrans %}
+      HIPPA compliant tools enable HROs to selectively and securely share
+      data on protected networks.
+    {% endblocktrans %}
+  </li>
+</ul>

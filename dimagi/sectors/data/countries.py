@@ -74,6 +74,7 @@ INDIA = Country(
     icon="svg/countries/todo.html",
 )
 
+
 GLOBE = Country(
     name=ugettext_lazy(
         ""
@@ -81,3 +82,58 @@ GLOBE = Country(
     icon="svg/countries/todo.html",
 )
 
+
+GUINEA = Country(
+    name=ugettext_lazy(
+        "Guinea"
+    ),
+    icon="svg/countries/todo.html",
+)
+
+
+SENEGAL = Country(
+    name=ugettext_lazy(
+        "Senegal"
+    ),
+    icon="svg/countries/todo.html",
+)
+
+
+SIERRA_LEONE = Country(
+    name=ugettext_lazy(
+        "Sierra Leone"
+    ),
+    icon="svg/countries/todo.html",
+)
+
+
+TANZANIA = Country(
+    name=ugettext_lazy(
+        "Tanzania"
+    ),
+    icon="svg/countries/todo.html",
+)
+
+
+ZIMBABWE = Country(
+    name=ugettext_lazy(
+        "Zimbabwe"
+    ),
+    icon="svg/countries/todo.html",
+)
+
+
+MALI = Country(
+    name=ugettext_lazy(
+        "Mail"
+    ),
+    icon="svg/countries/todo.html",
+)
+
+
+SOUTH_AFRICA = Country(
+    name=ugettext_lazy(
+        "South Africa"
+    ),
+    icon="svg/countries/todo.html",
+)

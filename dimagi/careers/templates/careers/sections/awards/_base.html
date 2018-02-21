@@ -1,0 +1,28 @@
+{% load i18n %}
+
+<div class="column">
+  <a class="tile"
+     href="{% block link %}{% endblock %}">
+
+    <div class="aspect-ratio-square
+                gap-bottom-base
+                image {% block image %}{% endblock %}"></div>
+
+    <h6 class="neutral-color gap-bottom-none">
+      {% block name %}{% endblock %}
+    </h6>
+
+    <p class="body-color gap-bottom-none">
+      {% block description %}{% endblock %}
+    </p>
+
+    <p class="button-container gap-top-small">
+      <div class="button button-neutral">
+        {% blocktrans %}
+          Read More
+        {% endblocktrans %}
+      </div>{# .button #}
+    </p>
+
+  </a>
+</div>{# .column #}
