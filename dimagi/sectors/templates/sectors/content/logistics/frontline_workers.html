@@ -1,0 +1,56 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<h3>
+  {% blocktrans %}
+    Frontline Workers
+  {% endblocktrans %}
+</h3>
+
+<p>
+  <strong>{% trans "Problem" %}</strong>:
+  {% blocktrans %}
+    Many frontline workers provide supply to a community,
+    but have no reliable method of resupply; workers
+    spend long periods without adequate stock, decreasing
+    beneficiaries’ access to quality services and essential
+    products.
+  {% endblocktrans %}
+</p>
+<ul class="check-list gap-bottom-small grid-2-at-medium">
+  <li>
+    {% blocktrans %}
+      Mobile applications enable consistent reporting of
+      stock on hand and requisition orders.
+    {% endblocktrans %}
+  </li>
+  <li>
+    {% blocktrans %}
+      Average consumption and suggested reorder quantities
+      are automatically calculated, helping users to place
+      more accurate orders and reduce reducing time spent
+      on complex logistics calculations.
+    {% endblocktrans %}
+  </li>
+  <li>
+    {% blocktrans %}
+      Automatically inferred stockout dates guide resupply
+      scheduling, reducing wasted travel to pick up
+      supplies that are not ready.
+    {% endblocktrans %}
+  </li>
+  <li>
+    {% blocktrans %}
+      Streamlined requisition process helps workers monitor
+      the delivery schedule and improve the rationing of
+      supplies between deliveries.
+    {% endblocktrans %}
+  </li>
+  <li>
+    {% blocktrans %}
+      Tracking orders through to delivery enables accurate
+      communication with beneficiaries on stock availability,
+      increasing trust and quality of service.
+    {% endblocktrans %}
+  </li>
+</ul>

@@ -1,0 +1,34 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<h3>
+  {% blocktrans %}
+    Patient Self-Reporting
+  {% endblocktrans %}
+</h3>
+
+<p>
+  <strong>{% trans "Problem" %}</strong>:
+  {% blocktrans %}
+    Community members may not be engaged in Ebola
+    response or information-sharing.
+  {% endblocktrans %}
+</p>
+<ul class="check-list gap-bottom-small grid-2-at-medium">
+  <li>
+    {% blocktrans %}
+      CommCare data entered at the lab site will be
+      automatically uploaded as soon as a connection
+      is availableCommCare apps are interactive
+      outlets that can facilitate discussions about
+      Ebola among the community and encourage more open
+      conversation about disease recognition and prevention
+    {% endblocktrans %}
+  </li>
+  <li>
+    {% blocktrans %}
+      Patients can communicate with programs and health
+      centers via bidirectional SMS powered by CommCare
+    {% endblocktrans %}
+  </li>
+</ul>

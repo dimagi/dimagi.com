@@ -31,6 +31,12 @@
 
 1. Install & Run [Redis](https://redis.io/).
 
+1. Install postcss
+    ```
+    sudo npm install -g postcss-cli
+    sudo npm install -g autoprefixer
+    ```
+
 1. Create a `.env` file, and make any necessary edits.
     ```
     cp dev.env .env

@@ -1,0 +1,37 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<h3>
+  {% blocktrans %}
+    Stock Tracking
+  {% endblocktrans %}
+</h3>
+
+<p>
+  <strong>{% trans "Problem" %}</strong>:
+  {% blocktrans %}
+    Supplies are constantly being used without consistent,
+    timely, and accurate ways to ensure that they are
+    always available when they are needed.
+  {% endblocktrans %}
+</p>
+<ul class="check-list gap-bottom-small grid-2-at-medium">
+  <li>
+    {% blocktrans %}
+      CommCare applications enable programs and frontline workers
+      to track stock and make predictions for future needs
+    {% endblocktrans %}
+  </li>
+  <li>
+    {% blocktrans %}
+      SMS interactions enable predictions of stock outs to be
+      reported before they occur in low-connectivity areas
+    {% endblocktrans %}
+  </li>
+  <li>
+    {% blocktrans %}
+      Diagnostics supplies can be tracked via CommCare
+      to improve supply chain management
+    {% endblocktrans %}
+  </li>
+</ul>

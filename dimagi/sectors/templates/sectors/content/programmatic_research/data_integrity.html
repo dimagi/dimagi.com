@@ -1,0 +1,45 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<h3>
+  {% blocktrans %}
+    Data Integrity
+  {% endblocktrans %}
+</h3>
+
+<p>
+  <strong>{% trans "Problem" %}</strong>:
+  {% blocktrans %}
+    A core tenet of research, data integrity is often challenging
+    due to remote teams, complex workflows that often have
+    several data entry points completed by different research
+    personnel, and delays in data reporting and aggregation.
+  {% endblocktrans %}
+</p>
+<ul class="check-list gap-bottom-small grid-2-at-medium">
+  <li>
+    {% blocktrans %}
+      E-signature allows for integrated informed consent within
+      the electronic platform
+    {% endblocktrans %}
+  </li>
+  <li>
+    {% blocktrans %}
+      Integrated validation conditions assist in data entry to
+      simplify filling out complex forms, and can be reinforced
+      with hints and reminders
+    {% endblocktrans %}
+  </li>
+  <li>
+    {% blocktrans %}
+      Real-time submission of data directly from data collectors’
+      phones or devices enables managers and supervisors to
+      access up-to-date records
+    {% endblocktrans %}
+  </li>
+  <li>
+    {% blocktrans %}
+      Reliable GPS capture improves data integrity and validation
+    {% endblocktrans %}
+  </li>
+</ul>
