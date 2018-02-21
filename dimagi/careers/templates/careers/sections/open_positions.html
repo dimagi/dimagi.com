@@ -1,0 +1,88 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="open-positions border-top accent-gray-bg"
+         id="open-positions">
+  <div class="content pad-vert-medium">
+    <div class="intro content-width-medium gap-bottom-none">
+      <h2>
+        {% blocktrans %}
+          Open Positions
+        {% endblocktrans %}
+      </h2>
+      <p class="gap-bottom-none">
+        {% blocktrans %}
+          View all open positions below.
+        {% endblocktrans %}
+      </p>
+    </div>{# .intro #}
+
+    <div class="positions-select-container">
+      <div class="grid-4">
+        <div class="column">
+          <label for="role-select">
+            {% blocktrans %}
+            Role
+            {% endblocktrans %}
+          </label>
+          <select data-bind="options: roles,
+                             value: currentRole,
+                             optionsCaption: '{% trans "All roles" %}'"></select>
+        </div>{# .column #}
+        <div class="column">
+          <label for="role-select">
+            {% blocktrans %}
+            Team
+            {% endblocktrans %}
+          </label>
+          <select data-bind="options: teams,
+                             value: currentTeam,
+                             optionsCaption: '{% trans "All teams" %}'"></select>
+        </div>{# .column #}
+        <div class="column">
+          <label for="role-select">
+            {% blocktrans %}
+            Type
+            {% endblocktrans %}
+          </label>
+          <select data-bind="options: types,
+                             value: currentType,
+                             optionsCaption: '{% trans "All types" %}'"></select>
+        </div>{# .column #}
+        <div class="column">
+          <label for="role-select">
+            {% blocktrans %}
+            Location
+            {% endblocktrans %}
+          </label>
+          <select data-bind="options: locations,
+                             value: currentLocation,
+                             optionsCaption: '{% trans "All locations" %}'"></select>
+        </div>{# .column #}
+      </div>{# .grid-4 #}
+    </div>{# .positions-select-container #}
+
+    <div class="positions-container">
+      <p class="gap-bottom-none align-center" data-bind="visible: jobs().length === 0">
+        {% blocktrans %}
+          No Open Positions Available
+        {% endblocktrans %}
+      </p>
+      <div class="grid-4 gap-bottom-none" data-bind="foreach: jobs, visible: jobs().length > 0">
+        <div class="column">
+          <p><a data-bind="attr: { href: url}, text: role"></a></p>
+        </div>{# .column #}
+        <div class="column">
+          <p data-bind="text: team"></p>
+        </div>{# .column #}
+        <div class="column">
+          <p data-bind="text: type"></p>
+        </div>{# .column #}
+        <div class="column">
+          <p data-bind="text: location"></p>
+        </div>{# .column #}
+      </div>{# .grid-4 #}
+    </div>{# .positions-container #}
+
+  </div> {# .content #}
+</section>

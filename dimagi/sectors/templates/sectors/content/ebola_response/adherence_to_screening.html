@@ -1,0 +1,39 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<h3>
+  {% blocktrans %}
+    Adherence to Screening and Triage Protocols
+  {% endblocktrans %}
+</h3>
+
+<p>
+  <strong>{% trans "Problem" %}</strong>:
+  {% blocktrans %}
+    Knowledge of and best practices for handling cases
+    and treatment change rapidly, with changing
+    protocols burdening frontline work forces
+    to quickly adapt for safety.
+  {% endblocktrans %}
+</p>
+<ul class="check-list gap-bottom-small grid-2-at-medium">
+  <li>
+    {% blocktrans %}
+      CommCare enables new or adapted protocols
+      to be pushed out to remote workforces
+    {% endblocktrans %}
+  </li>
+  <li>
+    {% blocktrans %}
+      Separate forms ensure that workers follow
+      specific workflows in order to be able to
+      enter ETUs
+    {% endblocktrans %}
+  </li>
+  <li>
+    {% blocktrans %}
+      Case management enables workers to identify
+      patients previously seen for efficient triage
+    {% endblocktrans %}
+  </li>
+</ul>

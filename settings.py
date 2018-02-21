@@ -31,6 +31,7 @@ PROJECT_APPS = [
     'dimagi.utils',
     'dimagi.pages',
     'dimagi.blog',
+    'dimagi.careers',
     'dimagi.case_studies',
     'dimagi.toolkits',
     'dimagi.sectors',

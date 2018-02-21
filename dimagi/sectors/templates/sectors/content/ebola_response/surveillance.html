@@ -1,0 +1,52 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<h3>
+  {% blocktrans %}
+    Surveillance and Contact Tracing
+  {% endblocktrans %}
+</h3>
+
+<p>
+  <strong>{% trans "Problem" %}</strong>:
+  {% blocktrans %}
+    Controlling outbreaks requires identifying suspected
+    cases before they can expose other people.
+  {% endblocktrans %}
+</p>
+<ul class="check-list gap-bottom-small grid-2-at-medium">
+  <li>
+    {% blocktrans %}
+      Frontline workers can use CommCare to identify
+      contacts and follow up with them over time
+    {% endblocktrans %}
+  </li>
+  <li>
+    {% blocktrans %}
+      Patients can be easily tracked across multiple
+      visits thanks to registration modules
+    {% endblocktrans %}
+  </li>
+  <li>
+    {% blocktrans %}
+      In-app background validations and calculations
+      automatically notify frontline workers when a
+      contact needs to be followed up with, or can
+      be declared safe after 21 days
+    {% endblocktrans %}
+  </li>
+  <li>
+    {% blocktrans %}
+      Application checklists and questions prompt
+      frontline workers to check for all possible
+      symptoms
+    {% endblocktrans %}
+  </li>
+  <li>
+    {% blocktrans %}
+      Patient records can be automatically sent
+      to health facilities for up to date
+      incidence reports
+    {% endblocktrans %}
+  </li>
+</ul>
