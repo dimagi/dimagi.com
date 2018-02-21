@@ -10,6 +10,16 @@
   {% endcompress %}
 {% endblock %}
 
+{% block js %}
+    {% compress js %}
+    <script src="{% static 'js/careers.js' %}"></script>
+    {% endcompress %}
+{% endblock %}
+
+{% block meta %}
+    <meta property="dimagi:careersView" content="list">
+    <meta property="dimagi:jobUrl" content="{% url 'careers_job' '12345678' %}">
+{% endblock %}
 
 {% block hero %}
   <div id="top"></div>
@@ -44,5 +54,6 @@
     {% include "careers/sections/awards.html" %}
     {% include "careers/sections/life.html" %}
     {% include "sections/contact/offices.html" %}
+    {% include "careers/sections/open_positions.html" %}
   </section>
 {% endblock %}

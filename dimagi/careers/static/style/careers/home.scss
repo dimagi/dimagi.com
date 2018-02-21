@@ -101,3 +101,46 @@ a.post {
 .life .image.global-services {
   @include background-cover('../../pages/home/workforce-3.jpg');
 }
+
+.application-content ul > li::before { // scss-lint:disable PropertyCount
+  border-bottom-width: 2px;
+  border-left-width: 2px;
+  border-right-width: 0;
+  border-style: solid;
+  border-top-width: 0;
+  color: $color-orange;
+  content: ' ';
+  height: .5em;
+  top: $list-check-margin;
+  transform: rotate(-45deg);
+  width: $list-check-width;
+}
+
+.application-content em {
+  font-style: normal;
+}
+
+.positions-container {
+  background: $color-white;
+  border: 1px solid rgba(0, 0, 0, .12);
+  display: block;
+  padding: $space-small;
+  position: relative;
+}
+
+.positions-select-container {
+  padding: $space-small;
+}
+
+.application-content h3 {
+  font-size: $font-size-medium;
+  line-height: 18px;
+  margin-bottom: 10px;
+}
+
+.application-content h2 {
+  font-size: $font-size-large;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+
