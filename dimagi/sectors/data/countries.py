@@ -75,9 +75,25 @@ INDIA = Country(
 )
 
 
+GUINEA = Country(
+    name=ugettext_lazy(
+        "Guinea"
+    ),
+    icon="svg/countries/todo.html",
+)
+
+
 SENEGAL = Country(
     name=ugettext_lazy(
         "Senegal"
+    ),
+    icon="svg/countries/todo.html",
+)
+
+
+SIERRA_LEONE = Country(
+    name=ugettext_lazy(
+        "Sierra Leone"
     ),
     icon="svg/countries/todo.html",
 )
