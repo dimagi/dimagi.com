@@ -1,0 +1,33 @@
+{% extends 'sectors/sections/content_base.html' %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+
+{% block title %}{% blocktrans %}
+  CommCare for Intrapartum Care
+{% endblocktrans %}{% endblock %}
+
+{% block content %}
+  <p>
+    {% blocktrans %}
+      The primary causes of maternal mortality are prolonged labor and obstructed labor.
+      In order to reduce labor complications, the WHO universally recommends use of the partograph,
+      a low-tech paper form that has been hailed as an effective tool for the early detection
+      of maternal and fetal complications. Yet despite decades of training and investment,
+      implementation rates and capacity to correctly use the partograph remain low in resource-limited settings.
+      The partograph’s complicated multi-axis graph makes it especially difficult for health workers,
+      such as intrapartum care providers, with limited training to use it,
+      resulting in limited adoption and proficiency among healthcare providers.
+    {% endblocktrans %}
+  </p>
+  <p>
+    {% blocktrans %}
+      Through an iterative process of user-focused design,
+      the CommCare Mobile Partograph app aims to reduce the partograph’s barriers
+      by focusing on improving interpretability, applicability, time, and minimizing complexity.
+      The Mobile Partograph acts as a job aid by prompting intrapartum care providers to report
+      the necessary information at the appropriate time while calculating and
+      producing timely reports on labor status.
+    {% endblocktrans %}
+  </p>
+{% endblock %}

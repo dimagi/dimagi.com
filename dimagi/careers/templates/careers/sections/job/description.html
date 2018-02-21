@@ -1,0 +1,27 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="description border-top"
+         id="description">
+  <div class="content pad-vert-medium content-width-medium">
+    <div class="intro">
+      <h2>
+        {% blocktrans %}
+          Overview
+        {% endblocktrans %}
+      </h2>
+    </div>{# .intro #}
+    <h3>
+      {{ job.title }}
+    </h3>
+    <h4 class="gap-bottom-base">
+      {{ job.locations|JOIN:", " }}
+    </h4>
+    <h6 class="gap-bottom-small">
+      {{ job.departments|JOIN:", " }} - {% trans "Full-time" %}
+    </h6>
+    <div class="application-content">
+      {{ job.content|safe }}
+    </div>{# .application-content #}
+  </div> {# .content #}
+</section>
