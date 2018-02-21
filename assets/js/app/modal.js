@@ -15,7 +15,6 @@ define([
 
     modals[_.camelCase(modal.id)] = modal;
     modal.$wrapper = modal.$modal.find(".modal-wrapper");
-    console.log(modal.$modal);
     modal.$closeButton = modal.$modal.find(".modal-close-button");
     modal.$focusEl = modal.$modal.find("[data-modal-focus]").first();
     modal.hasCloseButton = modal.$closeButton.length;
