@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block body_class %}careers-page tucked-hero{% endblock %}
+
+{% block stylesheets %}
+  {% compress css %}
+    <link href="{% sass_src 'style/careers/home.scss' %}" rel="stylesheet" media="screen" type="text/css" />
+  {% endcompress %}
+{% endblock %}
+
+{% block js %}
+  <script src="https://boards.greenhouse.io/embed/job_board/js?for=dimagi"></script>
+  <script type="text/javascript">
+    Grnhse.Iframe.load({{ job.id }}, 'dimagidotcom');
+  </script>
+{% endblock %}
+
+{% block hero %}
+  <div id="top"></div>
+  <section class="hero hero-careers"
+           id="hero">
+    <div class="content align-left-at-medium align-center">
+      <h2 class="gap-top-line gap-bottom-base">
+        {{ job.departments|JOIN:", " }}<br />
+        {{ job.locations|JOIN:", " }}
+      </h2>
+      <h1>
+        {{ job.title }}
+      </h1>
+      <a class="button alt inverted"
+         href="#application">
+        {% blocktrans %}
+          Apply Now
+        {% endblocktrans %}
+      </a>
+    </div> {# .content #}
+  </section>
+{% endblock %}
+
+{% block content %}
+  <section class="careers-container orange-theme">
+    {% include "careers/sections/job/sub_nav.html" %}
+    {% include "careers/sections/job/description.html" %}
+    {% include "careers/sections/job/application.html" %}
+  </section>
+{% endblock %}

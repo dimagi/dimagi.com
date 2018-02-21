@@ -161,9 +161,6 @@ define([
       self.config = $.parseJSON($("meta[property='dimagi:trackingConfig']").attr("content"));
       self.apiIds = $.parseJSON($("meta[property='dimagi:tracking']").attr("content"));
       self.abTests = $.parseJSON($("meta[property='dimagi:trackingAB']").attr("content"));
-      console.log(self.apiIds);
-      console.log(self.config);
-      console.log(self.abTests);
     },
     getConfig: function (key) {
       return self.config[key];

@@ -51,3 +51,5 @@ assets/style/_test.scss
 assets/js/test.js
 
 *.DS_Store
+
+greenhouse.css
