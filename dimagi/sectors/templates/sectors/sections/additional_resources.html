@@ -1,0 +1,24 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="additional-resources border-top"
+         id="additional-resources">
+  <div class="content pad-top-medium pad-bottom-medium">
+    <div class="intro gap-bottom-line">
+      <h2>
+        {% blocktrans %}
+          Additional Resources
+        {% endblocktrans %}
+      </h2>
+    </div>{# .intro #}
+
+    <div class="additional-resources-list-wrapper">
+      <ul class="additional-resources-list">
+        {% for resource in sector.additional_resources %}
+          <li><a target="_blank" href="{{ resource.url }}">{{ resource.name }}</a></li>
+        {% endfor %}
+      </ul>{# .additional-resources-list #}
+    </div>{# .additional-resources-list-wrapper #}
+
+  </div> {# .content #}
+</section>
