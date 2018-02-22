@@ -1,6 +1,6 @@
 from __future__ import absolute_import
 from django.utils.translation import ugettext_lazy
-from dimagi.sectors.models import Sector, Project
+from dimagi.sectors.models import Sector, Project, Resource
 from dimagi.sectors.data import areas, countries
 from dimagi.case_studies.data import mhealth
 
@@ -147,4 +147,17 @@ SECTOR = Sector(
             commcare_app_url=None
         ),
     ],
+    additional_resources=[
+        Resource(
+            url="https://www.measureevaluation.org/resources/publications/sr-14-99",
+            name="Nascimento, N., Cannon, M., Perales, N., Chariyeva, Z. Assessment "
+                 "of an mHealth initiative to improve patient retention. USAID, PEPFAR,"
+                 " Measure Evaluation. August 2014.",
+        ),
+        Resource(
+            url="/case-studies/mhealth-hiv-zimbabwe/",
+            name="Mobile Rapid Diagnostic Tests for HIV and Malaria",
+        ),
+    ],
+
 )

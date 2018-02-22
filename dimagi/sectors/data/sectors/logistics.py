@@ -1,6 +1,6 @@
 from __future__ import absolute_import
 from django.utils.translation import ugettext_lazy
-from dimagi.sectors.models import Sector, Project
+from dimagi.sectors.models import Sector, Project, Resource
 from dimagi.sectors.data import areas, countries
 from dimagi.case_studies.data import mhealth
 
@@ -89,6 +89,14 @@ SECTOR = Sector(
             video_url=None,
             published_study_url=None,
             commcare_app_url=None
+        ),
+    ],
+    additional_resources=[
+        Resource(
+            url="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4267094/",
+            name="Strengthening community health supply chain performance "
+                 "through an integrated approach: Using mHealth technology "
+                 "and multilevel teams in Malawi",
         ),
     ],
 )

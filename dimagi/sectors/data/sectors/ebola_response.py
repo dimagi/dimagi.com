@@ -1,6 +1,6 @@
 from __future__ import absolute_import
 from django.utils.translation import ugettext_lazy
-from dimagi.sectors.models import Sector, Project
+from dimagi.sectors.models import Sector, Project, Resource
 from dimagi.sectors.data import areas, countries
 
 
@@ -68,6 +68,18 @@ SECTOR = Sector(
                       "?v=csqO5t8svAU&feature=youtu.be&list=PLVmwIEfrcKqnGhas9Vy4CmPEvG9xVvQdr",
             published_study_url=None,
             commcare_app_url=None
+        ),
+    ],
+    additional_resources=[
+        Resource(
+            url="http://www.ghspjournal.org/content/early/"
+                "2015/11/12/GHSP-D-15-00207.full.pdf+html",
+            name="Introduction of Mobile Health Tools to Support "
+                 "Ebola Surveillance and Contact Tracing in Guinea",
+        ),
+        Resource(
+            url="https://www.youtube.com/watch?v=e9Lff9rmFxA",
+            name="Filling Out a Form: Contact Tracing App Demo (French)",
         ),
     ],
 )
