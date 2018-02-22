@@ -26,7 +26,7 @@ SECTOR = Sector(
         mhealth.lmrf_india.STUDY,
         mhealth.guatemala_childhealth.STUDY,
         mhealth.world_vision_motech.STUDY,
-        mhealth.mHealth_care_motech.STUDY,
+        mhealth.care_motech.STUDY,
     ],
     projects=[
         Project(
@@ -48,6 +48,8 @@ SECTOR = Sector(
     reaching over 20,000 women and their children.
             """),
             video_url=None,
+            published_study_url=None,
+            commcare_app_url=None,
         ),
         Project(
             name=ugettext_lazy(
@@ -65,6 +67,8 @@ SECTOR = Sector(
     analyze submitted data.
             """),
             video_url=None,
+            published_study_url=None,
+            commcare_app_url=None,
         ),
         Project(
             name=ugettext_lazy(
@@ -82,6 +86,8 @@ SECTOR = Sector(
     deliveries as a result of due date reminders.
             """),
             video_url="https://youtu.be/GUa7KW8s1VI?list=PLVmwIEfrcKqnGhas9Vy4CmPEvG9xVvQdr",
+            published_study_url=None,
+            commcare_app_url=None,
         ),
         Project(
             name=ugettext_lazy(
@@ -98,6 +104,8 @@ SECTOR = Sector(
     aids and acting as monitoring tools.
             """),
             video_url=None,
+            published_study_url=None,
+            commcare_app_url=None,
         ),
         Project(
             name=ugettext_lazy(
@@ -113,6 +121,8 @@ SECTOR = Sector(
     currently working toward scaling this project to the national level.
             """),
             video_url="https://youtu.be/wuo0qoPQz0o?list=PLVmwIEfrcKqnGhas9Vy4CmPEvG9xVvQdr",
+            published_study_url=None,
+            commcare_app_url=None,
         ),
     ],
 )

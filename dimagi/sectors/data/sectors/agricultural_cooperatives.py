@@ -38,7 +38,7 @@ SECTOR = Sector(
             """),
             video_url=None,
             published_study_url=None,
-            commcare_app_url=None
+            commcare_app_url=None,
         ),
         Project(
             name=ugettext_lazy(
@@ -50,7 +50,7 @@ SECTOR = Sector(
             """),
             video_url="https://youtu.be/BPKpJ6vkHMw?list=PLVmwIEfrcKqnGhas9Vy4CmPEvG9xVvQdr",
             published_study_url=None,
-            commcare_app_url=None
+            commcare_app_url=None,
         ),
     ],
 )

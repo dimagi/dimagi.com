@@ -45,5 +45,5 @@ STUDY = CaseStudy(
         ugettext_lazy("Performance dashboards"),
     ],
     slug="mHealth-care-motech",
-    download_url=None,
+    download_url="https://www.dropbox.com/s/8hjwcjj6iyhp62x/mhealth-care-motech.pdf?dl=1",
 )
