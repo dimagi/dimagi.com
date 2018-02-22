@@ -42,6 +42,8 @@ SECTOR = Sector(
     centers.
             """),
             video_url=None,
+            published_study_url=None,
+            commcare_app_url=None
         ),
         Project(
             name=ugettext_lazy(
@@ -61,6 +63,8 @@ SECTOR = Sector(
     demonstrated resistance to common anti-retroviral drugs.
             """),
             video_url=None,
+            published_study_url=None,
+            commcare_app_url=None
         ),
         Project(
             name=ugettext_lazy(
@@ -81,6 +85,8 @@ SECTOR = Sector(
     Zimbabwe and Peru.
             """),
             video_url=None,
+            published_study_url=None,
+            commcare_app_url=None
         ),
         Project(
             name=ugettext_lazy(
@@ -100,6 +106,8 @@ SECTOR = Sector(
     defaulting clients
             """),
             video_url=None,
+            published_study_url=None,
+            commcare_app_url=None
         ),
         Project(
             name=ugettext_lazy(
@@ -116,6 +124,8 @@ SECTOR = Sector(
     and schedule automatic reminders for client follow up.
             """),
             video_url=None,
+            published_study_url=None,
+            commcare_app_url=None
         ),
         Project(
             name=ugettext_lazy(
@@ -133,6 +143,8 @@ SECTOR = Sector(
     CSSU monitoring, activities, and information systems.
             """),
             video_url=None,
+            published_study_url=None,
+            commcare_app_url=None
         ),
     ],
 )

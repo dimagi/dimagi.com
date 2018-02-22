@@ -36,6 +36,8 @@ SECTOR = Sector(
     summarized in easily parsed custom reporting.
             """),
             video_url=None,
+            published_study_url=None,
+            commcare_app_url=None
         ),
         Project(
             name=ugettext_lazy(
@@ -52,6 +54,8 @@ SECTOR = Sector(
     agriculturally dependent region.
             """),
             video_url=None,
+            published_study_url=None,
+            commcare_app_url=None
         ),
         Project(
             name=ugettext_lazy(
@@ -65,6 +69,8 @@ SECTOR = Sector(
     conducts harvest monitoring for fruits, forestry trees, and intercrops.
             """),
             video_url=None,
+            published_study_url=None,
+            commcare_app_url=None
         ),
         Project(
             name=ugettext_lazy(
@@ -79,6 +85,8 @@ SECTOR = Sector(
     use of pesticides and seedling growing techniques.
             """),
             video_url=None,
+            published_study_url=None,
+            commcare_app_url=None
         ),
     ],
 )

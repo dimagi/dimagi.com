@@ -37,6 +37,8 @@ SECTOR = Sector(
     and a module with instructional videos about how to use the application.
             """),
             video_url=None,
+            published_study_url=None,
+            commcare_app_url=None
         ),
         Project(
             name=ugettext_lazy(
@@ -47,6 +49,8 @@ SECTOR = Sector(
     Care works to empower women in agriculture using technology.
             """),
             video_url="https://youtu.be/BPKpJ6vkHMw?list=PLVmwIEfrcKqnGhas9Vy4CmPEvG9xVvQdr",
+            published_study_url=None,
+            commcare_app_url=None
         ),
     ],
 )

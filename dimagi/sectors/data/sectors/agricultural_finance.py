@@ -34,6 +34,8 @@ SECTOR = Sector(
     management to an off-site, remote setting to reduce overhead expenditures.
             """),
             video_url=None,
+            published_study_url=None,
+            commcare_app_url=None
         ),
     ],
 )

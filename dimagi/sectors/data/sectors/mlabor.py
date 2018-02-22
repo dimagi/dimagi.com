@@ -34,6 +34,8 @@ SECTOR = Sector(
     and maternal and fetal health outcomes.
             """),
             video_url=None,
+            published_study_url=None,
+            commcare_app_url=None
         ),
         Project(
             name=ugettext_lazy(
@@ -67,6 +69,8 @@ SECTOR = Sector(
     and engagement with the Ministry of Health and Social Welfare.
             """),
             video_url=None,
+            published_study_url=None,
+            commcare_app_url=None
         ),
     ],
 )

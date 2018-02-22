@@ -49,6 +49,8 @@ SECTOR = Sector(
     need for supplementary monetary incentives.
             """),
             video_url="https://www.youtube.com/watch?v=skedLjDZRw8&feature=youtu.be",
+            published_study_url=None,
+            commcare_app_url=None
         ),
         Project(
             name=ugettext_lazy(
@@ -61,6 +63,8 @@ SECTOR = Sector(
     at all levels and to provide early warning of a drop in supplies.
             """),
             video_url="https://www.youtube.com/watch?v=fz5prbSQUyQ&feature=youtu.be",
+            published_study_url=None,
+            commcare_app_url=None
         ),
         Project(
             name=ugettext_lazy(
@@ -83,6 +87,8 @@ SECTOR = Sector(
     as well as improvements in overall stock management [Shieshia, 2014].
             """),
             video_url=None,
+            published_study_url=None,
+            commcare_app_url=None
         ),
     ],
 )

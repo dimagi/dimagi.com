@@ -36,6 +36,8 @@ SECTOR = Sector(
     tested protocols that accurately screen for GBV.
             """),
             video_url=None,
+            published_study_url=None,
+            commcare_app_url=None
         ),
         Project(
             name=ugettext_lazy(
@@ -52,6 +54,8 @@ SECTOR = Sector(
     information systems of CVSUs.
             """),
             video_url=None,
+            published_study_url=None,
+            commcare_app_url=None
         ),
     ],
 )
