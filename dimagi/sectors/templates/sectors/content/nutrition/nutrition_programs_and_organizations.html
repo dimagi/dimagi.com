@@ -1,0 +1,40 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<h3>
+  {% blocktrans %}
+    Nutrition Programs and Organizations
+  {% endblocktrans %}
+</h3>
+
+<p>
+  <strong>{% trans "Problem" %}</strong>:
+  {% blocktrans %}
+    Data contributing to programmatic decision-making
+    is often out of date and resources are frequently misallocated.
+    Coordination of records among health centers is challenging.
+  {% endblocktrans %}
+</p>
+<ul class="check-list gap-bottom-small grid-2-at-medium">
+  <li>
+    {% blocktrans %}
+      More accurate and complete data on malnutrition prevalence and
+      treatment informs resource allocation and other programmatic decisions.
+    {% endblocktrans %}
+  </li>
+  <li>
+    {% blocktrans %}
+      Real-time data collection enables programs to provide immediate feedback
+      based on nutrition workers’ activities, including frequency of visits,
+      speed of follow up, number cases identified, and the length of nutritional
+      counseling sessions.
+    {% endblocktrans %}
+  </li>
+  <li>
+    {% blocktrans %}
+      Individual record sharing capability enables multiple CMAM sites to track
+      referrals specific children through to completion of a nutritional
+      rehabilitation program.
+    {% endblocktrans %}
+  </li>
+</ul>

@@ -75,6 +75,14 @@ INDIA = Country(
 )
 
 
+GLOBE = Country(
+    name=ugettext_lazy(
+        ""
+    ),
+    icon="svg/countries/todo.html",
+)
+
+
 GUINEA = Country(
     name=ugettext_lazy(
         "Guinea"

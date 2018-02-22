@@ -9,7 +9,7 @@ Sector = namedtuple(
 
 Project = namedtuple(
     'Project',
-    'name country description video_url',
+    'name country description video_url published_study_url commcare_app_url',
 )
 
 Area = namedtuple(

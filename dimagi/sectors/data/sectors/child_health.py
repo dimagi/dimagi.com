@@ -44,6 +44,8 @@ SECTOR = Sector(
             """),
             video_url="https://www.youtube.com/watch?v=YS4NFMCwkm4&feature="
                       "youtu.be&list=PLVmwIEfrcKqnGhas9Vy4CmPEvG9xVvQdr",
+            published_study_url=None,
+            commcare_app_url=None,
         ),
         Project(
             name=ugettext_lazy(
@@ -61,6 +63,8 @@ SECTOR = Sector(
     and follows Malawi’s government-designated IMCI protocol.
             """),
             video_url=None,
+            published_study_url=None,
+            commcare_app_url=None,
         ),
         Project(
             name=ugettext_lazy(
@@ -79,6 +83,8 @@ SECTOR = Sector(
     diagnosis, treatment, and monitoring of disease throughout Mozambique.
             """),
             video_url=None,
+            published_study_url=None,
+            commcare_app_url=None,
         ),
         Project(
             name=ugettext_lazy(
@@ -97,6 +103,8 @@ SECTOR = Sector(
     communities.
             """),
             video_url=None,
+            published_study_url=None,
+            commcare_app_url=None,
         ),
         Project(
             name=ugettext_lazy(
@@ -110,6 +118,8 @@ SECTOR = Sector(
     300 traditional authorities.
             """),
             video_url=None,
+            published_study_url=None,
+            commcare_app_url=None,
         ),
         Project(
             name=ugettext_lazy(
@@ -127,6 +137,8 @@ SECTOR = Sector(
             """),
             video_url="https://www.youtube.com/watch?v=wuo0qoPQz0o&feature="
                       "youtu.be&list=PLVmwIEfrcKqnGhas9Vy4CmPEvG9xVvQdr",
+            published_study_url=None,
+            commcare_app_url=None,
         ),
     ],
 )
