@@ -34,6 +34,8 @@ SECTOR = Sector(
     and inventory management.
             """),
             video_url=None,
+            published_study_url=None,
+            commcare_app_url=None,
         ),
         Project(
             name=ugettext_lazy(
@@ -51,6 +53,8 @@ SECTOR = Sector(
    nearly 5000 children in 88 schools that rely on this program for food.
             """),
             video_url=None,
+            published_study_url=None,
+            commcare_app_url=None,
         ),
     ],
 )
