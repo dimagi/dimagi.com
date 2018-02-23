@@ -1,0 +1,41 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<h3>
+  {% blocktrans %}
+    Health Workers
+  {% endblocktrans %}
+</h3>
+
+<p>
+  <strong>{% trans "Problem" %}</strong>:
+  {% blocktrans %}
+    In many communities, reproductive health remains a sensitive topic,
+    complicated by stigma, religion, and gender roles. CHWs may
+    encounter difficulties in sharing appropriate information for
+    different family members or face challenges in engaging
+    individuals on sensitive subject matter.
+  {% endblocktrans %}
+</p>
+<ul class="check-list gap-bottom-small grid-2-at-medium">
+  <li>
+    {% blocktrans %}
+      Complex form logic enables separate messages
+      to be given within a household so that women,
+      their husbands, and other family members such
+      as mothers-in-law, receive different messages
+      from CHWs based on cultural and gender
+      sensitivity.
+    {% endblocktrans %}
+  </li>
+  <li>
+    {% blocktrans %}
+      Multimedia, such as audio and visuals, which
+      provides for a more engaging counseling session
+      and may help ease any discomfort around
+      discussing sensitive topics directly with a CHW
+      and may serve as a more authoritative voice for
+      listeners or observers.
+    {% endblocktrans %}
+  </li>
+</ul>
