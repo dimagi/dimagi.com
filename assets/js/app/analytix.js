@@ -1,10 +1,10 @@
 define([
     'lodash',
-    'app/tracking/utils',
-    'app/tracking/google',
-    'app/tracking/hubspot',
-    'app/tracking/kissmetrix',
-    'app/tracking/drift',
+    'app/analytix/utils',
+    'app/analytix/google',
+    'app/analytix/hubspot',
+    'app/analytix/kissmetrix',
+    'app/analytix/drift',
 ], function (
     _,
     Utils,

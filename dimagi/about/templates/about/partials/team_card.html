@@ -1,0 +1,19 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<div class="column">
+  <a class="tile"
+     href="#{{ employee.slug }}">
+    <div class="aspect-ratio-square employee-image gap-bottom-line"
+         style="background-image:url('{{ employee.image }}');"></div>
+    <h5 class="gap-bottom-none">
+      {{ employee.name }}
+    </h5>
+    <p class="body-color">
+      {{ employee.role }}
+    </p>
+    <p class="body-color">
+      {{ employee.short_bio }}
+    </p>
+  </a>
+</div>{# .column #}

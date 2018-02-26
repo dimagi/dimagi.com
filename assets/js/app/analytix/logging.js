@@ -1,7 +1,7 @@
 /* globals JSON, console */
 define([
   'lodash',
-  'app/tracking/utils',
+  'app/analytix/utils',
 ], function (
     _,
     Utils

@@ -1,0 +1,23 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% for office in offices %}
+<section class="{{ office.name|SLUG }} border-bottom"
+         id="{{ office.name|SLUG }}">
+  <div class="content pad-vert-medium">
+
+    <div class="intro">
+      <h2>
+        {{ office.name }}
+      </h2>
+    </div>{# .intro #}
+
+    <div class="grid-3-at-medium grid-2 grid-row-equal-heights gap-bottom-small team-grid">
+      {% for employee in office.members %}
+        {% include "about/partials/team_card.html" %}
+      {% endfor %}
+    </div>
+
+  </div> {# .content #}
+</section>
+{% endfor %}
