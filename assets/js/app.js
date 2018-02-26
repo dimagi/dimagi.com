@@ -10,7 +10,7 @@ require([
   'app/smoothScroll',
   'app/carousel',
   'app/imageLoader',
-  'app/tracking',
+  'app/analytix',
   'modernizr',
 ], function (
     $,
@@ -24,7 +24,7 @@ require([
     SmoothScroll,
     Carousel,
     ImageLoader,
-    Tracking
+    Analytix
 ) {
   $(function () {
     _.each([
@@ -37,7 +37,7 @@ require([
       SmoothScroll,
       Carousel,
       ImageLoader,
-      Tracking,
+      Analytix,
     ], function (m) {
       m.initialize();
     });
