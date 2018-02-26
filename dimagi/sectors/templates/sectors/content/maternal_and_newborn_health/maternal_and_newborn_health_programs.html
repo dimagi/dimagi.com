@@ -1,0 +1,35 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<h3>
+  {% blocktrans %}
+    Maternal and Newborn Health Programs
+  {% endblocktrans %}
+</h3>
+
+<p>
+  <strong>{% trans "Problem" %}</strong>:
+  {% blocktrans %}
+    Many maternal and newborn health programs are built on a foundation
+    that relies heavily on access to clinics or hospitals, particularly
+    when it comes to referrals for high-risk patients, burdening CHWs who
+    often encounter difficulties in identifying emergency symptoms and working
+    within inadequate and complex referral systems.
+  {% endblocktrans %}
+</p>
+<ul class="check-list gap-bottom-small grid-2-at-medium">
+  <li>
+    {% blocktrans %}
+      Forms enable CHWs to use standardized,
+      complex workflows to identify symptoms in
+      mothers and newborns that require emergency care.
+    {% endblocktrans %}
+  </li>
+  <li>
+    {% blocktrans %}
+      Case sharing enables CHWs to immediately send medical
+      information directly to clinicians at the referral facility
+      and improve lines of communication between field and clinical work.
+    {% endblocktrans %}
+  </li>
+</ul>

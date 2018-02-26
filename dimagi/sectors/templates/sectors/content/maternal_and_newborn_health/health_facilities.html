@@ -1,0 +1,45 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<h3>
+  {% blocktrans %}
+    Health Facilities
+  {% endblocktrans %}
+</h3>
+
+<p>
+  <strong>{% trans "Problem" %}</strong>:
+  {% blocktrans %}
+    Health facilities often have limited supplies or face stock-outs
+    of essential medicines for pregnant and postpartum women and their
+    newborns. Many facilities rely on paper records systems, which can
+    be difficult to maintain.
+  {% endblocktrans %}
+</p>
+<ul class="check-list gap-bottom-small grid-2-at-medium">
+  <li>
+    {% blocktrans %}
+      SMS interactions enable central medical warehouses
+      and clinics to distribute medicines based on need
+      and availability.
+    {% endblocktrans %}
+  </li>
+  <li>
+    {% blocktrans %}
+      SMS interactions enable reporting of stock-outs
+      before they occur.
+    {% endblocktrans %}
+  </li>
+  <li>
+    {% blocktrans %}
+      Electronic data reduces error by streamlining complex
+      stock algorithms previously recorded on paper.
+    {% endblocktrans %}
+  </li>
+  <li>
+    {% blocktrans %}
+      Real time information dissemination prevents unavailable
+      medicines from being prescribed.
+    {% endblocktrans %}
+  </li>
+</ul>
