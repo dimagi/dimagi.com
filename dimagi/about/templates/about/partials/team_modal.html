@@ -1,0 +1,33 @@
+{% load dimagidotcom %}
+
+<div class="modal"
+     data-dismissible="true"
+     data-size="medium"
+     id="{{ employee.name|SLUG }}">
+  <div class="modal-scroll">
+    <div class="modal-wrapper">
+      <a href="#" class="modal-close-button"></a>
+      <div class="content pad-small pad-bottom-none">
+        <section>
+          <div class="grid-flex">
+            <div class="column">
+              <div class="aspect-ratio-square employee-image gap-bottom-line"
+                   style="background-image:url('{{ employee.image }}');"></div>
+            </div>{# .column #}
+            <div class="column">
+              <h3 class="gap-bottom-none">
+                {{ employee.name }}
+              </h3>
+              <p>
+                {{ employee.role }}
+              </p>
+              <p>
+                {{ employee.bio }}
+              </p>
+            </div>{# .column #}
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>

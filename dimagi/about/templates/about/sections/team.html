@@ -1,0 +1,34 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="team"
+         id="team">
+  <div class="content pad-vert-medium">
+    <div class="intro">
+      <h2>
+        {% blocktrans %}
+          Our Team
+        {% endblocktrans %}
+      </h2>
+      <p>
+        {% blocktrans %}
+          We are a team of engineers, doctors, public health professionals,
+          former consultants, and everything else in between. We are smart,
+          driven, share a passion for social good, and our wanderlust is
+          insatiable.
+        {% endblocktrans %}
+      </p>
+    </div>{# .intro #}
+
+    {% include "about/sections/team/grid.html" %}
+
+    <p class="align-center gap-top-small gap-bottom-line">
+      <a class="arrow" href="{% url 'about_team' %}">
+        {% blocktrans %}
+          See all Dimagi employees
+        {% endblocktrans %}
+      </a>
+    </p>
+
+  </div> {# .content #}
+</section>
