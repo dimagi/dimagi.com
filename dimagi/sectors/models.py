@@ -4,7 +4,7 @@ from collections import namedtuple
 
 Sector = namedtuple(
     'Sector',
-    'name summary template slides slug area projects case_studies'
+    'name summary template slides slug area projects case_studies additional_resources'
 )
 
 Project = namedtuple(
@@ -20,4 +20,9 @@ Area = namedtuple(
 Country = namedtuple(
     'Country',
     'name icon',
+)
+
+Resource = namedtuple(
+    'Resource',
+    'url name',
 )

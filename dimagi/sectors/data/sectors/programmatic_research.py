@@ -23,4 +23,5 @@ SECTOR = Sector(
     ],
     case_studies=[],
     projects=[],
+    additional_resources=[],
 )

@@ -46,5 +46,8 @@
     {% if sector.case_studies %}
       {% include "sectors/sections/case_studies.html" %}
     {% endif %}
+    {% if sector.additional_resources %}
+      {% include "sectors/sections/additional_resources.html" %}
+    {% endif %}
   </section>
 {% endblock %}

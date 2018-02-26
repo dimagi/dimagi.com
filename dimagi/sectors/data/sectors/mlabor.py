@@ -1,6 +1,6 @@
 from __future__ import absolute_import
 from django.utils.translation import ugettext_lazy
-from dimagi.sectors.models import Sector, Project
+from dimagi.sectors.models import Sector, Project, Resource
 from dimagi.sectors.data import areas, countries
 
 
@@ -71,6 +71,16 @@ SECTOR = Sector(
             video_url=None,
             published_study_url=None,
             commcare_app_url=None
+        ),
+    ],
+    additional_resources=[
+        Resource(
+            url="http://www.grandchallenges.ca/2014/"
+                "sustainable-cross-cultural-innovation-"
+                "leads-to-safer-labour-and-delivery-of-newborns-in-india/",
+            name="Sustainable cross-cultural innovation "
+                 "leads to safer labour and delivery of "
+                 "newborns in India",
         ),
     ],
 )
