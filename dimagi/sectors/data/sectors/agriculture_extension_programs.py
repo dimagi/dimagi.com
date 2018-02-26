@@ -1,6 +1,6 @@
 from __future__ import absolute_import
 from django.utils.translation import ugettext_lazy
-from dimagi.sectors.models import Sector, Project
+from dimagi.sectors.models import Sector, Project, Resource
 from dimagi.sectors.data import areas, countries
 
 
@@ -87,6 +87,29 @@ SECTOR = Sector(
             video_url=None,
             published_study_url=None,
             commcare_app_url=None,
+        ),
+    ],
+    additional_resources=[
+        Resource(
+            url="https://www.commcarehq.org/exchange/"
+                "145d386993f5b6cf40f1ba96bdb961a3/info/",
+            name="CARE CommCare App Available on the Exchange",
+        ),
+        Resource(
+            url="https://www.commcarehq.org/exchange/a8c0b7c6522fb4eeb707bc9f4123249e/info/",
+            name="Farmer Tracking App on the Exchange",
+        ),
+        Resource(
+            url="https://www.youtube.com/watch?v=UvdDOQOI2i4",
+            name="CommCare Demo: CARE Pathways' Application for Agricultural Extension Workers",
+        ),
+        Resource(
+            url="https://www.youtube.com/watch?list=PLVmwIEfrcKqnGhas9Vy4CmPEvG9xVvQdr&v=8BzYVfsmmcA",
+            name="Digitizing Development, CARE's Mobile MIS for Agriculture",
+        ),
+        Resource(
+            url="https://www.youtube.com/watch?v=uqRfAsuQx3s",
+            name="CommCare Demo on a Nokia",
         ),
     ],
 )

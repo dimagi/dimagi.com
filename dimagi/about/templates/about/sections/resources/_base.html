@@ -1,0 +1,19 @@
+<div class="column">
+  <a class="tile"
+     href="{% block link %}{% endblock %}">
+    <div class="gap-bottom-base">
+      {% block icon %}{% endblock %}
+    </div>
+    <h5>
+      {% block header %}{% endblock %}
+    </h5>
+    <p class="body-color">
+      {% block content %}{% endblock %}
+    </p>
+    <p class="cta">
+      <span class="link arrow">
+        {% block link_text %}{% endblock %}
+      </span>
+    </p>
+  </a>
+</div>

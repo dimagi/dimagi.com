@@ -1,0 +1,33 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<h3>
+  {% blocktrans %}
+    Health Facilities
+  {% endblocktrans %}
+</h3>
+
+<p>
+  <strong>{% trans "Problem" %}</strong>:
+  {% blocktrans %}
+    Many health facilities experience low stock or stock-outs of FP
+    commodities, further limiting women’s choices in contraception.
+    Women who use contraceptive methods that require refills may
+    experience lapses in their drug adherence due to limited supply
+    at their local clinic.
+  {% endblocktrans %}
+</p>
+<ul class="check-list gap-bottom-small grid-2-at-medium">
+  <li>
+    {% blocktrans %}
+      CommCare Supply, Dimagi’s commodity tracking system, allows
+      clinics to monitor their drug availability rates.
+    {% endblocktrans %}
+  </li>
+  <li>
+    {% blocktrans %}
+      SMS capabilities enable clinics to report limited supply
+      immediately, resulting in fewer stock-outs.
+    {% endblocktrans %}
+  </li>
+</ul>

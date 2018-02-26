@@ -105,9 +105,9 @@ SECTOR = Sector(
             ),
             country=countries.INDIA,
             description=ugettext_lazy("""
-     Operation Smile implemented a CommCare application to track the nutritional status 
-     of children with cleft lip and palates in Assam. The application tracks the children’s 
-     progress in becoming sufficiently nourished to undergo cleft palate surgery.
+    Operation Smile implemented a CommCare application to track the nutritional status 
+    of children with cleft lip and palates in Assam. The application tracks the children’s 
+    progress in becoming sufficiently nourished to undergo cleft palate surgery.
             """),
             video_url=None,
             published_study_url=None,
@@ -117,4 +117,5 @@ SECTOR = Sector(
                              "hsfp=4011894190",
         ),
     ],
+    additional_resources=[],
 )

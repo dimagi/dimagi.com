@@ -1,0 +1,37 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<h3>
+  {% blocktrans %}
+    Patients
+  {% endblocktrans %}
+</h3>
+
+<p>
+  <strong>{% trans "Problem" %}</strong>:
+  {% blocktrans %}
+    Women may travel many miles only to reach a clinic and learn
+    that the contraception they desire or need is out of stock.
+    They may also be required to travel back for follow-up
+    appointments after certain procedures, such as abortions or
+    IUD insertions, even when they aren’t experiencing any
+    complications.
+  {% endblocktrans %}
+</p>
+<ul class="check-list gap-bottom-small grid-2-at-medium">
+  <li>
+    {% blocktrans %}
+      SMS notifications give women advance notice of stock-outs,
+      so they can plan to visit another clinic or wait until
+      commodities have been restocked before traveling.
+    {% endblocktrans %}
+  </li>
+  <li>
+    {% blocktrans %}
+      SMS interactions allow CHWs to communicate across distances
+      with their patients, so women can be reminded of
+      appointments and prescriptions, as well as alert their
+      CHW to any complications they may be experiencing.
+    {% endblocktrans %}
+  </li>
+</ul>

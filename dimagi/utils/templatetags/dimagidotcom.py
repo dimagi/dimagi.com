@@ -66,6 +66,11 @@ def BOOL(obj):
 
 
 @register.filter
+def SLUG(str):
+    return str.replace(" ", "-").lower()
+
+
+@register.filter
 def JOIN(value, arg):
     return arg.join(value)
 

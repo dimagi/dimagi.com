@@ -1,0 +1,63 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="company-info border-bottom"
+         id="company-info">
+  <div class="content pad-vert-medium">
+    <div class="intro">
+      <h2>
+        {% blocktrans %}
+          Company Information
+        {% endblocktrans %}
+      </h2>
+    </div>{# .intro #}
+
+    <div class="grid-2-at-medium grid-reverse gap-bottom-line">
+      <div class="column pad-left-small">
+        <h3>
+          {% blocktrans %}
+            How we got our start
+          {% endblocktrans %}
+        </h3>
+        <p>
+          {% blocktrans %}
+            Dimagi was founded in 2002 out of the Massachusetts Institute of
+            Technology Media Lab. While volunteering for an electrical
+            engineering class, Jonathan Jackson, co-founder and CEO, met
+            Dr. Vikram Kumar, co-founder and chief medical officer, who was
+            completing his masters thesis at the MIT Media Lab and working
+            on an early version of Dimagi.
+          {% endblocktrans %}
+        </p>
+        <p>
+          {% blocktrans %}
+            Kumar wanted to build a company that combined global health
+            and technology, but had not yet decided how. With Jackson’s
+            help, the two focused on developing software for low-resource
+            settings and started building among the first mobile solutions
+            for frontline health programs in developing countries.
+          {% endblocktrans %}
+        </p>
+        <p>
+          {% blocktrans %}
+            Today, Dimagi continues to operate on the foundation that
+            mobile solutions are key to improving the quality and
+            efficiency of global development programs. While we got our start
+            in health care, we work across sectors today with organizations
+            of all sizes.
+          {% endblocktrans %}
+        </p>
+        <p>
+          {% blocktrans %}
+            Dimagi is a recognized social enterprise and certified Benefit
+            Corporation, reflecting our commitment to making an impact.
+          {% endblocktrans %}
+        </p>
+      </div>{# .column #}
+      <div class="column">
+        {% include "about/sections/company_info/grid.html" %}
+      </div>{# .column #}
+    </div>{# .grid-2-at-medium #}
+
+  </div> {# .content #}
+</section>

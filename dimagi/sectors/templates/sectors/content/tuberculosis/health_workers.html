@@ -1,0 +1,44 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<h3>
+  {% blocktrans %}
+    Health Workers
+  {% endblocktrans %}
+</h3>
+
+<p>
+  <strong>{% trans "Problem" %}</strong>:
+  {% blocktrans %}
+    Patients are lost to follow-up due to lack of communication and sharing of records
+  {% endblocktrans %}
+</p>
+<ul class="check-list gap-bottom-small grid-2-at-medium">
+  <li>
+    {% blocktrans %}
+      Mobile applications improve health worker monitoring and adherence to TB protocols
+    {% endblocktrans %}
+  </li>
+  <li>
+    {% blocktrans %}
+      Escalation workflows support health workers by automatically sending SMS messages
+      to possible TB-positive cases that miss scheduled clinic visits
+    {% endblocktrans %}
+  </li>
+  <li>
+    {% blocktrans %}
+      Online reports show aggregated patient load summaries for each health worker,
+      enabling cases to be better managed and distributed
+    {% endblocktrans %}
+  </li>
+  <li>
+    {% blocktrans %}
+      Geo-tagging of MDR-TB cases allows health workers to identify and track possible TB cases
+    {% endblocktrans %}
+  </li>
+  <li>
+    {% blocktrans %}
+      Application can be translated into different languages to enable use across language barriers
+    {% endblocktrans %}
+  </li>
+</ul>

@@ -1,0 +1,41 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<h3>
+  {% blocktrans %}
+    TB Patients
+  {% endblocktrans %}
+</h3>
+
+<p>
+  <strong>{% trans "Problem" %}</strong>:
+  {% blocktrans %}
+    Patients are lost to follow up or do not adhere to medication regimens.
+  {% endblocktrans %}
+</p>
+<ul class="check-list gap-bottom-small grid-2-at-medium">
+  <li>
+    {% blocktrans %}
+      Integrated system enables follow-up between health workers and clinics,
+      preventing patients from falling out of the system
+    {% endblocktrans %}
+  </li>
+  <li>
+    {% blocktrans %}
+      Two-way SMS interactions empower patients to report medication schedule
+    {% endblocktrans %}
+  </li>
+  <li>
+    {% blocktrans %}
+      Interactive voice response increases TB patient access to professional
+      health care
+    {% endblocktrans %}
+  </li>
+  <li>
+    {% blocktrans %}
+      In targeted exposed areas, SMS outreach encourages patients to present
+      to health facility for clinical review in early stages of disease,
+      improving patient outcomes and reducing hospitalizations
+    {% endblocktrans %}
+  </li>
+</ul>
