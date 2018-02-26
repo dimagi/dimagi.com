@@ -13,3 +13,33 @@
   );
   @include make-bg(hero, '../../blog/hero', $_base-height, $_height-by-size);
 }
+
+.study-thumbnail {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &:after {
+    background-color: $color-text;
+    content: ' ';
+    display: block;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    transition: opacity .5s;
+    width: 100%;
+  }
+}
+
+a.study {
+  color: $color-text !important; // scss-lint:disable ImportantRule
+  font-weight: $font-weight-regular;
+
+  &:hover {
+    .study-thumbnail:after {
+      opacity: .5;
+    }
+  }
+}
