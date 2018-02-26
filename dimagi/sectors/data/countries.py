@@ -137,3 +137,11 @@ SOUTH_AFRICA = Country(
     ),
     icon="svg/countries/todo.html",
 )
+
+
+LESOTHO = Country(
+    name=ugettext_lazy(
+        "Lesotho"
+    ),
+    icon="svg/countries/todo.html",
+)
