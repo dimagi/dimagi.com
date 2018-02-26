@@ -150,13 +150,15 @@ SECTOR = Sector(
     additional_resources=[
         Resource(
             url="https://www.measureevaluation.org/resources/publications/sr-14-99",
-            name="Nascimento, N., Cannon, M., Perales, N., Chariyeva, Z. Assessment "
-                 "of an mHealth initiative to improve patient retention. USAID, PEPFAR,"
-                 " Measure Evaluation. August 2014.",
+            name=ugettext_lazy(
+                "Nascimento, N., Cannon, M., Perales, N., Chariyeva, Z. "
+                "Assessment of an mHealth initiative to improve patient "
+                "retention. USAID, PEPFAR, Measure Evaluation. August 2014."),
         ),
         Resource(
             url="/case-studies/mhealth-hiv-zimbabwe/",
-            name="Mobile Rapid Diagnostic Tests for HIV and Malaria",
+            name=ugettext_lazy(
+                "Mobile Rapid Diagnostic Tests for HIV and Malaria"),
         ),
     ],
 

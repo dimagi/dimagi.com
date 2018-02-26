@@ -74,12 +74,14 @@ SECTOR = Sector(
         Resource(
             url="http://www.ghspjournal.org/content/early/"
                 "2015/11/12/GHSP-D-15-00207.full.pdf+html",
-            name="Introduction of Mobile Health Tools to Support "
-                 "Ebola Surveillance and Contact Tracing in Guinea",
+            name=ugettext_lazy(
+                "Introduction of Mobile Health Tools to Support "
+                "Ebola Surveillance and Contact Tracing in Guinea"),
         ),
         Resource(
             url="https://www.youtube.com/watch?v=e9Lff9rmFxA",
-            name="Filling Out a Form: Contact Tracing App Demo (French)",
+            name=ugettext_lazy(
+                "Filling Out a Form: Contact Tracing App Demo (French)"),
         ),
     ],
 )

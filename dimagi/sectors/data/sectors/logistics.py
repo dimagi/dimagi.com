@@ -94,9 +94,10 @@ SECTOR = Sector(
     additional_resources=[
         Resource(
             url="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4267094/",
-            name="Strengthening community health supply chain performance "
-                 "through an integrated approach: Using mHealth technology "
-                 "and multilevel teams in Malawi",
+            name=ugettext_lazy(
+                "Strengthening community health supply chain performance "
+                "through an integrated approach: Using mHealth technology "
+                "and multilevel teams in Malawi"),
         ),
     ],
 )

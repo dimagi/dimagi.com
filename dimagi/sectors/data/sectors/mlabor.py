@@ -78,9 +78,10 @@ SECTOR = Sector(
             url="http://www.grandchallenges.ca/2014/"
                 "sustainable-cross-cultural-innovation-"
                 "leads-to-safer-labour-and-delivery-of-newborns-in-india/",
-            name="Sustainable cross-cultural innovation "
-                 "leads to safer labour and delivery of "
-                 "newborns in India",
+            name=ugettext_lazy(
+                "Sustainable cross-cultural innovation "
+                "leads to safer labour and delivery of "
+                "newborns in India"),
         ),
     ],
 )

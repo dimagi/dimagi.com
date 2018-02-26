@@ -61,7 +61,8 @@ SECTOR = Sector(
     additional_resources=[
         Resource(
             url="https://www.youtube.com/watch?v=HSm-9PZaPFs",
-            name="Gender-Based Violence and Innovative Technologies",
+            name=ugettext_lazy(
+                "Gender-Based Violence and Innovative Technologies"),
         ),
     ],
 )
