@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from dimagi.about.models import Employee
+from dimagi.about.models import Employee, Office
 from dimagi.utils.decorators import no_index
 from dimagi.utils.wordpress_api import get_json
 
@@ -8,6 +8,11 @@ from dimagi.utils.wordpress_api import get_json
 def _get_management():
     exec = get_json('team/exec')
     return [Employee(e) for e in exec]
+
+
+def _get_offices():
+    offices = get_json('team')
+    return [Office(o) for o in offices]
 
 
 @no_index
@@ -20,4 +25,7 @@ def home(request):
 
 @no_index
 def team(request):
-    return render(request, 'about/home.html')
+    context = {
+        'offices': _get_offices(),
+    }
+    return render(request, 'about/team.html', context)
