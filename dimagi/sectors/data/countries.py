@@ -139,6 +139,14 @@ SOUTH_AFRICA = Country(
 )
 
 
+BENIN = Country(
+    name=ugettext_lazy(
+        "Benin"
+    ),
+    icon="svg/countries/todo.html",
+)
+
+
 ZAMBIA= Country(
     name=ugettext_lazy(
         "Zambia"

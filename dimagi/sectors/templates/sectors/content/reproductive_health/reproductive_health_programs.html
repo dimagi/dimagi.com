@@ -1,0 +1,35 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<h3>
+  {% blocktrans %}
+    Reproductive Health Programs
+  {% endblocktrans %}
+</h3>
+
+<p>
+  <strong>{% trans "Problem" %}</strong>:
+  {% blocktrans %}
+    Reproductive health programs often rely on difficult-to-manage
+    paper-based records systems to track patients, commodities,
+    appointments, and adherence to prescriptions, which can result
+    in loss to follow-up, incomplete patient records, and
+    out-of-date data.
+  {% endblocktrans %}
+</p>
+<ul class="check-list gap-bottom-small grid-2-at-medium">
+  <li>
+    {% blocktrans %}
+      Mobile applications enable CHWs, supervisors, and project managers
+      to track data related to FP commodities, contraception prevalence
+      rates, patient appointments, and pregnancies.
+    {% endblocktrans %}
+  </li>
+  <li>
+    {% blocktrans %}
+      Real-time data can be used to improve programs by informing procurement
+      of the commodities women wish to use and monitoring progress over
+      time of unmet need within a project.
+    {% endblocktrans %}
+  </li>
+</ul>
