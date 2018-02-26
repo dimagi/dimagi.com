@@ -12,6 +12,7 @@ from dimagi.sectors.data.sectors import (
     logistics,
     programmatic_research,
     hiv_aids,
+    small_businesses,
     tuberculosis,
 )
 
@@ -30,5 +31,6 @@ all_sectors = (
     logistics,
     programmatic_research,
     hiv_aids,
+    small_businesses,
     tuberculosis,
 )
