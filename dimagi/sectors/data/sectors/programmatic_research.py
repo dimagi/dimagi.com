@@ -1,7 +1,7 @@
 from __future__ import absolute_import
 from django.utils.translation import ugettext_lazy
-from dimagi.sectors.models import Sector, Project
-from dimagi.sectors.data import areas, countries
+from dimagi.sectors.models import Sector
+from dimagi.sectors.data import areas
 
 
 SECTOR = Sector(
@@ -21,7 +21,4 @@ SECTOR = Sector(
         "sectors/content/programmatic_research/data_integrity.html",
         "sectors/content/programmatic_research/data_security.html",
     ],
-    case_studies=[],
-    projects=[],
-    additional_resources=[],
 )
