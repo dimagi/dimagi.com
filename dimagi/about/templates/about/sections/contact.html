@@ -1,0 +1,23 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="contact border-top accent-gray-bg"
+         id="contact">
+  <div class="content pad-vert-medium align-center">
+    <h3>
+      {% blocktrans %}
+        Want to get in touch?
+      {% endblocktrans %}
+    </h3>
+
+    <p>
+      <a href="{% url 'contact' %}"
+         class="button">
+        {% blocktrans %}
+          Contact Us
+        {% endblocktrans %}
+      </a>
+    </p>
+
+  </div> {# .content #}
+</section>

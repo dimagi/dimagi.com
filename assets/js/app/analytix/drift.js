@@ -7,9 +7,9 @@
 define([
   'jquery',
   'lodash',
-  'app/tracking/utils',
-  'app/tracking/logging',
-  'app/tracking/hubspot',
+  'app/analytix/utils',
+  'app/analytix/logging',
+  'app/analytix/hubspot',
 ], function (
     $,
     _,

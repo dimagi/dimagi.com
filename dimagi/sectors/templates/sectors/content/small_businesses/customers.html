@@ -1,0 +1,33 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<h3>
+  {% blocktrans %}
+    Customers
+  {% endblocktrans %}
+</h3>
+
+<p>
+  <strong>{% trans "Problem" %}</strong>:
+  {% blocktrans %}
+    Customers often lack appropriate information about products
+    they are buying and have little recourse if a product is
+    faulty or needs repair.
+  {% endblocktrans %}
+</p>
+<ul class="check-list gap-bottom-small grid-2-at-medium">
+  <li>
+    {% blocktrans %}
+      Dimagi’s tools provide built-in educational and training materials
+      to engage customers, improving information dissemination at
+      point-of-sale.
+    {% endblocktrans %}
+  </li>
+  <li>
+    {% blocktrans %}
+      SMS interactions and voice campaigns enable customers to stay more
+      connected with vendors, increasing the likelihood of receiving
+      timelier follow-up from vendors about a product or issue.
+    {% endblocktrans %}
+  </li>
+</ul>

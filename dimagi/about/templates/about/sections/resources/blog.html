@@ -1,0 +1,23 @@
+{% extends "about/sections/resources/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block icon %}
+  {% include "svg/products/commcare/icon/agriculture.html" %}
+{% endblock %}
+
+{% block header %}{% blocktrans %}
+  Blog
+{% endblocktrans %}{% endblock %}
+
+{% block content %}{% blocktrans %}
+  Read the latest from our team and partners.
+{% endblocktrans %}{% endblock %}
+
+{% block link %}
+  {% url 'blog_home' %}
+{% endblock %}
+
+{% block link_text %}{% blocktrans %}
+  Visit Blog
+{% endblocktrans %}{% endblock %}

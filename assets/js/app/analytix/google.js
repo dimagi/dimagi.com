@@ -5,8 +5,8 @@
 define([
   'jquery',
   'lodash',
-  'app/tracking/utils',
-  'app/tracking/logging',
+  'app/analytix/utils',
+  'app/analytix/logging',
 ], function (
     $,
     _,

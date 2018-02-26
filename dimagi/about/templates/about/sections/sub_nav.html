@@ -1,0 +1,48 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="sub-nav"
+         id="sub-nav">
+  <div class="content">
+    <div class="actions">
+      <a class="primary"
+         href="{% url 'contact' %}">
+        <span>
+          {% blocktrans %}
+            Contact Us
+          {% endblocktrans %}
+        </span>
+      </a>
+    </div>{# .actions #}
+    <a class="prompt-link"
+       href="#">
+      {% blocktrans %}
+        Browse
+      {% endblocktrans %}
+    </a>
+    <div class="destinations">
+      <div class="content">
+        <a href="#mission">
+          {% blocktrans %}
+            Mission
+          {% endblocktrans %}
+        </a>
+        <a href="#team">
+          {% blocktrans %}
+            Team
+          {% endblocktrans %}
+        </a>
+        <a href="#management">
+          {% blocktrans %}
+            Management
+          {% endblocktrans %}
+        </a>
+        <a href="#company-info">
+          {% blocktrans %}
+            Company Info
+          {% endblocktrans %}
+        </a>
+      </div>{# .content #}
+    </div>{# .destinations #}
+  </div>{# .content #}
+</section>
