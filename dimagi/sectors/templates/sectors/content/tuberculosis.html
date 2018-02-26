@@ -1,0 +1,33 @@
+{% extends 'sectors/sections/content_base.html' %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+
+{% block title %}{% blocktrans %}
+  CommCare for TB Prevention, Detection, and Treatment
+{% endblocktrans %}{% endblock %}
+
+{% block content %}
+  <p>
+    {% blocktrans %}
+      While tuberculosis (TB) incidence has decreased worldwide, developing
+      countries still bear the greatest burden of TB, with 95% of TB deaths
+      occurring in low- and middle-income countries (WHO, 2014). At the
+      same time, multidrug-resistant (MDR)-TB rates continue to rise.
+      Programs such as DOTS (Directly Observed Therapy Support) assist
+      countries in treating TB, however, ongoing supervision and support can
+      be difficult to provide, resulting in limited success of otherwise
+      effective programs.
+    {% endblocktrans %}
+  </p>
+  <p>
+    {% blocktrans %}
+      Mobile technology can help build TB treatment capacity. Limited health
+      care personnel, insufficient training, and counterfeit medicines are
+      significant contributors to the TB epidemic, all of which can be
+      improved with mobile technology. CommCare, in addition to CommCare
+      Supply features and SMS tools for patient engagement, can be used
+      together or separately to support TB programs.
+    {% endblocktrans %}
+  </p>
+{% endblock %}

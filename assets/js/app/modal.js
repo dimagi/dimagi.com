@@ -2,7 +2,8 @@
 define([
   'jquery',
   'lodash',
-], function ($, _) {
+  'modernizr',
+], function ($, _, Modernizr) {
   'use strict';
   var modals = {};
 
@@ -89,7 +90,7 @@ define([
     modal.toggleModalState = function () {
       modal.$modal.attr("data-active", modal.active);
       $("html").toggleClass("modal-active", modal.active);
-      if (modal.active && !window.Modernizr.touch) {
+      if (modal.active && !Modernizr.touch) {
         modal.$focusEl.focus();
       }
     };

@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block body_class %}about-page tucked-hero{% endblock %}
+
+{% block stylesheets %}
+  {% compress css %}
+    <link href="{% sass_src 'style/about/about.scss' %}" rel="stylesheet" media="screen" type="text/css" />
+  {% endcompress %}
+{% endblock %}
+
+{% block hero %}
+ <div id="top"></div>
+  <section class="hero hero-about"
+           id="hero">
+    <div class="content align-left-at-medium align-center">
+      <h2 class="gap-vert-line">
+        {% blocktrans %}
+          About Dimagi
+        {% endblocktrans %}
+      </h2>
+      <h1>
+        {% blocktrans %}
+          Get to Know Our Team
+        {% endblocktrans %}
+      </h1>
+    </div> {# .content #}
+  </section>
+{% endblock %}
+
+{% block content %}
+  <section class="team-container orange-theme">
+    {% include "about/sections/team_page/sub_nav.html" %}
+    {% include "about/sections/team_page/office.html" %}
+  </section>
+{% endblock %}
+
+{% block modals %}
+  {% for office in offices %}
+    {% for employee in office.members %}
+      {% include "about/partials/team_modal.html" with employee=employee %}
+    {% endfor %}
+  {% endfor %}
+{% endblock %}
