@@ -28,8 +28,8 @@ define([
     initialize: function () {
       self.enableBindings();
     },
-    onResize: function (scrollCallback) {
-      self.callbacks.push(scrollCallback);
+    onResize: function (sizeCallback) {
+      self.callbacks.push(sizeCallback);
     },
   };
 });
