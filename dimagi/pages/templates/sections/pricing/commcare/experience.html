@@ -12,24 +12,8 @@
       {% endblocktrans %}
     </h3>
 
-    <div class="grid-4 grid-align-center grid-flex-at-medium gap-bottom-small">
-
-      <div class="column">
-        {% include "svg/partner/gates.html" %}
-      </div>{# .column #}
-
-      <div class="column">
-        {% include "svg/partner/usaid.html" %}
-      </div>{# .column #}
-
-      <div class="column">
-        {% include "svg/partner/agimpact.html" %}
-      </div>{# .column #}
-
-      <div class="column">
-        {% include "svg/partner/tdh.html" %}
-      </div>{# .column #}
-
+    <div class="gap-bottom-small">
+      {% include "partials/partners.html" with partners=partners %}
     </div>{# .grid-4 #}
 
     <p>

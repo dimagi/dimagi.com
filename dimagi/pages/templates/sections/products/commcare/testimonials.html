@@ -19,26 +19,7 @@
   </div>{# .content #}
 
   <div class="content pad-bottom-small align-center">
-    <div class="grid-6-at-medium grid-4 grid-align-center grid-flex-at-medium">
-      <div class="column">
-        {% include "svg/partner/gates.html" %}
-      </div>{# .column #}
-      <div class="column">
-        {% include "svg/partner/usaid.html" %}
-      </div>{# .column #}
-      <div class="column">
-        {% include "svg/partner/agimpact.html" %}
-      </div>{# .column #}
-      <div class="column">
-        {% include "svg/partner/tdh.html" %}
-      </div>{# .column #}
-      <div class="column hide-until-medium">
-        {% include "svg/partner/usaid.html" %}
-      </div>{# .column #}
-      <div class="column hide-until-medium">
-        {% include "svg/partner/gates.html" %}
-      </div>{# .column #}
-    </div>{# .grid-4 #}
+    {% include "partials/partners.html" with partners=partners %}
   </div>{# .content #}
 
   <div class="carousel carousel-fade-inactive pad-bottom-medium">

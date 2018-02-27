@@ -67,7 +67,7 @@
     }
   }
 
-  @for $_num from 1 through 5 {
+  @for $_num from 1 through 6 {
     .grid-#{$_num}#{$_suffix} > * {
       width: 100% / $_num;
     }
