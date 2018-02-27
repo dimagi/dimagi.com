@@ -8,35 +8,39 @@
   {% endcompress %}
 {% endblock %}
 
-{% block body_class %}sectors-page tucked-hero {{ sector.area.theme }}{% endblock %}
+{% block body_class %}sectors-page tucked-hero{% endblock %}
 
 {% block hero %}
-<section class="hero"
-         id="hero">
-  <div class="content content-width-large inverted align-center display-flex flex-valign-middle expand-vertical offset-top-small flex-align-center">
-    <div class="copy expand position-relative">
+  <div class="{{ sector.area.theme }}">
+    <section class="hero"
+             id="hero">
+      <div class="content content-width-large inverted align-center
+                  display-flex flex-valign-middle expand-vertical
+                  offset-top-small flex-align-center">
+        <div class="copy expand position-relative">
 
-      <h2 class="gap-bottom-line">
-        {% blocktrans %}
-          Sectors
-        {% endblocktrans %}
-      </h2>
+          <h2 class="gap-bottom-line">
+            {% blocktrans %}
+              Sectors
+            {% endblocktrans %}
+          </h2>
 
-      <h1>
-        {{ sector.name }}
-      </h1>
+          <h1>
+            {{ sector.name }}
+          </h1>
 
-      <p class="headline content-width-small">
-        {{ sector.summary }}
-      </p>{# .headline #}
+          <p class="headline content-width-small">
+            {{ sector.summary }}
+          </p>{# .headline #}
 
-    </div>{# .copy #}
-  </div>{# .content #}
-</section>
+        </div>{# .copy #}
+      </div>{# .content #}
+    </section>
+  </div>
 {% endblock %}
 
 {% block content %}
-  <section class="sections-container">
+  <section class="sections-container {{ sector.area.theme }}">
     {% include "sectors/sections/sub_nav.html" %}
     {% include sector.template%}
     {% include "sectors/sections/slides.html" %}

@@ -4,7 +4,7 @@ from collections import namedtuple
 
 Area = namedtuple(
     'Area',
-    'name theme',
+    'name theme icon',
 )
 
 Country = namedtuple(

@@ -13,7 +13,7 @@
 
     <div class="grid-4-at-medium grid-row-space-small grid-row-equal-heights gap-bottom-small">
       {% for sector in sectors %}
-        <div class="column">
+        <div class="column {{ sector.area.theme }}">
           {% include "sectors/partials/brief.html" with sector=sector %}
         </div>
       {% endfor %}

@@ -8,6 +8,7 @@ HEALTH = Area(
         "Health"
     ),
     theme="purple-theme",
+    icon="svg/products/commcare/icon/heart_health.html",
 )
 
 
@@ -16,6 +17,7 @@ DEVELOPMENT = Area(
         "Development"
     ),
     theme="blue-theme",
+    icon="svg/products/commcare/icon/retail.html",
 )
 
 
@@ -24,4 +26,5 @@ AGRICULTURE = Area(
         "Agriculture"
     ),
     theme="green-theme",
+    icon="svg/products/commcare/icon/agriculture.html",
 )
