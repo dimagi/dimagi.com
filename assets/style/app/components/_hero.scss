@@ -146,3 +146,22 @@
     overflow: hidden;
   }
 }
+
+.hero-video {
+  display: none;
+}
+
+
+html.video .hero-video {
+  display: block;
+  height: 500px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  
+  @media (max-width: 887px) {
+    width: 0;
+  }
+}
+
