@@ -1,6 +1,6 @@
 from __future__ import absolute_import
 from django.utils.translation import ugettext_lazy
-from dimagi.sectors.models import Sector, Project
+from dimagi.sectors.models import Sector, Project, Resource
 from dimagi.sectors.data import areas, countries
 
 
@@ -58,6 +58,12 @@ SECTOR = Sector(
             video_url=None,
             published_study_url=None,
             commcare_app_url=None,
+        ),
+    ],
+    additional_resources=[
+        Resource(
+            url="https://www.cap-tb.org/news/mobile-app-launch",
+            name="Launch of mobile application strengthens Myanmar’s efforts against MDR-TB.",
         ),
     ],
 )
