@@ -1,6 +1,6 @@
 from __future__ import absolute_import
 from django.utils.translation import ugettext_lazy
-from dimagi.sectors.models import Sector, Project
+from dimagi.sectors.models import Sector, Project, Resource
 from dimagi.sectors.data import areas, countries
 
 
@@ -154,6 +154,17 @@ SECTOR = Sector(
             video_url=None,
             published_study_url=None,
             commcare_app_url=None
+        ),
+    ],
+    additional_resources=[
+        Resource(
+            url="http://dimagi.staging.wpengine.com/blog/"
+                "using-commcare-to-monitor-a-conditional-cash-transfer-scheme/",
+            name="Highlighted Project: Conditional Cash Transfers with Oxford Policy Management",
+        ),
+        Resource(
+            url="https://www.youtube.com/watch?v=O1UAzQ9G3uo",
+            name="CommCare Sales: Dairy company (Senegal) - full length",
         ),
     ],
 )

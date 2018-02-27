@@ -125,4 +125,5 @@ SECTOR = Sector(
             commcare_app_url=None,
         ),
     ],
+    additional_resources=[],
 )

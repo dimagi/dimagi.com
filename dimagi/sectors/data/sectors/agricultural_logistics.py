@@ -1,6 +1,6 @@
 from __future__ import absolute_import
 from django.utils.translation import ugettext_lazy
-from dimagi.sectors.models import Sector, Project
+from dimagi.sectors.models import Sector, Project, Resource
 from dimagi.sectors.data import areas, countries
 
 
@@ -55,6 +55,24 @@ SECTOR = Sector(
             video_url=None,
             published_study_url=None,
             commcare_app_url=None,
+        ),
+    ],
+    additional_resources=[
+        Resource(
+            url="https://www.commcarehq.org/exchange/1eb695d5f66bee8cae2bb1316034d300/info/",
+            name="CommCare Supply App Demo Video (2)",
+        ),
+        Resource(
+            url="https://www.youtube.com/watch?v=Byg2Qpv4G10",
+            name="CommCare Supply Demo",
+        ),
+        Resource(
+            url="https://www.youtube.com/watch?v=OqMPxBQSF5c",
+            name="CommCare Supply (formerly CommTrack) Overview",
+        ),
+        Resource(
+            url="https://www.youtube.com/watch?v=xl4_jsmtD0A",
+            name="CommTrack Barcode Demo on Tablet",
         ),
     ],
 )
