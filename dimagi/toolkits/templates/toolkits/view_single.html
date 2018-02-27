@@ -2,7 +2,7 @@
 {% load i18n %}
 {% load dimagidotcom %}
 
-{% block body_class %}case-study-page tucked-hero orange-theme{% endblock %}
+{% block body_class %}case-study-page tucked-hero{% endblock %}
 
 {% block stylesheets %}
   {% compress css %}
@@ -11,11 +11,13 @@
 {% endblock %}
 
 {% block hero %}
-<section class="hero hero-case-study" id="hero"></section>
+  <div class="orange-theme">
+    <section class="hero hero-case-study" id="hero"></section>
+  </div>
 {% endblock %}
 
 {% block content %}
-  <section class="case-study-container">
+  <section class="case-study-container orange-theme">
     {% include 'toolkits/sections/sub_nav.html' %}
     {% include 'toolkits/sections/summary.html' %}
     {% include 'toolkits/sections/download.html' %}
