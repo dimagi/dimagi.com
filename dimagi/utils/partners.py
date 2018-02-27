@@ -2,9 +2,14 @@
 
 WEB = [
     [
-        "svg/partner/gates.html",
-        "svg/partner/jhu.html",
-        "svg/partner/tdh.html",
+        "svg/partner/rainforest_alliance.html",
+        "svg/partner/unicef.html",
+        "svg/partner/upenn.html",
+    ],
+    [
+        "svg/partner/bwh.html",
+        "svg/partner/one_acre_fund.html",
+        "svg/partner/novartis.html",
     ],
     [
         "svg/partner/abt.html",
@@ -12,9 +17,9 @@ WEB = [
         "svg/partner/irc.html",
     ],
     [
-        "svg/partner/rainforest_alliance.html",
-        "svg/partner/unicef.html",
-        "svg/partner/upenn.html",
+        "svg/partner/gates.html",
+        "svg/partner/jhu.html",
+        "svg/partner/tdh.html",
     ],
     [
         "svg/partner/bu.html",
@@ -24,30 +29,12 @@ WEB = [
     [
         "svg/partner/agimpact.html",
         "svg/partner/usaid.html",
-    ],
-    [
-        "svg/partner/bwh.html",
-        "svg/partner/one_acre_fund.html",
-        "svg/partner/novartis.html",
     ],
 ]
 
 
 MOBILE = [
     [
-        "svg/partner/gates.html",
-        "svg/partner/jhu.html",
-        "svg/partner/tdh.html",
-        "svg/partner/bwh.html",
-        "svg/partner/one_acre_fund.html",
-    ],
-    [
-        "svg/partner/abt.html",
-        "svg/partner/crs.html",
-        "svg/partner/irc.html",
-        "svg/partner/agimpact.html",
-    ],
-    [
         "svg/partner/rainforest_alliance.html",
         "svg/partner/unicef.html",
         "svg/partner/upenn.html",
@@ -58,6 +45,19 @@ MOBILE = [
         "svg/partner/mercy_corps.html",
         "svg/partner/pih.html",
         "svg/partner/novartis.html",
+    ],
+    [
+        "svg/partner/abt.html",
+        "svg/partner/crs.html",
+        "svg/partner/irc.html",
+        "svg/partner/agimpact.html",
+    ],
+    [
+        "svg/partner/gates.html",
+        "svg/partner/jhu.html",
+        "svg/partner/tdh.html",
+        "svg/partner/bwh.html",
+        "svg/partner/one_acre_fund.html",
     ],
 ]
 
