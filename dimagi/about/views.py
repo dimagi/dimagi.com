@@ -7,7 +7,11 @@ from dimagi.utils.wordpress_api import get_json
 
 def _get_management():
     exec = get_json('team/exec')
-    return [Employee(e) for e in exec]
+    return sorted(
+        [Employee(e) for e in exec],
+        key=lambda x: int(x.order_exec),
+        reverse=False
+    )
 
 
 def _get_offices():
