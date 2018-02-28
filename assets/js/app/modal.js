@@ -50,7 +50,6 @@ define([
         modal.deactivate();
         e.preventDefault();
       });
-      console.log(modal.$closeButton);
       modal.$closeButton.on("click", function(e) {
         modal.dismiss();
         e.preventDefault();

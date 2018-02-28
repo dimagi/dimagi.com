@@ -59,13 +59,15 @@ define([
         self.columns.mobile.push(new Column(elem));
       });
 
-      setInterval(function () {
-        updateMode();
+      if (self.columns[self.mode].length > 0) {
+        setInterval(function () {
+          updateMode();
 
-        var col = _.random(0, self.columns[self.mode].length - 1);
-        self.columns[self.mode][col].change();
+          var col = _.random(0, self.columns[self.mode].length - 1);
+          self.columns[self.mode][col].change();
 
-      }, 3000);
+        }, 3000);
+      }
     },
   };
 });
