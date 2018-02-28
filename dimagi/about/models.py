@@ -10,6 +10,7 @@ class Employee(object):
         self.role = data['role']
         self.bio = data['bio']
         self.short_bio = data['short_bio']
+        self.order_exec = data['order_exec'] or 9999
 
 
 class Office(object):
