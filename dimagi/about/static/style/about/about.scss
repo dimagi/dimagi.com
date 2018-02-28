@@ -49,6 +49,21 @@
   width: 300px;
 }
 
+@media (max-width: $width-desktop - 1px) {
+  .modal .employee-image {
+    width: 100%;
+  }
+}
+
+@media (max-width: $width-desktop-lg - 1px) {
+  .modal .employee-image {
+    height: 300px;
+    margin: 0 auto;
+    padding: 0;
+    width: 300px;
+  }
+}
+
 .company-info .image.infopic1 {
   @include background-cover('../../pages/home/workforce-1.jpg');
 }
