@@ -14,20 +14,23 @@
       </h3>
     </div>{# .intro #}
 
-    <p class="body-color packages-body">
-      {% block description %}{% endblock %}
-    </p>
-
-    <div class="packages-includes">
-      <p class="body-color
-                border-top
-                pad-top-line">
-        <strong class="turquoise">
-          {% trans "Includes" %}:
-        </strong><br />
-        {% block includes %}{% endblock %}
-      </p>
-    </div>
+    <div class="flip-card">
+      <div class="flipper">
+        <div class="front">
+          <p class="body-color align-left">
+            {% block description %}{% endblock %}
+          </p>
+        </div>{# .front #}
+        <div class="back">
+          <p class="body-color align-left">
+            <strong class="turquoise">
+              {% trans "Includes" %}:
+            </strong><br />
+            {% block includes %}{% endblock %}
+          </p>
+        </div>{# .back #}
+      </div>{# .flipper #}
+    </div>{# .flip-card #}
 
     <div class="packages-pricing">
       <p class="body-color
@@ -35,6 +38,7 @@
         {% block pricing %}{% endblock %}
       </p>
     </div>
+
     <p class="button-container gap-top-small">
       <div class="button button-turquoise">
         {% blocktrans %}
