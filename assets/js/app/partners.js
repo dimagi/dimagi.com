@@ -33,6 +33,7 @@ define([
         $(elem).find('.partner-logo.current').fadeOut(400, function () {
           $(this).removeClass('current');
           $(col.logos[newLogo]).fadeIn(400, function () {
+            $(elem).find('.partner-logo').css("display", "");
             $(elem).find('.partner-logo.current').removeClass('current');
             $(this).addClass('current');
           });
