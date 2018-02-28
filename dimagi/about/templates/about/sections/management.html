@@ -12,13 +12,13 @@
       </h2>
     </div>{# .intro #}
 
-    <div class="grid-3-at-medium grid-2 grid-row-equal-heights gap-bottom-small team-grid">
+    <div class="grid-4-at-large grid-3-at-medium grid-2-at-small grid-row-equal-heights gap-bottom-none team-grid">
       {% for employee in management %}
         {% include "about/partials/team_card.html" %}
       {% endfor %}
     </div>
 
-    <p class="align-center gap-top-small gap-bottom-line">
+    <p class="align-center gap-top-small gap-bottom-base">
       <a class="arrow" href="{% url 'about_team' %}">
         {% blocktrans %}
           See all Dimagi employees

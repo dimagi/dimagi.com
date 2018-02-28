@@ -7,20 +7,20 @@
   <div class="modal-scroll">
     <div class="modal-wrapper">
       <a href="#" class="modal-close-button"></a>
-      <div class="content pad-small pad-bottom-none">
+      <div class="content pad-horz-medium-at-medium pad-horz-small pad-bottom-none">
         <section>
-          <div class="grid-flex">
+          <h3 class="gap-bottom-none">
+            {{ employee.name }}
+          </h3>
+          <p>
+            {{ employee.role }}
+          </p>
+          <div class="grid-flex-at-large">
             <div class="column">
               <div class="aspect-ratio-square employee-image gap-bottom-line"
                    style="background-image:url('{{ employee.image }}');"></div>
             </div>{# .column #}
             <div class="column">
-              <h3 class="gap-bottom-none">
-                {{ employee.name }}
-              </h3>
-              <p>
-                {{ employee.role }}
-              </p>
               <p>
                 {{ employee.bio }}
               </p>
