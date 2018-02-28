@@ -23,28 +23,20 @@
 }
 
 .overview .image.testimonial1 {
-  @include background-cover('../../pages/home/workforce-1.jpg');
+  @include background-cover('../../pages/services/overview1.jpg');
 }
 
 .overview .image.testimonial2 {
-  @include background-cover('../../pages/home/workforce-2.jpg');
-}
-
-.overview .image.testimonial3 {
-  @include background-cover('../../pages/home/workforce-3.jpg');
+  @include background-cover('../../pages/services/overview2.jpg');
 }
 
 
 .testimonials .image.testimonial1 {
-  @include background-cover('../../pages/home/workforce-1.jpg');
+  @include background-cover('../../pages/services/testimonials1.jpg');
 }
 
 .testimonials .image.testimonial2 {
-  @include background-cover('../../pages/home/workforce-2.jpg');
-}
-
-.testimonials .image.testimonial3 {
-  @include background-cover('../../pages/home/workforce-3.jpg');
+  @include background-cover('../../pages/services/testimonials2.jpg');
 }
 
 .packages-pricing,
