@@ -12,6 +12,7 @@ $widths-by-size: (
 $width-mobile: map-get($widths-by-size, small);
 $width-desktop: map-get($widths-by-size, medium);
 $width-desktop-lg: map-get($widths-by-size, large);
+$width-desktop-xl: map-get($widths-by-size, extra-large);
 
 $content-widths-by-size: (
   base: 276px,
