@@ -1,0 +1,20 @@
+{% load dimagidotcom %}
+{% load i18n %}
+
+<a class="post"
+   href="{{ press.url }}">
+
+  <h6>
+    {{ press.title }}
+  </h6>
+  <p>
+    {{ press.source }}
+  </p>
+  <p>
+    <span class="link arrow">
+      {% blocktrans %}
+        Read More
+      {% endblocktrans %}
+    </span>
+  </p>
+</a>

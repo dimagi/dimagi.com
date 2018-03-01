@@ -1,0 +1,23 @@
+  {% load i18n %}
+{% load dimagidotcom %}
+
+
+<section class="overview" id="overview">
+  <div class="content pad-vert-medium">
+
+    <h3 class="gap-bottom-small">
+      {% blocktrans %}
+        Press
+      {% endblocktrans %}
+    </h3>
+
+    <div class="grid-4-at-medium grid-row-space-small grid-row-equal-heights">
+      {% for press in press_articles %}
+        <div class="column">
+          {% include "press/partials/brief.html" with press=press %}
+        </div>
+      {% endfor %}
+    </div>{# .grid-4-at-medium #}
+
+  </div>{# .content #}
+</section>

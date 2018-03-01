@@ -26,6 +26,8 @@ urlpatterns = [
         include('dimagi.about.urls')),
     url(r'^careers/',
         include('dimagi.careers.urls')),
+    url(r'^press/',
+        include('dimagi.press.urls')),
     url(r'^contact/$', pages.contact,
         name='contact'),
 ]
