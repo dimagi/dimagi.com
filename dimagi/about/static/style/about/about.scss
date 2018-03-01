@@ -14,6 +14,37 @@
   @include make-bg(hero, '../../about/hero', $_base-height, $_height-by-size);
 }
 
+.mission {
+  $_base-height: 400px;
+  $_height-by-size: (
+    medium: 720px,
+    large: 500px,
+    extra-large: 500px,
+  );
+  @include make-bg(image, '../../about/datalines', $_base-height, $_height-by-size);
+
+  .off-grid {
+    display: none;
+  }
+
+  @media (min-width: $width-desktop) {
+    .off-grid {
+      display: block;
+      left: 0;
+      position: absolute;
+      right: auto;
+      top: 0;
+      width: 100%;
+      z-index: 1;
+    }
+
+    .content {
+      position: relative;
+      z-index: 2;
+    }
+  }
+}
+
 
 @media (min-width: $width-desktop) {
   .about-page .hero h1 {
@@ -24,19 +55,19 @@
 }
 
 .team .image.teampic1 {
-  @include background-cover('../../pages/home/workforce-1.jpg');
+  @include background-cover('../../about/teampic1.jpg');
 }
 
 .team .image.teampic2 {
-  @include background-cover('../../pages/home/workforce-2.jpg');
+  @include background-cover('../../about/teampic2.jpg');
 }
 
 .team .image.teampic3 {
-  @include background-cover('../../pages/home/workforce-3.jpg');
+  @include background-cover('../../about/teampic3.jpg');
 }
 
 .team .image.teampic4 {
-  @include background-cover('../../pages/home/workforce-3.jpg');
+  @include background-cover('../../about/teampic4.jpg');
 }
 
 .employee-image {
@@ -65,18 +96,22 @@
 }
 
 .company-info .image.infopic1 {
-  @include background-cover('../../pages/home/workforce-1.jpg');
+  @include background-cover('../../about/infopic1.jpg');
 }
 
 .company-info .image.infopic2 {
-  @include background-cover('../../pages/home/workforce-2.jpg');
+  @include background-cover('../../about/infopic2.jpg');
 }
 
 .company-info  .image.infopic3 {
-  @include background-cover('../../pages/home/workforce-3.jpg');
+  @include background-cover('../../about/infopic3.jpg');
 }
 
 .office-country-icon svg {
-  height: 60px;
-  width: 60px;
+  height: 80px;
+  width: 80px;
+}
+
+.office-country-icon svg * {
+  stroke-width: 4;
 }

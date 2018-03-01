@@ -3,7 +3,7 @@
 {% load dimagidotcom %}
 
 {% block icon %}
-  {% include "svg/products/commcare/icon/agriculture.html" %}
+  {% include "svg/about/icons/press.html" %}
 {% endblock %}
 
 {% block header %}{% blocktrans %}
@@ -15,7 +15,7 @@
 {% endblocktrans %}{% endblock %}
 
 {% block link %}
-  #todo
+  {% url 'press' %}
 {% endblock %}
 
 {% block link_text %}{% blocktrans %}
