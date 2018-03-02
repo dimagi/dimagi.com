@@ -11,7 +11,7 @@
     large: 500px,
     extra-large: 500px,
   );
-  @include make-bg(hero, '../../pages/products/commcare/hero', $_base-height, $_height-by-size);
+  @include make-bg(hero, '../../careers/hero', $_base-height, $_height-by-size);
 }
 
 @media (min-width: $width-desktop) {
@@ -23,40 +23,44 @@
 }
 
 .office-country-icon svg {
-  height: 60px;
-  width: 60px;
+  height: 80px;
+  width: 80px;
+}
+
+.office-country-icon svg * {
+  stroke-width: 4;
 }
 
 .overview .image.teampic1 {
-  @include background-cover('../../pages/home/workforce-1.jpg');
+  @include background-cover('../../careers/teampic1.jpg');
 }
 
 .overview .image.teampic2 {
-  @include background-cover('../../pages/home/workforce-2.jpg');
+  @include background-cover('../../careers/teampic2.jpg');
 }
 
 .overview .image.teampic3 {
-  @include background-cover('../../pages/home/workforce-3.jpg');
+  @include background-cover('../../careers/teampic3.jpg');
 }
 
 .overview .image.teampic4 {
-  @include background-cover('../../pages/home/workforce-3.jpg');
+  @include background-cover('../../careers/teampic4.jpg');
 }
 
 .awards .image.company-culture {
-  @include background-cover('../../pages/home/workforce-3.jpg');
+  @include background-cover('../../careers/entrepreneur.jpg');
 }
 
 .awards .image.best-workplaces {
-  @include background-cover('../../pages/home/workforce-3.jpg');
+  @include background-cover('../../careers/bestwork.png');
 }
 
 .awards .image.b-corporation {
-  @include background-cover('../../pages/home/workforce-3.jpg');
+  @include background-cover('../../careers/bcorp.png');
 }
 
 .awards .image.top-5000 {
-  @include background-cover('../../pages/home/workforce-3.jpg');
+  @include background-cover('../../careers/inc5000.png');
 }
 
 .post-thumbnail {
@@ -87,19 +91,19 @@ a.post {
 }
 
 .life .image.tedx-talk {
-  @include background-cover('../../pages/home/workforce-3.jpg');
+  @include background-cover('../../careers/technology.jpg');
 }
 
 .life .image.away-month {
-  @include background-cover('../../pages/home/workforce-3.jpg');
+  @include background-cover('../../careers/awaymonth.jpg');
 }
 
 .life .image.core-values {
-  @include background-cover('../../pages/home/workforce-3.jpg');
+  @include background-cover('../../careers/corevalues.jpg');
 }
 
 .life .image.global-services {
-  @include background-cover('../../pages/home/workforce-3.jpg');
+  @include background-cover('../../careers/globalservices.jpg');
 }
 
 .application-content ul > li::before { // scss-lint:disable PropertyCount

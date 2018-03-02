@@ -18,44 +18,48 @@
     </div>{# .intro #}
 
     <div class="positions-select-container">
-      <div class="grid-4">
+      <div class="grid-4-at-medium">
         <div class="column">
           <label for="role-select">
             {% blocktrans %}
             Role
             {% endblocktrans %}
           </label>
-          <select data-bind="options: roles,
+          <select id="role-select"
+                  data-bind="options: roles,
                              value: currentRole,
                              optionsCaption: '{% trans "All roles" %}'"></select>
         </div>{# .column #}
         <div class="column">
-          <label for="role-select">
+          <label for="team-select">
             {% blocktrans %}
             Team
             {% endblocktrans %}
           </label>
-          <select data-bind="options: teams,
+          <select id="team-select"
+                  data-bind="options: teams,
                              value: currentTeam,
                              optionsCaption: '{% trans "All teams" %}'"></select>
         </div>{# .column #}
         <div class="column">
-          <label for="role-select">
+          <label for="type-select">
             {% blocktrans %}
             Type
             {% endblocktrans %}
           </label>
-          <select data-bind="options: types,
+          <select id="type-select"
+                  data-bind="options: types,
                              value: currentType,
                              optionsCaption: '{% trans "All types" %}'"></select>
         </div>{# .column #}
         <div class="column">
-          <label for="role-select">
+          <label for="location-select">
             {% blocktrans %}
             Location
             {% endblocktrans %}
           </label>
-          <select data-bind="options: locations,
+          <select id="location-select"
+                  data-bind="options: locations,
                              value: currentLocation,
                              optionsCaption: '{% trans "All locations" %}'"></select>
         </div>{# .column #}
@@ -68,18 +72,23 @@
           No Open Positions Available
         {% endblocktrans %}
       </p>
-      <div class="grid-4 gap-bottom-none" data-bind="foreach: jobs, visible: jobs().length > 0">
-        <div class="column">
-          <p><a data-bind="attr: { href: url}, text: role"></a></p>
+      <div class="grid-4-at-medium gap-bottom-none" data-bind="foreach: jobs, visible: jobs().length > 0">
+        <div class="column gap-bottom-base gap-bottom-line-at-medium">
+          <p>
+            <a data-bind="attr: { href: url}, text: role"></a>
+          </p>
         </div>{# .column #}
-        <div class="column">
-          <p data-bind="text: team"></p>
+        <div class="column gap-bottom-base gap-bottom-line-at-medium">
+          <p class="gap-left-line gap-left-none-at-medium"
+             data-bind="text: team"></p>
         </div>{# .column #}
-        <div class="column">
-          <p data-bind="text: type"></p>
+        <div class="column gap-bottom-base gap-bottom-line-at-medium">
+          <p class="gap-left-line gap-left-none-at-medium"
+             data-bind="text: type"></p>
         </div>{# .column #}
-        <div class="column">
-          <p data-bind="text: location"></p>
+        <div class="column gap-bottom-line">
+          <p class="gap-left-line gap-left-none-at-medium"
+             data-bind="text: location"></p>
         </div>{# .column #}
       </div>{# .grid-4 #}
     </div>{# .positions-container #}
