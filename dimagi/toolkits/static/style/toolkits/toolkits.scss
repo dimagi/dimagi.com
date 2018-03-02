@@ -12,5 +12,43 @@
     extra-large: 500px,
   );
 
-  @include make-bg(hero, '../../blog/hero', $_base-height, $_height-by-size);
+  @include make-bg(hero, '../../toolkits/hero', $_base-height, $_height-by-size);
+}
+
+
+.toolkit-tile {
+  position: relative;
+
+  .cta {
+    bottom: 30px;
+    left: 30px;
+    position: absolute;
+    width: calc(100% - 60px);
+  }
+}
+
+$_toolkit-tile-heights: (
+  small: auto,
+  medium: 210px,
+  large: 250px,
+  extra-large: 210px,
+);
+
+@each $_size, $_width in $widths-by-size {
+  @media (min-width: $_width) {
+    .toolkit-tile {
+      height: map-get($_toolkit-tile-heights, $_size);
+    }
+  }
+}
+
+@media (max-width: $width-desktop - 1px) {
+  .toolkit-tile {
+    padding-bottom: 30px;
+
+    .cta {
+      position: static;
+      width: 100%;
+    }
+  }
 }

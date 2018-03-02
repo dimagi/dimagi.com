@@ -41,3 +41,19 @@
 .hs-form-field {
   padding-bottom: 20px;
 }
+
+.hubspot-download .hs-form-field {
+  display: inline-block;
+  vertical-align: top;
+  width: 40%;
+
+  label,
+  legend {
+    display: none;
+  }
+}
+
+.hubspot-download .hs-submit {
+  display: inline-block;
+  vertical-align: top;
+}

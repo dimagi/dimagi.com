@@ -9,9 +9,10 @@ TOOLKIT = Toolkit(
     ),
     tagline=ugettext_lazy(
         "Use the Maturity Model to establish a long-term "
-        "vision for building and scaling your mobile system"
+        "vision for building and scaling your mobile system."
     ),
     template="toolkits/summaries/maturity_model.html",
     slug="maturity-model",
     download_url="https://www.dropbox.com/s/juqabe8bykwuq3n/Dimagi%20Maturity%20Model.zip?dl=1",
+    hubspot_form="edd74f83-1893-43a3-bb60-f31e20e5f43a",
 )
