@@ -12,8 +12,6 @@ urlpatterns = [
         name='pricing_commcare'),
     url(r'^services/$', pages.services,
         name='services'),
-    url(r'^services/pricing/$', pages.pricing_services,
-        name='pricing_services'),
     url(r'^case-studies/',
         include('dimagi.case_studies.urls')),
     url(r'^toolkits/',

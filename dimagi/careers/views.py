@@ -17,7 +17,7 @@ def _get_job_post(job_id):
 
 @no_index
 def home(request):
-    return render(request, 'careers/home.html')
+    return render(request, 'careers/careers.html')
 
 
 @no_index

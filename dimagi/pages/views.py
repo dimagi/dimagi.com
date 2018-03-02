@@ -37,11 +37,6 @@ def pricing_commcare(request):
 
 
 @no_index
-def pricing_services(request):
-    return render(request, 'pages/pricing/services.html')
-
-
-@no_index
 def contact(request):
     return render(request, 'pages/contact.html')
 
