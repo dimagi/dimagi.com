@@ -23,7 +23,7 @@
       {% endblocktrans %}
     </h4>
     <div class="grid-2-at-medium grid-reverse">
-      <div class="column">
+      <div class="column align-center">
         <div class="study-image gap-bottom-line"
              style="background-image: url('{% static "case_studies/covers/"|add:study.slug|add:".jpg" %}');"></div>
       </div>{# .column #}
@@ -74,7 +74,7 @@
           Features
         {% endblocktrans %}
       </h4>
-      <ul class="check-list grid-4-at-small grid-2">
+      <ul class="check-list grid-4-at-medium grid-3-at-small grid-2">
         {% for feature in study.features %}
           <li>{{ feature }}</li>
         {% endfor %}

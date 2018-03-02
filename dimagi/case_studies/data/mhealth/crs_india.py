@@ -39,4 +39,5 @@ STUDY = CaseStudy(
     ],
     slug="mhealth-crs-india",
     download_url="https://www.dropbox.com/s/lg8fd0x2z7x7py5/mhealth-crs-india.pdf?dl=1",
+    hubspot_form="d5f0286b-6605-4a22-a105-aedd2bbdd42e",
 )

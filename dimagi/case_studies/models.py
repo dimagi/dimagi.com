@@ -3,5 +3,6 @@ from collections import namedtuple
 
 CaseStudy = namedtuple(
     'CaseStudy',
-    'title summary partners countries sectors features slug download_url'
+    'title summary partners countries sectors features slug '
+    'download_url hubspot_form'
 )

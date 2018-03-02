@@ -35,4 +35,5 @@ STUDY = CaseStudy(
     ],
     slug="mhealth-hiv-zimbabwe",
     download_url="https://www.dropbox.com/s/2f8y8khz8amuios/mhealth-hiv-zimbabwe.pdf?dl=1",
+    hubspot_form="e769deaf-7aca-4d72-9b31-7207dbb2eab3",
 )

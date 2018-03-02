@@ -8,7 +8,8 @@
   <h6>{{ study.title }}</h6>
 </a>
 <p class="gap-top-base">
-  {{ study.partners.0 }}<br />
+  {% trans "Partner" %}: {{ study.partners.0 }}<br />
+  {% trans "Location" %}:
   {% if study.countries|length > 1 %}
     {{ study.countries|length }}+ {% trans "countries" %}
   {% else %}

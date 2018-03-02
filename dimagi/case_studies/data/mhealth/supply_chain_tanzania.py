@@ -29,4 +29,5 @@ STUDY = CaseStudy(
     features=[],
     slug="mhealth-supply-chain-tanzania",
     download_url="https://www.dropbox.com/s/suffsfn81ybp41q/mhealth-supply-chain-tanzania.pdf?dl=1",
+    hubspot_form="95287374-5948-49e2-b67f-64e25723c355",
 )
