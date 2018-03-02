@@ -1,23 +1,37 @@
 {% load i18n %}
 {% load dimagidotcom %}
 
-<section class="directory accent-gray-bg border-vert"
+<section class="directory accent-gray-bg border-bottom"
          id="directory">
-  <div class="content pad-vert-medium align-center">
+  <div class="content pad-vert-medium">
+    <div class="intro">
+      <h2>
+        {% blocktrans %}
+          Get in Touch
+        {% endblocktrans %}
+      </h2>
+      <p class="content-width-small">
+        {% blocktrans %}
+          Use the directory below to
+          connect with the right team at Dimagi.
+        {% endblocktrans %}
+      </p>
+    </div>
 
-    <p class="content-width-medium">
+    <div class="grid-2-at-medium grid-4-at-large grid-row-equal-heights gap-bottom-line gap-top-small">
+      {% include "sections/contact/directory/sales.html" %}
+      {% include "sections/contact/directory/customer_support.html" %}
+      {% include "sections/contact/directory/community_support.html" %}
+      {% include "sections/contact/directory/general.html" %}
+    </div>{# .grid-2-at-medium #}
+
+    <p class="content-width-small legal-text align-center">
       {% blocktrans %}
         In order to keep our free products free, the Customer Support email is only available for paying customers.
         If you’re on our free Community plan, help is still available on the CommCare Users Group and our Help Site.
       {% endblocktrans %}
     </p>
 
-    <div class="grid-2-at-medium grid-4-at-large grid-row-equal-heights gap-bottom-small gap-top-medium">
-      {% include "sections/contact/directory/sales.html" %}
-      {% include "sections/contact/directory/customer_support.html" %}
-      {% include "sections/contact/directory/community_support.html" %}
-      {% include "sections/contact/directory/general.html" %}
-    </div>{# .grid-2-at-medium #}
 
   </div>{# .content #}
 </section>

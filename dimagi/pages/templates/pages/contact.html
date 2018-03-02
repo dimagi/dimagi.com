@@ -2,7 +2,7 @@
 {% load i18n %}
 {% load dimagidotcom %}
 
-{% block body_class %}contact-page tucked-hero neutral-theme{% endblock %}
+{% block body_class %}contact-page tucked-hero{% endblock %}
 
 {% block stylesheets %}
   {% compress css %}
@@ -12,29 +12,66 @@
 
 {% block hero %}
   <div id="top"></div>
-  <section class="hero hero-contact"
-           id="hero">
-    <div class="content align-left-at-medium align-center">
-      <h2 class="gap-vert-line">
-        {% blocktrans %}
-          Questions about Dimagi or CommCare?<br />
-          We're here to help!
-        {% endblocktrans %}
-      </h2>
-      <h1>
-        {% blocktrans %}
-          Contact Us
-        {% endblocktrans %}
-      </h1>
-    </div> {# .content #}
-  </section>
+  <div class="neutral-theme">
+    <section class="hero hero-contact"
+             id="hero">
+      <div class="content align-left-at-medium gap-top-small align-center">
+        <h2 class="gap-vert-line">
+          {% blocktrans %}
+            Questions about Dimagi or CommCare?<br />
+            We're here to help!
+          {% endblocktrans %}
+        </h2>
+        <h1>
+          {% blocktrans %}
+            Contact Us
+          {% endblocktrans %}
+        </h1>
+      </div> {# .content #}
+    </section>
+  </div>
 {% endblock %}
 
 {% block content %}
-  <section class="contact-container">
+  <section class="contact-container neutral-theme">
     {% include 'sections/contact/sub_nav.html' %}
-    {% include 'sections/contact/brief_overview.html' %}
     {% include 'sections/contact/directory.html' %}
     {% include 'sections/contact/offices.html' %}
   </section>
+{% endblock %}
+
+{% block modals %}
+  <div class="modal"
+     data-dismissible="true"
+     data-size="medium"
+     id="contact-form-modal">
+    <div class="modal-scroll">
+      <div class="modal-wrapper">
+        <a href="#" class="modal-close-button"></a>
+        <div class="content pad-horz-medium pad-vert-none neutral-theme">
+          <h3>
+            {% blocktrans %}
+              Contact Us
+            {% endblocktrans %}
+          </h3>
+          <section id="contact-form-content"></section>
+        </div>{# .content #}
+      </div>{# .modal-wrapper #}
+    </div>{# .modal-scroll #}
+  </div>{# .modal #}
+{% endblock %}
+
+{% block js %}
+  <!--[if lte IE 8]>
+    <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+  <![endif]-->
+  <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+  <script>
+    hbspt.forms.create({
+      portalId: "503070",
+      formId: "160467c5-1ae9-401c-81f2-09334ce10b1a",
+      target: "#contact-form-content",
+      css: ""
+    });
+  </script>
 {% endblock %}
