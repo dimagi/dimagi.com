@@ -9,6 +9,8 @@ env.read_env('.env')  # also reads from os.environ
 BASE_DIR = base_dir()
 PROJECT_ROOT = root()
 
+APPEND_SLASH = True
+
 SECRET_KEY = env('SECRET_KEY', default='changeme')
 DEBUG = env.bool('DEBUG', default=False)
 AWS_ENABLED = env.bool('AWS_ENABLED', default=False)
