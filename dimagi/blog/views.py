@@ -10,6 +10,7 @@ from dimagi.blog.categories import (
     PARTNERS,
     STAFF,
     ARCHIVE,
+    TECH,
     get_category_by_slug,
 )
 from dimagi.blog.models import BlogPost
@@ -20,7 +21,13 @@ from dimagi.utils.wordpress_api import get_json
 def validate_category(fn):
     @wraps(fn)
     def _validate_category(request, category, *args, **kwargs):
-        available_cat = [c.slug for c in [PRODUCT, PARTNERS, STAFF, ARCHIVE]]
+        available_cat = [c.slug for c in [
+            PRODUCT,
+            PARTNERS,
+            STAFF,
+            TECH,
+            ARCHIVE
+        ]]
         if category not in available_cat:
             raise Http404()
         return fn(request, category, *args, **kwargs)
@@ -39,14 +46,14 @@ def _get_posts(category, page=None, num_posts=None):
 
 def _get_global_context():
     return {
-        'categories': [PRODUCT, PARTNERS, STAFF],
+        'categories': [PRODUCT, PARTNERS, STAFF, TECH],
     }
 
 
 @no_index
 def home(request):
     posts = _get_posts(ARCHIVE)['posts']
-    popular = [BlogPost(p) for p in get_json('blog/popular')['posts']]
+    popular = [BlogPost(p) for p in get_json('blog/popular', num_posts=2)['posts']]
     context = _get_global_context()
     context.update({
         'recent': posts[:2],

@@ -32,6 +32,15 @@ STAFF = Category(
     slug="staff",
 )
 
+TECH = Category(
+    name=ugettext_lazy("Technology"),
+    description=ugettext_lazy(
+        "Members of our tech team share insights<br />"
+        "about technologies we use for CommCare."
+    ),
+    slug="tech",
+)
+
 ARCHIVE = Category(
     name=ugettext_lazy("Archive"),
     description=ugettext_lazy(
@@ -42,7 +51,13 @@ ARCHIVE = Category(
 
 
 def get_category_by_slug(slug):
-    slug_to_cat = dict((c.slug, c) for c in [PRODUCT, PARTNERS, STAFF, ARCHIVE])
+    slug_to_cat = dict((c.slug, c) for c in [
+        PRODUCT,
+        PARTNERS,
+        STAFF,
+        ARCHIVE,
+        TECH,
+    ])
     try:
         return slug_to_cat[slug]
     except KeyError:
