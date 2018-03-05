@@ -10,10 +10,38 @@
     <p>
       {% include 'partials/social.html' with url=request.build_absolute_uri text=post.title %}
     </p>
-    <div>
+    <div class="post-content-text pad-bottom-small">
       {{ post.content|safe }}
     </div>
-    <div class="border-top gap-top-line pad-top-small theme-border">
+    <div class="orange-bg white pad-horz-small pad-vert-line">
+      <h6 class="white upperspaced align-center">
+        {% trans "Written by" %}
+      </h6>
+      <div class="grid-3-at-medium grid-2-at-small">
+        {% for author in post.authors %}
+          <div class="column">
+            <div class="grid-flex">
+              {% if author.image %}
+                <div class="column">
+                  <div class="aspect-ratio-square post-author-image"
+                       style="background-image: url('{{ author.image }}');"></div>
+                </div>{# .column #}
+              {% endif %}
+              <div class="column">
+                <h5 class="gap-bottom-none white">
+                  {{ author.name }}
+                </h5>
+                {% if author.role %}
+                  <p>{{ author.role }}</p>
+                {% endif %}
+              </div>{# .column #}
+            </div>{# .post-author #}
+          </div>{# .column #}
+        {% endfor %}
+      </div>{# .grid-3-at-medium #}
+    </div>{# .orange-bg #}
+
+    <div class="pad-top-line theme-border">
       <div class="grid-2">
         <div class="column">
           <p>
