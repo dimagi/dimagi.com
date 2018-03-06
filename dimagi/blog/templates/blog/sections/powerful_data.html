@@ -4,7 +4,7 @@
 <section class="border-vert accent-gray-bg powerful-data">
   <div class="content pad-vert-medium">
 
-    <div class="grid-2-at-medium grid-row-space-none">
+    <div class="grid-2-at-medium grid-row-space-none grid-valign-middle">
       <div class="copy content-cell-padding-right">
         <h3>
           {% blocktrans %}
@@ -17,7 +17,7 @@
           {% endblocktrans %}
         </p>
         <p>
-          <a href="#todo"
+          <a href="{{ URL_TRIAL }}"
              class="button">
             {% blocktrans %}
               Get Started
@@ -25,7 +25,7 @@
           </a>
         </p>
         <p>
-          <a href="#todo"
+          <a href="{% url 'products_commcare' %}"
              class="arrow">
             {% blocktrans %}
               Learn More
@@ -33,12 +33,9 @@
           </a>
         </p>
       </div>{# .copy #}
-      <div class="copy">
-        <div class="column flex-valign-middle-at-medium">
 
-        </div>{# .column #}
-      </div>{# .copy #}
+      <div class="powerful-data-image hide-until-medium"></div>
+
     </div>{# .grid-2-at-medium #}
-
   </div>{# .content #}
 </section>

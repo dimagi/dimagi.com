@@ -44,3 +44,56 @@ a.post {
     }
   }
 }
+
+.category-tile {
+  position: relative;
+
+  .cta {
+    bottom: 30px;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+  }
+}
+
+.category-desc {
+  margin-bottom: 20px;
+
+  br {
+    display: none;
+  }
+}
+
+.post-author-image {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 80px;
+}
+
+.post-content-text {
+  img.size-full {
+    margin-bottom: $space-small;
+
+  }
+
+  h2,
+  h3,
+  h4 {
+    font-size: $font-size-extra-large;
+  }
+}
+
+.powerful-data {
+  $_base-height: 175px;
+  $_height-by-size: (
+    extra-small: 205px,
+    small: 270px,
+    medium: 210px,
+    large: 265px,
+    extra-large: 320px,
+  );
+  @include make-bg(powerful-data-image, '../../blog/cta', $_base-height, $_height-by-size, '.png');
+}

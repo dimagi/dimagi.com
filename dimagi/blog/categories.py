@@ -3,7 +3,7 @@ from collections import namedtuple
 
 from django.utils.translation import ugettext_lazy
 
-Category = namedtuple('Category', 'name description slug')
+Category = namedtuple('Category', 'name description icon slug')
 
 PRODUCT = Category(
     name=ugettext_lazy("Product Updates"),
@@ -11,6 +11,7 @@ PRODUCT = Category(
         "All of the newest CommCare<br />"
         "feature updates."
     ),
+    icon="svg/blog/icon/product.html",
     slug="product",
 )
 
@@ -20,6 +21,7 @@ PARTNERS = Category(
         "Read for the latest news and stories<br />"
         "from our Partners around the world."
     ),
+    icon="svg/blog/icon/partners.html",
     slug="partners",
 )
 
@@ -29,6 +31,7 @@ STAFF = Category(
         "Dimagi staff offer their insights on<br />"
         "app-building and more."
     ),
+    icon="svg/blog/icon/staff.html",
     slug="staff",
 )
 
@@ -38,6 +41,7 @@ TECH = Category(
         "Members of our tech team share insights<br />"
         "about technologies we use for CommCare."
     ),
+    icon="svg/blog/icon/technology.html",
     slug="tech",
 )
 
@@ -46,6 +50,7 @@ ARCHIVE = Category(
     description=ugettext_lazy(
         "The intersection of technology<br />and social good."
     ),
+    icon=None,
     slug="archive",
 )
 

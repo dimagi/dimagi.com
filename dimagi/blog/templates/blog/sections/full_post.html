@@ -13,8 +13,8 @@
     <div class="post-content-text pad-bottom-small">
       {{ post.content|safe }}
     </div>
-    <div class="orange-bg white pad-horz-small pad-vert-line">
-      <h6 class="white upperspaced align-center">
+    <div class="accent-gray-bg pad-horz-small pad-vert-line">
+      <h6>
         {% trans "Written by" %}
       </h6>
       <div class="grid-3-at-medium grid-2-at-small">
@@ -28,7 +28,7 @@
                 </div>{# .column #}
               {% endif %}
               <div class="column">
-                <h5 class="gap-bottom-none white">
+                <h5 class="gap-bottom-none">
                   {{ author.name }}
                 </h5>
                 {% if author.role %}
@@ -49,10 +49,7 @@
           </p>
         </div>
         <div class="column align-right">
-          {% blocktrans %}
-            Read more from:
-          {% endblocktrans %}
-          <br />
+          {% blocktrans %}Read more from{% endblocktrans %}<br />
           <a href="{% url 'blog_archive' post.category.slug %}">
             {{ post.category.name }}
           </a>
