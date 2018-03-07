@@ -20,4 +20,3 @@ def _get_headers():
 def get_json(item, **kwargs):
     data = requests.get(_get_url(item), headers=_get_headers(), params=kwargs)
     return data.json()
-
