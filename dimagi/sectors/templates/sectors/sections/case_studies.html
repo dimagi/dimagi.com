@@ -20,7 +20,7 @@
 
           {% for study in sector.case_studies %}
             <div class="carousel-slide">
-              <div class="content-width-extra-small align-center gap-horz-small">
+              <div class="content-width-extra-small gap-horz-small">
                 <a class="study" href="{% url 'case_study' study.slug %}">
                   <div class="aspect-ratio-square study-thumbnail gap-bottom-line"
                        style="background-image: url('{% static "case_studies/covers/"|add:study.slug|add:".jpg" %}');"></div>

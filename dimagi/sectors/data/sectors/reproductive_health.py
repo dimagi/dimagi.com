@@ -56,9 +56,6 @@ CommCare Supply which allows them to easily record, manage, and
 review stock information for hundreds of facilities. This 
 intervention is currently being scaled nationally in Senegal.
         """),
-        video_url="https://www.youtube.com/watch?v=QTjs61L5l2Q"
-                  "&feature=youtu.be"
-                  "&list=PLVmwIEfrcKqnGhas9Vy4CmPEvG9xVvQdr",
     ),
     Project(
         name=ugettext_lazy(
@@ -75,8 +72,6 @@ part of this project, project staff are using CommCare to collect
 baseline and intervention data, including data with women at the 
 hospital after delivery, at nine months, and at 18 months after delivery.
     """),
-        video_url="https://www.youtube.com/watch?v=D1_PAJNWmGQ"
-                  "&feature=youtu.be",
     ),
 
     Project(

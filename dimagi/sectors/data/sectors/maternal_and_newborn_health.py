@@ -41,7 +41,7 @@ SECTOR.add_projects([
             "Reducing Maternal and Newborn Deaths "
             "(ReMiND) Project, Catholic Relief Services"
         ),
-        country=countries.BURKINA_FASO,
+        country=countries.INDIA,
         description=ugettext_lazy("""
 The ReMiND project in Uttar Pradesh, India is well known as a leading 
 example of best practices for using mobile health technology to increase 
@@ -59,7 +59,7 @@ reaching over 20,000 women and their children.
         name=ugettext_lazy(
             "Better Birth, The Harvard School of Public Health"
         ),
-        country=countries.MALAWI,
+        country=countries.INDIA,
         description=ugettext_lazy("""
 The Harvard School of Public Health, in collaboration with the Indian government, 
 the World Health Organization, the Gates Foundation and Population Services International, 
@@ -75,7 +75,7 @@ analyze submitted data.
         name=ugettext_lazy(
             "mHMtaani: Mobile Health for Our Communities, USAID"
         ),
-        country=countries.MOZAMBIQUE,
+        country=countries.KENYA,
         description=ugettext_lazy("""
 Under the APHIAplus project in Kenya, Pathfinder, with the support of USAID, 
 has worked with Dimagi to monitor and track the health of pregnant mothers 
@@ -86,14 +86,12 @@ delivery. As of spring 2014, over 260 CHWs trained through mHMtaani were using
 CommCare. The application also contributed to an increased number of facility-based 
 deliveries as a result of due date reminders.
         """),
-        video_url="https://youtu.be/GUa7KW8s1VI"
-                  "?list=PLVmwIEfrcKqnGhas9Vy4CmPEvG9xVvQdr",
     ),
     Project(
         name=ugettext_lazy(
             "Deploying MOTECH Suite to Support Global MNCH and Nutrition Programs, World Vision"
         ),
-        country=countries.GUATEMALA,
+        country=countries.GLOBE,
         description=ugettext_lazy("""
 In partnership with Dimagi and the Grameen Foundation, World Vision has deployed 
 the MOTECH Suite for maternal, newborn, and child health (MNCH) and nutrition 
@@ -108,7 +106,7 @@ aids and acting as monitoring tools.
         name=ugettext_lazy(
             "mSante mHealth Project, Pathfinder"
         ),
-        country=countries.NIGER,
+        country=countries.HAITI,
         description=ugettext_lazy("""
 Pathfinder International, in collaboration with Dimagi, USAID, and the Haitian Ministry, 
 has trained more than 300 CHWs under the mSante mHealth Project. This mobile application 
@@ -117,7 +115,5 @@ between home and the health facility, and features modules focused on interventi
 targeted at family planning and maternal and child health. Pathfinder and partners are 
 currently working toward scaling this project to the national level.
         """),
-        video_url="https://youtu.be/wuo0qoPQz0o"
-                  "?list=PLVmwIEfrcKqnGhas9Vy4CmPEvG9xVvQdr",
     ),
 ])

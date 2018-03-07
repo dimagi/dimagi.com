@@ -145,9 +145,4 @@ SECTOR.add_resources([
             "Assessment of an mHealth initiative to improve patient "
             "retention. USAID, PEPFAR, Measure Evaluation. August 2014."),
     ),
-    Resource(
-        url="/case-studies/mhealth-hiv-zimbabwe/",
-        name=ugettext_lazy(
-            "Mobile Rapid Diagnostic Tests for HIV and Malaria"),
-    ),
 ])

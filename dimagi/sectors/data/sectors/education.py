@@ -64,7 +64,7 @@ indicators.
         name=ugettext_lazy(
             "Anseye Pou Ayiti"
         ),
-        country=countries.MOZAMBIQUE,
+        country=countries.HAITI,
         description=ugettext_lazy("""
 Anseye Pou Ayiti (Teach for Haiti) seeks to raise education outcomes 
 in rural Haiti by recruiting, training, and equipping teacher-leaders 

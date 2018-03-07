@@ -97,8 +97,6 @@ counseling during GMP sessions in northern Cabo Delgado, a province with
 one of the highest malnutrition rates in Mozambique. The CommCare 
 application calculates and records children’s weight-for-age Z scores and MUAC.
         """),
-        video_url="https://youtu.be/YS4NFMCwkm4"
-                  "?list=PLVmwIEfrcKqnGhas9Vy4CmPEvG9xVvQdr",
     ),
     Project(
         name=ugettext_lazy(

@@ -28,7 +28,7 @@ SECTOR.add_projects([
         name=ugettext_lazy(
             "CARE Pathways, India, Tanzania"
         ),
-        country=countries.TANZANIA,
+        country=countries.INDIA,
         description=ugettext_lazy("""
 Since 2013, Dimagi has been working on the CARE Pathways project, 
 which is focused on helping female self-help agricultural groups 
