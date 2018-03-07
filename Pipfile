@@ -23,6 +23,9 @@ django-compressor-postcss = "*"
 autoprefixer = "*"
 django-imagekit = "*"
 pillow = "*"
+requests = "*"
+libsass = "*"
+olefile = "*"
 
 
 [requires]
