@@ -8,7 +8,7 @@
   {% endcompress %}
 {% endblock %}
 
-{% block body_class %}sectors-page tucked-hero{% endblock %}
+{% block body_class %}{{ sector.slug }}-page tucked-hero{% endblock %}
 
 {% block hero %}
   <div class="{{ sector.area.theme }}">

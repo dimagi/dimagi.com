@@ -6,19 +6,20 @@ from dimagi.sectors.data import areas, countries
 
 SECTOR = Sector(
     name=ugettext_lazy(
-        "Gender Based Violence"
+        "Gender-based Violence"
     ),
     summary=ugettext_lazy(
         "Learn how CommCare can help address gender-based violence issues."
     ),
     template="sectors/content/gender_based_violence.html",
     area=areas.DEVELOPMENT,
-    slug="gender_based_violence",
+    slug="gender-based-violence",
     slides=[
         "sectors/content/gender_based_violence/gender_based_violence.html",
         "sectors/content/gender_based_violence/frontline_workforce.html",
         "sectors/content/gender_based_violence/beneficiaries.html",
     ],
+    download_url="https://cdn2.hubspot.net/hubfs/503070/GBV.pdf",
 )
 
 

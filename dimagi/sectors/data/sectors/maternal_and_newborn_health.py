@@ -23,6 +23,7 @@ SECTOR = Sector(
         "sectors/content/maternal_and_newborn_health/health_facilities.html",
         "sectors/content/maternal_and_newborn_health/women_and_newborns.html",
     ],
+    download_url="https://cdn2.hubspot.net/hubfs/503070/MNCH.pdf",
 )
 
 

@@ -21,6 +21,7 @@ SECTOR = Sector(
         "sectors/content/logistics/supply_officers.html",
         "sectors/content/logistics/organizations.html",
     ],
+    download_url="https://cdn2.hubspot.net/hubfs/503070/Logistics.pdf",
 )
 
 

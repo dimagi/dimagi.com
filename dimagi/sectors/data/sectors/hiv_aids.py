@@ -20,6 +20,7 @@ SECTOR = Sector(
         "sectors/content/hiv_aids/community_health_workers.html",
         "sectors/content/hiv_aids/clinics_and_clinicians.html",
     ],
+    download_url="https://cdn2.hubspot.net/hubfs/503070/CommCare%20for%20HIVAIDS.pdf",
 )
 
 

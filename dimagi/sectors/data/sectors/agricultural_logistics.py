@@ -18,6 +18,7 @@ SECTOR = Sector(
     slides=[
         "sectors/content/agricultural_logistics/value-chain-logistics.html",
     ],
+    download_url="https://cdn2.hubspot.net/hubfs/503070/Agriculture%20Logistics.pdf",
 )
 
 

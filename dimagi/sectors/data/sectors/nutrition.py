@@ -20,6 +20,7 @@ SECTOR = Sector(
         "sectors/content/nutrition/frontline_workers.html",
         "sectors/content/nutrition/beneficiaries.html",
     ],
+    download_url="https://cdn2.hubspot.net/hubfs/503070/Nutrition.pdf",
 )
 
 

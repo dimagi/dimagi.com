@@ -17,6 +17,7 @@ SECTOR = Sector(
     slides=[
         "sectors/content/agricultural_finance/agricultural_finance.html",
     ],
+    download_url="https://cdn2.hubspot.net/hubfs/503070/Agricultural%20Finance.pdf",
 )
 
 

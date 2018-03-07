@@ -5,6 +5,13 @@
          id="sub-nav">
   <div class="content">
     <div class="actions">
+      <a href="{{ sector.download_url }}" class="hide-until-medium">
+        <span>
+          {% blocktrans %}
+            Download PDF Summary
+          {% endblocktrans %}
+        </span>
+      </a>
       <a class="primary"
          href="{{ URL_TRIAL }}">
         <span>
@@ -22,6 +29,18 @@
     </a>
     <div class="destinations">
       <div class="content">
+        <a href="{% url 'sectors' %}">
+          {% blocktrans %}
+            All Sectors
+          {% endblocktrans %}
+        </a>
+        <a href="{{ sector.download_url }}" class="hide-at-medium">
+          <span>
+            {% blocktrans %}
+              Download PDF Summary
+            {% endblocktrans %}
+          </span>
+        </a>
         <a href="#overview">
           {% blocktrans %}
             Overview

@@ -24,6 +24,7 @@ SECTOR = Sector(
         "sectors/content/ebola_response/patient_self_reporting.html",
         "sectors/content/ebola_response/ebola_response_applications.html",
     ],
+    download_url="https://cdn2.hubspot.net/hubfs/503070/Ebola%20Response.pdf",
 )
 
 

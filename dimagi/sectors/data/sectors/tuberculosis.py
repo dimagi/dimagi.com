@@ -19,6 +19,7 @@ SECTOR = Sector(
         "sectors/content/tuberculosis/health_workers.html",
         "sectors/content/tuberculosis/tb_patients.html",
     ],
+    download_url="https://cdn2.hubspot.net/hubfs/503070/Tuberculosis.pdf",
 )
 
 SECTOR.add_projects([

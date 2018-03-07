@@ -14,7 +14,7 @@ SECTOR = Sector(
     ),
     template="sectors/content/humanitarian_response.html",
     area=areas.DEVELOPMENT,
-    slug="humanitarian_response",
+    slug="humanitarian-response",
     slides=[
         "sectors/content/humanitarian_response/"
         "humanitarian_response_organizations.html",
@@ -23,4 +23,5 @@ SECTOR = Sector(
         "sectors/content/humanitarian_response/"
         "beneficiaries_affected_by_crisis.html",
     ],
+    download_url="https://cdn2.hubspot.net/hubfs/503070/Humanitarian%20Response.pdf",
 )

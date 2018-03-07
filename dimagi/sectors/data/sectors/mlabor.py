@@ -19,6 +19,7 @@ SECTOR = Sector(
         "sectors/content/mlabour/health_clinics_and_supervisors.html",
         "sectors/content/mlabour/intrapartum_care_providers.html",
     ],
+    download_url="https://cdn2.hubspot.net/hubfs/503070/Intrapartum%20Care.pdf",
 )
 
 

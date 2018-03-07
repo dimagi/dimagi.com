@@ -4,7 +4,7 @@ from collections import namedtuple
 
 Area = namedtuple(
     'Area',
-    'name theme icon',
+    'name theme icon css_class',
 )
 
 Country = namedtuple(
@@ -26,7 +26,7 @@ class Sector(object):
     """
 
     def __init__(self, name=None, summary=None, template=None, slides=None,
-                 slug=None, area=None):
+                 slug=None, area=None, download_url=None):
         self.name = name
         self.summary = summary
         self.template = template
@@ -36,6 +36,7 @@ class Sector(object):
         self.projects = []
         self.case_studies = []
         self.additional_resources = []
+        self.download_url = None
 
     def add_projects(self, projects):
         self.projects.extend(projects)

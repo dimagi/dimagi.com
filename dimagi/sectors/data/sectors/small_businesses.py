@@ -19,6 +19,7 @@ SECTOR = Sector(
         "sectors/content/small_businesses/vendors.html",
         "sectors/content/small_businesses/customers.html",
     ],
+    download_url="https://cdn2.hubspot.net/hubfs/503070/Small%20Business.pdf",
 )
 
 SECTOR.add_projects([

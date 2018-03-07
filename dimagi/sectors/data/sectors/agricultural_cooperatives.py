@@ -18,6 +18,7 @@ SECTOR = Sector(
     slides=[
         "sectors/content/agricultural_cooperatives/cooperative_farming.html",
     ],
+    download_url="https://cdn2.hubspot.net/hubfs/503070/Agricultural%20Cooperatives.pdf",
 )
 
 

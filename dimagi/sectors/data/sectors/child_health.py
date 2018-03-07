@@ -21,6 +21,7 @@ SECTOR = Sector(
         "sectors/content/child_health/clinics.html",
         "sectors/content/child_health/patients.html",
     ],
+    download_url="https://cdn2.hubspot.net/hubfs/503070/Child%20Health.pdf",
 )
 
 

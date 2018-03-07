@@ -13,7 +13,7 @@ SECTOR = Sector(
         "what’s working and what’s not."
     ),
     template="sectors/content/education.html",
-    area=areas.HEALTH,
+    area=areas.DEVELOPMENT,
     slug="education",
     slides=[
         "sectors/content/education/performance_monitoring.html",
@@ -21,6 +21,7 @@ SECTOR = Sector(
         "sectors/content/education/standardized_assessments.html",
         "sectors/content/education/instructional_coaching.html",
     ],
+    download_url="https://cdn2.hubspot.net/hubfs/503070/Education.pdf",
 )
 
 
