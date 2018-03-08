@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from dimagi.press.utils import get_press_page
+from dimagi.data.press import get_press_page
 from dimagi.utils.decorators import no_index
 
 
@@ -9,4 +9,4 @@ def view_all(request):
     context = {
         'press_articles': press_articles,
     }
-    return render(request, 'press/press.html', context)
+    return render(request, 'pages/press.html', context)

@@ -6,7 +6,7 @@
 
 {% block stylesheets %}
   {% compress css %}
-    <link href="{% sass_src 'style/press/press.scss' %}" rel="stylesheet" media="screen" type="text/css" />
+    <link href="{% sass_src 'style/pages/press.scss' %}" rel="stylesheet" media="screen" type="text/css" />
   {% endcompress %}
 {% endblock %}
 
@@ -36,6 +36,6 @@
 
 {% block content %}
   <section class="press-container orange-theme">
-    {% include 'press/sections/list.html' %}
+    {% include 'sections/press/list.html' %}
   </section>
 {% endblock %}

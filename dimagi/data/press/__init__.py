@@ -1,4 +1,11 @@
-from dimagi.press.data import press
+from dimagi.data.press import (
+    tedx_saijai,
+)
+
+
+press = (
+    tedx_saijai,
+)
 
 
 def get_press_page(page):

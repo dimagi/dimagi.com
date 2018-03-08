@@ -1,6 +1,6 @@
 from django.utils.translation import ugettext_lazy
 
-from dimagi.press.models import Press
+from dimagi.pages.models.press import Press
 
 PRESS = Press(
     title=ugettext_lazy(
