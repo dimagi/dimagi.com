@@ -1,22 +1,25 @@
 {% load i18n %}
 {% load dimagidotcom %}
 
-<section class="management accent-gray-bg border-vert"
-         id="management">
+<section class="team"
+         id="team">
   <div class="content pad-vert-medium">
     <div class="intro">
       <h2>
         {% blocktrans %}
-          Management
+          Our Team
         {% endblocktrans %}
       </h2>
+      <p>
+        {% blocktrans %}
+          We are a team of engineers, doctors, public health professionals,
+          former consultants, and everything else in between. We are smart,
+          driven, share a passion for social good.
+        {% endblocktrans %}
+      </p>
     </div>{# .intro #}
 
-    <div class="grid-4-at-large grid-3-at-medium grid-2-at-small grid-row-equal-heights gap-bottom-none team-grid">
-      {% for employee in management %}
-        {% include "about/partials/team_card.html" %}
-      {% endfor %}
-    </div>
+    {% include "sections/about/team/grid.html" %}
 
     <p class="align-center gap-top-small gap-bottom-base">
       <a class="arrow" href="{% url 'about_team' %}">

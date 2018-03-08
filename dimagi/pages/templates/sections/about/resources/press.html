@@ -1,23 +1,23 @@
-{% extends "about/sections/resources/_base.html" %}
+{% extends "sections/about/resources/_base.html" %}
 {% load i18n %}
 {% load dimagidotcom %}
 
 {% block icon %}
-  {% include "svg/about/icons/careers.html" %}
+  {% include "svg/about/icons/press.html" %}
 {% endblock %}
 
 {% block header %}{% blocktrans %}
-  Careers
+  Press &amp; Media
 {% endblocktrans %}{% endblock %}
 
 {% block content %}{% blocktrans %}
-  We’re seeking impact-driven problem solvers.
+  See our press archives and media resources.
 {% endblocktrans %}{% endblock %}
 
 {% block link %}
-  {% url 'careers' %}
+  {% url 'press' %}
 {% endblock %}
 
 {% block link_text %}{% blocktrans %}
-  See Jobs
+  View Press
 {% endblocktrans %}{% endblock %}

@@ -6,7 +6,7 @@
 
 {% block stylesheets %}
   {% compress css %}
-    <link href="{% sass_src 'style/about/about.scss' %}" rel="stylesheet" media="screen" type="text/css" />
+    <link href="{% sass_src 'style/pages/about.scss' %}" rel="stylesheet" media="screen" type="text/css" />
   {% endcompress %}
 {% endblock %}
 
@@ -38,15 +38,15 @@
 
 {% block content %}
   <section class="team-container orange-theme">
-    {% include "about/sections/team_page/sub_nav.html" %}
-    {% include "about/sections/team_page/office.html" %}
+    {% include "sections/team/sub_nav.html" %}
+    {% include "sections/team/office.html" %}
   </section>
 {% endblock %}
 
 {% block modals %}
   {% for office in offices %}
     {% for employee in office.members %}
-      {% include "about/partials/team_modal.html" with employee=employee %}
+      {% include "partials/team_modal.html" with employee=employee %}
     {% endfor %}
   {% endfor %}
 {% endblock %}

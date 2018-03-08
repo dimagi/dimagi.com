@@ -32,7 +32,6 @@ if AWS_ENABLED:
 PROJECT_APPS = [
     'dimagi.utils',
     'dimagi.pages',
-    'dimagi.about',
     'dimagi.blog',
     'dimagi.careers',
     'dimagi.case_studies',

@@ -6,7 +6,7 @@
 
 {% block stylesheets %}
   {% compress css %}
-    <link href="{% sass_src 'style/about/about.scss' %}" rel="stylesheet" media="screen" type="text/css" />
+    <link href="{% sass_src 'style/pages/about.scss' %}" rel="stylesheet" media="screen" type="text/css" />
   {% endcompress %}
 {% endblock %}
 
@@ -32,19 +32,19 @@
 
 {% block content %}
   <section class="about-container orange-theme">
-    {% include "about/sections/sub_nav.html" %}
-    {% include "about/sections/mission.html" %}
-    {% include "about/sections/resources.html" %}
-    {% include "about/sections/team.html" %}
-    {% include "about/sections/management.html" %}
-    {% include "about/sections/company_info.html" %}
+    {% include "sections/about/sub_nav.html" %}
+    {% include "sections/about/mission.html" %}
+    {% include "sections/about/resources.html" %}
+    {% include "sections/about/team.html" %}
+    {% include "sections/about/management.html" %}
+    {% include "sections/about/company_info.html" %}
     {% include "sections/contact/offices.html" %}
-    {% include "about/sections/contact.html" %}
+    {% include "sections/about/contact.html" %}
   </section>
 {% endblock %}
 
 {% block modals %}
   {% for employee in management %}
-    {% include "about/partials/team_modal.html" with employee=employee %}
+    {% include "partials/team_modal.html" with employee=employee %}
   {% endfor %}
 {% endblock %}

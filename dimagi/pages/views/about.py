@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from dimagi.about.models import Employee, Office
+from dimagi.pages.models.about import Employee, Office
 from dimagi.utils.decorators import no_index
 from dimagi.utils.wordpress_api import get_json
 
@@ -24,7 +24,7 @@ def home(request):
     context = {
         'management': _get_management(),
     }
-    return render(request, 'about/about.html', context)
+    return render(request, 'pages/about.html', context)
 
 
 @no_index
@@ -32,4 +32,4 @@ def team(request):
     context = {
         'offices': _get_offices(),
     }
-    return render(request, 'about/team.html', context)
+    return render(request, 'pages/team.html', context)
