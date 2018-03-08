@@ -1,7 +1,10 @@
+from collections import namedtuple
+
 from django.urls import reverse
 from django.utils.dateparse import parse_datetime
 
-from dimagi.blog.categories import get_category_by_slug
+
+Category = namedtuple('Category', 'name description icon slug')
 
 
 class BlogPost(object):
@@ -9,6 +12,7 @@ class BlogPost(object):
     def __init__(self, data):
         self.title = data['title']
 
+        from dimagi.data.blog import get_category_by_slug
         self.category = get_category_by_slug(data['category'])
 
         self.authors = map(lambda x: Author(x), data['authors'])

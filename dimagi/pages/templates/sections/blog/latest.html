@@ -28,7 +28,7 @@
     <div class="grid-2-at-medium grid-row-space-line gap-top-small">
       {% for post in recent %}
         <div class="column">
-          {% include "blog/partials/summary.html" with post=post ratio='rect' %}
+          {% include "partials/blog_summary.html" with post=post ratio='rect' %}
         </div>{# .column #}
       {% endfor %}
     </div>{# .grid-2-at-medium #}
@@ -36,7 +36,7 @@
     <div class="grid-4-at-medium grid-2-at-small grid-row-space-small">
       {% for post in others %}
         <div class="column">
-          {% include "blog/partials/summary.html" with post=post ratio='square' %}
+          {% include "partials/blog_summary.html" with post=post ratio='square' %}
         </div>
       {% endfor %}
     </div>

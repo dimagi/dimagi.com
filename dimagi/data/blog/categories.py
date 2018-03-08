@@ -1,9 +1,9 @@
 from __future__ import absolute_import
-from collections import namedtuple
 
 from django.utils.translation import ugettext_lazy
 
-Category = namedtuple('Category', 'name description icon slug')
+from dimagi.pages.models.blog import Category
+
 
 PRODUCT = Category(
     name=ugettext_lazy("Product Updates"),
@@ -53,17 +53,3 @@ ARCHIVE = Category(
     icon=None,
     slug="archive",
 )
-
-
-def get_category_by_slug(slug):
-    slug_to_cat = dict((c.slug, c) for c in [
-        PRODUCT,
-        PARTNERS,
-        STAFF,
-        ARCHIVE,
-        TECH,
-    ])
-    try:
-        return slug_to_cat[slug]
-    except KeyError:
-        return ARCHIVE

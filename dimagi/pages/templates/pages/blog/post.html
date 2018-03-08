@@ -6,7 +6,7 @@
 
 {% block stylesheets %}
   {% compress css %}
-    <link href="{% sass_src 'style/blog/home.scss' %}" rel="stylesheet" media="screen" type="text/css" />
+    <link href="{% sass_src 'style/pages/blog.scss' %}" rel="stylesheet" media="screen" type="text/css" />
   {% endcompress %}
 {% endblock %}
 
@@ -18,11 +18,11 @@
 
 {% block content %}
   <section class="blog-container orange-theme">
-    {% include 'blog/sections/sub_nav.html' %}
-    {% include 'blog/sections/full_post.html' %}
-    {% include 'blog/sections/powerful_data.html' %}
-    {% include 'blog/sections/cta.html' with hide_class=True %}
-    {% include 'blog/sections/categories.html' %}
+    {% include 'sections/blog/sub_nav.html' %}
+    {% include 'sections/blog/full_post.html' %}
+    {% include 'sections/blog/powerful_data.html' %}
+    {% include 'sections/blog/cta.html' with hide_class=True %}
+    {% include 'sections/blog/categories.html' %}
   </section>
 {% endblock %}
 

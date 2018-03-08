@@ -11,7 +11,7 @@
     large: 500px,
     extra-large: 500px,
   );
-  @include make-bg(hero, '../../blog/hero', $_base-height, $_height-by-size);
+  @include make-bg(hero, '../../pages/blog/hero', $_base-height, $_height-by-size);
 }
 
 .post-thumbnail {
@@ -95,5 +95,5 @@ a.post {
     large: 265px,
     extra-large: 320px,
   );
-  @include make-bg(powerful-data-image, '../../blog/cta', $_base-height, $_height-by-size, '.png');
+  @include make-bg(powerful-data-image, '../../pages/blog/cta', $_base-height, $_height-by-size, '.png');
 }

@@ -28,7 +28,7 @@
     <div class="grid-2-at-medium grid-row-space-line gap-top-small">
       {% for post in popular %}
         <div class="column">
-          {% include "blog/partials/summary.html" with post=post ratio='rect' %}
+          {% include "partials/blog_summary.html" with post=post ratio='rect' %}
         </div>{# .column #}
       {% endfor %}
     </div>{# .grid-2-at-medium #}

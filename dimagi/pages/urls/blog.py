@@ -1,6 +1,7 @@
 from django.conf.urls import url
 
-from dimagi.blog.views import home, archive, post
+from dimagi.pages.views.blog import home, archive, post
+
 
 urlpatterns = [
     url(r'^$', home,
