@@ -19,7 +19,7 @@ urlpatterns = [
     url(r'^blog/',
         include('dimagi.pages.urls.blog')),
     url(r'^sectors/',
-        include('dimagi.sectors.urls')),
+        include('dimagi.pages.urls.sectors')),
     url(r'^about/',
         include('dimagi.pages.urls.about')),
     url(r'^careers/',

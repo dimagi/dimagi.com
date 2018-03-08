@@ -35,7 +35,6 @@ PROJECT_APPS = [
     'dimagi.pages',
     'dimagi.press',
     'dimagi.toolkits',
-    'dimagi.sectors',
 ]
 INSTALLED_APPS = DEFAULT_APPS + THIRD_PARTY_APPS + PROJECT_APPS
 

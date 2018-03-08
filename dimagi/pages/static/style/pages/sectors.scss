@@ -1,0 +1,87 @@
+@import 'app/mixins/background';
+@import 'app/variables/colors';
+@import 'app/variables/sizes';
+@import 'app/variables/type';
+
+$_base-height: 500px;
+$_height-by-size: (
+  small: 500px,
+  medium: 500px,
+  large: 500px,
+  extra-large: 500px,
+);
+
+.sectors-page {
+  @include make-bg(hero, '../../pages/sectors/hero', $_base-height, $_height-by-size);
+}
+
+$_slugs: (
+  agricultural-cooperatives,
+  agricultural-finance,
+  agricultural-logistics,
+  agriculture-extension-programs,
+  child-health,
+  ebola-response,
+  education,
+  gender-based-violence,
+  hiv-aids,
+  humanitarian-response,
+  maternal-and-newborn-health,
+  intrapartum-care,
+  nutrition,
+  programmatic-research,
+  reproductive-health,
+  small-businesses,
+  tuberculosis,
+  logistics,
+);
+
+@each $_slug in $_slugs {
+  .#{$_slug}-page {
+    @include make-bg(hero, '../../pages/sectors/#{$_slug}/hero', $_base-height, $_height-by-size);
+  }
+}
+
+.sector-thumbnail {
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+
+@each $_slug in $_slugs {
+  .#{$_slug}-thumbnail {
+    background-image: url('../../pages/sectors/#{$_slug}/sector-image.jpg');
+  }
+}
+
+
+.study-thumbnail {
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  padding-top: 126%;
+
+  &:after {
+    background-color: $color-orange;
+    content: ' ';
+    display: block;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    transition: opacity .5s;
+    width: 100%;
+  }
+}
+
+a.study {
+  color: $color-text !important; // scss-lint:disable ImportantRule
+  font-weight: $font-weight-regular;
+
+  &:hover {
+    .study-thumbnail:after {
+      opacity: .5;
+    }
+  }
+}
