@@ -13,13 +13,13 @@ SECTOR = Sector(
         "CommCare Supply is designed to inform and empower supervisors "
         "and supply officers with key supply information."
     ),
-    template="sectors/content/logistics.html",
+    template="data/sectors/content/logistics.html",
     area=areas.DEVELOPMENT,
     slug="logistics",
     slides=[
-        "sectors/content/logistics/frontline_workers.html",
-        "sectors/content/logistics/supply_officers.html",
-        "sectors/content/logistics/organizations.html",
+        "data/sectors/content/logistics/frontline_workers.html",
+        "data/sectors/content/logistics/supply_officers.html",
+        "data/sectors/content/logistics/organizations.html",
     ],
     download_url="https://cdn2.hubspot.net/hubfs/503070/Logistics.pdf",
 )

@@ -12,13 +12,13 @@ SECTOR = Sector(
     summary=ugettext_lazy(
         "Support a variety of nutrition programs with CommCare."
     ),
-    template="sectors/content/nutrition.html",
+    template="data/sectors/content/nutrition.html",
     area=areas.HEALTH,
     slug="nutrition",
     slides=[
-        "sectors/content/nutrition/nutrition_programs_and_organizations.html",
-        "sectors/content/nutrition/frontline_workers.html",
-        "sectors/content/nutrition/beneficiaries.html",
+        "data/sectors/content/nutrition/nutrition_programs_and_organizations.html",
+        "data/sectors/content/nutrition/frontline_workers.html",
+        "data/sectors/content/nutrition/beneficiaries.html",
     ],
     download_url="https://cdn2.hubspot.net/hubfs/503070/Nutrition.pdf",
 )

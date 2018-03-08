@@ -12,14 +12,14 @@ SECTOR = Sector(
         "CommCare can help educational organizations gain visibility into "
         "what’s working and what’s not."
     ),
-    template="sectors/content/education.html",
+    template="data/sectors/content/education.html",
     area=areas.DEVELOPMENT,
     slug="education",
     slides=[
-        "sectors/content/education/performance_monitoring.html",
-        "sectors/content/education/attendance_tracking.html",
-        "sectors/content/education/standardized_assessments.html",
-        "sectors/content/education/instructional_coaching.html",
+        "data/sectors/content/education/performance_monitoring.html",
+        "data/sectors/content/education/attendance_tracking.html",
+        "data/sectors/content/education/standardized_assessments.html",
+        "data/sectors/content/education/instructional_coaching.html",
     ],
     download_url="https://cdn2.hubspot.net/hubfs/503070/Education.pdf",
 )

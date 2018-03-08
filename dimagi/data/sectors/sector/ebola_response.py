@@ -12,17 +12,17 @@ SECTOR = Sector(
         "Improve core infectious disease response roles and help "
         "decrease the risk of future disease outbreaks."
     ),
-    template="sectors/content/ebola_response.html",
+    template="data/sectors/content/ebola_response.html",
     area=areas.HEALTH,
     slug="ebola-response",
     slides=[
-        "sectors/content/ebola_response/surveillance.html",
-        "sectors/content/ebola_response/sensitization.html",
-        "sectors/content/ebola_response/adherence_to_screening.html",
-        "sectors/content/ebola_response/diagnostics.html",
-        "sectors/content/ebola_response/stock_tracking.html",
-        "sectors/content/ebola_response/patient_self_reporting.html",
-        "sectors/content/ebola_response/ebola_response_applications.html",
+        "data/sectors/content/ebola_response/surveillance.html",
+        "data/sectors/content/ebola_response/sensitization.html",
+        "data/sectors/content/ebola_response/adherence_to_screening.html",
+        "data/sectors/content/ebola_response/diagnostics.html",
+        "data/sectors/content/ebola_response/stock_tracking.html",
+        "data/sectors/content/ebola_response/patient_self_reporting.html",
+        "data/sectors/content/ebola_response/ebola_response_applications.html",
     ],
     download_url="https://cdn2.hubspot.net/hubfs/503070/Ebola%20Response.pdf",
 )

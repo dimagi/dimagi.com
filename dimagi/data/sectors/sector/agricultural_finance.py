@@ -11,11 +11,11 @@ SECTOR = Sector(
     summary=ugettext_lazy(
         "CommCare can help reduce the risks involved with microfinance."
     ),
-    template="sectors/content/agricultural_finance.html",
+    template="data/sectors/content/agricultural_finance.html",
     area=areas.AGRICULTURE,
     slug="agricultural-finance",
     slides=[
-        "sectors/content/agricultural_finance/agricultural_finance.html",
+        "data/sectors/content/agricultural_finance/agricultural_finance.html",
     ],
     download_url="https://cdn2.hubspot.net/hubfs/503070/Agricultural%20Finance.pdf",
 )

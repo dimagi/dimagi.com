@@ -11,13 +11,13 @@ SECTOR = Sector(
     summary=ugettext_lazy(
         "CommCare helps small businesses improve decision making."
     ),
-    template="sectors/content/small_businesses.html",
+    template="data/sectors/content/small_businesses.html",
     area=areas.DEVELOPMENT,
     slug="small-businesses",
     slides=[
-        "sectors/content/small_businesses/small_businesses.html",
-        "sectors/content/small_businesses/vendors.html",
-        "sectors/content/small_businesses/customers.html",
+        "data/sectors/content/small_businesses/small_businesses.html",
+        "data/sectors/content/small_businesses/vendors.html",
+        "data/sectors/content/small_businesses/customers.html",
     ],
     download_url="https://cdn2.hubspot.net/hubfs/503070/Small%20Business.pdf",
 )

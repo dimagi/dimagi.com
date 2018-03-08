@@ -13,15 +13,15 @@ SECTOR = Sector(
         "Dimagi has worked on more MNH projects than in any other sector, "
         "including 58 projects globally."
     ),
-    template="sectors/content/maternal_and_newborn_health.html",
+    template="data/sectors/content/maternal_and_newborn_health.html",
     area=areas.HEALTH,
     slug="maternal-and-newborn-health",
     slides=[
-        "sectors/content/maternal_and_newborn_health/"
+        "data/sectors/content/maternal_and_newborn_health/"
         "maternal_and_newborn_health_programs.html",
-        "sectors/content/maternal_and_newborn_health/health_workers.html",
-        "sectors/content/maternal_and_newborn_health/health_facilities.html",
-        "sectors/content/maternal_and_newborn_health/women_and_newborns.html",
+        "data/sectors/content/maternal_and_newborn_health/health_workers.html",
+        "data/sectors/content/maternal_and_newborn_health/health_facilities.html",
+        "data/sectors/content/maternal_and_newborn_health/women_and_newborns.html",
     ],
     download_url="https://cdn2.hubspot.net/hubfs/503070/MNCH.pdf",
 )

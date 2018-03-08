@@ -12,14 +12,14 @@ SECTOR = Sector(
         "CommCare helps field-based studies increase efficiency, "
         "visibility, and scalability."
     ),
-    template="sectors/content/programmatic_research.html",
+    template="data/sectors/content/programmatic_research.html",
     area=areas.DEVELOPMENT,
     slug="programmatic-research",
     slides=[
-        "sectors/content/programmatic_research/core_functionalities.html",
-        "sectors/content/programmatic_research/research_features.html",
-        "sectors/content/programmatic_research/data_integrity.html",
-        "sectors/content/programmatic_research/data_security.html",
+        "data/sectors/content/programmatic_research/core_functionalities.html",
+        "data/sectors/content/programmatic_research/research_features.html",
+        "data/sectors/content/programmatic_research/data_integrity.html",
+        "data/sectors/content/programmatic_research/data_security.html",
     ],
     download_url="https://cdn2.hubspot.net/hubfs/503070/International%20research.pdf",
 )

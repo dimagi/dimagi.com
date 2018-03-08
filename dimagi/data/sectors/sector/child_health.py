@@ -13,13 +13,13 @@ SECTOR = Sector(
         "Use CommCare to monitor and improve antenatal, natal, and "
         "postnatal care."
     ),
-    template="sectors/content/child_health.html",
+    template="data/sectors/content/child_health.html",
     area=areas.HEALTH,
     slug="child-health",
     slides=[
-        "sectors/content/child_health/programs.html",
-        "sectors/content/child_health/clinics.html",
-        "sectors/content/child_health/patients.html",
+        "data/sectors/content/child_health/programs.html",
+        "data/sectors/content/child_health/clinics.html",
+        "data/sectors/content/child_health/patients.html",
     ],
     download_url="https://cdn2.hubspot.net/hubfs/503070/Child%20Health.pdf",
 )

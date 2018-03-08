@@ -12,12 +12,12 @@ SECTOR = Sector(
         "The CommCare Mobile Partograph app aims to reduce the "
         "partograph’s barriers."
     ),
-    template="sectors/content/mlabor.html",
+    template="data/sectors/content/mlabor.html",
     area=areas.HEALTH,
     slug="intrapartum-care",
     slides=[
-        "sectors/content/mlabour/health_clinics_and_supervisors.html",
-        "sectors/content/mlabour/intrapartum_care_providers.html",
+        "data/sectors/content/mlabour/health_clinics_and_supervisors.html",
+        "data/sectors/content/mlabour/intrapartum_care_providers.html",
     ],
     download_url="https://cdn2.hubspot.net/hubfs/503070/Intrapartum%20Care.pdf",
 )

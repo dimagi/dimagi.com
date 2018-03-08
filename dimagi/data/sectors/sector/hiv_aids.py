@@ -13,12 +13,12 @@ SECTOR = Sector(
         "Dimagi has significant experience working on HIV/AIDS"
         " projects in numerous countries and contexts."
     ),
-    template="sectors/content/hiv_aids.html",
+    template="data/sectors/content/hiv_aids.html",
     area=areas.HEALTH,
     slug="hiv-aids",
     slides=[
-        "sectors/content/hiv_aids/community_health_workers.html",
-        "sectors/content/hiv_aids/clinics_and_clinicians.html",
+        "data/sectors/content/hiv_aids/community_health_workers.html",
+        "data/sectors/content/hiv_aids/clinics_and_clinicians.html",
     ],
     download_url="https://cdn2.hubspot.net/hubfs/503070/CommCare%20for%20HIVAIDS.pdf",
 )

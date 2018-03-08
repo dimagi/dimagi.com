@@ -11,13 +11,13 @@ SECTOR = Sector(
     summary=ugettext_lazy(
         "Help build TB treatment capacity with CommCare."
     ),
-    template="sectors/content/tuberculosis.html",
+    template="data/sectors/content/tuberculosis.html",
     area=areas.HEALTH,
     slug="tuberculosis",
     slides=[
-        "sectors/content/tuberculosis/tb_programs_and_clinics.html",
-        "sectors/content/tuberculosis/health_workers.html",
-        "sectors/content/tuberculosis/tb_patients.html",
+        "data/sectors/content/tuberculosis/tb_programs_and_clinics.html",
+        "data/sectors/content/tuberculosis/health_workers.html",
+        "data/sectors/content/tuberculosis/tb_patients.html",
     ],
     download_url="https://cdn2.hubspot.net/hubfs/503070/Tuberculosis.pdf",
 )

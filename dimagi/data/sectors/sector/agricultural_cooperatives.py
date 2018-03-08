@@ -12,11 +12,11 @@ SECTOR = Sector(
         "CommCare's agriculture management applications provide real-time "
         "visibility into key data."
     ),
-    template="sectors/content/agricultural_cooperatives.html",
+    template="data/sectors/content/agricultural_cooperatives.html",
     area=areas.AGRICULTURE,
     slug="agricultural-cooperatives",
     slides=[
-        "sectors/content/agricultural_cooperatives/cooperative_farming.html",
+        "data/sectors/content/agricultural_cooperatives/cooperative_farming.html",
     ],
     download_url="https://cdn2.hubspot.net/hubfs/503070/Agricultural%20Cooperatives.pdf",
 )

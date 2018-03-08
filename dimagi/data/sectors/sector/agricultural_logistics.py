@@ -12,11 +12,11 @@ SECTOR = Sector(
         "Manage input distribution, cold chain of perishable goods, "
         "and warehouse receipt systems at lower cost with the support of CommCare."
     ),
-    template="sectors/content/agricultural_logistics.html",
+    template="data/sectors/content/agricultural_logistics.html",
     area=areas.AGRICULTURE,
     slug="agricultural-logistics",
     slides=[
-        "sectors/content/agricultural_logistics/value-chain-logistics.html",
+        "data/sectors/content/agricultural_logistics/value-chain-logistics.html",
     ],
     download_url="https://cdn2.hubspot.net/hubfs/503070/Agriculture%20Logistics.pdf",
 )

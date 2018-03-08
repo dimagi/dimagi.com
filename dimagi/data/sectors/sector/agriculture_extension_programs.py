@@ -12,11 +12,11 @@ SECTOR = Sector(
         "Mobile technology can support farmer trainings, ensuring "
         "consistency in curriculum."
     ),
-    template="sectors/content/agriculture_extension_programs.html",
+    template="data/sectors/content/agriculture_extension_programs.html",
     area=areas.AGRICULTURE,
     slug="agriculture-extension-programs",
     slides=[
-        "sectors/content/agriculture_extension_programs/"
+        "data/sectors/content/agriculture_extension_programs/"
         "agricultural_extension_workers.html",
     ],
     download_url="https://cdn2.hubspot.net/hubfs/503070/Agriculture%20Extension%20Programs.pdf",

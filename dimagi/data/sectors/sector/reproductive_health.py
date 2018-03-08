@@ -11,14 +11,14 @@ SECTOR = Sector(
     summary=ugettext_lazy(
         "Increase access to reproductive health care for women using CommCare."
     ),
-    template="sectors/content/reproductive_health.html",
+    template="data/sectors/content/reproductive_health.html",
     area=areas.HEALTH,
     slug="reproductive-health",
     slides=[
-        "sectors/content/reproductive_health/reproductive_health_programs.html",
-        "sectors/content/reproductive_health/health_workers.html",
-        "sectors/content/reproductive_health/health_facilities.html",
-        "sectors/content/reproductive_health/patients.html",
+        "data/sectors/content/reproductive_health/reproductive_health_programs.html",
+        "data/sectors/content/reproductive_health/health_workers.html",
+        "data/sectors/content/reproductive_health/health_facilities.html",
+        "data/sectors/content/reproductive_health/patients.html",
     ],
     download_url="https://cdn2.hubspot.net/hubfs/503070/Reproductive%20Health.pdf",
 )
