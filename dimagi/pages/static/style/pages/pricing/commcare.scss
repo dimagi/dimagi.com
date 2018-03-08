@@ -23,14 +23,6 @@
   }
 }
 
-.features-list li {
-  margin-bottom: $space-base;
-}
-
-.plans-description {
-  height: 150px;
-}
-
 .plan-highlight {
   &:before { // scss-lint:disable PropertyCount
     border: 4px solid $color-turquoise;
@@ -71,4 +63,37 @@
     line-height: 15px;
     padding: 30px 10px;
   }
+}
+.no-touch .plans .flip-card {
+  height: 150px;
+}
+
+$_no-touch-heights: (
+    small: 140px,
+    medium: 160px,
+    large: 240px,
+    extra-large: 180px,
+);
+
+$_touch-front-heights: (
+    small: auto,
+    medium: 100px,
+    large: 155px,
+    extra-large: 150px,
+);
+
+@each $_size, $_width in $widths-by-size {
+  @media (min-width: $_width) {
+    .no-touch .plans .flip-card {
+      height: map-get($_no-touch-heights, $_size);
+    }
+
+    .touch .plans .flip-card .front { // scss-lint:disable SelectorDepth
+      height: map-get($_touch-front-heights, $_size);
+    }
+  }
+}
+
+.features-list li {
+  padding-left: 25px !important; // scss-lint:disable ImportantRule
 }

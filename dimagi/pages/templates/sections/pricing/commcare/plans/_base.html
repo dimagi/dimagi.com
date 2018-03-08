@@ -26,28 +26,31 @@
       </p>
     </div>{# .plans-price-monthly #}
 
-    <p class="body-color
-              plans-description
-              border-top
-              gap-top-small
-              pad-top-line">
-      {% block description %}{% endblock %}
-    </p>
+    <div class="flip-card gap-top-line">
+      <div class="flipper">
+        <div class="front">
+          <p class="body-color align-left">
+            {% block description %}{% endblock %}
+          </p>
+        </div>{# .front #}
+        <div class="back">
+          <p class="body-color
+                    gap-bottom-base
+                    font-weight-bold">
+            {% trans "Core Features" %}
+          </p>
+          <ul class="check-list
+                    {{ theme }}-check
+                    features-list
+                    grid-space-none
+                    align-left">
+            {% block features %}{% endblock %}
+          </ul>
+        </div>{# .back #}
+      </div>{# .flipper #}
+    </div>{# .flip-card #}
 
-    <div class="plans-features">
-      <p class="body-color
-                border-top
-                font-weight-bold
-                pad-top-line">
-        {% trans "Core Features" %}:
-      </p>
-      <ul class="reset features-list">
-        {% block features %}{% endblock %}
-      </ul>
-    </div>
-
-
-    <p class="button-container gap-top-small">
+    <p class="button-container gap-top-none">
       <div class="button button-{{ theme }}">
         {% blocktrans %}
           Sign Up

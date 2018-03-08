@@ -143,6 +143,10 @@ ul.check-list > li::before { // scss-lint:disable PropertyCount
   .#{$_name}-theme ul.check-list > li::before {
     color: $_color;
   }
+
+  ul.check-list.#{$_name}-check > li::before {
+    color: $_color;
+  }
 }
 
 ul.check-list.inline-list > li:nth-last-child(1n+2) {
@@ -157,7 +161,7 @@ ul.check-list.inline-list > li::before {
 
 ul.check-list.inverted > li::before,
 .inverted ul.check-list > li::before {
-    color: $color-white;
+  color: $color-white;
 }
 
 @each $_name, $_content in (
