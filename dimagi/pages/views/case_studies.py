@@ -1,10 +1,11 @@
 import json
+
 from django.http import HttpResponse, Http404
 from django.shortcuts import render
 from django.utils.translation import ugettext
 from django.views.decorators.http import require_http_methods
 
-from dimagi.case_studies.utils import (
+from dimagi.data.case_studies import (
     get_case_study_by_slug,
     get_case_studies_page,
 )
@@ -17,7 +18,7 @@ def view_all(request):
     context = {
         'studies': studies,
     }
-    return render(request, 'case_studies/view_all.html', context)
+    return render(request, 'pages/case_studies/view_all.html', context)
 
 
 @no_index
@@ -28,7 +29,7 @@ def view_single(request, slug):
     context = {
         'study': study,
     }
-    return render(request, 'case_studies/view_single.html', context)
+    return render(request, 'pages/case_studies/view_single.html', context)
 
 
 @no_index

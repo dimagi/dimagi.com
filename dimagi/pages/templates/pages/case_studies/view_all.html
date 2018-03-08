@@ -6,7 +6,7 @@
 
 {% block stylesheets %}
   {% compress css %}
-    <link href="{% sass_src 'style/case_studies/view_all.scss' %}" rel="stylesheet" media="screen" type="text/css" />
+    <link href="{% sass_src 'style/pages/case_studies/view_all.scss' %}" rel="stylesheet" media="screen" type="text/css" />
   {% endcompress %}
 {% endblock %}
 
@@ -36,6 +36,6 @@
 
 {% block content %}
   <section class="case-studies-container">
-    {% include 'case_studies/sections/list.html' %}
+    {% include 'sections/case_studies/list.html' %}
   </section>
 {% endblock %}

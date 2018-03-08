@@ -13,7 +13,7 @@ urlpatterns = [
     url(r'^services/$', pages.services,
         name='services'),
     url(r'^case-studies/',
-        include('dimagi.case_studies.urls')),
+        include('dimagi.pages.urls.case_studies')),
     url(r'^toolkits/',
         include('dimagi.toolkits.urls')),
     url(r'^blog/',

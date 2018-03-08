@@ -1,6 +1,7 @@
 from django.conf.urls import url
 
-from dimagi.case_studies.views import view_all, view_single, download
+from dimagi.pages.views.case_studies import view_all, view_single, download
+
 
 urlpatterns = [
     url(r'^$', view_all,

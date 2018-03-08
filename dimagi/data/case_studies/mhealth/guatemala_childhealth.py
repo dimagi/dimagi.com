@@ -1,6 +1,6 @@
 from __future__ import absolute_import
 from django.utils.translation import ugettext_lazy
-from dimagi.case_studies.models import CaseStudy
+from dimagi.pages.models.case_studies import CaseStudy
 
 
 STUDY = CaseStudy(

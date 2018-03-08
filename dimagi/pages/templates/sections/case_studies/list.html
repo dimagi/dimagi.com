@@ -14,7 +14,7 @@
     <div class="grid-4-at-large grid-3-at-medium grid-2-at-small grid-row-space-small">
       {% for study in studies %}
         <div class="column">
-          {% include "case_studies/partials/brief.html" with study=study %}
+          {% include "partials/study_brief.html" with study=study %}
         </div>
       {% endfor %}
     </div>{# .grid-4-at-medium #}

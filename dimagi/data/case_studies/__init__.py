@@ -1,4 +1,4 @@
-from dimagi.case_studies.data.mhealth import studies
+from dimagi.data.case_studies.mhealth import studies
 
 
 def get_case_study_by_slug(slug):

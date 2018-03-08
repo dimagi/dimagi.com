@@ -6,7 +6,7 @@
 
 {% block stylesheets %}
   {% compress css %}
-    <link href="{% sass_src 'style/case_studies/view_single.scss' %}" rel="stylesheet" media="screen" type="text/css" />
+    <link href="{% sass_src 'style/pages/case_studies/view_single.scss' %}" rel="stylesheet" media="screen" type="text/css" />
   {% endcompress %}
 {% endblock %}
 
@@ -18,8 +18,8 @@
 
 {% block content %}
   <section class="case-study-container orange-theme">
-    {% include 'case_studies/sections/sub_nav.html' %}
-    {% include 'case_studies/sections/summary.html' %}
+    {% include 'sections/case_studies/sub_nav.html' %}
+    {% include 'sections/case_studies/summary.html' %}
 
     <section class="border-vert accent-gray-bg download"
              id="download">
