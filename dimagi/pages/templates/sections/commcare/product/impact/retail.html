@@ -1,0 +1,24 @@
+{% extends "sections/commcare/product/impact/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block icon %}
+  {% include "svg/commcare/icon/retail.html" %}
+{% endblock %}
+
+{% block header %}{% blocktrans %}
+  Retail distribution
+{% endblocktrans %}{% endblock %}
+
+{% block content %}{% blocktrans %}
+  La Laiterie du Berger uses CommCare to track the
+  distribution of milk across retail locations in Senegal.
+{% endblocktrans %}{% endblock %}
+
+{% block cta_link %}
+  https://www.youtube.com/watch?v=O1UAzQ9G3uo&list=PLVmwIEfrcKqnGhas9Vy4CmPEvG9xVvQdr&index=9
+{% endblock %}
+
+{% block cta_text %}{% blocktrans %}
+ Watch Video
+{% endblocktrans %}{% endblock %}

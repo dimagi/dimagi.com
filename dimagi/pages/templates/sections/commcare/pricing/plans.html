@@ -1,0 +1,22 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="plans accent-gray-bg border-vert"
+         id="plans">
+  <div class="content pad-vert-medium align-center">
+
+    <div class="grid-2-at-medium grid-4-at-large grid-row-equal-heights gap-bottom-small gap-top-medium">
+      {% include "sections/commcare/pricing/plans/standard.html" with theme="green" css_id="plans-standard" %}
+      {% include "sections/commcare/pricing/plans/pro.html" with theme="turquoise" highlight=True css_id="plans-pro" %}
+      {% include "sections/commcare/pricing/plans/advanced.html" with theme="purple" css_id="plans-advanced" %}
+      {% include "sections/commcare/pricing/plans/enterprise.html" with theme="blue" css_id="plans-enterprise" %}
+    </div>{# .grid-2-at-medium #}
+
+    <p>
+      {% blocktrans %}
+        Just looking to test CommCare? Check out our free <strong>Community</strong> plan.
+      {% endblocktrans %}
+    </p>
+
+  </div>{# .content #}
+</section>

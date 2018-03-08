@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block body_class %}products-commcare-page tucked-hero{% endblock %}
+
+{% block stylesheets %}
+  {% compress css %}
+    <link href="{% sass_src 'style/pages/commcare/product.scss' %}" rel="stylesheet" media="screen" type="text/css" />
+  {% endcompress %}
+{% endblock %}
+
+{% block hero %}
+  <div id="top"></div>
+  <section class="hero hero-products-commcare" id="hero">
+    <div class="content offset-top-extra-large align-left-at-medium align-center">
+      <h2>
+        {% include "svg/commcare/logo.html" %}
+      </h2>
+      <h1>
+        {% blocktrans %}
+          The world's most powerful mobile data collection platform.
+        {% endblocktrans %}
+      </h1>
+      <a class="button alt inverted"
+         href="{{ URL_TRIAL }}">
+        {% blocktrans %}
+          Start Free Trial
+        {% endblocktrans %}
+      </a>
+      <p class="cta">
+        {% trans 'Watch the video' as video_text %}
+        {% include "partials/wistia_popover.html" with wistia_id='9uvnpbecdy' show_play=True text=video_text %}
+      </p>
+    </div> {# .content #}
+  </section>
+{% endblock %}
+
+{% block content %}
+  <section class="products-commcare-container">
+    {% include "sections/commcare/product/sub_nav.html" %}
+    {% include "sections/commcare/product/brief_overview.html" %}
+    {% include "sections/commcare/product/overview.html" %}
+    {% include "sections/commcare/product/features.html" %}
+    {% include "sections/commcare/product/usage.html" %}
+    {% include "sections/commcare/product/impact.html" %}
+    {% include "sections/commcare/product/testimonials.html" %}
+    {% include "sections/commcare/product/pricing.html" %}
+    {% include "sections/commcare/product/trial.html" %}
+  </section>
+{% endblock %}

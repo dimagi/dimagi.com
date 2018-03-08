@@ -1,0 +1,24 @@
+{% extends "sections/commcare/product/pricing/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block name %}{% blocktrans %}
+  Enterprise
+{% endblocktrans %}{% endblock %}
+
+{% block price %}{% blocktrans %}
+  Contact Us
+{% endblocktrans %}{% endblock %}
+
+{% block description %}{% blocktrans %}
+  A tailor-made plan for organizations with multiple projects.
+  All paid features included in this plan.
+{% endblocktrans %}{% endblock %}
+
+{% block link %}
+  {% url 'commcare_pricing' %}#plans-enterprise
+{% endblock %}
+
+{% block button_text %}{% blocktrans %}
+  Learn More
+{% endblocktrans %}{% endblock %}

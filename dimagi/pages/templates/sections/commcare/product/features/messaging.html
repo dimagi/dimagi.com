@@ -1,0 +1,16 @@
+{% extends "sections/commcare/product/features/_base.html" %}
+{% load i18n %}
+
+{% block icon %}
+  {% include "svg/commcare/icon/messaging.html" %}
+{% endblock %}
+
+{% block header %}{% blocktrans %}
+  Two-way SMS messaging
+{% endblocktrans %}{% endblock %}
+
+{% block content %}{% blocktrans %}
+  Send and receive messages to your intended audience.
+{% endblocktrans %}{% endblock %}
+
+{% block class_column %}gap-bottom-small-at-medium gap-bottom-none{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "sections/commcare/product/features/_base.html" %}
+{% load i18n %}
+
+{% block icon %}
+  {% include "svg/commcare/icon/user_roles.html" %}
+{% endblock %}
+
+{% block header %}{% blocktrans %}
+  Role-based account access.
+{% endblocktrans %}{% endblock %}
+
+{% block content %}{% blocktrans %}
+  Grant various access levels to your data.
+{% endblocktrans %}{% endblock %}
+

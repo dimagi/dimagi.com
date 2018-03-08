@@ -1,0 +1,55 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="features border-top blue-theme" id="features">
+  <div class="content pad-top-medium pad-bottom-medium-at-medium">
+
+    <div class="intro">
+      <h3 class="blue">
+        {% blocktrans %}
+          Features
+        {% endblocktrans %}
+      </h3>
+    </div>{# .intro #}
+
+    <div class="grid-2-at-medium grid-reverse">
+
+      <div class="copy">
+        <div class="grid-1 grid-row-space-line">
+
+          <div class="column">
+            <h3>
+              {% blocktrans %}
+                A powerful mobile data collection platform to fit all your needs.
+              {% endblocktrans %}
+            </h3>
+            <p>
+              {% blocktrans %}
+                Our robust set of features allow you to build sophisticated
+                mobile data collection apps that will fit your needs today
+                &mdash; and for many years to come.
+              {% endblocktrans %}
+            </p>
+          </div>{# .column #}
+
+          {% include 'sections/commcare/product/features/multimedia.html' %}
+          {% include 'sections/commcare/product/features/data_storage.html' %}
+          {% include 'sections/commcare/product/features/accounts.html' %}
+          {% include 'sections/commcare/product/features/languages.html' %}
+          {% include 'sections/commcare/product/features/messaging.html' %}
+
+          <div class="column cta">
+            <p>
+              <a class="arrow" href="{% url 'commcare_pricing' %}#details">
+                {% blocktrans %}
+                  View all CommCare features
+                {% endblocktrans %}
+              </a>
+            </p>
+          </div>{# .column #}
+        </div>{# .grid-flex #}
+      </div>{# .copy #}
+    </div>{# .grid-2-at-medium #}
+  </div>{# .content #}
+ <div class="image off-grid"></div>{# .features .image {} => commcare/product.scss #}
+</section>

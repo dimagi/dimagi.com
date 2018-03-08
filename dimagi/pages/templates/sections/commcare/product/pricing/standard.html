@@ -1,0 +1,24 @@
+{% extends "sections/commcare/product/pricing/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block name %}{% blocktrans %}
+  Standard
+{% endblocktrans %}{% endblock %}
+
+{% block price %}{% blocktrans %}
+  $100 per month
+{% endblocktrans %}{% endblock %}
+
+{% block description %}{% blocktrans %}
+  Perfect to prove the value of CommCare in the pilot phase.
+  Gain access to case imports, API access, and better support.
+{% endblocktrans %}{% endblock %}
+
+{% block link %}
+  {% url 'commcare_pricing' %}#plans-standard
+{% endblock %}
+
+{% block button_text %}{% blocktrans %}
+  Learn More
+{% endblocktrans %}{% endblock %}

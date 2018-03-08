@@ -5,22 +5,16 @@ from dimagi.utils.partners import get_logos
 
 
 @no_index
-def home(request):
+def product(request):
     context = {
         'partners': get_logos(),
     }
-    return render(request, 'pages/home.html', context)
+    return render(request, 'pages/commcare/product.html', context)
 
 
 @no_index
-def services(request):
+def pricing(request):
     context = {
         'partners': get_logos(),
     }
-    return render(request, 'pages/services.html', context)
-
-
-@no_index
-def contact(request):
-    return render(request, 'pages/contact.html')
-
+    return render(request, 'pages/commcare/pricing.html', context)

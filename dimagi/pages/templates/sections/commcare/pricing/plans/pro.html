@@ -1,0 +1,49 @@
+{% extends "sections/commcare/pricing/plans/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block link %}
+  #todo
+{% endblock %}
+
+{% block name %}{% blocktrans %}
+  Pro
+{% endblocktrans %}{% endblock %}
+
+{% block price_monthly %}{% blocktrans %}
+  $500
+{% endblocktrans %}{% endblock %}
+
+{% block description %}{% blocktrans %}
+  Ideal for projects that need a complete mobile solution
+  with data management tools, and access to priority
+  email support.
+{% endblocktrans %}{% endblock %}
+
+{% block features %}
+  <li>
+    {% blocktrans %}
+      All Standard features
+    {% endblocktrans %}
+  </li>
+  <li>
+    {% blocktrans %}
+      Guaranteed email support within one business day
+    {% endblocktrans %}
+  </li>
+  <li>
+    {% blocktrans %}
+      Web-based applications
+    {% endblocktrans %}
+  </li>
+  <li>
+    {% blocktrans %}
+      Data management tools
+    {% endblocktrans %}
+  </li>
+  <li>
+    {% blocktrans %}
+      Two-way SMS
+    {% endblocktrans %}
+  </li>
+{% endblock %}

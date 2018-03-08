@@ -1,0 +1,24 @@
+{% extends "sections/commcare/product/pricing/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block name %}{% blocktrans %}
+  Advanced
+{% endblocktrans %}{% endblock %}
+
+{% block price %}{% blocktrans %}
+  $1000 per month
+{% endblocktrans %}{% endblock %}
+
+{% block description %}{% blocktrans %}
+  Geared toward projects at scale that require advanced levels of data
+  security and support.
+{% endblocktrans %}{% endblock %}
+
+{% block link %}
+  {% url 'commcare_pricing' %}#plans-advanced
+{% endblock %}
+
+{% block button_text %}{% blocktrans %}
+  Learn More
+{% endblocktrans %}{% endblock %}

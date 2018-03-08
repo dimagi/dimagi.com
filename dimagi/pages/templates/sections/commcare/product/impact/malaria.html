@@ -1,0 +1,25 @@
+{% extends "sections/commcare/product/impact/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block icon %}
+  {% include "svg/commcare/icon/malaria.html" %}
+{% endblock %}
+
+{% block header %}{% blocktrans %}
+  Malaria prevention
+{% endblocktrans %}{% endblock %}
+
+{% block content %}{% blocktrans %}
+  The PMI Africa Indoor Residual Spraying Project uses CommCare
+  to track progress on their campaign, which has helped protect
+  over 58 million people in Africa from malaria.
+{% endblocktrans %}{% endblock %}
+
+{% block cta_link %}
+  http://www.africairs.net/
+{% endblock %}
+
+{% block cta_text %}{% blocktrans %}
+ Learn More
+{% endblocktrans %}{% endblock %}

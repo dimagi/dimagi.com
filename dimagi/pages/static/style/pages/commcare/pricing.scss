@@ -1,0 +1,99 @@
+@import 'app/mixins/background';
+@import 'app/variables/colors';
+@import 'app/variables/sizes';
+@import 'app/variables/type';
+
+
+.pricing-commcare-page {
+  $_base-height: 500px;
+  $_height-by-size: (
+    small: 500px,
+    medium: 500px,
+    large: 500px,
+    extra-large: 500px,
+  );
+  @include make-bg(hero, '../../../pages/commcare/product/hero', $_base-height, $_height-by-size);
+}
+
+@media (min-width: $width-desktop) {
+  .pricing-commcare-page .hero h1 {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 55%;
+  }
+}
+
+.plan-highlight {
+  &:before { // scss-lint:disable PropertyCount
+    border: 4px solid $color-turquoise;
+  }
+  &:hover {
+    &:before {
+      border-width: 2px;
+    }
+  }
+}
+
+.show-time .plan-highlight:before {
+  transition: all .5s;
+}
+
+.plans-popular {
+  display: none;
+}
+
+.plan-highlight .plans-popular { // scss-lint:disable PropertyCount
+  background-color: $color-turquoise;
+  border-radius: 50px;
+  color: $color-white;
+  display: block;
+  font-size: 11px;
+  font-weight: $font-weight-bold;
+  height: 100px;
+  left: -10px;
+  position: absolute;
+  text-align: center;
+  text-transform: uppercase;
+  top: -50px;
+  width: 100px;
+  z-index: 200;
+
+  span {
+    display: block;
+    line-height: 15px;
+    padding: 30px 10px;
+  }
+}
+.no-touch .plans .flip-card {
+  height: 150px;
+}
+
+$_no-touch-heights: (
+    small: 140px,
+    medium: 160px,
+    large: 240px,
+    extra-large: 180px,
+);
+
+$_touch-front-heights: (
+    small: auto,
+    medium: 100px,
+    large: 155px,
+    extra-large: 150px,
+);
+
+@each $_size, $_width in $widths-by-size {
+  @media (min-width: $_width) {
+    .no-touch .plans .flip-card {
+      height: map-get($_no-touch-heights, $_size);
+    }
+
+    .touch .plans .flip-card .front { // scss-lint:disable SelectorDepth
+      height: map-get($_touch-front-heights, $_size);
+    }
+  }
+}
+
+.features-list li {
+  padding-left: 25px !important; // scss-lint:disable ImportantRule
+}

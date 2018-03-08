@@ -1,0 +1,22 @@
+{% extends "sections/commcare/product/brief_overview/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block icon %}
+  {% include "svg/commcare/icon/no_wifi.html" %}
+{% endblock %}
+
+{% block header %}
+  {% blocktrans %}
+    Work offline
+  {% endblocktrans %}
+{% endblock %}
+
+{% block content %}
+  {% blocktrans %}
+    No signal, no problem. CommCare works
+    offline, allowing your field team to collect data wherever,
+    without interruption.
+  {% endblocktrans %}
+{% endblock %}
+

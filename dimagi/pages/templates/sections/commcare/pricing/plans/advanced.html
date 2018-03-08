@@ -1,0 +1,48 @@
+{% extends "sections/commcare/pricing/plans/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block link %}
+  #todo
+{% endblock %}
+
+{% block name %}{% blocktrans %}
+  Advanced
+{% endblocktrans %}{% endblock %}
+
+{% block price_monthly %}{% blocktrans %}
+  $1000
+{% endblocktrans %}{% endblock %}
+
+{% block description %}{% blocktrans %}
+  Geared toward projects at scale that require advanced levels of data
+  security and support.
+{% endblocktrans %}{% endblock %}
+
+{% block features %}
+  <li>
+    {% blocktrans %}
+      All Pro features
+    {% endblocktrans %}
+  </li>
+  <li>
+    {% blocktrans %}
+      Phone support
+    {% endblocktrans %}
+  </li>
+  <li>
+    {% blocktrans %}
+      Custom branding
+    {% endblocktrans %}
+  </li>
+  <li>
+    {% blocktrans %}
+      HIPAA compliance assurance
+    {% endblocktrans %}
+  </li>
+  <li>
+    {% blocktrans %}
+      External app integration framework
+    {% endblocktrans %}
+  </li>
+{% endblock %}
