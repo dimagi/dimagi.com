@@ -23,7 +23,7 @@ urlpatterns = [
     url(r'^about/',
         include('dimagi.pages.urls.about')),
     url(r'^careers/',
-        include('dimagi.careers.urls')),
+        include('dimagi.pages.urls.careers')),
     url(r'^press/',
         include('dimagi.press.urls')),
     url(r'^contact/$', pages.contact,

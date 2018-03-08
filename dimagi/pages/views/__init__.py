@@ -6,4 +6,7 @@ from dimagi.pages.views.core import (
     contact,
 )
 
-from dimagi.pages.views import about
+from dimagi.pages.views import (
+    about,
+    careers,
+)

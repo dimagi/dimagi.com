@@ -1,0 +1,150 @@
+@import 'app/mixins/background';
+@import 'app/variables/colors';
+@import 'app/variables/sizes';
+@import 'app/variables/type';
+
+.careers-page {
+  $_base-height: 500px;
+  $_height-by-size: (
+    small: 500px,
+    medium: 500px,
+    large: 500px,
+    extra-large: 500px,
+  );
+  @include make-bg(hero, '../../pages/careers/hero', $_base-height, $_height-by-size);
+}
+
+@media (min-width: $width-desktop) {
+  .careers-page .hero h1 {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 55%;
+  }
+}
+
+.office-country-icon svg {
+  height: 80px;
+  width: 80px;
+}
+
+.office-country-icon svg * {
+  stroke-width: 3;
+}
+
+.overview .image.teampic1 {
+  @include background-cover('../../pages/careers/teampic1.jpg');
+}
+
+.overview .image.teampic2 {
+  @include background-cover('../../pages/careers/teampic2.jpg');
+}
+
+.overview .image.teampic3 {
+  @include background-cover('../../pages/careers/teampic3.jpg');
+}
+
+.overview .image.teampic4 {
+  @include background-cover('../../pages/careers/teampic4.jpg');
+}
+
+.awards .image.company-culture {
+  @include background-cover('../../pages/careers/entrepreneur.jpg');
+}
+
+.awards .image.best-workplaces {
+  @include background-cover('../../pages/careers/bestwork.png');
+}
+
+.awards .image.b-corporation {
+  @include background-cover('../../pages/careers/bcorp.png');
+}
+
+.awards .image.top-5000 {
+  @include background-cover('../../pages/careers/inc5000.png');
+}
+
+.post-thumbnail {
+
+  &:after {
+    background-color: $color-orange;
+    content: ' ';
+    display: block;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    transition: opacity .5s;
+    width: 100%;
+  }
+}
+
+a.post {
+  color: $color-text !important; // scss-lint:disable ImportantRule
+  font-weight: $font-weight-regular;
+
+  &:hover {
+    .post-thumbnail:after {
+      opacity: .5;
+    }
+  }
+}
+
+.life .image.tedx-talk {
+  @include background-cover('../../pages/careers/technology.jpg');
+}
+
+.life .image.away-month {
+  @include background-cover('../../pages/careers/awaymonth.jpg');
+}
+
+.life .image.core-values {
+  @include background-cover('../../pages/careers/corevalues.jpg');
+}
+
+.life .image.global-services {
+  @include background-cover('../../pages/careers/globalservices.jpg');
+}
+
+.application-content ul > li::before { // scss-lint:disable PropertyCount
+  border-bottom-width: 2px;
+  border-left-width: 2px;
+  border-right-width: 0;
+  border-style: solid;
+  border-top-width: 0;
+  color: $color-orange;
+  content: ' ';
+  height: .5em;
+  top: $list-check-margin;
+  transform: rotate(-45deg);
+  width: $list-check-width;
+}
+
+.application-content em {
+  font-style: normal;
+}
+
+.positions-container {
+  background: $color-white;
+  border: 1px solid rgba(0, 0, 0, .12);
+  display: block;
+  padding: $space-small;
+  position: relative;
+}
+
+.positions-select-container {
+  padding: $space-small;
+}
+
+.application-content h3 {
+  font-size: $font-size-medium;
+  line-height: 18px;
+  margin-bottom: 10px;
+}
+
+.application-content h2 {
+  font-size: $font-size-large;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+

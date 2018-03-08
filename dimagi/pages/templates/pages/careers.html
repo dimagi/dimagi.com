@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block body_class %}careers-page tucked-hero{% endblock %}
+
+{% block stylesheets %}
+  {% compress css %}
+    <link href="{% sass_src 'style/pages/careers.scss' %}" rel="stylesheet" media="screen" type="text/css" />
+  {% endcompress %}
+{% endblock %}
+
+{% block js %}
+    {% compress js %}
+    <script src="{% static 'js/careers.js' %}"></script>
+    {% endcompress %}
+{% endblock %}
+
+{% block meta %}
+    <meta property="dimagi:careersView" content="list">
+    <meta property="dimagi:jobUrl" content="{% url 'careers_job' '12345678' %}">
+{% endblock %}
+
+{% block hero %}
+  <div id="top"></div>
+  <section class="hero hero-careers"
+           id="hero">
+    <div class="content align-left-at-medium align-center">
+      <h2 class="gap-vert-line">
+        {% blocktrans %}
+          Work at Dimagi
+        {% endblocktrans %}
+      </h2>
+      <h1>
+        {% blocktrans %}
+           Dimagi Careers
+        {% endblocktrans %}
+      </h1>
+      <a class="button alt inverted"
+         href="#open-positions">
+        {% blocktrans %}
+          View Open Positions
+        {% endblocktrans %}
+      </a>
+    </div> {# .content #}
+  </section>
+{% endblock %}
+
+{% block content %}
+  <section class="careers-container orange-theme">
+    {% include "sections/careers/sub_nav.html" %}
+    {% include "sections/careers/overview.html" %}
+    {% include "sections/careers/benefits.html" %}
+    {% include "sections/careers/awards.html" %}
+    {% include "sections/careers/life.html" %}
+    {% include "sections/contact/offices.html" %}
+    {% include "sections/careers/open_positions.html" %}
+  </section>
+{% endblock %}
