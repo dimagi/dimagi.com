@@ -6,7 +6,7 @@
 
 {% block stylesheets %}
   {% compress css %}
-    <link href="{% sass_src 'style/toolkits/toolkits.scss' %}" rel="stylesheet" media="screen" type="text/css" />
+    <link href="{% sass_src 'style/pages/toolkits.scss' %}" rel="stylesheet" media="screen" type="text/css" />
   {% endcompress %}
 {% endblock %}
 
@@ -39,6 +39,6 @@
 
 {% block content %}
   <section class="toolkits-container orange-theme">
-    {% include 'toolkits/sections/list.html' %}
+    {% include 'sections/toolkits/list.html' %}
   </section>
 {% endblock %}

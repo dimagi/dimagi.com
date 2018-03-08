@@ -15,7 +15,7 @@ urlpatterns = [
     url(r'^case-studies/',
         include('dimagi.pages.urls.case_studies')),
     url(r'^toolkits/',
-        include('dimagi.toolkits.urls')),
+        include('dimagi.pages.urls.toolkits')),
     url(r'^blog/',
         include('dimagi.pages.urls.blog')),
     url(r'^sectors/',

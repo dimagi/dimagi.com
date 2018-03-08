@@ -1,6 +1,7 @@
 from django.conf.urls import url
 
-from dimagi.toolkits.views import view_all, view_single
+from dimagi.pages.views.toolkits import view_all, view_single
+
 
 urlpatterns = [
     url(r'^$', view_all,

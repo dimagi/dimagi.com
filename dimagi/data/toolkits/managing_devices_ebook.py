@@ -1,6 +1,6 @@
 from __future__ import absolute_import
 from django.utils.translation import ugettext_lazy
-from dimagi.toolkits.models import Toolkit
+from dimagi.pages.models.toolkits import Toolkit
 
 
 TOOLKIT = Toolkit(

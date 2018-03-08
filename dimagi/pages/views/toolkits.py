@@ -1,7 +1,7 @@
 from django.http import Http404
 from django.shortcuts import render
 
-from dimagi.toolkits.utils import (
+from dimagi.data.toolkits import (
     get_tookits_page,
     get_toolkit_by_slug,
 )
@@ -14,7 +14,7 @@ def view_all(request):
     context = {
         'toolkits': toolkits,
     }
-    return render(request, 'toolkits/view_all.html', context)
+    return render(request, 'pages/toolkits/view_all.html', context)
 
 
 @no_index
@@ -25,4 +25,4 @@ def view_single(request, slug):
     context = {
         'toolkit': toolkit,
     }
-    return render(request, 'toolkits/view_single.html', context)
+    return render(request, 'pages/toolkits/view_single.html', context)

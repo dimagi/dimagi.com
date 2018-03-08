@@ -12,7 +12,7 @@
     extra-large: 500px,
   );
 
-  @include make-bg(hero, '../../toolkits/hero', $_base-height, $_height-by-size);
+  @include make-bg(hero, '../../pages/toolkits/hero', $_base-height, $_height-by-size);
 }
 
 
