@@ -12,7 +12,7 @@
     large: 500px,
     extra-large: 500px,
   );
-  @include make-bg(hero, '../../../pages/commcare/product/hero', $_base-height, $_height-by-size);
+  @include make-bg(hero, '../../../pages/commcare/pricing/hero', $_base-height, $_height-by-size);
 }
 
 @media (min-width: $width-desktop) {
@@ -96,4 +96,110 @@ $_touch-front-heights: (
 
 .features-list li {
   padding-left: 25px !important; // scss-lint:disable ImportantRule
+}
+
+.accordion-content .feature-row {
+  border-bottom: 1px solid $color-border;
+  padding: $space-small $space-small $space-small + 20px;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.feature-row {
+  cursor: pointer;
+  transition: background-color .5s ease-in-out;
+
+  &:hover {
+    background-color: $color-accent-gray;
+  }
+
+  .feature-standard,
+  .feature-advanced,
+  .feature-pro,
+  .feature-enterprise {
+    font-size: $font-size-small;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  @media (max-width: $width-desktop - 1px) {
+    h5 {
+      font-size: 12px;
+      line-height: 14px;
+    }
+  }
+}
+
+.feature-group-description {
+  background-color: $color-text;
+  border-bottom: 1px solid $color-border;
+  color: $color-white;
+  padding: $space-base $space-small;
+
+  a {
+    color: $color-blue-light;
+
+    &:hover {
+      color: $color-white;
+    }
+  }
+
+  p {
+    margin-bottom: 0;
+
+    @media (max-width: $width-desktop - 1px) {
+      text-align: center;
+    }
+  }
+}
+
+.feature-legend {
+  background-color: $color-accent-gray;
+  border: 1px solid $color-border;
+  font-size: $font-size-small;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: $space-base $space-small $space-small;
+  text-transform: uppercase;
+}
+
+.feature-key {
+  display: inline-block;
+  margin-left: $space-small;
+
+  svg {
+    margin-right: $space-base;
+  }
+}
+
+.plan-row {
+  padding: $space-line $space-small;
+
+  h3 {
+    font-size: $font-size-extra-large;
+    font-weight: 600;
+    letter-spacing: 1px;
+    line-height: 20px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+
+  .plan-column {
+    text-align: center;
+  }
+
+  @media (max-width: $width-desktop - 1px) {
+    h3,
+    p {
+      font-size: 10px;
+      line-height: 12px;
+    }
+
+    .plan-column {
+      height: 55px;
+    }
+  }
 }

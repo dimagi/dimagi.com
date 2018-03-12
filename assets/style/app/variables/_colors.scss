@@ -55,14 +55,15 @@ $color-accent-gray: #fafafa;
 $color-tap-highlight: rgba(255, 255, 255, 0);
 
 $colors-by-theme: (
-  blue: $color-blue,
   blue-dark: $color-blue-dark,
+  blue: $color-blue,
   green: $color-green,
   turquoise: $color-turquoise,
   purple: $color-purple,
   neutral: $color-neutral,
   accent-gray: $color-accent-gray,
   orange: $color-orange,
+  slate: $color-text,
 );
 
 $default-theme: blue;

@@ -1,7 +1,7 @@
 {% load i18n %}
 
 <div class="column" id="{{ css_id }}">
-  <a class="tile {{ theme }}-border plans-tile{% if highlight %} plan-highlight{% endif %}"
+  <a class="tile {{ theme }}-border plans-tile{% if highlight %} plan-highlight{% endif %} {{ theme }}-theme"
      href="{% block link %}{% endblock %}">
 
     <div class="pad-top-small pad-bottom-line">
@@ -17,7 +17,7 @@
                 gap-bottom-none">
         {% block price_monthly %}{% endblock %}
       </p>
-      <p>
+      <p class="body-color">
         {% block text_monthly %}
           {% blocktrans %}
             monthly
@@ -43,6 +43,7 @@
                     {{ theme }}-check
                     features-list
                     grid-space-none
+                    body-color
                     align-left">
             {% block features %}{% endblock %}
           </ul>
@@ -53,7 +54,7 @@
     <p class="button-container gap-top-none">
       <div class="button button-{{ theme }}">
         {% blocktrans %}
-          Sign Up
+          Start Trial
         {% endblocktrans %}
       </div>{# .button #}
     </p>

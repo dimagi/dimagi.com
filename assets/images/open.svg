@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" width="25" height="25"
+	 class="accordion-icon"
+	 fill="none"
+	 stroke="#002c5f" stroke-linejoin="round" stroke-linecap="round" stroke-width="2" stroke-miterlimit="10">
+	<circle cx="12.5" cy="12.5" r="11"></circle>
+	<line x1="12.5" y1="7.5" x2="12.5" y2="17.5"></line>
+	<line x1="17.5" y1="12.5" x2="7.5" y2="12.5"></line>
+</svg>

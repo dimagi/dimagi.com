@@ -51,6 +51,16 @@ def JSON(obj):
     except TypeError as e:
         raise e
 
+
+@register.filter
+def CHECK(val):
+    if val is True:
+        return mark_safe(render_to_string("svg/included.html"))
+    if val is False:
+        return mark_safe(render_to_string("svg/not_included.html"))
+    return val
+
+
 @register.filter
 def META_STR(str):
     return str.replace('"', '\"')

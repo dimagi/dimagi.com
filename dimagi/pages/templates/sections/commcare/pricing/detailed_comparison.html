@@ -1,18 +1,46 @@
 {% load i18n %}
 {% load dimagidotcom %}
 
-<section class="details align-center"
+<section class="details"
          id="details">
   <div class="content pad-vert-medium">
     <div class="intro">
-      <h2>
+      <h2 class="blue-dark">
         {% blocktrans %}
           Detailed Comparison
         {% endblocktrans %}
       </h2>
-      <p class="content-width-small">
-        #todo
-      </p>
+    </div>{# .intro #}
+
+    <p class="align-center hide-at-large pad-bottom-line-at-small offset-top-base">
+      <a href="#todo"
+         class="button button-slate">
+        {% blocktrans %}
+          Download Full<br class="hide-at-small" />
+          Comparison Chart
+        {% endblocktrans %}
+      </a>
+    </p>
+
+    <div class="hide-until-small">
+      {% include "sections/commcare/pricing/detailed_comparison/legend.html" %}
+      {% include "sections/commcare/pricing/detailed_comparison/header.html" %}
+      {% include "sections/commcare/pricing/detailed_comparison/accordion.html" %}
     </div>
+
+    <p class="align-center pad-top-small-at-small">
+      {% blocktrans %}
+        Need help building your CommCare mobile application?<br class="hide-until-small" />
+        Let our experienced Global Services team help you!
+      {% endblocktrans %}
+    </p>
+    <p class="align-center">
+      <a class="arrow"
+         href="{% url 'services' %}">
+        {% blocktrans %}
+          Learn more about our Global Services
+        {% endblocktrans %}
+      </a>
+    </p>
   </div>{# .content #}
 </section>

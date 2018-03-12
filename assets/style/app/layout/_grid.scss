@@ -71,6 +71,13 @@
     .grid-#{$_num}#{$_suffix} > * {
       width: 100% / $_num;
     }
+
+    $_cols: $_num - 1;
+    @for $_col-width from 2 through $_cols {
+      .grid-#{$_num}#{$_suffix} > .column-width-#{$_col-width}#{$_suffix} {
+        width: 100% / $_num * $_col-width;
+      }
+    }
   }
 
   @each $_type, $_space in $space-by-type {

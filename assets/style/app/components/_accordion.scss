@@ -1,0 +1,64 @@
+@import 'app/variables/colors';
+@import 'app/variables/sizes';
+@import 'app/variables/type';
+
+.accordion-header {
+  border: 1px solid $color-border;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $color-accent-gray;
+  }
+
+  > * {
+    vertical-align: middle;
+
+    &:before { // scss-lint:disable NestingDepth
+      content: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2025%2025%22%20width%3D%2225%22%20height%3D%2225%22%20class%3D%22accordion-icon%22%20fill%3D%22none%22%20stroke%3D%22%23002c5f%22%20stroke-linejoin%3D%22round%22%20stroke-linecap%3D%22round%22%20stroke-width%3D%222%22%20stroke-miterlimit%3D%2210%22%3E%3Ccircle%20cx%3D%2212.5%22%20cy%3D%2212.5%22%20r%3D%2211%22%3E%3C%2Fcircle%3E%3Cline%20x1%3D%2217.5%22%20y1%3D%2212.5%22%20x2%3D%227.5%22%20y2%3D%2212.5%22%3E%3C%2Fline%3E%3C%2Fsvg%3E');
+      display: block;
+      float: left;
+      height: 25px;
+      margin-top: -3px;
+      width: 25px + $space-base;
+    }
+  }
+}
+
+.accordion-content {
+  border: 1px solid $color-border;
+  border-top: none;
+}
+
+@each $_name, $_color in $colors-by-theme {
+  .#{$_name}-theme .accordion-icon {
+    stroke: $_color;
+  }
+}
+
+.accordion {
+  text-align: left;
+  width: 100%;
+
+  &.collapsed {
+    .accordion-header > *:before {
+      content: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2025%2025%22%20width%3D%2225%22%20height%3D%2225%22%20class%3D%22accordion-icon%22%20fill%3D%22none%22%20stroke%3D%22%23002c5f%22%20stroke-linejoin%3D%22round%22%20stroke-linecap%3D%22round%22%20stroke-width%3D%222%22%20stroke-miterlimit%3D%2210%22%3E%3Ccircle%20cx%3D%2212.5%22%20cy%3D%2212.5%22%20r%3D%2211%22%3E%3C%2Fcircle%3E%3Cline%20x1%3D%2212.5%22%20y1%3D%227.5%22%20x2%3D%2212.5%22%20y2%3D%2217.5%22%3E%3C%2Fline%3E%3Cline%20x1%3D%2217.5%22%20y1%3D%2212.5%22%20x2%3D%227.5%22%20y2%3D%2212.5%22%3E%3C%2Fline%3E%3C%2Fsvg%3E');
+    }
+
+    .accordion-content {
+      border-bottom: none;
+    }
+  }
+}
+
+.show-time .accordion-header {
+  transition: background-color .5s ease-in-out;
+}
+
+.accordion-group {
+  border-top: 1px solid $color-border;
+
+  .accordion-header {
+    border-top: none;
+  }
+}
+

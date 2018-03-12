@@ -37,7 +37,7 @@
 {% endblock %}
 
 {% block content %}
-  <section class="pricing-commcare-container blue-theme">
+  <section class="pricing-commcare-container blue-dark-theme">
     {% include "sections/commcare/pricing/sub_nav.html" %}
     {% include "sections/commcare/pricing/brief_overview.html" %}
     {% include "sections/commcare/pricing/plans.html" %}
@@ -45,4 +45,8 @@
     {% include "sections/commcare/pricing/faq.html" %}
     {% include "sections/commcare/pricing/experience.html" %}
   </section>
+{% endblock %}
+
+{% block modals %}
+    {% include "sections/commcare/pricing/detailed_comparison/modal.html" %}
 {% endblock %}

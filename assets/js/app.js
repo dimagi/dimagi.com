@@ -12,6 +12,7 @@ require([
   'app/imageLoader',
   'app/partners',
   'app/analytix',
+  'app/accordion',
   'modernizr',
 ], function (
     $,
@@ -26,7 +27,8 @@ require([
     Carousel,
     ImageLoader,
     Partners,
-    Analytix
+    Analytix,
+    Accordion
 ) {
   $(function () {
     _.each([
@@ -41,6 +43,7 @@ require([
       ImageLoader,
       Partners,
       Analytix,
+      Accordion,
     ], function (m) {
       m.initialize();
     });
