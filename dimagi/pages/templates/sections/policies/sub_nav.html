@@ -1,0 +1,37 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="sub-nav"
+         id="sub-nav">
+  <div class="content">
+    <a class="prompt-link"
+       href="#">
+      {% blocktrans %}
+        Browse
+      {% endblocktrans %}
+    </a>
+    <div class="destinations">
+      <div class="content">
+
+        <a href="{% url 'privacy_policy' %}">
+          {% blocktrans %}
+            Privacy Policy
+          {% endblocktrans %}
+        </a>
+
+        <a href="{% url 'eula' %}">
+          {% blocktrans %}
+            End User License Agreement
+          {% endblocktrans %}
+        </a>
+
+        <a href="{% url 'subscription_agreement' %}">
+          {% blocktrans %}
+            Product Subscription Agreement
+          {% endblocktrans %}
+        </a>
+
+      </div>{# .content #}
+    </div>{# .destinations #}
+  </div>{# .content #}
+</section>

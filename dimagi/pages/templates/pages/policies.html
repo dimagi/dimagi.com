@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block body_class %}policy-page tucked-hero{% endblock %}
+
+{% block stylesheets %}
+  {% compress css %}
+    <link href="{% sass_src 'style/pages/policies.scss' %}" rel="stylesheet" media="screen" type="text/css" />
+  {% endcompress %}
+{% endblock %}
+
+{% block hero %}
+  <div class="blue-theme">
+    <section class="hero hero-policy" id="hero"></section>
+  </div>
+{% endblock %}
+
+{% block content %}
+  <section class="policy-container blue-theme">
+    {% include "sections/policies/sub_nav.html" %}
+    {% include policy %}
+  </section>
+{% endblock %}
