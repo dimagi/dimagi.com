@@ -22,3 +22,8 @@ def pricing(request):
     context = _get_global_context()
     context['feature_groups'] = [g.GROUP for g in feature_groups]
     return render(request, 'pages/commcare/pricing.html', context)
+
+
+@no_index
+def partners(request):
+    return render(request, 'pages/commcare/partners.html')

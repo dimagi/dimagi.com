@@ -1,0 +1,45 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="sub-nav"
+         id="sub-nav">
+  <div class="content">
+    <div class="actions">
+      {% trans "Watch Demo" as demo_text %}
+      {% include "partials/wistia_popover.html" with wistia_id='9uvnpbecdy' text=demo_text %}
+      <a class="primary"
+         href="{{ URL_TRIAL }}">
+        <span>
+          {% blocktrans %}
+            Start Trial
+          {% endblocktrans %}
+        </span>
+      </a>
+    </div>{# .actions #}
+    <a class="prompt-link"
+       href="#">
+      {% blocktrans %}
+        Browse
+      {% endblocktrans %}
+    </a>
+    <div class="destinations">
+      <div class="content">
+        <a href="#overview">
+          {% blocktrans %}
+            Overview
+          {% endblocktrans %}
+        </a>
+        <a href="#agimpact">
+          {% blocktrans %}
+            AgImpact
+          {% endblocktrans %}
+        </a>
+        <a href="#noukod">
+          {% blocktrans %}
+            Noukod
+          {% endblocktrans %}
+        </a>
+      </div>{# .content #}
+    </div>{# .destinations #}
+  </div>{# .content #}
+</section>
