@@ -1,6 +1,7 @@
 from __future__ import absolute_import
 from django.conf.urls import url, include
 import dimagi.pages.views as pages
+from dimagi.pages.views import commcare
 
 
 urlpatterns = [
@@ -10,6 +11,8 @@ urlpatterns = [
         name='services'),
     url(r'^contact/$', pages.contact,
         name='contact'),
+    url(r'^certified-partners/$', commcare.partners,
+        name='partner_program'),
     url(r'^commcare/',
         include('dimagi.pages.urls.commcare')),
     url(r'^case-studies/',
