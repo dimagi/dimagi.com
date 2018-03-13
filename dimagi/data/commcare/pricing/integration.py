@@ -32,6 +32,11 @@ GROUP.add_features([
         title=ugettext_lazy(
             "Zapier integration"
         ),
+        description=ugettext_lazy(
+            "Automate workflows by sending CommCare data to other systems like "
+            "Google Sheets, SQL Databases, and any of the other 750+ apps "
+            "supported out-of-the box by Zapier."
+        ),
         support=Support(True, True, True, True),
     ),
     Feature(

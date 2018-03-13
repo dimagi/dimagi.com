@@ -5,13 +5,13 @@
      id="detailed-feature-accordion">
 
   {% for group in feature_groups %}
-    <div class="accordion collapsed">
+    <div class="accordion{% ifnotequal forloop.counter0 0 %} collapsed{% endifnotequal %}">
       <div class="accordion-header">
         <h4 class="pad-small blue-dark" id="{{ group.slug }}">
           {{ group.title }}
         </h4>
       </div>
-      <div class="accordion-content" style="display: none;">
+      <div class="accordion-content"{% ifnotequal forloop.counter0 0 %} style="display: none;"{% endifnotequal %}>
         <div class="feature-group-description">
           <p>
             {% if group.description %}{{ group.description }}<br class="hide-until-medium" />{% endif %}

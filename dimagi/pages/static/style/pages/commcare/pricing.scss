@@ -64,12 +64,13 @@
     padding: 30px 10px;
   }
 }
+
 .no-touch .plans .flip-card {
   height: 150px;
 }
 
 $_no-touch-heights: (
-    small: 140px,
+    small: auto,
     medium: 160px,
     large: 240px,
     extra-large: 180px,

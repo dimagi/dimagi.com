@@ -80,22 +80,4 @@ GROUP.add_features([
         ),
         support=Support(False, True, True, True),
     ),
-    Feature(
-        title=ugettext_lazy(
-            "Custom reports access"
-        ),
-        description=ugettext_lazy(
-            "Access to custom reports. Note that the actual development of "
-            "custom reports through Dimagi is a separate cost. Organizations "
-            "that want additional reporting capabilities beyond what is "
-            "offered in standard reports can contract with Dimagi to develop "
-            "custom reports. Dimagi’s team works with organizations’ project "
-            "teams to clarify and define all reporting indicators and "
-            "features requested. The reports are deployed to the specific "
-            "project they were designed for, but not available to other "
-            "domains. The actual development of custom reports would form "
-            "part of a Service Package and is not included in Software Plans."
-        ),
-        support=Support(False, True, True, True),
-    ),
 ])

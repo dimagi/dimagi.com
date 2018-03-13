@@ -66,7 +66,7 @@ GROUP.add_features([
         description=ugettext_lazy(
             "For projects using case sharing between different groups of "
             "users, automatically manage case sharing privileges based on "
-            "your organization’s hierarchy. Create an org chart that "
+            "your organization’s hierarchy. Create an organization chart that "
             "represents your organizational hierarchy and add mobile "
             "workers to different working groups or locations."
         ),
@@ -79,7 +79,7 @@ GROUP.add_features([
         description=ugettext_lazy(
             "For projects using the the organization hierarchy, restricts "
             "the data exports and ability to edit mobile workers based on "
-            "which part of the org chart a web user is assigned to."
+            "which part of the organization chart a web user is assigned to."
         ),
         support=Support(False, True, True, True),
     ),

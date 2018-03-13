@@ -1,44 +1,45 @@
 @import 'app/variables/colors';
 @import 'app/variables/sizes';
 
-.tile:hover .flip-card .flipper {
-  transform: rotateY(180deg);
-}
-
-.flip-card {
-  perspective: 1000px;
-
-  .flipper {
-    position: relative;
-    transform-style: preserve-3d;
-    transition: .6s;
-  }
-
-  &:hover .flipper,
-  &.flipped .flipper {
+@media (min-width: $width-desktop) {
+  .tile:hover .flip-card .flipper {
     transform: rotateY(180deg);
   }
 
-  .front,
-  .back {
-    backface-visibility: hidden;
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-  }
+  .flip-card {
+    perspective: 1000px;
 
-  .front {
-    transform: rotateY(0deg);
-    z-index: 2;
-  }
+    .flipper {
+      position: relative;
+      transform-style: preserve-3d;
+      transition: .6s;
+    }
 
-  .back {
-    transform: rotateY(180deg);
+    &:hover .flipper,
+    &.flipped .flipper {
+      transform: rotateY(180deg);
+    }
+
+    .front,
+    .back {
+      backface-visibility: hidden;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+
+    .front {
+      transform: rotateY(0deg);
+      z-index: 2;
+    }
+
+    .back {
+      transform: rotateY(180deg);
+    }
   }
 }
-
 
 .touch .flip-card {
   perspective: inherit;

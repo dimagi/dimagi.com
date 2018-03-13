@@ -23,7 +23,7 @@ GROUP.add_features([
             "Everyone has access to the CommCare Help Site and the "
             "CommCare Users forum. The CommCare Help Site has helpful "
             "documentation and tutorials. CommCare Users is a "
-            "community-supported foru, for questions related to using "
+            "community-supported forum, for questions related to using "
             "CommCare. CommCare users from all over the world ask "
             "questions and share information."
         ),
