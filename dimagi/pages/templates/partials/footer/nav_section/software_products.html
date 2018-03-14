@@ -1,0 +1,12 @@
+{% extends 'partials/footer/nav_section/_base.html' %}
+{% load i18n %}
+
+{% block title %}{% blocktrans %}
+  Software Products
+{% endblocktrans %}{% endblock %}
+
+{% block links %}
+  <li>
+    <a href="{% url 'commcare' %}">CommCare</a>
+  </li>
+{% endblock %}

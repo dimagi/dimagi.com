@@ -1,0 +1,44 @@
+{% extends 'partials/footer/nav_section/_base.html' %}
+{% load i18n %}
+
+{% block title %}{% blocktrans %}
+  Resources
+{% endblocktrans %}{% endblock %}
+
+{% block links %}
+  <li>
+    <a href="{% url 'toolkits' %}">
+      {% blocktrans %}
+        Toolkits
+      {% endblocktrans %}
+    </a>
+  </li>
+  <li>
+    <a href="{% url 'case_studies' %}">
+      {% blocktrans %}
+        Case studies
+      {% endblocktrans %}
+    </a>
+  </li>
+  <li>
+    <a href="{% url 'sectors' %}">
+      {% blocktrans %}
+        Sectors
+      {% endblocktrans %}
+    </a>
+  </li>
+  <li>
+    <a href="{% url 'toolkit' 'commcare-evidence-base' %}">
+      {% blocktrans %}
+        CommCare Research
+      {% endblocktrans %}
+    </a>
+  </li>
+  <li>
+    <a href="{% url 'partner_program' %}">
+      {% blocktrans %}
+        Partner Program
+      {% endblocktrans %}
+    </a>
+  </li>
+{% endblock %}

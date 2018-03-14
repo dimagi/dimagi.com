@@ -1,0 +1,30 @@
+{% extends 'partials/footer/nav_section/_base.html' %}
+{% load i18n %}
+
+{% block title %}{% blocktrans %}
+  Legal
+{% endblocktrans %}{% endblock %}
+
+{% block links %}
+  <li>
+    <a href="{% url 'privacy_policy' %}">
+      {% blocktrans %}
+        Privacy Policy
+      {% endblocktrans %}
+    </a>
+  </li>
+  <li>
+    <a href="{% url 'eula' %}">
+      {% blocktrans %}
+        End User License Agreement
+      {% endblocktrans %}
+    </a>
+  </li>
+  <li>
+    <a href="{% url 'subscription_agreement' %}">
+      {% blocktrans %}
+        Product Subscription Agreement
+      {% endblocktrans %}
+    </a>
+  </li>
+{% endblock %}

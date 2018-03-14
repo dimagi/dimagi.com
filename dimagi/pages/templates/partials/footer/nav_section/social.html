@@ -1,0 +1,29 @@
+{% extends 'partials/footer/nav_section/_base.html' %}
+{% load i18n %}
+
+{% block title %}{% blocktrans %}
+  Keep in Touch
+{% endblocktrans %}{% endblock %}
+
+{% block links %}
+  <li>
+    <a href="//facebook.com/dimagi" target="_blank">
+      {% include 'svg/social/facebook.html' %}
+    </a>
+  </li>
+  <li>
+    <a href="//twitter.com/dimagi" target="_blank">
+      {% include 'svg/social/twitter.html' %}
+    </a>
+  </li>
+  <li>
+    <a href="//linkedin.com/company/dimagi" target="_blank">
+      {% include 'svg/social/linkedin.html' %}
+    </a>
+  </li>
+  <li>
+    <a href="//youtube.com/channel/UCt8JcRhWywkVJRR_YWv4OhA" target="_blank">
+      Youtube
+    </a>
+  </li>
+{% endblock %}

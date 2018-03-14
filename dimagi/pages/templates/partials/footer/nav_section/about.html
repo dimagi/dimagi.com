@@ -1,0 +1,44 @@
+{% extends 'partials/footer/nav_section/_base.html' %}
+{% load i18n %}
+
+{% block title %}{% blocktrans %}
+  About Dimagi
+{% endblocktrans %}{% endblock %}
+
+{% block links %}
+  <li>
+    <a href="{% url 'about' %}">
+      {% blocktrans %}
+        About us
+      {% endblocktrans %}
+    </a>
+  </li>
+  <li>
+    <a href="{% url 'careers' %}">
+      {% blocktrans %}
+        Careers
+      {% endblocktrans %}
+    </a>
+  </li>
+  <li>
+    <a href="{% url 'contact' %}">
+      {% blocktrans %}
+        Contact us
+      {% endblocktrans %}
+    </a>
+  </li>
+  <li>
+    <a href="{% url 'press' %}">
+      {% blocktrans %}
+        Press & Media
+      {% endblocktrans %}
+    </a>
+  </li>
+  <li>
+    <a href="{% url 'blog_home' %}">
+      {% blocktrans %}
+        Blog
+      {% endblocktrans %}
+    </a>
+  </li>
+{% endblock %}

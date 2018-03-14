@@ -13,6 +13,8 @@ require([
   'app/partners',
   'app/analytix',
   'app/accordion',
+  'app/extensions',
+  'app/transition',
   'modernizr',
 ], function (
     $,
@@ -28,7 +30,9 @@ require([
     ImageLoader,
     Partners,
     Analytix,
-    Accordion
+    Accordion,
+    Extensions,
+    Transition
 ) {
   $(function () {
     _.each([
@@ -44,6 +48,8 @@ require([
       Partners,
       Analytix,
       Accordion,
+      Extensions,
+      Transition,
     ], function (m) {
       m.initialize();
     });

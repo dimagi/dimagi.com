@@ -1,0 +1,37 @@
+{% extends 'partials/footer/nav_section/_base.html' %}
+{% load i18n %}
+
+{% block title %}{% blocktrans %}
+  Help
+{% endblocktrans %}{% endblock %}
+
+{% block links %}
+  <li>
+    <a href="//help.commcarehq.org" target="_blank">
+      {% blocktrans %}
+        CommCare Help Site
+      {% endblocktrans %}
+    </a>
+  </li>
+  <li>
+    <a href="//academy.dimagi.com" target="_blank">
+      {% blocktrans %}
+        Dimagi Academy
+      {% endblocktrans %}
+    </a>
+  </li>
+  <li>
+    <a href="//forum.dimagi.com" target="_blank">
+      {% blocktrans %}
+        CommCare Forum
+      {% endblocktrans %}
+    </a>
+  </li>
+  <li>
+    <a href="//github.com/dimagi/commcare-hq" target="_blank">
+      {% blocktrans %}
+        CommCare Code Base
+      {% endblocktrans %}
+    </a>
+  </li>
+{% endblock %}

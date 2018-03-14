@@ -1,0 +1,16 @@
+{% extends 'partials/footer/nav_section/_base.html' %}
+{% load i18n %}
+
+{% block title %}{% blocktrans %}
+  Services
+{% endblocktrans %}{% endblock %}
+
+{% block links %}
+  <li>
+    <a href="{% url 'services' %}">
+      {% blocktrans %}
+        Global Services
+      {% endblocktrans %}
+    </a>
+  </li>
+{% endblock %}
