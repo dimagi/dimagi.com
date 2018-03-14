@@ -25,6 +25,7 @@ THIRD_PARTY_APPS = [
     'sass_processor',
     'compressor',
     'imagekit',
+    'capture_tag',
 ]
 if AWS_ENABLED:
     THIRD_PARTY_APPS.append('storages')

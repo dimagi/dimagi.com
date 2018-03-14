@@ -2,6 +2,7 @@ from __future__ import absolute_import
 import json
 from django import template
 from urllib.parse import quote
+
 from django.http import QueryDict
 from django.template.loader import render_to_string
 from django.utils.safestring import mark_safe
@@ -32,7 +33,6 @@ def static(url):
     version = static_versions.get(url)
     if version:
         static_url = "{}?version={}".format(static_url, version)
-
     return static_url
 
 
@@ -83,6 +83,11 @@ def SLUG(str):
 @register.filter
 def JOIN(value, arg):
     return arg.join(value)
+
+
+@register.filter
+def TRIM(value):
+    return value.strip()
 
 
 @register.tag

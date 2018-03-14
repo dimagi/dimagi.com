@@ -1,10 +1,10 @@
-{% load i18n %}{% load dimagidotcom %}<!DOCTYPE html>
+{% load i18n %}{% load dimagidotcom %}{% load capture_tags %}<!DOCTYPE html>
 {# note: modernizr.js and app.js add classes to <html> to trigger certain css behaviors. #}
 {# These classes are: #}
 {#     js, no-js, touch, no-touch, cssanimations, #}
 {#     csstransformations3d, csstransitions, video, audio, svg, inlinesvg #}
 {#     pointerevents, show-time #}
-<html>
+<html lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, shrink-to-fit=no, viewport-fit=cover">
@@ -15,9 +15,50 @@
     <meta property="dimagi:tracking" content="{{ meta.tracking|JSON|META_STR }}">
     <meta property="dimagi:trackingAB" content="{{ meta.trackingAB|JSON|META_STR }}">
 
+    {% capture as page_title silent %}
+      {% block title %}Dimagi{% endblock %}
+    {% endcapture %}
+
+    {% capture as page_description silent %}{% block description %}
+      {% blocktrans %}
+        Dimagi builds technology solutions designed for impact. We on a mission
+        to improve the efficiency and quality of impact-driven work globally.
+        Our core product is CommCare - mobile data collection with the power
+        of case management.
+      {% endblocktrans %}
+    {% endblock %}{% endcapture %}
+
+    {% capture as page_social_card silent %}{% block social_card_url %}
+      {% static 'pages/home/default-social-card.jpg' %}
+    {% endblock %}{% endcapture %}
+
+    <title>{{ page_title|escape }}</title>
+    <meta name="description"
+          content="{{ page_description|escape }}">
+
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@dimagi">
+    <meta name="twitter:title" content="{{ page_title|escape|TRIM }}">
+    <meta name="twitter:description" content="{{ page_description|escape|TRIM }}">
+    <meta name="twitter:creator" content="@dimagi">
+    <meta name="twitter:image"
+          content="{% block twitter_image %}{{ page_social_card|TRIM }}{% endblock %}">
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="{{ page_title|escape|TRIM }}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="{{ request.build_absolute_uri }}" />
+    <meta property="og:image"
+          content="{% block facebook_image %}{{ page_social_card|TRIM }}{% endblock %}" />
+    <meta property="og:description" content="{{ page_description|escape|TRIM }}" />
+    <meta property="og:site_name" content="Dimagi" />
+
     {% block meta %}{% endblock %}
 
-    <title>{% block title %}Dimagi.com{% endblock %}</title>
+    <link rel="icon"
+          type="image/png"
+          href="{% static 'pages/home/favicon.png' %}">
 
     {# todo bring font offline and load from CDN #}
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:100,300,400,500,700,800" rel="stylesheet">

@@ -26,6 +26,7 @@ pillow = "*"
 requests = "*"
 libsass = "*"
 olefile = "*"
+django-capture-tag = "*"
 
 
 [requires]
