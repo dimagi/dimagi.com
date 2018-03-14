@@ -4,6 +4,15 @@
 
 {% block body_class %}press-page tucked-hero{% endblock %}
 
+{% block title %}{% blocktrans %}
+  Dimagi in the News
+{% endblocktrans %}{% endblock %}
+
+{% block description %}{% blocktrans %}
+  Read for a list of articles featuring work done by Dimagi.
+  For press or awards inquiries, please email info@dimagi.com.
+{% endblocktrans %}{% endblock %}
+
 {% block stylesheets %}
   {% compress css %}
     <link href="{% sass_src 'style/pages/press.scss' %}" rel="stylesheet" media="screen" type="text/css" />

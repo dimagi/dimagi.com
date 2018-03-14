@@ -4,6 +4,17 @@
 
 {% block body_class %}toolkits-page tucked-hero{% endblock %}
 
+{% block title %}{% blocktrans %}
+ Toolkits
+{% endblocktrans %}{% endblock %}
+
+{% block description %}{% blocktrans %}
+  Drawing from 10+ years of experience, Dimagi has developed
+  several resources to support users in implementing digital
+  solutions. Download our toolkits to help you plan and
+  implement your project.
+{% endblocktrans %}{% endblock %}
+
 {% block stylesheets %}
   {% compress css %}
     <link href="{% sass_src 'style/pages/toolkits.scss' %}" rel="stylesheet" media="screen" type="text/css" />

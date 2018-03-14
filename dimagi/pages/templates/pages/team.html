@@ -4,6 +4,15 @@
 
 {% block body_class %}about-page tucked-hero{% endblock %}
 
+{% block title %}{% blocktrans %}
+  Get to Know the Dimagi Team
+{% endblocktrans %}{% endblock %}
+
+{% block description %}{% blocktrans %}
+  Dimagi’s 125+ team of product development and implementation staff are based
+  across six offices, with additional staff around the world.
+{% endblocktrans %}{% endblock %}
+
 {% block stylesheets %}
   {% compress css %}
     <link href="{% sass_src 'style/pages/about.scss' %}" rel="stylesheet" media="screen" type="text/css" />

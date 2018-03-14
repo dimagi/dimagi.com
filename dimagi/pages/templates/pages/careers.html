@@ -4,6 +4,15 @@
 
 {% block body_class %}careers-page tucked-hero{% endblock %}
 
+{% block title %}{% blocktrans %}
+  Careers at Dimagi
+{% endblocktrans %}{% endblock %}
+
+{% block description %}{% blocktrans %}
+  We’re seeking impact-driven problem solvers that are curious, care deeply,
+  value quality and hustle.
+{% endblocktrans %}{% endblock %}
+
 {% block stylesheets %}
   {% compress css %}
     <link href="{% sass_src 'style/pages/careers.scss' %}" rel="stylesheet" media="screen" type="text/css" />

@@ -2,6 +2,14 @@
 {% load i18n %}
 {% load dimagidotcom %}
 
+{% block title %}
+  {{ study.title }}
+{% endblock %}
+
+{% block description %}
+  {{ study.summary }}
+{% endblock %}
+
 {% block body_class %}case-study-page tucked-hero{% endblock %}
 
 {% block stylesheets %}

@@ -2,6 +2,18 @@
 {% load i18n %}
 {% load dimagidotcom %}
 
+{% block title %}
+  {{ post.title }}
+{% endblock %}
+
+{% block description %}
+  {{ post.excerpt }}
+{% endblock %}
+
+{% block social_card_url %}
+  {{ post.thumbnail }}
+{% endblock %}
+
 {% block body_class %}blog-post-page tucked-hero{% endblock %}
 
 {% block stylesheets %}

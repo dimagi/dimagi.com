@@ -4,6 +4,14 @@
 
 {% block body_class %}contact-page tucked-hero{% endblock %}
 
+{% block title %}{% blocktrans %}
+  Contact Dimagi
+{% endblocktrans %}{% endblock %}
+
+{% block description %}{% blocktrans %}
+  Questions about Dimagi or CommCare? We're here to help!
+{% endblocktrans %}{% endblock %}
+
 {% block stylesheets %}
   {% compress css %}
     <link href="{% sass_src 'style/pages/contact.scss' %}" rel="stylesheet" media="screen" type="text/css" />

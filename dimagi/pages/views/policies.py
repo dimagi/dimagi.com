@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from django.utils.translation import ugettext
+
 from dimagi.utils.decorators import no_index
 
 
@@ -6,6 +8,7 @@ from dimagi.utils.decorators import no_index
 def privacy(request):
     return render(request, 'pages/policies.html', {
         'policy': 'sections/policies/privacy.html',
+        'policy_title': ugettext("Privacy Policy"),
     })
 
 
@@ -13,6 +16,7 @@ def privacy(request):
 def eula(request):
     return render(request, 'pages/policies.html', {
         'policy': 'sections/policies/eula.html',
+        'policy_title': ugettext("End User License Agreement"),
     })
 
 
@@ -20,4 +24,5 @@ def eula(request):
 def subscription(request):
     return render(request, 'pages/policies.html', {
         'policy': 'sections/policies/subscription.html',
+        'policy_title': ugettext("Product Subscription Agreement"),
     })
