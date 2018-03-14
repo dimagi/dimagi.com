@@ -24,7 +24,7 @@
 
         <div class="column align-left">
           {% if previous_url %}
-          <a class="arrow-left" href="{{ previous_url }}">
+          <a class="arrow-left" href="{{ previous_url }}#list">
             {% trans "Newer" %}
           </a>
           {% endif %}
@@ -40,7 +40,7 @@
 
         <div class="column align-right">
           {% if next_url %}
-          <a class="arrow" href="{{ next_url }}">
+          <a class="arrow" href="{{ next_url }}#list">
             {% trans "Older" %}
           </a>
           {% endif %}

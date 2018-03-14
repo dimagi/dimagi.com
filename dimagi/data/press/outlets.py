@@ -33,9 +33,9 @@ OUTLETS = [
             "globe-cellphones-have-become-tool-for-doing-good.html",
     ),
     Outlet(
-        title="The Christian Science Monitor",
-        url="https://www.csmonitor.com/World/Asia-South-Central/2014/"
-            "0323/Tackling-Indian-maternal-deaths-by-smartphone",
+        title="Times of India",
+        url=" https://timesofindia.indiatimes.com/city/nagpur/Open-source-"
+            "software-boost-for-public-health-sector/articleshow/48382959.cms",
     ),
     Outlet(
         title="Forbes",
@@ -55,5 +55,10 @@ OUTLETS = [
         title="Refinery29",
         url="http://www.refinery29.uk/2015/12/99098/pathfinder-international-"
             "mobile-phone-tech-africa-childbirth",
+    ),
+    Outlet(
+        title="The Christian Science Monitor",
+        url="https://www.csmonitor.com/World/Asia-South-Central/2014/"
+            "0323/Tackling-Indian-maternal-deaths-by-smartphone",
     ),
 ]

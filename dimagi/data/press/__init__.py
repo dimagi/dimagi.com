@@ -27,7 +27,7 @@ for p in press:
 press_by_date.sort(key=lambda x: x.date, reverse=True)
 
 
-ARTICLES_PER_PAGE = 18
+ARTICLES_PER_PAGE = 9
 TOTAL_PAGES = math.ceil(len(press_by_date)/ARTICLES_PER_PAGE)
 
 
