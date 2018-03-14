@@ -90,6 +90,11 @@ def TRIM(value):
     return value.strip()
 
 
+@register.filter
+def HTTPS(value):
+    return value.replace("//", "https://")
+
+
 @register.tag
 def compress(parser, token):
     return original_compress(parser, token)

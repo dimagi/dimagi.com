@@ -43,14 +43,14 @@
     <meta name="twitter:description" content="{{ page_description|escape|TRIM }}">
     <meta name="twitter:creator" content="@dimagi">
     <meta name="twitter:image"
-          content="{% block twitter_image %}{{ page_social_card|TRIM }}{% endblock %}">
+          content="http{% block twitter_image %}{{ page_social_card|TRIM|HTTPS }}{% endblock %}">
 
     <!-- Open Graph data -->
     <meta property="og:title" content="{{ page_title|escape|TRIM }}" />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="{{ request.build_absolute_uri }}" />
     <meta property="og:image"
-          content="{% block facebook_image %}{{ page_social_card|TRIM }}{% endblock %}" />
+          content="{% block facebook_image %}{{ page_social_card|TRIM|HTTPS }}{% endblock %}" />
     <meta property="og:description" content="{{ page_description|escape|TRIM }}" />
     <meta property="og:site_name" content="Dimagi" />
 

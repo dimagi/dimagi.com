@@ -5,8 +5,13 @@
          id="sub-nav">
   <div class="content">
     <div class="actions">
-      {% trans "Watch Demo" as demo_text %}
-      {% include "partials/wistia_popover.html" with wistia_id='9uvnpbecdy' text=demo_text %}
+      <a href="https://meetme.so/commcare"
+         class="hide-until-medium"
+         target="_blank">
+        {% blocktrans %}
+          Request Demo
+        {% endblocktrans %}
+      </a>
       <a class="primary"
          href="{{ URL_TRIAL }}">
         <span>
@@ -24,6 +29,13 @@
     </a>
     <div class="destinations">
       <div class="content">
+        <a href="https://meetme.so/commcare"
+           class="hide-at-medium"
+           target="_blank">
+          {% blocktrans %}
+            Request Demo
+          {% endblocktrans %}
+        </a>
         <a href="#overview">
           {% blocktrans %}
             Overview
