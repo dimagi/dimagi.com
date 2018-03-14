@@ -11,7 +11,8 @@
 <div class="grid grid-2-at-medium grid-4-at-large">
 
   <div class="column">
-    <a href="{% url 'commcare_pricing' %}">
+    <a href="{% url 'commcare_pricing' %}"
+       class="blue-swatch">
       {% blocktrans %}
         CommCare Pricing
       {% endblocktrans %}
@@ -19,39 +20,8 @@
   </div>{# .column #}
 
   <div class="column">
-    <a href="{% url 'sectors' %}">
-      {% blocktrans %}
-        Sectors
-      {% endblocktrans %}
-    </a>
-  </div>{# .column #}
-
-  <div class="column">
-    <a href="{% url 'case_studies' %}">
-      {% blocktrans %}
-        Case Studies
-      {% endblocktrans %}
-    </a>
-  </div>{# .column #}
-
-  <div class="column">
-    <a href="{% url 'toolkits' %}">
-      {% blocktrans %}
-        Toolkits
-      {% endblocktrans %}
-    </a>
-  </div>{# .column #}
-
-  <div class="column">
-    <a href="{% url 'blog_home' %}">
-      {% blocktrans %}
-        Blog
-      {% endblocktrans %}
-    </a>
-  </div>{# .column #}
-
-  <div class="column">
-    <a href="{% url 'about' %}">
+    <a href="{% url 'about' %}"
+       class="orange-swatch">
       {% blocktrans %}
         About Us
       {% endblocktrans %}
@@ -59,9 +29,55 @@
   </div>{# .column #}
 
   <div class="column">
-    <a href="{% url 'careers' %}">
+    <a href="{% url 'contact' %}"
+       class="neutral-swatch">
+      {% blocktrans %}
+        Contact Us
+      {% endblocktrans %}
+    </a>
+  </div>{# .column #}
+
+  <div class="column">
+    <a href="{% url 'careers' %}"
+       class="orange-swatch">
       {% blocktrans %}
         Careers
+      {% endblocktrans %}
+    </a>
+  </div>{# .column #}
+
+  <div class="column">
+    <a href="{% url 'blog_home' %}"
+       class="orange-swatch">
+      {% blocktrans %}
+        Blog
+      {% endblocktrans %}
+    </a>
+  </div>{# .column #}
+
+  <div class="column">
+    <a href="{% url 'case_studies' %}"
+       class="neutral-swatch">
+      {% blocktrans %}
+        Case Studies
+      {% endblocktrans %}
+    </a>
+  </div>{# .column #}
+
+  <div class="column">
+    <a href="{% url 'toolkits' %}"
+       class="neutral-swatch">
+      {% blocktrans %}
+        Toolkits
+      {% endblocktrans %}
+    </a>
+  </div>{# .column #}
+
+  <div class="column">
+    <a href="{% url 'sectors' %}"
+       class="neutral-swatch">
+      {% blocktrans %}
+        Sectors
       {% endblocktrans %}
     </a>
   </div>{# .column #}

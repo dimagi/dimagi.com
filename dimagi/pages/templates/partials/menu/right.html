@@ -3,9 +3,10 @@
 <a class="login-link"
    href="{{ URL_LOGIN }}">
   <div class="hide-at-medium">
-    {% include "svg/sign_in.html" %}
+    {% blocktrans %}
+      Login
+    {% endblocktrans %}
   </div>{# .hide-at-medium #}
-
   <div class="hide-until-medium">
     {% blocktrans %}
       Sign in
@@ -16,7 +17,9 @@
 <a class="trial-link"
    href="{{ URL_TRIAL }}">
   <div class="hide-at-medium">
-    {% include "svg/trial.html" %}
+    {% blocktrans %}
+      Trial
+    {% endblocktrans %}
   </div>{# .hide-at-medium #}
 
   <div class="hide-until-medium">

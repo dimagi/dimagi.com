@@ -82,11 +82,14 @@
 
     &.login-link,
     &.trial-link {
+      padding-left: 20px !important;
+      padding-right: 0 !important;
       transition: color 300ms 0s;
     }
 
     &.menu-open-sibling {
       opacity: 1;
+      padding-right: 20px !important;
       transition: opacity 300ms 600ms, visibility 0s, color 300ms;
     }
   }
@@ -95,6 +98,7 @@
 @media (min-width: $width-desktop) {
   .banner {
     height: $banner-height-desktop;
+
     .column {
       margin-left: -$banner-pad-desktop;
       margin-right: -$banner-pad-desktop;
@@ -109,6 +113,12 @@
       height: $banner-logo-height-desktop;
       width: $banner-logo-width-desktop;
     }
+  }
+}
+
+@media (max-width: $width-desktop - 1px) {
+  .banner a.logo svg {
+    padding-top: 5px;
   }
 }
 

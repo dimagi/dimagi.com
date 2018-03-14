@@ -53,6 +53,8 @@ $color-swatch-default: #636466;
 $color-accent-gray: #fafafa;
 
 $color-tap-highlight: rgba(255, 255, 255, 0);
+$color-footer-text: $color-menu-text;
+$color-footer-border: darken($color-text, 20);
 
 $colors-by-theme: (
   blue-dark: $color-blue-dark,
