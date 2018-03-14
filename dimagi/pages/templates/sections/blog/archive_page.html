@@ -13,15 +13,15 @@
     </div>
 
     <div class="border-top theme-border gap-top-line pad-top-small">
-      <div class="grid-flex">
-        <div class="content align-left">
+      <div class="grid-3">
+        <div class="column align-left">
           {% if previous_url %}
           <a class="arrow-left" href="{{ previous_url }}">
             {% trans "Newer" %}
           </a>
           {% endif %}
         </div>
-        <div class="content align-center">
+        <div class="column align-center">
           <h4 class="gap-bottom-base">
             {% blocktrans %}
               Page {{ page }} of {{ total_pages }}
@@ -33,7 +33,7 @@
             {% endblocktrans %}
           </p>
         </div>
-        <div class="content align-right">
+        <div class="column align-right">
           {% if next_url %}
           <a class="arrow" href="{{ next_url }}">
             {% trans "Older" %}

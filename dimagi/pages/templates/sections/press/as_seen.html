@@ -1,0 +1,29 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+
+<section class="overview border-bottom" id="overview">
+  <div class="content pad-vert-medium">
+
+    <h3 class="gap-bottom-small">
+      {% blocktrans %}
+        As Seen In
+      {% endblocktrans %}
+    </h3>
+
+    <div class="grid-4-at-medium grid-2-at-small grid-row-space-base grid-row-equal-heights gap-bottom-none">
+      {% for outlet in outlets %}
+        <div class="column">
+          <p><em>
+            <a href="{{ outlet.url }}"
+               class="body-color"
+               target="_blank">
+              {{ outlet.title }}
+            </em></a>
+          </p>
+        </div>{# .column #}
+      {% endfor %}
+    </div>{# .grid-4-at-medium #}
+
+  </div>{# .content #}
+</section>

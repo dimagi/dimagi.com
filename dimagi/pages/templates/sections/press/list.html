@@ -1,23 +1,53 @@
-  {% load i18n %}
+{% load i18n %}
 {% load dimagidotcom %}
 
 
-<section class="overview" id="overview">
+<section class="list" id="list">
   <div class="content pad-vert-medium">
 
     <h3 class="gap-bottom-small">
       {% blocktrans %}
-        Press
+        News & Press Releases
       {% endblocktrans %}
     </h3>
 
-    <div class="grid-4-at-medium grid-row-space-small grid-row-equal-heights">
+    <div class="grid-3-at-medium grid-row-space-small grid-row-equal-heights">
       {% for press in press_articles %}
         <div class="column">
           {% include "partials/press_brief.html" with press=press %}
-        </div>
+        </div>{# .column #}
       {% endfor %}
     </div>{# .grid-4-at-medium #}
+
+    <div class="border-top border gap-top-line pad-top-small">
+      <div class="grid-3">
+
+        <div class="column align-left">
+          {% if previous_url %}
+          <a class="arrow-left" href="{{ previous_url }}">
+            {% trans "Newer" %}
+          </a>
+          {% endif %}
+        </div>{# .column #}
+
+        <div class="column align-center">
+          <h4 class="gap-bottom-base">
+            {% blocktrans %}
+              Page {{ page }} of {{ total_pages }}
+            {% endblocktrans %}
+          </h4>
+        </div>{# .column #}
+
+        <div class="column align-right">
+          {% if next_url %}
+          <a class="arrow" href="{{ next_url }}">
+            {% trans "Older" %}
+          </a>
+          {% endif %}
+        </div>{# .column #}
+
+      </div>{# .grid-flex #}
+    </div>{# .border-top #}
 
   </div>{# .content #}
 </section>

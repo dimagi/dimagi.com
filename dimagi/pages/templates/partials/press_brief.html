@@ -2,19 +2,17 @@
 {% load i18n %}
 
 <a class="post"
+   target="_blank"
    href="{{ press.url }}">
 
-  <h6>
+  <p class="h6 gap-bottom-none">
     {{ press.title }}
-  </h6>
-  <p>
-    {{ press.source }}
+  </p>
+  <p class="gap-bottom-none">
+    <em>{{ press.source }}</em>
   </p>
   <p>
-    <span class="link arrow">
-      {% blocktrans %}
-        Read More
-      {% endblocktrans %}
-    </span>
+    {{ press.date }}
   </p>
+
 </a>
