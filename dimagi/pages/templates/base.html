@@ -43,7 +43,7 @@
     <meta name="twitter:description" content="{{ page_description|escape|TRIM }}">
     <meta name="twitter:creator" content="@dimagi">
     <meta name="twitter:image"
-          content="http{% block twitter_image %}{{ page_social_card|TRIM|HTTPS }}{% endblock %}">
+          content="{% block twitter_image %}{{ page_social_card|TRIM|HTTPS }}{% endblock %}">
 
     <!-- Open Graph data -->
     <meta property="og:title" content="{{ page_title|escape|TRIM }}" />
