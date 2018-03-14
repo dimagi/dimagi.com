@@ -16,6 +16,11 @@ html.touch {
   }
 }
 
+html.modal-active.ios-modal-fix body {
+  position: fixed;
+  width: 100%;
+}
+
 .modal {
   bottom: 0;
   left: 0;
