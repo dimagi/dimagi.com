@@ -12,7 +12,7 @@ from dimagi.data.blog import (
     ARCHIVE,
 )
 from dimagi.pages.models.blog import BlogPost
-from dimagi.utils.decorators import no_index
+from dimagi.utils.decorators import no_index, hide_drift
 from dimagi.utils.wordpress_api import get_json
 
 
@@ -43,6 +43,7 @@ def _get_global_context():
 
 
 @no_index
+@hide_drift
 def home(request):
     posts = _get_posts(ARCHIVE)['posts']
     popular = [BlogPost(p) for p in get_json('blog/popular', num_posts=2)['posts']]
@@ -56,6 +57,7 @@ def home(request):
 
 
 @no_index
+@hide_drift
 @validate_category
 def archive(request, category, page=None):
     category = get_category_by_slug(category)
@@ -89,6 +91,7 @@ def archive(request, category, page=None):
 
 
 @no_index
+@hide_drift
 def post(request, category, slug):
     category = get_category_by_slug(category)
     _post = get_json('blog/post/{}/'.format(slug))

@@ -4,7 +4,7 @@ from django.http import Http404
 from django.shortcuts import render
 
 from dimagi.pages.models.careers import JobPost
-from dimagi.utils.decorators import no_index
+from dimagi.utils.decorators import no_index, hide_drift
 
 
 def _get_job_post(job_id):
@@ -16,11 +16,13 @@ def _get_job_post(job_id):
 
 
 @no_index
+@hide_drift
 def home(request):
     return render(request, 'pages/careers.html')
 
 
 @no_index
+@hide_drift
 def view_job(request, job_id):
     job = _get_job_post(job_id)
     if not job:

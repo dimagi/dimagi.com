@@ -14,7 +14,6 @@ def metas(request):
     _metas["trackingConfig"] = {
         'logLevel': setting('TRACKING_LOG_LEVEL', ''),
         'enabled': setting('TRACKING_ENABLED', False),
-        'userId': 'test',  # todo generate user id
     }
     _metas["trackingAB"] = [ab.context for ab in ACTIVE_AB_TESTS]
 

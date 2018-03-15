@@ -15,6 +15,10 @@
     <meta property="dimagi:tracking" content="{{ meta.tracking|JSON|META_STR }}">
     <meta property="dimagi:trackingAB" content="{{ meta.trackingAB|JSON|META_STR }}">
 
+    {% if request.hide_drift %}
+      <meta property="dimagi:driftHide" content="true">
+    {% endif %}
+
     {% capture as page_title silent %}
       {% block title %}Dimagi{% endblock %}
     {% endcapture %}

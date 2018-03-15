@@ -22,6 +22,9 @@ define([
       _drift = {};
   return {
     initialize: function () {
+      self.hideDrift = $("meta[property='dimagi:driftHide']").attr("content");
+      if (self.hideDrift) return;
+
       var apiId = Utils.getApiId('DRIFT'),
           scriptUrl = "https://js.driftt.com/include/" + Utils.getDateHash() + "/" + apiId + '.js';
 

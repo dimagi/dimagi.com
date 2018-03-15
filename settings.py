@@ -179,3 +179,5 @@ TRACKING = {
 
 TRACKING_LOG_LEVEL = env.str('TRACKING_LOG_LEVEL', default='')
 TRACKING_ENABLED = env.bool('TRACKING_ENABLED', default=False)
+
+NO_INDEX_ENABLED = env.str('NO_INDEX_ENABLED', default=True)
