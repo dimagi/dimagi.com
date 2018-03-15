@@ -4,6 +4,7 @@ define([], function () {
     ESC_KEY_CODE: 27,
     EVENTS: {
       CAROUSEL_REPAINT: "app.Carousels.repaint",
+      MODAL_SHOW: "app.Modal.show",
     }
   };
 });

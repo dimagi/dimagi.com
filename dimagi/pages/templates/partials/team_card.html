@@ -5,7 +5,8 @@
   <a class="tile pad-base pad-bottom-line"
      href="#{{ employee.slug }}">
     <div class="aspect-ratio-square employee-image gap-bottom-base"
-         style="background-image:url('{{ employee.image }}');"></div>
+         data-lazybg="true"
+         data-src="{{ employee.image }}"></div>
     <h5 class="gap-bottom-none">
       {{ employee.name }}
     </h5>

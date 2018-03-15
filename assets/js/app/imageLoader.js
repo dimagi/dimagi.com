@@ -10,45 +10,51 @@ define([
   self.getHtml = function () {
     self.$window = $(window);
     self.$document = $(document);
-    self.$images = $('.image-loader[data-loading="true"] img');
-    self.$lazyImages = self.$images.filter("[data-src]");
+
+    self.$images = $('[data-lazyimg="true"]');
+    self.$backgrounds = $('[data-lazybg="true"]');
   };
 
   self.bindEvents = function () {
-    self.$images.one("load", function(e) {
-      self.onImageLoad(e.target);
-    });
-    _.each(self.$images, function (img) {
-      if (img.complete && !$(img).attr("data-src")) {
-        self.onImageLoad(img);
-      }
-    });
-    if (self.$lazyImages.length) {
-      Pipeline.onScroll(function () {
-        self.lazyCheck();
-      });
-      Resize.onResize(function () {
-        self.lazyCheck();
-      });
-      self.$document.on(Constants.EVENTS.CAROUSEL_REPAINT, function () {
-        self.lazyCheck();
-      });
-    }
-  };
 
-  self.onImageLoad = function (img) {
-    $(img).closest(".image-loader[data-loading]").attr("data-loading", false);
+    Pipeline.onScroll(function () {
+      self.lazyCheck();
+    });
+
+    Resize.onResize(function () {
+      self.lazyCheck();
+    });
+
+    self.$document.on(Constants.EVENTS.CAROUSEL_REPAINT, function () {
+      self.lazyCheck();
+    });
+
+    self.$document.on(Constants.EVENTS.MODAL_SHOW, function () {
+      self.lazyCheck();
+    });
+
   };
 
   self.lazyCheck = function () {
-    if (self.$lazyImages) {
-      _.each(self.$lazyImages.filter("[data-src]"), function (img) {
-        var loader = $(img).closest(".image-loader[data-loading]").get(0);
-        if (self.isVisible(loader) && self.inView(loader)) {
+
+    if (self.$images) {
+      self.$images = self.$images.filter("[data-src]");
+      _.each(self.$images, function (img) {
+        if (self.isVisible(img) && self.inView(img)) {
           self.loadImage(img);
         }
       });
     }
+
+    if (self.$backgrounds) {
+      self.$backgrounds = self.$backgrounds.filter("[data-src]");
+      _.each(self.$backgrounds, function (bg) {
+        if (self.isVisible(bg) && self.inView(bg)) {
+          self.loadBackground(bg);
+        }
+      });
+    }
+
   };
 
   self.isVisible = function (img) {
@@ -69,6 +75,33 @@ define([
     var $img = $(img);
     $img.attr({
       src: $img.attr("data-src"),
+      "data-src": null
+    });
+    $img.closest(".image-loader[data-loading]").attr("data-loading", false);
+    $img.attr('data-lazyimg', false);
+  };
+
+  self.loadBackground = function (bg) {
+    var $bg = $(bg),
+        src = $(bg).attr('data-src');
+    if ($bg.attr('data-isclass')) {
+      $bg.addClass(src);
+      try {
+        var bgSrc = $bg.css('background-image').split('"')[1];
+        $('<img />').attr('src', bgSrc).on('load', function () {
+          $bg.attr('data-lazybg', false);
+        });
+      } catch (error) {
+        $bg.attr('data-lazybg', false);
+      }
+    } else {
+      $('<img />').attr('src', src).on('load', function () {
+        $(this).remove();
+        $bg.css('background-image', 'url("' + src + '")');
+        $bg.attr('data-lazybg', false);
+      });
+    }
+    $bg.attr({
       "data-src": null
     });
   };

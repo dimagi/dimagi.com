@@ -1,13 +1,39 @@
 @import 'app/variables/sizes';
+@import 'app/variables/colors';
 
-@mixin background-cover($bgUrl) {
-  background-image: url('#{$bgUrl}');
+
+@mixin background-cover($_bg-url) {
+  background-image: url('#{$_bg-url}');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-@mixin make-bg($_class, $_bg, $_height-base, $_height-by-size, $_extension: '.jpg') {
+@mixin background-cover-loaded($_bg-url) {
+  &.loaded {
+    @include background-cover($_bg-url);
+  }
+}
+
+
+@mixin background-placeholder($_bg-color: $color-text, $_bg-position: 'center') {
+  background-position: $_bg-position;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: $_bg-color;
+  transition: .5s background ease-in-out;
+}
+
+
+$_default-base-height: 500px;
+$_default-height-by-size: (
+  small: 500px,
+  medium: 500px,
+  large: 500px,
+  extra-large: 500px,
+);
+
+@mixin make-bg-loaded($_class, $_bg, $_height-base: $_default-base-height, $_height-by-size: $_default-height-by-size, $_extension: '.jpg', $_loaded: '.loaded') {
   .#{$_class} {
     background-image: url(quote($_bg + $_extension));
     background-position: center;
@@ -18,7 +44,7 @@
 
   @each $_size, $_height in $_height-by-size {
     @media (min-width: map-get($widths-by-size, $_size)) {
-      .#{$_class} {
+      .#{$_class}#{$_loaded} {
         background-image: url(quote($_bg + '.' + $_size + $_extension));
         height: $_height;
       }
@@ -26,8 +52,12 @@
   };
 };
 
+@mixin make-bg($_class, $_bg, $_height-base: $_default-base-height, $_height-by-size: $_default-height-by-size, $_extension: '.jpg') {
+  @include make-bg-loaded($_class, $_bg, $_height-base, $_height-by-size, $_extension, '');
+};
 
-@mixin make-carousel-slide($_class-name, $_sizes, $_url) {
+
+@mixin make-carousel-slide-loaded($_class-name, $_sizes, $_url, $_loaded: '.loaded') {
   .carousel .carousel-slide .#{$_class-name} {
     $_base: map-get($_sizes, extra-small);
     $_w: map-get($_base, w);
@@ -43,7 +73,7 @@
 
   @each $_size, $_screen-width in $widths-by-size {
     @media (min-width: $_screen-width) {
-      .carousel .carousel-slide .#{$_class-name} {
+      .carousel .carousel-slide .#{$_class-name}#{$_loaded} {
         $_dimensions: map-get($_sizes, $_size);
         $_w: map-get($_dimensions, w);
         $_h: map-get($_dimensions, h);
@@ -53,4 +83,8 @@
       }
     }
   }
+}
+
+@mixin make-carousel-slide($_class-name, $_sizes, $_url) {
+  @include make-carousel-slide-loaded($_class-name, $_sizes, $_url, '');
 }

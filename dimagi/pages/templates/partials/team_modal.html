@@ -23,12 +23,13 @@
 
             <div class="column">
               <div class="aspect-ratio-square employee-image gap-bottom-line"
-                   style="background-image:url('{{ employee.image }}');"></div>
+                   data-lazybg="true"
+                   data-src="{{ employee.image }}"></div>
             </div>{# .column #}
 
             <div class="column">
               <p>
-                {{ employee.short_bio }}
+                {{ employee.bio }}
               </p>
             </div>{# .column #}
 

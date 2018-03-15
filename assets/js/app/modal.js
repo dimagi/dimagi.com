@@ -3,7 +3,13 @@ define([
   'jquery',
   'lodash',
   'modernizr',
-], function ($, _, Modernizr) {
+  'app/constants',
+], function (
+    $,
+    _,
+    Modernizr,
+    Constants
+) {
   'use strict';
   var modals = {};
 
@@ -38,6 +44,7 @@ define([
         modal.activate();
         e.preventDefault();
       });
+
       modal.$modal.on("click", "[data-modal-confirm='" + modal.id + "']", function (e) {
         modal.setResponse(true);
         modal.deactivate();
@@ -45,20 +52,24 @@ define([
           e.preventDefault();
         }
       });
+
       modal.$modal.on("click", "[data-modal-dismiss='" + modal.id + "']", function (e) {
         modal.setResponse(false);
         modal.deactivate();
         e.preventDefault();
       });
+
       modal.$closeButton.on("click", function(e) {
         modal.dismiss();
         e.preventDefault();
       });
+
       modal.$modal.on("click", function(e) {
         if (e.target.id === modal.id) {
           modal.dismiss();
         }
       });
+
       $(document).on("keydown", function (e) {
         if (e.keyCode === 27) {
           modal.dismiss();
@@ -68,6 +79,7 @@ define([
 
     modal.activate = function () {
       modal.active = true;
+      $(document).trigger(Constants.EVENTS.MODAL_SHOW);
       modal.activateHandler();
       modal.toggleModalState();
     };

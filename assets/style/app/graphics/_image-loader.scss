@@ -1,17 +1,23 @@
-.image-loader {
-  overflow: hidden;
+@import 'app/variables/colors';
 
-  &.full-bleed {
+[data-lazybg] {
+  position: relative;
+
+  &::after {
+    background-color: $color-text;
+    content: ' ';
+    display: block;
     height: 100%;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    transition: opacity 500ms ease-in-out;
     width: 100%;
   }
+}
 
-  img {
-    transition: all 200ms cubic-bezier(0, 0, .2, 1);
-  }
 
-  &[data-loading="true"] img {
-    opacity: 0;
-    transform: scale3d(1.05, 1.05, 1);
-  }
+[data-lazybg="true"]::after {
+  opacity: 1;
 }

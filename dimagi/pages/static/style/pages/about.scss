@@ -4,14 +4,11 @@
 @import 'app/variables/type';
 
 .about-page {
-  $_base-height: 500px;
-  $_height-by-size: (
-    small: 500px,
-    medium: 500px,
-    large: 500px,
-    extra-large: 500px,
-  );
-  @include make-bg(hero, '../../pages/about/hero', $_base-height, $_height-by-size);
+  @include make-bg-loaded(hero, '../../pages/about/hero');
+}
+
+.team-page {
+  @include make-bg-loaded(hero, '../../pages/team/hero');
 }
 
 .mission {
@@ -47,7 +44,8 @@
 
 
 @media (min-width: $width-desktop) {
-  .about-page .hero h1 {
+  .about-page .hero h1,
+  .team-page .hero h1 {
     margin-left: 0;
     margin-right: 0;
     max-width: 55%;
@@ -71,13 +69,11 @@
 }
 
 .employee-image {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  @include background-placeholder();
 }
 
 .modal .employee-image,
-.bio .employee-image{
+.bio .employee-image {
   width: 300px;
 }
 
@@ -113,8 +109,8 @@
 .office-country-icon svg {
   height: 80px;
   width: 80px;
-}
 
-.office-country-icon svg * {
-  stroke-width: 3;
+  * {
+    stroke-width: 3;
+  }
 }
