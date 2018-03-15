@@ -1,6 +1,7 @@
+from django.http import Http404
 from django.shortcuts import render
 
-from dimagi.pages.models.about import Employee, Office
+from dimagi.pages.models.team import Employee, Office
 from dimagi.utils.decorators import no_index
 from dimagi.utils.wordpress_api import get_json
 
@@ -19,8 +20,14 @@ def _get_offices():
     return [Office(o) for o in offices]
 
 
+def _get_member(slug):
+    member = get_json('team/member/{}'.format(slug))
+    if not member.get('not_found'):
+        return Employee(member)
+
+
 @no_index
-def home(request):
+def about(request):
     context = {
         'management': _get_management(),
     }
@@ -32,4 +39,17 @@ def team(request):
     context = {
         'offices': _get_offices(),
     }
-    return render(request, 'pages/team.html', context)
+    return render(request, 'pages/team/team.html', context)
+
+
+@no_index
+def team_member(request, office, slug):
+    member = _get_member(slug)
+    if not member:
+        raise Http404()
+    if member.office != office:
+        raise Http404()
+    context = {
+        'employee': member,
+    }
+    return render(request, 'pages/team/member.html', context)

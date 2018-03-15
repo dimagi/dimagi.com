@@ -3,8 +3,3 @@ from dimagi.pages.views.core import (
     services,
     contact,
 )
-
-from dimagi.pages.views import (
-    about,
-    careers,
-)

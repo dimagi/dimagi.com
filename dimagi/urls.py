@@ -2,6 +2,7 @@ from __future__ import absolute_import
 from django.conf.urls import url, include
 import dimagi.pages.views as pages
 from dimagi.pages.views import commcare
+from dimagi.pages.views import team
 
 
 urlpatterns = [
@@ -13,6 +14,8 @@ urlpatterns = [
         name='contact'),
     url(r'^certified-partners/$', commcare.partners,
         name='partner_program'),
+    url(r'^about/$', team.about,
+        name='about'),
     url(r'^commcare/',
         include('dimagi.pages.urls.commcare')),
     url(r'^case-studies/',
@@ -23,8 +26,8 @@ urlpatterns = [
         include('dimagi.pages.urls.blog')),
     url(r'^sectors/',
         include('dimagi.pages.urls.sectors')),
-    url(r'^about/',
-        include('dimagi.pages.urls.about')),
+    url(r'^team/',
+        include('dimagi.pages.urls.team')),
     url(r'^careers/',
         include('dimagi.pages.urls.careers')),
     url(r'^press/',

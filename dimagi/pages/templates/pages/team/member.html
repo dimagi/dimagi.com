@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block body_class %}about-page tucked-hero{% endblock %}
+
+{% block title %}
+  {{ employee.name }}, Dimagi {{ employee.office_name }}
+{% endblock %}
+
+{% block description %}{% blocktrans %}
+  {{ employee.short_bio }}
+{% endblocktrans %}{% endblock %}
+
+{% block stylesheets %}
+  {% compress css %}
+    <link href="{% sass_src 'style/pages/about.scss' %}" rel="stylesheet" media="screen" type="text/css" />
+  {% endcompress %}
+{% endblock %}
+
+{% block hero %}
+ <div id="top"></div>
+  <section class="hero hero-about"
+           id="hero">
+    <div class="content align-left-at-medium align-center">
+      <h2 class="gap-vert-line">
+        Dimagi {{ employee.office_name }}
+      </h2>
+      <h1>
+        {{ employee.name }}
+      </h1>
+      <p>
+        {{ employee.role }}
+      </p>
+    </div> {# .content #}
+  </section>
+{% endblock %}
+
+{% block content %}
+  <section class="team-container orange-theme">
+    {% include "sections/team/member/sub_nav.html" %}
+    {% include "sections/team/member/bio.html" %}
+  </section>
+{% endblock %}

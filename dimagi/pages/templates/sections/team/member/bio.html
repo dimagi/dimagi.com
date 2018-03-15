@@ -1,0 +1,30 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="bio border-bottom"
+         id="bio">
+  <div class="content pad-vert-medium">
+
+    <div class="intro">
+      <h2>
+        {% blocktrans with employee_name=employee.name %}
+          About {{ employee_name }}
+        {% endblocktrans %}
+      </h2>
+    </div>{# .intro #}
+
+    <div class="grid-flex-at-large">
+
+      <div class="column">
+        <div class="aspect-ratio-square employee-image gap-bottom-line"
+             style="background-image:url('{{ employee.image }}');"></div>
+      </div>{# .column #}
+
+      <div class="column">
+        {{ employee.bio_html|safe }}
+      </div>{# .column #}
+
+    </div>{# .grid #}
+
+  </div> {# .content #}
+</section>

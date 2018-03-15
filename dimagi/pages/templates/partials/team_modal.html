@@ -1,3 +1,4 @@
+{% load i18n %}
 {% load dimagidotcom %}
 
 <div class="modal"
@@ -9,25 +10,39 @@
       <a href="#" class="modal-close-button"></a>
       <div class="content pad-horz-medium-at-medium pad-horz-small pad-bottom-none">
         <section>
+
           <h3 class="gap-bottom-none">
             {{ employee.name }}
           </h3>
+
           <p>
             {{ employee.role }}
           </p>
+
           <div class="grid-flex-at-large">
+
             <div class="column">
               <div class="aspect-ratio-square employee-image gap-bottom-line"
                    style="background-image:url('{{ employee.image }}');"></div>
             </div>{# .column #}
+
             <div class="column">
               <p>
-                {{ employee.bio }}
+                {{ employee.short_bio }}
               </p>
             </div>{# .column #}
-          </div>
+
+          </div>{# .grid #}
+
+          <p class="align-right">
+            <a class="arrow"
+               href="{% url 'team_member' employee.office employee.slug %}">
+              {% trans "Read More" %}
+            </a>
+          </p>
+
         </section>
-      </div>
-    </div>
-  </div>
-</div>
+      </div>{# .content #}
+    </div>{# .modal-wrapper #}
+  </div>{# .modal-scroll #}
+</div>{# .modal #}

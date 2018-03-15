@@ -22,11 +22,11 @@
     </a>
     <div class="destinations">
       <div class="content">
-        {% for office in offices %}
-          <a href="#{{ office.slug }}">
-            {{ office.name }}
-          </a>
-        {% endfor %}
+        <a href="{% url 'team' %}#{{ employee.office }}">
+          {% blocktrans %}
+            Dimagi Team
+          {% endblocktrans %}
+        </a>
       </div>{# .content #}
     </div>{# .destinations #}
   </div>{# .content #}

@@ -76,18 +76,21 @@
   background-size: cover;
 }
 
-.modal .employee-image {
+.modal .employee-image,
+.bio .employee-image{
   width: 300px;
 }
 
 @media (max-width: $width-desktop - 1px) {
-  .modal .employee-image {
+  .modal .employee-image,
+  .bio .employee-image {
     width: 100%;
   }
 }
 
 @media (max-width: $width-desktop-lg - 1px) {
-  .modal .employee-image {
+  .modal .employee-image,
+  .bio .employee-image {
     height: 300px;
     margin: 0 auto;
     padding: 0;
