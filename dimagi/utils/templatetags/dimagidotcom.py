@@ -92,7 +92,9 @@ def TRIM(value):
 
 @register.filter
 def HTTPS(value):
-    return value.replace("//", "https://")
+    if value.startswith('//'):
+        return value.replace("//", "https://")
+    return value
 
 
 @register.tag

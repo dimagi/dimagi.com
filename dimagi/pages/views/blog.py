@@ -18,9 +18,9 @@ from dimagi.utils.wordpress_api import get_json
 
 def validate_category(fn):
     @wraps(fn)
-    def _validate_category(request, category, *args, **kwargs):
-        available_cat = [c.slug for c in available_categories]
-        if category not in available_cat:
+    def _validate_category(request, category=None, *args, **kwargs):
+        available_cat = [c.slug for c in nav_categories]
+        if category not in available_cat and category is not None:
             raise Http404()
         return fn(request, category, *args, **kwargs)
 
@@ -59,8 +59,8 @@ def home(request):
 @no_index
 @hide_drift
 @validate_category
-def archive(request, category, page=None):
-    category = get_category_by_slug(category)
+def archive(request, category=None, page=None):
+    category = get_category_by_slug(category or 'archive')
     posts = _get_posts(category, page, 20)
     context = _get_global_context()
     page = int(page or 1)
@@ -78,12 +78,12 @@ def archive(request, category, page=None):
     })
 
     if page > 1:
-        previous_url = reverse('blog_archive_page',
+        previous_url = reverse('archive_page',
                                args=[category.slug, page - 1])
         context['previous_url'] = previous_url
 
     if page < total_pages:
-        next_url = reverse('blog_archive_page',
+        next_url = reverse('archive_page',
                            args=[category.slug, page + 1])
         context['next_url'] = next_url
 
@@ -92,14 +92,12 @@ def archive(request, category, page=None):
 
 @no_index
 @hide_drift
-def post(request, category, slug):
-    category = get_category_by_slug(category)
+def post(request, slug):
     _post = get_json('blog/post/{}/'.format(slug))
+
     if _post.get('not_found'):
         raise Http404()
-    if (category != ARCHIVE
-            and category.slug != _post['category']):
-        raise Http404()
+
     _post = BlogPost(_post)
     context = _get_global_context()
     context['post'] = _post

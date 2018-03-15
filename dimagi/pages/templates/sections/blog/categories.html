@@ -16,7 +16,7 @@
       {% for cat in categories %}
         <div class="column">
           <a class="tile category-tile"
-             href="{% url 'blog_archive' cat.slug %}">
+             href="{% url 'archive_category' cat.slug %}">
             <div class="gap-bottom-base">
               {% include cat.icon %}
             </div>

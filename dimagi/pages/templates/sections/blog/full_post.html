@@ -50,7 +50,7 @@
         </div>
         <div class="column align-right">
           {% blocktrans %}Read more from{% endblocktrans %}<br />
-          <a href="{% url 'blog_archive' post.category.slug %}">
+          <a href="{% url 'archive_category' post.category.slug %}">
             {{ post.category.name }}
           </a>
         </div>

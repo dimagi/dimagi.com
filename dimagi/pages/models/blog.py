@@ -38,7 +38,7 @@ class BlogPost(object):
 
     @property
     def url(self):
-        return reverse('blog_post', args=[self.category.slug, self.slug])
+        return reverse('blog_post', args=[self.slug])
 
 
 class Author(object):

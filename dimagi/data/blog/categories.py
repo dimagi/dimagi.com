@@ -9,7 +9,7 @@ PRODUCT = Category(
     name=ugettext_lazy("Product Updates"),
     description=ugettext_lazy(
         "All of the newest CommCare<br />"
-        "feature updates."
+        " feature updates."
     ),
     icon="svg/blog/icon/product.html",
     slug="product",
@@ -19,7 +19,7 @@ PARTNERS = Category(
     name=ugettext_lazy("Dimagi Partner Blog"),
     description=ugettext_lazy(
         "Read for the latest news and stories<br />"
-        "from our Partners around the world."
+        " from our Partners around the world."
     ),
     icon="svg/blog/icon/partners.html",
     slug="partners",
@@ -29,7 +29,7 @@ STAFF = Category(
     name=ugettext_lazy("Staff Blog"),
     description=ugettext_lazy(
         "Dimagi staff offer their insights on<br />"
-        "app-building and more."
+        " app building and more."
     ),
     icon="svg/blog/icon/staff.html",
     slug="staff",
@@ -39,7 +39,7 @@ TECH = Category(
     name=ugettext_lazy("Technology"),
     description=ugettext_lazy(
         "Members of our tech team share insights<br />"
-        "about technologies we use for CommCare."
+        " about technologies we use for CommCare."
     ),
     icon="svg/blog/icon/technology.html",
     slug="tech",

@@ -3,6 +3,7 @@ from django.conf.urls import url, include
 import dimagi.pages.views as pages
 from dimagi.pages.views import commcare
 from dimagi.pages.views import team
+from dimagi.pages.urls import blog
 
 
 urlpatterns = [
@@ -23,7 +24,9 @@ urlpatterns = [
     url(r'^toolkits/',
         include('dimagi.pages.urls.toolkits')),
     url(r'^blog/',
-        include('dimagi.pages.urls.blog')),
+        include(blog.blog_urls)),
+    url(r'^archive/',
+        include(blog.archive_urls)),
     url(r'^sectors/',
         include('dimagi.pages.urls.sectors')),
     url(r'^team/',
