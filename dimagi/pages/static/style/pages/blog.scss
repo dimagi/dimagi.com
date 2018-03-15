@@ -4,34 +4,11 @@
 @import 'app/variables/type';
 
 .blog-page {
-  $_base-height: 500px;
-  $_height-by-size: (
-    small: 500px,
-    medium: 500px,
-    large: 500px,
-    extra-large: 500px,
-  );
-  @include make-bg(hero, '../../pages/blog/hero', $_base-height, $_height-by-size);
+  @include make-bg-loaded(hero, '../../pages/blog/hero');
 }
 
 .post-thumbnail {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-
-  &:after {
-    background-color: $color-orange;
-    content: ' ';
-    display: block;
-    height: 100%;
-    left: 0;
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    transition: opacity .5s;
-    width: 100%;
-  }
+  @include background-placeholder();
 }
 
 a.post {
@@ -39,7 +16,7 @@ a.post {
   font-weight: $font-weight-regular;
 
   &:hover {
-    .post-thumbnail:after {
+    .post-thumbnail::after {
       opacity: .5;
     }
   }
@@ -67,16 +44,13 @@ a.post {
 }
 
 .post-author-image {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   width: 80px;
+  @include background-placeholder();
 }
 
 .post-content-text {
-  img.size-full {
+  img {
     margin-bottom: $space-small;
-
   }
 
   h2,
@@ -95,5 +69,5 @@ a.post {
     large: 265px,
     extra-large: 320px,
   );
-  @include make-bg(powerful-data-image, '../../pages/blog/cta', $_base-height, $_height-by-size, '.png');
+  @include make-bg-loaded(powerful-data-image, '../../pages/blog/cta', $_base-height, $_height-by-size, '.png');
 }

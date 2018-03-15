@@ -21,3 +21,9 @@
 [data-lazybg="true"]::after {
   opacity: 1;
 }
+
+@each $_theme, $_color in $colors-by-theme {
+  [data-lazybg].#{$_theme}-lazy-bg::after {
+    background-color: $_color;
+  }
+}

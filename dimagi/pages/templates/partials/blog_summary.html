@@ -1,6 +1,7 @@
 <a class="post" href="{{ post.url }}">
-  <div class="aspect-ratio-{{ ratio }} post-thumbnail gap-bottom-line"
-       style="background-image: url('{{ post.thumbnail }}');"></div>
+  <div class="aspect-ratio-{{ ratio }} post-thumbnail gap-bottom-line orange-lazy-bg"
+       data-lazybg="true"
+       data-src="{{ post.thumbnail }}"></div>
 
   <h6>{{ post.title }}</h6>
   <p>{{ post.excerpt }}</p>
