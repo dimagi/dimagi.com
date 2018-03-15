@@ -38,7 +38,7 @@ class Sector(object):
         self.projects = []
         self.case_studies = []
         self.additional_resources = []
-        self.download_url = None
+        self.download_url = download_url
 
     def add_projects(self, projects):
         self.projects.extend(projects)
