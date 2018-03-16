@@ -14,6 +14,7 @@ def metas(request):
     _metas["trackingConfig"] = {
         'logLevel': setting('TRACKING_LOG_LEVEL', ''),
         'enabled': setting('TRACKING_ENABLED', False),
+        'gaDomain': setting('TRACKING_GA_DOMAIN', ''),
     }
     _metas["trackingAB"] = [ab.context for ab in ACTIVE_AB_TESTS]
 

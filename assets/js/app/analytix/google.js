@@ -177,12 +177,17 @@ define([
         };
         _gtag('js', new Date());
 
-        var user = {
-          user_id: Utils.getConfig('userId') || 'none',
-        };
+        if (Utils.getConfig('userId')) {
+          var user = {
+            user_id: Utils.getConfig('userId') || 'none',
+          };
+          // Configure Gtag with User Info
+          _gtag('config', apiId, user);
+        }
 
-        // Configure Gtag with User Info
-        _gtag('config', apiId, user);
+        if (Utils.getConfig('gaDomain')) {
+          _gtag('_setDomainName', Utils.getConfig('gaDomain'));
+        }
 
         bindEvents();
       });
