@@ -6,7 +6,6 @@ from django.shortcuts import render
 from django.urls import reverse
 
 from dimagi.data.blog import (
-    available_categories,
     nav_categories,
     get_category_by_slug,
     ARCHIVE,
