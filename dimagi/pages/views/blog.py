@@ -42,7 +42,6 @@ def _get_global_context():
 
 
 @no_index
-@hide_drift
 def home(request):
     posts = _get_posts(ARCHIVE)['posts']
     popular = [BlogPost(p) for p in get_json('blog/popular', num_posts=2)['posts']]
@@ -56,7 +55,6 @@ def home(request):
 
 
 @no_index
-@hide_drift
 @validate_category
 def archive(request, category=None, page=None):
     category = get_category_by_slug(category or 'archive')
@@ -90,7 +88,6 @@ def archive(request, category=None, page=None):
 
 
 @no_index
-@hide_drift
 def post(request, slug):
     _post = get_json('blog/post/{}/'.format(slug))
 
