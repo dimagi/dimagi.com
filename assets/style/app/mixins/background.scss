@@ -34,19 +34,26 @@ $_default-height-by-size: (
 );
 
 @mixin make-bg-loaded($_class, $_bg, $_height-base: $_default-base-height, $_height-by-size: $_default-height-by-size, $_extension: '.jpg', $_loaded: '.loaded') {
+
   .#{$_class} {
-    background-image: url(quote($_bg + $_extension));
     background-position: center;
     background-repeat: no-repeat;
     background-size: auto 100%;
     height: $_height-base;
   }
 
+  .#{$_class}#{$_loaded} {
+    background-image: url(quote($_bg + $_extension));
+  }
+
   @each $_size, $_height in $_height-by-size {
     @media (min-width: map-get($widths-by-size, $_size)) {
+      .#{$_class} {
+        height: $_height;
+      }
+
       .#{$_class}#{$_loaded} {
         background-image: url(quote($_bg + '.' + $_size + $_extension));
-        height: $_height;
       }
     }
   };

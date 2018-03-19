@@ -87,10 +87,15 @@ define([
     if ($bg.attr('data-isclass')) {
       $bg.addClass(src);
       try {
+        $bg.addClass('lazy');
         var bgSrc = $bg.css('background-image').split('"')[1];
-        $('<img />').attr('src', bgSrc).on('load', function () {
+        if (bgSrc === undefined) {
           $bg.attr('data-lazybg', false);
-        });
+        } else {
+          $('<img />').attr('src', bgSrc).on('load', function () {
+            $bg.attr('data-lazybg', false);
+          });
+        }
       } catch (error) {
         $bg.attr('data-lazybg', false);
       }
@@ -102,7 +107,7 @@ define([
       });
     }
     $bg.attr({
-      "data-src": null
+      "data-src": null,
     });
   };
 
