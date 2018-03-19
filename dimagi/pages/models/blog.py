@@ -23,9 +23,11 @@ class BlogPost(object):
         self.wistia = data['wistia']
 
         self.excerpt = data.get('excerpt')
-        self.content = data.get('content').replace(
-            'http://dimagi.wpengine.com', '//dimagi.wpengine.com'
-        )
+        self.content = data.get('content')
+        if self.content:
+            self.content = self.content.replace(
+                'http://dimagi.wpengine.com', '//dimagi.wpengine.com'
+            )
 
     def __str__(self):
         return "[{category} - {date}] {title}".format(
