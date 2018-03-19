@@ -49,8 +49,6 @@ define([
 
     if (self.$placeholders) {
       self.$placeholders = self.$placeholders.filter("[data-src]");
-      console.log('placeholders');
-      console.log(self.$placeholders);
       _.each(self.$placeholders, function (img) {
         if (self.isVisible(img) && self.inView(img)) {
           self.loadPlaceholder(img);
@@ -60,15 +58,12 @@ define([
 
     if (self.$backgrounds) {
       self.$backgrounds = self.$backgrounds.filter('[data-lazybg]');
-      console.log('backgrounds');
-      console.log(self.$backgrounds);
       _.each(self.$backgrounds, function (bg) {
         if (self.isVisible(bg) && self.inView(bg)) {
           self.loadBackground(bg);
         }
       });
       self.$backgrounds = self.$backgrounds.filter('[data-lazybg]');
-      console.log('load out of view bgs');
       _.each(self.$backgrounds, function (bg) {
         self.loadBackground(bg);
       });
