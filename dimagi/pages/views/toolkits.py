@@ -5,10 +5,8 @@ from dimagi.data.toolkits import (
     get_tookits_page,
     get_toolkit_by_slug,
 )
-from dimagi.utils.decorators import no_index
 
 
-@no_index
 def view_all(request):
     toolkits = get_tookits_page(1)  # todo pages
     context = {
@@ -17,7 +15,6 @@ def view_all(request):
     return render(request, 'pages/toolkits/view_all.html', context)
 
 
-@no_index
 def view_single(request, slug):
     toolkit = get_toolkit_by_slug(slug)
     if not toolkit:

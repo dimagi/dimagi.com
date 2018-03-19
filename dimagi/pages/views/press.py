@@ -6,10 +6,8 @@ from dimagi.data.press import (
     TOTAL_PAGES,
 )
 from dimagi.data.press.outlets import OUTLETS
-from dimagi.utils.decorators import no_index
 
 
-@no_index
 def view_all(request, page=None):
     page = int(page or 1)
     press_articles = get_press_page(page)

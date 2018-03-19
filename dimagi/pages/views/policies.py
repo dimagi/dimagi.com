@@ -1,10 +1,7 @@
 from django.shortcuts import render
 from django.utils.translation import ugettext
 
-from dimagi.utils.decorators import no_index
 
-
-@no_index
 def privacy(request):
     return render(request, 'pages/policies.html', {
         'policy': 'sections/policies/privacy.html',
@@ -12,7 +9,6 @@ def privacy(request):
     })
 
 
-@no_index
 def eula(request):
     return render(request, 'pages/policies.html', {
         'policy': 'sections/policies/eula.html',
@@ -20,7 +16,6 @@ def eula(request):
     })
 
 
-@no_index
 def subscription(request):
     return render(request, 'pages/policies.html', {
         'policy': 'sections/policies/subscription.html',

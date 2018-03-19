@@ -9,10 +9,8 @@ from dimagi.data.case_studies import (
     get_case_study_by_slug,
     get_case_studies_page,
 )
-from dimagi.utils.decorators import no_index
 
 
-@no_index
 def view_all(request):
     studies = get_case_studies_page(1)  # todo other pages
     context = {
@@ -21,7 +19,6 @@ def view_all(request):
     return render(request, 'pages/case_studies/view_all.html', context)
 
 
-@no_index
 def view_single(request, slug):
     study = get_case_study_by_slug(slug)
     if not study:
@@ -32,7 +29,6 @@ def view_single(request, slug):
     return render(request, 'pages/case_studies/view_single.html', context)
 
 
-@no_index
 @require_http_methods(["POST"])
 def download(request, slug):
     study = get_case_study_by_slug(slug)

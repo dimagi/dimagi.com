@@ -4,7 +4,6 @@ from dimagi.utils.decorators import no_index
 from dimagi.utils.partners import get_logos
 
 
-@no_index
 def home(request):
     context = {
         'partners': get_logos(),
@@ -12,7 +11,6 @@ def home(request):
     return render(request, 'pages/home.html', context)
 
 
-@no_index
 def services(request):
     context = {
         'partners': get_logos(),
@@ -20,7 +18,6 @@ def services(request):
     return render(request, 'pages/services.html', context)
 
 
-@no_index
 def contact(request):
     return render(request, 'pages/contact.html')
 

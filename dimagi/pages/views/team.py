@@ -2,7 +2,6 @@ from django.http import Http404
 from django.shortcuts import render
 
 from dimagi.pages.models.team import Employee, Office
-from dimagi.utils.decorators import no_index
 from dimagi.utils.wordpress_api import get_json
 
 
@@ -26,7 +25,6 @@ def _get_member(slug):
         return Employee(member)
 
 
-@no_index
 def about(request):
     context = {
         'management': _get_management(),
@@ -34,7 +32,6 @@ def about(request):
     return render(request, 'pages/about.html', context)
 
 
-@no_index
 def team(request):
     context = {
         'offices': _get_offices(),
@@ -42,7 +39,6 @@ def team(request):
     return render(request, 'pages/team/team.html', context)
 
 
-@no_index
 def team_member(request, office, slug):
     member = _get_member(slug)
     if not member:
