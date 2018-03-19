@@ -3,6 +3,7 @@ from collections import namedtuple
 from django.urls import reverse
 from django.utils.dateparse import parse_datetime
 
+from dimagi.utils.wordpress_api import fix_https
 
 Category = namedtuple('Category', 'name description icon slug')
 
@@ -23,11 +24,7 @@ class BlogPost(object):
         self.wistia = data['wistia']
 
         self.excerpt = data.get('excerpt')
-        self.content = data.get('content')
-        if self.content:
-            self.content = self.content.replace(
-                'http://dimagi.wpengine.com', '//dimagi.wpengine.com'
-            )
+        self.content = fix_https(data.get('content'))
 
     def __str__(self):
         return "[{category} - {date}] {title}".format(
@@ -48,6 +45,6 @@ class BlogPost(object):
 class Author(object):
 
     def __init__(self, data):
-        self.image = data['image']
+        self.image = fix_https(data['image'])
         self.name = data['name']
         self.role = data['role']

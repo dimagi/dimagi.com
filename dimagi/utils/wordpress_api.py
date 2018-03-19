@@ -17,6 +17,14 @@ def _get_headers():
     }
 
 
+def fix_https(content):
+    if content:
+        content = content.replace(
+            'http://dimagi', '//dimagi'
+        ).replace('http://www.dimagi.com', 'https://dimagi.wpengine.com')
+    return content
+
+
 def get_json(item, **kwargs):
     data = requests.get(_get_url(item), headers=_get_headers(), params=kwargs)
     return data.json()
