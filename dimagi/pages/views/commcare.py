@@ -1,5 +1,7 @@
 from __future__ import absolute_import
 from django.shortcuts import render
+
+from dimagi.utils.decorators import no_index
 from dimagi.utils.partners import get_logos
 from dimagi.data.commcare.pricing import feature_groups
 
@@ -12,6 +14,14 @@ def _get_global_context():
 
 def product(request):
     context = _get_global_context()
+    context['loaded'] = ' loaded'
+    return render(request, 'pages/commcare/product.html', context)
+
+
+@no_index
+def product_test(request):
+    context = _get_global_context()
+    context['loaded'] = ''
     return render(request, 'pages/commcare/product.html', context)
 
 

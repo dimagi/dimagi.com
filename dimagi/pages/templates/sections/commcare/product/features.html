@@ -51,8 +51,10 @@
       </div>{# .copy #}
     </div>{# .grid-2-at-medium #}
   </div>{# .content #}
- <div class="image off-grid white-lazy-bg"
-      data-lazybg="true"
-      data-src="loaded"
-      data-isclass="true"></div>{# .features .image {} => commcare/product.scss #}
+ <div class="image off-grid white-lazy-bg{{ loaded }}"
+       {% if not loaded %}
+       data-lazybg="true"
+       data-src="loaded"
+       data-isclass="true"
+       {% endif %}></div>{# .features .image {} => commcare/product.scss #}
 </section>

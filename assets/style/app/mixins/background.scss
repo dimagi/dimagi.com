@@ -105,12 +105,16 @@ $_default-height-by-size: (
     $_w: map-get($_base, w);
     $_h: map-get($_base, h);
 
-    background-color: $color-border;
-    background-image: url(quote($_bg-thumb));
     background-repeat: no-repeat;
     background-size: 100%;
     height: $_h;
     width: $_w;
+
+    &::after {
+      background-image: url(quote($_bg-thumb));
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
   }
 
   .carousel .carousel-slide .#{$_class-name}#{$_loaded} {
