@@ -47,6 +47,15 @@ define([
       });
     }
 
+    if (self.$backgrounds) {
+     self.$backgrounds = self.$backgrounds.filter('[data-lazybg]');
+      _.each(self.$backgrounds, function (bg) {
+        if (self.isVisible(bg) && self.inView(bg)) {
+          self.loadBackground(bg);
+        }
+      });
+    }
+
     if (self.$placeholders) {
       self.$placeholders = self.$placeholders.filter("[data-src]");
       _.each(self.$placeholders, function (img) {
@@ -56,19 +65,23 @@ define([
       });
     }
 
+  };
+
+  self.loadAllImages = function () {
     if (self.$backgrounds) {
-      self.$backgrounds = self.$backgrounds.filter('[data-lazybg]');
-      _.each(self.$backgrounds, function (bg) {
-        if (self.isVisible(bg) && self.inView(bg)) {
-          self.loadBackground(bg);
-        }
-      });
-      self.$backgrounds = self.$backgrounds.filter('[data-lazybg]');
+     self.$backgrounds = self.$backgrounds.filter('[data-lazybg]');
       _.each(self.$backgrounds, function (bg) {
         self.loadBackground(bg);
       });
     }
 
+    if (self.$placeholders) {
+      self.$placeholders = self.$placeholders.filter("[data-src]");
+      // load other images
+      _.each(self.$placeholders, function (img) {
+        self.loadPlaceholder(img);
+      });
+    }
   };
 
   self.isVisible = function (img) {
@@ -121,6 +134,7 @@ define([
       self.getHtml();
       self.bindEvents();
       self.lazyCheck();
+      self.loadAllImages();
     }
   };
 });
