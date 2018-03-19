@@ -13,6 +13,7 @@ define([
 
     self.$images = $('[data-lazyimg="true"]');
     self.$backgrounds = $('[data-lazybg="true"]');
+    self.$placeholders = $('[data-lazyplaceholder="true"]');
   };
 
   self.bindEvents = function () {
@@ -46,12 +47,30 @@ define([
       });
     }
 
+    if (self.$placeholders) {
+      self.$placeholders = self.$placeholders.filter("[data-src]");
+      console.log('placeholders');
+      console.log(self.$placeholders);
+      _.each(self.$placeholders, function (img) {
+        if (self.isVisible(img) && self.inView(img)) {
+          self.loadPlaceholder(img);
+        }
+      });
+    }
+
     if (self.$backgrounds) {
-      self.$backgrounds = self.$backgrounds.filter("[data-src]");
+      self.$backgrounds = self.$backgrounds.filter('[data-lazybg]');
+      console.log('backgrounds');
+      console.log(self.$backgrounds);
       _.each(self.$backgrounds, function (bg) {
         if (self.isVisible(bg) && self.inView(bg)) {
           self.loadBackground(bg);
         }
+      });
+      self.$backgrounds = self.$backgrounds.filter('[data-lazybg]');
+      console.log('load out of view bgs');
+      _.each(self.$backgrounds, function (bg) {
+        self.loadBackground(bg);
       });
     }
 
@@ -81,33 +100,24 @@ define([
     $img.attr('data-lazyimg', false);
   };
 
-  self.loadBackground = function (bg) {
+  self.loadPlaceholder = function (bg) {
     var $bg = $(bg),
         src = $(bg).attr('data-src');
-    if ($bg.attr('data-isclass')) {
-      $bg.addClass(src);
-      try {
-        $bg.addClass('lazy');
-        var bgSrc = $bg.css('background-image').split('"')[1];
-        if (bgSrc === undefined) {
-          $bg.attr('data-lazybg', false);
-        } else {
-          $('<img />').attr('src', bgSrc).on('load', function () {
-            $bg.attr('data-lazybg', false);
-          });
-        }
-      } catch (error) {
-        $bg.attr('data-lazybg', false);
-      }
-    } else {
-      $('<img />').attr('src', src).on('load', function () {
-        $(this).remove();
-        $bg.css('background-image', 'url("' + src + '")');
-        $bg.attr('data-lazybg', false);
-      });
-    }
+    $('<img />').attr('src', src).on('load', function () {
+      $(this).remove();
+      $bg.css('background-image', 'url("' + src + '")');
+      $bg.attr('data-lazyplaceholder', "loaded");
+    });
     $bg.attr({
       "data-src": null,
+    });
+  };
+
+  self.loadBackground = function (bg) {
+    var $bg = $(bg);
+    $bg.addClass('loaded');
+    $bg.attr({
+      "data-lazybg": null,
     });
   };
 

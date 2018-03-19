@@ -26,6 +26,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url('#{$_bg-thumb}');
+  transition: .5s background ease-in-out;
 
   &.loaded {
     background-image: url('#{$_bg-url}');
@@ -58,17 +59,12 @@ $_default-height-by-size: (
   $_bg-thumb: str-replace($_bg, 'pages', 'thumbnails/pages');
 
   .#{$_class} {
+    background-image: url(quote($_bg-thumb + $_extension));
     background-position: center;
     background-repeat: no-repeat;
     background-size: auto 100%;
     height: $_height-base;
-
-    &:after {
-      background-image: url(quote($_bg-thumb + $_extension));
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: auto 100%;
-    }
+    transition: .5s background ease-in-out;
   }
 
   .#{$_class}#{$_loaded} {
@@ -78,11 +74,8 @@ $_default-height-by-size: (
   @each $_size, $_height in $_height-by-size {
     @media (min-width: map-get($widths-by-size, $_size)) {
       .#{$_class} {
+        background-image: url(quote($_bg-thumb + '.' + $_size + $_extension));
         height: $_height;
-
-        &::after {
-          background-image: url(quote($_bg-thumb + '.' + $_size + $_extension));
-        }
       }
 
       .#{$_class}#{$_loaded} {
@@ -105,16 +98,12 @@ $_default-height-by-size: (
     $_w: map-get($_base, w);
     $_h: map-get($_base, h);
 
+    background-image: url(quote($_bg-thumb));
     background-repeat: no-repeat;
     background-size: 100%;
     height: $_h;
+    transition: .5s background ease-in-out;
     width: $_w;
-
-    &::after {
-      background-image: url(quote($_bg-thumb));
-      background-repeat: no-repeat;
-      background-size: 100%;
-    }
   }
 
   .carousel .carousel-slide .#{$_class-name}#{$_loaded} {

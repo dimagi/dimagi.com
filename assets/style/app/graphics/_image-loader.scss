@@ -5,7 +5,7 @@
   100% { transform: rotate(360deg); }
 }
 
-[data-lazybg] {
+[data-lazyplaceholder] {
   position: relative;
 
   &::before {
@@ -24,6 +24,7 @@
   }
 
   &::after {
+    background-color: $color-text;
     content: ' ';
     display: block;
     height: 100%;
@@ -37,23 +38,23 @@
   }
 }
 
-[data-lazybg="true"]::before {
+[data-lazyplaceholder="true"]::before {
   animation: spin 2s linear infinite;
   border-top: 16px solid $color-white;
   opacity: .5;
 }
 
 
-[data-lazybg="true"]::after {
+[data-lazyplaceholder="true"]::after {
   opacity: 1;
 }
 
 @each $_theme, $_color in $colors-by-theme {
-  [data-lazybg].#{$_theme}-lazy-bg::after {
+  [data-lazyplaceholder].#{$_theme}-lazy-bg::after {
     background-color: $_color;
   }
 }
 
-[data-lazybg].white-lazy-bg::after {
+[data-lazyplaceholder].white-lazy-bg::after {
   background-color: $color-white;
 }

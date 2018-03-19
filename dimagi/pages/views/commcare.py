@@ -14,14 +14,12 @@ def _get_global_context():
 
 def product(request):
     context = _get_global_context()
-    context['loaded'] = ' loaded'
     return render(request, 'pages/commcare/product.html', context)
 
 
 @no_index
 def product_test(request):
     context = _get_global_context()
-    context['loaded'] = ''
     return render(request, 'pages/commcare/product.html', context)
 
 

@@ -1,9 +1,7 @@
 <div class="carousel-slide">
-  <div class="{% block class_image %}image{% endblock %}{{ loaded }}"
+  <div class="{% block class_image %}image{% endblock %}"
        {% if not loaded %}
        data-lazybg="true"
-       data-src="loaded"
-       data-isclass="true"
        {% endif %}></div>
   <div class="desc">
     <blockquote class="gap-top-small">
