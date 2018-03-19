@@ -1,0 +1,72 @@
+@import 'app/mixins/background';
+@import 'app/variables/colors';
+@import 'app/variables/sizes';
+@import 'app/variables/type';
+
+.home-page {
+  $_base-height: 500px;
+  $_height-by-size: (
+    small: 500px,
+    medium: 500px,
+    large: 500px,
+    extra-large: 500px,
+  );
+  @include make-bg(hero, '../../pages/home/hero', $_base-height, $_height-by-size);
+}
+
+.build {
+  $_base-height: 122px;
+  $_height-by-size: (
+    small: 186px,
+    medium: 298px,
+    large: 362px,
+    extra-large: 442px,
+  );
+  width: 100%;
+  @include make-bg(image, '../../pages/home/build', $_base-height, $_height-by-size);
+}
+
+.video-intro .image {
+  @include background-cover('../../pages/home/video-intro-banner.jpg');
+  height: 160px;
+  width: 250px;
+}
+
+.workforce .image.testimonial1 {
+  @include background-cover('../../pages/home/workforce-1.jpg');
+}
+
+.workforce .image.testimonial2 {
+  @include background-cover('../../pages/home/workforce-2.jpg');
+}
+
+.workforce .image.testimonial3 {
+  @include background-cover('../../pages/home/workforce-3.jpg');
+}
+
+.awards {
+  $_base-height: 315px;
+  $_height-by-size: (
+    small: 360px,
+    medium: 750px,
+    large: 655px,
+    extra-large: 610px,
+  );
+  @include make-bg(image, '../../pages/home/awards', $_base-height, $_height-by-size);
+
+  @media (min-width: $width-desktop) {
+    .off-grid {
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      right: auto;
+      width: 100%;
+      z-index: 1;
+    }
+
+    .content {
+      position: relative;
+      z-index: 2;
+    }
+  }
+}

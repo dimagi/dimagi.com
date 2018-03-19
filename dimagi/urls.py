@@ -11,6 +11,8 @@ urlpatterns = [
     url(r'^$', pages.home, name='home'),
     url(r'^services/$', pages.services, name='services'),
     url(r'^contact/$', pages.contact,  name='contact'),
+    url(r'^test_500/$', pages.test_500),
+    url(r'^test_404/$', pages.test_404),
     url(r'^certified-partners/$', commcare.partners, name='partner_program'),
     url(r'^blog/', include(blog.blog_urls)),
     url(r'^about/', include(team.about_urls)),

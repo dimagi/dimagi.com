@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block body_class %}home-page tucked-hero{% endblock %}
+
+{% block stylesheets %}
+  {% compress css %}
+    <link href="{% sass_src 'style/errors.scss' %}" rel="stylesheet" media="screen" type="text/css" />
+  {% endcompress %}
+{% endblock %}
+
+{% block hero %}
+<section class="hero"
+         id="hero">
+  <div class="content content-width-large inverted align-center display-flex flex-valign-middle expand-vertical offset-top-small flex-align-center">
+    <div class="copy expand position-relative">
+
+      <h1>
+        404
+      </h1>
+      <p>
+        {% blocktrans %}
+          How CommCare is used across various sectors.
+        {% endblocktrans %}
+      </p>
+
+    </div>{# .copy #}
+  </div>{# .content #}
+</section>
+{% endblock %}
+
+{% block content %}
+  <section class="error-container">
+  </section>
+{% endblock %}

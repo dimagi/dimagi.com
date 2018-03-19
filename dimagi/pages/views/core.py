@@ -24,3 +24,13 @@ def services(request):
 def contact(request):
     return render(request, 'pages/contact.html')
 
+
+@no_index
+def test_500(request):
+    return render(request, '500.html')
+
+
+@no_index
+def test_404(request):
+    return render(request, '404.html')
+
