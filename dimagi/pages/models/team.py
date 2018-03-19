@@ -7,6 +7,9 @@ class Employee(object):
         self.slug = data['slug']
         self.name = data['name']
         self.image = data['image']
+        self.image = self.image.replace(
+            'http://dimagi.wpengine.com', '//dimagi.wpengine.com'
+        )
         self.role = data['role']
         self.bio = data['bio']
         self.bio_html = data['bio_html']
