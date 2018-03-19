@@ -10,8 +10,12 @@
 }
 
 @mixin background-cover-loaded($_bg-url) {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
   &.loaded {
-    @include background-cover($_bg-url);
+    background-image: url('#{$_bg-url}');
   }
 }
 

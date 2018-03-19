@@ -53,19 +53,19 @@
 }
 
 .team .image.teampic1 {
-  @include background-cover('../../pages/about/teampic1.jpg');
+  @include background-cover-loaded('../../pages/about/teampic1.jpg');
 }
 
 .team .image.teampic2 {
-  @include background-cover('../../pages/about/teampic2.jpg');
+  @include background-cover-loaded('../../pages/about/teampic2.jpg');
 }
 
 .team .image.teampic3 {
-  @include background-cover('../../pages/about/teampic3.jpg');
+  @include background-cover-loaded('../../pages/about/teampic3.jpg');
 }
 
 .team .image.teampic4 {
-  @include background-cover('../../pages/about/teampic4.jpg');
+  @include background-cover-loaded('../../pages/about/teampic4.jpg');
 }
 
 .employee-image {
@@ -95,15 +95,15 @@
 }
 
 .company-info .image.infopic1 {
-  @include background-cover('../../pages/about/infopic1.jpg');
+  @include background-cover-loaded('../../pages/about/infopic1.jpg');
 }
 
 .company-info .image.infopic2 {
-  @include background-cover('../../pages/about/infopic2.jpg');
+  @include background-cover-loaded('../../pages/about/infopic2.jpg');
 }
 
 .company-info  .image.infopic3 {
-  @include background-cover('../../pages/about/infopic3.jpg');
+  @include background-cover-loaded('../../pages/about/infopic3.jpg');
 }
 
 .office-country-icon svg {
