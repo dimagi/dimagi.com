@@ -10,12 +10,8 @@
 }
 
 @mixin background-cover-loaded($_bg-url) {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-
   &.loaded {
-    background-image: url('#{$_bg-url}');
+    @include background-cover($_bg-url);
   }
 }
 
@@ -75,16 +71,19 @@ $_default-height-by-size: (
     $_h: map-get($_base, h);
 
     background-color: $color-border;
-    background-image: url(quote($_url));
     background-repeat: no-repeat;
     background-size: 100%;
     height: $_h;
     width: $_w;
   }
 
+  .carousel .carousel-slide .#{$_class-name}#{$_loaded} {
+    background-image: url(quote($_url));
+  }
+
   @each $_size, $_screen-width in $widths-by-size {
     @media (min-width: $_screen-width) {
-      .carousel .carousel-slide .#{$_class-name}#{$_loaded} {
+      .carousel .carousel-slide .#{$_class-name} {
         $_dimensions: map-get($_sizes, $_size);
         $_w: map-get($_dimensions, w);
         $_h: map-get($_dimensions, h);

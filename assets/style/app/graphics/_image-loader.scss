@@ -27,3 +27,8 @@
     background-color: $_color;
   }
 }
+
+
+[data-lazybg].white-lazy-bg::after {
+  background-color: $color-white;
+}

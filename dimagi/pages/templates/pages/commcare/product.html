@@ -21,7 +21,11 @@
 
 {% block hero %}
   <div id="top"></div>
-  <section class="hero hero-products-commcare" id="hero">
+  <section class="hero hero-products-commcare"
+           data-lazybg="true"
+           data-src="loaded"
+           data-isclass="true"
+           id="hero">
     <div class="content offset-top-extra-large align-left-at-medium align-center">
       <h2>
         {% include "svg/commcare/logo.html" %}
