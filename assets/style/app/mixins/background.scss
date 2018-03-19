@@ -1,17 +1,34 @@
 @import 'app/variables/sizes';
 @import 'app/variables/colors';
 
+@function str-replace($string, $search, $replace: '') {
+  $index: str-index($string, $search);
+
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+  }
+
+  @return $string;
+}
+
 
 @mixin background-cover($_bg-url) {
-  background-image: url('#{$_bg-url}');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-image: url('#{$_bg-url}');
 }
 
 @mixin background-cover-loaded($_bg-url) {
+  $_bg-thumb: str-replace($_bg-url, 'pages', 'thumbnails/pages');
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('#{$_bg-thumb}');
+
   &.loaded {
-    @include background-cover($_bg-url);
+    background-image: url('#{$_bg-url}');
   }
 }
 
@@ -22,6 +39,10 @@
   background-size: cover;
   background-color: $_bg-color;
   transition: .5s background ease-in-out;
+
+  &::after {
+    background-color: $_bg-color;
+  }
 }
 
 
@@ -34,12 +55,20 @@ $_default-height-by-size: (
 );
 
 @mixin make-bg-loaded($_class, $_bg, $_height-base: $_default-base-height, $_height-by-size: $_default-height-by-size, $_extension: '.jpg', $_loaded: '.loaded') {
+  $_bg-thumb: str-replace($_bg, 'pages', 'thumbnails/pages');
 
   .#{$_class} {
     background-position: center;
     background-repeat: no-repeat;
     background-size: auto 100%;
     height: $_height-base;
+
+    &:after {
+      background-image: url(quote($_bg-thumb + $_extension));
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: auto 100%;
+    }
   }
 
   .#{$_class}#{$_loaded} {
@@ -50,6 +79,10 @@ $_default-height-by-size: (
     @media (min-width: map-get($widths-by-size, $_size)) {
       .#{$_class} {
         height: $_height;
+
+        &::after {
+          background-image: url(quote($_bg-thumb + '.' + $_size + $_extension));
+        }
       }
 
       .#{$_class}#{$_loaded} {
@@ -65,12 +98,15 @@ $_default-height-by-size: (
 
 
 @mixin make-carousel-slide-loaded($_class-name, $_sizes, $_url, $_loaded: '.loaded') {
+  $_bg-thumb: str-replace($_url, 'pages', 'thumbnails/pages');
+
   .carousel .carousel-slide .#{$_class-name} {
     $_base: map-get($_sizes, extra-small);
     $_w: map-get($_base, w);
     $_h: map-get($_base, h);
 
     background-color: $color-border;
+    background-image: url(quote($_bg-thumb));
     background-repeat: no-repeat;
     background-size: 100%;
     height: $_h;
