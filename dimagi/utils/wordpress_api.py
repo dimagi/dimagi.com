@@ -17,11 +17,15 @@ def _get_headers():
     }
 
 
-def fix_https(content):
+def url_filters(content):
     if content:
         content = content.replace(
             'http://dimagi', '//dimagi'
-        ).replace('http://www.dimagi.com', 'https://dimagi.wpengine.com')
+        ).replace(
+            'http://www.dimagi.com', 'https://dimagi.wpengine.com'
+        ).replace(
+            'src="/wp-content/', 'src="//dimagi.wpengine.com/wp-content/'
+        )
     return content
 
 

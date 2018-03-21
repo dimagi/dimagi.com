@@ -1,6 +1,6 @@
 from __future__ import absolute_import
 
-from dimagi.utils.wordpress_api import fix_https
+from dimagi.utils.wordpress_api import url_filters
 
 
 class Employee(object):
@@ -8,7 +8,7 @@ class Employee(object):
     def __init__(self, data):
         self.slug = data['slug']
         self.name = data['name']
-        self.image = fix_https(data['image'])
+        self.image = url_filters(data['image'])
         self.role = data['role']
         self.bio = data['bio']
         self.bio_html = data['bio_html']
