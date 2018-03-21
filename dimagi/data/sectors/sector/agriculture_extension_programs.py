@@ -14,7 +14,7 @@ SECTOR = Sector(
     ),
     template="data/sectors/content/agriculture_extension_programs.html",
     area=areas.AGRICULTURE,
-    slug="agriculture-extension-programs",
+    slug="agricultural-extension-programs",
     slides=[
         "data/sectors/content/agriculture_extension_programs/"
         "agricultural_extension_workers.html",
