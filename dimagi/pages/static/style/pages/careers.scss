@@ -4,14 +4,7 @@
 @import 'app/variables/type';
 
 .careers-page {
-  $_base-height: 500px;
-  $_height-by-size: (
-    small: 500px,
-    medium: 500px,
-    large: 500px,
-    extra-large: 500px,
-  );
-  @include make-bg(hero, '../../pages/careers/hero', $_base-height, $_height-by-size);
+  @include make-bg-loaded(hero, '../../pages/careers/hero');
 }
 
 @media (min-width: $width-desktop) {
@@ -32,35 +25,35 @@
 }
 
 .overview .image.teampic1 {
-  @include background-cover('../../pages/careers/teampic1.jpg');
+  @include background-cover-loaded('../../pages/careers/teampic1.jpg');
 }
 
 .overview .image.teampic2 {
-  @include background-cover('../../pages/careers/teampic2.jpg');
+  @include background-cover-loaded('../../pages/careers/teampic2.jpg');
 }
 
 .overview .image.teampic3 {
-  @include background-cover('../../pages/careers/teampic3.jpg');
+  @include background-cover-loaded('../../pages/careers/teampic3.jpg');
 }
 
 .overview .image.teampic4 {
-  @include background-cover('../../pages/careers/teampic4.jpg');
+  @include background-cover-loaded('../../pages/careers/teampic4.jpg');
 }
 
 .awards .image.company-culture {
-  @include background-cover('../../pages/careers/entrepreneur.jpg');
+  @include background-cover-loaded('../../pages/careers/entrepreneur.jpg');
 }
 
 .awards .image.best-workplaces {
-  @include background-cover('../../pages/careers/bestwork.png');
+  @include background-cover-loaded('../../pages/careers/bestwork.png');
 }
 
 .awards .image.b-corporation {
-  @include background-cover('../../pages/careers/bcorp.png');
+  @include background-cover-loaded('../../pages/careers/bcorp.png');
 }
 
 .awards .image.top-5000 {
-  @include background-cover('../../pages/careers/inc5000.png');
+  @include background-cover-loaded('../../pages/careers/inc5000.png');
 }
 
 .post-thumbnail {
@@ -91,19 +84,19 @@ a.post {
 }
 
 .life .image.tedx-talk {
-  @include background-cover('../../pages/careers/technology.jpg');
+  @include background-cover-loaded('../../pages/careers/technology.jpg');
 }
 
 .life .image.away-month {
-  @include background-cover('../../pages/careers/awaymonth.jpg');
+  @include background-cover-loaded('../../pages/careers/awaymonth.jpg');
 }
 
 .life .image.core-values {
-  @include background-cover('../../pages/careers/corevalues.jpg');
+  @include background-cover-loaded('../../pages/careers/corevalues.jpg');
 }
 
 .life .image.global-services {
-  @include background-cover('../../pages/careers/globalservices.jpg');
+  @include background-cover-loaded('../../pages/careers/globalservices.jpg');
 }
 
 .application-content ul > li::before { // scss-lint:disable PropertyCount
@@ -147,4 +140,3 @@ a.post {
   line-height: 20px;
   margin-bottom: 10px;
 }
-
