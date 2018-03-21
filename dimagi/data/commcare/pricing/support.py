@@ -69,10 +69,10 @@ GROUP.add_features([
                 "1 Business Day"
             ),
             advanced=ugettext_lazy(
-                "1 Business Day"
+                "Priority"
             ),
             enterprise=ugettext_lazy(
-                "1 Business Day"
+                "Priority"
             ),
         ),
     ),
