@@ -53,3 +53,6 @@ assets/js/test.js
 *.DS_Store
 
 greenhouse.css
+
+dimagi/data/static/thumbnails/*
+dimagi/pages/static/thumbnails/*

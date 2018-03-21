@@ -15,7 +15,7 @@ class Command(BaseCommand):
     '''
 
     def handle(self, **options):
-        print('build thumbnails')
+        print("Building Thumbnails")
 
         prefix = os.getcwd()
 
@@ -23,7 +23,6 @@ class Command(BaseCommand):
             for path, storage in finder.list(['.*', '*~', '* *']):
                 if not storage.location.startswith(prefix):
                     continue
-                thumbs_path = os.path.join(storage.location, THUMBNAIL_DIR)
                 if path.endswith('.jpg') or path.endswith('.png'):
                     source = os.path.join(storage.location, path)
                     dest = os.path.join(storage.location, THUMBNAIL_DIR, path)
