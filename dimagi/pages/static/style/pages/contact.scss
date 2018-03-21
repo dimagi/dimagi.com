@@ -4,14 +4,7 @@
 @import 'app/variables/type';
 
 .contact-page {
-  $_base-height: 500px;
-  $_height-by-size: (
-    small: 500px,
-    medium: 500px,
-    large: 500px,
-    extra-large: 500px,
-  );
-  @include make-bg(hero, '../../pages/contact/hero', $_base-height, $_height-by-size);
+  @include make-bg-loaded(hero, '../../pages/contact/hero');
 }
 
 @media (min-width: $width-desktop) {
