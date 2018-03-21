@@ -31,3 +31,6 @@ def test_500(request):
 def test_404(request):
     return render(request, '404.html')
 
+
+def verify(request):
+    return render(request, 'google9633af922b8b0064.html')

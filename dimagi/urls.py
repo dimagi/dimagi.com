@@ -52,4 +52,8 @@ urlpatterns = [
     url(r'^self-starter-blog-aquaya-on-implementing-commcare-for-water-projects-in-senegal/$',
         redirect.blog('self-starter-blog-aquaya-on-implementing-commcare-for-water-projects-in-senegal')),
 
+
+
+    url(r'^google9633af922b8b0064.html$', pages.verify),
+
 ]
