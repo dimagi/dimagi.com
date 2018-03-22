@@ -4,14 +4,7 @@
 @import 'app/variables/type';
 
 .partners-commcare-page {
-  $_base-height: 500px;
-  $_height-by-size: (
-    small: 500px,
-    medium: 500px,
-    large: 500px,
-    extra-large: 500px,
-  );
-  @include make-bg(hero, '../../../pages/commcare/partners/hero', $_base-height, $_height-by-size);
+  @include make-bg-loaded(hero, '../../../pages/commcare/partners/hero');
 }
 
 @media (min-width: $width-desktop) {
@@ -31,8 +24,8 @@
     large: 265px,
     extra-large: 320px,
   );
-  @include make-bg(agimpact-image, '../../../pages/commcare/partners/agimpact', $_base-height, $_height-by-size);
-  @include make-bg(noukod-image, '../../../pages/commcare/partners/noukod', $_base-height, $_height-by-size);
+  @include make-bg-loaded(agimpact-image, '../../../pages/commcare/partners/agimpact', $_base-height, $_height-by-size);
+  @include make-bg-loaded(noukod-image, '../../../pages/commcare/partners/noukod', $_base-height, $_height-by-size);
 }
 
 .testimonials {
@@ -44,8 +37,8 @@
     extra-large: (w: 1016px, h: 408px),
   );
 
-  @include make-carousel-slide(image-agimpact, $_sizes, '../../../pages/commcare/product/testimonial1.jpg');
-  @include make-carousel-slide(image-nou-kod, $_sizes, '../../../pages/commcare/product/testimonial2.jpg');
-  @include make-carousel-slide(image-delivery-services, $_sizes, '../../../pages/commcare/product/testimonial3.jpg');
-  @include make-carousel-slide(image-cleaning-data, $_sizes, '../../../pages/commcare/product/testimonial4.jpg');
+  @include make-carousel-slide-loaded(image-agimpact, $_sizes, '../../../pages/commcare/product/testimonial1.jpg');
+  @include make-carousel-slide-loaded(image-nou-kod, $_sizes, '../../../pages/commcare/product/testimonial2.jpg');
+  @include make-carousel-slide-loaded(image-delivery-services, $_sizes, '../../../pages/commcare/product/testimonial3.jpg');
+  @include make-carousel-slide-loaded(image-cleaning-data, $_sizes, '../../../pages/commcare/product/testimonial4.jpg');
 }
