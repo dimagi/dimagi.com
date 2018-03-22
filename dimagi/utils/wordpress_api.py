@@ -24,7 +24,7 @@ def url_filters(content):
         ).replace(
             'http://www.dimagi.com', 'https://dimagi.wpengine.com'
         ).replace(
-            'src="/wp-content/', 'src="//dimagi.wpengine.com/wp-content/'
+            '"/wp-content/', '"//dimagi.wpengine.com/wp-content/'
         )
     return content
 

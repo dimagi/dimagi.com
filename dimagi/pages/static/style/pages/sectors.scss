@@ -3,16 +3,8 @@
 @import 'app/variables/sizes';
 @import 'app/variables/type';
 
-$_base-height: 500px;
-$_height-by-size: (
-  small: 500px,
-  medium: 500px,
-  large: 500px,
-  extra-large: 500px,
-);
-
 .sectors-page {
-  @include make-bg(hero, '../../pages/sectors/hero', $_base-height, $_height-by-size);
+  @include make-bg-loaded(hero, '../../pages/sectors/hero');
 }
 
 $_slugs: (
@@ -38,27 +30,12 @@ $_slugs: (
 
 @each $_slug in $_slugs {
   .#{$_slug}-page {
-    @include make-bg(hero, '../../pages/sectors/#{$_slug}/hero', $_base-height, $_height-by-size);
+    @include make-bg-loaded(hero, '../../pages/sectors/#{$_slug}/hero');
   }
 }
-
-.sector-thumbnail {
-  background-position: top center;
-  background-repeat: no-repeat;
-  background-size: 100% auto;
-}
-
-@each $_slug in $_slugs {
-  .#{$_slug}-thumbnail {
-    background-image: url('../../pages/sectors/#{$_slug}/sector-image.jpg');
-  }
-}
-
 
 .study-thumbnail {
-  background-position: top center;
-  background-repeat: no-repeat;
-  background-size: 100% auto;
+  @include background-placeholder('top center');
   padding-top: 126%;
 
   &:after {

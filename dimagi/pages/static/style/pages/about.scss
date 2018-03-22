@@ -18,7 +18,7 @@
     large: 500px,
     extra-large: 500px,
   );
-  @include make-bg(image, '../../pages/about/datalines', $_base-height, $_height-by-size);
+  @include make-bg-loaded(image, '../../pages/about/datalines', $_base-height, $_height-by-size);
 
   .off-grid {
     display: none;

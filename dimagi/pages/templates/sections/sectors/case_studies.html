@@ -15,7 +15,7 @@
 
     <div class="carousel carousel-fade-inactive pad-bottom-medium">
       <div class="carousel-container">
-        <div class="spinner spinner-large"></div>
+        <div class="spinner spinner-large"></div>å
         <div class="carousel-slider">
 
           {% for study in sector.case_studies %}
@@ -23,7 +23,8 @@
               <div class="content-width-extra-small gap-horz-small">
                 <a class="study" href="{% url 'case_study' study.slug %}">
                   <div class="aspect-ratio-square study-thumbnail gap-bottom-line"
-                       style="background-image: url('{% static "data/case_studies/covers/"|add:study.slug|add:".jpg" %}');"></div>
+                       data-lazyplaceholder="true"
+                       data-src="{% static "data/case_studies/covers/"|add:study.slug|add:".jpg" %}"></div>
 
                   <h4>{{ study.title }}</h4>
                 </a>

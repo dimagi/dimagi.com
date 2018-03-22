@@ -4,7 +4,7 @@
 @import 'app/variables/type';
 
 .home-page {
-  @include make-bg(hero, '../../pages/home/hero');
+  @include make-bg-loaded(hero, '../../pages/home/hero');
 }
 
 .build {

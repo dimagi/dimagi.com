@@ -4,14 +4,7 @@
 @import 'app/variables/type';
 
 .services-page {
-  $_base-height: 500px;
-  $_height-by-size: (
-    small: 500px,
-    medium: 500px,
-    large: 500px,
-    extra-large: 500px,
-  );
-  @include make-bg(hero, '../../pages/services/hero', $_base-height, $_height-by-size);
+  @include make-bg-loaded(hero, '../../pages/services/hero');
 }
 
 @media (min-width: $width-desktop) {
@@ -23,20 +16,20 @@
 }
 
 .overview .image.testimonial1 {
-  @include background-cover('../../pages/services/overview1.jpg');
+  @include background-cover-loaded('../../pages/services/overview1.jpg');
 }
 
 .overview .image.testimonial2 {
-  @include background-cover('../../pages/services/overview2.jpg');
+  @include background-cover-loaded('../../pages/services/overview2.jpg');
 }
 
 
 .testimonials .image.testimonial1 {
-  @include background-cover('../../pages/services/testimonials1.jpg');
+  @include background-cover-loaded('../../pages/services/testimonials1.jpg');
 }
 
 .testimonials .image.testimonial2 {
-  @include background-cover('../../pages/services/testimonials2.jpg');
+  @include background-cover-loaded('../../pages/services/testimonials2.jpg');
 }
 
 .packages-pricing,
