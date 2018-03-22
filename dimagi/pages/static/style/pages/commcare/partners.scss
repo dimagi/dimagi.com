@@ -37,8 +37,8 @@
     extra-large: (w: 1016px, h: 408px),
   );
 
-  @include make-carousel-slide-loaded(image-agimpact, $_sizes, '../../../pages/commcare/product/testimonial1.jpg');
-  @include make-carousel-slide-loaded(image-nou-kod, $_sizes, '../../../pages/commcare/product/testimonial2.jpg');
-  @include make-carousel-slide-loaded(image-delivery-services, $_sizes, '../../../pages/commcare/product/testimonial3.jpg');
-  @include make-carousel-slide-loaded(image-cleaning-data, $_sizes, '../../../pages/commcare/product/testimonial4.jpg');
+  @include make-carousel-slide(image-agimpact, $_sizes, '../../../pages/commcare/product/testimonial1.jpg');
+  @include make-carousel-slide(image-nou-kod, $_sizes, '../../../pages/commcare/product/testimonial2.jpg');
+  @include make-carousel-slide(image-delivery-services, $_sizes, '../../../pages/commcare/product/testimonial3.jpg');
+  @include make-carousel-slide(image-cleaning-data, $_sizes, '../../../pages/commcare/product/testimonial4.jpg');
 }

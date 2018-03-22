@@ -77,7 +77,7 @@ $_default-height-by-size: (
   };
 };
 
-@mixin make-carousel-slide-loaded($_class-name, $_sizes, $_url, $_loaded: '.loaded') {
+@mixin make-carousel-slide($_class-name, $_sizes, $_url, $_loaded: '.loaded') {
   $_bg-thumb: str-replace($_url, 'pages', 'thumbnails/pages');
 
   .carousel .carousel-slide .#{$_class-name} {
@@ -109,8 +109,4 @@ $_default-height-by-size: (
       }
     }
   }
-}
-
-@mixin make-carousel-slide($_class-name, $_sizes, $_url) {
-  @include make-carousel-slide-loaded($_class-name, $_sizes, $_url, '');
 }
