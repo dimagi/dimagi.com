@@ -4,7 +4,7 @@
 @import 'app/variables/type';
 
 .careers-page {
-  @include make-bg-loaded(hero, '../../pages/careers/hero');
+  @include make-bg(hero, '../../pages/careers/hero');
 }
 
 @media (min-width: $width-desktop) {

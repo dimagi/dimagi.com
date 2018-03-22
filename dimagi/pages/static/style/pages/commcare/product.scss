@@ -4,7 +4,7 @@
 @import 'app/variables/type';
 
 .products-commcare-page {
-  @include make-bg-loaded(hero, '../../../pages/commcare/product/hero');
+  @include make-bg(hero, '../../../pages/commcare/product/hero');
 }
 
 .overview {
@@ -16,8 +16,8 @@
     large: 265px,
     extra-large: 320px,
   );
-  @include make-bg-loaded(analyze-data-image, '../../../pages/commcare/product/analyze', $_base-height, $_height-by-size);
-  @include make-bg-loaded(collect-data-image, '../../../pages/commcare/product/collect', $_base-height, $_height-by-size);
+  @include make-bg(analyze-data-image, '../../../pages/commcare/product/analyze', $_base-height, $_height-by-size);
+  @include make-bg(collect-data-image, '../../../pages/commcare/product/collect', $_base-height, $_height-by-size);
 
   .device-container,
   .screen {
@@ -33,7 +33,7 @@
     large: 660px,
     extra-large: 625px,
   );
-  @include make-bg-loaded(image, '../../../pages/commcare/product/features', $_base-height, $_height-by-size);
+  @include make-bg(image, '../../../pages/commcare/product/features', $_base-height, $_height-by-size);
 
   @media (min-width: $width-desktop) {
     .off-grid {

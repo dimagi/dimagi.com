@@ -4,7 +4,7 @@
 @import 'app/variables/type';
 
 .home-page {
-  @include make-bg-loaded(hero, '../../pages/home/hero');
+  @include make-bg(hero, '../../pages/home/hero');
 }
 
 .build {
@@ -17,7 +17,7 @@
   );
 
   width: 100%;
-  @include make-bg-loaded(image, '../../pages/home/build', $_base-height, $_height-by-size);
+  @include make-bg(image, '../../pages/home/build', $_base-height, $_height-by-size);
 }
 
 .video-intro .image {
@@ -46,7 +46,7 @@
     large: 655px,
     extra-large: 610px,
   );
-  @include make-bg-loaded(image, '../../pages/home/awards', $_base-height, $_height-by-size);
+  @include make-bg(image, '../../pages/home/awards', $_base-height, $_height-by-size);
 
   @media (min-width: $width-desktop) {
     .off-grid {

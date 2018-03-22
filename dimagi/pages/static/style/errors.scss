@@ -4,11 +4,11 @@
 @import 'app/variables/type';
 
 .error-404-page {
-  @include make-bg-loaded(hero, '../pages/error404/hero');
+  @include make-bg(hero, '../pages/error404/hero');
 }
 
 .error-500-page {
-  @include make-bg-loaded(hero, '../pages/error500/hero');
+  @include make-bg(hero, '../pages/error500/hero');
 }
 
 @media (min-width: $width-desktop) {

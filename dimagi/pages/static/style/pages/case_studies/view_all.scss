@@ -4,7 +4,7 @@
 @import 'app/variables/type';
 
 .case-studies-page {
-  @include make-bg-loaded(hero, '../../../pages/case_studies/hero');
+  @include make-bg(hero, '../../../pages/case_studies/hero');
 }
 
 .study-thumbnail {

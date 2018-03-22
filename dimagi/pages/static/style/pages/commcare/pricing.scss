@@ -5,7 +5,7 @@
 
 
 .pricing-commcare-page {
-  @include make-bg-loaded(hero, '../../../pages/commcare/pricing/hero');
+  @include make-bg(hero, '../../../pages/commcare/pricing/hero');
 }
 
 @media (min-width: $width-desktop) {

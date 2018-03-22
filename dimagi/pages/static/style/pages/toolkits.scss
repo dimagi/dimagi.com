@@ -4,9 +4,8 @@
 @import 'app/variables/type';
 
 .toolkits-page {
-  @include make-bg-loaded(hero, '../../pages/toolkits/hero');
+  @include make-bg(hero, '../../pages/toolkits/hero');
 }
-
 
 .toolkit-tile {
   position: relative;

@@ -4,7 +4,7 @@
 @import 'app/variables/type';
 
 .press-page {
-  @include make-bg-loaded(hero, '../../pages/blog/hero');
+  @include make-bg(hero, '../../pages/blog/hero');
 }
 
 .post p {

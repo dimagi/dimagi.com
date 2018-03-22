@@ -4,7 +4,7 @@
 @import 'app/variables/type';
 
 .services-page {
-  @include make-bg-loaded(hero, '../../pages/services/hero');
+  @include make-bg(hero, '../../pages/services/hero');
 }
 
 @media (min-width: $width-desktop) {

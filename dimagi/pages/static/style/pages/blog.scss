@@ -4,7 +4,7 @@
 @import 'app/variables/type';
 
 .blog-page {
-  @include make-bg-loaded(hero, '../../pages/blog/hero');
+  @include make-bg(hero, '../../pages/blog/hero');
 }
 
 .post-thumbnail {
@@ -69,5 +69,5 @@ a.post {
     large: 265px,
     extra-large: 320px,
   );
-  @include make-bg-loaded(powerful-data-image, '../../pages/blog/cta', $_base-height, $_height-by-size, '.png');
+  @include make-bg(powerful-data-image, '../../pages/blog/cta', $_base-height, $_height-by-size, '.png');
 }

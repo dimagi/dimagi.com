@@ -4,7 +4,7 @@
 @import 'app/variables/type';
 
 .sectors-page {
-  @include make-bg-loaded(hero, '../../pages/sectors/hero');
+  @include make-bg(hero, '../../pages/sectors/hero');
 }
 
 $_slugs: (
@@ -30,7 +30,7 @@ $_slugs: (
 
 @each $_slug in $_slugs {
   .#{$_slug}-page {
-    @include make-bg-loaded(hero, '../../pages/sectors/#{$_slug}/hero');
+    @include make-bg(hero, '../../pages/sectors/#{$_slug}/hero');
   }
 }
 

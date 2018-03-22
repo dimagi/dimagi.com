@@ -47,7 +47,7 @@ $_default-height-by-size: (
   extra-large: 500px,
 );
 
-@mixin make-bg-loaded($_class, $_bg, $_height-base: $_default-base-height, $_height-by-size: $_default-height-by-size, $_extension: '.jpg', $_loaded: '.loaded') {
+@mixin make-bg($_class, $_bg, $_height-base: $_default-base-height, $_height-by-size: $_default-height-by-size, $_extension: '.jpg', $_loaded: '.loaded') {
   $_bg-thumb: str-replace($_bg, 'pages', 'thumbnails/pages');
 
   .#{$_class} {
@@ -76,11 +76,6 @@ $_default-height-by-size: (
     }
   };
 };
-
-@mixin make-bg($_class, $_bg, $_height-base: $_default-base-height, $_height-by-size: $_default-height-by-size, $_extension: '.jpg') {
-  @include make-bg-loaded($_class, $_bg, $_height-base, $_height-by-size, $_extension, '');
-};
-
 
 @mixin make-carousel-slide-loaded($_class-name, $_sizes, $_url, $_loaded: '.loaded') {
   $_bg-thumb: str-replace($_url, 'pages', 'thumbnails/pages');
