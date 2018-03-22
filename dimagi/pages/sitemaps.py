@@ -164,7 +164,6 @@ class TeamMemberSitemap(Sitemap):
     priority = 0.5
 
     def items(self):
-        print(get_json('team/sitemap'))
         return get_json('team/sitemap')
 
     def location(self, obj):
