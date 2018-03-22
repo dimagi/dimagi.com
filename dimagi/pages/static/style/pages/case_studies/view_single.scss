@@ -5,9 +5,8 @@
 
 
 .study-image {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  @include  background-placeholder();
+
   height: 395px;
   position: relative;
   width: 305px;
