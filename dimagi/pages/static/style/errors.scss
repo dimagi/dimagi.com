@@ -4,25 +4,11 @@
 @import 'app/variables/type';
 
 .error-404-page {
-  $_base-height: 500px;
-  $_height-by-size: (
-    small: 500px,
-    medium: 500px,
-    large: 500px,
-    extra-large: 500px,
-  );
-  @include make-bg(hero, '../pages/error404/hero', $_base-height, $_height-by-size);
+  @include make-bg-loaded(hero, '../pages/error404/hero');
 }
 
 .error-500-page {
-  $_base-height: 500px;
-  $_height-by-size: (
-    small: 500px,
-    medium: 500px,
-    large: 500px,
-    extra-large: 500px,
-  );
-  @include make-bg(hero, '../pages/error500/hero', $_base-height, $_height-by-size);
+  @include make-bg-loaded(hero, '../pages/error500/hero');
 }
 
 @media (min-width: $width-desktop) {
