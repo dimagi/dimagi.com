@@ -1,10 +1,34 @@
 from __future__ import absolute_import
 from django.conf.urls import url, include
+from django.contrib.sitemaps.views import sitemap
+
 import dimagi.pages.views as pages
+from dimagi.pages.sitemaps import (
+    BlogPostSitemap,
+    MainViewSitemap,
+    BlogArchiveCategorySitemap,
+    SectorSitemap,
+    CaseStudySitemap,
+    ToolkitSitemap,
+    JobsSitemap,
+    TeamMemberSitemap,
+)
 from dimagi.pages.views import commcare
 from dimagi.pages.urls import blog
 from dimagi.pages.urls import team
 from dimagi.pages.views import redirect
+
+
+sitemaps = {
+    'main': MainViewSitemap,
+    'sector': SectorSitemap,
+    'case_study': CaseStudySitemap,
+    'toolkit': ToolkitSitemap,
+    'jobs': JobsSitemap,
+    'team_member': TeamMemberSitemap,
+    'archive': BlogArchiveCategorySitemap,
+    'blog': BlogPostSitemap,
+}
 
 
 urlpatterns = [
@@ -52,8 +76,8 @@ urlpatterns = [
     url(r'^self-starter-blog-aquaya-on-implementing-commcare-for-water-projects-in-senegal/$',
         redirect.blog('self-starter-blog-aquaya-on-implementing-commcare-for-water-projects-in-senegal')),
 
-
-
     url(r'^google9633af922b8b0064.html$', pages.verify),
 
+    url(r'^sitemap.xml$', sitemap, {'sitemaps': sitemaps},
+        name='django.contrib.sitemaps.views.sitemap')
 ]
