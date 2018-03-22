@@ -1,6 +1,7 @@
 from __future__ import absolute_import
 from django.conf.urls import url, include
 from django.contrib.sitemaps.views import sitemap
+from django.views.generic import TemplateView
 
 import dimagi.pages.views as pages
 from dimagi.pages.sitemaps import (
@@ -77,7 +78,7 @@ urlpatterns = [
         redirect.blog('self-starter-blog-aquaya-on-implementing-commcare-for-water-projects-in-senegal')),
 
     url(r'^google9633af922b8b0064.html$', pages.verify),
-
     url(r'^sitemap.xml$', sitemap, {'sitemaps': sitemaps},
-        name='django.contrib.sitemaps.views.sitemap')
+        name='django.contrib.sitemaps.views.sitemap'),
+    url(r'^robots.txt$', TemplateView.as_view(template_name='robots.txt')),
 ]
