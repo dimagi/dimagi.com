@@ -54,7 +54,7 @@ def home(request):
 
 @validate_category
 def archive(request, category=None, page=None):
-    category = get_category_by_slug(category or 'archive')
+    category = get_category_by_slug(category or ARCHIVE.slug)
     posts = _get_posts(category, page, 20)
     context = _get_global_context()
     page = int(page or 1)
@@ -72,13 +72,21 @@ def archive(request, category=None, page=None):
     })
 
     if page > 1:
-        previous_url = reverse('archive_page',
-                               args=[category.slug, page - 1])
+        if category.slug == ARCHIVE.slug:
+            previous_url = reverse('archive_page', args=[page - 1])
+        else:
+            previous_url = reverse(
+                'archive_category_page', args=[category.slug, page - 1]
+            )
         context['previous_url'] = previous_url
 
     if page < total_pages:
-        next_url = reverse('archive_page',
-                           args=[category.slug, page + 1])
+        if category.slug == ARCHIVE.slug:
+            next_url = reverse('archive_page', args=[page + 1])
+        else:
+            next_url = reverse(
+                'archive_category_page', args=[category.slug, page + 1]
+            )
         context['next_url'] = next_url
 
     return render(request, 'pages/blog/archive.html', context)

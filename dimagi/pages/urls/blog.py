@@ -8,10 +8,12 @@ from dimagi.pages.views import redirect
 archive_urls = [
     url(r'^$', archive,
         name='archive'),
+    url(r'^page/(?P<page>[\d]+)/$', archive,
+        name='archive_page'),
     url(r'^(?P<category>[\w-]+)/$', archive,
         name='archive_category'),
     url(r'^(?P<category>[\w-]+)/page/(?P<page>[\d]+)/$', archive,
-        name='archive_page'),
+        name='archive_category_page'),
 ]
 
 
