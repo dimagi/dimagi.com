@@ -3,7 +3,8 @@
 
 <a class="study" href="{% url 'case_study' study.slug %}">
   <div class="aspect-ratio-square study-thumbnail gap-bottom-line"
-       style="background-image: url('{% static "data/case_studies/covers/"|add:study.slug|add:".jpg" %}');"></div>
+       data-lazyplaceholder="true"
+       data-src="{% static "data/case_studies/covers/"|add:study.slug|add:".jpg" %}"></div>
 
   <h6>{{ study.title }}</h6>
 </a>
