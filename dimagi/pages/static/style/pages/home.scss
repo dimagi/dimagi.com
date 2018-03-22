@@ -27,15 +27,15 @@
 }
 
 .workforce .image.testimonial1 {
-  @include background-cover-loaded('../../pages/home/workforce-1.jpg');
+  @include background-cover('../../pages/home/workforce-1.jpg');
 }
 
 .workforce .image.testimonial2 {
-  @include background-cover-loaded('../../pages/home/workforce-2.jpg');
+  @include background-cover('../../pages/home/workforce-2.jpg');
 }
 
 .workforce .image.testimonial3 {
-  @include background-cover-loaded('../../pages/home/workforce-3.jpg');
+  @include background-cover('../../pages/home/workforce-3.jpg');
 }
 
 .awards {

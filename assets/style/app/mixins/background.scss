@@ -11,15 +11,7 @@
   @return $string;
 }
 
-
 @mixin background-cover($_bg-url) {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url('#{$_bg-url}');
-}
-
-@mixin background-cover-loaded($_bg-url) {
   $_bg-thumb: str-replace($_bg-url, 'pages', 'thumbnails/pages');
 
   background-position: center;
