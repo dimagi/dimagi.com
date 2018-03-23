@@ -173,6 +173,7 @@ SITE_URL = env.str('SITE_URL', default='http://dimagi.com')
 # analytics
 TRACKING = {
     'GOOGLE': env.str('GOOGLE', default=''),
+    'GTM': env.str('GTM', default=''),
     'HUBSPOT': env.str('HUBSPOT', default=''),
     'KISSMETRICS': env.str('KISSMETRICS', default=''),
     'DRIFT': env.str('DRIFT', default=''),
