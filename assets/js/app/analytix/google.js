@@ -185,10 +185,6 @@ define([
           _gtag('config', apiId, user);
         }
 
-        if (Utils.getConfig('gaDomain')) {
-          _gtag('_setDomainName', Utils.getConfig('gaDomain'));
-        }
-
         bindEvents();
       });
     },
