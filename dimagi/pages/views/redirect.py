@@ -9,9 +9,29 @@ def page(page_slug):
     return _redirect
 
 
+def sector(slug):
+    def _redirect(request):
+        return HttpResponsePermanentRedirect(reverse('sector', args=[slug]))
+    return _redirect
+
+
+def case_study(slug):
+    def _redirect(request):
+        return HttpResponsePermanentRedirect(reverse('case_study', args=[slug]))
+    return _redirect
+
+
 def blog(slug):
     def _redirect(request):
         return HttpResponsePermanentRedirect(reverse('blog_post', args=[slug]))
+    return _redirect
+
+
+def team_member(office, slug):
+    def _redirect(request):
+        return HttpResponsePermanentRedirect(
+            reverse('team_member', args=[office, slug])
+        )
     return _redirect
 
 
@@ -33,3 +53,15 @@ def blog_category(request, category):
 
 def blog_tag(request, tag):
     return HttpResponsePermanentRedirect(reverse('blog_home'))
+
+
+def blog_old_category(request, category):
+    return HttpResponsePermanentRedirect(reverse('blog_home'))
+
+
+def dimagispace(request, year, month):
+    return HttpResponsePermanentRedirect(reverse('blog_home'))
+
+
+def careers_old(request, slug):
+    return HttpResponsePermanentRedirect(reverse('careers'))
