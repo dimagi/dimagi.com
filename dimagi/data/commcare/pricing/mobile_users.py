@@ -25,7 +25,7 @@ GROUP.add_features([
             "additional charge. The Community plan allows for 10 free "
             "mobile users."
         ),
-        support=Support("50", "250", "500", "Unlimited / discounted"),
+        support=Support("125", "250", "500", "Unlimited / discounted"),
     ),
     Feature(
         title=ugettext_lazy(
