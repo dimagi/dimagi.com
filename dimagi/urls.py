@@ -91,6 +91,7 @@ urlpatterns = [
     url(r'^aremind/$', redirect.page('blog_home')),
     url(r'^announcing-dimagi-south-africas-commcare-training-centre/$', redirect.page('blog_home')),
     url(r'^an-explanation-of-recent-commcare-hq-issues/$', redirect.page('blog_home')),
+    url(r'^category/blog/news/feed/$', redirect.page('blog_home')),
 
     url(r'^category/blog/(?P<category>[\w-]+)/$', redirect.blog_old_category),
     url(r'^(?P<year>\d{4})/(?P<month>\d{2})/$', redirect.dimagispace),
@@ -110,6 +111,9 @@ urlpatterns = [
     url(r'^content/$', redirect.page('home')),
     url(r'^carehq/$', redirect.page('home')),
     url(r'^afrisis/$', redirect.page('home')),
+    url(r'^events/venues/microsoft-nerd-center/$', redirect.page('home')),
+    url(r'^wp/wp-content/uploads/2011/01/PDF-Edition-Page-1-sur-21-Meurthe-et-Moselle-Nord-du-03-01-2011.pdf$', redirect.page('home')),
+    url(r'^wpcontent/uploads/2015/03/MOTECH-World-Vision-Case-Study.pdf$', redirect.page('home')),
 
     url(r'^technical-project-manager-2/$', redirect.page('careers')),
     url(r'^senior-software-engineer/$', redirect.page('careers')),

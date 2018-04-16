@@ -10,6 +10,7 @@ from dimagi.pages.views import redirect
 
 team_urls = [
     url(r'^$', team, name='team'),
+    url(r'^india/runt_300/$', redirect.page('team')),
     url(r'^(?P<office>[\w-]+)/(?P<slug>[\w-]+)/$',
         team_member, name='team_member'),
 ]
