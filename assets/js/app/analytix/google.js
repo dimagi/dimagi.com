@@ -170,7 +170,10 @@ define([
 
       self.ready = $.Deferred();
       self.ready = Utils.initApi(self.ready, apiId, scriptUrl, self.logger, function () {
-        var props = {};
+        var props = {
+          allow_linker: true,
+          cookie_domain: "www.dimagi.com",
+        };
 
         window.dataLayer = window.dataLayer || [];
         _gtag = function () {
