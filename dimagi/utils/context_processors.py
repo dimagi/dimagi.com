@@ -14,6 +14,7 @@ def metas(request):
     _metas["trackingConfig"] = {
         'logLevel': setting('TRACKING_LOG_LEVEL', ''),
         'enabled': setting('TRACKING_ENABLED', False),
+        'optimizeId': setting('GOOGLE_OPTIMIZE_ID', ''),
     }
     _metas["trackingAB"] = [ab.context for ab in ACTIVE_AB_TESTS]
 

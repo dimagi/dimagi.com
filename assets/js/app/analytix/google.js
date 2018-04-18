@@ -170,6 +170,8 @@ define([
 
       self.ready = $.Deferred();
       self.ready = Utils.initApi(self.ready, apiId, scriptUrl, self.logger, function () {
+        var props = {};
+
         window.dataLayer = window.dataLayer || [];
         _gtag = function () {
           window.dataLayer.push(arguments);
@@ -177,13 +179,16 @@ define([
         };
         _gtag('js', new Date());
 
+
         if (Utils.getConfig('userId')) {
-          var user = {
-            user_id: Utils.getConfig('userId') || 'none',
-          };
-          // Configure Gtag with User Info
-          _gtag('config', apiId, user);
+          props.user_id = Utils.getConfig('userId') || 'none';
         }
+
+        if (Utils.getConfig('optimizeId')) {
+          props.optimize_id = Utils.getConfig('optimizeId') || 'none';
+        }
+
+        _gtag('config', apiId, props);
 
         bindEvents();
       });
