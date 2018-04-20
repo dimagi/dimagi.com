@@ -30,4 +30,5 @@ def external_urls(request):
     return {
         "URL_LOGIN": "https://www.commcarehq.org/accounts/login/",
         "URL_TRIAL": "https://www.commcarehq.org/register/user/",
+        "URL_DEMO": "http://sites.dimagi.com/demo",
     }
