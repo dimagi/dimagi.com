@@ -1,0 +1,507 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="policy">
+  <div class="content pad-vert-medium">
+    <div class="intro">
+      <h2>
+        {% blocktrans %}
+          Privacy Policy
+        {% endblocktrans %}
+      </h2>
+    </div>{# .intro #}
+
+    <p>
+      {% blocktrans %}
+        Posted: April 23, 2018
+      {% endblocktrans %}
+    </p>
+
+    <p>
+      {% blocktrans %}
+        Effective Date: May 20, 2018
+      {% endblocktrans %}
+    </p>
+
+    <p>
+      {% url 'privacy_policy' as previous_policy_url %}
+      {% blocktrans %}
+        You can see our previous privacy policy <a href="{{ previous_policy_url }}">here</a>.
+      {% endblocktrans %}
+    </p>
+
+    <p>
+      {% blocktrans %}
+        This notice describes the Privacy Policy of Dimagi, Inc. and its affiliate
+        entities, Dimagi Software Innovations Pvt. Ltd., Dimagi South Africa
+        (PTY) LTD, Dimagi West Africa, SAS, Dimagi Tanzania Limited
+        ("Dimagi," "we", "us", or "our"). Here we describe how we collect, use
+        and handle your information when you use our websites, software and
+        services <strong>("Services")</strong>.
+      {% endblocktrans %}
+    </p>
+
+    <ul>
+      <li>
+        {% blocktrans %}
+          If you're using our Services for an organization, you're agreeing
+          to this Privacy Policy on behalf of that organization.
+        {% endblocktrans %}
+      </li>
+      <li>
+        {% blocktrans %}
+          If you're using our Services to provide services, software and
+          content for some else, you're agreeing to this Privacy Policy on
+          their behalf.
+        {% endblocktrans %}
+      </li>
+    </ul>
+
+    <p>
+      {% blocktrans %}
+        IF YOU OR THE ORGANIZATION YOU REPRESENT DON'T AGREE TO BE BOUND TO
+        THIS PRIVACY POLICY, YOU SHOULD NOT CONSENT TO USING OUR SERVICES.
+      {% endblocktrans %}
+    </p>
+
+    <h4>
+      {% blocktrans %}
+        What and why we collect
+      {% endblocktrans %}
+    </h4>
+
+    <p>
+      {% blocktrans %}
+        We collect and use the following information to provide, improve and
+        protect our Services:
+      {% endblocktrans %}
+    </p>
+
+    <p>
+      {% blocktrans %}
+        <u>Account Data:</u> When registering to use our Services, Dimagi 
+        requires you to provide your personal contact information, such as 
+        name, company name, address, phone number, and email address 
+        <strong>("Contact Information")</strong>. When purchasing our Services, 
+        Dimagi may require you to provide financial qualification and 
+        billing information, such as billing name and address, credit card 
+        number, and the number of employees that will be using the product or 
+        services <strong>("Billing Information")</strong>. Dimagi may also ask 
+        you to provide additional information, such as company annual revenues,
+        number of employees, or industry <strong>("Optional Information")</strong>. 
+        Contact Information, Billing Information, and Optional Information 
+        about customers are referred to collectively as <strong>"Account Data"</strong> 
+        We use Account Data to perform the Services requested. We do not
+        store your credit card data.
+      {% endblocktrans %}
+    </p>
+
+    <p>
+      {% blocktrans %}
+        <u>Your Content:</u>  When you use our Services, you provide us with
+        things like your data, reports, messages, contacts, images and so on
+        <strong>("Your Content")</strong>. Our Services are designed to make it
+        simple for you to collect and manage Your Content, share with others,
+        and work across multiple devices. To make that possible, we store,
+        process, and transmit Your Content, as well as information related to
+        it. This related information can be things like your Contact
+        Information that makes it easier to collaborate and share Your Content
+        with others.
+      {% endblocktrans %}
+    </p>
+
+    <p>
+      {% blocktrans %}
+        <u>Usage:</u> We collect information related to how you use the
+        Services, including actions you take in your account. This is used to
+        conduct research and development for the further development of our
+        Services in order to provide you a more intuitive experience, and also
+        to provide you support.
+      {% endblocktrans %}
+    </p>
+
+    <p>
+      {% blocktrans %}
+        <u>Device Information:</u> We also collect information from and about
+        the devices you use to access the Services. This includes things like
+        IP addresses, the type of browser and device you use, the web page you
+        visited before coming to our sites, and identifiers associated with
+        your devices. Your devices (depending on their settings) may also
+        transmit location information to the Services. This helps us improve
+        our Services and provide you support.
+      {% endblocktrans %}
+    </p>
+
+    <p>
+      {% blocktrans %}
+        <u>Cookies and other technologies:</u> We use technologies like cookies
+        and web beacons to provide, improve, and protect our Services. For
+        example, cookies help us with things like remembering your username for
+        your next visit, understanding how you are interacting with our
+        Services, and improving them based on that information. You can set
+        your browser to not accept cookies, but this may limit your ability to
+        use the Services.
+      {% endblocktrans %}
+    </p>
+
+    <p>
+      {% blocktrans %}
+        <u>Aggregate Data Sets:</u> Dimagi may also use Your Content to create
+        aggregate, anonymized data sets ("Data Sets"). Data Sets are not
+        associated with any individual or user account, and are thus anonymous
+        information. Dimagi may use these Aggregate Data Sets to improve our
+        Services and for research purposes. If you do not consent to the use of
+        Your Data to create Data Sets, please "opt-out" by contacting us at
+        support@dimagi.com and your data will not be included as of the date
+        of notification. If you have already provided us your ‘opt-out’, we
+        will continue to honor that.
+      {% endblocktrans %}
+    </p>
+
+    <h4>
+      {% blocktrans %}
+        With whom do we share
+      {% endblocktrans %}
+    </h4>
+
+    <p>
+      {% blocktrans %}
+        We may share information as discussed below, but we will never sell it
+        to advertisers or other third parties.
+      {% endblocktrans %}
+    </p>
+
+    <p>
+      {% blocktrans %}
+        Others working for Dimagi: Dimagi uses certain trusted third parties
+        (for example, providers of IT services) to help us provide, improve,
+        protect, and promote our Services. These third parties will access your
+        information only to perform tasks on our behalf in compliance with this
+        Privacy Policy. We use
+        <a href="https://www.salesforce.com/company/privacy/"
+           target="_blank">Salesforce</a> as our system for customer
+        relationship management. We use
+        <a href="https://stripe.com/us/privacy"
+           target="_blank">Stripe</a> and
+        <a href="https://www.flywire.com/privacy/"
+           target="_blank">Flywire</a> to process credit cards, both being our
+        PCI-DSS compliant payment processing partners.
+      {% endblocktrans %}
+    </p>
+
+    <p>
+      {% blocktrans %}
+        Analytics: We use analytics partners, including
+        <a href="http://www.google.com/policies/privacy/partners/"
+           target="_blank">Google Analytics</a>,
+        <a href="https://www.kissmetrics.com/privacy/"
+           target="_blank">Kissmetrics</a>,
+        <a href="http://legal.hubspot.com/privacy-policy"
+           target="_blank">Hubspot</a>, and
+        <a href="https://fullstory.com/legal/privacy"
+           target="_blank">Fullstory</a> to analyse some of the Usage
+        information we collect. If you do not consent to our analytics
+        partners having access to your information, please let us know at
+        privacy@dimagi.com.
+      {% endblocktrans %}
+    </p>
+
+    <p>
+      {% blocktrans %}
+        Other applications: You can also give third parties access to your
+        information - for example, via our APIs. Just remember that their
+        use of your information will be governed by their privacy policies
+        and terms.
+      {% endblocktrans %}
+    </p>
+
+    <p>
+      {% blocktrans %}
+        Legal Compliance and Protection: We may disclose your information to
+        third parties if we determine that such disclosure is reasonably
+        necessary to (a) comply with the law; (b) protect any person from
+        death or serious bodily injury; (c) prevent fraud or abuse of Dimagi
+        or our users; or (d) protect Dimagi's property rights.
+      {% endblocktrans %}
+    </p>
+
+    <h4>
+      {% blocktrans %}
+        How do we protect your information
+      {% endblocktrans %}
+    </h4>
+
+    <p>
+      {% blocktrans %}
+        Dimagi acknowledges your trust and is committed to protecting the
+        information you provide to us. To prevent unauthorized access, maintain
+        accuracy, and ensure proper use of information, we have employed
+        physical, technical, and administrative processes to safeguard and
+        secure the information we collect.
+      {% endblocktrans %}
+    </p>
+
+    <p>
+      {% blocktrans %}
+        We have also employed physical, technical, and administrative processes
+        to detect and investigate information breaches. In the unfortunate
+        event of a breach, we will inform all affected accounts as soon as
+        practicable upon discovery of such a breach, consistent with any
+        applicable legal obligations and the needs of law enforcement.
+      {% endblocktrans %}
+    </p>
+
+    <p>
+      {% blocktrans %}
+        No method of transmission over the Internet, or method of electronic
+        storage, is 100% secure. Therefore, while we strive to use commercially
+        acceptable means to protect Personal Information, we cannot guarantee
+        its absolute security or confidentiality. If you have any questions
+        about security, you can contact us at privacy@dimagi.com.
+      {% endblocktrans %}
+    </p>
+
+    <p>
+      {% blocktrans %}
+        Please be aware that certain Personal Information and other information
+        provided by you in connection with your use of the Services may be
+        stored on your device (even if we do not collect that information).
+        You are solely responsible for maintaining the security of your device
+        from unauthorized access.
+      {% endblocktrans %}
+    </p>
+
+    <h4>
+      {% blocktrans %}
+        Where is the information stored, processed and transmitted
+      {% endblocktrans %}
+    </h4>
+
+    <p>
+      {% blocktrans %}
+        To provide you with the Services, we may store, process and transmit
+        information in the United States and locations around the world -
+        including those outside your country. Information may also be stored
+        locally on the devices you use to access the Services.
+      {% endblocktrans %}
+    </p>
+
+    <p>
+      {% blocktrans %}
+        EU-U.S. Privacy Shield and Swiss-U.S. Privacy Shield: Dimagi complies
+        with the EU-U.S. Privacy Shield Framework and Swiss-U.S. Privacy Shield
+        Framework as set forth by the U.S. Department of Commerce regarding the
+        collection, use, and retention of personal information transferred from
+        the European Union and Switzerland to the United States.  Dimagi has
+        certified to the Department of Commerce that it adheres to the Privacy
+        Shield Principles.  If there is any conflict between the terms in this
+        privacy policy and the Privacy Shield Principles, the Privacy Shield
+        Principles shall govern.  To learn more about the Privacy Shield
+        program, and to view our certification, please visit
+        <a href="https://www.privacyshield.gov/"
+           target="_blank">https://www.privacyshield.gov/</a>
+      {% endblocktrans %}
+    </p>
+
+    <p>
+      {% blocktrans %}
+        In the context of an onward transfer to a third parties, Dimagi has
+        responsibility for the processing of your information it receives.
+        Dimagi shall remain liable under the Privacy Shield Principles if a
+        third party processes your information in a manner inconsistent with
+        the Privacy Shield Principles, unless proven that Dimagi is not
+        responsible for any processing inconsistent with Privacy Shield
+        Principles.
+      {% endblocktrans %}
+    </p>
+
+    <h4>
+      {% blocktrans %}
+        Your Right to Control and Access to your personal information
+      {% endblocktrans %}
+    </h4>
+
+    <p>
+      {% blocktrans %}
+        You have control over your personal information and how it is collected,
+        used, and shared. You have the rights to:
+      {% endblocktrans %}
+    </p>
+
+    <ul>
+      <li>
+        {% blocktrans %}
+          Know more about our privacy practices.
+        {% endblocktrans %}
+      </li>
+      <li>
+        {% blocktrans %}
+          Object to our privacy practices or provide feedback.
+        {% endblocktrans %}
+      </li>
+      <li>
+        {% blocktrans %}
+          Rectify your personal information.
+        {% endblocktrans %}
+      </li>
+      <li>
+        {% blocktrans %}
+          Ask us to rectify your personal information.
+        {% endblocktrans %}
+      </li>
+      <li>
+        {% blocktrans %}
+          Ask for your personal information — free of charge.
+        {% endblocktrans %}
+      </li>
+      <li>
+        {% blocktrans %}
+          Ask us to erase your personal information.
+        {% endblocktrans %}
+      </li>
+    </ul>
+
+    <p>
+      {% blocktrans %}
+        Please send your request at privacy@dimagi.com. We will respond within
+        30 days of receipt of your request.
+      {% endblocktrans %}
+    </p>
+
+    <h4>
+      {% blocktrans %}
+        Children's Privacy
+      {% endblocktrans %}
+    </h4>
+
+    <p>
+      {% blocktrans %}
+        The Services are neither directed to nor structured to attract children
+        under the age of 16 years.  Accordingly, we do not intend to collect
+        Personal Information from anyone we know to be under 16 years of age.
+        We will direct potential users under 16 years of age not to use the
+        Services. If we learn that Personal Information of persons less than
+        16 years of age has been collected without verifiable parental consent,
+        then we will take the appropriate steps to delete this information. To
+        make such a request, or if there are any questions or concerns about
+        he Privacy Policy for the Service or its implementation, please contact
+        us at privacy@diamgi.com.
+      {% endblocktrans %}
+    </p>
+
+    <h4>
+      {% blocktrans %}
+        California Online Privacy Protection Act Notice
+      {% endblocktrans %}
+    </h4>
+
+    <p>
+      {% blocktrans %}
+        On September 27, 2013, California enacted A.B. 370, amending the
+        California Online Privacy Protection Act to require website operators
+        like us to disclose how we respond to "Do Not Track Signals"; and
+        whether third parties collect personally identifiable information
+        about users when they visit us.
+      {% endblocktrans %}
+    </p>
+
+    <p>
+      {% blocktrans %}
+        (1) We do not respond to "do not track" signals.
+      {% endblocktrans %}
+    </p>
+
+    <p>
+      {% blocktrans %}
+        (2) We do not collect personally identifiable information for third
+        party use through advertising technologies.
+      {% endblocktrans %}
+    </p>
+
+    <p>
+      {% blocktrans %}
+        California Civil Code Section 1798.83 also permits our customers who
+        are California residents to request certain information regarding our
+        disclosure of Personal Information to third parties for their direct
+        marketing purposes.  To make such a request, please send an email to
+        privacy@dimagi.com.  Please note that we are only required to respond
+        to one request per customer each year.
+      {% endblocktrans %}
+    </p>
+
+    <h4>
+      {% blocktrans %}
+        Change Management
+      {% endblocktrans %}
+    </h4>
+
+    <p>
+      {% blocktrans %}
+        If we are involved in a reorganization, merger, acquisition or sale of
+        our assets, your information may be transferred as part of that deal.
+        We will notify you (for example, via a message to the email address
+        associated with your account) of any such deal and outline your choices
+        in that event.
+      {% endblocktrans %}
+    </p>
+
+    <p>
+      {% blocktrans %}
+        We may revise this Privacy Policy from time to time, and will post the
+        most current version on our website. If a revision meaningfully reduces
+        your rights and/or requires your explicit acceptance, we will notify
+        you via email or via in-product user experience.
+      {% endblocktrans %}
+    </p>
+
+    <h4>
+      {% blocktrans %}
+        Contact
+      {% endblocktrans %}
+    </h4>
+
+    <p>
+      {% blocktrans %}
+        In compliance with the Privacy Shield Principles, Dimagi commits to
+        resolve complaints about our collection or use of your personal
+        information.  EU and Swiss individuals with inquiries or complaints
+        regarding our Privacy Shield policy should first contact Dimagi at
+        <a href="mailto:privacy@dimagi.com">privacy@dimagi.com</a>
+      {% endblocktrans %}
+    </p>
+
+    <p>
+      {% blocktrans %}
+        Dimagi has further committed to refer unresolved Privacy Shield
+        complaints to
+        <a href="https://www.jamsadr.com/eu-us-privacy-shield"
+           target="_blank">JAMS</a>, an alternative dispute resolution
+        provider located in the United States. If you do not receive timely
+        acknowledgment of your complaint from us, or if we have not addressed
+        your complaint to your satisfaction, please contact or visit
+        <a href="https://www.jamsadr.com/eu-us-privacy-shield"
+           target="_blank">JAMS</a> for more information or to file a complaint.
+        The services of JAMS are provided at no cost to you.
+      {% endblocktrans %}
+    </p>
+
+    <p>
+      {% blocktrans %}
+        The Privacy Shield Framework also provides the option for EU and Swiss
+        individuals to invoke binding arbitration to determine whether Dimagi
+        has violated its obligations under the Privacy Shield Principles and
+        whether any such violation remains fully or partially unremedied
+        ("residual claims"). As a self-certified organization in the Privacy
+        Shield Framework, Dimagi is required to arbitrate claims pursuant to
+        Privacy Shield’s Recourse, Enforcement and Liability Principle.
+      {% endblocktrans %}
+    </p>
+
+    <p>
+      {% blocktrans %}
+        Dimagi is subject to oversight by the U.S. Federal Trade Commission.
+      {% endblocktrans %}
+    </p>
+
+  </div>{# .content #}
+</section>

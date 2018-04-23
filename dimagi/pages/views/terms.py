@@ -9,6 +9,13 @@ def privacy(request):
     })
 
 
+def privacy_new(request):
+    return render(request, 'pages/terms.html', {
+        'policy': 'sections/terms/latest/privacy.html',
+        'policy_title': ugettext("Privacy Policy"),
+    })
+
+
 def eula(request):
     return render(request, 'pages/terms.html', {
         'policy': 'sections/terms/eula.html',
