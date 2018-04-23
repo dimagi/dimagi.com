@@ -3,21 +3,21 @@ from django.utils.translation import ugettext
 
 
 def privacy(request):
-    return render(request, 'pages/policies.html', {
-        'policy': 'sections/policies/privacy.html',
+    return render(request, 'pages/terms.html', {
+        'policy': 'sections/terms/privacy.html',
         'policy_title': ugettext("Privacy Policy"),
     })
 
 
 def eula(request):
-    return render(request, 'pages/policies.html', {
-        'policy': 'sections/policies/eula.html',
+    return render(request, 'pages/terms.html', {
+        'policy': 'sections/terms/eula.html',
         'policy_title': ugettext("End User License Agreement"),
     })
 
 
 def subscription(request):
-    return render(request, 'pages/policies.html', {
-        'policy': 'sections/policies/subscription.html',
+    return render(request, 'pages/terms.html', {
+        'policy': 'sections/terms/subscription.html',
         'policy_title': ugettext("Product Subscription Agreement"),
     })

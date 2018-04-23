@@ -1,6 +1,6 @@
 from django.conf.urls import url
 
-from dimagi.pages.views.policies import privacy, eula, subscription
+from dimagi.pages.views.terms import privacy, eula, subscription
 
 
 urlpatterns = [

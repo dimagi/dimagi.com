@@ -56,7 +56,7 @@ urlpatterns = [
     url(r'^toolkits/', include('dimagi.pages.urls.toolkits')),
     url(r'^sectors/', include('dimagi.pages.urls.sectors')),
     url(r'^press/', include('dimagi.pages.urls.press')),
-    url(r'^policy/', include('dimagi.pages.urls.policies')),
+    url(r'^terms/', include('dimagi.pages.urls.terms')),
 
 
     # redirects - MUST be here for APPEND_SLASH to work
