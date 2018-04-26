@@ -13,12 +13,14 @@ def _get_global_context():
 
 def product(request):
     context = _get_global_context()
+    context['kmq_track_pricing_nav'] = "Clicked Start Trial - CommCare (top fold)"
     return render(request, 'pages/commcare/product.html', context)
 
 
 def pricing(request):
     context = _get_global_context()
     context['feature_groups'] = [g.GROUP for g in feature_groups]
+    context['kmq_track_pricing_nav'] = "Clicked Start Trial - Pricing Top"
     return render(request, 'pages/commcare/pricing.html', context)
 
 

@@ -14,7 +14,11 @@
   </div>{# .hide-until-medium #}
 </a>
 
-<a class="trial-link"
+<a class="trial-link cta-navigation-trial"
+   {% if kmq_track_pricing_nav %}
+      data-kmq="true"
+      data-kmq-name="{{ kmq_track_pricing_nav }}"
+   {% endif %}
    href="{{ URL_TRIAL }}">
   <div class="hide-at-medium">
     {% blocktrans %}

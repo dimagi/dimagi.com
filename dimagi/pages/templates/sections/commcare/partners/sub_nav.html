@@ -7,7 +7,9 @@
     <div class="actions">
       {% trans "Watch Demo" as demo_text %}
       {% include "partials/wistia_popover.html" with wistia_id='9uvnpbecdy' text=demo_text %}
-      <a class="primary"
+      <a class="primary cta-pricing-subnav-trial"
+         data-kmq="true"
+         data-kmq-name="Clicked Start Trial - Partner (sticky bar)"
          href="{{ URL_TRIAL }}">
         <span>
           {% blocktrans %}

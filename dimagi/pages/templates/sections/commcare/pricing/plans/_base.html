@@ -2,7 +2,7 @@
 
 <div class="column" id="{{ css_id }}">
   <a class="tile {{ theme }}-border plans-tile{% if highlight %} plan-highlight{% endif %} {{ theme }}-theme"
-     href="{% block link %}{% endblock %}">
+     href="#details">
 
     <div class="pad-top-small pad-bottom-line">
       <h3 class="{{ theme }}">
@@ -54,9 +54,11 @@
     </div>{# .flip-card #}
 
     <p class="button-container gap-top-none">
-      <div class="button button-{{ theme }}">
+      <div class="button button-{{ theme }} cta-pricing-plans-{{ css_id }}"
+           data-kmq="true"
+           data-kmq-name="{% block kissmetrics_cta %}{% endblock %}">
         {% blocktrans %}
-          Start Trial
+          Read More
         {% endblocktrans %}
       </div>{# .button #}
     </p>
