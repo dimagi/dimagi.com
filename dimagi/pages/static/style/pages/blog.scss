@@ -9,6 +9,7 @@
 
 .post-thumbnail {
   @include background-placeholder();
+  background-position: center;
 }
 
 a.post {
