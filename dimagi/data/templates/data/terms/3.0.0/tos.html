@@ -1,0 +1,63 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="policy">
+  <div class="content pad-vert-medium">
+    <div class="intro">
+      <h2>
+        {% blocktrans %}
+          Terms of Service
+        {% endblocktrans %}
+      </h2>
+    </div>{# .intro #}
+
+    <p>
+      {% blocktrans %}
+        Posted: May 1, 2018
+      {% endblocktrans %}
+    </p>
+
+    <p>
+      {% blocktrans %}
+        Effective Date: May 25, 2018
+      {% endblocktrans %}
+    </p>
+
+    <p>
+      You can see our previous terms
+      <a href="{% url 'terms_version' 'current' %}">here</a>.
+    </p>
+
+    <p>
+      {% blocktrans %}
+        These terms of service (<strong>"Terms"</strong>) govern your use and
+        access to our services, client software and websites
+        (<strong>"Services"</strong>). Your agreement is with Dimagi, Inc., a
+        benefit corporation organized under the laws of The Commonwealth of
+        Massachusetts, and its affiliated entities, including Dimagi Software
+        Innovations Pvt. Ltd., Dimagi South Africa (PTY) LTD, Dimagi West
+        Africa, SAS, Dimagi Tanzania Limited (“Dimagi,” “we”, “us”, or “our”).
+      {% endblocktrans %}
+    </p>
+
+    <ul>
+      <li>
+        {% blocktrans %}
+          If you are using our Services on behalf of a third party, you hereby
+          agree to these Terms on such third party’s behalf, and you hereby
+          confirm that you have authority to bind such third party by such
+          agreement.
+        {% endblocktrans %}
+      </li>
+    </ul>
+
+    <p>
+      {% blocktrans %}
+        IF YOU DO NOT AGREE TO BE BOUND TO THESE TERMS AND THE OTHER POLICIES,
+        AGREEMENTS AND DOCUMENTS REFERENCED HEREIN, YOU SHOULD NOT USE OUR
+        SERVICES.
+      {% endblocktrans %}
+    </p>
+
+  </div>{# .content #}
+</section>

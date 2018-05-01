@@ -19,12 +19,12 @@
 
     <p>
       {% blocktrans %}
-        Effective Date: May 20, 2018
+        Effective Date: May 25, 2018
       {% endblocktrans %}
     </p>
 
     <p>
-      {% url 'privacy_policy' as previous_policy_url %}
+      {% url 'terms' 'current' 'privacy' as previous_policy_url %}
       {% blocktrans %}
         You can see our previous privacy policy <a href="{{ previous_policy_url }}">here</a>.
       {% endblocktrans %}
@@ -60,7 +60,7 @@
     <p>
       {% blocktrans %}
         IF YOU OR THE ORGANIZATION YOU REPRESENT DON'T AGREE TO BE BOUND TO
-        THIS PRIVACY POLICY, YOU SHOULD NOT CONSENT TO USING OUR SERVICES.
+        THIS PRIVACY POLICY, YOU SHOULD NOT USE OUR SERVICES.
       {% endblocktrans %}
     </p>
 

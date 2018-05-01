@@ -7,21 +7,21 @@
 
 {% block links %}
   <li>
-    <a href="{% url 'privacy_policy' %}">
+    <a href="{% url 'terms' 'current' 'privacy' %}">
       {% blocktrans %}
         Privacy Policy
       {% endblocktrans %}
     </a>
   </li>
   <li>
-    <a href="{% url 'eula' %}">
+    <a href="{% url 'terms' 'current' 'eula' %}">
       {% blocktrans %}
         End User License Agreement
       {% endblocktrans %}
     </a>
   </li>
   <li>
-    <a href="{% url 'subscription_agreement' %}">
+    <a href="{% url 'terms' 'current' 'psa' %}">
       {% blocktrans %}
         Product Subscription Agreement
       {% endblocktrans %}

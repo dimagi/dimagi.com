@@ -13,23 +13,11 @@
     <div class="destinations">
       <div class="content">
 
-        <a href="{% url 'privacy_policy' %}">
-          {% blocktrans %}
-            Privacy Policy
-          {% endblocktrans %}
-        </a>
-
-        <a href="{% url 'eula' %}">
-          {% blocktrans %}
-            End User License Agreement
-          {% endblocktrans %}
-        </a>
-
-        <a href="{% url 'subscription_agreement' %}">
-          {% blocktrans %}
-            Product Subscription Agreement
-          {% endblocktrans %}
-        </a>
+        {% for term in terms %}
+          <a href="{% url 'terms' version term.slug %}">
+            {{ term.title }}
+          </a>
+        {% endfor %}
 
       </div>{# .content #}
     </div>{# .destinations #}
