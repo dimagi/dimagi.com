@@ -29,5 +29,5 @@ def get_category_by_slug(slug):
     try:
         return slug_to_cat[slug]
     except KeyError:
-        return available_categories.ARCHIVE
+        return ARCHIVE
 
