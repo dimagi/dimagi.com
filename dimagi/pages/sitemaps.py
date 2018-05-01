@@ -6,7 +6,9 @@ from django.utils.dateparse import parse_datetime
 from dimagi.data.blog import nav_categories
 from dimagi.data.case_studies import studies
 from dimagi.data.sectors import all_sectors
+from dimagi.data.terms import PREVIOUS_TERMS, LATEST_TERMS
 from dimagi.data.toolkits import toolkits
+from dimagi.pages.models.terms import VERSION_2
 from dimagi.utils.wordpress_api import get_json
 
 
@@ -21,9 +23,6 @@ class MainViewSitemap(Sitemap):
             'commcare_home': 'daily',
             'careers': 'daily',
             'blog_home': 'daily',
-            'privacy_policy': 'monthly',
-            'eula': 'monthly',
-            'subscription_agreement': 'monthly',
         }
         return view_to_changefreq.get(slug, 'weekly')
 
@@ -43,9 +42,6 @@ class MainViewSitemap(Sitemap):
             'blog_home': 0.7,
             'archive': 0.6,
             'team': 0.9,
-            'privacy_policy': 0.4,
-            'eula': 0.4,
-            'subscription_agreement': 0.4,
         }
         return view_to_priority.get(slug, 0.5)
 
@@ -62,9 +58,6 @@ class MainViewSitemap(Sitemap):
             'toolkits',
             'sectors',
             'press',
-            'privacy_policy',
-            'eula',
-            'subscription_agreement',
             'archive',
             'blog_home',
             'team',
@@ -142,6 +135,35 @@ class ToolkitSitemap(Sitemap):
 
     def location(self, obj):
         return reverse('toolkit', args=[obj.TOOLKIT.slug])
+
+
+class TermsSitemap(Sitemap):
+    protocol = 'https'
+    priority = 0.4
+
+    def items(self):
+        terms = [
+            'default',
+            'latest',
+            'current'
+        ]
+        terms.extend(PREVIOUS_TERMS)
+        terms.extend(LATEST_TERMS)
+        return terms
+
+    def location(self, obj):
+        if obj == 'default':
+            return reverse('terms_default')
+
+        if obj in ['latest', 'current']:
+            return reverse('terms_version', args=[obj])
+
+        if obj.version == VERSION_2:
+            version = 'current'
+        else:
+            version = 'latest'
+
+        return reverse('terms', args=[version, obj.slug])
 
 
 class JobsSitemap(Sitemap):

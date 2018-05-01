@@ -2,31 +2,31 @@
 {% load i18n %}
 {% load dimagidotcom %}
 
-{% block body_class %}policy-page tucked-hero{% endblock %}
+{% block body_class %}terms-page tucked-hero{% endblock %}
 
 {% block title %}
-  {{ policy_title }} - Dimagi
+  {{ terms_title }} - Dimagi
 {% endblock %}
 
 {% block description %}{% blocktrans %}
-  Curious about our {{ policy_title }}? Read for more information.
+  Curious about our {{ terms_title }}? Read for more information.
 {% endblocktrans %}{% endblock %}
 
 {% block stylesheets %}
   {% compress css %}
-    <link href="{% sass_src 'style/pages/policies.scss' %}" rel="stylesheet" media="screen" type="text/css" />
+    <link href="{% sass_src 'style/pages/terms.scss' %}" rel="stylesheet" media="screen" type="text/css" />
   {% endcompress %}
 {% endblock %}
 
 {% block hero %}
   <div class="blue-theme">
-    <section class="hero hero-policy" id="hero"></section>
+    <section class="hero hero-terms" id="hero"></section>
   </div>
 {% endblock %}
 
 {% block content %}
-  <section class="policy-container blue-theme">
+  <section class="terms-container blue-theme">
     {% include "sections/terms/sub_nav.html" %}
-    {% include policy %}
+    {% include terms_template %}
   </section>
 {% endblock %}

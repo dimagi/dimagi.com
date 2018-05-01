@@ -1,0 +1,49 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="policy">
+  <div class="content pad-vert-medium">
+    <div class="intro">
+      <h2>
+        {% blocktrans %}
+          Business Agreement
+        {% endblocktrans %}
+      </h2>
+    </div>{# .intro #}
+
+    <p>
+      {% blocktrans %}
+        Posted: May 1, 2018
+      {% endblocktrans %}
+    </p>
+
+    <p>
+      {% blocktrans %}
+        Effective Date: May 25, 2018
+      {% endblocktrans %}
+    </p>
+
+    <p>
+      You can see our previous terms
+      <a href="{% url 'terms_version' 'current' %}">here</a>.
+    </p>
+
+    <p>
+      {% blocktrans %}
+        This Agreement is applicable to you if you represent a business entity
+        or other organization agreeing to these terms (<strong>"Customer"</strong>).
+      {% endblocktrans %}
+    </p>
+
+    <p>
+      {% blocktrans %}
+        This Dimagi Business Agreement (the <strong>"Agreement"</strong>) is
+        between Dimagi, Inc. and its affiliate entities, Dimagi Software
+        Innovations Pvt. Ltd., Dimagi South Africa (PTY) LTD, Dimagi West
+        Africa, SAS, Dimagi Tanzania Limited (<strong>"Dimagi"</strong>, <strong>"we"</strong>, “us”, or “our”) and the business entity or other organization agreeing to these terms ("Customer"). This Agreement governs Customer’s use and access to Dimagi’s services, client software and websites ("Services").
+      {% endblocktrans %}
+    </p>
+
+
+  </div>{# .content #}
+</section>

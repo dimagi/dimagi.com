@@ -1,30 +1,39 @@
+from django.http import HttpResponseRedirect, Http404
 from django.shortcuts import render
-from django.utils.translation import ugettext
+from django.urls import reverse
+
+from dimagi.data.terms import (
+    get_terms_by_version,
+    get_term_by_slug,
+)
 
 
-def privacy(request):
+def default(request):
+    return HttpResponseRedirect(reverse('terms', args=['current', 'privacy']))
+
+
+def default_latest(request):
+    return HttpResponseRedirect(reverse('terms', args=['latest', 'privacy']))
+
+
+def default_previous(request):
+    return HttpResponseRedirect(reverse('terms', args=['current', 'privacy']))
+
+
+def get_terms(request, version, slug=None):
+    try:
+        terms = get_terms_by_version(version)
+        if slug is None:
+            slug = 'privacy'
+        term = get_term_by_slug(terms, slug)
+    except KeyError:
+        raise Http404()
     return render(request, 'pages/terms.html', {
-        'policy': 'sections/terms/privacy.html',
-        'policy_title': ugettext("Privacy Policy"),
-    })
-
-
-def privacy_new(request):
-    return render(request, 'pages/terms.html', {
-        'policy': 'sections/terms/latest/privacy.html',
-        'policy_title': ugettext("Privacy Policy"),
-    })
-
-
-def eula(request):
-    return render(request, 'pages/terms.html', {
-        'policy': 'sections/terms/eula.html',
-        'policy_title': ugettext("End User License Agreement"),
-    })
-
-
-def subscription(request):
-    return render(request, 'pages/terms.html', {
-        'policy': 'sections/terms/subscription.html',
-        'policy_title': ugettext("Product Subscription Agreement"),
+        'terms_template': 'data/terms/{}/{}.html'.format(
+            term.version,
+            term.slug
+        ),
+        'terms_title': term.title,
+        'terms': terms,
+        'version': version,
     })

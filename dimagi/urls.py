@@ -20,6 +20,7 @@ from dimagi.pages.sitemaps import (
     ToolkitSitemap,
     JobsSitemap,
     TeamMemberSitemap,
+    TermsSitemap,
 )
 from dimagi.pages.views import commcare
 from dimagi.pages.urls import blog
@@ -36,6 +37,7 @@ sitemaps = {
     'team_member': TeamMemberSitemap,
     'archive': BlogArchiveCategorySitemap,
     'blog': BlogPostSitemap,
+    'terms': TermsSitemap,
 }
 
 
