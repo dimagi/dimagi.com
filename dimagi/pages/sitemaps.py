@@ -145,7 +145,7 @@ class TermsSitemap(Sitemap):
         terms = [
             'default',
             'latest',
-            'current'
+            'previous'
         ]
         terms.extend(PREVIOUS_TERMS)
         terms.extend(LATEST_TERMS)
@@ -155,11 +155,11 @@ class TermsSitemap(Sitemap):
         if obj == 'default':
             return reverse('terms_default')
 
-        if obj in ['latest', 'current']:
+        if obj in ['latest', 'previous']:
             return reverse('terms_version', args=[obj])
 
         if obj.version == VERSION_2:
-            version = 'current'
+            version = 'previous'
         else:
             version = 'latest'
 

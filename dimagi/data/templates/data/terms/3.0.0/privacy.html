@@ -24,7 +24,7 @@
     </p>
 
     <p>
-      {% url 'terms' 'current' 'privacy' as previous_policy_url %}
+      {% url 'terms' 'previous' 'privacy' as previous_policy_url %}
       {% blocktrans %}
         You can see our previous privacy policy <a href="{{ previous_policy_url }}">here</a>.
       {% endblocktrans %}

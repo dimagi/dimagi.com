@@ -7,23 +7,30 @@
 
 {% block links %}
   <li>
-    <a href="{% url 'terms' 'current' 'privacy' %}">
+    <a href="{% url 'terms' 'latest' 'privacy' %}">
       {% blocktrans %}
         Privacy Policy
       {% endblocktrans %}
     </a>
   </li>
   <li>
-    <a href="{% url 'terms' 'current' 'eula' %}">
+    <a href="{% url 'terms' 'latest' 'tos' %}">
       {% blocktrans %}
-        End User License Agreement
+        Terms of Service
       {% endblocktrans %}
     </a>
   </li>
   <li>
-    <a href="{% url 'terms' 'current' 'psa' %}">
+    <a href="{% url 'terms' 'latest' 'aup' %}">
       {% blocktrans %}
-        Product Subscription Agreement
+        Acceptable Use Policy
+      {% endblocktrans %}
+    </a>
+  </li>
+  <li>
+    <a href="{% url 'terms' 'latest' 'ba' %}">
+      {% blocktrans %}
+        Business Agreement
       {% endblocktrans %}
     </a>
   </li>

@@ -9,7 +9,7 @@ from dimagi.data.terms import (
 
 
 def default(request):
-    return HttpResponseRedirect(reverse('terms', args=['current', 'privacy']))
+    return HttpResponseRedirect(reverse('terms', args=['latest', 'privacy']))
 
 
 def default_latest(request):
@@ -17,7 +17,7 @@ def default_latest(request):
 
 
 def default_previous(request):
-    return HttpResponseRedirect(reverse('terms', args=['current', 'privacy']))
+    return HttpResponseRedirect(reverse('terms', args=['previous', 'privacy']))
 
 
 def get_terms(request, version, slug=None):

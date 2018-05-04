@@ -10,9 +10,9 @@ PREVIOUS_TERMS = (
 
 LATEST_TERMS = (
     version_3.PRIVACY,
-    # version_3.TOS,
-    # version_3.BA,
-    # version_3.AUP,
+    version_3.TOS,
+    version_3.BA,
+    version_3.AUP,
 )
 
 
@@ -23,7 +23,7 @@ def get_term_by_slug(terms, slug):
 
 def get_terms_by_version(version):
     versions = {
-        'current': PREVIOUS_TERMS,
+        'previous': PREVIOUS_TERMS,
         'latest': LATEST_TERMS,
     }
     return versions[version]
