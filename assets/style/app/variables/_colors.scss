@@ -109,14 +109,23 @@ $color-validated: $color-green;
 }
 
 @function color-invert($_color) {
+  @if $_color == $color-accent-gray {
+    @return $color-text;
+  }
   @return $color-white;
 }
 
 @function color-invert-hover($_color) {
+  @if $_color == $color-accent-gray {
+    @return $color-text;
+  }
   @return $color-white;
 }
 
 @function color-invert-active($_color) {
+  @if $_color == $color-accent-gray {
+    @return $color-text;
+  }
   @return $color-white;
 }
 
