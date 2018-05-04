@@ -22,9 +22,11 @@ def default_previous(request):
 
 def get_terms(request, version, slug=None):
     try:
-        terms = get_terms_by_version(version)
         if slug is None:
-            slug = 'privacy'
+            return HttpResponseRedirect(
+                reverse('terms', args=[version, 'privacy'])
+            )
+        terms = get_terms_by_version(version)
         term = get_term_by_slug(terms, slug)
     except KeyError:
         raise Http404()
