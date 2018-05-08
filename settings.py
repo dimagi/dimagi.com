@@ -46,6 +46,11 @@ MIDDLEWARE = [
     'django.middleware.common.CommonMiddleware',
 ]
 
+DEPLOY_ENVIRONMENT = env.str('DEPLOY_ENVIRONMENT', default='dev')
+
+if DEPLOY_ENVIRONMENT != 'production':
+    MIDDLEWARE.append('dimagi.utils.middleware.no_index_middleware')
+
 ROOT_URLCONF = 'dimagi.urls'
 
 TEMPLATES = [
@@ -89,8 +94,6 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # Allow all host headers
 ALLOWED_HOSTS = ['*']
-
-DEPLOY_ENVIRONMENT = env.str('DEPLOY_ENVIRONMENT', default='dev')
 
 CACHES = {
     'default': env.cache('REDIS_URL'),
