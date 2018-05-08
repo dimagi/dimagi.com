@@ -60,7 +60,6 @@ urlpatterns = [
     url(r'^about/', include(team.about_urls)),
     url(r'^team/', include(team.team_urls)),
 
-
     url(r'^careers/', include('dimagi.pages.urls.careers')),
     url(r'^commcare/', include('dimagi.pages.urls.commcare')),
     url(r'^case-studies/', include('dimagi.pages.urls.case_studies')),
