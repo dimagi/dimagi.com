@@ -4,5 +4,4 @@ from dimagi.pages.views.core import (
     contact,
     test_404,
     test_500,
-    verify,
 )
