@@ -1,4 +1,4 @@
-{% load i18n %}{% load dimagidotcom %}{% load capture_tags %}<!DOCTYPE html>
+{% load i18n %}{% load dimagidotcom %}{% load capture_tags %}{% load require %}<!DOCTYPE html>
 {# note: modernizr.js and app.js add classes to <html> to trigger certain css behaviors. #}
 {# These classes are: #}
 {#     js, no-js, touch, no-touch, cssanimations, #}
@@ -125,11 +125,12 @@
 
     {% block modals %}{% endblock %}
 
-    <script src="{% static 'js/lib/requirejs/require.js' %}"></script>
-    <script src="{% static 'js/requirejs-config.js' %}"></script>
-    {% compress js %}
-    <script src="{% static 'js/app.js' %}"></script>
-    {% endcompress %}
+{#    <script src="{% static 'js/lib/requirejs/require.js' %}"></script>#}
+{#    <script src="{% static 'js/requirejs-config.js' %}"></script>#}
+{#    {% compress js %}#}
+{#    <script src="{% static 'js/app.js' %}"></script>#}
+{#    {% endcompress %}#}
+    {% require_module 'app' %}
 
     <!--[if lte IE 8]>
       <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
