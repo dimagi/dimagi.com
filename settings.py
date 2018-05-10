@@ -24,6 +24,7 @@ DEFAULT_APPS = [
 
 THIRD_PARTY_APPS = [
     'sass_processor',
+    'require',
     'compressor',
     'imagekit',
     'capture_tag',
@@ -117,6 +118,7 @@ STATICFILES_FINDERS = [
     'sass_processor.finders.CssFinder',
     'compressor.finders.CompressorFinder',
 ]
+STATICFILES_STORAGE = 'require.storage.OptimizedStaticFilesStorage'
 
 STATIC_ROOT = root('staticfiles')
 STATIC_URL = env.str('STATIC_URL', default='/static/')
@@ -128,6 +130,12 @@ SASS_PROCESSOR_INCLUDE_DIRS = [
 ]
 SASS_PRECISION = 8
 SASS_PROCESSOR_ENABLED = True
+
+REQUIRE_BASE_URL = "js"
+REQUIRE_JS = "lib/requirejs/require.js"
+REQUIRE_BUILD_PROFILE = "app.build.js"
+REQUIRE_STANDALONE_MODULES = {}
+REQUIRE_DEBUG = DEBUG
 
 AWS_STORAGE_BUCKET_NAME = env.str('AWS_STORAGE_BUCKET_NAME', default='')
 AWS_CLOUDFRONT_DOMAIN = env.str('AWS_CLOUDFRONT_DOMAIN', default='')
