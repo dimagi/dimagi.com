@@ -1,8 +1,12 @@
 define([
-  'modernizr',
-  'lodash',
   'jquery',
-], function (Modernizr, _, $) {
+  'lodash',
+  'modernizr',
+], function (
+    $,
+    _,
+    Modernizr
+) {
   'use strict';
   var self = {};
 

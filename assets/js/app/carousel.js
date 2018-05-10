@@ -1,10 +1,16 @@
 define([
+  'jquery',
+  'lodash',
+  'modernizr',
   'app/resize',
   'app/constants',
-  'lodash',
-  'jquery',
-  'modernizr',
-], function (Resize, Constants, _, $, Modernizr) {
+], function (
+    $,
+    _,
+    Modernizr,
+    Resize,
+    Constants
+) {
   'use strict';
   var self = {};
   self.carousels = [];
