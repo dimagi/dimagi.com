@@ -28,6 +28,7 @@ libsass = "*"
 olefile = "*"
 django-capture-tag = "*"
 django-require = "*"
+django-htmlmin = "*"
 
 
 [requires]
