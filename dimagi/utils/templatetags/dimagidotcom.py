@@ -8,6 +8,9 @@ from django.template.loader import render_to_string
 from django.utils.safestring import mark_safe
 from compressor.templatetags.compress import compress as original_compress
 from sass_processor.templatetags.sass_tags import SassSrcNode
+from require.conf import settings as require_settings
+from require.helpers import resolve_require_url, resolve_require_module
+
 from dimagi.utils.web import json_handler, get_static_url
 
 try:
@@ -169,3 +172,28 @@ def linkedin_link(url):
     icon = "svg/social/linkedin.html"
 
     return _render_social_link(share_url, icon)
+
+
+@register.simple_tag
+def require_module(module):
+    """
+    Inserts a script tag to load the named module, which is relative to the REQUIRE_BASE_URL setting.
+
+    If the module is configured in REQUIRE_STANDALONE_MODULES, and REQUIRE_DEBUG is False, then
+    then the standalone built version of the module will be loaded instead, bypassing require.js
+    for extra load performance.
+    """
+    if not require_settings.REQUIRE_DEBUG and module in require_settings.REQUIRE_STANDALONE_MODULES:
+        return mark_safe(
+            """<script src="{module}"></script>""".format(
+                module=get_static_url(
+                    resolve_require_module(require_settings.REQUIRE_STANDALONE_MODULES[module]["out"])),
+            )
+        )
+
+    return mark_safe(
+        """<script src="{src}" data-main="{module}"></script>""".format(
+            src=get_static_url(resolve_require_url(require_settings.REQUIRE_JS)),
+            module=get_static_url(resolve_require_module(module)),
+        )
+    )
