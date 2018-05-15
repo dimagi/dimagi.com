@@ -36,16 +36,29 @@
             Contact Us
           {% endblocktrans %}
         </h1>
+
+        <div class="cta gap-vert-line">
+          <a class="button button-accent-gray"
+             href="#contact-form-modal">
+            {% blocktrans %}
+              Get in Touch
+            {% endblocktrans %}
+          </a>
+        </div>{# .home-cta #}
       </div> {# .content #}
     </section>
   </div>
 {% endblock %}
 
 {% block content %}
-  <section class="contact-container neutral-theme">
-    {% include 'sections/contact/sub_nav.html' %}
-    {% include 'sections/contact/directory.html' %}
-    {% include 'sections/contact/offices.html' %}
+  <section class="contact-container">
+    <div class="orange-theme">
+      {% include 'sections/contact/sub_nav.html' %}
+    </div>
+    <div class="neutral-theme">
+      {% include 'sections/contact/directory.html' %}
+      {% include 'sections/contact/offices.html' %}
+    </div>
   </section>
 {% endblock %}
 
