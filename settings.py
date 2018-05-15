@@ -143,6 +143,9 @@ AWS_STORAGE_BUCKET_NAME = env.str('AWS_STORAGE_BUCKET_NAME', default='')
 AWS_CLOUDFRONT_DOMAIN = env.str('AWS_CLOUDFRONT_DOMAIN', default='')
 AWS_CLOUDFRONT_DISTRIBUTION_ID = env.str('AWS_CLOUDFRONT_DISTRIBUTION_ID', default='')
 AWS_IS_GZIPPED = env.bool('AWS_IS_GZIPPED', default=False)
+AWS_S3_OBJECT_PARAMETERS = {
+    'CacheControl': 'max-age=86400',
+}
 
 if AWS_ENABLED:
     AWS_ACCESS_KEY_ID = env.str('AWS_ACCESS_KEY_ID', default='')
