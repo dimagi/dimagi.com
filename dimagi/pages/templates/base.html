@@ -66,7 +66,6 @@
           type="image/png"
           href="{% static 'pages/home/favicon.png' %}">
 
-    {# todo bring font offline and load from CDN #}
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:100,300,400,500,700,800" rel="stylesheet">
 
     {% compress css %}
@@ -125,11 +124,6 @@
 
     {% block modals %}{% endblock %}
 
-{#    <script src="{% static 'js/lib/requirejs/require.js' %}"></script>#}
-{#    <script src="{% static 'js/requirejs-config.js' %}"></script>#}
-{#    {% compress js %}#}
-{#    <script src="{% static 'js/app.js' %}"></script>#}
-{#    {% endcompress %}#}
     {% require_module 'app' %}
 
     <!--[if lte IE 8]>
