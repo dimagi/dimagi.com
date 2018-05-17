@@ -73,6 +73,11 @@
   .links-social li {
     display: inline-block;
     margin: 0 $space-base/2;
+    vertical-align: middle;
+
+    svg {
+      margin-top: -2px;
+    }
   }
 
 }

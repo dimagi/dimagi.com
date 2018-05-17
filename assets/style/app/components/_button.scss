@@ -178,6 +178,11 @@ input[type="reset"].alt.inverted,
   background-color: transparent !important; // scss-lint:disable ImportantRule
   box-shadow: inset 0 0 0 1px $color-white !important; // scss-lint:disable ImportantRule
   color: $color-white !important; // scss-lint:disable ImportantRule
+
+  &:hover,
+  &:focus {
+    background-color: rgba($color-white, .3) !important; // scss-lint:disable ImportantRule
+  }
 }
 
 @each $_theme, $_color in $colors-by-theme {
