@@ -1,0 +1,18 @@
+language: python
+python:
+  - "3.6"
+
+services:
+  - redis-server
+
+before_install:
+  - cp dev.env .env
+
+install:
+
+  - pip install pipenv
+  - pipenv install
+  - yarn install
+
+script:
+ - python manage.py test
