@@ -1,5 +1,7 @@
 # Dimagi.com
 
+[![Build Status](https://travis-ci.org/dimagi/dimagi.com.svg?branch=master)](https://travis-ci.org/dimagi/dimagi.com)
+
 1. [Getting Started Locally](#getting-started-locally)
 2. [Deploying to Heroku](#deploying-to-heroku)
 3. [PR Guidelines](#pr-guidelines)
