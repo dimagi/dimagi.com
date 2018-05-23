@@ -232,23 +232,33 @@
             {% endblocktrans %}
           </li>
           <li>
-            {% blocktrans %}
-              <u>Compliance:</u> Customer and its End Users must use the
-              Services in compliance with the
-              <a href="{{ aup_url }}">Acceptable Use Policy</a>. Customer is
-              responsible for use of the Services by its End Users. Customer
-              will comply with laws and regulations applicable to Customer's
-              use of the Services, if any. Customer will obtain and maintain
-              from End Users any consents necessary to allow Administrators to
-              engage in the activities described in this Agreement and to allow
-              Dimagi to provide the Services. Customer will not store, transmit
-              or otherwise process any information via the Services that falls
-              within the definition of "Protected Health Information" under the
-              HIPAA Privacy Rule (45 C.F.R. Section 164.051), unless Customer
-              and Dimagi separately enter into a HIPAA Business Associate
-              Agreement applicable to a specific Subscription Plan as outlined
-              on Dimagi’s <a href="{{ pricing_url }}">Pricing Page</a>.
-            {% endblocktrans %}
+            <p>
+              {% blocktrans %}
+                <u>Compliance:</u> Customer and its End Users must use the
+                Services in compliance with the
+                <a href="{{ aup_url }}">Acceptable Use Policy</a>. Customer is
+                responsible for use of the Services by its End Users. Customer
+                will comply with laws and regulations applicable to Customer's
+                use of the Services, if any. Customer will obtain and maintain
+                from End Users any consents necessary to allow Administrators to
+                engage in the activities described in this Agreement and to allow
+                Dimagi to provide the Services. Customer will not store, transmit
+                or otherwise process any information via the Services that falls
+                within the definition of "Protected Health Information" under the
+                HIPAA Privacy Rule (45 C.F.R. Section 164.051), unless Customer
+                and Dimagi separately enter into a HIPAA Business Associate
+                Agreement applicable to a specific Subscription Plan as outlined
+                on Dimagi’s <a href="{{ pricing_url }}">Pricing Page</a>.
+              {% endblocktrans %}
+            </p>
+            <p>
+              {% blocktrans %}
+                Customer will not store, transmit or otherwise process personal
+                data of EU subjects as defined by the General Data Protection
+                Regulation (GDPR) unless Customer and Dimagi separately enter
+                into a Data Processing Addendum (DPA).
+              {% endblocktrans %}
+            </p>
           </li>
           <li>
             {% blocktrans %}
