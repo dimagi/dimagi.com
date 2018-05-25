@@ -3,7 +3,7 @@ define([
   'lodash',
 ], function (
   $,
-  _,
+  _
 ) {
   'use strict';
   var self = {};

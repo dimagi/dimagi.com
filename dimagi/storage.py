@@ -1,4 +1,7 @@
 from __future__ import absolute_import
+
+from require.storage import OptimizedFilesMixin
+
 from dimagi.utils.config import setting
 from sass_processor.storage import SassS3Boto3Storage, SassFileStorage
 from compressor.storage import CompressorFileStorage
@@ -8,7 +11,7 @@ STATIC_CDN = setting('STATIC_CDN', '')
 CDN_BASE_URL = STATIC_CDN + STATIC_URL
 
 
-class StaticFileStorage(SassFileStorage):
+class StaticFileStorage(OptimizedFilesMixin, SassFileStorage):
     pass
 
 

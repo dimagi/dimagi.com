@@ -24,6 +24,7 @@ DEFAULT_APPS = [
 
 THIRD_PARTY_APPS = [
     'sass_processor',
+    'require',
     'compressor',
     'imagekit',
     'capture_tag',
@@ -39,6 +40,8 @@ PROJECT_APPS = [
 INSTALLED_APPS = DEFAULT_APPS + THIRD_PARTY_APPS + PROJECT_APPS
 
 MIDDLEWARE = [
+    'django.middleware.gzip.GZipMiddleware',
+    'htmlmin.middleware.HtmlMinifyMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -117,6 +120,7 @@ STATICFILES_FINDERS = [
     'sass_processor.finders.CssFinder',
     'compressor.finders.CompressorFinder',
 ]
+STATICFILES_STORAGE = 'require.storage.OptimizedStaticFilesStorage'
 
 STATIC_ROOT = root('staticfiles')
 STATIC_URL = env.str('STATIC_URL', default='/static/')
@@ -129,9 +133,19 @@ SASS_PROCESSOR_INCLUDE_DIRS = [
 SASS_PRECISION = 8
 SASS_PROCESSOR_ENABLED = True
 
+REQUIRE_BASE_URL = "js"
+REQUIRE_JS = "require.js"
+REQUIRE_BUILD_PROFILE = "app.build.js"
+REQUIRE_STANDALONE_MODULES = {}
+REQUIRE_DEBUG = DEBUG
+
 AWS_STORAGE_BUCKET_NAME = env.str('AWS_STORAGE_BUCKET_NAME', default='')
 AWS_CLOUDFRONT_DOMAIN = env.str('AWS_CLOUDFRONT_DOMAIN', default='')
 AWS_CLOUDFRONT_DISTRIBUTION_ID = env.str('AWS_CLOUDFRONT_DISTRIBUTION_ID', default='')
+AWS_IS_GZIPPED = env.bool('AWS_IS_GZIPPED', default=False)
+AWS_S3_OBJECT_PARAMETERS = {
+    'CacheControl': 'max-age=86400',
+}
 
 if AWS_ENABLED:
     AWS_ACCESS_KEY_ID = env.str('AWS_ACCESS_KEY_ID', default='')

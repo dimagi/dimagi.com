@@ -1,10 +1,16 @@
 define([
+  'jquery',
+  'modernizr',
   'app/constants',
   'app/pipeline',
   'app/resize',
-  'jquery',
-  'modernizr',
-], function (Constants, Pipeline, Resize, $, Modernizr) {
+], function (
+    $,
+    Modernizr,
+    Constants,
+    Pipeline,
+    Resize
+) {
   'use strict';
   var self = {};
 

@@ -1,7 +1,10 @@
 define([
-  'lodash',
   'jquery',
-], function (_, $) {
+  'lodash',
+], function (
+    $,
+    _
+) {
   'use strict';
   var self = {};
   self.callbacks = [];

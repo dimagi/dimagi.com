@@ -1,10 +1,10 @@
 define([
-    'lodash',
-    'app/analytix/utils',
-    'app/analytix/google',
-    'app/analytix/hubspot',
-    'app/analytix/kissmetrix',
-    'app/analytix/drift',
+  'lodash',
+  'app/analytix/utils',
+  'app/analytix/google',
+  'app/analytix/hubspot',
+  'app/analytix/kissmetrix',
+  'app/analytix/drift',
 ], function (
     _,
     Utils,

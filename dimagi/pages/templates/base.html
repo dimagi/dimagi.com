@@ -66,9 +66,7 @@
           type="image/png"
           href="{% static 'pages/home/favicon.png' %}">
 
-    {# todo bring font offline and load from CDN #}
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:100,300,400,500,700,800" rel="stylesheet">
-
     {% compress css %}
     <link href="{% sass_src 'style/app.scss' %}" rel="stylesheet" media="screen" type="text/css" />
     {% endcompress %}
@@ -125,12 +123,6 @@
 
     {% block modals %}{% endblock %}
 
-    <script src="{% static 'js/lib/requirejs/require.js' %}"></script>
-    <script src="{% static 'js/requirejs-config.js' %}"></script>
-    {% compress js %}
-    <script src="{% static 'js/app.js' %}"></script>
-    {% endcompress %}
-
     <!--[if lte IE 8]>
       <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
     <![endif]-->
@@ -143,6 +135,8 @@
         css: ""
       });
     </script>
+
+    {% require_module 'app' %}
 
     {% block js %}{% endblock %}
 

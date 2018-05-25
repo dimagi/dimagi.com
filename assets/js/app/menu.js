@@ -1,6 +1,8 @@
 define([
   'jquery',
-], function ($) {
+], function (
+    $
+) {
   'use strict';
   var self = {};
 

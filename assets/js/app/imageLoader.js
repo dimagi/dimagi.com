@@ -1,9 +1,14 @@
 define([
+  'jquery',
   'app/constants',
   'app/pipeline',
   'app/resize',
-  'jquery',
-], function (Constants, Pipeline, Resize, $) {
+], function (
+    $,
+    Constants,
+    Pipeline,
+    Resize
+) {
   'use strict';
   var self = {};
 
