@@ -1,0 +1,10 @@
+---
+linters:
+    pep8:
+        python: 3
+        ignore: 'W28'
+        max-line-length: 120
+        fixer: true
+files:
+  ignore:
+    - '*.min.js'
