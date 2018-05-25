@@ -67,7 +67,6 @@
           href="{% static 'pages/home/favicon.png' %}">
 
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:100,300,400,500,700,800" rel="stylesheet">
-
     {% compress css %}
     <link href="{% sass_src 'style/app.scss' %}" rel="stylesheet" media="screen" type="text/css" />
     {% endcompress %}
@@ -124,8 +123,6 @@
 
     {% block modals %}{% endblock %}
 
-    {% require_module 'app' %}
-
     <!--[if lte IE 8]>
       <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
     <![endif]-->
@@ -138,6 +135,8 @@
         css: ""
       });
     </script>
+
+    {% require_module 'app' %}
 
     {% block js %}{% endblock %}
 
