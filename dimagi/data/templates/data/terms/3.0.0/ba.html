@@ -4,6 +4,7 @@
 {% url 'terms' 'latest' 'aup' as aup_url %}
 {% url 'terms' 'latest' 'tos' as tos_url %}
 {% url 'terms' 'latest' 'privacy' as privacy_url %}
+{% url 'terms' 'latest' 'ba' as ba_url %}
 {% url 'commcare_pricing' as pricing_url %}
 
 <section class="policy">
@@ -686,10 +687,12 @@
           </li>
           <li>
             {% blocktrans %}
-              <u>Entire Agreement:</u> This Agreement, together with the
-              Privacy Policy, the Business Agreement, the Acceptable Use Policy,
-              and the other documents
-              and materials referenced herein, supersedes any prior agreements
+              <u>Entire Agreement:</u> These Terms, together with the
+              <a href="{{ privacy_url }}">Privacy Policy</a>,
+              the <a href="{{ aup_url }}">Business Agreement</a>,
+              the <a href="{{ ba_url }}">Acceptable Use Policy</a>, and the other
+              documents and materials
+              referenced herein, supersedes any prior agreements
               or understandings between the Parties, and constitutes the entire
               Agreement between the Parties related to this subject matter.
             {% endblocktrans %}
