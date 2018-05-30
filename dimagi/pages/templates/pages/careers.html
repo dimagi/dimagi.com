@@ -20,9 +20,7 @@
 {% endblock %}
 
 {% block js %}
-    {% compress js %}
-    <script src="{% static 'js/careers.js' %}"></script>
-    {% endcompress %}
+  {% require_module 'careers' %}
 {% endblock %}
 
 {% block meta %}
