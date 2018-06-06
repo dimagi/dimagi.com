@@ -88,8 +88,8 @@ GROUP.add_features([
             "Support to connect new in-country gateways"
         ),
         description=mark_safe(ugettext_lazy("""For larger high-volume projects 
-        in countries we do not already support, Dimagi can support purchasing 
-        and connecting a new 
+        in countries we do not already support, 
+        Dimagi can support connecting a new 
         <a href="https://wiki.commcarehq.org/display/commcarepublic/Gateway+Options+for+SMS+Projects"
            target="_blank">gateway</a> to CommCareHQ. 
         """)),
