@@ -6,3 +6,15 @@ QuickStartCard = namedtuple(
     'QuickStartCard',
     'theme icon title description level cta'
 )
+
+
+QuickStartArea = namedtuple(
+    'QuickStartArea',
+    'slug title sections'
+)
+
+
+QuickStartSection = namedtuple(
+    'QuickStartSection',
+    'title theme cards'
+)
