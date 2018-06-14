@@ -1,0 +1,35 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="border-top schedule-call" id="schedule-call">
+  <div class="content pad-vert-medium">
+
+    <div class="grid-2-at-medium grid-row-space-none grid-valign-middle grid-reverse">
+      <div class="copy content-cell-padding-right">
+        <h3>
+          {% blocktrans %}
+            Need Help Using Quick Starts?
+          {% endblocktrans %}
+        </h3>
+        <p>
+          {% blocktrans %}
+            Our product experts are on hand to help you get started with
+            CommCare. Just let us know when you would like to talk!
+          {% endblocktrans %}
+        </p>
+        <p>
+          <a href="#"
+             class="button">
+            {% blocktrans %}
+              Schedule your call
+            {% endblocktrans %}
+          </a>
+        </p>
+      </div>{# .copy #}
+
+      <div class="quickstart-help-cta"
+           data-lazybg="true"></div>
+
+    </div>{# .grid-2-at-medium #}
+  </div>{# .content #}
+</section>

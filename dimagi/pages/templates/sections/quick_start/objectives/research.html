@@ -1,0 +1,19 @@
+{% extends "sections/quick_start/objectives/_base.html" %}
+{% load dimagidotcom %}
+{% load i18n %}
+
+{% block link %}
+  #
+{% endblock %}
+
+{% block icon %}
+  {% include 'svg/quick_start/research.html' %}
+{% endblock %}
+
+{% block title %}{% blocktrans %}
+Research
+{% endblocktrans %}{% endblock %}
+
+{% block description %}{% blocktrans %}
+I want to collect data for my research project.
+{% endblocktrans %}{% endblock %}

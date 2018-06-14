@@ -1,0 +1,29 @@
+{% load i18n %}
+
+<div class="column">
+  <a class="tile"
+     target="_blank"
+     href="{% block link %}{% endblock %}">
+
+    <div class="gap-bottom-line blue-icon">
+    {% block icon %}{% endblock %}
+    </div>
+
+    <h6 class="blue">
+      {% block title %}{% endblock %}
+    </h6>
+
+    <p class="body-color">
+      {% block description %}{% endblock %}
+    </p>
+
+    <p class="button-container gap-top-small">
+      <div class="button button-blue">
+        {% blocktrans %}
+          See Quick Starts
+        {% endblocktrans %}
+      </div>{# .button #}
+    </p>
+
+  </a>
+</div>{# .column #}

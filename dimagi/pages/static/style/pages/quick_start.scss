@@ -1,0 +1,19 @@
+@import 'app/mixins/background';
+@import 'app/variables/colors';
+@import 'app/variables/sizes';
+@import 'app/variables/type';
+
+.quick-starts-page {
+  @include make-bg(hero, '../../pages/quick_start/hero');
+}
+
+$_base-height: 175px;
+$_height-by-size: (
+  extra-small: 205px,
+  small: 270px,
+  medium: 210px,
+  large: 265px,
+  extra-large: 320px,
+);
+@include make-bg(quickstart-help-cta, '../../pages/quick_start/cta', $_base-height, $_height-by-size);
+
