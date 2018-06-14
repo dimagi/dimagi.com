@@ -4,7 +4,7 @@ from collections import namedtuple
 
 QuickStartCard = namedtuple(
     'QuickStartCard',
-    'theme icon title description level cta'
+    'icon title description level cta'
 )
 
 
@@ -16,5 +16,5 @@ QuickStartArea = namedtuple(
 
 QuickStartSection = namedtuple(
     'QuickStartSection',
-    'title theme cards'
+    'title cards'
 )
