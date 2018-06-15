@@ -8,13 +8,13 @@ QuickStartCard = namedtuple(
 )
 
 
-QuickStartArea = namedtuple(
-    'QuickStartArea',
-    'slug title sections'
-)
-
-
 QuickStartSection = namedtuple(
     'QuickStartSection',
     'title cards'
+)
+
+
+QuickStartArea = namedtuple(
+    'QuickStartSection',
+    'slug title description sections'
 )

@@ -54,6 +54,9 @@ SECTION_D = QuickStartSection(
 AREA = QuickStartArea(
     title=ugettext_lazy("Collect Research Data"),
     slug='research',
+    description=ugettext_lazy(
+        "Learn how to use CommCare to collect data for your research project."
+    ),
     sections=[
         SECTION_A,
         SECTION_B,

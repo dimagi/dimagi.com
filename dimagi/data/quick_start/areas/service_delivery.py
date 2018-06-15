@@ -52,6 +52,10 @@ SECTION_D = QuickStartSection(
 AREA = QuickStartArea(
     title=ugettext_lazy("Improve Your Service Delivery"),
     slug='service-delivery',
+    description=ugettext_lazy(
+        "Learn how to use CommCare to improve the services you "
+        "provide to beneficiaries."
+    ),
     sections=[
         SECTION_A,
         SECTION_B,

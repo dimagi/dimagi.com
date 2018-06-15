@@ -51,6 +51,9 @@ SECTION_D = QuickStartSection(
 AREA = QuickStartArea(
     title=ugettext_lazy("Monitor and Evaluate Your Program"),
     slug='monitoring-evaluation',
+    description=ugettext_lazy(
+        "Learn how to use CommCare to report on your program's performance."
+    ),
     sections=[
         SECTION_A,
         SECTION_B,
