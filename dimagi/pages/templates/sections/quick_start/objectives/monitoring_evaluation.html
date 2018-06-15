@@ -3,7 +3,7 @@
 {% load i18n %}
 
 {% block link %}
-  #
+  {% url 'quick_start_area' 'monitoring-evaluation' %}
 {% endblock %}
 
 {% block icon %}
@@ -15,5 +15,5 @@ Monitoring and Evaluation
 {% endblocktrans %}{% endblock %}
 
 {% block description %}{% blocktrans %}
-I want to report on my program’s performance.
+I want to report on my program's performance.
 {% endblocktrans %}{% endblock %}
