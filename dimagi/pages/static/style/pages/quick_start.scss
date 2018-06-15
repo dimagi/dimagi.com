@@ -7,6 +7,10 @@
   @include make-bg(hero, '../../pages/quick_start/hero');
 }
 
+.quick-starts-page-single {
+  @include make-bg(hero, '../../pages/quick_start/single/hero');
+}
+
 $_base-height: 175px;
 $_height-by-size: (
   extra-small: 205px,
@@ -16,4 +20,42 @@ $_height-by-size: (
   extra-large: 320px,
 );
 @include make-bg(quickstart-help-cta, '../../pages/quick_start/cta', $_base-height, $_height-by-size);
+@include make-bg(see-all-cta, '../../pages/quick_start/single/cta', $_base-height, $_height-by-size);
 
+.tile {
+  position: relative;
+
+  .badge-container {
+    height: 80px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+.hero .commcare-title {
+  text-transform: none;
+  font-size: 22px;
+
+  svg {
+    margin-top: -8px;
+  }
+}
+
+.guide-title {
+  font-size: 30px;
+}
+
+
+.selected {
+  border: 2px solid white;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+
+  &:after {
+    content: ">";
+    transform: translateY(0.1em) rotate(90deg);
+    margin-left: 10px;
+  }
+}

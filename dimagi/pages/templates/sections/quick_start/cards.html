@@ -1,0 +1,27 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="objectives accent-gray-bg border-top blue-theme"
+         id="objectives">
+  <div class="content pad-top-medium pad-bottom-small align-center">
+
+    <div class="grid-4-at-medium grid-2-at-small grid-row-space-small grid-row-equal-heights">
+      {% for section in area.sections %}
+        {% with forloop.counter as section_num %}
+          {% for card in section.cards %}
+            {% if section_num == 1 %}
+              {% include "sections/quick_start/cards/single.html" with theme="blue" data_bind="visible: isVisibleSectionA" %}
+            {% elif section_num == 2 %}
+              {% include "sections/quick_start/cards/single.html" with theme="turquoise" data_bind="visible: isVisibleSectionB" %}
+            {% elif section_num == 3 %}
+              {% include "sections/quick_start/cards/single.html" with theme="purple" data_bind="visible: isVisibleSectionC" %}
+            {% elif section_num == 4 %}
+              {% include "sections/quick_start/cards/single.html" with theme="green" data_bind="visible: isVisibleSectionD" %}
+            {% endif %}
+          {% endfor %}
+        {% endwith %}
+      {% endfor %}
+    </div>{# .grid-4-at-medium #}
+
+  </div>{# .content #}
+</section>

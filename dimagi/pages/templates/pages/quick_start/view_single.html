@@ -3,61 +3,65 @@
 {% load dimagidotcom %}
 
 {% block title %}
-  {{ study.title }}
+  {{ area.title }} - CommCare Quick Start Guide
 {% endblock %}
 
 {% block description %}
-  {{ study.summary }}
+  {{ area.description }}
 {% endblock %}
 
-{% block body_class %}case-study-page tucked-hero{% endblock %}
+{% block body_class %}quick-starts-page-single tucked-hero{% endblock %}
 
 {% block stylesheets %}
   {% compress css %}
-    <link href="{% sass_src 'style/pages/case_studies/view_single.scss' %}" rel="stylesheet" media="screen" type="text/css" />
+    <link href="{% sass_src 'style/pages/quick_start.scss' %}" rel="stylesheet" media="screen" type="text/css" />
   {% endcompress %}
 {% endblock %}
 
 {% block hero %}
-  <div class="orange-theme">
-    <section class="hero hero-case-study" id="hero"></section>
-  </div>
+<section class="hero hero-quick-starts"
+         data-lazybg="true"
+         id="hero">
+  <div class="content content-width-large inverted align-center display-flex flex-valign-middle expand-vertical offset-top-small flex-align-center">
+    <div class="copy expand position-relative">
+
+      <h2 class="pad-bottom-line commcare-title">
+        {% include "svg/commcare/logo.html" %} Quick Start Guides
+      </h2>
+      <h1 class="guide-title">
+        {{ area.title }}
+      </h1>
+
+{#      <h4 class="selected selected-card gap-bottom-line pad-base">#}
+{#        <div class="words">#}
+{#          Select your <strong>goal</strong>#}
+{#        </div>#}
+{#      </h4>#}
+{#      <ul class="tile pad-none reset selector card-selector pad-vert-base charcoal-muted">#}
+{#        <li class="pad-horz-small pad-vert-base" data-gpv="under-250k" data-gpv-text="Under $250K per year">#}
+{#          <div class="h4 font-weight-medium gap-bottom-none">Under $250K per year</div>#}
+{#        </li>#}
+{#        <li class="pad-horz-small pad-vert-base" data-gpv="over-250k" data-gpv-text="Over $250K per year">#}
+{#          <div class="h4 font-weight-medium gap-bottom-none">Over $250K per year</div>#}
+{#        </li>#}
+{#      </ul>#}
+
+      <div class="headline content-width-small">
+        {{ area.description }}
+      </div>{# .headline #}
+
+    </div>{# .copy #}
+  </div>{# .content #}
+</section>
 {% endblock %}
 
 {% block content %}
-  <section class="case-study-container orange-theme">
-    {% include 'sections/case_studies/sub_nav.html' %}
-    {% include 'sections/case_studies/summary.html' %}
-
-    <section class="border-vert accent-gray-bg download"
-             id="download">
-      <div class="content pad-vert-medium align-center">
-        <h3>
-          {% blocktrans %}
-            Download the Case Study
-          {% endblocktrans %}
-        </h3>
-        <div id="hubspot-download-form" class="hubspot-download"></div>
-      </div>
-    </section>
-
+  <section class="quick-starts-container blue-theme">
+    {% include 'sections/quick_start/cards.html' %}
+    {% include 'sections/quick_start/commcare_in_action.html' %}
+    {% include 'sections/quick_start/see_all_quickstarts.html' %}
   </section>
 {% endblock %}
 
 {% block js %}
-  <!--[if lte IE 8]>
-    <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
-  <![endif]-->
-  <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
-  <script>
-    hbspt.forms.create({
-      portalId: "503070",
-      formId: "{{ study.hubspot_form }}",
-      target: "#hubspot-download-form",
-      css: "",
-      onFormSubmit: function () {
-        window.open('{{ study.download_url }}', "_blank");
-      },
-    });
-  </script>
 {% endblock %}
