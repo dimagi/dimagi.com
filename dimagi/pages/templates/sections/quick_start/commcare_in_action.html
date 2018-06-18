@@ -12,14 +12,16 @@
     </h3>
     <div class="grid-flex grid-align-center">
       <div class="pad-right-small-at-medium border-right border-white-at-medium">
-        {% blocktrans %}
-          Watch the video
-        {% endblocktrans %}
+        {% trans 'Watch the video' as video_text %}
+        {% include "partials/wistia_popover.html" with wistia_id='9uvnpbecdy' show_play=True text=video_text %}
       </div>
       <div class="pad-left-small-at-medium">
-        {% blocktrans %}
-          See case studies
-        {% endblocktrans %}
+        <a class="alt" href="{% url 'case_studies' %}">
+          {% include "svg/quick_start/case_studies.html" %}
+          {% blocktrans %}
+            See case studies
+          {% endblocktrans %}
+        </a>
       </div>
     </div>
   </div>{# .content #}
