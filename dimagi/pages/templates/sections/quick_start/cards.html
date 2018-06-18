@@ -4,19 +4,45 @@
 <section class="objectives accent-gray-bg border-top blue-theme"
          id="objectives">
   <div class="content pad-top-medium pad-bottom-small align-center">
-
+    <div class="intro quick-start-intro-main">
+      <h3 class="body-color">
+        {% blocktrans %}
+          Quick Starts
+        {% endblocktrans %}
+      </h3>
+      <p>
+        {% blocktrans %}
+          Welcome to your personalized “how to” guide for better service
+          delivery with CommCare. Select your goal in the drop-down above to
+          see the relevant Quick Starts.
+        {% endblocktrans %}
+      </p>
+    </div>
+    {% for section in area.sections %}
+      {% with forloop.counter as section_num %}
+        {% if section_num == 1 %}
+          {% include "sections/quick_start/cards/header.html" with theme="blue" %}
+        {% elif section_num == 2 %}
+          {% include "sections/quick_start/cards/header.html" with theme="turquoise" %}
+        {% elif section_num == 3 %}
+          {% include "sections/quick_start/cards/header.html" with theme="purple" %}
+        {% elif section_num == 4 %}
+          {% include "sections/quick_start/cards/header.html" with theme="green" %}
+        {% endif %}
+      {% endwith %}
+    {% endfor %}
     <div class="grid-4-at-medium grid-2-at-small grid-row-space-small grid-row-equal-heights">
       {% for section in area.sections %}
         {% with forloop.counter as section_num %}
           {% for card in section.cards %}
             {% if section_num == 1 %}
-              {% include "sections/quick_start/cards/single.html" with theme="blue" data_bind="visible: isVisibleSectionA" %}
+              {% include "sections/quick_start/cards/single.html" with theme="blue" %}
             {% elif section_num == 2 %}
-              {% include "sections/quick_start/cards/single.html" with theme="turquoise" data_bind="visible: isVisibleSectionB" %}
+              {% include "sections/quick_start/cards/single.html" with theme="turquoise" %}
             {% elif section_num == 3 %}
-              {% include "sections/quick_start/cards/single.html" with theme="purple" data_bind="visible: isVisibleSectionC" %}
+              {% include "sections/quick_start/cards/single.html" with theme="purple" %}
             {% elif section_num == 4 %}
-              {% include "sections/quick_start/cards/single.html" with theme="green" data_bind="visible: isVisibleSectionD" %}
+              {% include "sections/quick_start/cards/single.html" with theme="green" %}
             {% endif %}
           {% endfor %}
         {% endwith %}

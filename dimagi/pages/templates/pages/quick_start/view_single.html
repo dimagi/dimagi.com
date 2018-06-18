@@ -22,7 +22,7 @@
 <section class="hero hero-quick-starts"
          data-lazybg="true"
          id="hero">
-  <div class="content content-width-large inverted align-center display-flex flex-valign-middle expand-vertical offset-top-small flex-align-center">
+  <div class="content inverted align-center display-flex flex-valign-middle expand-vertical offset-top-small flex-align-center">
     <div class="copy expand position-relative">
 
       <h2 class="pad-bottom-line commcare-title">
@@ -32,23 +32,31 @@
         {{ area.title }}
       </h1>
 
-{#      <h4 class="selected selected-card gap-bottom-line pad-base">#}
-{#        <div class="words">#}
-{#          Select your <strong>goal</strong>#}
-{#        </div>#}
-{#      </h4>#}
-{#      <ul class="tile pad-none reset selector card-selector pad-vert-base charcoal-muted">#}
-{#        <li class="pad-horz-small pad-vert-base" data-gpv="under-250k" data-gpv-text="Under $250K per year">#}
-{#          <div class="h4 font-weight-medium gap-bottom-none">Under $250K per year</div>#}
-{#        </li>#}
-{#        <li class="pad-horz-small pad-vert-base" data-gpv="over-250k" data-gpv-text="Over $250K per year">#}
-{#          <div class="h4 font-weight-medium gap-bottom-none">Over $250K per year</div>#}
-{#        </li>#}
-{#      </ul>#}
-
-      <div class="headline content-width-small">
-        {{ area.description }}
-      </div>{# .headline #}
+      <div class="selected-container" style="display: none;">
+        <h4 class="selected selected-card gap-bottom-line pad-base">
+          <div class="words">
+            Select your <strong>goal</strong>
+          </div>
+          <div class="caret">
+            {% include "svg/caret_down.html" %}
+          </div>
+        </h4>
+        <ul class="tile pad-none reset selector card-selector pad-vert-base charcoal-muted">
+          {% for section in area.sections %}
+            {% with forloop.counter as section_num %}
+                {% if section_num == 1 %}
+                  {% include "sections/quick_start/cards/selector.html" with theme="blue" %}
+                {% elif section_num == 2 %}
+                  {% include "sections/quick_start/cards/selector.html" with theme="turquoise" %}
+                {% elif section_num == 3 %}
+                  {% include "sections/quick_start/cards/selector.html" with theme="purple" %}
+                {% elif section_num == 4 %}
+                  {% include "sections/quick_start/cards/selector.html" with theme="green" %}
+                {% endif %}
+            {% endwith %}
+          {% endfor %}
+        </ul>
+      </div>
 
     </div>{# .copy #}
   </div>{# .content #}
@@ -64,4 +72,5 @@
 {% endblock %}
 
 {% block js %}
+  <script type="text/javascript" src="{% static 'js/quick_start.js' %}"></script>
 {% endblock %}
