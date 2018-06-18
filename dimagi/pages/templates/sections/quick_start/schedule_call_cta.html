@@ -2,7 +2,7 @@
 {% load dimagidotcom %}
 
 <section class="border-top schedule-call" id="schedule-call">
-  <div class="content pad-vert-medium">
+  <div class="content pad-vert-medium align-center align-left-at-medium">
 
     <div class="grid-2-at-medium grid-row-space-none grid-valign-middle grid-reverse">
       <div class="copy content-cell-padding-right">
@@ -17,8 +17,9 @@
             CommCare. Just let us know when you would like to talk!
           {% endblocktrans %}
         </p>
-        <p>
-          <a href="#"
+        <p class="gap-bottom-line gap-bottom-none-at-medium">
+          <a href="{{ URL_DEMO }}"
+             target="_blank"
              class="button">
             {% blocktrans %}
               Schedule your call
