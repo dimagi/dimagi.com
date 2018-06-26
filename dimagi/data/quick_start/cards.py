@@ -24,7 +24,7 @@ BECOME_A_PRO = QuickStartCard(
     CommCare app building.
     """),
     level=ugettext_lazy("Intermediate"),
-    cta="https://academy.dimagi.com/login?next=/dashboard"
+    cta="https://academy.dimagi.com/"
 )
 
 
@@ -36,7 +36,7 @@ REVIEW_APP = QuickStartCard(
     through your specific requirements.
     """),
     level=ugettext_lazy("Beginner"),
-    cta="https://app.hubspot.com/content/503070/edit/5806992600/content"
+    cta="http://sites.dimagi.com/commcare-app-review"
 )
 
 
@@ -69,11 +69,11 @@ MONITOR_CHANGES_OVER_TIME = QuickStartCard(
     title=ugettext_lazy("Monitor changes over time"),
     icon="svg/quick_start/b_monitor.html",
     description=ugettext_lazy("""
-    Track and analyze the status of your cases—people, farms, or anything 
+    Track and analyze the status of your cases&mdash;people, farms, or anything 
     else&mdash;over a period of time.
     """),
     level=ugettext_lazy("Intermediate"),
-    cta="https://confluence.dimagi.com/display/commcarepublic/Case+Data+Export"
+    cta="https://confluence.dimagi.com/display/commcarepublic/Case+Management"
 )
 
 
@@ -81,7 +81,7 @@ AUTOMATE_YOUR_REPORTS = QuickStartCard(
     title=ugettext_lazy("Automate your reports"),
     icon="svg/quick_start/b_automate.html",
     description=ugettext_lazy("""
-    Spend your time drawing insight from data, not on backend administration, 
+    Spend your time drawing insights from data, not on backend administration, 
     with daily saved exports.
     """),
     level=ugettext_lazy("Intermediate"),
@@ -103,7 +103,7 @@ MONITOR_YOUR_WORKFORCE = QuickStartCard(
 
 
 LINK_TO_EXCEL_DASHBOARDS = QuickStartCard(
-    title=ugettext_lazy("Link Your Data to Excel Dashboards"),
+    title=ugettext_lazy("Link your data to Excel dashboards"),
     icon="svg/quick_start/b_link.html",
     description=ugettext_lazy("""
     Never worry about stale reports again by connecting your CommCare data 
@@ -116,7 +116,7 @@ LINK_TO_EXCEL_DASHBOARDS = QuickStartCard(
 
 
 INSPECT_YOUR_DATA = QuickStartCard(
-    title=ugettext_lazy("Inspect Your Data"),
+    title=ugettext_lazy("Inspect your data"),
     icon="svg/quick_start/b_inspect.html",
     description=ugettext_lazy("""
     View individual form submissions and case data to check for errors or 
@@ -128,7 +128,7 @@ INSPECT_YOUR_DATA = QuickStartCard(
 
 
 CORRECT_DATA_ERRORS = QuickStartCard(
-    title=ugettext_lazy("Correct Data Errors"),
+    title=ugettext_lazy("Correct data errors"),
     icon="svg/quick_start/b_correct.html",
     description=ugettext_lazy("""
     Edit your case data—both properties and specific values&mdash;without ever 
@@ -152,7 +152,7 @@ ELIMINATE_DUPLICATE_DATA = QuickStartCard(
 
 
 HELP_APP_BUILDERS = QuickStartCard(
-    title=ugettext_lazy("Help Your App Builders Help Themselves"),
+    title=ugettext_lazy("Help your app builders help themselves"),
     icon="svg/quick_start/b_help.html",
     description=ugettext_lazy("""
     Provide self-service learning for your stakeholders with CommCare 
@@ -165,7 +165,7 @@ HELP_APP_BUILDERS = QuickStartCard(
 
 
 TECH_SUPPORT = QuickStartCard(
-    title=ugettext_lazy("Provide Top-notch Tech Support"),
+    title=ugettext_lazy("Provide top-notch tech support"),
     icon="svg/quick_start/b_tech_support.html",
     description=ugettext_lazy("""
     Learn how to manage your CommCare apps and avoid issues with our Technical 
@@ -285,7 +285,7 @@ CONTROL_ACCESS = QuickStartCard(
 
 
 ADD_ONS = QuickStartCard(
-    title=ugettext_lazy("Employ Add-Ons for More Power"),
+    title=ugettext_lazy("Employ add-ons for more power"),
     icon="svg/quick_start/c_add_ons.html",
     description=ugettext_lazy("""
     Meet any stakeholder demand with a library of feature add-ons.
@@ -297,7 +297,7 @@ ADD_ONS = QuickStartCard(
 
 
 MULTIMEDIA = QuickStartCard(
-    title=ugettext_lazy("Communicate Better with Multimedia"),
+    title=ugettext_lazy("Communicate better with multimedia"),
     icon="svg/quick_start/d_multimedia.html",
     description=ugettext_lazy("""
     Add counseling messages, images, and videos to your app to help frontline 
@@ -314,7 +314,7 @@ EMPOWER_WITH_DATA = QuickStartCard(
     icon="svg/quick_start/d_empower.html",
     description=ugettext_lazy("""
     Allow field workers to view case-related data right on their mobile device
-    &mdash;even offline.
+    &mdash;even when offline.
     """),
     level=ugettext_lazy("Beginner"),
     cta="https://confluence.dimagi.com/display/commcarepublic/"
@@ -323,7 +323,7 @@ EMPOWER_WITH_DATA = QuickStartCard(
 
 
 PERFORM_BACKGROUND_CALCULATIONS = QuickStartCard(
-    title=ugettext_lazy("Perform Background Calculations"),
+    title=ugettext_lazy("Perform background calculations"),
     icon="svg/quick_start/d_workflow.html",
     description=ugettext_lazy("""
     Use Calculations, Display Conditions, and Logic to gather better data and 
@@ -336,7 +336,7 @@ PERFORM_BACKGROUND_CALCULATIONS = QuickStartCard(
 
 
 AUTOMATE_YOUR_REFERRALS = QuickStartCard(
-    title=ugettext_lazy("Automate your Referrals"),
+    title=ugettext_lazy("Automate your referrals"),
     icon="svg/quick_start/d_referral.html",
     description=ugettext_lazy("""
     Empower field workers to refer their cases to a specialist or alert a 
@@ -373,15 +373,14 @@ AUTOMATE_DATA_COLLECTION = QuickStartCard(
 
 
 PRIORITIZE_TASKS = QuickStartCard(
-    title=ugettext_lazy("Prioritize Tasks for Your Field Team"),
+    title=ugettext_lazy("Prioritize tasks for your field team"),
     icon="svg/quick_start/d_prioritize.html",
     description=ugettext_lazy("""
     Design your app to compliment existing workflows by sorting and filtering 
     content intelligently.
     """),
     level=ugettext_lazy("Intermediate"),
-    cta="https://confluence.dimagi.com/display/commcarepublic/"
-        "Case+List+and+Case+Detail+Configuration"
+    cta="https://confluence.dimagi.com/display/commcarepublic/Menu+Filtering"
 )
 
 
@@ -398,7 +397,7 @@ BUILD_CUSTOM_INTEGRATIONS = QuickStartCard(
 
 
 MANAGE_ALL_YOUR_DATA = QuickStartCard(
-    title=ugettext_lazy("Manage All Your Data"),
+    title=ugettext_lazy("Manage all your data"),
     icon="svg/quick_start/d_manage_data.html",
     description=ugettext_lazy("""
     Monitor activity and form submissions, manage exports, and prepare data 

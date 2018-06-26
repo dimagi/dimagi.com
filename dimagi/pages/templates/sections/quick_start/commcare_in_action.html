@@ -12,8 +12,13 @@
     </h3>
     <div class="grid-flex grid-align-center">
       <div class="pad-right-small-at-medium border-right border-white-at-medium">
-        {% trans 'Watch the video' as video_text %}
-        {% include "partials/wistia_popover.html" with wistia_id='9uvnpbecdy' show_play=True text=video_text %}
+        <a class="alt play-icon-small"
+           target="_blank"
+           href="http://sites.dimagi.com/commcare-demo-quick-starts">
+          {% blocktrans %}
+            Watch the video
+          {% endblocktrans %}
+        </a>
       </div>
       <div class="pad-left-small-at-medium">
         <a class="alt" href="{% url 'case_studies' %}">
