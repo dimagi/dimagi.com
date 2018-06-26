@@ -90,7 +90,7 @@ def JOIN(value, arg):
 
 @register.filter
 def TRIM(value):
-    return value.strip().replace('\n','')
+    return value.strip().replace('\n','').replace('  ', ' ')
 
 
 @register.filter
