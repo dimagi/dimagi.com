@@ -10,9 +10,11 @@
   {{ post.excerpt }}
 {% endblock %}
 
-{% block social_card_url %}
-  {{ post.thumbnail }}
-{% endblock %}
+{% block social_card_image_url %}{{ post.thumbnail }}{% endblock %}
+
+{% block twitter_image_url %}{{ post.thumbnail }}{% endblock %}
+
+{% block facebook_image_url %}{{ post.thumbnail }}{% endblock %}
 
 {% block body_class %}blog-post-page tucked-hero{% endblock %}
 
