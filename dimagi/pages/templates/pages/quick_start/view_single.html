@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block title %}
+  {{ area.title }} - CommCare Quick Start Guide
+{% endblock %}
+
+{% block description %}
+  {{ area.description }}
+{% endblock %}
+
+{% block body_class %}quick-starts-page-single tucked-hero{% endblock %}
+
+{% block stylesheets %}
+  {% compress css %}
+    <link href="{% sass_src 'style/pages/quick_start.scss' %}" rel="stylesheet" media="screen" type="text/css" />
+  {% endcompress %}
+{% endblock %}
+
+{% block hero %}
+<section class="hero hero-quick-starts"
+         data-lazybg="true"
+         id="hero">
+  <div class="content inverted align-center display-flex flex-valign-middle expand-vertical offset-top-small flex-align-center">
+    <div class="copy expand position-relative">
+
+      <h2 class="pad-bottom-line commcare-title">
+        {% include "svg/commcare/logo.html" %} Quick Start Guides
+      </h2>
+      <h1 class="guide-title">
+        {{ area.title }}
+      </h1>
+
+      <div class="selected-container" style="display: none;">
+        <h4 class="selected selected-card gap-bottom-line pad-base">
+          <div class="words">
+            Select your <strong>goal</strong>
+          </div>
+          <div class="caret">
+            {% include "svg/caret_down.html" %}
+          </div>
+        </h4>
+        <ul class="tile pad-none reset selector card-selector pad-vert-base charcoal-muted">
+          {% for section in area.sections %}
+            {% with forloop.counter as section_num %}
+                {% if section_num == 1 %}
+                  {% include "sections/quick_start/cards/selector.html" with theme="blue" %}
+                {% elif section_num == 2 %}
+                  {% include "sections/quick_start/cards/selector.html" with theme="turquoise" %}
+                {% elif section_num == 3 %}
+                  {% include "sections/quick_start/cards/selector.html" with theme="purple" %}
+                {% elif section_num == 4 %}
+                  {% include "sections/quick_start/cards/selector.html" with theme="green" %}
+                {% endif %}
+            {% endwith %}
+          {% endfor %}
+        </ul>
+      </div>
+
+    </div>{# .copy #}
+  </div>{# .content #}
+</section>
+{% endblock %}
+
+{% block content %}
+  <section class="quick-starts-container blue-theme">
+    {% include 'sections/quick_start/cards.html' %}
+    {% include 'sections/quick_start/commcare_in_action.html' %}
+    {% include 'sections/quick_start/see_all_quickstarts.html' %}
+  </section>
+{% endblock %}
+
+{% block js %}
+  <script type="text/javascript" src="{% static 'js/quick_start.js' %}"></script>
+{% endblock %}

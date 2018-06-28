@@ -1,0 +1,22 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="objectives accent-gray-bg border-top blue-theme"
+         id="objectives">
+  <div class="content pad-top-medium pad-bottom-small align-center">
+
+    <h3 class="gap-bottom-small">
+      {% blocktrans %}
+        Choose Your Objective
+      {% endblocktrans %}
+    </h3>
+
+    <div class="grid-4-at-large grid-2-at-small grid-row-space-small grid-row-equal-heights">
+      {% include "sections/quick_start/objectives/service_delivery.html" %}
+      {% include "sections/quick_start/objectives/monitoring_evaluation.html" %}
+      {% include "sections/quick_start/objectives/research.html" %}
+      {% include "sections/quick_start/objectives/ict.html" %}
+    </div>{# .grid-4-at-medium #}
+
+  </div>{# .content #}
+</section>

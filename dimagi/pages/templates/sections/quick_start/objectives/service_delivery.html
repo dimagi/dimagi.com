@@ -1,0 +1,19 @@
+{% extends "sections/quick_start/objectives/_base.html" %}
+{% load dimagidotcom %}
+{% load i18n %}
+
+{% block link %}
+  {% url 'quick_start_area' 'service-delivery' %}
+{% endblock %}
+
+{% block icon %}
+  {% include 'svg/quick_start/service_delivery.html' %}
+{% endblock %}
+
+{% block title %}{% blocktrans %}
+Service Delivery
+{% endblocktrans %}{% endblock %}
+
+{% block description %}{% blocktrans %}
+I want to improve the services I provide to beneficiaries.
+{% endblocktrans %}{% endblock %}

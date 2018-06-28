@@ -1,0 +1,29 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="see-all" id="see-all">
+  <div class="content pad-vert-medium align-center align-left-at-medium">
+
+    <div class="grid-2-at-medium grid-row-space-none grid-valign-middle grid-reverse">
+      <div class="copy content-cell-padding-right">
+        <h3>
+          {% blocktrans %}
+            Looking for More Use Cases?
+          {% endblocktrans %}
+        </h3>
+        <p class="pad-bottom-small">
+          <a href="{% url 'quick_start' %}"
+             class="button">
+            {% blocktrans %}
+              See all quick start guides
+            {% endblocktrans %}
+          </a>
+        </p>
+      </div>{# .copy #}
+
+      <div class="see-all-cta"
+           data-lazybg="true"></div>
+
+    </div>{# .grid-2-at-medium #}
+  </div>{# .content #}
+</section>

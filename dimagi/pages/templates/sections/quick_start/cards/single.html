@@ -1,0 +1,24 @@
+<div class="column quick-start-card quick-start-card-{{ theme }}">
+  <a class="tile {{ theme }}-border"
+     target="_blank"
+     href="{{ card.cta }}">
+
+    <div class="gap-bottom-line {{ theme }}-icon">
+      {% include card.icon %}
+    </div>
+
+    <h4 class="{{ theme }}">
+      {{ card.title }}
+    </h4>
+
+    <p class="body-color pad-bottom-line">
+      {{ card.description|safe }}
+    </p>
+
+    <div class="badge-container">
+      <div class="badge badge-{{ theme }} filled">
+        {{ card.level }}
+      </div>{# .button #}
+    </div>
+  </a>
+</div>{# .column #}

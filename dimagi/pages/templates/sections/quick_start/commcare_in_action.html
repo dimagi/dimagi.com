@@ -1,0 +1,33 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="see-commcare blue-bg white"
+         id="see-commcare">
+  <div class="content pad-vert-medium align-center">
+
+    <h3 class="white">
+      {% blocktrans %}
+        Want to see CommCare in action?
+      {% endblocktrans %}
+    </h3>
+    <div class="grid-flex grid-align-center">
+      <div class="pad-right-small-at-medium border-right border-white-at-medium">
+        <a class="alt play-icon-small"
+           target="_blank"
+           href="http://sites.dimagi.com/commcare-demo-quick-starts">
+          {% blocktrans %}
+            Watch the video
+          {% endblocktrans %}
+        </a>
+      </div>
+      <div class="pad-left-small-at-medium">
+        <a class="alt" href="{% url 'case_studies' %}">
+          {% include "svg/quick_start/case_studies.html" %}
+          {% blocktrans %}
+            See case studies
+          {% endblocktrans %}
+        </a>
+      </div>
+    </div>
+  </div>{# .content #}
+</section>
