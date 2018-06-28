@@ -1,0 +1,24 @@
+{% load i18n %}
+
+<div class="column">
+  <a class="tile {{ theme }}-border"
+     href="#contact-form-modal">
+    <div class="gap-bottom-base {{ theme }}-icon">
+      {% block icon %}{% endblock %}
+    </div>
+    <h3 class="{{ theme }}">
+      {% block header %}{% endblock %}
+    </h3>
+    <p class="font-weight-bold">
+      {% block price %}{% endblock %}
+    </p>
+    <p>{% block content %}{% endblock %}</p>
+    <p class="cta">
+      <span class="btn {{ theme }}">
+        {% blocktrans %}
+          Contact to Learn More
+        {% endblocktrans %}
+      </span>
+    </p>
+  </a>
+</div>

@@ -1,0 +1,19 @@
+{% extends "sections/proposals/overview/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block icon %}
+  {% include "svg/proposals/track_record.html" %}
+{% endblock %}
+
+{% block header %}
+  {% blocktrans %}
+    Proven track record
+  {% endblocktrans %}
+{% endblock %}
+
+{% block content %}
+  {% blocktrans %}
+    Dimagi's proposal team boasts an above industry win-rate.
+  {% endblocktrans %}
+{% endblock %}

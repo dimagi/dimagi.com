@@ -1,0 +1,19 @@
+{% extends "sections/proposals/overview/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block icon %}
+  {% include "svg/proposals/globe.html" %}
+{% endblock %}
+
+{% block header %}
+  {% blocktrans %}
+    Global reach
+  {% endblocktrans %}
+{% endblock %}
+
+{% block content %}
+  {% blocktrans %}
+    We've supported more than 500 projects across 60+ countries.
+  {% endblocktrans %}
+{% endblock %}

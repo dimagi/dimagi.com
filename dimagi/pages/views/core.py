@@ -22,6 +22,10 @@ def contact(request):
     return render(request, 'pages/contact.html')
 
 
+def proposals(request):
+    return render(request, 'pages/proposals.html')
+
+
 @no_index
 def test_500(request):
     return render(request, '500.html')

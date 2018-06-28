@@ -1,0 +1,16 @@
+@import 'app/mixins/background';
+@import 'app/variables/colors';
+@import 'app/variables/sizes';
+@import 'app/variables/type';
+
+.proposals-page {
+  @include make-bg(hero, '../../pages/proposals/hero');
+}
+
+@media (min-width: $width-desktop) {
+  .proposals-page .hero h1 {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 55%;
+  }
+}

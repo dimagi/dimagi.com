@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block body_class %}proposals-page tucked-hero{% endblock %}
+
+{% block title %}{% blocktrans %}
+  Dimagi Services for Your Partnership Consortium
+{% endblocktrans %}{% endblock %}
+
+{% block description %}{% blocktrans %}
+  Whether applying to RFPs, RFAs, innovation grants, or IDIQs,
+  Dimagi can bring a wealth of experience to your consortium.
+{% endblocktrans %}{% endblock %}
+
+{% block stylesheets %}
+  {% compress css %}
+    <link href="{% sass_src 'style/pages/proposals.scss' %}" rel="stylesheet" media="screen" type="text/css" />
+  {% endcompress %}
+{% endblock %}
+
+{% block hero %}
+  <div id="top"></div>
+  <div class="green-theme">
+    <section class="hero hero-proposals"
+             data-lazybg="true"
+             id="hero">
+      <div class="content align-left-at-medium align-center">
+        <h1 class="pad-top-small">
+          {% blocktrans %}
+            Dimagi Services for Your<br />
+            Partnership Consortium
+          {% endblocktrans %}
+        </h1>
+
+        <div class="cta gap-vert-line">
+          <a class="button button-accent-gray"
+             href="#contact-form-modal">
+            {% blocktrans %}
+              Contact Us
+            {% endblocktrans %}
+          </a>
+        </div>{# .home-cta #}
+      </div> {# .content #}
+    </section>
+  </div>
+{% endblock %}
+
+{% block content %}
+  <section class="proposals-container green-theme">
+    {% include 'sections/proposals/sub_nav.html' %}
+    {% include 'sections/proposals/overview.html' %}
+    {% include 'sections/proposals/about.html' %}
+    {% include 'sections/proposals/pricing.html' %}
+  </section>
+{% endblock %}
