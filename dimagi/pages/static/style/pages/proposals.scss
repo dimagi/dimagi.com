@@ -1,0 +1,76 @@
+@import 'app/mixins/background';
+@import 'app/variables/colors';
+@import 'app/variables/sizes';
+@import 'app/variables/type';
+
+.proposals-page {
+  @include make-bg(hero, '../../pages/proposals/hero');
+}
+
+@media (min-width: $width-desktop) {
+  .proposals-page .hero h1 {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 55%;
+  }
+}
+
+.ict4d-wrapper {
+  position: relative;
+
+  $_base-height: 285px;
+  $_height-by-size: (
+    small: 362px,
+    medium: 480px,
+    large: 400px,
+    extra-large: 340px,
+  );
+
+  @include make-bg(image, '../../pages/proposals/ict4d_experts', $_base-height, $_height-by-size);
+
+  @media (min-width: $width-desktop) {
+    .content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .off-grid {
+      bottom: $space-medium;
+      left: 0;
+      position: absolute;
+      right: auto;
+      width: 100%;
+      z-index: 1;
+    }
+  }
+}
+
+.partners-wrapper {
+  position: relative;
+
+  $_base-height: 285px;
+  $_height-by-size: (
+    small: 362px,
+    medium: 510px,
+    large: 450px,
+    extra-large: 410px,
+  );
+
+  @include make-bg(image, '../../pages/proposals/partners', $_base-height, $_height-by-size);
+
+  @media (min-width: $width-desktop) {
+    .content {
+      position: relative;
+      z-index: 4;
+    }
+
+    .off-grid {
+      bottom: $space-medium + $space-line;
+      right: 0;
+      position: absolute;
+      left: auto;
+      width: 100%;
+      z-index: 3;
+    }
+  }
+}

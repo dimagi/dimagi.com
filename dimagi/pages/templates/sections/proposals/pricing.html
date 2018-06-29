@@ -1,0 +1,26 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="pricing accent-gray-bg border-top"
+         id="pricing">
+  <div class="content pad-vert-medium align-center">
+    <div class="intro">
+      <h2>
+        {% blocktrans %}
+          Pricing
+        {% endblocktrans %}
+      </h2>
+      <p>
+        {% blocktrans %}
+          We offer two components to fit your needs.
+        {% endblocktrans %}
+      </p>
+    </div>
+
+    <div class="grid-2-at-medium grid-row-equal-heights gap-bottom-small">
+      {% include "sections/proposals/pricing/national_scale.html" with theme="green" %}
+      {% include "sections/proposals/pricing/global_services.html" with theme="green" %}
+    </div>
+
+  </div>
+</section>
