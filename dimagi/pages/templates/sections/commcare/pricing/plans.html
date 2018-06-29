@@ -19,6 +19,10 @@
            class="cta-pricing-plans-community"
            data-kmq-external="true"
            data-kmq-name="Clicked Start Trial - Pricing (Community)">Community</a> plan.
+      {% endblocktrans %}<br />
+      {% url 'proposals' as proposal_url %}
+      {% blocktrans %}
+        Pursuing a large-scale bid? Contact our <a href="{{ proposal_url }}">proposal team</a>.
       {% endblocktrans %}
     </p>
 
