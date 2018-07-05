@@ -22,6 +22,7 @@ require([
   'app/accordion',
   'app/extensions',
   'app/transition',
+  'app/contactForm',
   'modernizr',
 ], function (
     $,
@@ -39,7 +40,8 @@ require([
     Analytix,
     Accordion,
     Extensions,
-    Transition
+    Transition,
+    ContactForm
 ) {
   $(function () {
     _.each([
@@ -57,6 +59,7 @@ require([
       Accordion,
       Extensions,
       Transition,
+      ContactForm,
     ], function (m) {
       m.initialize();
     });
