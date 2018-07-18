@@ -12,6 +12,10 @@ define([
 
   self.auditClicks = function () {
 
+    var subnavDupes,
+        otherClasses,
+        duplicates;
+
     $('a').each(function (index, link) {
       var cssClass = $(link).attr('class'),
           content = $(link).text().trim();
@@ -24,8 +28,15 @@ define([
       }
     });
 
-    var duplicates = _(self.curClasses).groupBy().pickBy(x => x.length > 1).keys().value();
-    console.log("Duplicates:")
+    subnavDupes = _(self.curClasses).filter(function (x) {
+      return x.indexOf('ab-subnav-') >= 0;
+    }).groupBy().pickBy(x => x.length > 2).keys().value();
+    duplicates = _(self.curClasses).filter(function (x) {
+      return x.indexOf('ab-subnav-') < 0;
+    }).groupBy().pickBy(x => x.length > 1).keys().value();
+
+    duplicates = _.union(duplicates, subnavDupes);
+    console.log("Duplicates:");
     console.log(duplicates);
 
   };
