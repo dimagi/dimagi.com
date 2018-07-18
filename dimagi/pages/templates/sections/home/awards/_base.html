@@ -10,7 +10,7 @@
     <div class="column">
       <p>{% block content %}{% endblock %}</p>
       <p class="cta">
-        <a class="arrow"
+        <a class="arrow {% block cta_class %}{% endblock %}"
            target="_blank"
            href="{% block cta_link %}{% endblock %}">
           {% block cta_text %}{% endblock %}

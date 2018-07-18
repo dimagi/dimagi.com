@@ -1,5 +1,6 @@
 {% extends "sections/home/awards/_base.html" %}
 {% load i18n %}
+{% load dimagidotcom %}
 
 {% block icon %}
   {% include "svg/home/icon/thumbs_up.html" %}
@@ -18,6 +19,8 @@
 {% block cta_link %}
   {% url 'blog_post' 'study-finds-commcare-to-be-the-most-frequently-used-mobile-platform-for-frontline-health-workers' %}
 {% endblock %}
+
+{% block cta_class %}{% click_body 'awards-frontline' %}{% endblock %}
 
 {% block cta_text %}{% blocktrans %}
   Read the Johns Hopkins University study

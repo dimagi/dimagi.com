@@ -40,13 +40,13 @@
       </div>{# .headline #}
 
       <div class="cta gap-vert-line">
-        <a class="button inverted alt gap-right-small-at-medium gap-right-base-at-small"
+        <a class="button inverted alt gap-right-small-at-medium gap-right-base-at-small {% click_hero 'contact' %}"
            href="#contact-form-modal">
           {% blocktrans %}
             Contact Us
           {% endblocktrans %}
         </a>
-        <a class="button button-accent-gray"
+        <a class="button button-accent-gray {% click_hero 'demo' %}"
            target="_blank"
            href="{{ URL_DEMO }}" >
           {% blocktrans %}
