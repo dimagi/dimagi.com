@@ -17,12 +17,21 @@
       </p>
     </div>
     <div class="grid-2-at-medium grid-4-at-large grid-row-equal-heights gap-bottom-small">
-      {% include "sections/commcare/product/impact/child_health.html" with theme="blue" %}
-      {% include "sections/commcare/product/impact/agriculture.html" with theme="blue" %}
-      {% include "sections/commcare/product/impact/malaria.html" with theme="blue" %}
-      {% include "sections/commcare/product/impact/retail.html" with theme="blue" %}
+
+      {% click_body 'impact-health' as click_first %}
+      {% include "sections/commcare/product/impact/child_health.html" with theme="blue" click_class=click_first %}
+
+      {% click_body 'impact-ag' as click_second %}
+      {% include "sections/commcare/product/impact/agriculture.html" with theme="blue" click_class=click_second %}
+
+      {% click_body 'impact-malaria' as click_third %}
+      {% include "sections/commcare/product/impact/malaria.html" with theme="blue" click_class=click_third %}
+
+      {% click_body 'impact-retail' as click_fourth %}
+      {% include "sections/commcare/product/impact/retail.html" with theme="blue" click_class=click_fourth %}
+
     </div>
-    <a class="arrow"
+    <a class="arrow {% click_body 'impact-research' %}"
        href="{% url 'toolkit' 'commcare-evidence-base' %}">
       {% blocktrans %}
         See our research

@@ -6,13 +6,13 @@
   <div class="content">
     <div class="actions">
       <a href="{{ URL_DEMO }}"
-         class="hide-until-medium"
+         class="hide-until-medium {% click_subnav 'demo' %}"
          target="_blank">
         {% blocktrans %}
           Get a demo
         {% endblocktrans %}
       </a>
-      <a class="primary cta-product-subnav-trial"
+      <a class="primary cta-product-subnav-trial {% click_subnav 'trial' %}"
          data-kmq-external="true"
          data-kmq-name="Clicked Start Trial - CommCare (sticky bar)"
          href="{{ URL_TRIAL }}">
@@ -23,7 +23,7 @@
         </span>
       </a>
     </div>{# .actions #}
-    <a class="prompt-link"
+    <a class="prompt-link {% click_subnav 'browse' %}"
        href="#">
       {% blocktrans %}
         Browse
@@ -32,33 +32,38 @@
     <div class="destinations">
       <div class="content">
         <a href="{{ URL_DEMO }}"
-           class="hide-at-medium"
+           class="hide-at-medium {% click_subnav 'demo-mobile' %}"
            target="_blank">
           {% blocktrans %}
-            Get a demox
+            Get a demo
           {% endblocktrans %}
         </a>
-        <a href="#overview">
+        <a href="#overview"
+           class="{% click_subnav 'overview' %}">
           {% blocktrans %}
             Overview
           {% endblocktrans %}
         </a>
-        <a href="#features">
+        <a href="#features"
+           class="{% click_subnav 'features' %}">
           {% blocktrans %}
             Features
           {% endblocktrans %}
         </a>
-        <a href="#impact">
+        <a href="#impact"
+           class="{% click_subnav 'impact' %}">
           {% blocktrans %}
             Impact
           {% endblocktrans %}
         </a>
-        <a href="#testimonials">
+        <a href="#testimonials"
+           class="{% click_subnav 'testimonials' %}">
           {% blocktrans %}
             Testimonials
           {% endblocktrans %}
         </a>
-        <a href="#pricing">
+        <a href="#pricing"
+           class="{% click_subnav 'pricing' %}">
           {% blocktrans %}
             Pricing
           {% endblocktrans %}

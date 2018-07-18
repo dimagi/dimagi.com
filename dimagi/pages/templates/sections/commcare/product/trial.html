@@ -1,4 +1,5 @@
 {% load i18n %}
+{% load dimagidotcom %}
 
 <section class="trial border-top"
          id="trial">
@@ -20,7 +21,7 @@
 
       <div class="column flex-align-right">
         <p>
-          <a class="button alt"
+          <a class="button alt {% click_body 'demo' %}"
              target="_blank"
              href="{{ URL_DEMO }}">
             {% blocktrans %}
@@ -32,7 +33,7 @@
 
       <div class="column flex-align-left">
         <p>
-          <a class="button cta-product-trial-get-started"
+          <a class="button cta-product-trial-get-started {% click_body 'trial' %}"
              href="{{ URL_TRIAL }}"
              data-kmq-external="true"
              data-kmq-name="Clicked Start Trial - CommCare (Get started)">
