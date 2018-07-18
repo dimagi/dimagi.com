@@ -1,21 +1,22 @@
 {% load i18n %}
+{% load dimagidotcom %}
 
 <div class="hide-until-large display-flex flex-valign-middle">
-  <a class="menu-open-sibling"
+  <a class="menu-open-sibling {% click_nav 'products' %}"
      href="{% url 'commcare' %}">
     {% blocktrans %}
       Products
     {% endblocktrans %}
   </a>
 
-  <a class="menu-open-sibling"
+  <a class="menu-open-sibling {% click_nav 'services' %}"
      href="{% url 'services' %}">
     {% blocktrans %}
       Services
     {% endblocktrans %}
   </a>
 
-  <a class="menu-open"
+  <a class="menu-open {% click_nav 'more' %}"
      data-drawer="menu-drawer"
      href="#">
     {% blocktrans %}
@@ -24,7 +25,7 @@
   </a>
 </div>{# .hide-until-large #}
 
-<a class="menu-open hide-at-large"
+<a class="menu-open hide-at-large {% click_nav 'more-mobile' %}"
    data-drawer="menu-drawer"
    href="#">
   {% blocktrans %}
@@ -32,6 +33,6 @@
   {% endblocktrans %}
 </a>
 
-<a class="menu-link menu-close" href="#">
+<a class="menu-link menu-close {% click_nav 'more-close' %}" href="#">
   {% include 'svg/close.html' %}
 </a>

@@ -1,4 +1,5 @@
 {% load i18n %}
+{% load dimagidotcom %}
 
 <div class="pad-bottom-base border-bottom gap-bottom-line">
   <h4 class="link-gray gap-none">
@@ -10,7 +11,7 @@
 
 <div class="grid grid-2-at-medium grid-4-at-extra-large">
   <div class="column">
-    <a class="blue-swatch"
+    <a class="blue-swatch {% click_nav 'commcare' %}"
        href="{% url 'commcare' %}">
       {% blocktrans %}
         CommCare
@@ -19,7 +20,7 @@
   </div>{# .column #}
 
   <div class="column">
-    <a class="turquoise-swatch"
+    <a class="turquoise-swatch {% click_nav 'global-services' %}"
        href="{% url 'services' %}">
       {% blocktrans %}
         Global Services

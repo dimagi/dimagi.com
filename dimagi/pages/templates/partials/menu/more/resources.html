@@ -1,4 +1,5 @@
 {% load i18n %}
+{% load dimagidotcom %}
 
 <div class="pad-bottom-base border-bottom gap-bottom-line">
   <h4 class="link-gray gap-none">
@@ -12,7 +13,7 @@
 
   <div class="column">
     <a href="{% url 'commcare_pricing' %}"
-       class="blue-swatch">
+       class="blue-swatch {% click_nav 'commcare-pricing' %}">
       {% blocktrans %}
         CommCare Pricing
       {% endblocktrans %}
@@ -21,7 +22,7 @@
 
   <div class="column">
     <a href="{% url 'about' %}"
-       class="orange-swatch">
+       class="orange-swatch {% click_nav 'about' %}">
       {% blocktrans %}
         About Us
       {% endblocktrans %}
@@ -30,7 +31,7 @@
 
   <div class="column">
     <a href="{% url 'contact' %}"
-       class="neutral-swatch">
+       class="neutral-swatch {% click_nav 'contact' %}">
       {% blocktrans %}
         Contact Us
       {% endblocktrans %}
@@ -39,7 +40,7 @@
 
   <div class="column">
     <a href="{% url 'careers' %}"
-       class="orange-swatch">
+       class="orange-swatch {% click_nav 'careers' %}">
       {% blocktrans %}
         Careers
       {% endblocktrans %}
@@ -48,7 +49,7 @@
 
   <div class="column">
     <a href="{% url 'blog_home' %}"
-       class="orange-swatch">
+       class="orange-swatch {% click_nav 'blog' %}">
       {% blocktrans %}
         Blog
       {% endblocktrans %}
@@ -57,7 +58,7 @@
 
   <div class="column">
     <a href="{% url 'case_studies' %}"
-       class="neutral-swatch">
+       class="neutral-swatch {% click_nav 'case-studies' %}">
       {% blocktrans %}
         Case Studies
       {% endblocktrans %}
@@ -66,7 +67,7 @@
 
   <div class="column">
     <a href="{% url 'toolkits' %}"
-       class="neutral-swatch">
+       class="neutral-swatch {% click_nav 'toolkits' %}">
       {% blocktrans %}
         Toolkits
       {% endblocktrans %}
@@ -75,7 +76,7 @@
 
   <div class="column">
     <a href="{% url 'sectors' %}"
-       class="neutral-swatch">
+       class="neutral-swatch {% click_nav 'sectors' %}">
       {% blocktrans %}
         Sectors
       {% endblocktrans %}
@@ -84,7 +85,7 @@
 
   <div class="column">
     <a href="{% url 'partner_program' %}"
-       class="neutral-swatch">
+       class="neutral-swatch {% click_nav 'partner-program' %}">
       {% blocktrans %}
         Partner Program
       {% endblocktrans %}
@@ -93,7 +94,7 @@
 
   <div class="column">
     <a href="{% url 'quick_start' %}"
-       class="blue-swatch">
+       class="blue-swatch {% click_nav 'quick-starts' %}">
       {% blocktrans %}
         CommCare Quick Starts
       {% endblocktrans %}

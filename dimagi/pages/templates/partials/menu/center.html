@@ -1,4 +1,6 @@
-<a class="logo"
+{% load dimagidotcom %}
+
+<a class="logo {% click_nav 'logo' %}"
    href="{% url 'home' %}">
   {% include "svg/dimagi_logo.html" %}
 </a>
