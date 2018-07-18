@@ -197,3 +197,41 @@ def require_module(module):
             module=get_static_url(resolve_require_module(module)),
         )
     )
+
+
+@register.simple_tag
+def click_nav(slug):
+    """
+    Returns the Click Class for Top Navigation Links
+    """
+    return "ab-nav-{}".format(slug)
+
+
+@register.simple_tag
+def click_footer(slug):
+    """
+    Returns the Click Class for Footer Links
+    """
+    return "ab-footer-{}".format(slug)
+
+
+def _get_url_slug(context):
+    request = context['request']
+    path_info = request.META['PATH_INFO'].strip('/')
+    return 'home' if path_info == '' else path_info.replace('/', '-')
+
+
+@register.simple_tag(takes_context=True)
+def click_hero(context, slug):
+    """
+    Returns the Click Class for Hero Links
+    """
+    return "ab-hero-{}-{}".format(_get_url_slug(context), slug)
+
+
+@register.simple_tag(takes_context=True)
+def click_body(context, slug):
+    """
+    Returns the Click Class for CommCare Page
+    """
+    return "ab-body-{}-{}".format(_get_url_slug(context), slug)
