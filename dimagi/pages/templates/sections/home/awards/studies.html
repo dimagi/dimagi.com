@@ -1,6 +1,5 @@
 {% extends "sections/home/awards/_base.html" %}
 {% load i18n %}
-{% load dimagidotcom %}
 
 {% block icon %}
   {% include "svg/home/icon/research.html" %}
@@ -18,8 +17,6 @@
 {% block cta_link %}
   {% url 'toolkit' 'commcare-evidence-base' %}
 {% endblock %}
-
-{% block cta_class %}{% click_body 'awards-evidence' %}{% endblock %}
 
 {% block cta_text %}{% blocktrans %}
   Read about the research on CommCare
