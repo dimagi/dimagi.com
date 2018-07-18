@@ -11,6 +11,7 @@ def metas(request):
 
     _metas["baseUrl"] = get_static_url('')
     _metas["tracking"] = setting('TRACKING')
+    _metas["auditABClicks"] = setting('AUDIT_AB_CLICKS')
     _metas["trackingConfig"] = {
         'logLevel': setting('TRACKING_LOG_LEVEL', ''),
         'enabled': setting('TRACKING_ENABLED', False),

@@ -196,6 +196,8 @@ TRACKING = {
     'DRIFT': env.str('DRIFT', default=''),
 }
 
+AUDIT_AB_CLICKS = env.bool('AUDIT_AB_CLICKS', default=True)
+
 GOOGLE_OPTIMIZE_ID = env.str('GOOGLE_OPTIMIZE_ID', default='')
 
 TRACKING_LOG_LEVEL = env.str('TRACKING_LOG_LEVEL', default='')
