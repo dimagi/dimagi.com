@@ -1,5 +1,6 @@
 {% extends 'partials/footer/nav_section/_base.html' %}
 {% load i18n %}
+{% load dimagidotcom %}
 
 {% block title %}{% blocktrans %}
   Resources
@@ -7,35 +8,40 @@
 
 {% block links %}
   <li>
-    <a href="{% url 'toolkits' %}">
+    <a href="{% url 'toolkits' %}"
+       class="{% click_footer 'toolkits' %}">
       {% blocktrans %}
         Toolkits
       {% endblocktrans %}
     </a>
   </li>
   <li>
-    <a href="{% url 'case_studies' %}">
+    <a href="{% url 'case_studies' %}"
+       class="{% click_footer 'case-studies' %}">
       {% blocktrans %}
         Case studies
       {% endblocktrans %}
     </a>
   </li>
   <li>
-    <a href="{% url 'sectors' %}">
+    <a href="{% url 'sectors' %}"
+       class="{% click_footer 'sectors' %}">
       {% blocktrans %}
         Sectors
       {% endblocktrans %}
     </a>
   </li>
   <li>
-    <a href="{% url 'toolkit' 'commcare-evidence-base' %}">
+    <a href="{% url 'toolkit' 'commcare-evidence-base' %}"
+       class="{% click_footer 'research' %}">
       {% blocktrans %}
         CommCare Research
       {% endblocktrans %}
     </a>
   </li>
   <li>
-    <a href="{% url 'partner_program' %}">
+    <a href="{% url 'partner_program' %}"
+       class="{% click_footer 'partner-program' %}">
       {% blocktrans %}
         Partner Program
       {% endblocktrans %}
