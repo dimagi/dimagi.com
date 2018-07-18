@@ -204,7 +204,7 @@ def click_nav(slug):
     """
     Returns the Click Class for Top Navigation Links
     """
-    return "ab-nav-{}".format(slug)
+    return "ab-nav--{}".format(slug)
 
 
 @register.simple_tag
@@ -212,7 +212,7 @@ def click_footer(slug):
     """
     Returns the Click Class for Footer Links
     """
-    return "ab-footer-{}".format(slug)
+    return "ab-footer--{}".format(slug)
 
 
 def _get_url_slug(context):
@@ -226,7 +226,15 @@ def click_hero(context, slug):
     """
     Returns the Click Class for Hero Links
     """
-    return "ab-hero-{}-{}".format(_get_url_slug(context), slug)
+    return "ab-hero-{}--{}".format(_get_url_slug(context), slug)
+
+
+@register.simple_tag(takes_context=True)
+def click_subnav(context, slug):
+    """
+    Returns the Click Class for Hero Links
+    """
+    return "ab-subnav-{}--{}".format(_get_url_slug(context), slug)
 
 
 @register.simple_tag(takes_context=True)
@@ -234,4 +242,4 @@ def click_body(context, slug):
     """
     Returns the Click Class for CommCare Page
     """
-    return "ab-body-{}-{}".format(_get_url_slug(context), slug)
+    return "ab-body-{}--{}".format(_get_url_slug(context), slug)
