@@ -196,7 +196,7 @@ TRACKING = {
     'DRIFT': env.str('DRIFT', default=''),
 }
 
-AUDIT_AB_CLICKS = env.bool('AUDIT_AB_CLICKS', default=True)
+AUDIT_AB_CLICKS = env.bool('AUDIT_AB_CLICKS', default=False)
 
 GOOGLE_OPTIMIZE_ID = env.str('GOOGLE_OPTIMIZE_ID', default='')
 
