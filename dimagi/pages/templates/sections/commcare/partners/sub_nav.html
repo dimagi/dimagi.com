@@ -6,8 +6,9 @@
   <div class="content">
     <div class="actions">
       {% trans "Watch Demo" as demo_text %}
-      {% include "partials/wistia_popover.html" with wistia_id='9uvnpbecdy' text=demo_text %}
-      <a class="primary cta-pricing-subnav-trial"
+      {% click_subnav 'demo' as click_demo %}
+      {% include "partials/wistia_popover.html" with wistia_id='9uvnpbecdy' text=demo_text click_class=click_demo %}
+      <a class="primary cta-pricing-subnav-trial {% click_subnav 'trial' %}"
          data-kmq-external="true"
          data-kmq-name="Clicked Start Trial - Partner (sticky bar)"
          href="{{ URL_TRIAL }}">
@@ -18,7 +19,7 @@
         </span>
       </a>
     </div>{# .actions #}
-    <a class="prompt-link"
+    <a class="prompt-link {% click_subnav 'browse' %}"
        href="#">
       {% blocktrans %}
         Browse
@@ -26,17 +27,20 @@
     </a>
     <div class="destinations">
       <div class="content">
-        <a href="#overview">
+        <a href="#overview"
+           class="{% click_subnav 'overview' %}">
           {% blocktrans %}
             Overview
           {% endblocktrans %}
         </a>
-        <a href="#agimpact">
+        <a href="#agimpact"
+           class="{% click_subnav 'agimpact' %}">
           {% blocktrans %}
             AgImpact
           {% endblocktrans %}
         </a>
-        <a href="#noukod">
+        <a href="#noukod"
+           class="{% click_subnav 'noukod' %}">
           {% blocktrans %}
             Noukod
           {% endblocktrans %}
