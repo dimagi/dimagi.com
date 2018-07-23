@@ -27,10 +27,17 @@
     </div>{# .content #}
 
     <div class="grid-2-at-medium grid-4-at-large grid-row-equal-heights gap-bottom-base">
-      {% include "sections/services/packages/launch.html" %}
-      {% include "sections/services/packages/boost.html" %}
-      {% include "sections/services/packages/growth.html" %}
-      {% include "sections/services/packages/scale.html" %}
+      {% click_body 'packages-launch' as click_launch %}
+      {% include "sections/services/packages/launch.html" with click_class=click_launch %}
+
+      {% click_body 'packages-boost' as click_boost %}
+      {% include "sections/services/packages/boost.html" with click_class=click_boost %}
+
+      {% click_body 'packages-growth' as click_growth %}
+      {% include "sections/services/packages/growth.html" with click_class=click_growth %}
+
+      {% click_body 'packages-scale' as click_scale %}
+      {% include "sections/services/packages/scale.html" with click_class=click_scale %}
     </div>{# .grid-2-at-medium #}
   </div>{# .content #}
 </section>

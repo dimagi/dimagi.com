@@ -1,4 +1,5 @@
 {% load i18n %}
+{% load dimagidotcom %}
 
 <section class="awards border-top blue-theme" id="awards">
   <div class="content pad-top-large-at-medium pad-bottom-small">
@@ -20,10 +21,17 @@
             </p>
           </div>{# .column #}
 
-          {% include 'sections/home/awards/kopernik.html' %}
-          {% include 'sections/home/awards/johns_hopkins.html' %}
-          {% include 'sections/home/awards/australian_gov.html' %}
-          {% include 'sections/home/awards/studies.html' %}
+          {% click_body 'awards-first' as click_first %}
+          {% include 'sections/home/awards/kopernik.html' with click_class=click_first %}
+
+          {% click_body 'awards-second' as click_second %}
+          {% include 'sections/home/awards/johns_hopkins.html' with click_class=click_second %}
+
+          {% click_body 'awards-third' as click_third %}
+          {% include 'sections/home/awards/australian_gov.html' with click_class=click_third %}
+
+          {% click_body 'awards-fourth' as click_fourth %}
+          {% include 'sections/home/awards/studies.html' with click_class=click_fourth %}
 
         </div>{# .grid-flex #}
       </div>{# .copy #}

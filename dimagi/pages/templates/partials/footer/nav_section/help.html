@@ -1,5 +1,6 @@
 {% extends 'partials/footer/nav_section/_base.html' %}
 {% load i18n %}
+{% load dimagidotcom %}
 
 {% block title %}{% blocktrans %}
   Help
@@ -7,42 +8,48 @@
 
 {% block links %}
   <li>
-    <a href="//help.commcarehq.org" target="_blank">
+    <a href="//help.commcarehq.org" target="_blank"
+       class="{% click_footer 'help' %}">
       {% blocktrans %}
         CommCare Help Site
       {% endblocktrans %}
     </a>
   </li>
   <li>
-    <a href="//academy.dimagi.com" target="_blank">
+    <a href="//academy.dimagi.com" target="_blank"
+       class="{% click_footer 'academy' %}">
       {% blocktrans %}
         Dimagi Academy
       {% endblocktrans %}
     </a>
   </li>
   <li>
-    <a href="{% url 'quick_start' %}">
+    <a href="{% url 'quick_start' %}"
+       class="{% click_footer 'quick-starts' %}">
       {% blocktrans %}
         CommCare Quick Starts
       {% endblocktrans %}
     </a>
   </li>
   <li>
-    <a href="//forum.dimagi.com" target="_blank">
+    <a href="//forum.dimagi.com" target="_blank"
+       class="{% click_footer 'user-forum' %}">
       {% blocktrans %}
         User Forum
       {% endblocktrans %}
     </a>
   </li>
   <li>
-    <a href="//github.com/dimagi/commcare-hq" target="_blank">
+    <a href="//github.com/dimagi/commcare-hq" target="_blank"
+       class="{% click_footer 'code' %}">
       {% blocktrans %}
         CommCare Code Base
       {% endblocktrans %}
     </a>
   </li>
   <li>
-    <a href="//github.com/dimagi/commcare-hq/tree/master/corehq/motech" target="_blank">
+    <a href="//github.com/dimagi/commcare-hq/tree/master/corehq/motech" target="_blank"
+       class="{% click_footer 'motech' %}">
       {% blocktrans %}
         MOTECH Code Base
       {% endblocktrans %}

@@ -17,22 +17,29 @@
       </p>
     </div>
     <div class="grid-2-at-medium grid-4-at-large grid-row-equal-heights gap-bottom-small">
-      {% include "sections/commcare/product/pricing/standard.html" with theme="green" %}
-      {% include "sections/commcare/product/pricing/pro.html" with theme="turquoise" %}
-      {% include "sections/commcare/product/pricing/advanced.html" with theme="purple" %}
-      {% include "sections/commcare/product/pricing/enterprise.html" with theme="blue" %}
+
+      {% click_body 'pricing-standard' as click_standard %}
+      {% include "sections/commcare/product/pricing/standard.html" with theme="green" click_class=click_standard %}
+      {% click_body 'pricing-pro' as click_pro %}
+      {% include "sections/commcare/product/pricing/pro.html" with theme="turquoise" click_class=click_pro %}
+      {% click_body 'pricing-advanced' as click_advanced %}
+      {% include "sections/commcare/product/pricing/advanced.html" with theme="purple" click_class=click_advanced %}
+      {% click_body 'pricing-enterprise' as click_enterprise %}
+      {% include "sections/commcare/product/pricing/enterprise.html" with theme="blue" click_class=click_enterprise %}
     </div>{# .grid-2-at-medium #}
     <p>
+      {% click_body 'pricing-community' as click_community %}
       {% blocktrans %}
         No budget? Check out our free
         <a href="https://www.commcarehq.org/register/user"
-           class="cta-product-pricing-community"
+           class="cta-product-pricing-community {{ click_community }}"
            data-kmq-external="true"
            data-kmq-name="Clicked Start Trial - CommCare (Community CTA)">Community</a> plan.
       {% endblocktrans %}<br />
       {% url 'proposals' as proposal_url %}
+      {% click_body 'pricing-bid' as click_proposal %}
       {% blocktrans %}
-        Pursuing a large-scale bid? Contact our <a href="{{ proposal_url }}">proposal team</a>.
+        Pursuing a large-scale bid? Contact our <a href="{{ proposal_url }}" class="{{ click_proposal }}">proposal team</a>.
       {% endblocktrans %}
     </p>
   </div>

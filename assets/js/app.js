@@ -23,6 +23,7 @@ require([
   'app/extensions',
   'app/transition',
   'app/contactForm',
+  'app/abAudit',
   'modernizr',
 ], function (
     $,
@@ -41,7 +42,8 @@ require([
     Accordion,
     Extensions,
     Transition,
-    ContactForm
+    ContactForm,
+    ABAudit
 ) {
   $(function () {
     _.each([
@@ -60,6 +62,7 @@ require([
       Extensions,
       Transition,
       ContactForm,
+      ABAudit,
     ], function (m) {
       m.initialize();
     });

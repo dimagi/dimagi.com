@@ -1,5 +1,6 @@
 {% extends 'partials/footer/nav_section/_base.html' %}
 {% load i18n %}
+{% load dimagidotcom %}
 
 {% block title %}{% blocktrans %}
   Services
@@ -7,7 +8,8 @@
 
 {% block links %}
   <li>
-    <a href="{% url 'services' %}">
+    <a href="{% url 'services' %}"
+       class="{% click_footer 'services' %}">
       {% blocktrans %}
         Global Services
       {% endblocktrans %}

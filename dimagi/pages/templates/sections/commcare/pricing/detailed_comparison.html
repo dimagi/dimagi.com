@@ -14,7 +14,7 @@
 
     <p class="align-center hide-at-large pad-bottom-line-at-small offset-top-base">
       <a href="https://cdn2.hubspot.net/hubfs/503070/Detailed%20Comparison_Pricing-1.pdf"
-         class="button button-slate">
+         class="button button-slate {% click_body 'details-download-mobile' %}">
         {% blocktrans %}
           Download Full<br class="hide-at-small" />
           Comparison Chart
@@ -35,7 +35,7 @@
       {% endblocktrans %}
     </p>
     <p class="align-center">
-      <a class="arrow"
+      <a class="arrow {% click_body 'details-more' %}"
          href="{% url 'services' %}">
         {% blocktrans %}
           Learn more about our Global Services

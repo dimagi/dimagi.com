@@ -6,13 +6,13 @@
   <div class="content">
     <div class="actions">
       <a href="{{ URL_DEMO }}"
-         class="hide-until-medium"
+         class="hide-until-medium {% click_subnav 'demo' %}"
          target="_blank">
         {% blocktrans %}
           Get a demo
         {% endblocktrans %}
       </a>
-      <a class="primary cta-pricing-subnav-trial"
+      <a class="primary cta-pricing-subnav-trial {% click_subnav 'trial' %}"
          data-kmq-external="true"
          data-kmq-name="Clicked Start Trial - Pricing Sticky"
          href="{{ URL_TRIAL }}">
@@ -23,7 +23,7 @@
         </span>
       </a>
     </div>{# .actions #}
-    <a class="prompt-link"
+    <a class="prompt-link {% click_subnav 'browse' %}"
        href="#">
       {% blocktrans %}
         Browse
@@ -32,23 +32,26 @@
     <div class="destinations">
       <div class="content">
         <a href="{{ URL_DEMO }}"
-           class="hide-at-medium"
+           class="hide-at-medium {% click_subnav 'demo-mobile' %}"
            target="_blank">
           {% blocktrans %}
             Get a demo
           {% endblocktrans %}
         </a>
-        <a href="#plans">
+        <a href="#plans"
+           class="{% click_subnav 'plans' %}">
           {% blocktrans %}
             CommCare Plans
           {% endblocktrans %}
         </a>
-        <a href="#details">
+        <a href="#details"
+           class="{% click_subnav 'details' %}">
           {% blocktrans %}
             Detailed Comparison
           {% endblocktrans %}
         </a>
-        <a href="#faq">
+        <a href="#faq"
+           class="{% click_subnav 'faq' %}">
           {% blocktrans %}
             FAQ
           {% endblocktrans %}

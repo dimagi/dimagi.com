@@ -16,29 +16,38 @@
       <div class="column align-center align-right-at-small">
         <ul class="reset links-social">
           <li>
-            <a class="font-weight-bold" href="#contact-form-modal">
+            <a class="font-weight-bold {% click_footer 'contact-us' %}"
+               href="#contact-form-modal">
               {% blocktrans %}
                 Contact Us
               {% endblocktrans %}
             </a>
           </li>
           <li>
-            <a href="//facebook.com/dimagi.inc" target="_blank">
+            <a href="//facebook.com/dimagi.inc"
+               class="{% click_footer 'facebook' %}"
+               target="_blank">
               {% include 'svg/footer/facebook.html' %}
             </a>
           </li>
           <li>
-            <a href="//twitter.com/dimagi" target="_blank">
+            <a href="//twitter.com/dimagi"
+               class="{% click_footer 'twitter' %}"
+               target="_blank">
               {% include 'svg/footer/twitter.html' %}
             </a>
           </li>
           <li>
-            <a href="//linkedin.com/company/dimagi" target="_blank">
+            <a href="//linkedin.com/company/dimagi"
+               class="{% click_footer 'linkedin' %}"
+               target="_blank">
               {% include 'svg/footer/linkedin.html' %}
             </a>
           </li>
           <li>
-            <a href="//youtube.com/channel/UCt8JcRhWywkVJRR_YWv4OhA" target="_blank">
+            <a href="//youtube.com/channel/UCt8JcRhWywkVJRR_YWv4OhA"
+               class="{% click_footer 'youtube' %}"
+               target="_blank">
               {% include 'svg/footer/youtube.html' %}
             </a>
           </li>

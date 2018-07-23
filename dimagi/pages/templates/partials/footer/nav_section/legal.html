@@ -1,5 +1,6 @@
 {% extends 'partials/footer/nav_section/_base.html' %}
 {% load i18n %}
+{% load dimagidotcom %}
 
 {% block title %}{% blocktrans %}
   Legal
@@ -7,28 +8,32 @@
 
 {% block links %}
   <li>
-    <a href="{% url 'terms' 'latest' 'privacy' %}">
+    <a href="{% url 'terms' 'latest' 'privacy' %}"
+       class="{% click_footer 'privacy' %}">
       {% blocktrans %}
         Privacy Policy
       {% endblocktrans %}
     </a>
   </li>
   <li>
-    <a href="{% url 'terms' 'latest' 'tos' %}">
+    <a href="{% url 'terms' 'latest' 'tos' %}"
+       class="{% click_footer 'tos' %}">
       {% blocktrans %}
         Terms of Service
       {% endblocktrans %}
     </a>
   </li>
   <li>
-    <a href="{% url 'terms' 'latest' 'aup' %}">
+    <a href="{% url 'terms' 'latest' 'aup' %}"
+       class="{% click_footer 'aup' %}">
       {% blocktrans %}
         Acceptable Use Policy
       {% endblocktrans %}
     </a>
   </li>
   <li>
-    <a href="{% url 'terms' 'latest' 'ba' %}">
+    <a href="{% url 'terms' 'latest' 'ba' %}"
+       class="{% click_footer 'ba' %}">
       {% blocktrans %}
         Business Agreement
       {% endblocktrans %}

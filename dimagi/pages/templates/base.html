@@ -15,6 +15,8 @@
     <meta property="dimagi:tracking" content="{{ meta.tracking|JSON|META_STR }}">
     <meta property="dimagi:trackingAB" content="{{ meta.trackingAB|JSON|META_STR }}">
 
+    <meta property="dimagi:auditABClicks" content="{{ meta.auditABClicks|BOOL }}">
+
     <meta property="dimagi:contactFormId" content="{% block contact_form_id %}160467c5-1ae9-401c-81f2-09334ce10b1a{% endblock %}">
 
     {% if request.hide_drift %}

@@ -1,5 +1,6 @@
 {% extends 'partials/footer/nav_section/_base.html' %}
 {% load i18n %}
+{% load dimagidotcom %}
 
 {% block title %}{% blocktrans %}
   About Dimagi
@@ -7,35 +8,40 @@
 
 {% block links %}
   <li>
-    <a href="{% url 'about' %}">
+    <a href="{% url 'about' %}"
+       class="{% click_footer 'about' %}">
       {% blocktrans %}
         About us
       {% endblocktrans %}
     </a>
   </li>
   <li>
-    <a href="{% url 'careers' %}">
+    <a href="{% url 'careers' %}"
+       class="{% click_footer 'careers' %}">
       {% blocktrans %}
         Careers
       {% endblocktrans %}
     </a>
   </li>
   <li>
-    <a href="{% url 'contact' %}">
+    <a href="{% url 'contact' %}"
+       class="{% click_footer 'contact' %}">
       {% blocktrans %}
         Contact us
       {% endblocktrans %}
     </a>
   </li>
   <li>
-    <a href="{% url 'press' %}">
+    <a href="{% url 'press' %}"
+       class="{% click_footer 'press' %}">
       {% blocktrans %}
         Press & Media
       {% endblocktrans %}
     </a>
   </li>
   <li>
-    <a href="{% url 'blog_home' %}">
+    <a href="{% url 'blog_home' %}"
+       class="{% click_footer 'blog' %}">
       {% blocktrans %}
         Blog
       {% endblocktrans %}

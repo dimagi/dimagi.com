@@ -33,7 +33,7 @@
           Affordable Pricing Plans to Fit Your Budget and Needs
         {% endblocktrans %}
       </h1>
-      <a class="button alt inverted"
+      <a class="button alt inverted {% click_hero 'trial' %}"
          href="{{ URL_TRIAL }}">
         {% blocktrans %}
           Start Free Trial
@@ -41,7 +41,8 @@
       </a>
       <p class="cta">
         {% trans 'Watch a demo' as video_text %}
-        {% include "partials/wistia_popover.html" with wistia_id='9uvnpbecdy' show_play=True text=video_text %}
+        {% click_hero 'video' as click_video %}
+        {% include "partials/wistia_popover.html" with wistia_id='9uvnpbecdy' show_play=True text=video_text click_class=click_video %}
       </p>
     </div> {# .content #}
   </section>

@@ -1,6 +1,7 @@
 {% load i18n %}
+{% load dimagidotcom %}
 
-<a class="login-link"
+<a class="login-link {% click_nav 'login' %}"
    href="{{ URL_LOGIN }}">
   <div class="hide-at-medium">
     {% blocktrans %}
@@ -14,7 +15,7 @@
   </div>{# .hide-until-medium #}
 </a>
 
-<a class="trial-link cta-navigation-trial"
+<a class="trial-link cta-navigation-trial {% click_nav 'trial' %}"
    {% if kmq_track_pricing_nav %}
       data-kmq-external="true"
       data-kmq-name="{{ kmq_track_pricing_nav }}"
