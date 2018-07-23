@@ -1,7 +1,7 @@
 {% load dimagidotcom %}
 {% load i18n %}
 
-<a class="tile toolkit-tile orange-border align-left"
+<a class="tile toolkit-tile orange-border align-left ab-body--toolkits--view-{{ toolkit.slug }}"
    href="{% url 'toolkit' toolkit.slug %}">
   <h5 class="orange">
     {{ toolkit.title }}
