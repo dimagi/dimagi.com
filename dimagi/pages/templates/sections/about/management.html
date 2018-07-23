@@ -19,7 +19,7 @@
     </div>
 
     <p class="align-center gap-top-small gap-bottom-base">
-      <a class="arrow" href="{% url 'team' %}">
+      <a class="arrow {% click_body 'see-employees' %}" href="{% url 'team' %}">
         {% blocktrans %}
           See all Dimagi employees
         {% endblocktrans %}

@@ -22,7 +22,7 @@
     {% include "sections/about/team/grid.html" %}
 
     <p class="align-center gap-top-small gap-bottom-base">
-      <a class="arrow" href="{% url 'team' %}">
+      <a class="arrow {% click_body 'team-employees' %}" href="{% url 'team' %}">
         {% blocktrans %}
           See all Dimagi employees
         {% endblocktrans %}
