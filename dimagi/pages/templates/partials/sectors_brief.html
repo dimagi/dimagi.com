@@ -1,7 +1,7 @@
 {% load dimagidotcom %}
 {% load i18n %}
 
-<a class="tile theme-border align-center"
+<a class="tile theme-border align-center ab-body-sectors--{{ sector.slug }}"
    href="{% url 'sector' sector.slug %}">
   <div class="theme-icon">
     {% include sector.area.icon %}

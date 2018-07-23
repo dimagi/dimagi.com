@@ -5,14 +5,14 @@
          id="sub-nav">
   <div class="content">
     <div class="actions">
-      <a href="{{ sector.download_url }}" class="hide-until-medium">
+      <a href="{{ sector.download_url }}" class="hide-until-medium {% click_subnav 'download' %}">
         <span>
           {% blocktrans %}
             Download PDF Summary
           {% endblocktrans %}
         </span>
       </a>
-      <a class="primary cta-subnav-sector-{{ sector.slug }}-trial"
+      <a class="primary cta-subnav-sector-{{ sector.slug }}-trial {% click_subnav 'trial' %}"
          data-kmq-external="true"
          data-kmq-name="Clicked Start Trial - {{ sector.slug }} sticky"
          href="{{ URL_TRIAL }}">
@@ -23,7 +23,7 @@
         </span>
       </a>
     </div>{# .actions #}
-    <a class="prompt-link"
+    <a class="prompt-link {% click_subnav 'browse' %}"
        href="#">
       {% blocktrans %}
         Browse
@@ -31,32 +31,37 @@
     </a>
     <div class="destinations">
       <div class="content">
-        <a href="{% url 'sectors' %}">
+        <a href="{% url 'sectors' %}"
+           class="{% click_subnav 'all' %}">
           {% blocktrans %}
             All Sectors
           {% endblocktrans %}
         </a>
-        <a href="{{ sector.download_url }}" class="hide-at-medium">
+        <a href="{{ sector.download_url }}"
+           class="hide-at-medium {% click_subnav 'download-pdf-mobile' %}">
           <span>
             {% blocktrans %}
               Download PDF Summary
             {% endblocktrans %}
           </span>
         </a>
-        <a href="#overview">
+        <a href="#overview"
+           class="{% click_subnav 'overview' %}">
           {% blocktrans %}
             Overview
           {% endblocktrans %}
         </a>
         {% if sector.projects %}
-          <a href="#projects">
+          <a href="#projects"
+             class="{% click_subnav 'projects' %}">
             {% blocktrans %}
               Projects
             {% endblocktrans %}
           </a>
         {% endif %}
         {% if sector.case_studies %}
-          <a href="#case-studies">
+          <a href="#case-studies"
+             class="{% click_subnav 'case-studies' %}">
             {% blocktrans %}
               Case Studies
             {% endblocktrans %}
