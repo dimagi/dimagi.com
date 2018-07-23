@@ -6,10 +6,14 @@
   <div class="content pad-vert-medium align-center">
 
     <div class="grid-2-at-small grid-4-at-large grid-row-equal-heights">
-      {% include "sections/about/resources/about.html" %}
-      {% include "sections/about/resources/careers.html" %}
-      {% include "sections/about/resources/blog.html" %}
-      {% include "sections/about/resources/contact_us.html" %}
+      {% click_body 'resources-about' as click_about %}
+      {% include "sections/about/resources/about.html" with click_class=click_about %}
+      {% click_body 'resources-careers' as click_careers %}
+      {% include "sections/about/resources/careers.html" with click_class=click_careers %}
+      {% click_body 'resources-blog' as click_blog %}
+      {% include "sections/about/resources/blog.html" with click_class=click_blog %}
+      {% click_body 'resources-contact' as click_contact %}
+      {% include "sections/about/resources/contact_us.html" with click_class=click_contact %}
     </div>
 
   </div> {# .content #}

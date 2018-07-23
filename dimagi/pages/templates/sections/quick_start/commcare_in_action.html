@@ -12,7 +12,7 @@
     </h3>
     <div class="grid-flex grid-align-center">
       <div class="pad-right-small-at-medium border-right border-white-at-medium">
-        <a class="alt play-icon-small"
+        <a class="alt play-icon-small {% click_body 'commcare-video' %}"
            target="_blank"
            href="http://sites.dimagi.com/commcare-demo-quick-starts">
           {% blocktrans %}
@@ -21,7 +21,7 @@
         </a>
       </div>
       <div class="pad-left-small-at-medium">
-        <a class="alt" href="{% url 'case_studies' %}">
+        <a class="alt {% click_body 'commcare-cases' %}" href="{% url 'case_studies' %}">
           {% include "svg/quick_start/case_studies.html" %}
           {% blocktrans %}
             See case studies

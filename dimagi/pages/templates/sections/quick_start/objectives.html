@@ -12,10 +12,14 @@
     </h3>
 
     <div class="grid-4-at-large grid-2-at-small grid-row-space-small grid-row-equal-heights">
-      {% include "sections/quick_start/objectives/service_delivery.html" %}
-      {% include "sections/quick_start/objectives/monitoring_evaluation.html" %}
-      {% include "sections/quick_start/objectives/research.html" %}
-      {% include "sections/quick_start/objectives/ict.html" %}
+      {% click_body 'objective-service' as click_service %}
+      {% include "sections/quick_start/objectives/service_delivery.html" with click_class=click_service %}
+      {% click_body 'objective-monitoring' as click_monitor %}
+      {% include "sections/quick_start/objectives/monitoring_evaluation.html" with click_class=click_monitor %}
+      {% click_body 'objective-research' as click_research %}
+      {% include "sections/quick_start/objectives/research.html" with click_class=click_research %}
+      {% click_body 'objective-ict' as click_ict %}
+      {% include "sections/quick_start/objectives/ict.html" with click_class=click_ict %}
     </div>{# .grid-4-at-medium #}
 
   </div>{# .content #}

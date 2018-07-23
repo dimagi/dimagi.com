@@ -5,7 +5,7 @@
          id="sub-nav">
   <div class="content">
     <div class="actions">
-      <a class="primary"
+      <a class="primary {% click_subnav 'trial' %}"
          href="{{ URL_TRIAL }}">
         <span>
           {% blocktrans %}
@@ -14,7 +14,7 @@
         </span>
       </a>
     </div>{# .actions #}
-    <a class="prompt-link"
+    <a class="prompt-link {% click_subnav 'browse' %}"
        href="#">
       {% blocktrans %}
         Browse
@@ -22,17 +22,20 @@
     </a>
     <div class="destinations">
       <div class="content">
-        <a href="{% url 'toolkits' %}">
+        <a href="{% url 'toolkits' %}"
+           class="{% click_subnav 'all' %}">
           {% blocktrans %}
             All Toolkits
           {% endblocktrans %}
         </a>
-        <a href="#overview">
+        <a href="#overview"
+           class="{% click_subnav 'overview' %}">
           {% blocktrans %}
             Overview
           {% endblocktrans %}
         </a>
-        <a href="#download">
+        <a href="#download"
+           class="{% click_subnav 'download' %}">
           {% blocktrans %}
             Download
           {% endblocktrans %}

@@ -18,8 +18,10 @@
     </div>
 
     <div class="grid-2-at-medium grid-row-equal-heights gap-bottom-small">
-      {% include "sections/proposals/pricing/national_scale.html" with theme="green" %}
-      {% include "sections/proposals/pricing/global_services.html" with theme="green" %}
+      {% click_body 'pricing-national' as click_national %}
+      {% include "sections/proposals/pricing/national_scale.html" with theme="green" click_class=click_national %}
+      {% click_body 'pricing-global' as click_global %}
+      {% include "sections/proposals/pricing/global_services.html" with theme="green" click_class=click_global %}
     </div>
 
   </div>

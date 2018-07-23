@@ -16,20 +16,21 @@
       All of your other Dimagi<br class="hide-at-large" /> and CommCare needs.
     {% endblocktrans %}
     <br />
-    <a class="orange"
+    <a class="orange {% click_body 'directory-contact' %}"
        href="#contact-form-modal">
       Contact Us
     </a> {% trans "or call" %}
-    <a class="orange"
+    <a class="orange {% click_body 'directory-phone' %}"
        href="tel:1-888-710-5830">
       +1 (888) 710-5830
     </a>
   </p>
   <p class="gap-bottom-base">
     {% url 'careers' as careers_url %}
+    {% click_body 'directory-careers' as click_class %}
     {% blocktrans %}
       For any career inquiries, please see our
-      <a class="orange" href="{{ careers_url }}">Careers Page</a>.
+      <a class="orange {{ click_class }}" href="{{ careers_url }}">Careers Page</a>.
     {% endblocktrans %}
   </p>
 {% endblock %}
