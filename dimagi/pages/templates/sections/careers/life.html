@@ -17,15 +17,19 @@
       </p>
 
     <div class="grid-4-at-medium grid-2-at-small grid-row-space-small">
-      {% include "sections/careers/life/tedx_talk.html" %}
-      {% include "sections/careers/life/away_month.html" %}
-      {% include "sections/careers/life/core_values.html" %}
-      {% include "sections/careers/life/global_services.html" %}
+      {% click_body 'life-tedx' as click_tedx %}
+      {% include "sections/careers/life/tedx_talk.html" with click_class=click_tedx %}
+      {% click_body 'life-away' as click_away %}
+      {% include "sections/careers/life/away_month.html" with click_class=click_away %}
+      {% click_body 'life-values' as click_values %}
+      {% include "sections/careers/life/core_values.html" with click_class=click_values %}
+      {% click_body 'life-services' as click_services %}
+      {% include "sections/careers/life/global_services.html" with click_class=click_services %}
     </div>{# .grid-4-at-medium #}
 
     <p class="align-center pad-bottom-base">
       <a href="#open-positions"
-         class="button">
+         class="button {% click_body 'life-positions' %}">
         {% blocktrans %}
           View Open Positions
         {% endblocktrans %}

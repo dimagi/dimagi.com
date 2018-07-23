@@ -17,10 +17,14 @@
       </p>
 
     <div class="grid-4-at-medium grid-2-at-small grid-row-space-small">
-      {% include "sections/careers/awards/company_culture.html" %}
-      {% include "sections/careers/awards/best_workplace.html" %}
-      {% include "sections/careers/awards/b_corporation.html" %}
-      {% include "sections/careers/awards/top_5000.html" %}
+      {% click_body 'awards-culture' as click_culture %}
+      {% include "sections/careers/awards/company_culture.html" with click_class=click_culture %}
+      {% click_body 'awards-workplace' as click_workplace %}
+      {% include "sections/careers/awards/best_workplace.html" with click_class=click_workplace %}
+      {% click_body 'awards-bcorp' as click_bcorp %}
+      {% include "sections/careers/awards/b_corporation.html" with click_class=click_bcorp %}
+      {% click_body 'awards-topinc' as click_topinc %}
+      {% include "sections/careers/awards/top_5000.html" with click_class=click_topinc %}
     </div>{# .grid-4-at-medium #}
 
   </div>{# .content #}
