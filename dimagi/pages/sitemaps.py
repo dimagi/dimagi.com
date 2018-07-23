@@ -8,6 +8,7 @@ from dimagi.data.case_studies import studies
 from dimagi.data.sectors import all_sectors
 from dimagi.data.terms import PREVIOUS_TERMS, LATEST_TERMS
 from dimagi.data.toolkits import toolkits
+from dimagi.data.quick_start import all_areas
 from dimagi.pages.models.terms import VERSION_2
 from dimagi.utils.wordpress_api import get_json
 
@@ -62,6 +63,8 @@ class MainViewSitemap(Sitemap):
             'blog_home',
             'team',
             'about',
+            'proposals',
+            'quick_start',
         ]
 
     def priority(self, obj):
@@ -135,6 +138,18 @@ class ToolkitSitemap(Sitemap):
 
     def location(self, obj):
         return reverse('toolkit', args=[obj.TOOLKIT.slug])
+
+
+class QuickStartSitemap(Sitemap):
+    protocol = 'https'
+    changefreq = 'monthly'
+    priority = 0.5
+
+    def items(self):
+        return all_areas
+
+    def location(self, obj):
+        return reverse('quick_start_area', args=[obj.AREA.slug])
 
 
 class TermsSitemap(Sitemap):

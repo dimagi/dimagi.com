@@ -14,6 +14,7 @@ from dimagi.pages.sitemaps import (
     JobsSitemap,
     TeamMemberSitemap,
     TermsSitemap,
+    QuickStartSitemap,
 )
 from dimagi.pages.urls.redirect import redirect_urlpatterns
 from dimagi.pages.views import commcare
@@ -31,11 +32,12 @@ sitemaps = {
     'archive': BlogArchiveCategorySitemap,
     'blog': BlogPostSitemap,
     'terms': TermsSitemap,
+    'quick_start': QuickStartSitemap,
 }
 
 
 def get_sitemap_patterns():
-    if setting('DEPLOY_ENVIRONMENT') == 'production':
+    if setting('DEPLOY_ENVIRONMENT') in ['production', 'dev']:
         return [
             url(r'^sitemap.xml$', sitemap, {'sitemaps': sitemaps},
                 name='django.contrib.sitemaps.views.sitemap'),
