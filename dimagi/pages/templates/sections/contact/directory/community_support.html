@@ -12,14 +12,16 @@
 
 {% block description %}
   <p class="gap-bottom-base">
+    {% click_body 'directory-user-group' as click_users %}
+    {% click_body 'directory-help' as click_class %}
     {% blocktrans %}
       Share questions and answers with the
-      <a class="orange"
+      <a class="orange {{ click_users }}"
          href="https://forum.dimagi.com/"
          target="_blank">
         CommCare Users Group</a>,
       or go directly to our
-      <a class="orange"
+      <a class="orange {{ click_class }}"
          href="https://help.commcarehq.org/"
          target="_blank">Help Site</a>.
     {% endblocktrans %}
