@@ -5,20 +5,20 @@
          id="sub-nav">
   <div class="content">
     <div class="actions">
-      <a href="{{ URL_DEMO }}"
-         class="hide-until-medium {% click_subnav 'demo' %}"
-         target="_blank">
-        {% blocktrans %}
-          Schedule a Demo
-        {% endblocktrans %}
-      </a>
-      <a class="primary cta-product-subnav-trial {% click_subnav 'trial' %}"
+      <a href="{{ URL_TRIAL }}"
+         class="hide-until-medium {% click_subnav 'trial' %}"
          data-kmq-external="true"
          data-kmq-name="Clicked Start Trial - CommCare (sticky bar)"
-         href="{{ URL_TRIAL }}">
+         target="_blank">
+        {% blocktrans %}
+          Start Trial
+        {% endblocktrans %}
+      </a>
+      <a class="primary {% click_subnav 'demo' %}"
+         href="{{ URL_DEMO }}">
         <span>
           {% blocktrans %}
-            Start Trial
+            Schedule a Demo
           {% endblocktrans %}
         </span>
       </a>
@@ -31,11 +31,13 @@
     </a>
     <div class="destinations">
       <div class="content">
-        <a href="{{ URL_DEMO }}"
-           class="hide-at-medium {% click_subnav 'demo-mobile' %}"
+        <a href="{{ URL_TRIAL }}"
+           data-kmq-external="true"
+           data-kmq-name="Clicked Start Trial - CommCare (sticky bar mobile)"
+           class="hide-at-medium {% click_subnav 'trial-mobile' %}"
            target="_blank">
           {% blocktrans %}
-            Schedule a Demo
+            Start Trial
           {% endblocktrans %}
         </a>
         <a href="#overview"
