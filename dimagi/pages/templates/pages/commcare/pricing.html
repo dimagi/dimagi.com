@@ -19,6 +19,12 @@
   {% endcompress %}
 {% endblock %}
 
+{% block js %}
+    {% compress js %}
+    <script src="{% static 'js/pricing.js' %}"></script>
+    {% endcompress %}
+{% endblock %}
+
 {% block hero %}
   <div id="top"></div>
   <section class="hero hero-products-commcare"
@@ -49,7 +55,7 @@
 {% endblock %}
 
 {% block content %}
-  <section class="pricing-commcare-container blue-dark-theme">
+  <section id="ko-pricing-control" class="pricing-commcare-container blue-dark-theme">
     {% include "sections/commcare/pricing/sub_nav.html" %}
     {% include "sections/commcare/pricing/plans.html" %}
     {% include "sections/commcare/pricing/detailed_comparison.html" %}
