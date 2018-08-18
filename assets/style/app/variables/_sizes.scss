@@ -100,3 +100,6 @@ $menu-pad-top-desktop: 73px;
 @function space-gap-list($_space) {
   @return $_space - 10px;
 }
+
+$toggle-switch-height: 34px;
+$toggle-switch-width: 60px;
