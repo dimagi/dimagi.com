@@ -22,7 +22,7 @@
         </h3>
         <p>
           {% blocktrans %}
-            $250 monthly
+            $<span data-bind="text: standard.displayPrice">250</span> monthly
           {% endblocktrans %}
         </p>
       </div>{# .plan-column #}
@@ -37,7 +37,7 @@
         </h3>
         <p>
           {% blocktrans %}
-            $500 monthly
+            $<span data-bind="text: pro.displayPrice">500</span> monthly
           {% endblocktrans %}
         </p>
       </div>{# .plan-column #}
@@ -52,7 +52,7 @@
         </h3>
         <p>
           {% blocktrans %}
-            $1000 monthly
+            $<span data-bind="text: advanced.displayPrice">1000</span> monthly
           {% endblocktrans %}
         </p>
       </div>{# .plan-column #}

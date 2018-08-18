@@ -10,9 +10,9 @@ Clicked Read More - Pricing (Pro)
   Pro
 {% endblocktrans %}{% endblock %}
 
-{% block price_monthly %}{% blocktrans %}
-  $500
-{% endblocktrans %}{% endblock %}
+{% block price_monthly %}
+  $<span data-bind="text: pro.displayPrice">500</span>
+{% endblock %}
 
 {% block description %}{% blocktrans %}
   Ideal for projects that need a complete mobile solution

@@ -10,9 +10,9 @@ Clicked Read More - Pricing (Standard)
   Standard
 {% endblocktrans %}{% endblock %}
 
-{% block price_monthly %}{% blocktrans %}
-  $250
-{% endblocktrans %}{% endblock %}
+{% block price_monthly %}
+  $<span data-bind="text: standard.displayPrice">250</span>
+{% endblock %}
 
 {% block description %}{% blocktrans %}
   Perfect to prove the value of
