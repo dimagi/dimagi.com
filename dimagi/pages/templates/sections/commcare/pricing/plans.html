@@ -34,7 +34,8 @@
       {% endblocktrans %}
     </p>
 
-    <p>
+    <p class="refund-text"
+       data-bind="css: { 'refund-text-hide': showMonthly }">
       <a href="{% url 'terms' 'latest' 'tos' %}"
          class="{% click_body 'plans-refund' %} check-icon blue">
         {% trans '90 day refund policy' %}

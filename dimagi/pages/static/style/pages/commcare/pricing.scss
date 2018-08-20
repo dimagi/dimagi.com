@@ -255,3 +255,12 @@ $_touch-front-heights: (
     color: $color-blue;
   }
 }
+
+.refund-text {
+  transition: opacity .4s ease-in-out;
+  opacity: 1.0;
+}
+
+.refund-text-hide {
+  opacity: 0;
+}

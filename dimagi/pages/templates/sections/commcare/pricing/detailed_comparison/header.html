@@ -20,6 +20,10 @@
             Standard
           {% endblocktrans %}
         </h3>
+        <div class="pricing-type pricing-type-green pricing-type-table gap-bottom-base"
+             data-bind="text: paymentType, css: { monthly: showMonthly }">
+          Paying Annually
+        </div>
         <p>
           {% blocktrans %}
             $<span data-bind="text: standard.displayPrice">250</span> monthly
@@ -35,6 +39,10 @@
             Pro
           {% endblocktrans %}
         </h3>
+        <div class="pricing-type pricing-type-turquoise pricing-type-table gap-bottom-base"
+             data-bind="text: paymentType, css: { monthly: showMonthly }">
+          Paying Annually
+        </div>
         <p>
           {% blocktrans %}
             $<span data-bind="text: pro.displayPrice">500</span> monthly
@@ -50,6 +58,10 @@
             Advanced
           {% endblocktrans %}
         </h3>
+        <div class="pricing-type pricing-type-purple pricing-type-table gap-bottom-base"
+             data-bind="text: paymentType, css: { monthly: showMonthly }">
+          Paying Annually
+        </div>
         <p>
           {% blocktrans %}
             $<span data-bind="text: advanced.displayPrice">1000</span> monthly
@@ -70,6 +82,10 @@
             Enter-prise
           {% endblocktrans %}
         </h3>
+        <div class="pricing-type pricing-type-blue pricing-type-table gap-bottom-base"
+             data-bind="text: paymentType, css: { monthly: showMonthly }">
+          Paying Annually
+        </div>
         <p class="gap-bottom-line gap-bottom-none-at-medium">
           {% blocktrans %}
             Custom
