@@ -6,9 +6,9 @@
   Standard
 {% endblocktrans %}{% endblock %}
 
-{% block price %}{% blocktrans %}
-  $250 per month
-{% endblocktrans %}{% endblock %}
+{% block price %}
+  $<span data-bind="text: standard.displayPrice">250</span> {% trans "per month" %}
+{% endblock %}
 
 {% block description %}{% blocktrans %}
   Perfect to prove the value of

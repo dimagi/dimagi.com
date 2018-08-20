@@ -6,9 +6,9 @@
   Advanced
 {% endblocktrans %}{% endblock %}
 
-{% block price %}{% blocktrans %}
-  $1000 per month
-{% endblocktrans %}{% endblock %}
+{% block price %}
+  $<span data-bind="text: advanced.displayPrice">1000</span> {% trans "per month" %}
+{% endblock %}
 
 {% block description %}{% blocktrans %}
   For our savviest users, working on projects at scale that require advanced

@@ -56,8 +56,10 @@ input:focus + .slider {
   box-shadow: 0 0 1px $color-link-gray;
 }
 
+$_translate-amount: $toggle-switch-width - $_slider-height - $_slider-padding * 2 ;
+
 input:checked + .slider:before {
-  transform: translateX($_slider-height);
+  transform: translateX($_translate-amount);
 }
 
 .slider.round {

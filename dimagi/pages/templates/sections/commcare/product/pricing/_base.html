@@ -5,6 +5,10 @@
       <h3 class="{{ theme }}">
         {% block name %}{% endblock %}
       </h3>
+      <div class="pricing-type pricing-type-{{ theme }}"
+           data-bind="text: paymentType, css: { monthly: showMonthly }">
+        Paying Annually
+      </div>
     </div>{# .intro #}
     <p class="font-weight-bold">
       {% block price %}{% endblock %}

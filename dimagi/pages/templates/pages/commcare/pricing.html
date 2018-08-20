@@ -16,13 +16,14 @@
 {% block stylesheets %}
   {% compress css %}
     <link href="{% sass_src 'style/pages/commcare/pricing.scss' %}" rel="stylesheet" media="screen" type="text/css" />
+    <link href="{% sass_src 'style/pages/commcare/pricing_rates.scss' %}" rel="stylesheet" media="screen" type="text/css" />
   {% endcompress %}
 {% endblock %}
 
 {% block js %}
-    {% compress js %}
-    <script src="{% static 'js/pricing.js' %}"></script>
-    {% endcompress %}
+  {% compress js %}
+  <script src="{% static 'js/pricing.js' %}"></script>
+  {% endcompress %}
 {% endblock %}
 
 {% block hero %}
