@@ -29,6 +29,7 @@ olefile = "*"
 django-capture-tag = "*"
 django-require = "*"
 django-htmlmin = "*"
+reportlab = "*"
 
 
 [requires]
