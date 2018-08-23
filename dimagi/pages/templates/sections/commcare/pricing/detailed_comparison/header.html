@@ -5,7 +5,16 @@
   <div class="grid-6-at-large grid-5 grid-valign-middle">
 
     <div class="column column-width-2-at-large align-left">
-      <a href="https://cdn2.hubspot.net/hubfs/503070/Detailed%20Comparison_Pricing-1.pdf"
+      <a href="{% url 'annual_commcare_pricing_pdf' %}"
+         data-bind="visible: !showMonthly()"
+         class="button button-slate hide-until-large {% click_body 'details-download' %}">
+        {% blocktrans %}
+          Download Full<br /> Comparison Chart
+        {% endblocktrans %}
+      </a>
+      <a href="{% url 'monthly_commcare_pricing_pdf' %}"
+         data-bind="visible: showMonthly"
+         style="display: none;"
          class="button button-slate hide-until-large {% click_body 'details-download' %}">
         {% blocktrans %}
           Download Full<br /> Comparison Chart
