@@ -15,20 +15,19 @@
          data-lazybg="true"
          id="hero">
   <div class="content align-left-at-medium align-center">
-    <h2 class="gap-vert-line-at-medium gap-top-large">
+    <h2 class="gap-bottom-line gap-top-line-at-medium gap-top-large">
       {% blocktrans %}
-        WOOF!
+        404
       {% endblocktrans %}
     </h2>
     <h1>
       {% blocktrans %}
-        Looks like Bailey<br /> nomed this page.
+        Sorry, we couldn't find that page.
       {% endblocktrans %}
     </h1>
-    <p>
+    <p class="pad-bottom-line">
       {% blocktrans %}
-        She's our office dog and she likes snacks...and pages.<br />
-        Maybe one of the links below will help you<br />
+        Maybe one of the links below will help you
         find the page you're looking for?
       {% endblocktrans %}
     </p>
@@ -44,7 +43,7 @@
 {% endblock %}
 
 {% block content %}
-  <section class="error-container orange-theme">
+  <section class="error-container slate-theme">
     {% include 'sections/error/resources.html' %}
   </section>
 {% endblock %}
