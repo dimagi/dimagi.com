@@ -15,22 +15,19 @@
          data-lazybg="true"
          id="hero">
   <div class="content align-left-at-medium align-center">
-    <h2 class="gap-vert-line-at-medium gap-top-large">
+    <h2 class="gap-bottom-line gap-top-line-at-medium gap-top-large">
       {% blocktrans %}
-        RUH OH!
+        500
       {% endblocktrans %}
     </h2>
     <h1>
       {% blocktrans %}
-        Looks like Bailey<br />
-        pawed this page.
+        Uh oh, it looks like something went wrong.
       {% endblocktrans %}
     </h1>
-    <p>
+    <p class="pad-bottom-line">
       {% blocktrans %}
-        Bailey is our office dog and coding isn't<br />
-        really her thing. She’s better at naps.<br />
-        One of our developers will be fixing this shortly.
+        We've alerted our developers and will have someone fixing this shortly.
       {% endblocktrans %}
     </p>
     <p class="cta">
@@ -45,7 +42,7 @@
 {% endblock %}
 
 {% block content %}
-  <section class="error-container orange-theme">
+  <section class="error-container slate-theme">
     {% include 'sections/error/resources.html' %}
   </section>
 {% endblock %}
