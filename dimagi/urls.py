@@ -18,6 +18,7 @@ from dimagi.pages.sitemaps import (
 )
 from dimagi.pages.urls.redirect import redirect_urlpatterns
 from dimagi.pages.views import commcare
+from dimagi.pages.views import pillar
 from dimagi.pages.urls import blog
 from dimagi.pages.urls import team
 from dimagi.utils.config import setting
@@ -59,6 +60,10 @@ urlpatterns = [
     url(r'^test_500/$', pages.test_500),
     url(r'^test_404/$', pages.test_404),
     url(r'^certified-partners/$', commcare.partners, name='partner_program'),
+
+    url(r'^mobile-data-collection/$',
+        pillar.mobile_data_collection, name="mobile_data_collection"),
+
     url(r'^blog/', include(blog.blog_urls)),
     url(r'^about/', include(team.about_urls)),
     url(r'^team/', include(team.team_urls)),

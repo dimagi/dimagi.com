@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block title %}{% blocktrans %}
+  Mobile Data Collection
+{% endblocktrans %}{% endblock %}
+
+{% block description %}{% blocktrans %}
+{% endblocktrans %}{% endblock %}
+
+{% block body_class %}pillar-page tucked-hero{% endblock %}
+
+{% block stylesheets %}
+  {% compress css %}
+    <link href="{% sass_src 'style/pages/pillar/mobile_data_collection.scss' %}" rel="stylesheet" media="screen" type="text/css" />
+  {% endcompress %}
+{% endblock %}
+
+{% block hero %}
+<section class="hero hero-quick-starts"
+         data-lazybg="true"
+         id="hero">
+  <div class="content content-width-large inverted align-center display-flex flex-valign-middle expand-vertical offset-top-small flex-align-center">
+    <div class="copy expand position-relative">
+
+      <h2 class="pad-bottom-line">
+        {% include "svg/commcare/logo.html" %}
+      </h2>
+
+      <h1>
+        {% blocktrans %}
+          Mobile Data Collection
+        {% endblocktrans %}
+      </h1>
+
+    </div>{# .copy #}
+  </div>{# .content #}
+</section>
+{% endblock %}
+
+{% block content %}
+{% endblock %}
