@@ -16,6 +16,13 @@
 {% block stylesheets %}
   {% compress css %}
     <link href="{% sass_src 'style/pages/commcare/pricing.scss' %}" rel="stylesheet" media="screen" type="text/css" />
+    <link href="{% sass_src 'style/pages/commcare/pricing_rates.scss' %}" rel="stylesheet" media="screen" type="text/css" />
+  {% endcompress %}
+{% endblock %}
+
+{% block js %}
+  {% compress js %}
+  <script src="{% static 'js/pricing.js' %}"></script>
   {% endcompress %}
 {% endblock %}
 
@@ -49,9 +56,8 @@
 {% endblock %}
 
 {% block content %}
-  <section class="pricing-commcare-container blue-dark-theme">
+  <section id="ko-pricing-control" class="pricing-commcare-container blue-dark-theme">
     {% include "sections/commcare/pricing/sub_nav.html" %}
-    {% include "sections/commcare/pricing/brief_overview.html" %}
     {% include "sections/commcare/pricing/plans.html" %}
     {% include "sections/commcare/pricing/detailed_comparison.html" %}
     {% include "sections/commcare/pricing/faq.html" %}

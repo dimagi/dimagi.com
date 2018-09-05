@@ -1,0 +1,26 @@
+@import 'app/variables/colors';
+@import 'app/variables/sizes';
+
+
+.check-icon {
+  position: relative;
+  padding-left: $list-padding;
+
+  &::before { // scss-lint:disable PropertyCount
+    border-bottom-width: 2px;
+    border-left-width: 2px;
+    border-right-width: 0;
+    border-style: solid;
+    border-top-width: 0;
+    color: map-get($colors-by-theme, $default-theme);
+    height: .5em;
+    content: ' ';
+    display: block;
+    left: 0;
+    top: $list-check-margin;
+    overflow: hidden;
+    position: absolute;
+    transform: rotate(-45deg);
+    width: $list-icon-width;
+  }
+}

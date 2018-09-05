@@ -5,7 +5,16 @@
   <div class="grid-6-at-large grid-5 grid-valign-middle">
 
     <div class="column column-width-2-at-large align-left">
-      <a href="https://cdn2.hubspot.net/hubfs/503070/Detailed%20Comparison_Pricing-1.pdf"
+      <a href="{% url 'annual_commcare_pricing_pdf' %}"
+         data-bind="visible: !showMonthly()"
+         class="button button-slate hide-until-large {% click_body 'details-download' %}">
+        {% blocktrans %}
+          Download Full<br /> Comparison Chart
+        {% endblocktrans %}
+      </a>
+      <a href="{% url 'monthly_commcare_pricing_pdf' %}"
+         data-bind="visible: showMonthly"
+         style="display: none;"
          class="button button-slate hide-until-large {% click_body 'details-download' %}">
         {% blocktrans %}
           Download Full<br /> Comparison Chart
@@ -20,9 +29,13 @@
             Standard
           {% endblocktrans %}
         </h3>
+        <div class="pricing-type pricing-type-green pricing-type-table gap-bottom-base"
+             data-bind="text: paymentType, css: { monthly: showMonthly }">
+          Paying Annually
+        </div>
         <p>
           {% blocktrans %}
-            $250 monthly
+            $<span data-bind="text: standard.displayPrice">250</span> monthly
           {% endblocktrans %}
         </p>
       </div>{# .plan-column #}
@@ -35,9 +48,13 @@
             Pro
           {% endblocktrans %}
         </h3>
+        <div class="pricing-type pricing-type-turquoise pricing-type-table gap-bottom-base"
+             data-bind="text: paymentType, css: { monthly: showMonthly }">
+          Paying Annually
+        </div>
         <p>
           {% blocktrans %}
-            $500 monthly
+            $<span data-bind="text: pro.displayPrice">500</span> monthly
           {% endblocktrans %}
         </p>
       </div>{# .plan-column #}
@@ -50,9 +67,13 @@
             Advanced
           {% endblocktrans %}
         </h3>
+        <div class="pricing-type pricing-type-purple pricing-type-table gap-bottom-base"
+             data-bind="text: paymentType, css: { monthly: showMonthly }">
+          Paying Annually
+        </div>
         <p>
           {% blocktrans %}
-            $1000 monthly
+            $<span data-bind="text: advanced.displayPrice">1000</span> monthly
           {% endblocktrans %}
         </p>
       </div>{# .plan-column #}
@@ -70,6 +91,10 @@
             Enter-prise
           {% endblocktrans %}
         </h3>
+        <div class="pricing-type pricing-type-blue pricing-type-table gap-bottom-base"
+             data-bind="text: paymentType, css: { monthly: showMonthly }">
+          Paying Annually
+        </div>
         <p class="gap-bottom-line gap-bottom-none-at-medium">
           {% blocktrans %}
             Custom

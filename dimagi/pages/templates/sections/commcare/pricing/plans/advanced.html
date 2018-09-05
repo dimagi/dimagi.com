@@ -10,9 +10,9 @@ Clicked Read More - Pricing (Advanced)
   Advanced
 {% endblocktrans %}{% endblock %}
 
-{% block price_monthly %}{% blocktrans %}
-  $1000
-{% endblocktrans %}{% endblock %}
+{% block price_monthly %}
+  $<span data-bind="text: advanced.displayPrice">1000</span>
+{% endblock %}
 
 {% block description %}{% blocktrans %}
   For our savviest users, working on projects at scale that require advanced

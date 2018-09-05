@@ -1,0 +1,74 @@
+@import 'app/mixins/background';
+@import 'app/variables/colors';
+@import 'app/variables/sizes';
+@import 'app/variables/type';
+
+
+
+.pricing-type {
+  background-color: $color-link-gray;
+  border: transparent 2px solid;
+  border-radius: 2px;
+  color: $color-white;
+  font-weight: bold;
+  font-size: 11px;
+  padding-top: 2px;
+  text-transform: uppercase;
+  transition: .4s all ease-in-out;
+
+  &.monthly {
+    background-color: transparent;
+    border-color: $color-link-gray;
+    color: $color-link-gray;
+  }
+}
+
+.pricing-type-green {
+  background-color: $color-green;
+
+  &.monthly {
+    background-color: transparent;
+    border-color: $color-green;
+    color: $color-green;
+  }
+}
+
+.pricing-type-turquoise {
+  background-color: $color-turquoise;
+
+  &.monthly {
+    background-color: transparent;
+    border-color: $color-turquoise;
+    color: $color-turquoise;
+  }
+}
+
+.pricing-type-purple {
+  background-color: $color-purple;
+
+  &.monthly {
+    background-color: transparent;
+    border-color: $color-purple;
+    color: $color-purple;
+  }
+}
+
+.pricing-type-blue {
+  background-color: $color-blue;
+
+  &.monthly {
+    background-color: transparent;
+    border-color: $color-blue;
+    color: $color-blue;
+  }
+}
+
+.refund-text {
+  transition: opacity .4s ease-in-out;
+  opacity: 1.0;
+}
+
+.refund-text-hide {
+  opacity: 0;
+}
+

@@ -5,9 +5,13 @@
      href="#details">
 
     <div class="pad-top-small pad-bottom-line">
-      <h3 class="{{ theme }}">
+      <h3 class="{{ theme }} gap-bottom-base">
         {% block name %}{% endblock %}
       </h3>
+      <div class="pricing-type pricing-type-{{ theme }}"
+           data-bind="text: paymentType, css: { monthly: showMonthly }">
+        Paying Annually
+      </div>
     </div>{# .intro #}
 
     <div class="plans-price-monthly">

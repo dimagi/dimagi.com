@@ -6,9 +6,9 @@
   Pro
 {% endblocktrans %}{% endblock %}
 
-{% block price %}{% blocktrans %}
-  $500 per month
-{% endblocktrans %}{% endblock %}
+{% block price %}
+  $<span data-bind="text: pro.displayPrice">500</span> {% trans "per month" %}
+{% endblock %}
 
 {% block description %}{% blocktrans %}
   Ideal for projects that need a complete mobile solution
