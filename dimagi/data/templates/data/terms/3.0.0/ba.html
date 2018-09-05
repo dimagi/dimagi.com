@@ -348,19 +348,43 @@
             {% endblocktrans %}
           </li>
           <li>
-            {% blocktrans %}
-              <u>Billing Cycle:</u> The periodic plan fee for Dimagi’s Services
-              will be billed each calendar month unless and until Customer
-              cancels the Plan. Dimagi reserves the right to change the timing
-              of billing, in particular, if Customer’s payment has not
-              successfully settled, or to enforce a minimum subscription length.
-            {% endblocktrans %}
+            <u>{% blocktrans %}For Monthly Billing:{% endblocktrans %}</u>
+            <ol>
+              <li>
+                {% blocktrans %}
+                  <u>Billing Cycle:</u> The periodic plan fee for Dimagi's
+                  Services will be billed each calendar month unless and
+                  until the Customer cancel the Plan. Dimagi reserves the
+                  right to change the timing of our billing, in particular,
+                  if Customer's payment has not successfully settled, or
+                  to enforce a minimum subscription length.
+                {% endblocktrans %}
+              </li>
+              <li>
+                {% blocktrans %}
+                  <u>Cancellation:</u> Customer may cancel its Plan by
+                  downgrading to Dimagi's free "Community Plan".
+                {% endblocktrans %}
+              </li>
+            </ol>
           </li>
           <li>
-            {% blocktrans %}
-              <u>Cancellation:</u> Customer may cancel its Plan by downgrading
-              to Dimagi’s free "Community Subscription Plan".
-            {% endblocktrans %}
+            <u>{% blocktrans %}For Annual Billing:{% endblocktrans %}</u>
+            <ol>
+              <li>
+                {% blocktrans %}
+                  <u>Refund, Downgrade, and Cancellation Policy:</u> Refund,
+                  Downgrade and Cancelation policy: If Customer cancels or
+                  downgrades within 90 days, starting from the start
+                  date of Customer’s Subscription Term, Customer will be
+                  charged on a prorated basis for the service provided, and
+                  rest will be fully refunded. After 90 days, the advance
+                  payment is non-refundable and the service will continue until
+                  the end of the Subscription Term. To be fair to everyone,
+                  there will be no exceptions.
+                {% endblocktrans %}
+              </li>
+            </ol>
           </li>
           <li>
             {% blocktrans %}
