@@ -54,7 +54,7 @@ GROUP.add_features([
     ),
     Feature(
         title=ugettext_lazy(
-            "Guaranteed Response Time"
+            "Guaranteed First Response Time"
         ),
         description=ugettext_lazy(
             "Dimagi support staff will review any issues you report "
