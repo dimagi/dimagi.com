@@ -1,0 +1,28 @@
+@import 'app/mixins/background';
+@import 'app/variables/colors';
+@import 'app/variables/sizes';
+@import 'app/variables/type';
+
+a.tile-more {
+  background: transparent;
+  padding: $space-small;
+  padding-bottom: $space-small + $space-base;
+
+  h2 {
+    font-weight: $font-weight-medium;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  &:before {
+    border-color: transparent !important;
+  }
+
+  &:after {
+    border-color: $color-white !important;
+  }
+
+}
