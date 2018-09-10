@@ -1,0 +1,24 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<article class="epic epic-chapter-4 blue-theme" id="chapter-4">
+
+  <section class="epic-cover"
+           data-lazybg="true">
+    <div class="content">
+      <h1 class="pad-top-large">
+        {% blocktrans %}
+          How to Choose the<br/>
+          Right Mobile Data <br />
+          Collection Solution
+        {% endblocktrans %}
+      </h1>
+    </div> {# .content #}
+  </section>
+
+  {% include "sections/pillar/mobile_data_collection/chapter4/summary.html" %}
+  {% include "sections/pillar/mobile_data_collection/chapter4/part1.html" %}
+  {% include "sections/pillar/mobile_data_collection/chapter4/part2.html" %}
+  {% include "sections/pillar/mobile_data_collection/chapter4/part3.html" %}
+
+</article>

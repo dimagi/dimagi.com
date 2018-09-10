@@ -1,0 +1,246 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="epic-content pad-vert-small"
+         id="build-your-solution">
+  <div class="content content-width-medium">
+
+    <h2>
+      {% blocktrans %}
+        Build your mobile data collection solution
+      {% endblocktrans %}
+    </h2>
+
+    <p>
+      {% blocktrans %}
+        Now, the fun begins! It’s time to dive into the mobile data
+        collection solution you selected and build the mobile application
+        that your team will use in the field.
+      {% endblocktrans %}
+    </p>
+
+    <h3>
+      {% blocktrans %}
+        Build your outline and fill it in
+      {% endblocktrans %}
+    </h3>
+
+    <p>
+      {% blocktrans %}
+        Time to build! With the overall structure and workflow
+        that you designed and validated in the Design phase,
+        start integrating the more detailed content and logic
+        into your forms. What are the questions you wrote when
+        you established your data collection standards? Add them
+        in! Are there any documents, videos, or messages your app
+        will need to share at certain times? Put those in, too!
+      {% endblocktrans %}
+    </p>
+
+    <p>
+      {% blocktrans %}
+        If you are using CommCare, our form builder offers
+        additional features beyond basics (e.g.. skip
+        logic/display conditions and validation conditions),
+        which you might consider adding to your app for
+        improved user experience:
+      {% endblocktrans %}
+    </p>
+
+    <div class="grid grid-2">
+
+      <div class="column">
+
+        <h4>
+          {% blocktrans %}
+            In a module case list
+          {% endblocktrans %}
+        </h4>
+
+        <p>
+          <strong class="display-block">
+            {% blocktrans %}
+              Registration from the case list
+            {% endblocktrans %}
+          </strong>
+          {% blocktrans %}
+            Make the registration form directly accessible from a case
+            list, so the user can go from searching for a patient to
+            registering a new one seamlessly.
+          {% endblocktrans %}
+        </p>
+
+        <p>
+          <strong class="display-block">
+            {% blocktrans %}
+              "Search Only" properties in the case list
+            {% endblocktrans %}
+          </strong>
+          {% blocktrans %}
+            Even if you only display a few properties on your case
+            list, you can still search by others (e.g. District) that
+            will be important to your program. "Search Only"
+            properties give the user more search and filtering
+            options without overcrowding the phone screen.
+          {% endblocktrans %}
+        </p>
+
+        <p>
+          <strong class="display-block">
+            {% blocktrans %}
+              Icons in the case list
+            {% endblocktrans %}
+          </strong>
+          {% blocktrans %}
+            Use conditional icons in the case list to visually
+            highlight important details about each case.
+          {% endblocktrans %}
+        </p>
+
+        <h4>
+          {% blocktrans %}
+            In your forms
+          {% endblocktrans %}
+        </h4>
+
+        <p>
+          <strong class="display-block">
+            {% blocktrans %}
+              Calculations in hidden values
+            {% endblocktrans %}
+          </strong>
+          {% blocktrans %}
+            Use hidden values (a special question type) in your form
+            to carry out calculations that are not visible to the user.
+            For example, calculate a patient’s age in years and months
+            based on the date of birth question asked during patient
+            registration, or calculate the next visit date based on
+            today's date.
+          {% endblocktrans %}
+        </p>
+
+        <p>
+          <strong class="display-block">
+            {% blocktrans %}
+              Define default values
+            {% endblocktrans %}
+          </strong>
+          {% blocktrans %}
+            Pre-load an answer to a question in your form by
+            loading a case property, calculation, or text into
+            the default value field. This helps the user out by
+            suggesting a response but allowing them to edit it
+            in the form.
+          {% endblocktrans %}
+        </p>
+
+      </div>{# .column #}
+    </div>{# .grid #}
+
+    <h3>
+      {% blocktrans %}
+        Working with multiple app builders
+      {% endblocktrans %}
+    </h3>
+
+    <p>
+      {% blocktrans %}
+        Sometimes, programs are fortunate enough to have multiple
+        people working on their app. Unfortunately, this can also
+        lead to confusion and versioning issues. Our team has a
+        few suggestions when it comes to working with multiple
+        app builders:
+      {% endblocktrans %}
+    </p>
+
+    <div class="grid grid-flex grid-valign-middle pad-vert-line">
+      <div class="column no-shrink">
+        <div class="theme-icon epic-icon">
+          {% include "svg/pillar/chapter3/icon1.html" %}
+        </div>
+      </div>{# .column #}
+      <div class="column">
+        <p>
+          <strong>
+            {% blocktrans %}
+              Define clear workstream owners and divide up the
+              app building accordingly.
+            {% endblocktrans %}
+          </strong>
+          {% blocktrans %}
+            Most tools do not allow multiple builders at once, so
+            be clear about who will be working in the platform and when.
+          {% endblocktrans %}
+        </p>
+      </div>{# .column #}
+    </div>{# .grid #}
+
+    <div class="grid grid-flex grid-valign-middle pad-vert-line">
+      <div class="column no-shrink">
+        <div class="theme-icon epic-icon">
+          {% include "svg/pillar/chapter3/icon1.html" %}
+        </div>
+      </div>{# .column #}
+      <div class="column">
+        <p>
+          <strong>
+            {% blocktrans %}
+              Make and document builds as frequently as possible.
+            {% endblocktrans %}
+          </strong>
+          {% blocktrans %}
+            Quick, but incremental updates will make it easier to
+            spot and solve any bugs that crop up. Check to see if
+            your platform allows you to control versions to see
+            who made what updates and when.
+          {% endblocktrans %}
+        </p>
+      </div>{# .column #}
+    </div>{# .grid #}
+
+    <div class="grid grid-flex grid-valign-middle pad-vert-line">
+      <div class="column no-shrink">
+        <div class="theme-icon epic-icon">
+          {% include "svg/pillar/chapter3/icon1.html" %}
+        </div>
+      </div>{# .column #}
+      <div class="column">
+        <p>
+          <strong>
+            {% blocktrans %}
+              Set clear communication mechanisms with your team.
+            {% endblocktrans %}
+          </strong>
+          {% blocktrans %}
+            Daily or every-other-day stand-up meetings for quick check-ins are helpful.
+          {% endblocktrans %}
+        </p>
+      </div>{# .column #}
+    </div>{# .grid #}
+
+    <div class="grid grid-flex grid-valign-middle pad-vert-line">
+      <div class="column no-shrink">
+        <div class="theme-icon epic-icon">
+          {% include "svg/pillar/chapter3/icon1.html" %}
+        </div>
+      </div>{# .column #}
+      <div class="column">
+        <p>
+          <strong>
+            {% blocktrans %}
+              Build in consistent feedback mechanisms from your users.
+            {% endblocktrans %}
+          </strong>
+          {% blocktrans %}
+            This will help keep a centralized database of feedback so
+            that all app builders are aware of their users'
+            frustrations and suggestions. This is especially important when
+            your users and app development team are in different locations
+            and those conversations cannot happen face to face.
+          {% endblocktrans %}
+        </p>
+      </div>{# .column #}
+    </div>{# .grid #}
+
+  </div>
+</section>

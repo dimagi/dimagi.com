@@ -9,7 +9,7 @@
 {% block description %}{% blocktrans %}
 {% endblocktrans %}{% endblock %}
 
-{% block body_class %}pillar-page tucked-hero{% endblock %}
+{% block body_class %}pillar-page{% endblock %}
 
 {% block stylesheets %}
   {% compress css %}
@@ -17,28 +17,20 @@
   {% endcompress %}
 {% endblock %}
 
-{% block hero %}
-<section class="hero hero-quick-starts"
-         data-lazybg="true"
-         id="hero">
-  <div class="content content-width-large inverted align-center display-flex flex-valign-middle expand-vertical offset-top-small flex-align-center">
-    <div class="copy expand position-relative">
-
-      <h2 class="pad-bottom-line">
-        {% include "svg/commcare/logo.html" %}
-      </h2>
-
-      <h1>
-        {% blocktrans %}
-          Mobile Data Collection
-        {% endblocktrans %}
-      </h1>
-
-    </div>{# .copy #}
-  </div>{# .content #}
-</section>
+{% block progress_bar %}
+  <progress class="progress-bar slate"></progress>
 {% endblock %}
 
-{% block content %}
-  <progress class="progress-bar slate"></progress>
+{% block article %}
+{% include "sections/pillar/mobile_data_collection/intro.html" %}
+{% include "sections/pillar/mobile_data_collection/sub_nav.html" %}
+{% include "sections/pillar/mobile_data_collection/chapter1.html" %}
+{% include "sections/pillar/mobile_data_collection/chapter2.html" %}
+{% include "sections/pillar/mobile_data_collection/chapter3.html" %}
+{% include "sections/pillar/mobile_data_collection/chapter4.html" %}
+{% include "sections/pillar/mobile_data_collection/chapter5.html" %}
+{% include "sections/pillar/mobile_data_collection/chapter6.html" %}
+{% include "sections/pillar/mobile_data_collection/chapter7.html" %}
+{% include "sections/pillar/mobile_data_collection/chapter8.html" %}
+{% include "sections/pillar/mobile_data_collection/read_more.html" %}
 {% endblock %}

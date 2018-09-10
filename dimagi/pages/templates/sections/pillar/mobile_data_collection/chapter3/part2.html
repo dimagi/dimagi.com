@@ -1,0 +1,106 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="epic-content pad-vert-small"
+         id="how-to-describe-your-data">
+  <div class="content content-width-medium">
+
+    <h2>
+      {% blocktrans %}
+        How to describe your data
+      {% endblocktrans %}
+    </h2>
+
+    <p>
+      {% blocktrans %}
+        Once your have organized a list of your data requirements by
+        category, flesh out their attributes and characteristics.
+        There are numerous questions you can ask to help with this:
+      {% endblocktrans %}
+    </p>
+
+    <div class="grid grid-flex grid-valign-middle pad-vert-line">
+      <div class="column no-shrink">
+        <div class="theme-icon epic-icon">
+          {% include "svg/pillar/chapter3/icon1.html" %}
+        </div>
+      </div>{# .column #}
+      <div class="column">
+        <p>
+          <strong>
+            {% blocktrans %}
+              Are you searching for logitudinal data&mdash;that is to say,
+              are you looking to update the same metrics from the same source
+              over time?
+            {% endblocktrans %}
+          </strong>
+          {% blocktrans %}
+            This type of data requires a feature called case management, with
+            the alternative being long hours spent on data entry to
+            collate your results.
+          {% endblocktrans %}
+        </p>
+      </div>{# .column #}
+    </div>{# .grid #}
+
+    <div class="grid grid-flex grid-valign-middle pad-vert-line">
+      <div class="column no-shrink">
+        <div class="theme-icon epic-icon">
+          {% include "svg/pillar/chapter3/icon1.html" %}
+        </div>
+      </div>{# .column #}
+      <div class="column">
+        <p>
+          <strong>
+            {% blocktrans %}
+              Does your data require outside data sources?
+            {% endblocktrans %}
+          </strong>
+          {% blocktrans %}
+            Many governments have regular reporting on health,
+            income, agriculture, and many other sectors. This is helpful
+            when you are trying to compare your data to national averages,
+            for example.
+          {% endblocktrans %}
+        </p>
+      </div>{# .column #}
+    </div>{# .grid #}
+
+    <div class="grid grid-flex grid-valign-middle pad-vert-line">
+      <div class="column no-shrink">
+        <div class="theme-icon epic-icon">
+          {% include "svg/pillar/chapter3/icon1.html" %}
+        </div>
+      </div>{# .column #}
+      <div class="column">
+        <p>
+          <strong>
+            {% blocktrans %}
+              Does one variable depend on another?
+            {% endblocktrans %}
+          </strong>
+          {% blocktrans %}
+            For instance, before asking details about a patient's
+            treatment history, make sure that patient has actually
+            received treatment. When you ask a patient if she has ever
+            received medical treatment, and she replies, "no," you
+            can use skip logic to avoid asking about
+            vaccinations, medication, or other medical treatment.
+          {% endblocktrans %}
+        </p>
+      </div>{# .column #}
+    </div>{# .grid #}
+
+    <p class="pad-top-line">
+      {% blocktrans %}
+        There are many more questions you can ask to help describe the
+        characteristics of your variables, but as with everything
+        else, they will depend on your project's objectives. All of
+        the characteristics you define will help you later, as you
+        determine the right tool for your needs and structure your mobile
+        data collection forms.
+      {% endblocktrans %}
+    </p>
+
+  </div>
+</section>

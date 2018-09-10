@@ -1,0 +1,215 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="epic-content pad-top-small pad-bottom-large"
+         id="test-your-solution">
+  <div class="content content-width-medium">
+
+    <h2>
+      {% blocktrans %}
+        Test your solution
+      {% endblocktrans %}
+    </h2>
+
+    <p>
+      {% blocktrans %}
+        While the typical QA process is crucial to ensure
+        the app you develop functions as you expect, user
+        acceptance testing (or UAT) validates whether your
+        expectations will actually solve the problems your
+        users face.
+      {% endblocktrans %}
+    </p>
+
+    <p>
+      {% blocktrans %}
+        Receiving consistent feedback throughout the app
+        building process (in both the design and build
+        phases) is vital to developing a solution that
+        truly solves the problems you are trying to
+        tackle and helps you avoid any surprises when
+        you test the final product.
+      {% endblocktrans %}
+    </p>
+
+    <p>
+      {% blocktrans %}
+        Once your first version is complete, but before
+        launch, you should test the system in its entirety
+        with real users in the setting in which the tool
+        will be used. This is user acceptance testing.
+      {% endblocktrans %}
+    </p>
+
+    <p>
+      {% blocktrans %}
+        From the hundreds of applications we have helped develop,
+        we have a number of tips to share around how to run a
+        quality and insightful UAT process:
+      {% endblocktrans %}
+    </p>
+
+    <div class="grid grid-flex grid-valign-middle pad-vert-line">
+      <div class="column no-shrink">
+        <div class="theme-icon epic-icon">
+          {% include "svg/pillar/chapter3/icon1.html" %}
+        </div>
+      </div>{# .column #}
+      <div class="column">
+        <p>
+          <strong>
+            {% blocktrans %}
+              Identify the right users.
+            {% endblocktrans %}
+          </strong>
+          {% blocktrans %}
+            Make sure you have a representative sample of your users
+            to ensure that everyone who ends up using the app
+            is accounted for.<br />
+            a) High &amp; low performing<br />
+            b) High &amp; low digital literacy<br />
+            c) Rural and urban
+          {% endblocktrans %}
+        </p>
+      </div>{# .column #}
+    </div>{# .grid #}
+
+    <div class="grid grid-flex grid-valign-middle pad-vert-line">
+      <div class="column no-shrink">
+        <div class="theme-icon epic-icon">
+          {% include "svg/pillar/chapter3/icon1.html" %}
+        </div>
+      </div>{# .column #}
+      <div class="column">
+        <p>
+          <strong>
+            {% blocktrans %}
+              Ask open-ended, rather than leading, yes/no questions.
+            {% endblocktrans %}
+          </strong>
+          {% blocktrans %}
+            Just like the questions you ask in the app, the goal of
+            user testing is to uncover clear, unbiased feedback on
+            how you might improve your platform.
+          {% endblocktrans %}
+        </p>
+      </div>{# .column #}
+    </div>{# .grid #}
+
+    <div class="grid grid-flex grid-valign-middle pad-vert-line">
+      <div class="column no-shrink">
+        <div class="theme-icon epic-icon">
+          {% include "svg/pillar/chapter3/icon1.html" %}
+        </div>
+      </div>{# .column #}
+      <div class="column">
+        <p>
+          <strong>
+            {% blocktrans %}
+              Observe, don't demo.
+            {% endblocktrans %}
+          </strong>
+          {% blocktrans %}
+            You want to see the users interact with the system
+            in as realistic an environment as possible, which
+            means you are not there to hand-hold. See what flows
+            they get caught up on and which go smoothly. This
+            will be representative of when the users you might
+            never meet get their hands on your app.
+          {% endblocktrans %}
+        </p>
+      </div>{# .column #}
+    </div>{# .grid #}
+
+    <div class="grid grid-flex grid-valign-middle pad-vert-line">
+      <div class="column no-shrink">
+        <div class="theme-icon epic-icon">
+          {% include "svg/pillar/chapter3/icon1.html" %}
+        </div>
+      </div>{# .column #}
+      <div class="column">
+        <p>
+          <strong>
+            {% blocktrans %}
+              Consolidate observations and feedback.
+            {% endblocktrans %}
+          </strong>
+          {% blocktrans %}
+            Organizing your feedback in a structured way helps
+            to get a clear picture of the trends. It also ensures
+            that you can easily compare and contrast the feedback
+            with that on future iterations of the app.
+          {% endblocktrans %}
+        </p>
+      </div>{# .column #}
+    </div>{# .grid #}
+
+    <div class="grid grid-flex grid-valign-middle pad-vert-line">
+      <div class="column no-shrink">
+        <div class="theme-icon epic-icon">
+          {% include "svg/pillar/chapter3/icon1.html" %}
+        </div>
+      </div>{# .column #}
+      <div class="column">
+        <p>
+          <strong>
+            {% blocktrans %}
+              Sort through the noise.
+            {% endblocktrans %}
+          </strong>
+          {% blocktrans %}
+            Develop a clear idea of your priorities and how
+            the feedback you receive aligns with them. You
+            cannot incorporate every change request, so have
+            a decision-making process that all stakeholders
+            agree on, and stick to it.
+          {% endblocktrans %}
+        </p>
+      </div>{# .column #}
+    </div>{# .grid #}
+
+    <div class="grid grid-flex grid-valign-middle pad-vert-line">
+      <div class="column no-shrink">
+        <div class="theme-icon epic-icon">
+          {% include "svg/pillar/chapter3/icon1.html" %}
+        </div>
+      </div>{# .column #}
+      <div class="column">
+        <p>
+          <strong>
+            {% blocktrans %}
+              Factor enough time in your project plan
+              to incorporate feedback,
+            {% endblocktrans %}
+          </strong>
+          {% blocktrans %}
+            and QA your app thoroughly again before deploying.
+          {% endblocktrans %}
+        </p>
+      </div>{# .column #}
+    </div>{# .grid #}
+
+    <p class="pad-top-small">
+      {% blocktrans %}
+        Along with testing the effectiveness of the system you
+        built in the eyes of your users, UAT helps test how
+        the technology fits into your overall project objectives.
+        The user testing phase is a great opportunity to review
+        everything from your results framework and information
+        flow diagram (or data collection plan outline) to your
+        data requirements and user stories to ensure that your
+        new mobile data collection tool delivers on everything
+        you expected from it.
+      {% endblocktrans %}
+    </p>
+
+    <p class="align-center pad-top-small pad-bottom-medium">
+      <a href="#" class="button">
+        {% blocktrans %}
+        Learn more about building and testing your solution
+        {% endblocktrans %}
+      </a>
+    </p>
+
+  </div>
+</section>

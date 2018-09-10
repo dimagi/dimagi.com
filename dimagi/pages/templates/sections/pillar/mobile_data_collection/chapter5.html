@@ -1,0 +1,24 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<article class="epic epic-chapter-5 orange-theme" id="chapter-5">
+
+  <section class="epic-cover"
+           data-lazybg="true">
+    <div class="content">
+      <h1 class="pad-top-large">
+        {% blocktrans %}
+          How to Establish<br />
+          Data Collection<br />
+          Standards
+        {% endblocktrans %}
+      </h1>
+    </div> {# .content #}
+  </section>
+
+  {% include "sections/pillar/mobile_data_collection/chapter5/summary.html" %}
+  {% include "sections/pillar/mobile_data_collection/chapter5/part1.html" %}
+  {% include "sections/pillar/mobile_data_collection/chapter5/part2.html" %}
+  {% include "sections/pillar/mobile_data_collection/chapter5/part3.html" %}
+
+</article>
