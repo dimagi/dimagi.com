@@ -66,6 +66,7 @@ $colors-by-theme: (
   accent-gray: $color-accent-gray,
   orange: $color-orange,
   slate: $color-text,
+  red: $color-red,
 );
 
 $default-theme: blue;
@@ -82,6 +83,8 @@ $color-header-bg: $color-header;
 $color-banner: #1b2126;
 $color-hero: #1b2126;
 $color-badge: #969799;
+
+$color-epic-cover: #1b2126;
 
 $color-button: $color-blue;
 $color-button-disabled: #e0e0e0;
