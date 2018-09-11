@@ -4,30 +4,101 @@
 <section class="sub-nav"
          id="sub-nav">
   <div class="content">
-    <div class="actions">
-      <a class="primary"
+    <div class="actions hide-until-medium">
+
+      <a class="social"
          href="#">
-        <span>
-          {% blocktrans %}
-            Share
-          {% endblocktrans %}
-        </span>
+        {% include 'svg/footer/facebook.html' %}
       </a>
+
+      <a class="social"
+         href="#">
+        {% include 'svg/footer/linkedin.html' %}
+      </a>
+
+      <a class="social"
+         href="#">
+        {% include 'svg/footer/twitter.html' %}
+      </a>
+
     </div>{# .actions #}
-    <a class="prompt-link"
+
+    <a class="dropdown-toggle"
        href="#">
       {% blocktrans %}
-        Browse
+        Mobile Data Collection Guide
       {% endblocktrans %}
     </a>
-    <div class="destinations">
+
+    <div class="dropdown">
       <div class="content">
-        <a href="#">
+
+        <div class="social-links hide-at-medium">
+          <a class="social"
+             href="#">
+            {% include 'svg/footer/facebook.html' %}
+          </a>
+
+          <a class="social"
+             href="#">
+            {% include 'svg/footer/linkedin.html' %}
+          </a>
+
+          <a class="social"
+             href="#">
+            {% include 'svg/footer/twitter.html' %}
+          </a>
+        </div>
+        <a href="#chapter-1">
           {% blocktrans %}
-            TODO
+             Chapter 1: What Are Your Project Objectives?
           {% endblocktrans %}
         </a>
+
+        <a href="#chapter-2">
+          {% blocktrans %}
+             Chapter 2: What Is Your Data Collection Process?
+          {% endblocktrans %}
+        </a>
+
+        <a href="#chapter-3">
+          {% blocktrans %}
+             Chapter 3: What Are Your Data Needs?
+          {% endblocktrans %}
+        </a>
+
+        <a href="#chapter-4">
+          {% blocktrans %}
+             Chapter 4: How to Choose the Right Mobile Data Collection Solution
+          {% endblocktrans %}
+        </a>
+
+        <a href="#chapter-5">
+          {% blocktrans %}
+             Chapter 5: How to Establish Data Collection Standards
+          {% endblocktrans %}
+        </a>
+
+        <a href="#chapter-6">
+          {% blocktrans %}
+             Chapter 6: How to Design &amp; Test Your Mobile Data Collection Tool
+          {% endblocktrans %}
+        </a>
+
+        <a href="#chapter-6">
+          {% blocktrans %}
+             Chapter 7: How to Implement Your Program and Train Your Team
+          {% endblocktrans %}
+        </a>
+
+        <a href="#chapter-6">
+          {% blocktrans %}
+             Chapter 8: How to Sustain Your Mobile Data Collection Program
+          {% endblocktrans %}
+        </a>
+
       </div>{# .content #}
-    </div>{# .destinations #}
+    </div>{# .dropdown #}
+
   </div>{# .content #}
 </section>
