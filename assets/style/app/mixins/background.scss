@@ -19,8 +19,10 @@
   background-size: cover;
   background-image: url('#{$_bg-thumb}');
   transition: .5s background ease-in-out;
+  position: relative;
 
-  &.loaded {
+  &.loaded,
+  .bg-preload {
     background-image: url('#{$_bg-url}');
   }
 }
@@ -47,7 +49,7 @@ $_default-height-by-size: (
   extra-large: 500px,
 );
 
-@mixin make-bg($_class, $_bg, $_height-base: $_default-base-height, $_height-by-size: $_default-height-by-size, $_extension: '.jpg', $_loaded: '.loaded') {
+@mixin make-bg($_class, $_bg, $_height-base: $_default-base-height, $_height-by-size: $_default-height-by-size, $_extension: '.jpg') {
   $_bg-thumb: str-replace($_bg, 'pages', 'thumbnails/pages');
 
   .#{$_class} {
@@ -57,10 +59,14 @@ $_default-height-by-size: (
     background-size: auto 100%;
     height: $_height-base;
     transition: .5s background ease-in-out;
+    position: relative;
   }
 
-  .#{$_class}#{$_loaded} {
+  .#{$_class} .bg-loader {
     background-image: url(quote($_bg + $_extension));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
   }
 
   @each $_size, $_height in $_height-by-size {
@@ -70,14 +76,44 @@ $_default-height-by-size: (
         height: $_height;
       }
 
-      .#{$_class}#{$_loaded} {
+      .#{$_class} .bg-loader {
         background-image: url(quote($_bg + '.' + $_size + $_extension));
       }
     }
   };
 };
 
-@mixin make-carousel-slide($_class-name, $_sizes, $_url, $_loaded: '.loaded') {
+@mixin make-parallax-bg($_class, $_bg, $_height-base: $_default-base-height, $_height-by-size: $_default-height-by-size, $_extension: '.jpg') {
+  $_bg-thumb: str-replace($_bg, 'pages', 'thumbnails/pages');
+
+  background-image: url(quote($_bg-thumb + $_extension));
+  background-attachment: fixed;
+  background-position: 100% auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: $parallax-section-height;
+  position: relative;
+  transition: .5s background ease-in-out;
+
+  &.loaded,
+  .bg-preload {
+    background-image: url(quote($_bg + $_extension));
+  }
+
+  @each $_size, $_height in $_height-by-size {
+    @media (min-width: map-get($widths-by-size, $_size)) {
+      background-image: url(quote($_bg-thumb + '.' + $_size + $_extension));
+      height: $_height;
+
+      &.loaded,
+      .bg-preload {
+        background-image: url(quote($_bg + '.' + $_size + $_extension));
+      }
+    }
+  };
+}
+
+@mixin make-carousel-slide($_class-name, $_sizes, $_url) {
   $_bg-thumb: str-replace($_url, 'pages', 'thumbnails/pages');
 
   .carousel .carousel-slide .#{$_class-name} {
@@ -93,7 +129,8 @@ $_default-height-by-size: (
     width: $_w;
   }
 
-  .carousel .carousel-slide .#{$_class-name}#{$_loaded} {
+  .carousel .carousel-slide .#{$_class-name} .bg-preload,
+  .carousel .carousel-slide .#{$_class-name}.loaded {
     background-image: url(quote($_url));
   }
 

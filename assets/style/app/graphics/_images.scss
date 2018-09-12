@@ -33,3 +33,34 @@ img {
 @include _make-svg-size(80);
 @include _make-svg-size(100);
 @include _make-svg-size(200);
+
+
+.bg-loader {
+  opacity: 0;
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  transition: opacity .5s ease-in-out;
+}
+
+.hero,
+.epic-cover {
+  .bg-loader {
+    z-index: -1;
+  }
+}
+
+.loaded > .bg-loader {
+  opacity: 1;
+}
+
+.bg-preload {
+  visibility: hidden;
+  position: absolute;
+  z-index: -1;
+}

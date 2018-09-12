@@ -127,8 +127,25 @@ define([
   };
 
   self.loadBackground = function (bg) {
-    var $bg = $(bg);
-    $bg.addClass('loaded');
+    var $bg = $(bg),
+        $bgLoader = $('<div class="bg-loader"></div>'),
+        $bgPreload = $('<div class="bg-preload"></div>'),
+        src;
+
+    $bg.prepend($bgLoader);
+    src = $bg.find('.bg-loader').css('background-image');
+    if (src === 'none') {
+      $bg.prepend($bgPreload);
+      src = $bg.find('.bg-preload').css('background-image');
+    }
+    src = src.replace('url("', '').replace('")', '');
+
+    $('<img />').attr('src', src).on('load', function () {
+      $(this).remove();
+      $bg.addClass('loaded');
+      $bgPreload.remove();
+    });
+
     $bg.attr({
       "data-lazybg": null,
     });
