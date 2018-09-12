@@ -92,3 +92,7 @@ $_max-mobile: $width-desktop - 1px;
 }
 
 
+.parallax-test,
+.parallax-ch3-1 {
+  @include make-parallax-bg(hero, '../../../pages/pillar/parallax-ch3-1');
+}

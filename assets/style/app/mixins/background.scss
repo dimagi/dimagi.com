@@ -83,24 +83,31 @@ $_default-height-by-size: (
   };
 };
 
-@mixin make-parallax-bg($_class, $_bg, $_height-base: $_default-base-height, $_height-by-size: $_default-height-by-size, $_extension: '.jpg') {
+$_parallax-heights: (
+  small: 180px,
+  medium: 220px,
+  large: 280px,
+  extra-large: 350px,
+);
+
+@mixin make-parallax-bg($_class, $_bg, $_extension: '.jpg') {
   $_bg-thumb: str-replace($_bg, 'pages', 'thumbnails/pages');
 
   background-image: url(quote($_bg-thumb + $_extension));
   background-attachment: fixed;
-  background-position: 100% auto;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: $parallax-section-height;
+  height: 180px;
   position: relative;
-  transition: .5s background ease-in-out;
+  transition: .5s background ease-in-out, .5s height ease-in-out;
 
   &.loaded,
   .bg-preload {
     background-image: url(quote($_bg + $_extension));
   }
 
-  @each $_size, $_height in $_height-by-size {
+  @each $_size, $_height in $_parallax-heights {
     @media (min-width: map-get($widths-by-size, $_size)) {
       background-image: url(quote($_bg-thumb + '.' + $_size + $_extension));
       height: $_height;
@@ -111,6 +118,12 @@ $_default-height-by-size: (
       }
     }
   };
+
+  $_max-small: map-get($widths-by-size, medium) - 1px;
+
+  @media (max-width: $_max-small) {
+    background-attachment: initial;
+  }
 }
 
 @mixin make-carousel-slide($_class-name, $_sizes, $_url) {
