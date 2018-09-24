@@ -104,8 +104,8 @@ a.tile-more {
 
   .chapter-number {
     color: $color-white;
-    font-size: $font-size-epic-h1;
-    line-height: $font-size-epic-h1;
+    font-size: 60px;
+    line-height: 60px;
     position: absolute;
     bottom: $space-small;
   }
@@ -132,7 +132,6 @@ $_max-mobile: $width-desktop - 1px;
   @include make-parallax-bg(hero, '../../../pages/pillar/mdc/chapter1/parallax');
 }
 
-.parallax-test,
 .parallax-ch3-1 {
   @include make-parallax-bg(hero, '../../../pages/pillar/mdc/chapter3/parallax');
 }
@@ -151,4 +150,69 @@ $_max-mobile: $width-desktop - 1px;
 
 .parallax-ch7-2 {
   @include make-parallax-bg(hero, '../../../pages/pillar/mdc/chapter7/parallax-2');
+}
+
+.epic {
+  $_base-height: 190px;
+  $_height-by-size: (
+    small: 249px,
+    medium: 399px,
+  );
+  @include make-bg(moqups-image, '../../../pages/pillar/mdc/chapter6/moqups', $_base-height, $_height-by-size);
+  @include make-bg(jira-image, '../../../pages/pillar/mdc/chapter6/jira', $_base-height, $_height-by-size);
+  @include make-bg(report-image, '../../../pages/pillar/mdc/chapter8/report', $_base-height, $_height-by-size);
+}
+
+#chapter-6 {
+  $_base-height: 229px;
+  $_height-by-size: (
+    small: 300px,
+    medium: 636px,
+  );
+  @include make-bg(case-list-image, '../../../pages/pillar/mdc/chapter6/case-list', $_base-height, $_height-by-size);
+}
+
+#chapter-1 {
+  $_base-height: 190px;
+  $_height-by-size: (
+    small: 249px,
+    medium: 400px,
+  );
+  @include make-bg(chart-image, '../../../pages/pillar/mdc/chapter1/chart', $_base-height, $_height-by-size);
+}
+
+#chapter-2 {
+  $_base-height: 190px;
+  $_height-by-size: (
+    small: 249px,
+    medium: 340px,
+  );
+  @include make-bg(infographic-image, '../../../pages/pillar/mdc/chapter2/infographic', $_base-height, $_height-by-size);
+}
+
+#chapter-3 {
+  $_base-height: 247px;
+  $_height-by-size: (
+    small: 324px,
+    medium: 520px,
+  );
+  @include make-bg(infographic-image, '../../../pages/pillar/mdc/chapter3/infographic', $_base-height, $_height-by-size);
+}
+
+#chapter-5 {
+  $_base-height: 269px;
+  $_height-by-size: (
+    small: 353px,
+    medium: 566px,
+  );
+  @include make-bg(infographic-image, '../../../pages/pillar/mdc/chapter5/infographic', $_base-height, $_height-by-size);
+}
+
+#chapter-6 {
+  $_base-height: 128px;
+  $_height-by-size: (
+    small: 168px,
+    medium: 270px,
+  );
+  @include make-bg(table-image, '../../../pages/pillar/mdc/chapter6/table', $_base-height, $_height-by-size);
 }
