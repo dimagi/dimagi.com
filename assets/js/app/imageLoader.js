@@ -140,12 +140,16 @@ define([
     }
     src = src.replace('url("', '').replace('")', '');
 
-    $('<img />').attr('src', src).on('load', function () {
-      $(this).remove();
-      $bg.addClass('loaded');
+    if (src === 'none') {
       $bgPreload.remove();
-    });
-
+      $bgLoader.remove();
+    } else {
+      $('<img />').attr('src', src).on('load', function () {
+        $(this).remove();
+        $bg.addClass('loaded');
+        $bgPreload.remove();
+      });
+    }
     $bg.attr({
       "data-lazybg": null,
     });
