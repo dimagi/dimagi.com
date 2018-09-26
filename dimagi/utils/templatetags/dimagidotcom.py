@@ -113,7 +113,7 @@ def _render_social_link(share_url, icon):
 
 
 @register.simple_tag
-def twitter_link(url, text=None, hashtags=None):
+def twitter_link(url, text=None, hashtags=None, icon=None):
     """
     Renders a link for sharing via twitter, including icon.
     :param url - the url to share
@@ -133,13 +133,13 @@ def twitter_link(url, text=None, hashtags=None):
             text=quote(text or ""),
         ))
 
-    icon = "svg/social/twitter.html"
+    icon = icon or "svg/social/twitter.html"
 
     return _render_social_link(share_url, icon)
 
 
 @register.simple_tag
-def facebook_link(url):
+def facebook_link(url, icon=None):
     """
     Renders a link for sharing via facebook, including icon.
     :param url - the url to share
@@ -151,13 +151,13 @@ def facebook_link(url):
             url=quote(url).replace('/', '%2F'),
         ))
 
-    icon = "svg/social/facebook.html"
+    icon = icon or "svg/social/facebook.html"
 
     return _render_social_link(share_url, icon)
 
 
 @register.simple_tag
-def linkedin_link(url):
+def linkedin_link(url, icon=None):
     """
     Renders a link for sharing via linkedIn, including icon.
     :param url - the url to share
@@ -169,7 +169,7 @@ def linkedin_link(url):
             url=quote(url).replace('/', '%2F'),
         ))
 
-    icon = "svg/social/linkedin.html"
+    icon = icon or "svg/social/linkedin.html"
 
     return _render_social_link(share_url, icon)
 

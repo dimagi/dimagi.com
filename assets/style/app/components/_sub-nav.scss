@@ -287,3 +287,14 @@
     opacity: 1;
   }
 }
+
+.sub-nav .more-icon {
+  padding-right: $space-base;
+  display: inline-block;
+  margin-top: -1px;
+  vertical-align: top;
+
+  svg * {
+    fill: $color-text;
+  }
+}

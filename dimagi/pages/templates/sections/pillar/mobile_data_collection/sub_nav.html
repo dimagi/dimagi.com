@@ -6,25 +6,15 @@
   <div class="content">
     <div class="actions hide-until-medium">
 
-      <a class="social"
-         href="#">
-        {% include 'svg/footer/facebook.html' %}
-      </a>
-
-      <a class="social"
-         href="#">
-        {% include 'svg/footer/linkedin.html' %}
-      </a>
-
-      <a class="social"
-         href="#">
-        {% include 'svg/footer/twitter.html' %}
-      </a>
+      {% facebook_link request.build_absolute_uri 'svg/footer/facebook.html' %}
+      {% linkedin_link request.build_absolute_uri 'svg/footer/linkedin.html' %}
+      {% twitter_link request.build_absolute_uri 'Mobile Data Collection' '' 'svg/footer/twitter.html' %}
 
     </div>{# .actions #}
 
     <a class="dropdown-toggle"
        href="#">
+      <span class="more-icon">{% include 'svg/more.html' %}</span>
       {% blocktrans %}
         Mobile Data Collection Guide
       {% endblocktrans %}
@@ -34,20 +24,9 @@
       <div class="content">
 
         <div class="social-links hide-at-medium">
-          <a class="social"
-             href="#">
-            {% include 'svg/footer/facebook.html' %}
-          </a>
-
-          <a class="social"
-             href="#">
-            {% include 'svg/footer/linkedin.html' %}
-          </a>
-
-          <a class="social"
-             href="#">
-            {% include 'svg/footer/twitter.html' %}
-          </a>
+          {% facebook_link request.build_absolute_uri 'svg/footer/facebook.html' %}
+          {% linkedin_link request.build_absolute_uri 'svg/footer/linkedin.html' %}
+          {% twitter_link request.build_absolute_uri 'Mobile Data Collection' '' 'svg/footer/twitter.html' %}
         </div>
 
         <a href="#chapter-1">
