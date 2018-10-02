@@ -17,7 +17,7 @@ from dimagi.pages.sitemaps import (
     QuickStartSitemap,
 )
 from dimagi.pages.urls.redirect import redirect_urlpatterns
-from dimagi.pages.views import commcare
+from dimagi.pages.views import commcare, redirect
 from dimagi.pages.views import pillar
 from dimagi.pages.urls import blog
 from dimagi.pages.urls import team
@@ -63,6 +63,8 @@ urlpatterns = [
 
     url(r'^mobile-data-collection/$',
         pillar.mobile_data_collection, name="mobile_data_collection"),
+    url(r'^blog/mobile-data-collection-introduction/$',
+        redirect.page('mobile_data_collection')),
 
     url(r'^blog/', include(blog.blog_urls)),
     url(r'^about/', include(team.about_urls)),
