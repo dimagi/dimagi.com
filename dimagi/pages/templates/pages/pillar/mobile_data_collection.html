@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block title %}{% blocktrans %}
+  Mobile Data Collection
+{% endblocktrans %}{% endblock %}
+
+{% block description %}{% blocktrans %}
+  Mobile data collection is a method of compiling qualitative
+  and quantitative inputs via a mobile device (e.g. mobile phone,
+  tablet, etc.).
+{% endblocktrans %}{% endblock %}
+
+{% block body_class %}pillar-page{% endblock %}
+
+{% block stylesheets %}
+  {% compress css %}
+    <link href="{% sass_src 'style/pages/pillar/mobile_data_collection.scss' %}" rel="stylesheet" media="screen" type="text/css" />
+  {% endcompress %}
+{% endblock %}
+
+{% block progress_bar %}
+  <progress class="progress-bar slate"></progress>
+{% endblock %}
+
+{% block article %}
+{% include "sections/pillar/mobile_data_collection/intro.html" %}
+{% include "sections/pillar/mobile_data_collection/sub_nav.html" %}
+{% include "sections/pillar/mobile_data_collection/chapter1.html" %}
+{% include "sections/pillar/mobile_data_collection/chapter2.html" %}
+{% include "sections/pillar/mobile_data_collection/chapter3.html" %}
+{% include "sections/pillar/mobile_data_collection/chapter4.html" %}
+{% include "sections/pillar/mobile_data_collection/chapter5.html" %}
+{% include "sections/pillar/mobile_data_collection/chapter6.html" %}
+{% include "sections/pillar/mobile_data_collection/chapter7.html" %}
+{% include "sections/pillar/mobile_data_collection/chapter8.html" %}
+{% include "sections/pillar/mobile_data_collection/read_more.html" %}
+{% endblock %}

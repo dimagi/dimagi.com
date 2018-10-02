@@ -24,6 +24,7 @@ require([
   'app/transition',
   'app/contactForm',
   'app/abAudit',
+  'app/progressBar',
   'modernizr',
 ], function (
     $,
@@ -43,7 +44,8 @@ require([
     Extensions,
     Transition,
     ContactForm,
-    ABAudit
+    ABAudit,
+    ProgressBar
 ) {
   $(function () {
     _.each([
@@ -63,6 +65,7 @@ require([
       Transition,
       ContactForm,
       ABAudit,
+      ProgressBar,
     ], function (m) {
       m.initialize();
     });

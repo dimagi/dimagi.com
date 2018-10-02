@@ -2,6 +2,9 @@ $color-bg:          #ffffff;
 $color-bg-html:     #161b1f;
 $color-text:        #5f6a7d;
 
+$color-slate:       $color-text;
+$color-slate-light: lighten($color-slate, 20);
+
 $color-white:         #ffffff;
 $color-black:         #000000;
 
@@ -59,13 +62,22 @@ $color-footer-border: darken($color-text, 20);
 $colors-by-theme: (
   blue-dark: $color-blue-dark,
   blue: $color-blue,
+  blue-light: $color-blue-light,
   green: $color-green,
+  green-light: $color-green-light,
   turquoise: $color-turquoise,
+  turquoise-light: $color-turquoise-light,
   purple: $color-purple,
+  purple-light: $color-purple-light,
   neutral: $color-neutral,
+  neutral-light: $color-neutral-light,
   accent-gray: $color-accent-gray,
   orange: $color-orange,
-  slate: $color-text,
+  orange-light: $color-orange-light,
+  slate: $color-slate,
+  slate-light: $color-slate-light,
+  red: $color-red,
+  red-light: $color-red-light,
 );
 
 $default-theme: blue;
@@ -82,6 +94,8 @@ $color-header-bg: $color-header;
 $color-banner: #1b2126;
 $color-hero: #1b2126;
 $color-badge: #969799;
+
+$color-epic-cover: #1b2126;
 
 $color-button: $color-blue;
 $color-button-disabled: #e0e0e0;

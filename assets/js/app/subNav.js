@@ -26,6 +26,9 @@ define([
     $(document).on("click.subNavOpen", ".prompt-link", function(e) {
       return e.preventDefault(), self.toggleMenu();
     });
+    $(document).on("click.subNavOpen", ".dropdown-toggle", function(e) {
+      return e.preventDefault(), self.toggleMenu();
+    });
   };
 
   self.toggleMenu = function () {
@@ -39,7 +42,7 @@ define([
       .on("click.subNavClose", function (e) {
         var n = $(e.target);
         if (n.closest(".sub-nav").length === 0 ||
-            (n.is("a") && n.parents(".destinations").length)) {
+            (n.is("a") && (n.parents(".destinations").length || n.parents(".dropdown").length))) {
           self.deactivateMenu();
         }
       })

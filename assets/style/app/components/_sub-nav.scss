@@ -190,6 +190,7 @@
   visibility: visible;
 }
 
+
 @media (min-width: $width-desktop) {
   .sub-nav .destinations {
     background-color: transparent;
@@ -246,4 +247,54 @@
 
 .sub-nav-fixed-top .sub-nav:not(.sub-nav-fixed) .destinations {
   display: none;
+}
+
+.sub-nav .dropdown {
+  background-color: $color-accent-gray;
+  box-shadow: 0 1px 0 0 rgba(255, 255, 255, .12);
+  color: $color-menu-text;
+  left: 0;
+  position: absolute;
+  bottom: $space-medium;
+  height: 0;
+  width: 100%;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 150ms ease-in-out, height 150ms ease-in-out;
+  border-bottom: 1px solid $color-border;
+
+  @media (min-width:  $width-desktop) {
+    top: $space-medium;
+  }
+
+  .content {
+    opacity: 0;
+    transition: opacity 300ms 0s;
+  }
+
+  a {
+    display: block;
+    line-height: 22px;
+    margin: $space-line 0;
+  }
+
+}
+
+.sub-nav-menu-active .sub-nav .dropdown {
+  opacity: 1;
+
+  .content {
+    opacity: 1;
+  }
+}
+
+.sub-nav .more-icon {
+  padding-right: $space-base;
+  display: inline-block;
+  margin-top: -1px;
+  vertical-align: top;
+
+  svg * {
+    fill: $color-text;
+  }
 }

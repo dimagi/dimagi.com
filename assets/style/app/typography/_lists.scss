@@ -258,3 +258,33 @@ ul.reset:not(.grid):not([class*="grid-"]) > li,
 ol.reset:not(.grid):not([class*="grid-"]) > li {
   padding-left: 0;
 }
+
+
+ol {
+  list-style-type: none;
+  counter-reset: item;
+  margin: 0;
+  padding: 0;
+
+  li {
+    display: table;
+    counter-increment: item;
+    margin-bottom: 0.6em;
+  }
+
+  li:before {
+    content: counters(item, ".") ". ";
+    display: table-cell;
+  }
+
+  li li {
+    margin: 0;
+    padding-left: 50px;
+  }
+
+  li li:before {
+    content: counters(item, ".") " ";
+    padding-right: 56px;
+  }
+
+}

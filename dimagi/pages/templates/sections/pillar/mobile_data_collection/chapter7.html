@@ -1,0 +1,30 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<article class="epic neutral-theme" id="chapter-7">
+
+  <section class="epic-cover"
+           data-lazybg="true">
+    <div class="content">
+      <h1 class="pad-top-large">
+        {% blocktrans %}
+          How to Implement<br />
+          Your Program &amp; Train <br />
+          Your Team
+        {% endblocktrans %}
+      </h1>
+    </div> {# .content #}
+  </section>
+
+  {% include "sections/pillar/mobile_data_collection/chapter7/summary.html" %}
+  {% include "sections/pillar/mobile_data_collection/chapter7/part1.html" %}
+  {% include "sections/pillar/mobile_data_collection/chapter7/part2a.html" %}
+  <div class="parallax-ch7-1"
+       data-lazybg="true"></div>
+  {% include "sections/pillar/mobile_data_collection/chapter7/part2b.html" %}
+  {% include "sections/pillar/mobile_data_collection/chapter7/part3a.html" %}
+  <div class="parallax-ch7-2"
+       data-lazybg="true"></div>
+  {% include "sections/pillar/mobile_data_collection/chapter7/part3b.html" %}
+
+</article>

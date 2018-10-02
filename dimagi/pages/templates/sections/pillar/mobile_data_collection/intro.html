@@ -1,0 +1,26 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<article class="epic epic-intro orange-theme" id="intro">
+
+  <section class="epic-cover"
+           data-lazybg="true">
+    <div class="content">
+      <h1 class="gap-top-line-at-medium gap-top-medium">
+        {% blocktrans %}
+          Mobile Data<br />
+          Collection:
+        {% endblocktrans %}
+        <span>
+          {% blocktrans %}
+            Everything You Need to Know
+          {% endblocktrans %}
+        </span>
+      </h1>
+    </div> {# .content #}
+  </section>
+
+  {% include "sections/pillar/mobile_data_collection/intro/about_mdc.html" %}
+  {% include "sections/pillar/mobile_data_collection/intro/chapter_summary.html" %}
+
+</article>
