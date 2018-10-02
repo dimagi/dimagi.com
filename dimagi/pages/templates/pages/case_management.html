@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block title %}{% blocktrans %}
+  Go Beyond One-off Survey Forms
+{% endblocktrans %}{% endblock %}
+
+{% block description %}{% blocktrans %}
+  Learn how CommCare's case management features improve your data,
+  boost team efficiency, and drive greater impact.
+{% endblocktrans %}{% endblock %}
+
+{% block body_class %}case-management-page tucked-hero{% endblock %}
+
+{% block stylesheets %}
+  {% compress css %}
+    <link href="{% sass_src 'style/pages/case_management.scss' %}" rel="stylesheet" media="screen" type="text/css" />
+  {% endcompress %}
+{% endblock %}
+
+{% block hero %}
+<section class="hero hero-case-management"
+         data-lazybg="true"
+         id="hero">
+  <div class="content content-width-large inverted align-center display-flex flex-valign-middle expand-vertical offset-top-small flex-align-center">
+    <div class="copy expand position-relative">
+
+      <h2 class="pad-bottom-line">
+        {% include "svg/commcare/logo.html" %}
+      </h2>
+      <h1>
+        {% blocktrans %}
+          Go Beyond One-off Survey Forms
+        {% endblocktrans %}
+      </h1>
+
+      <div class="headline content-width-medium">
+        {% blocktrans %}
+          Learn how CommCare's case management features improve your data,<br class="hide-until-medium" />
+          boost team efficiency, and drive greater impact.
+        {% endblocktrans %}
+      </div>{# .headline #}
+
+      <p class="align-center pad-top-small">
+        <a href="#"
+           class="button inverse alt">
+          {% blocktrans %}
+            Request Demo
+          {% endblocktrans %}
+        </a>
+      </p>
+
+    </div>{# .copy #}
+  </div>{# .content #}
+</section>
+{% endblock %}
+
+{% block content %}
+  <section class="case-management-container">
+    {% include 'sections/case_management/sub_nav.html' %}
+  </section>
+{% endblock %}

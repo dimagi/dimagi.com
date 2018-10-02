@@ -1,0 +1,10 @@
+@import 'app/mixins/background';
+@import 'app/variables/colors';
+@import 'app/variables/sizes';
+@import 'app/variables/type';
+
+
+.case-management-page {
+  @include make-bg(hero, '../../pages/quick_start/hero');
+}
+

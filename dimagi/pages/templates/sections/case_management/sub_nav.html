@@ -1,0 +1,76 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="sub-nav"
+         id="sub-nav">
+  <div class="content">
+    <div class="actions">
+      <a href="{{ URL_TRIAL }}"
+         class="hide-until-medium {% click_subnav 'trial' %}"
+         data-kmq-external="true"
+         data-kmq-name="Clicked Start Trial - CommCare (sticky bar)"
+         target="_blank">
+        {% blocktrans %}
+          Start Trial
+        {% endblocktrans %}
+      </a>
+      <a class="primary {% click_subnav 'demo' %}"
+         href="{{ URL_DEMO }}">
+        <span>
+          {% blocktrans %}
+            Schedule a Demo
+          {% endblocktrans %}
+        </span>
+      </a>
+    </div>{# .actions #}
+    <a class="prompt-link {% click_subnav 'browse' %}"
+       href="#">
+      {% blocktrans %}
+        Browse
+      {% endblocktrans %}
+    </a>
+    <div class="destinations">
+      <div class="content">
+        <a href="{{ URL_TRIAL }}"
+           data-kmq-external="true"
+           data-kmq-name="Clicked Start Trial - CommCare (sticky bar mobile)"
+           class="hide-at-medium {% click_subnav 'trial-mobile' %}"
+           target="_blank">
+          {% blocktrans %}
+            Start Trial
+          {% endblocktrans %}
+        </a>
+        <a href="#overview"
+           class="{% click_subnav 'overview' %}">
+          {% blocktrans %}
+            Overview
+          {% endblocktrans %}
+        </a>
+        <a href="#features"
+           class="{% click_subnav 'features' %}">
+          {% blocktrans %}
+            Features
+          {% endblocktrans %}
+        </a>
+        <a href="#impact"
+           class="{% click_subnav 'impact' %}">
+          {% blocktrans %}
+            Impact
+          {% endblocktrans %}
+        </a>
+        <a href="#testimonials"
+           class="{% click_subnav 'testimonials' %}">
+          {% blocktrans %}
+            Testimonials
+          {% endblocktrans %}
+        </a>
+        <a href="#pricing"
+           class="{% click_subnav 'pricing' %}">
+          {% blocktrans %}
+            Pricing
+          {% endblocktrans %}
+        </a>
+      </div>{# .content #}
+    </div>{# .destinations #}
+  </div>{# .content #}
+</section>

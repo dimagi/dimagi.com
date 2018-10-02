@@ -26,6 +26,10 @@ def proposals(request):
     return render(request, 'pages/proposals.html')
 
 
+def case_management(request):
+    return render(request, 'pages/case_management.html')
+
+
 @no_index
 def test_500(request):
     return render(request, '500.html')
