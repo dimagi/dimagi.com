@@ -1,0 +1,17 @@
+{% extends "sections/case_management/overview/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block icon %}
+  {% include "svg/commcare/icon/data_over_time.html" %}
+{% endblock %}
+
+{% block step_number %}3{% endblock %}
+
+{% block content %}
+  {% blocktrans %}
+    Admins remotely access case data, including all relevant
+    form submissions &mdash; for analysis and reporting.
+  {% endblocktrans %}
+{% endblock %}
+

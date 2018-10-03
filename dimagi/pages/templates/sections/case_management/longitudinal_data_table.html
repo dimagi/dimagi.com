@@ -1,0 +1,74 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="longitudinal-data align-center border-top accent-gray-bg" id="longitudinal-data">
+  <div class="content pad-vert-large blue-theme">
+
+    <div class="theme-icon gap-bottom-line">
+      {% include "svg/home/icon/research.html" %}
+    </div>{# .theme-icon #}
+
+    <h2 class="blue pad-bottom-small">
+      {% blocktrans %}
+        A Better Way to Collect Longitudinal Data
+      {% endblocktrans %}
+    </h2>
+
+    <table class="case-survey-table">
+      <thead>
+        <tr>
+          <td></td>
+          <th class="align-center">
+            {% blocktrans %}
+              One-off Survey Forms
+            {% endblocktrans %}
+          </th>
+          <th class="align-center">
+            {% blocktrans %}
+              Case Management
+            {% endblocktrans %}
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in table %}
+        <tr>
+          <td>
+            {{ row.title }}
+          </td>
+          <td class="align-center {% if row.survey %}support{% else %}no-support{% endif %}">
+            {{ row.survey|CHECK }}
+          </td>
+          <td class="align-center {% if row.case %}support{% else %}no-support{% endif %}">
+            {{ row.case|CHECK }}
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+    <p class="align-center pad-top-small">
+      <a href="#request-demo" class="button arrow">
+        {% blocktrans %}
+          Request Demo
+        {% endblocktrans %}
+      </a>
+    </p>
+
+    <blockquote class="border-top gap-top-medium pad-top-small">
+      <p>
+        {% blocktrans %}
+          CommCare's case management features undoubtedly allowed
+          us to provide a quicker response and subsequent
+          disbursement of aid to needy persons.
+        {% endblocktrans %}
+      </p>
+      <cite>
+        {% blocktrans %}
+          Scherrie Griffin &mdash; Government of the British Virgin Islands
+        {% endblocktrans %}
+      </cite>
+    </blockquote>
+
+  </div>{# .content #}
+</section>

@@ -8,3 +8,75 @@
   @include make-bg(hero, '../../pages/quick_start/hero');
 }
 
+.header-label {
+  text-transform: uppercase;
+  font-size: $font-size-large;
+  font-weight: $font-weight-medium;
+}
+
+.request-demo-form {
+  label {
+    text-align: left;
+    color: $color-white;
+  }
+
+  .hs-richtext {
+    color: $color-white;
+    a {
+      color: $color-blue-light;
+
+      &:hover {
+        color: $color-white;
+      }
+    }
+  }
+
+  .hs-button {
+    border: 1px solid $color-white;
+  }
+}
+
+table {
+  thead {
+    border: 1px solid $color-border;
+
+    tr {
+      border: none;
+      background-color: $color-slate;
+    }
+
+    th {
+      color: $color-white !important;
+      padding-top: $space-base;
+      padding-bottom: $space-base;
+    }
+  }
+  tbody {
+    border: 1px solid $color-border;
+
+    tr {
+      border: none;
+      border-top: 1px solid $color-border;
+    }
+    td {
+      padding-top: $space-line;
+      padding-bottom: $space-line;
+    }
+
+    tr:nth-child(even) {
+      background-color: $color-white;
+    }
+
+    .support {
+      svg > * {
+        stroke: $color-blue;
+      }
+    }
+
+    .no-support {
+      svg > * {
+        stroke: $color-border;
+      }
+    }
+  }
+}

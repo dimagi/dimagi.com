@@ -1,0 +1,104 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="efficient-teams align-center border-top accent-gray-bg" id="efficient-teams">
+  <div class="content pad-top-large content-width-medium red-theme">
+    <h3 class="header-label gap-bottom-base red">
+      {% blocktrans %}
+        The Old Way
+      {% endblocktrans %}
+    </h3>
+    <h2 class="red">
+      {% blocktrans %}
+        Duplicate Tasks = Slow Work
+      {% endblocktrans %}
+    </h2>
+
+    <div class="grid-2 grid-row-space-small pad-top-line">
+      {% include "sections/case_management/points/repeat_info.html" %}
+      {% include "sections/case_management/points/prior_visits.html" %}
+    </div>{# .grid-2-at-small #}
+  </div>{# .content #}
+  <div class="content pad-bottom-large content-width-medium blue-theme">
+
+    <div class="theme-icon gap-bottom-line">
+      {% include "svg/home/icon/research.html" %}
+    </div>{# .theme-icon #}
+
+    <h3 class="header-label gap-bottom-base blue">
+      {% blocktrans %}
+        The CommCare Way
+      {% endblocktrans %}
+    </h3>
+    <h2 class="blue">
+      {% blocktrans %}
+        Empowered Field Teams
+      {% endblocktrans %}
+    </h2>
+
+    <div class="grid-2 grid-valign-middle">
+
+      <div class="column">
+        <ul class="check-list align-left">
+          <li>
+            <h5>
+              {% blocktrans %}
+                Work smarter
+              {% endblocktrans %}
+            </h5>
+            <p>
+              {% blocktrans %}
+                Automate basic survey tasks, helping
+                your field team focus on high-value
+                work like building relationships with
+                program beneficiaries.
+              {% endblocktrans %}
+            </p>
+          </li>
+          <li>
+            <h5>
+              {% blocktrans %}
+                Inform your field workers
+              {% endblocktrans %}
+            </h5>
+            <p>
+              {% blocktrans %}
+                Enable field teams to conduct informed
+                follow up visits and provide actionable advice
+                by viewing a case's historical information,
+                even when offline.
+              {% endblocktrans %}
+            </p>
+          </li>
+          <li>
+            <h5>
+              {% blocktrans %}
+                Encourage collaboration
+              {% endblocktrans %}
+            </h5>
+            <p>
+              {% blocktrans %}
+                Empower teams to work together by sharing cases
+                and making referrals, all within the CommCare app.
+              {% endblocktrans %}
+            </p>
+          </li>
+        </ul>
+      </div>{# .column #}
+
+      <div class="column">
+        <div class="aspect-ratio-square slate-bg"></div>
+      </div>{# .column #}
+
+    </div>{# .grid-2 #}
+
+    <p class="align-center pad-top-small">
+      <a href="#" class="button arrow">
+        {% blocktrans %}
+          See It In Action
+        {% endblocktrans %}
+      </a>
+    </p>
+
+  </div>{# .content #}
+</section>

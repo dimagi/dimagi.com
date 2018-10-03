@@ -1,0 +1,103 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="actionable-data align-center border-top" id="actionable-data">
+  <div class="content pad-top-large content-width-medium red-theme">
+    <h3 class="header-label gap-bottom-base red">
+      {% blocktrans %}
+        The Old Way
+      {% endblocktrans %}
+    </h3>
+    <h2 class="red">
+      {% blocktrans %}
+        Repetitive Surveys = Dirty Data
+      {% endblocktrans %}
+    </h2>
+
+    <div class="grid-2 grid-row-space-small pad-top-line">
+      {% include "sections/case_management/points/one_off_surveys.html" %}
+      {% include "sections/case_management/points/unlinked_surveys.html" %}
+    </div>{# .grid-2-at-small #}
+  </div>{# .content #}
+  <div class="content pad-bottom-large content-width-medium blue-theme">
+
+    <div class="theme-icon gap-bottom-line">
+      {% include "svg/home/icon/research.html" %}
+    </div>{# .theme-icon #}
+
+    <h3 class="header-label gap-bottom-base blue">
+      {% blocktrans %}
+        The CommCare Way
+      {% endblocktrans %}
+    </h3>
+    <h2 class="blue">
+      {% blocktrans %}
+        Actionable and Trusted Data
+      {% endblocktrans %}
+    </h2>
+
+    <div class="grid-2 grid-reverse grid-valign-middle">
+
+      <div class="column">
+        <ul class="check-list align-left">
+          <li>
+            <h5>
+              {% blocktrans %}
+                Avoid errors
+              {% endblocktrans %}
+            </h5>
+            <p>
+              {% blocktrans %}
+                Store previously collected case data right
+                on mobile devices, so your field team can omit
+                repetitive survey questions.
+              {% endblocktrans %}
+            </p>
+          </li>
+          <li>
+            <h5>
+              {% blocktrans %}
+                Calculate indicators
+              {% endblocktrans %}
+            </h5>
+            <p>
+              {% blocktrans %}
+                Automatically link and aggregate relevant
+                survey forms, allowing you to easily calculate
+                aggregate values like program indicators.
+              {% endblocktrans %}
+            </p>
+          </li>
+          <li>
+            <h5>
+              {% blocktrans %}
+                Enforce data collection protocols
+              {% endblocktrans %}
+            </h5>
+            <p>
+              {% blocktrans %}
+                Use existing case information to ensure data
+                collection happens at the right time, with
+                the right people.
+              {% endblocktrans %}
+            </p>
+          </li>
+        </ul>
+      </div>{# .column #}
+
+      <div class="column">
+        <div class="aspect-ratio-square slate-bg"></div>
+      </div>{# .column #}
+
+    </div>{# .grid-2 #}
+
+    <p class="align-center pad-top-small">
+      <a href="#" class="button arrow">
+        {% blocktrans %}
+          See It In Action
+        {% endblocktrans %}
+      </a>
+    </p>
+
+  </div>{# .content #}
+</section>

@@ -1,0 +1,17 @@
+{% extends "sections/case_management/points/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block icon %}
+  {% include "svg/home/icon/research.html" %}
+{% endblock %}
+
+{% block content %}
+  {% blocktrans %}
+    Survey data is not saved locally, meaning
+    offline field teams do not have access
+    to in-app decision support based on a
+    case's history.
+  {% endblocktrans %}
+{% endblock %}
+

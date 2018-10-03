@@ -56,9 +56,18 @@ def JSON(obj):
 
 
 @register.filter
-def CHECK(val):
+def SUPPORT(val):
     if val is True:
         return mark_safe(render_to_string("svg/included.html"))
+    if val is False:
+        return mark_safe(render_to_string("svg/not_included.html"))
+    return val
+
+
+@register.filter
+def CHECK(val):
+    if val is True:
+        return mark_safe(render_to_string("svg/check.html"))
     if val is False:
         return mark_safe(render_to_string("svg/not_included.html"))
     return val

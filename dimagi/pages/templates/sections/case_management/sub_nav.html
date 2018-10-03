@@ -5,20 +5,11 @@
          id="sub-nav">
   <div class="content">
     <div class="actions">
-      <a href="{{ URL_TRIAL }}"
-         class="hide-until-medium {% click_subnav 'trial' %}"
-         data-kmq-external="true"
-         data-kmq-name="Clicked Start Trial - CommCare (sticky bar)"
-         target="_blank">
-        {% blocktrans %}
-          Start Trial
-        {% endblocktrans %}
-      </a>
       <a class="primary {% click_subnav 'demo' %}"
-         href="{{ URL_DEMO }}">
+         href="#request-demo">
         <span>
           {% blocktrans %}
-            Schedule a Demo
+            Request Demo
           {% endblocktrans %}
         </span>
       </a>
@@ -31,43 +22,22 @@
     </a>
     <div class="destinations">
       <div class="content">
-        <a href="{{ URL_TRIAL }}"
-           data-kmq-external="true"
-           data-kmq-name="Clicked Start Trial - CommCare (sticky bar mobile)"
-           class="hide-at-medium {% click_subnav 'trial-mobile' %}"
-           target="_blank">
+        <a href="#actionable-data"
+           class="{% click_subnav 'actionable-data' %}">
           {% blocktrans %}
-            Start Trial
+            Actionable Data
           {% endblocktrans %}
         </a>
-        <a href="#overview"
-           class="{% click_subnav 'overview' %}">
+        <a href="#efficient-teams"
+           class="{% click_subnav 'efficient-teams' %}">
           {% blocktrans %}
-            Overview
+            Efficient Teams
           {% endblocktrans %}
         </a>
-        <a href="#features"
-           class="{% click_subnav 'features' %}">
+        <a href="#greater-impact"
+           class="{% click_subnav 'greater-impact' %}">
           {% blocktrans %}
-            Features
-          {% endblocktrans %}
-        </a>
-        <a href="#impact"
-           class="{% click_subnav 'impact' %}">
-          {% blocktrans %}
-            Impact
-          {% endblocktrans %}
-        </a>
-        <a href="#testimonials"
-           class="{% click_subnav 'testimonials' %}">
-          {% blocktrans %}
-            Testimonials
-          {% endblocktrans %}
-        </a>
-        <a href="#pricing"
-           class="{% click_subnav 'pricing' %}">
-          {% blocktrans %}
-            Pricing
+            Greater Impact
           {% endblocktrans %}
         </a>
       </div>{# .content #}

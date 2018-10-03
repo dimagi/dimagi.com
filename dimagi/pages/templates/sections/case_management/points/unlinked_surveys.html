@@ -1,0 +1,15 @@
+{% extends "sections/case_management/points/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block icon %}
+  {% include "svg/home/icon/research.html" %}
+{% endblock %}
+
+{% block content %}
+  {% blocktrans %}
+    Unlinked survey forms must be manually aggregated before
+    program performance can be analyzed and reports created.
+  {% endblocktrans %}
+{% endblock %}
+
