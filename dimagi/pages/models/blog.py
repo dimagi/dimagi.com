@@ -6,6 +6,7 @@ from django.utils.dateparse import parse_datetime
 from dimagi.utils.wordpress_api import url_filters
 
 Category = namedtuple('Category', 'name description icon slug')
+CanonicalLink = namedtuple('CanonicalLink', 'slug url')
 
 
 class BlogPost(object):
@@ -40,6 +41,11 @@ class BlogPost(object):
     @property
     def url(self):
         return reverse('blog_post', args=[self.slug])
+
+    @property
+    def canonical_link(self):
+        from dimagi.data.blog.canonical import get_canonical_link
+        return get_canonical_link(self.slug)
 
 
 class Author(object):
