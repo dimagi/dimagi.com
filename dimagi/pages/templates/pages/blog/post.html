@@ -2,6 +2,12 @@
 {% load i18n %}
 {% load dimagidotcom %}
 
+{% block meta %}
+  {% if post.canonical_link %}
+    <link rel="canonical" href="{{ post.canonical_link }}" />
+  {% endif %}
+{% endblock %}
+
 {% block title %}
   {{ post.title }} - {{ post.date_human }} :: Dimagi Blog
 {% endblock %}
