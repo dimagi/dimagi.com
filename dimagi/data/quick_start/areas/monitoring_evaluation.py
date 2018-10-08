@@ -11,6 +11,7 @@ SECTION_A = QuickStartSection(
         cards.BECOME_A_PRO,
         cards.REVIEW_APP,
         cards.CONTACT_SUPPORT,
+        cards.CASE_MANAGEMENT,
     ]
 )
 

@@ -1,4 +1,5 @@
 from __future__ import absolute_import
+
 from django.utils.translation import ugettext_lazy
 from dimagi.pages.models.quick_start import QuickStartCard
 
@@ -49,6 +50,17 @@ CONTACT_SUPPORT = QuickStartCard(
     """),
     level=ugettext_lazy("Beginner"),
     cta="https://www.dimagi.com/contact/"
+)
+
+CASE_MANAGEMENT = QuickStartCard(
+    icon="svg/case_management/mobile_archive.html",
+    title=ugettext_lazy("Learn How Case Management Works"),
+    description=ugettext_lazy("""
+    Reduce data errors and increase your team’s efficiency by 
+    registering a case once, then updating it over time.  
+    """),
+    level=ugettext_lazy("Beginner"),
+    cta="/case-management/"
 )
 
 
