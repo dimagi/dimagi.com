@@ -14,14 +14,14 @@
       {% endblocktrans %}
     </h2>
 
-    <div class="grid-2 grid-row-space-small pad-top-line">
+    <div class="grid-2-at-medium grid-row-space-small-at-small grid-row-space-base pad-top-line">
       {% include "sections/case_management/points/one_off_surveys.html" %}
       {% include "sections/case_management/points/unlinked_surveys.html" %}
     </div>{# .grid-2-at-small #}
   </div>{# .content #}
   <div class="content pad-bottom-large content-width-medium blue-theme">
 
-    <div class="theme-icon gap-bottom-base">
+    <div class="theme-icon gap-bottom-base gap-top-line gap-top-none-at-medium">
       {% include "svg/case_management/database.html" %}
     </div>{# .theme-icon #}
 
@@ -36,7 +36,7 @@
       {% endblocktrans %}
     </h2>
 
-    <div class="grid-2 grid-reverse grid-valign-middle">
+    <div class="grid-2-at-small grid-reverse grid-valign-middle">
 
       <div class="column">
         <ul class="check-list align-left">
@@ -86,7 +86,8 @@
       </div>{# .column #}
 
       <div class="column">
-        <div class="aspect-ratio-square slate-bg"></div>
+        <div class="phone-image white-lazy-bg"
+             data-lazybg="true"></div>
       </div>{# .column #}
 
     </div>{# .grid-2 #}

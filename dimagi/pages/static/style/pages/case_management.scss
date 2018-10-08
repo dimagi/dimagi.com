@@ -45,10 +45,12 @@ table {
       background-color: $color-slate;
     }
 
-    th {
+    th,
+    td {
       color: $color-white !important;
       padding-top: $space-base;
       padding-bottom: $space-base;
+      border: none;
     }
   }
   tbody {
@@ -79,4 +81,31 @@ table {
       }
     }
   }
+}
+
+.actionable-data {
+  $_base-height: 295px;
+  $_height-by-size: (
+    small: 410px,
+    medium: 506px,
+  );
+  @include make-bg(phone-image, '../../pages/case_management/actionable-data', $_base-height, $_height-by-size, '.png');
+}
+
+.greater-impact {
+  $_base-height: 295px;
+  $_height-by-size: (
+    small: 410px,
+    medium: 506px,
+  );
+  @include make-bg(phone-image, '../../pages/case_management/greater-impact', $_base-height, $_height-by-size, '.png');
+}
+
+.efficient-teams {
+  $_base-height: 295px;
+  $_height-by-size: (
+    small: 410px,
+    medium: 506px,
+  );
+  @include make-bg(phone-image, '../../pages/case_management/efficient-teams', $_base-height, $_height-by-size, '.png');
 }
