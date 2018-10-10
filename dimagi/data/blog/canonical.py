@@ -11,6 +11,7 @@ POSTS = {
     CanonicalLink('mobile-data-collection-how-to-choose-the-right-tool', MDC_PILLAR_URL),
     CanonicalLink('mobile-data-collection-standards', MDC_PILLAR_URL),
     CanonicalLink('mobile-data-collection-sustain', MDC_PILLAR_URL),
+    CanonicalLink('mobile-data-collection-introduction', MDC_PILLAR_URL),
 }
 
 
