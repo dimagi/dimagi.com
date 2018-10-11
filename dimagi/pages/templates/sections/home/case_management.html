@@ -8,12 +8,14 @@
     <div class="intro content-width-large">
       <h2 class="normalcase">
         {% blocktrans %}
-          Data Collection is Different with CommCare
+          Data Collection Is Different With CommCare
         {% endblocktrans %}
       </h2>
-      <p >
+      <p>
+        {% url 'case_management' as cm_url %}
         {% blocktrans %}
-          Unlike other mobile tools, CommCare's <strong>case management</strong>
+          Unlike other mobile tools, CommCare's
+          <a href="{{ cm_url }}">case management</a>
           features enable field teams to collect more actionable
           data, faster than ever before. Learn how case management
           can amplify your team's impact today.

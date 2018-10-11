@@ -11,11 +11,13 @@
           Collect Actionable Data, Amplify Your Impact
         {% endblocktrans %}
       </h2>
-      <p >
+      <p>
+        {% url 'case_management' as cm_url %}
         {% blocktrans %}
-          CommCare's suite of <strong>case management</strong> features enable
-          field teams to collect actionable data,<br class="hide-until-medium"/>
-          faster than ever before.
+          CommCare’s suite of
+          <a href="{{ cm_url }}">case management</a> help you
+          collect actionable data over time,<br class="hide-until-medium"/>
+          and faster than ever before.
           Learn how case management can extend your team’s impact today.
         {% endblocktrans %}
       </p>

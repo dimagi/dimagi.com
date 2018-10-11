@@ -28,7 +28,7 @@ TABLE = [
         False, True
     ),
     TableRow(
-        ugettext_lazy("View a case's historical information—even offline"),
+        ugettext_lazy("View historical case information offline"),
         False, True
     ),
     TableRow(
@@ -40,8 +40,7 @@ TABLE = [
         True, True
     ),
     TableRow(
-        ugettext_lazy("Display dynamic advice based on a case’s prior or "
-                      "current standing"),
+        ugettext_lazy("Display dynamic advice based on a case’s history"),
         False, True
     ),
     TableRow(
@@ -49,8 +48,8 @@ TABLE = [
         True, True
     ),
     TableRow(
-        ugettext_lazy("Send SMS reminders when cases meet a given "
-                      "set of conditions"),
+        ugettext_lazy("Send SMS messages when cases meet a given set "
+                      "of conditions"),
         False, True
     ),
 ]
