@@ -1,0 +1,16 @@
+{% extends "sections/case_management/points/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block icon %}
+  {% include "svg/case_management/info.html" %}
+{% endblock %}
+
+{% block content %}
+  {% blocktrans %}
+    Information collected in prior visits cannot be
+    shared or accessed by field teams, making it impossible
+    for frontline workers to collaborate.
+  {% endblocktrans %}
+{% endblock %}
+

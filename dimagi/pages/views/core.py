@@ -2,6 +2,7 @@ from __future__ import absolute_import
 from django.shortcuts import render
 from dimagi.utils.decorators import no_index
 from dimagi.utils.partners import get_logos
+from dimagi.data.case_management import longitudinal_data
 
 
 def home(request):
@@ -24,6 +25,13 @@ def contact(request):
 
 def proposals(request):
     return render(request, 'pages/proposals.html')
+
+
+def case_management(request):
+    context = {
+        'table': longitudinal_data.TABLE
+    }
+    return render(request, 'pages/case_management.html', context)
 
 
 @no_index

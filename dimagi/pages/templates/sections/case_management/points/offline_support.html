@@ -1,0 +1,15 @@
+{% extends "sections/case_management/points/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block icon %}
+  {% include "svg/case_management/doc_error.html" %}
+{% endblock %}
+
+{% block content %}
+  {% blocktrans %}
+    Survey data is not saved locally, meaning offline field
+    teams do not have access to real-time decision support.
+  {% endblocktrans %}
+{% endblock %}
+

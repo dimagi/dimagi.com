@@ -65,6 +65,7 @@ class MainViewSitemap(Sitemap):
             'about',
             'proposals',
             'quick_start',
+            'case_management',
         ]
 
     def priority(self, obj):

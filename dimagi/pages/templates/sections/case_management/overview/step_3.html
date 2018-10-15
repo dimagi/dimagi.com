@@ -1,0 +1,15 @@
+{% extends "sections/case_management/overview/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block icon %}
+  {% include "svg/case_management/step_3.html" %}
+{% endblock %}
+
+{% block content %}
+  {% blocktrans %}
+    Admins remotely access case data and aggregated form submissions
+    for analysis and reporting.
+  {% endblocktrans %}
+{% endblock %}
+

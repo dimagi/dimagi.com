@@ -1,0 +1,37 @@
+{% load dimagidotcom %}
+{% load i18n %}
+
+<section class="case-management accent-gray-bg border-top"
+         id="case-management">
+  <div class="content content-width-medium pad-vert-medium-at-medium pad-top-medium pad-bottom-small">
+
+    <div class="intro content-width-large">
+      <h2 class="normalcase">
+        {% blocktrans %}
+          Collect Actionable Data, Amplify Your Impact
+        {% endblocktrans %}
+      </h2>
+      <p>
+        {% url 'case_management' as cm_url %}
+        {% blocktrans %}
+          CommCare’s suite of
+          <a href="{{ cm_url }}">case management</a> help you
+          collect actionable data over time,<br class="hide-until-medium"/>
+          and faster than ever before.
+          Learn how case management can extend your team’s impact today.
+        {% endblocktrans %}
+      </p>
+    </div>{# .intro #}
+
+    <p class="align-center">
+      <a class="button {% click_body 'case-management' %}"
+         href="{% url 'case_management' %}">
+        {% blocktrans %}
+          Learn How
+        {% endblocktrans %}
+      </a>
+    </p>
+  </div>{# .content #}
+  <div class="image off-grid white-lazy-bg"
+       data-lazybg="true"></div>{# .case-management .image {} => product.scss #}
+</section>

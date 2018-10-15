@@ -1,0 +1,16 @@
+{% extends "sections/case_management/points/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block icon %}
+  {% include "svg/case_management/question.html" %}
+{% endblock %}
+
+{% block content %}
+  {% blocktrans %}
+    Longitudinal information is not stored in-app, making
+    it impossible to trigger events like SMS reminders
+    or critical warnings.
+  {% endblocktrans %}
+{% endblock %}
+

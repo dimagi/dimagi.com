@@ -1,0 +1,100 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="actionable-data align-center border-top" id="actionable-data">
+  <div class="content pad-top-large content-width-medium red-theme">
+    <h3 class="header-label gap-bottom-base red">
+      {% blocktrans %}
+        The Old Way
+      {% endblocktrans %}
+    </h3>
+    <h2 class="red">
+      {% blocktrans %}
+        Repetitive Surveys = Dirty Data
+      {% endblocktrans %}
+    </h2>
+
+    <div class="grid-2-at-medium grid-row-space-small-at-small grid-row-space-base pad-top-line">
+      {% include "sections/case_management/points/one_off_surveys.html" %}
+      {% include "sections/case_management/points/unlinked_surveys.html" %}
+    </div>{# .grid-2-at-small #}
+  </div>{# .content #}
+  <div class="content pad-bottom-large content-width-medium blue-theme">
+
+    <h3 class="header-label gap-bottom-base blue">
+      {% blocktrans %}
+        The CommCare Way
+      {% endblocktrans %}
+    </h3>
+    <h2 class="blue">
+      {% blocktrans %}
+        Actionable and Trusted Data
+      {% endblocktrans %}
+    </h2>
+
+    <div class="grid-2-at-small grid-reverse grid-valign-middle">
+
+      <div class="column">
+        <ul class="check-list align-left">
+          <li>
+            <h5>
+              {% blocktrans %}
+                Avoid errors
+              {% endblocktrans %}
+            </h5>
+            <p>
+              {% blocktrans %}
+                Store case data on mobile devices, allowing
+                field teams to omit repetitive survey questions.
+              {% endblocktrans %}
+            </p>
+          </li>
+          <li>
+            <h5>
+              {% blocktrans %}
+                Calculate indicators
+              {% endblocktrans %}
+            </h5>
+            <p>
+              {% blocktrans %}
+                Automatically link and aggregate survey
+                forms, allowing you to calculate indicators
+                like number of patients served or monthly
+                gains in crop yield.
+              {% endblocktrans %}
+            </p>
+          </li>
+          <li>
+            <h5>
+              {% blocktrans %}
+                Enforce data collection protocols
+              {% endblocktrans %}
+            </h5>
+            <p>
+              {% blocktrans %}
+                Use existing case information to ensure data
+                collection happens at the right time, with
+                the right people.
+              {% endblocktrans %}
+            </p>
+          </li>
+        </ul>
+      </div>{# .column #}
+
+      <div class="column">
+        <div class="phone-image white-lazy-bg"
+             data-lazybg="true"></div>
+      </div>{# .column #}
+
+    </div>{# .grid-2 #}
+
+    <p class="align-center pad-top-small">
+      <a href="#request-demo" class="button arrow">
+        {% blocktrans %}
+          Get Case Management Demo
+        {% endblocktrans %}
+      </a>
+    </p>
+
+  </div>{# .content #}
+</section>

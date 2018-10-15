@@ -1,0 +1,15 @@
+{% extends "sections/case_management/overview/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block icon %}
+  {% include "svg/case_management/step_1.html" %}
+{% endblock %}
+
+{% block content %}
+  {% blocktrans %}
+    Field workers register a case once, then simply update
+    the case file during follow up visits.
+  {% endblocktrans %}
+{% endblock %}
+

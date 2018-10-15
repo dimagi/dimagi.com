@@ -1,0 +1,16 @@
+{% extends "sections/case_management/points/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block icon %}
+  {% include "svg/case_management/warning.html" %}
+{% endblock %}
+
+{% block content %}
+  {% blocktrans %}
+    One-off surveys require field staff to record duplicate
+    information &mdash; like subject IDs &mdash; at every visit,
+    increasing the chance of data entry errors.
+  {% endblocktrans %}
+{% endblock %}
+

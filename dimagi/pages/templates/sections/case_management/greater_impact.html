@@ -1,0 +1,98 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="greater-impact align-center border-top" id="greater-impact">
+  <div class="content pad-top-large content-width-medium red-theme">
+    <h3 class="header-label gap-bottom-base red">
+      {% blocktrans %}
+        The Old Way
+      {% endblocktrans %}
+    </h3>
+    <h2 class="red">
+      {% blocktrans %}
+        Inaccessible Data = Poor Decision Support
+      {% endblocktrans %}
+    </h2>
+
+    <div class="grid-2-at-medium grid-row-space-small-at-small grid-row-space-base pad-top-line">
+      {% include "sections/case_management/points/offline_support.html" %}
+      {% include "sections/case_management/points/longitudinal_info.html" %}
+    </div>{# .grid-2-at-small #}
+  </div>{# .content #}
+  <div class="content pad-bottom-large content-width-medium blue-theme">
+
+    <h3 class="header-label gap-bottom-base blue">
+      {% blocktrans %}
+        The CommCare Way
+      {% endblocktrans %}
+    </h3>
+    <h2 class="blue">
+      {% blocktrans %}
+        Amplified Service Delivery
+      {% endblocktrans %}
+    </h2>
+
+    <div class="grid-2-at-small grid-reverse grid-valign-middle">
+
+      <div class="column">
+        <ul class="check-list align-left">
+          <li>
+            <h5>
+              {% blocktrans %}
+                Deliver in-app advice messages
+              {% endblocktrans %}
+            </h5>
+            <p>
+              {% blocktrans %}
+                Display dynamic, targeted advice based on a case's
+                prior and current standing.
+              {% endblocktrans %}
+            </p>
+          </li>
+          <li>
+            <h5>
+              {% blocktrans %}
+                View historical data
+              {% endblocktrans %}
+            </h5>
+            <p>
+              {% blocktrans %}
+                Field teams have access to a case's past
+                activity on their mobile device, even when offline.
+              {% endblocktrans %}
+            </p>
+          </li>
+          <li>
+            <h5>
+              {% blocktrans %}
+                Trigger activities
+              {% endblocktrans %}
+            </h5>
+            <p>
+              {% blocktrans %}
+                Automatically send SMS messages or create
+                referrals when a case meets a given
+                set of conditions.
+              {% endblocktrans %}
+            </p>
+          </li>
+        </ul>
+      </div>{# .column #}
+
+      <div class="column">
+        <div class="phone-image white-lazy-bg"
+             data-lazybg="true"></div>
+      </div>{# .column #}
+
+    </div>{# .grid-2 #}
+
+    <p class="align-center pad-top-small">
+      <a href="#request-demo" class="button arrow">
+        {% blocktrans %}
+          Get Case Management Demo
+        {% endblocktrans %}
+      </a>
+    </p>
+
+  </div>{# .content #}
+</section>

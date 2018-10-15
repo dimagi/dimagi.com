@@ -1,0 +1,15 @@
+{% extends "sections/case_management/points/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block icon %}
+  {% include "svg/case_management/refresh.html" %}
+{% endblock %}
+
+{% block content %}
+  {% blocktrans %}
+    Field staff must collect repeat information like demographic
+    indicators at every follow up, adding unnecessary time to each visit.
+  {% endblocktrans %}
+{% endblock %}
+

@@ -1,0 +1,111 @@
+@import 'app/mixins/background';
+@import 'app/variables/colors';
+@import 'app/variables/sizes';
+@import 'app/variables/type';
+
+
+.case-management-page {
+  @include make-bg(hero, '../../pages/case_management/hero');
+}
+
+.header-label {
+  text-transform: uppercase;
+  font-size: $font-size-large;
+  font-weight: $font-weight-medium;
+}
+
+.request-demo-form {
+  label {
+    text-align: left;
+    color: $color-white;
+  }
+
+  .hs-richtext {
+    color: $color-white;
+    a {
+      color: $color-blue-light;
+
+      &:hover {
+        color: $color-white;
+      }
+    }
+  }
+
+  .submitted-message {
+    color: $color-white;
+  }
+}
+
+table {
+  thead {
+    border: 1px solid $color-border;
+
+    tr {
+      border: none;
+      background-color: $color-slate;
+    }
+
+    th,
+    td {
+      color: $color-white !important;
+      padding-top: $space-base;
+      padding-bottom: $space-base;
+      border: none;
+    }
+  }
+  tbody {
+    border: 1px solid $color-border;
+
+    tr {
+      border: none;
+      border-top: 1px solid $color-border;
+    }
+    td {
+      padding-top: $space-line;
+      padding-bottom: $space-line;
+    }
+
+    tr:nth-child(even) {
+      background-color: $color-white;
+    }
+
+    .support {
+      svg > * {
+        stroke: $color-blue;
+      }
+    }
+
+    .no-support {
+      svg > * {
+        stroke: $color-border;
+      }
+    }
+  }
+}
+
+.actionable-data {
+  $_base-height: 295px;
+  $_height-by-size: (
+    small: 410px,
+    medium: 506px,
+  );
+  @include make-bg(phone-image, '../../pages/case_management/actionable-data', $_base-height, $_height-by-size, '.png');
+}
+
+.greater-impact {
+  $_base-height: 295px;
+  $_height-by-size: (
+    small: 410px,
+    medium: 506px,
+  );
+  @include make-bg(phone-image, '../../pages/case_management/greater-impact', $_base-height, $_height-by-size, '.png');
+}
+
+.efficient-teams {
+  $_base-height: 295px;
+  $_height-by-size: (
+    small: 410px,
+    medium: 506px,
+  );
+  @include make-bg(phone-image, '../../pages/case_management/efficient-teams', $_base-height, $_height-by-size, '.png');
+}
