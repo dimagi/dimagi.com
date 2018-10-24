@@ -12,6 +12,11 @@
 
 {% block body_class %}partners-commcare-page tucked-hero{% endblock %}
 
+{% block meta %}
+  <meta property="wistia:videoId" content="9uvnpbecdy" />
+  <meta property="wistia:videoTrigger" content="demo-video" />
+{% endblock %}
+
 {% block stylesheets %}
   {% compress css %}
     <link href="{% sass_src 'style/pages/commcare/partners.scss' %}" rel="stylesheet" media="screen" type="text/css" />
