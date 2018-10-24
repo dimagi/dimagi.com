@@ -80,5 +80,8 @@ urlpatterns = [
     url(r'^press/', include('dimagi.pages.urls.press')),
     url(r'^terms/', include('dimagi.pages.urls.terms')),
 
-    url(r'^robots.txt$', TemplateView.as_view(template_name=get_robots())),
+    url(r'^robots.txt$', TemplateView.as_view(
+        template_name=get_robots(),
+        content_type='text/plain'
+    )),
 ] + redirect_urlpatterns + get_sitemap_patterns()
