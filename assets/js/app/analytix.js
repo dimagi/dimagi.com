@@ -5,13 +5,15 @@ define([
   'app/analytix/hubspot',
   'app/analytix/kissmetrix',
   'app/analytix/drift',
+  'app/analytix/wistia',
 ], function (
     _,
     Utils,
     Google,
     Hubspot,
     Kissmetrics,
-    Drift
+    Drift,
+    Wistia
 ) {
   'use strict';
   var self = {};
@@ -20,7 +22,8 @@ define([
       Google,
       Hubspot,
       Kissmetrics,
-      Drift
+      Drift,
+      Wistia
   ];
 
   return {

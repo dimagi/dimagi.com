@@ -3,7 +3,7 @@
 @import 'app/variables/type';
 
 .button, // scss-lint:disable PropertyCount
-button,
+button:not(.w-vulcan-v2-button),
 input[type="button"],
 input[type="submit"],
 input[type="reset"] {
@@ -56,7 +56,7 @@ input[type="reset"].expand {
 
 @mixin _make-button-color($_color) {
   .button,
-  button,
+  button:not(.w-vulcan-v2-button),
   input[type="button"],
   input[type="submit"],
   input[type="reset"] {
