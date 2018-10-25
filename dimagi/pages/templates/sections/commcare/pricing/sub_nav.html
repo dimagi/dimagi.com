@@ -5,13 +5,11 @@
          id="sub-nav">
   <div class="content">
     <div class="actions">
-      <a href="{{ URL_DEMO }}"
-         class="hide-until-medium {% click_subnav 'demo' %}"
-         target="_blank">
-        {% blocktrans %}
-          Schedule a Demo
-        {% endblocktrans %}
-      </a>
+
+      <span class="hide-until-medium">
+        {% click_subnav 'demo' as click_class %}
+        {% include "partials/schedule_demo_button.html" with click_class=click_class %}
+      </span>
       <a class="primary cta-pricing-subnav-trial {% click_subnav 'trial' %}"
          data-kmq-external="true"
          data-kmq-name="Clicked Start Trial - Pricing Sticky"
@@ -31,13 +29,10 @@
     </a>
     <div class="destinations">
       <div class="content">
-        <a href="{{ URL_DEMO }}"
-           class="hide-at-medium {% click_subnav 'demo-mobile' %}"
-           target="_blank">
-          {% blocktrans %}
-            Schedule a Demo
-          {% endblocktrans %}
-        </a>
+        <span class="hide-at-medium">
+          {% click_subnav 'demo-mobile' as click_class %}
+          {% include "partials/schedule_demo_button.html" with click_class=click_class %}
+        </span>
         <a href="#plans"
            class="{% click_subnav 'plans' %}">
           {% blocktrans %}

@@ -51,13 +51,8 @@
             Contact Us
           {% endblocktrans %}
         </a>
-        <a class="button button-accent-gray {% click_hero 'demo' %}"
-           target="_blank"
-           href="{{ URL_DEMO }}" >
-          {% blocktrans %}
-            Schedule a Demo
-          {% endblocktrans %}
-        </a>
+        {% click_hero 'demo' as click_class %}
+        {% include "partials/schedule_demo_button.html" with click_class=click_class button_class="button button-accent-gray" %}
       </div>{# .home-cta #}
 
     </div>{# .copy #}
