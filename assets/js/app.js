@@ -23,6 +23,7 @@ require([
   'app/extensions',
   'app/transition',
   'app/contactForm',
+  'app/demoForm',
   'app/abAudit',
   'app/progressBar',
   'modernizr',
@@ -44,6 +45,7 @@ require([
     Extensions,
     Transition,
     ContactForm,
+    DemoForm,
     ABAudit,
     ProgressBar
 ) {
@@ -64,6 +66,7 @@ require([
       Extensions,
       Transition,
       ContactForm,
+      DemoForm,
       ABAudit,
       ProgressBar,
     ], function (m) {
