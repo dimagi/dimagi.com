@@ -46,13 +46,8 @@
             View Full Pricing FAQ
           {% endblocktrans %}
         </a>
-        <a class="button {% click_body 'faq-sales' %}"
-           target="_blank"
-           href="{{ URL_DEMO }}">
-          {% blocktrans %}
-            Talk to Sales
-          {% endblocktrans %}
-        </a>
+        {% click_body 'faq-sales' as click_class %}
+        {% include "partials/schedule_demo_button.html" with click_class=click_class button_class="button" %}
       </p>
     </div>
 

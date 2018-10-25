@@ -16,13 +16,8 @@
 
       <div class="column flex-align-right">
         <p>
-          <a class="button alt {% click_body 'trial-demo' %}"
-             target="_blank"
-             href="{{ URL_DEMO }}">
-            {% blocktrans %}
-              Schedule a Demo
-            {% endblocktrans %}
-          </a>
+          {% click_body 'trial-demo' as click_class %}
+          {% include "partials/schedule_demo_button.html" with click_class=click_class button_class="button alt" %}
         </p>
       </div>{# .column #}
 

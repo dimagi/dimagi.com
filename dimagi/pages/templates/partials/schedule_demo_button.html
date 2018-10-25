@@ -1,0 +1,21 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<span class="abtest {{ click_class }}">
+  <a class="abtest-variant-a {{ button_class }} {{ click_class }}-var-a"
+     href="#demo-form-modal">{# modal #}
+    <span>
+      {% blocktrans %}
+        Schedule a Demo
+      {% endblocktrans %}
+    </span>
+  </a>
+  <a class="abtest-variant-b {{ button_class }} {{ click_class }}-var-b"
+     href="#demo-request">{# drift #}
+    <span>
+      {% blocktrans %}
+        Schedule a Demo
+      {% endblocktrans %}
+    </span>
+  </a>
+</span>
