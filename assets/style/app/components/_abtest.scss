@@ -1,0 +1,14 @@
+.abtest {
+  a.abtest-variant-b {
+    display: none;
+  }
+}
+
+.abtest.show-b {
+  a.abtest-variant-a {
+    display: none;
+  }
+  a.abtest-variant-b {
+    display: inherit;
+  }
+}
