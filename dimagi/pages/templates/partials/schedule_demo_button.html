@@ -2,6 +2,15 @@
 {% load dimagidotcom %}
 
 <span class="abtest {{ click_class }}">
+  <a class="abtest-control {{ button_class }} {{ click_class }}-control"
+     target="_blank"
+     href="http://sites.dimagi.com/commcare-demo-8-8">{# modal #}
+    <span>
+      {% blocktrans %}
+        Schedule a Demo
+      {% endblocktrans %}
+    </span>
+  </a>
   <a class="abtest-variant-a {{ button_class }} {{ click_class }}-var-a"
      href="#demo-form-modal">{# modal #}
     <span>

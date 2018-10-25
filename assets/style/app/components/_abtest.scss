@@ -1,13 +1,36 @@
 .abtest {
+  a.abtest-variant-a {
+    display: none;
+  }
+
+  a.abtest-variant-b {
+    display: none;
+  }
+}
+
+.abtest.show-a {
+  a.abtest-control {
+    display: none;
+  }
+
+  a.abtest-variant-a {
+    display: inherit;
+  }
+
   a.abtest-variant-b {
     display: none;
   }
 }
 
 .abtest.show-b {
+  a.abtest-control {
+    display: none;
+  }
+
   a.abtest-variant-a {
     display: none;
   }
+
   a.abtest-variant-b {
     display: inherit;
   }
