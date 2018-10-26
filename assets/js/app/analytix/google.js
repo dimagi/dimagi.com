@@ -168,33 +168,33 @@ define([
 
       self.logger = Logging.getLoggerForApi("Google Analytics");
 
-      self.ready = $.Deferred();
-      self.ready = Utils.initApi(self.ready, apiId, scriptUrl, self.logger, function () {
-        var props = {
-          allow_linker: true,
-          cookie_domain: "www.dimagi.com",
-        };
-
-        window.dataLayer = window.dataLayer || [];
-        _gtag = function () {
-          window.dataLayer.push(arguments);
-          self.logger.verbose.log(arguments, 'gtag');
-        };
-        _gtag('js', new Date());
-
-
-        if (Utils.getConfig('userId')) {
-          props.user_id = Utils.getConfig('userId') || 'none';
-        }
-
-        if (Utils.getConfig('optimizeId')) {
-          props.optimize_id = Utils.getConfig('optimizeId') || 'none';
-        }
-
-        _gtag('config', apiId, props);
-
-        bindEvents();
-      });
+      // self.ready = $.Deferred();
+      // self.ready = Utils.initApi(self.ready, apiId, scriptUrl, self.logger, function () {
+      //   var props = {
+      //     allow_linker: true,
+      //     cookie_domain: "www.dimagi.com",
+      //   };
+      //
+      //   window.dataLayer = window.dataLayer || [];
+      //   _gtag = function () {
+      //     window.dataLayer.push(arguments);
+      //     self.logger.verbose.log(arguments, 'gtag');
+      //   };
+      //   _gtag('js', new Date());
+      //
+      //
+      //   if (Utils.getConfig('userId')) {
+      //     props.user_id = Utils.getConfig('userId') || 'none';
+      //   }
+      //
+      //   if (Utils.getConfig('optimizeId')) {
+      //     props.optimize_id = Utils.getConfig('optimizeId') || 'none';
+      //   }
+      //
+      //   _gtag('config', apiId, props);
+      //
+      //   bindEvents();
+      // });
     },
     track: {
       event: trackEvent,
