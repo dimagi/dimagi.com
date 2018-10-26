@@ -9,7 +9,7 @@ define([
 ], function (
     _,
     Utils,
-    Google,
+    // Google,
     Hubspot,
     Kissmetrics,
     Drift,
@@ -19,7 +19,7 @@ define([
   var self = {};
   self.trackingModules = [
       Utils,
-      Google,
+      // Google,
       Hubspot,
       Kissmetrics,
       Drift,
