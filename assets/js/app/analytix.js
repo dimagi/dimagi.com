@@ -1,7 +1,6 @@
 define([
   'lodash',
   'app/analytix/utils',
-  'app/analytix/google',
   'app/analytix/hubspot',
   'app/analytix/kissmetrix',
   'app/analytix/drift',
@@ -9,7 +8,6 @@ define([
 ], function (
     _,
     Utils,
-    // Google,
     Hubspot,
     Kissmetrics,
     Drift,
@@ -19,7 +17,6 @@ define([
   var self = {};
   self.trackingModules = [
       Utils,
-      // Google,
       Hubspot,
       Kissmetrics,
       Drift,
