@@ -14,7 +14,7 @@
   }
 
   a.abtest-variant-a {
-    display: inherit;
+    display: inline-block;
   }
 
   a.abtest-variant-b {
@@ -32,6 +32,6 @@
   }
 
   a.abtest-variant-b {
-    display: inherit;
+    display: inline-block;
   }
 }
