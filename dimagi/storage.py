@@ -19,7 +19,7 @@ class S3BotoStorage(SassS3Boto3Storage):
     """
     S3 storage backend that has the right locations
     """
-    location = STATIC_URL
+    location = STATIC_URL.lstrip("/")
     base_url = CDN_BASE_URL
 
 
