@@ -39,7 +39,7 @@ linters:
   ImportPath:
     enabled: true
   LengthVariable:
-    enabled: true
+    enabled: false
   MergeableSelector:
     enabled: true
   NameFormat:
