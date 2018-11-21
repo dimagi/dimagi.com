@@ -65,6 +65,11 @@ define([
           Hubspot.identify({email: e.data.email});
           Hubspot.trackEvent('Identified via Drift');
         });
+
+        $('a[href="#demo-request"]').click(function () {
+          _drift.api.startInteraction({ interactionId: 43079 });
+        });
+
       });
 
     },
