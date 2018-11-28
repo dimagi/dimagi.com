@@ -2,6 +2,20 @@
 @import 'app/variables/colors';
 @import 'app/variables/sizes';
 
+@include jacket ($jacket-critical) {
+  .modal {
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    overflow: hidden;
+    position: fixed;
+    visibility: hidden;
+    z-index: -1;
+    right: 0;
+    top: 0;
+  }
+}
+
 @include jacket ($jacket-standard) {
 
   html.modal-active {
@@ -25,16 +39,7 @@
   }
 
   .modal {
-    bottom: 0;
-    left: 0;
-    opacity: 0;
-    overflow: hidden;
     pointer-events: none;
-    position: fixed;
-    right: 0;
-    top: 0;
-    visibility: hidden;
-    z-index: -1;
   }
 
   .modal[data-active="true"] {

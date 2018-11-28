@@ -19,7 +19,10 @@
   .position-static#{$_suffix} {
     position: static !important; //scss-lint:disable ImportantRule
   }
+}
 
+@mixin _make-pin-at($_size: null) {
+  $_suffix: if($_size != null, -at-#{$_size}, null);
   .pin-top-left#{$_suffix} {
     left: 0;
     position: absolute;
@@ -80,12 +83,17 @@
   }
 }
 
-@include jacket ($jacket-standard) {
+@include jacket ($jacket-critical) {
   @include _make-position-at();
+}
+
+@include jacket ($jacket-standard) {
+  @include _make-pin-at();
 
   @each $_size, $_width in $widths-by-size {
     @media (min-width: $_width) {
       @include _make-position-at($_size);
+      @include _make-pin-at($_size);
     }
   }
 }

@@ -9,17 +9,21 @@
     color: color-invert($color-hero);
     overflow: hidden;
     text-align: center;
+  }
 
-    .content {
-      padding-bottom: $hero-content-padding;
-      padding-top: $hero-content-padding;
-    }
+  .hero .content {
+    padding-bottom: $hero-content-padding;
+    padding-top: $hero-content-padding;
+  }
 
-    .headline {
-      font-size: $font-size-headline;
-      line-height: $line-height-headline;
-    }
+  .hero .headline {
+    font-size: $font-size-headline;
+    line-height: $line-height-headline;
+  }
+}
 
+@include jacket ($jacket-critical) {
+  .hero {
     h1,
     .h1,
     h2,
@@ -38,7 +42,11 @@
     a:not(.button) {
       color: inherit;
     }
+  }
+}
 
+@include jacket ($jacket-critical) {
+  .hero {
     h1,
     .h1,
     h2,
@@ -53,7 +61,11 @@
     .h6 {
       font-weight: $font-weight-text;
     }
+  }
+}
 
+@include jacket ($jacket-critical) {
+  .hero {
     h2,
     .h2 {
       font-size: 14px;
@@ -63,16 +75,15 @@
       margin-bottom: 0;
       text-transform: uppercase;
     }
+  }
 
-    p:not(.cta) {
-      margin-bottom: $space-line;
-      margin-top: -$space-base;
-    }
+  .hero p:not(.cta) {
+    margin-bottom: $space-line;
+    margin-top: -$space-base;
   }
 }
 
-@include jacket ($jacket-standard) {
-
+@include jacket ($jacket-critical) {
   @media (min-width: $width-desktop) {
     .hero {
       .content {
@@ -103,7 +114,6 @@
       }
     }
   }
-
 }
 
 @include jacket ($jacket-standard) {
@@ -120,7 +130,7 @@
   }
 }
 
-@include jacket ($jacket-standard) {
+@include jacket ($jacket-critical) {
   .tucked-hero .hero {
     margin-top: -$menu-pad-top-mobile;
     padding-top: $menu-pad-top-mobile;
@@ -133,7 +143,6 @@
     }
   }
 }
-
 
 @include jacket($jacket-critical) {
   .hero-video {
@@ -153,4 +162,3 @@
     }
   }
 }
-

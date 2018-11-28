@@ -2,7 +2,7 @@
 @import 'app/variables/colors';
 @import 'app/variables/sizes';
 
-@include jacket ($jacket-standard) {
+@include jacket ($jacket-critical) {
   [class*="play-icon-"] {
     display: block;
     position: relative;
@@ -37,11 +37,15 @@
       border: 2px solid $color-white;
     }
   }
+}
 
+@include jacket ($jacket-standard) {
   .show-time [class*="play-icon-"]:before {
     transition: background-color 300ms;
   }
+}
 
+@include jacket ($jacket-standard) {
   a:hover[class*="play-icon-"]:before,
   a:hover [class*="play-icon-"]:before,
   a:focus[class*="play-icon-"]:before,
@@ -85,7 +89,7 @@ $_sqrts-by-type: (
   large: 22.62742px,
 );
 
-@include jacket ($jacket-standard) {
+@include jacket ($jacket-critical) {
   @each $_type, $_sqrt in $_sqrts-by-type {
     $_space: map-get($space-by-type, $_type);
 

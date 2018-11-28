@@ -21,6 +21,12 @@
   }
 }
 
+@include jacket ($jacket-critical) {
+  .grid-reverse {
+    flex-direction: row-reverse;
+  }
+}
+
 @include jacket ($jacket-standard) {
   @each $_type, $_space in $space-by-type {
     $_gap: space-gap-grid($_space);
@@ -35,10 +41,6 @@
     }
   }
 
-  .grid-reverse {
-    flex-direction: row-reverse;
-  }
-
   .grid-row-equal-heights > * {
     display: flex;
     flex-wrap: wrap;
@@ -48,10 +50,10 @@
       width: 100%;
     }
   }
+}
 
-  .no-shrink {
-    flex-shrink: 0 !important; // scss-lint:disable ImportantRule
-  }
+.no-shrink {
+  flex-shrink: 0 !important; // scss-lint:disable ImportantRule
 }
 
 @mixin _make-grid-at($_size: null) {
@@ -84,6 +86,10 @@
       }
     }
   }
+}
+
+@mixin _make-grid-space-at($_size: null) {
+  $_suffix: if($_size != null, -at-#{$_size}, null);
 
   @each $_type, $_space in $space-by-type {
     $_margin: space-margin($_space);
@@ -120,6 +126,10 @@
       }
     }
   }
+}
+
+@mixin _make-grid-align-at($_size: null) {
+  $_suffix: if($_size != null, -at-#{$_size}, null);
 
   $_grid-align: (
     left: flex-start,
@@ -156,7 +166,6 @@
       display: flex !important; // scss-lint:disable ImportantRule
     }
   }
-
 }
 
 @include jacket ($jacket-critical) {
@@ -164,9 +173,18 @@
 }
 
 @include jacket ($jacket-standard) {
-  @each $_size, $_width in $widths-by-size {
-    @media (min-width: $_width) {
+  @include _make-grid-space-at();
+  @include _make-grid-align-at();
+}
+
+@each $_size, $_width in $widths-by-size {
+  @media (min-width: $_width) {
+    @include jacket ($jacket-critical) {
       @include _make-grid-at($_size);
+    }
+    @include jacket ($jacket-standard) {
+      @include _make-grid-space-at($_size);
+      @include _make-grid-align-at($_size);
     }
   }
 }

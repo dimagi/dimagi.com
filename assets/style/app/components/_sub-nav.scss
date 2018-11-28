@@ -17,32 +17,40 @@
     position: fixed;
     width: 100%;
     z-index: 2;
-
-    .wistia_click_to_play {
-      display: inline;
-    }
-
-    a {
-      color: $color-body-text;
-      display: block;
-      font-size: $font-size-small;
-      font-weight: $font-weight-medium;
-      letter-spacing: 1px;
-      line-height: $space-medium;
-      margin-right: 20px;
-      text-transform: uppercase;
-
-      &:hover,
-      &:focus {
-        color: $color-link;
-      }
-
-      &:active {
-        color: $color-link;
-      }
-    }
   }
 
+  .sub-nav .wistia_click_to_play {
+    display: inline;
+  }
+}
+
+@include jacket ($jacket-critical) {
+  .sub-nav a {
+    color: $color-body-text;
+    display: block;
+    font-size: $font-size-small;
+    font-weight: $font-weight-medium;
+    letter-spacing: 1px;
+    line-height: $space-medium;
+    margin-right: 20px;
+    text-transform: uppercase;
+  }
+}
+
+@include jacket ($jacket-standard) {
+  .sub-nav a {
+    &:hover,
+    &:focus {
+      color: $color-link;
+    }
+
+    &:active {
+      color: $color-link;
+    }
+  }
+}
+
+@include jacket ($jacket-critical) {
   .sub-nav::before,
   .sub-nav::after {
     clear: both;
@@ -52,7 +60,7 @@
   }
 }
 
-@include jacket ($jacket-standard) {
+@include jacket ($jacket-critical) {
   @media (min-width: $width-desktop) {
     .sub-nav a {
       display: inline-block;
@@ -61,7 +69,6 @@
 }
 
 @include jacket ($jacket-standard) {
-
   @each $_theme, $_color in $colors-by-theme {
     .#{$_theme}-theme .sub-nav a {
       color: $color-body-text;
@@ -97,11 +104,10 @@
       }
     }
   }
-
 }
 
 @include jacket ($jacket-critical) {
-  .sub-nav a.primary { // scss-lint:disable MergeableSelector
+  .sub-nav a.primary {
     margin-right: 0;
 
     span {
@@ -121,18 +127,22 @@
   .show-time .sub-nav a.primary span { // scss-lint:disable SelectorDepth
     transition: border-color 150ms ease-in-out, background-color 150ms ease-in-out, color 150ms ease-in-out;
   }
+}
 
+@include jacket ($jacket-standard) {
   .no-touch .sub-nav a.primary span { // scss-lint:disable SelectorDepth
     border: 1px solid $color-border;
   }
 
   .touch .sub-nav a.primary span, // scss-lint:disable SelectorDepth
-  .no-touch.sub-nav-fixed-top .sub-nav a.primary span {  // scss-lint:disable SelectorDepth
+  .no-touch.sub-nav-fixed-top .sub-nav a.primary span { // scss-lint:disable SelectorDepth
     background-color: $color-link;
     border-color: $color-link;
     color: color-invert($color-link);
   }
+}
 
+@include jacket ($jacket-standard) {
   .touch .sub-nav a.primary span:hover,
   .touch .sub-nav a.primary span:focus,
   .no-touch.sub-nav-fixed-top .sub-nav a.primary span:hover,
@@ -146,7 +156,9 @@
     background-color: color-active($color-link);
     color: color-invert($color-link);
   }
+}
 
+@include jacket ($jacket-critical) {
   .sub-nav a.secondary { // scss-lint:disable MergeableSelector
     display: none;
   }
@@ -194,14 +206,9 @@
     top: $space-medium + 1;
   }
 
-  .show-time .sub-nav .destinations {
-    transition: visibility 0s 300ms, opacity 150ms ease-in-out, transform 150ms ease-in-out;
-  }
-
   .sub-nav-menu-active .sub-nav .destinations {
     opacity: 1;
     transform: translate3d(0, 0, 0);
-    transition: visibility 0s 0s, opacity 150ms ease-in-out, transform 150ms ease-in-out;
     visibility: visible;
   }
 
@@ -214,7 +221,6 @@
       padding: 0;
       position: relative;
       transform: translate3d(0, 0, 0);
-      transition: none;
       visibility: visible;
     }
 
@@ -238,6 +244,22 @@
       line-height: $space-medium;
       margin-top: 0;
       width: auto;
+    }
+  }
+}
+
+@include jacket ($jacket-standard) {
+  .show-time .sub-nav .destinations {
+    transition: visibility 0s 300ms, opacity 150ms ease-in-out, transform 150ms ease-in-out;
+  }
+
+  .sub-nav-menu-active .sub-nav .destinations {
+    transition: visibility 0s 0s, opacity 150ms ease-in-out, transform 150ms ease-in-out;
+  }
+
+  @media (min-width: $width-desktop) {
+    .sub-nav .destinations {
+      transition: none;
     }
   }
 }
@@ -277,7 +299,6 @@
     width: 100%;
     overflow: hidden;
     opacity: 0;
-    transition: opacity 150ms ease-in-out, height 150ms ease-in-out;
     border-bottom: 1px solid $color-border;
 
     @media (min-width: $width-desktop) {
@@ -286,7 +307,6 @@
 
     .content {
       opacity: 0;
-      transition: opacity 300ms 0s;
     }
 
     a {
@@ -294,7 +314,6 @@
       line-height: 22px;
       margin: $space-line 0;
     }
-
   }
 
   .sub-nav-menu-active .sub-nav .dropdown {
@@ -313,6 +332,16 @@
 
     svg * {
       fill: $color-text;
+    }
+  }
+}
+
+@include jacket ($jacket-standard) {
+  .sub-nav .dropdown {
+    transition: opacity 150ms ease-in-out, height 150ms ease-in-out;
+
+    .content {
+      transition: opacity 300ms 0s;
     }
   }
 }

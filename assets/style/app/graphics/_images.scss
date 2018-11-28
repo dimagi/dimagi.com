@@ -42,16 +42,15 @@
 
 @include jacket ($jacket-critical) {
   .bg-loader {
-    opacity: 0;
     content: '';
     display: block;
+    height: 100%;
+    left: 0;
+    opacity: 0;
     position: absolute;
     top: 0;
-    left: 0;
-    height: 100%;
     width: 100%;
     z-index: 1;
-    transition: opacity .5s ease-in-out;
   }
 
   .hero,
@@ -66,8 +65,14 @@
   }
 
   .bg-preload {
-    visibility: hidden;
     position: absolute;
+    visibility: hidden;
     z-index: -1;
+  }
+}
+
+@include jacket ($jacket-standard) {
+  .bg-loader {
+    transition: opacity .5s ease-in-out;
   }
 }

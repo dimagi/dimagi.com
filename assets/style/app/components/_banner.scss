@@ -17,84 +17,98 @@
 }
 
 @include jacket($jacket-critical) {
-
   .banner {
-    @include _make-banner($color-banner);
+    background-color: transparent;
+    color: $color-white;
     height: $font-size-banner;
     overflow: hidden;
+  }
+}
 
-    .content {
-      align-items: center;
-      display: flex;
-      height: 100%;
-      justify-content: space-between;
-    }
+@include jacket($jacket-standard) {
+  .banner {
+    @include _make-banner($color-banner);
+  }
+}
 
-    .column {
-      display: flex;
-      flex: 1;
-      height: 100%;
-      margin-left: -$banner-pad-mobile;
-      margin-right: -$banner-pad-mobile;
-      position: relative;
-      z-index: 4;
+@include jacket($jacket-critical) {
+  .banner .content {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+  }
+}
 
-      > * {
-        padding-left: $banner-pad-mobile;
-        padding-right: $banner-pad-mobile;
-      }
-    }
+@include jacket($jacket-critical) {
+  .banner .column {
+    display: flex;
+    flex: 1;
+    height: 100%;
+    margin-left: -$banner-pad-mobile;
+    margin-right: -$banner-pad-mobile;
+    position: relative;
+    z-index: 4;
 
-    .column-fill {
-      flex: 2;
-    }
-
-    a {
-      align-items: center;
-      color: inherit !important; // scss-lint:disable ImportantRule
-      display: flex;
-      font-size: $font-size-banner-link;
-      font-weight: $font-weight-banner;
-      height: 100%;
-      letter-spacing: $letter-spacing-banner-link;
-      line-height: $line-height-banner;
-      text-transform: uppercase;
-
-      &.logo svg {
-        height: $banner-logo-height-mobile;
-        width: $banner-logo-width-mobile;
-      }
-
-      &.menu-link {
-        left: 0;
-        position: absolute;
-        top: 0;
-      }
-
-      &.menu-open {
-        opacity: 1;
-        visibility: visible;
-      }
-
-      &.menu-close {
-        opacity: 0;
-        visibility: hidden;
-      }
-
-      &.login-link,
-      &.trial-link {
-        padding-left: 20px !important;
-        padding-right: 0 !important;
-        transition: color 300ms 0s;
-      }
-
-      &.menu-open-sibling {
-        opacity: 1;
-        padding-right: 20px !important;
-      }
+    > * {
+      padding-left: $banner-pad-mobile;
+      padding-right: $banner-pad-mobile;
     }
   }
 
+  .banner .column-fill {
+    flex: 2;
+  }
+}
+
+@include jacket($jacket-critical) {
+  .banner a {
+    align-items: center;
+    color: inherit !important; // scss-lint:disable ImportantRule
+    display: flex;
+    font-size: $font-size-banner-link;
+    font-weight: $font-weight-banner;
+    height: 100%;
+    letter-spacing: $letter-spacing-banner-link;
+    line-height: $line-height-banner;
+    text-transform: uppercase;
+
+    &.logo svg {
+      height: $banner-logo-height-mobile;
+      width: $banner-logo-width-mobile;
+    }
+
+    &.menu-link {
+      left: 0;
+      position: absolute;
+      top: 0;
+    }
+
+    &.menu-open {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    &.menu-close {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    &.login-link,
+    &.trial-link {
+      padding-left: 20px !important;
+      padding-right: 0 !important;
+      transition: color 300ms 0s;
+    }
+
+    &.menu-open-sibling {
+      opacity: 1;
+      padding-right: 20px !important;
+    }
+  }
+}
+
+@include jacket($jacket-critical) {
   @media (min-width: $width-desktop) {
     .banner {
       height: $banner-height-desktop;
@@ -121,11 +135,9 @@
       padding-top: 5px;
     }
   }
-
 }
 
 @include jacket($jacket-standard) {
-
   .banner {
     a {
       &.menu-open {
@@ -146,7 +158,6 @@
       }
     }
   }
-
 }
 
 
@@ -170,9 +181,7 @@
   }
 }
 
-
 @include jacket ($jacket-critical) {
-
   .menu-active .banner a {
     &.menu-open {
       opacity: 0;
@@ -196,5 +205,4 @@
       transition: opacity 150ms 0s, visibility 0s 300ms, color 300ms;
     }
   }
-
 }
