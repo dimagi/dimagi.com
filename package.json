@@ -25,5 +25,10 @@
     "requirejs": "^2.3.5",
     "rjs": "^4.0.2",
     "uglifyjs": "^2.4.11"
-  }
+  },
+  "browserslist": [
+    "last 1 version",
+    "> 1%",
+    "IE 10"
+  ]
 }
