@@ -77,7 +77,7 @@ linters:
     enabled: true
   Shorthand:
     enabled: true
-    allowed_shorthands: [1]
+    allowed_shorthands: [1, 2, 3, 4]
   SingleLinePerSelector:
     enabled: true
   SpaceAfterComma:
