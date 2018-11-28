@@ -1,3 +1,4 @@
+@import 'app/lib/jacket';
 @import 'app/variables/sizes';
 
 $_logo-heights: (
@@ -8,29 +9,33 @@ $_logo-heights: (
   extra-large: 42px,
 );
 
-.partners .column {
-  height: map-get($_logo-heights, 'medium');
-  position: relative;
-
-  .partner-logo {
-    display: none;
+@include jacket ($jacket-critical) {
+  .partners .column {
     height: map-get($_logo-heights, 'medium');
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
+    position: relative;
 
-    &.current {
-      display: block;
+    .partner-logo {
+      display: none;
+      height: map-get($_logo-heights, 'medium');
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+
+      &.current {
+        display: block;
+      }
     }
   }
 }
 
-@each $_size, $_width in $widths-by-size {
-  @media (min-width: $_width) {
-    .partners .column,
-    .partners .column .partner-logo {
-      height: map-get($_logo-heights, $_size);
+@include jacket ($jacket-standard) {
+  @each $_size, $_width in $widths-by-size {
+    @media (min-width: $_width) {
+      .partners .column,
+      .partners .column .partner-logo {
+        height: map-get($_logo-heights, $_size);
+      }
     }
   }
 }

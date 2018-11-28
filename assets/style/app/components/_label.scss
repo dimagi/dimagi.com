@@ -1,24 +1,27 @@
-@import "app/variables/colors";
-@import "app/variables/sizes";
-@import "app/variables/type";
+@import 'app/lib/jacket';
+@import 'app/variables/colors';
+@import 'app/variables/sizes';
+@import 'app/variables/type';
 
-label {
-  display: block;
-  width: 100%;
-  font-size: 12px;
-  line-height: $space-line;
-  font-weight: 600;
-  color: #5f6a7d
-}
+@include jacket ($jacket-standard) {
+  label {
+    color: $color-text;
+    display: block;
+    font-size: 12px;
+    font-weight: $font-weight-medium;
+    line-height: $space-line;
+    width: 100%;
+  }
 
-.show-time label {
-  transition: color 300ms;
-}
+  .show-time label {
+    transition: color 300ms;
+  }
 
-.error label {
-  color: $color-red;
-}
+  .error label {
+    color: $color-red;
+  }
 
-.validated label {
-  color: $color-green;
+  .validated label {
+    color: $color-green;
+  }
 }

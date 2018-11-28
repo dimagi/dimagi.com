@@ -1,55 +1,60 @@
+@import 'app/lib/jacket';
 @import 'app/variables/colors';
 @import 'app/variables/sizes';
 
-@media (min-width: $width-desktop) {
-  .tile:hover .flip-card .flipper {
-    transform: rotateY(180deg);
-  }
+@include jacket ($jacket-standard) {
 
-  .flip-card {
-    perspective: 1000px;
-
-    .flipper {
-      position: relative;
-      transform-style: preserve-3d;
-      transition: .6s;
-    }
-
-    &:hover .flipper,
-    &.flipped .flipper {
+  @media (min-width: $width-desktop) {
+    .tile:hover .flip-card .flipper {
       transform: rotateY(180deg);
     }
+
+    .flip-card {
+      perspective: 1000px;
+
+      .flipper {
+        position: relative;
+        transform-style: preserve-3d;
+        transition: .6s;
+      }
+
+      &:hover .flipper,
+      &.flipped .flipper {
+        transform: rotateY(180deg);
+      }
+
+      .front,
+      .back {
+        backface-visibility: hidden;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+      }
+
+      .front {
+        transform: rotateY(0deg);
+        z-index: 2;
+      }
+
+      .back {
+        transform: rotateY(180deg);
+      }
+    }
+  }
+
+  .touch .flip-card {
+    perspective: inherit;
 
     .front,
     .back {
-      backface-visibility: hidden;
-      height: 100%;
-      left: 0;
-      position: absolute;
-      top: 0;
-      width: 100%;
-    }
-
-    .front {
+      height: auto;
+      left: auto;
+      padding-bottom: 20px;
+      position: initial;
       transform: rotateY(0deg);
-      z-index: 2;
-    }
-
-    .back {
-      transform: rotateY(180deg);
     }
   }
-}
 
-.touch .flip-card {
-  perspective: inherit;
-
-  .front,
-  .back {
-    height: auto;
-    left: auto;
-    padding-bottom: 20px;
-    position: initial;
-    transform: rotateY(0deg);
-  }
 }

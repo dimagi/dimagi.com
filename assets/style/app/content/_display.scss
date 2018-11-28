@@ -1,3 +1,4 @@
+@import 'app/lib/jacket';
 @import 'app/variables/sizes';
 
 @mixin _make-display-at($_size: null) {
@@ -30,44 +31,46 @@
   }
 }
 
-@include _make-display-at();
+@include jacket ($jacket-critical) {
+  @include _make-display-at();
 
-@each $_size, $_width in $widths-by-size {
-  @media (min-width: $_width) {
-    @include _make-display-at($_size);
-  }
+  @each $_size, $_width in $widths-by-size {
+    @media (min-width: $_width) {
+      @include _make-display-at($_size);
+    }
 
-  @media (max-width: $_width - 1) {
-    .hide-until-#{$_size} {
-      display: none !important; // scss-lint:disable ImportantRule
+    @media (max-width: $_width - 1) {
+      .hide-until-#{$_size} {
+        display: none !important; // scss-lint:disable ImportantRule
+      }
     }
   }
-}
 
-.js .hide-if-js {
-  display: none !important; // scss-lint:disable ImportantRule
-}
+  .js .hide-if-js {
+    display: none !important; // scss-lint:disable ImportantRule
+  }
 
-.no-js .hide-unless-js {
-  display: none !important; // scss-lint:disable ImportantRule
-}
+  .no-js .hide-unless-js {
+    display: none !important; // scss-lint:disable ImportantRule
+  }
 
-.touch .hide-if-touch {
-  display: none !important; // scss-lint:disable ImportantRule
-}
+  .touch .hide-if-touch {
+    display: none !important; // scss-lint:disable ImportantRule
+  }
 
-.no-touch .hide-unless-touch {
-  display: none !important; // scss-lint:disable ImportantRule
-}
+  .no-touch .hide-unless-touch {
+    display: none !important; // scss-lint:disable ImportantRule
+  }
 
-.video .hide-if-video {
-  display: none !important; // scss-lint:disable ImportantRule
-}
+  .video .hide-if-video {
+    display: none !important; // scss-lint:disable ImportantRule
+  }
 
-.no-video .hide-unless-video {
-  display: none !important; // scss-lint:disable ImportantRule
-}
+  .no-video .hide-unless-video {
+    display: none !important; // scss-lint:disable ImportantRule
+  }
 
-.hidden {
-  display: none !important; // scss-lint:disable ImportantRule
+  .hidden {
+    display: none !important; // scss-lint:disable ImportantRule
+  }
 }

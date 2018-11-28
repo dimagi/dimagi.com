@@ -1,8 +1,12 @@
-section {
-  position: relative;
-  z-index: 1;
+@import 'app/lib/jacket';
 
-  *:last-child {
-    margin-bottom: 0;
+@include jacket ($jacket-critical) {
+  section {
+    position: relative;
+    z-index: 1;
+
+    *:last-child {
+      margin-bottom: 0;
+    }
   }
 }

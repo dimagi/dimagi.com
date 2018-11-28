@@ -1,11 +1,15 @@
-.expand {
-  max-width: 100% !important; // scss-lint:disable ImportantRule
-  min-width: 0 !important; // scss-lint:disable ImportantRule
-  width: 100% !important; // scss-lint:disable ImportantRule
-}
+@import 'app/lib/jacket';
 
-.expand-vertical {
-  height: 100% !important; // scss-lint:disable ImportantRule
-  max-height: 100% !important; // scss-lint:disable ImportantRule
-  min-height: 0 !important; // scss-lint:disable ImportantRule
+@include jacket ($jacket-standard) {
+  .expand {
+    max-width: 100% !important; // scss-lint:disable ImportantRule
+    min-width: 0 !important; // scss-lint:disable ImportantRule
+    width: 100% !important; // scss-lint:disable ImportantRule
+  }
+
+  .expand-vertical {
+    height: 100% !important; // scss-lint:disable ImportantRule
+    max-height: 100% !important; // scss-lint:disable ImportantRule
+    min-height: 0 !important; // scss-lint:disable ImportantRule
+  }
 }

@@ -1,63 +1,67 @@
+@import 'app/lib/jacket';
 @import 'app/variables/colors';
 @import 'app/variables/sizes';
 @import 'app/variables/type';
 
-.hs-form fieldset {
-  margin-right: -20px !important; // scss-lint:disable ImportantRule
-  max-width: inherit !important; // scss-lint:disable ImportantRule
-}
 
-.hs-form .input .hs-input {
-  margin-right: 20px !important; // scss-lint:disable ImportantRule
-  width: calc(100% - 20px) !important; // scss-lint:disable ImportantRule
-}
-
-.hs-form label,
-.hs-form legend,
-.hs-form .input,
-.hs-form .actions {
-  margin-left: 0 !important; // scss-lint:disable ImportantRule
-  margin-right: 0 !important; // scss-lint:disable ImportantRule
-}
-
-.hs-error-msgs,
-.hs-error-msgs label {
-  color: $color-red;
-}
-
-.hs-error-msgs li {
-  list-style: none;
-  padding: 0;
-
-  &:before {
-    display: none;
+@include jacket ($jacket-standard) {
+  .hs-form fieldset {
+    margin-right: -20px !important; // scss-lint:disable ImportantRule
+    max-width: inherit !important; // scss-lint:disable ImportantRule
   }
-}
 
-.hs-form .input .hs-input.error {
-  border-color: $color-red;
-}
-
-.hs-form-field {
-  padding-bottom: 20px;
-}
-
-.hubspot-download .hs-form-field {
-  display: inline-block;
-  vertical-align: top;
-  width: 40%;
-
-  label,
-  legend {
-    display: none;
+  .hs-form .input .hs-input {
+    margin-right: 20px !important; // scss-lint:disable ImportantRule
+    width: calc(100% - 20px) !important; // scss-lint:disable ImportantRule
   }
-}
 
-.hubspot-download .hs-submit {
-  display: inline-block;
-  vertical-align: top;
-}
+  .hs-form label,
+  .hs-form legend,
+  .hs-form .input,
+  .hs-form .actions {
+    margin-left: 0 !important; // scss-lint:disable ImportantRule
+    margin-right: 0 !important; // scss-lint:disable ImportantRule
+  }
 
-.hs-richtext {
-  padding-bottom: $space-line;
+  .hs-error-msgs,
+  .hs-error-msgs label {
+    color: $color-red;
+  }
+
+  .hs-error-msgs li {
+    list-style: none;
+    padding: 0;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .hs-form .input .hs-input.error {
+    border-color: $color-red;
+  }
+
+  .hs-form-field {
+    padding-bottom: 20px;
+  }
+
+  .hubspot-download .hs-form-field {
+    display: inline-block;
+    vertical-align: top;
+    width: 40%;
+
+    label,
+    legend {
+      display: none;
+    }
+  }
+
+  .hubspot-download .hs-submit {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  .hs-richtext {
+    padding-bottom: $space-line;
+  }
 }

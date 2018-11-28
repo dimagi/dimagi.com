@@ -1,40 +1,44 @@
+@import 'app/lib/jacket';
 @import 'app/variables/colors';
 @import 'app/variables/sizes';
 @import 'app/variables/type';
 
-html {
-  text-size-adjust: 100%;
-}
+@include jacket ($jacket-critical) {
 
-body {
-  color: $color-text;
-  font-family: $font-family-base;
-  font-size: $font-size-medium;
-  font-smoothing: always;
-  font-weight: $font-weight-text;
-  line-height: $space-line;
-  text-rendering: optimizeLegibility;
-}
+  html {
+    text-size-adjust: 100%;
+  }
 
-article {
-  font-size: $font-size-large;
-  line-height: $line-height-header;
-}
+  body {
+    color: $color-text;
+    font-family: $font-family-base;
+    font-size: $font-size-medium;
+    font-smoothing: always;
+    font-weight: $font-weight-text;
+    line-height: $space-line;
+    text-rendering: optimizeLegibility;
+  }
 
-p {
-  margin-bottom: $space-line;
-}
+  article {
+    font-size: $font-size-large;
+    line-height: $line-height-header;
+  }
 
-strong,
-b {
-  font-weight: $font-weight-medium;
-}
+  p {
+    margin-bottom: $space-line;
+  }
 
-em {
-  font-style: italic;
-}
+  strong,
+  b {
+    font-weight: $font-weight-medium;
+  }
 
-sup {
-  font-size: .5em;
-  vertical-align: super;
+  em {
+    font-style: italic;
+  }
+
+  sup {
+    font-size: .5em;
+    vertical-align: super;
+  }
 }

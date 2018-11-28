@@ -1,83 +1,95 @@
+@import 'app/lib/jacket';
 @import 'app/variables/colors';
 @import 'app/variables/sizes';
 
-.switch {
-  display: inline-block;
-  height: $toggle-switch-height;
-  position: relative;
-  width: $toggle-switch-width;
+@include jacket ($jacket-standard) {
+  .switch {
+    display: inline-block;
+    height: $toggle-switch-height;
+    position: relative;
+    width: $toggle-switch-width;
 
-  input {
-    display: none;
+    input {
+      display: none;
+    }
+
   }
-
 }
 
 $_slider-padding: 4px;
 $_slider-height: $toggle-switch-height - $_slider-padding * 2;
 
-.slider {
-  background-color: $color-accent-gray;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  position: absolute;
-  transition: .4s;
-
-  &::before {
-    background-color: $color-white;
-    bottom: $_slider-padding;
-    content: "";
-    height: $_slider-height;
-    left: $_slider-padding;
+@include jacket ($jacket-standard) {
+  .slider {
+    background-color: $color-accent-gray;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     position: absolute;
     transition: .4s;
-    width: $_slider-height;
+
+    &::before {
+      background-color: $color-white;
+      bottom: $_slider-padding;
+      content: "";
+      height: $_slider-height;
+      left: $_slider-padding;
+      position: absolute;
+      transition: .4s;
+      width: $_slider-height;
+    }
+  }
+
+  input:checked + .slider {
+    background-color: $color-blue;
   }
 }
 
-input:checked + .slider {
-  background-color: $color-blue;
-}
+@include jacket ($jacket-standard) {
+  @each $_theme, $_color in $colors-by-theme {
+    .slider-#{$_theme} {
+      background-color: $_color;
+    }
 
-@each $_theme, $_color in $colors-by-theme {
-  .slider-#{$_theme} {
-    background-color: $_color;
-  }
-
-  input:checked + .slider-#{$_theme}-on {
-    background-color: $_color;
+    input:checked + .slider-#{$_theme}-on {
+      background-color: $_color;
+    }
   }
 }
 
-input:focus + .slider {
-  box-shadow: 0 0 1px $color-link-gray;
+@include jacket ($jacket-standard) {
+  input:focus + .slider {
+    box-shadow: 0 0 1px $color-link-gray;
+  }
 }
 
 $_translate-amount: $toggle-switch-width - $_slider-height - $_slider-padding * 2 ;
 
-input:checked + .slider:before {
-  transform: translateX($_translate-amount);
-}
 
-.slider.round {
-  border-radius: $toggle-switch-height;
-
-  &::before {
-    border-radius: 50%;
+@include jacket ($jacket-standard) {
+  input:checked + .slider:before {
+    transform: translateX($_translate-amount);
   }
-}
 
-.switch-label {
-  vertical-align: top;
-  line-height: $toggle-switch-height;
-  font-weight: bold;
+  .slider.round {
+    border-radius: $toggle-switch-height;
 
-  .switch {
-    margin-bottom: -$_slider-height * .45;
-    margin-left: $_slider-padding * 2;
-    margin-right: $_slider-padding * 2;
+    &::before {
+      border-radius: 50%;
+    }
+  }
+
+  .switch-label {
+    vertical-align: top;
+    line-height: $toggle-switch-height;
+    font-weight: bold;
+
+    .switch {
+      margin-bottom: -$_slider-height * .45;
+      margin-left: $_slider-padding * 2;
+      margin-right: $_slider-padding * 2;
+    }
   }
 }

@@ -1,8 +1,12 @@
-.collapse {
-  height: 0;
-  overflow: hidden;
-}
+@import 'app/lib/jacket';
 
-.fade {
-  opacity: 0;
+@include jacket ($jacket-critical) {
+  .collapse {
+    height: 0;
+    overflow: hidden;
+  }
+
+  .fade {
+    opacity: 0;
+  }
 }

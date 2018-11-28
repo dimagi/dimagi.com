@@ -1,51 +1,21 @@
+@import 'app/lib/jacket';
 @import 'app/variables/colors';
 @import 'app/variables/sizes';
 @import 'app/variables/type';
 
-.grid-testimonial {
-  color: $color-accent-gray;
-}
+@include jacket ($jacket-standard) {
 
-.grid-testimonial blockquote,
-.grid-testimonial .callout {
-  color: inherit;
-  font-size: 12px;
-  line-height: 18px;
-  margin-bottom: 0;
-  padding: 30px;
-
-  p { // scss-lint:disable SelectorDepth
-    margin-bottom: 10px;
+  .grid-testimonial {
+    color: $color-accent-gray;
   }
 
-  cite { // scss-lint:disable SelectorDepth
-    font-size: 8px;
-    line-height: 12px;
-  }
-}
-
-@media (min-width: $width-mobile) {
-  .grid-testimonial [class*="aspect-ratio-"] blockquote,
-  .grid-testimonial [class*="aspect-ratio-"] .callout {
-    font-size: 18px;
-    line-height: 28px;
-
-    p { // scss-lint:disable SelectorDepth
-      margin-bottom: 10px;
-    }
-
-    cite { // scss-lint:disable SelectorDepth
-      font-size: 11px;
-      line-height: 18px;
-    }
-  }
-}
-
-@media (min-width: $width-desktop) {
-  .grid-testimonial [class*="aspect-ratio-"] blockquote,
-  .grid-testimonial [class*="aspect-ratio-"] .callout {
-    font-size: 14px;
-    line-height: 20px;
+  .grid-testimonial blockquote,
+  .grid-testimonial .callout {
+    color: inherit;
+    font-size: 12px;
+    line-height: 18px;
+    margin-bottom: 0;
+    padding: 30px;
 
     p { // scss-lint:disable SelectorDepth
       margin-bottom: 10px;
@@ -56,25 +26,60 @@
       line-height: 12px;
     }
   }
-}
 
-@media (min-width: $width-desktop-lg) {
-  .grid-testimonial [class*="aspect-ratio-"] blockquote,
-  .grid-testimonial [class*="aspect-ratio-"] .callout {
-    font-size: 18px;
-    line-height: 28px;
+  @media (min-width: $width-mobile) {
+    .grid-testimonial [class*="aspect-ratio-"] blockquote,
+    .grid-testimonial [class*="aspect-ratio-"] .callout {
+      font-size: 18px;
+      line-height: 28px;
 
-    cite { // scss-lint:disable SelectorDepth
-      font-size: 11px;
-      line-height: 18px;
+      p { // scss-lint:disable SelectorDepth
+        margin-bottom: 10px;
+      }
+
+      cite { // scss-lint:disable SelectorDepth
+        font-size: 11px;
+        line-height: 18px;
+      }
     }
   }
-}
 
-@media (min-width: $width-desktop-xl) {
-  .grid-testimonial [class*="aspect-ratio-"] blockquote,
-  .grid-testimonial [class*="aspect-ratio-"] .callout {
-    font-size: 24px;
-    line-height: 30px;
+  @media (min-width: $width-desktop) {
+    .grid-testimonial [class*="aspect-ratio-"] blockquote,
+    .grid-testimonial [class*="aspect-ratio-"] .callout {
+      font-size: 14px;
+      line-height: 20px;
+
+      p { // scss-lint:disable SelectorDepth
+        margin-bottom: 10px;
+      }
+
+      cite { // scss-lint:disable SelectorDepth
+        font-size: 8px;
+        line-height: 12px;
+      }
+    }
   }
+
+  @media (min-width: $width-desktop-lg) {
+    .grid-testimonial [class*="aspect-ratio-"] blockquote,
+    .grid-testimonial [class*="aspect-ratio-"] .callout {
+      font-size: 18px;
+      line-height: 28px;
+
+      cite { // scss-lint:disable SelectorDepth
+        font-size: 11px;
+        line-height: 18px;
+      }
+    }
+  }
+
+  @media (min-width: $width-desktop-xl) {
+    .grid-testimonial [class*="aspect-ratio-"] blockquote,
+    .grid-testimonial [class*="aspect-ratio-"] .callout {
+      font-size: 24px;
+      line-height: 30px;
+    }
+  }
+
 }

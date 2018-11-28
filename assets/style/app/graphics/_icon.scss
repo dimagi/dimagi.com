@@ -1,21 +1,24 @@
+@import 'app/lib/jacket';
 @import 'app/variables/colors';
 
-.inline-icon-link {
-  align-items: center;
-  display: flex;
+@include jacket ($jacket-standard) {
+  .inline-icon-link {
+    align-items: center;
+    display: flex;
 
-  svg {
+    svg {
+      flex-shrink: 0;
+    }
+  }
+
+  .icon {
     flex-shrink: 0;
   }
-}
 
-.icon {
-  flex-shrink: 0;
-}
-
-.icon-white {
-  svg,
-  svg * {
-    fill: $color-white !important; //scss-lint:disable ImportantRule
+  .icon-white {
+    svg,
+    svg * {
+      fill: $color-white !important; // scss-lint:disable ImportantRule
+    }
   }
 }

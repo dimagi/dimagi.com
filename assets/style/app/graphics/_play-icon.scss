@@ -1,78 +1,82 @@
+@import 'app/lib/jacket';
 @import 'app/variables/colors';
 @import 'app/variables/sizes';
 
-[class*="play-icon-"] {
-  display: block;
-  position: relative;
-
-  &:before,
-  &:after {
-    content: ' ';
+@include jacket ($jacket-standard) {
+  [class*="play-icon-"] {
     display: block;
-    left: 50%;
-    position: absolute;
-    top: 50%;
-  }
+    position: relative;
 
-  &:before {
-    background-color: $color-link;
-    border-radius: 100%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-  }
-
-  &:after {
-    border-color: transparent;
-    border-left-color: $color-white;
-    border-right-width: 0;
-    border-style: solid;
-    transform: translate(-28%, -50%) rotate(360deg);
-    z-index: 3;
-  }
-
-  &.alt:before {
-    background-color: transparent !important; // scss-lint:disable ImportantRule
-    border: 2px solid $color-white;
-  }
-}
-
-.show-time [class*="play-icon-"]:before {
-  transition: background-color 300ms;
-}
-
-a:hover[class*="play-icon-"]:before,
-a:hover [class*="play-icon-"]:before,
-a:focus[class*="play-icon-"]:before,
-a:focus [class*="play-icon-"]:before {
-  background-color: color-hover($color-link);
-}
-
-a:active[class*="play-icon-"]:before,
-a:active [class*="play-icon-"]:before {
-  background-color: color-active($color-link);
-}
-
-@each $_theme, $_color in $colors-by-theme {
-  .#{$_theme}-theme {
-    [class*="play-icon-"]:before {
-      background-color: $_color;
+    &:before,
+    &:after {
+      content: ' ';
+      display: block;
+      left: 50%;
+      position: absolute;
+      top: 50%;
     }
 
-    a:hover[class*="play-icon-"]:before,
-    a:hover [class*="play-icon-"]:before,
-    a:focus[class*="play-icon-"]:before,
-    a:focus [class*="play-icon-"]:before {
-      background-color: color-hover($_color);
+    &:before {
+      background-color: $color-link;
+      border-radius: 100%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
     }
 
-
-    a:active[class*="play-icon-"]:before,
-    a:active [class*="play-icon-"]:before {
-      background-color: color-active($_color);
+    &:after {
+      border-color: transparent;
+      border-left-color: $color-white;
+      border-right-width: 0;
+      border-style: solid;
+      transform: translate(-28%, -50%) rotate(360deg);
+      z-index: 3;
     }
+
+    &.alt:before {
+      background-color: transparent !important; // scss-lint:disable ImportantRule
+      border: 2px solid $color-white;
+    }
+  }
+
+  .show-time [class*="play-icon-"]:before {
+    transition: background-color 300ms;
+  }
+
+  a:hover[class*="play-icon-"]:before,
+  a:hover [class*="play-icon-"]:before,
+  a:focus[class*="play-icon-"]:before,
+  a:focus [class*="play-icon-"]:before {
+    background-color: color-hover($color-link);
+  }
+
+  a:active[class*="play-icon-"]:before,
+  a:active [class*="play-icon-"]:before {
+    background-color: color-active($color-link);
   }
 }
 
+@include jacket ($jacket-standard) {
+  @each $_theme, $_color in $colors-by-theme {
+    .#{$_theme}-theme {
+      [class*="play-icon-"]:before {
+        background-color: $_color;
+      }
+
+      a:hover[class*="play-icon-"]:before,
+      a:hover [class*="play-icon-"]:before,
+      a:focus[class*="play-icon-"]:before,
+      a:focus [class*="play-icon-"]:before {
+        background-color: color-hover($_color);
+      }
+
+
+      a:active[class*="play-icon-"]:before,
+      a:active [class*="play-icon-"]:before {
+        background-color: color-active($_color);
+      }
+    }
+  }
+}
 
 $_sqrts-by-type: (
   line: 5.65685px,
@@ -81,29 +85,31 @@ $_sqrts-by-type: (
   large: 22.62742px,
 );
 
-@each $_type, $_sqrt in $_sqrts-by-type {
-  $_space: map-get($space-by-type, $_type);
+@include jacket ($jacket-standard) {
+  @each $_type, $_sqrt in $_sqrts-by-type {
+    $_space: map-get($space-by-type, $_type);
 
-  .play-icon-#{$_type}:before {
-    height: $_space;
-    width: $_space;
-  }
+    .play-icon-#{$_type}:before {
+      height: $_space;
+      width: $_space;
+    }
 
-  .play-icon-#{$_type}:after {
-    border-bottom-width: $_space / 5;
-    border-left-width: $_sqrt;
-    border-top-width: $_space / 5;
-  }
+    .play-icon-#{$_type}:after {
+      border-bottom-width: $_space / 5;
+      border-left-width: $_sqrt;
+      border-top-width: $_space / 5;
+    }
 
-  .cta .play-icon-#{$_type} {
-    align-items: center;
-    display: inline-flex;
-    min-height: $_space;
-    padding-left: $_space + 10px;
-  }
+    .cta .play-icon-#{$_type} {
+      align-items: center;
+      display: inline-flex;
+      min-height: $_space;
+      padding-left: $_space + 10px;
+    }
 
-  .cta .play-icon-#{$_type}:before,
-  .cta .play-icon-#{$_type}:after {
-    left: $_space / 2;
+    .cta .play-icon-#{$_type}:before,
+    .cta .play-icon-#{$_type}:after {
+      left: $_space / 2;
+    }
   }
 }

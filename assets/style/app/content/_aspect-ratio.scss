@@ -1,3 +1,4 @@
+@import 'app/lib/jacket';
 @import 'app/variables/sizes';
 
 @mixin _make-aspect-ratio-at($_size: null) {
@@ -27,8 +28,10 @@
   }
 }
 
-@include _make-aspect-ratio-at();
+@include jacket ($jacket-standard) {
+  @include _make-aspect-ratio-at();
 
-@each $_size, $_width in $widths-by-size {
-  @include _make-aspect-ratio-at($_size);
+  @each $_size, $_width in $widths-by-size {
+    @include _make-aspect-ratio-at($_size);
+  }
 }

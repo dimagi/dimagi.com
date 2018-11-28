@@ -1,193 +1,213 @@
+@import 'app/lib/jacket';
 @import 'app/variables/colors';
 @import 'app/variables/sizes';
 @import 'app/variables/type';
 
-.carousel {
-  user-select: none;
-}
 
-.carousel-container {
-  cursor: grab;
-  overflow: hidden;
-  position: relative;
-  z-index: 1;
-
-  &[data-dragging="true"] {
-    cursor: grabbing;
+@include jacket($jacket-critical) {
+  .carousel {
+    user-select: none;
   }
 
-  .spinner {
-    left: 50%;
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-  }
-}
+  .carousel-container {
+    cursor: grab;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
 
-.carousel-slider {
-  font-size: 0;
-  line-height: 0;
-  position: relative;
-  white-space: nowrap;
-}
+    &[data-dragging="true"] {
+      cursor: grabbing;
+    }
 
-html.show-time .carousel-slider[data-animating="true"] {
-  transition: transform 300ms cubic-bezier(0, 0, .2, 1);
-}
-
-.carousel-slide {
-  display: inline-block;
-  font-size: $font-size-medium;
-  line-height: $space-line;
-  margin-right: $space-base;
-  max-width: $content-width-base;
-  position: relative;
-  transition: opacity 225ms ease-in-out 195ms;
-  vertical-align: top;
-  white-space: normal;
-}
-
-@each $_size, $_width in $widths-by-size {
-  @media (min-width: $_width) {
-    .carousel-slide {
-      max-width: map-get($content-widths-by-size, $_size);
+    .spinner {
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
     }
   }
+
+  .carousel-slider {
+    font-size: 0;
+    line-height: 0;
+    position: relative;
+    white-space: nowrap;
+  }
+
+  .carousel-slide {
+    display: inline-block;
+    font-size: $font-size-medium;
+    line-height: $space-line;
+    margin-right: $space-base;
+    max-width: $content-width-base;
+    position: relative;
+    vertical-align: top;
+    white-space: normal;
+  }
+
+  @each $_size, $_width in $widths-by-size {
+    @media (min-width: $_width) {
+      .carousel-slide {
+        max-width: map-get($content-widths-by-size, $_size);
+      }
+    }
+  }
+
+  .carousel[data-loading="true"] .carousel-slide {
+    opacity: 0;
+  }
 }
 
-.carousel[data-loading="true"] .carousel-slide {
-  opacity: 0;
-}
 
-.carousel-fade-inactive {
+@include jacket($jacket-standard) {
 
-  .carousel-slide[data-active="true"] {
-    opacity: 1;
+  .show-time .carousel-slider[data-animating="true"] {
+    transition: transform 300ms cubic-bezier(0, 0, .2, 1);
+  }
+
+  .carousel-slide {
+    transition: opacity 225ms ease-in-out 195ms;
+  }
+
+  .carousel-fade-inactive {
+
+    .carousel-slide[data-active="true"] {
+      opacity: 1;
+    }
+
+    .carousel-slide:not([data-active="true"]) {
+      cursor: pointer;
+      opacity: .5;
+    }
+
   }
 
   .carousel-slide:not([data-active="true"]) {
     cursor: pointer;
-    opacity: .5;
   }
 
-}
-
-.carousel-slide:not([data-active="true"]) {
-  cursor: pointer;
-}
-
-.carousel-slider[data-dragging="true"] .carousel-slide {
-  cursor: grabbing;
-}
-
-@media (min-width: $width-desktop) {
-  .carousel-slide {
-    margin-right: $space-line;
+  .carousel-slider[data-dragging="true"] .carousel-slide {
+    cursor: grabbing;
   }
-}
 
-.carousel-slide:last-of-type {
-  margin-right: 0;
-}
-
-@each $_type, $_space in $space-by-type {
-
-  .carousel-gap-#{$_type} {
+  @media (min-width: $width-desktop) {
     .carousel-slide {
-      margin-right: $_space;
+      margin-right: $space-line;
+    }
+  }
 
-      &:last-of-type {
-        margin-right: 0;
+  .carousel-slide:last-of-type {
+    margin-right: 0;
+  }
+
+  @each $_type, $_space in $space-by-type {
+
+    .carousel-gap-#{$_type} {
+      .carousel-slide {
+        margin-right: $_space;
+
+        &:last-of-type {
+          margin-right: 0;
+        }
       }
     }
   }
+
 }
 
-.carousel-dots { // scss-lint:disable PropertyCount
-  display: block;
-  font-size: 0;
-  line-height: 0;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: $space-line;
-  max-width: $content-width-base;
-  pointer-events: none;
-  position: relative;
-  text-align: center;
-  width: 100%;
-  z-index: 1;
-}
+@include jacket ($jacket-critical) {
 
-@each $_size, $_width in $widths-by-size {
-  @media (min-width: $_width) {
-    .carousel-dots {
-      max-width: map-get($content-widths-by-size, $_size);
+  .carousel-dots { // scss-lint:disable PropertyCount
+    display: block;
+    font-size: 0;
+    line-height: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: $space-line;
+    max-width: $content-width-base;
+    pointer-events: none;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    z-index: 1;
+  }
+
+  @each $_size, $_width in $widths-by-size {
+    @media (min-width: $_width) {
+      .carousel-dots {
+        max-width: map-get($content-widths-by-size, $_size);
+      }
     }
   }
+
 }
 
-@media (min-width: $width-desktop) {
-  .carousel-dots {
-    margin-top: $space-small;
+@include jacket ($jacket-standard) {
+
+  @media (min-width: $width-desktop) {
+    .carousel-dots {
+      margin-top: $space-small;
+    }
   }
-}
 
-.carousel-inset-ui .carousel-dots {
-  bottom: $space-small;
-  height: 0;
-  margin-top: 0;
-}
-
-@media (min-width: $width-desktop) {
   .carousel-inset-ui .carousel-dots {
-    bottom: $space-medium;
-  }
-}
-
-.carousel-dots [data-dot] {
-  border-radius: 50%;
-  cursor: pointer;
-  display: inline-block;
-  opacity: .25;
-  padding: 6px;
-  pointer-events: auto;
-
-  &:hover,
-  &:focus {
-    opacity: .5;
+    bottom: $space-small;
+    height: 0;
+    margin-top: 0;
   }
 
-  &:active {
-    opacity: 1;
+  @media (min-width: $width-desktop) {
+    .carousel-inset-ui .carousel-dots {
+      bottom: $space-medium;
+    }
   }
 
-  &[data-active="true"] {
-    opacity: 1;
-    pointer-events: none;
-  }
-
-  &:before {
-    background-color: rgba(0, 0, 0, .5);
-    border-radius: 50%;
-    content: ' ';
-    display: block;
-    height: 8px;
-    width: 8px;
-  }
-}
-
-html.show-time .carousel-dots [data-dot] {
-  transition: opacity 150ms cubic-bezier(.4, 0, .6, 1);
-}
-
-@media (min-width: $width-desktop) {
   .carousel-dots [data-dot] {
-    padding: $space-base;
+    border-radius: 50%;
+    cursor: pointer;
+    display: inline-block;
+    opacity: .25;
+    padding: 6px;
+    pointer-events: auto;
+
+    &:hover,
+    &:focus {
+      opacity: .5;
+    }
+
+    &:active {
+      opacity: 1;
+    }
+
+    &[data-active="true"] {
+      opacity: 1;
+      pointer-events: none;
+    }
 
     &:before {
-      height: $space-base;
-      width: $space-base;
+      background-color: rgba(0, 0, 0, .5);
+      border-radius: 50%;
+      content: ' ';
+      display: block;
+      height: 8px;
+      width: 8px;
     }
   }
+
+  html.show-time .carousel-dots [data-dot] {
+    transition: opacity 150ms cubic-bezier(.4, 0, .6, 1);
+  }
+
+  @media (min-width: $width-desktop) {
+    .carousel-dots [data-dot] {
+      padding: $space-base;
+
+      &:before {
+        height: $space-base;
+        width: $space-base;
+      }
+    }
+  }
+
 }

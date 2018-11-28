@@ -1,3 +1,4 @@
+@import 'app/lib/jacket';
 @import 'app/variables/sizes';
 
 @mixin _make-pad($_type, $_space, $_suffix) {
@@ -100,11 +101,14 @@
   }
 }
 
-@include _make-spacing-at();
-
-@each $_size, $_width in $widths-by-size {
-  @media (min-width: $_width) {
-    @include _make-spacing-at($_size);
-  }
+@include jacket ($jacket-critical) {
+  @include _make-spacing-at();
 }
 
+@include jacket ($jacket-standard) {
+  @each $_size, $_width in $widths-by-size {
+    @media (min-width: $_width) {
+      @include _make-spacing-at($_size);
+    }
+  }
+}

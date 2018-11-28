@@ -1,56 +1,62 @@
+@import 'app/lib/jacket';
 @import 'app/variables/colors';
 @import 'app/variables/sizes';
 @import 'app/variables/type';
 
-.intro {
-  margin-bottom: 30px;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 40em;
-  text-align: center;
 
-  h1,
-  .h1,
-  h2,
-  .h2,
-  h3,
-  .h3 {
-    font-size: 32px;
-    line-height: 40px;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-  }
-
-  h4,
-  .h4,
-  h5,
-  .h5,
-  h6,
-  .h6 {
-    font-size: 28px;
-    font-weight: 300;
-    line-height: $line-height-header;
-    margin-bottom: 10px;
-  }
-}
-
-@media (min-width: $width-desktop) {
+@include jacket ($jacket-critical) {
   .intro {
-    margin-bottom: 40px;
-  }
-}
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 40em;
+    text-align: center;
 
-@each $_name, $_color in $colors-by-theme {
-  .#{$_name}-theme .intro {
     h1,
     .h1,
     h2,
     .h2,
     h3,
     .h3 {
-      color: $_color;
+      font-size: 32px;
+      line-height: 40px;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+
+    h4,
+    .h4,
+    h5,
+    .h5,
+    h6,
+    .h6 {
+      font-size: 28px;
+      font-weight: 300;
+      line-height: $line-height-header;
+      margin-bottom: 10px;
     }
   }
 }
 
+@include jacket ($jacket-standard) {
+  @media (min-width: $width-desktop) {
+    .intro {
+      margin-bottom: 40px;
+    }
+  }
+}
 
+@include jacket ($jacket-standard) {
+  @each $_name, $_color in $colors-by-theme {
+    .#{$_name}-theme .intro {
+      h1,
+      .h1,
+      h2,
+      .h2,
+      h3,
+      .h3 {
+        color: $_color;
+      }
+    }
+  }
+}

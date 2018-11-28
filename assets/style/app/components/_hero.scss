@@ -1,167 +1,156 @@
+@import 'app/lib/jacket';
 @import 'app/variables/colors';
 @import 'app/variables/sizes';
 @import 'app/variables/type';
 
-.hero {
-  background-color: $color-hero;
-  color: color-invert($color-hero);
-  overflow: hidden;
-  text-align: center;
-
-  .content {
-    padding-bottom: $hero-content-padding;
-    padding-top: $hero-content-padding;
-  }
-
-  .headline {
-    font-size: $font-size-headline;
-    line-height: $line-height-headline;
-  }
-
-  h1,
-  .h1,
-  h2,
-  .h2,
-  h3,
-  .h3,
-  h4,
-  .h4,
-  h5,
-  .h5,
-  h6,
-  .h6,
-  p,
-  ul,
-  ol,
-  a:not(.button) {
-    color: inherit;
-  }
-
-  h1,
-  .h1,
-  h2,
-  .h2,
-  h3,
-  .h3,
-  h4,
-  .h4,
-  h5,
-  .h5,
-  h6,
-  .h6 {
-    font-weight: $font-weight-text;
-  }
-
-  h2,
-  .h2 {
-    font-size: 14px;
-    font-weight: $font-weight-medium;
-    letter-spacing: 1px;
-    line-height: $space-line;
-    margin-bottom: 0;
-    text-transform: uppercase;
-  }
-
-  p:not(.cta) {
-    margin-bottom: $space-line;
-    margin-top: -$space-base;
-  }
-}
-
-@media (min-width: $width-desktop) {
+@include jacket ($jacket-critical) {
   .hero {
+    background-color: $color-hero;
+    color: color-invert($color-hero);
+    overflow: hidden;
+    text-align: center;
+
     .content {
-      padding-bottom: $hero-content-padding * 2;
-      padding-top: $hero-content-padding * 2;
+      padding-bottom: $hero-content-padding;
+      padding-top: $hero-content-padding;
+    }
+
+    .headline {
+      font-size: $font-size-headline;
+      line-height: $line-height-headline;
     }
 
     h1,
-    .h1 {
-      margin-left: auto;
-      margin-right: auto;
-      max-width: 50%;
+    .h1,
+    h2,
+    .h2,
+    h3,
+    .h3,
+    h4,
+    .h4,
+    h5,
+    .h5,
+    h6,
+    .h6,
+    p,
+    ul,
+    ol,
+    a:not(.button) {
+      color: inherit;
     }
-  }
-}
 
-@media (min-width: $width-desktop-lg) {
-  .hero {
+    h1,
+    .h1,
+    h2,
+    .h2,
+    h3,
+    .h3,
+    h4,
+    .h4,
+    h5,
+    .h5,
+    h6,
+    .h6 {
+      font-weight: $font-weight-text;
+    }
+
     h2,
     .h2 {
-      font-size: $font-size-hero-h2;
-      line-height: $line-height-hero-h2;
+      font-size: 14px;
+      font-weight: $font-weight-medium;
+      letter-spacing: 1px;
+      line-height: $space-line;
+      margin-bottom: 0;
+      text-transform: uppercase;
     }
 
     p:not(.cta) {
-      font-size: $font-size-hero-h2;
-      line-height: $line-height-hero-h2;
+      margin-bottom: $space-line;
+      margin-top: -$space-base;
     }
   }
 }
 
-@each $_theme, $_color in $colors-by-theme {
-  .#{$_theme}-theme .hero {
-    background-color: $_color;
-    color: color-invert($_color);
+@include jacket ($jacket-standard) {
+
+  @media (min-width: $width-desktop) {
+    .hero {
+      .content {
+        padding-bottom: $hero-content-padding * 2;
+        padding-top: $hero-content-padding * 2;
+      }
+
+      h1,
+      .h1 {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 50%;
+      }
+    }
   }
 
-  .hero.hero-#{$_theme} {
-    background-color: $_color;
-    color: color-invert($_color);
+  @media (min-width: $width-desktop-lg) {
+    .hero {
+      h2,
+      .h2 {
+        font-size: $font-size-hero-h2;
+        line-height: $line-height-hero-h2;
+      }
+
+      p:not(.cta) {
+        font-size: $font-size-hero-h2;
+        line-height: $line-height-hero-h2;
+      }
+    }
+  }
+
+}
+
+@include jacket ($jacket-standard) {
+  @each $_theme, $_color in $colors-by-theme {
+    .#{$_theme}-theme .hero {
+      background-color: $_color;
+      color: color-invert($_color);
+    }
+
+    .hero.hero-#{$_theme} {
+      background-color: $_color;
+      color: color-invert($_color);
+    }
   }
 }
 
-.tucked-hero .hero {
-  margin-top: -$menu-pad-top-mobile;
-  padding-top: $menu-pad-top-mobile;
-}
-
-@media (min-width: $width-desktop) {
+@include jacket ($jacket-standard) {
   .tucked-hero .hero {
-    margin-top: -$menu-pad-top-desktop;
-    padding-top: $menu-pad-top-desktop;
+    margin-top: -$menu-pad-top-mobile;
+    padding-top: $menu-pad-top-mobile;
+  }
+
+  @media (min-width: $width-desktop) {
+    .tucked-hero .hero {
+      margin-top: -$menu-pad-top-desktop;
+      padding-top: $menu-pad-top-desktop;
+    }
   }
 }
 
-.hero-inline-image-to-bg .hero,
-.hero-inline-image-to-bg .banner {
-  background-position: 50% 0;
-  background-repeat: no-repeat;
-}
 
-@media (max-width: $width-desktop - 1px) {
-  .hero-inline-image-to-bg .banner {
-    background-image: none !important; // scss-lint:disable ImportantRule
+@include jacket($jacket-critical) {
+  .hero-video {
+    display: none;
   }
-}
 
-.hero-inline-image-to-bg .hero {
-  background-position: center bottom;
-  padding-bottom: 0;
-}
+  html.video .hero-video {
+    display: block;
+    height: 500px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
 
-@media (min-width: $width-desktop) {
-  .hero-inline-image-to-bg .hero {
-    background-image: none;
-    overflow: hidden;
-  }
-}
-
-.hero-video {
-  display: none;
-}
-
-
-html.video .hero-video {
-  display: block;
-  height: 500px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  
-  @media (max-width: 887px) {
-    width: 0;
+    @media (max-width: 887px) {
+      width: 0;
+    }
   }
 }
 

@@ -1,17 +1,21 @@
-img,
-svg {
-  height: auto;
-  max-width: 100%;
-  vertical-align: middle;
-}
+@import 'app/lib/jacket';
 
-img.max-width-none,
-svg.max-width-none {
-  max-width: none !important; // scss-lint:disable ImportantRule
-}
+@include jacket ($jacket-critical) {
+  img,
+  svg {
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+  }
 
-img {
-  display: block;
+  img.max-width-none,
+  svg.max-width-none {
+    max-width: none !important; // scss-lint:disable ImportantRule
+  }
+
+  img {
+    display: block;
+  }
 }
 
 @mixin _make-svg-size($size) {
@@ -26,41 +30,44 @@ img {
   }
 }
 
-@include _make-svg-size(20);
-@include _make-svg-size(32);
-@include _make-svg-size(40);
-@include _make-svg-size(68);
-@include _make-svg-size(80);
-@include _make-svg-size(100);
-@include _make-svg-size(200);
-
-
-.bg-loader {
-  opacity: 0;
-  content: '';
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  z-index: 1;
-  transition: opacity .5s ease-in-out;
+@include jacket ($jacket-standard) {
+  @include _make-svg-size(20);
+  @include _make-svg-size(32);
+  @include _make-svg-size(40);
+  @include _make-svg-size(68);
+  @include _make-svg-size(80);
+  @include _make-svg-size(100);
+  @include _make-svg-size(200);
 }
 
-.hero,
-.epic-cover {
+@include jacket ($jacket-critical) {
   .bg-loader {
+    opacity: 0;
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    transition: opacity .5s ease-in-out;
+  }
+
+  .hero,
+  .epic-cover {
+    .bg-loader {
+      z-index: -1;
+    }
+  }
+
+  .loaded > .bg-loader {
+    opacity: 1;
+  }
+
+  .bg-preload {
+    visibility: hidden;
+    position: absolute;
     z-index: -1;
   }
-}
-
-.loaded > .bg-loader {
-  opacity: 1;
-}
-
-.bg-preload {
-  visibility: hidden;
-  position: absolute;
-  z-index: -1;
 }

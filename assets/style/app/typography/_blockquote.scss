@@ -1,59 +1,63 @@
+@import 'app/lib/jacket';
 @import 'app/variables/sizes';
 @import 'app/variables/type';
 
 $_min-width-lg: map-get($widths-by-size, large);
 
-blockquote,
-.callout {
-  font-size: $font-size-blockquote;
-  font-weight: $font-weight-text;
-  line-height: $line-height-header;
-  margin-bottom: $space-line;
-}
-
-@media (min-width: $_min-width-lg) {
+@include jacket ($jacket-critical) {
   blockquote,
   .callout {
-    font-size: 24px;
-    line-height: $line-height-header-lg;
+    font-size: $font-size-blockquote;
+    font-weight: $font-weight-text;
+    line-height: $line-height-header;
+    margin-bottom: $space-line;
   }
-}
 
-blockquote p,
-.callout p {
-  position: relative;
-}
-
-blockquote p::before {
-  content: '“';
-  margin-left: -.8ex;
-  position: relative;
-}
-
-blockquote p::after {
-  content: '”';
-}
-
-blockquote cite {
-  display: block;
-  font-size: $font-size-small;
-  font-weight: $font-weight-medium;
-  letter-spacing: 1px;
-  line-height: $space-line;
-  text-transform: uppercase;
-}
-
-.carousel blockquote {
-  font-size: $font-size-medium;
-  line-height: $space-line;
-
-  p {
-    margin-bottom: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
+  @media (min-width: $_min-width-lg) {
+    blockquote,
+    .callout {
+      font-size: 24px;
+      line-height: $line-height-header-lg;
+    }
   }
-  cite {
+
+  blockquote p,
+  .callout p {
+    position: relative;
+  }
+
+  blockquote p::before {
+    content: '“';
+    margin-left: -.8ex;
+    position: relative;
+  }
+
+  blockquote p::after {
+    content: '”';
+  }
+
+  blockquote cite {
+    display: block;
     font-size: $font-size-small;
-    padding-left: 10px;
+    font-weight: $font-weight-medium;
+    letter-spacing: 1px;
+    line-height: $space-line;
+    text-transform: uppercase;
+  }
+
+  .carousel blockquote {
+    font-size: $font-size-medium;
+    line-height: $space-line;
+
+    p {
+      margin-bottom: 10px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    cite {
+      font-size: $font-size-small;
+      padding-left: 10px;
+    }
   }
 }

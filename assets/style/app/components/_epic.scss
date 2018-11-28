@@ -1,3 +1,4 @@
+@import 'app/lib/jacket';
 @import 'app/variables/colors';
 @import 'app/variables/sizes';
 @import 'app/variables/type';
@@ -43,33 +44,191 @@ $_font-size-copy-lg: 16px;
 $_line-height-copy-lg: 22px;
 
 
-.epic-read-more,
-.epic-cover {
-  background-color: $color-epic-cover;
-  color: color-invert($color-epic-cover);
-  height: auto;
-  text-align: center;
+@include jacket($jacket-critical) {
 
-  h1,
-  .h1,
-  h2,
-  .h2,
-  a:not(.button) {
-    color: inherit;
-  }
+  .epic-read-more,
+  .epic-cover {
+    background-color: $color-epic-cover;
+    color: color-invert($color-epic-cover);
+    height: auto;
+    text-align: center;
 
-  @media (min-width: $width-desktop) {
-    text-align: left;
-  }
+    h1,
+    .h1,
+    h2,
+    .h2,
+    a:not(.button) {
+      color: inherit;
+    }
 
-  .content {
-    padding-bottom: $epic-cover-padding;
-    padding-top: $epic-cover-padding;
+    @media (min-width: $width-desktop) {
+      text-align: left;
+    }
+
+    .content {
+      padding-bottom: $epic-cover-padding;
+      padding-top: $epic-cover-padding;
+    }
   }
 }
 
-.epic-read-more {
-  p {
+@include jacket ($jacket-standard) {
+
+  .epic-read-more {
+    p {
+      font-size: $_font-size-copy;
+      line-height: $_line-height-copy;
+      font-weight: $font-weight-light;
+
+      @media (min-width: $width-desktop) {
+        font-size: $_font-size-copy-lg;
+        line-height: $_line-height-copy-lg;
+      }
+    }
+
+    h1,
+    .h1 {
+      font-weight: $font-weight-medium;
+      font-size: $font-size-h1-lg;
+      line-height: $line-height-h1-lg;
+    }
+
+    h2,
+    .h2 {
+      font-size: $font-size-h3;
+      line-height: $line-height-header;
+    }
+
+  }
+}
+
+@include jacket($jacket-critical) {
+
+  .epic-cover {
+    overflow: hidden;
+    height: $epic-height;
+
+    h1,
+    .h1 {
+      font-weight: $font-weight-medium;
+      font-size: $_font-size-header-h1;
+      line-height: $_line-height-header-h1;
+
+      @media (min-width: $width-desktop) {
+        font-size: $_font-size-header-h1-lg;
+        line-height: $_line-height-header-h1-lg;
+      }
+    }
+
+    h1 span,
+    .h1 span {
+      display: block;
+      font-weight: $font-weight-regular;
+      font-size: $_font-size-header-h2;
+      line-height: $_line-height-header-h2;
+      margin-top: $space-line;
+      margin-bottom: $space-line;
+
+      @media (min-width: $width-desktop) {
+        font-size: $_font-size-header-h2-lg;
+        line-height: $_line-height-header-h2-lg;
+      }
+    }
+
+  }
+
+  .epic-content {
+    h2,
+    .h2 {
+      font-weight: $font-weight-regular;
+      font-size: $_font-size-h2;
+      line-height: $_line-height-h2;
+
+      @media (min-width: $width-desktop) {
+        font-size: $_font-size-h2-lg;
+        line-height: $_line-height-h2-lg;
+      }
+    }
+
+    h3,
+    .h3 {
+      margin-top: $space-small + $space-base;
+      font-size: $_font-size-h3;
+      line-height: $_line-height-h3;
+
+      @media (min-width: $width-desktop) {
+        font-size: $_font-size-h3-lg;
+        line-height: $_line-height-h3-lg;
+      }
+    }
+
+    h4,
+    .h4 {
+      font-size: $_font-size-h4;
+      line-height: $_line-height-h4;
+
+      @media (min-width: $width-desktop) {
+        font-size: $_font-size-h4-lg;
+        line-height: $_line-height-h4-lg;
+      }
+    }
+
+    h5,
+    .h5 {
+      font-size: $_font-size-h5;
+      line-height: $_line-height-h5;
+      font-weight: $font-weight-medium;
+
+      @media (min-width: $width-desktop) {
+        font-size: $_font-size-h5-lg;
+        line-height: $_line-height-h5-lg;
+      }
+
+    }
+  }
+}
+
+@include jacket ($jacket-standard) {
+
+  @each $_theme, $_color in $colors-by-theme {
+
+    .#{$_theme}-theme {
+      .epic-cover,
+      .epic-read-more {
+        background-color: $_color;
+        color: color-invert($_color);
+      }
+    }
+
+    .epic-cover.epic-cover-#{$_theme},
+    .epic-read-more.epic-read-more-#{$_theme} {
+      background-color: $_color;
+      color: color-invert($_color);
+    }
+  }
+
+}
+
+@include jacket ($jacket-critical) {
+
+  .epic-intro .epic-cover {
+    margin-top: -$menu-pad-top-mobile;
+    padding-top: $menu-pad-top-mobile;
+  }
+
+}
+
+@include jacket ($jacket-standard) {
+
+  @media (min-width: $width-desktop) {
+    .epic-intro .epic-cover {
+      margin-top: -$menu-pad-top-desktop;
+      padding-top: $menu-pad-top-desktop;
+    }
+  }
+
+  .epic-content p,
+  .epic-content li {
     font-size: $_font-size-copy;
     line-height: $_line-height-copy;
     font-weight: $font-weight-light;
@@ -78,183 +237,45 @@ $_line-height-copy-lg: 22px;
       font-size: $_font-size-copy-lg;
       line-height: $_line-height-copy-lg;
     }
-  }
 
-  h1,
-  .h1 {
-    font-weight: $font-weight-medium;
-    font-size: $font-size-h1-lg;
-    line-height: $line-height-h1-lg;
-  }
-
-  h2,
-  .h2 {
-    font-size: $font-size-h3;
-    line-height: $line-height-header;
-  }
-
-}
-
-.epic-cover {
-  overflow: hidden;
-  height: $epic-height;
-
-  h1,
-  .h1 {
-    font-weight: $font-weight-medium;
-    font-size: $_font-size-header-h1;
-    line-height: $_line-height-header-h1;
-
-    @media (min-width: $width-desktop) {
-      font-size: $_font-size-header-h1-lg;
-      line-height: $_line-height-header-h1-lg;
-    }
-  }
-
-  h1 span,
-  .h1 span {
-    display: block;
-    font-weight: $font-weight-regular;
-    font-size: $_font-size-header-h2;
-    line-height: $_line-height-header-h2;
-    margin-top: $space-line;
-    margin-bottom: $space-line;
-
-    @media (min-width: $width-desktop) {
-      font-size: $_font-size-header-h2-lg;
-      line-height: $_line-height-header-h2-lg;
-    }
-  }
-
-}
-
-.epic-content {
-  h2,
-  .h2 {
-    font-weight: $font-weight-regular;
-    font-size: $_font-size-h2;
-    line-height: $_line-height-h2;
-
-    @media (min-width: $width-desktop) {
-      font-size: $_font-size-h2-lg;
-      line-height: $_line-height-h2-lg;
-    }
-  }
-
-  h3,
-  .h3 {
-    margin-top: $space-small + $space-base;
-    font-size: $_font-size-h3;
-    line-height: $_line-height-h3;
-
-    @media (min-width: $width-desktop) {
-      font-size: $_font-size-h3-lg;
-      line-height: $_line-height-h3-lg;
-    }
-  }
-
-  h4,
-  .h4 {
-    font-size: $_font-size-h4;
-    line-height: $_line-height-h4;
-
-    @media (min-width: $width-desktop) {
-      font-size: $_font-size-h4-lg;
-      line-height: $_line-height-h4-lg;
-    }
-  }
-
-  h5,
-  .h5 {
-    font-size: $_font-size-h5;
-    line-height: $_line-height-h5;
-    font-weight: $font-weight-medium;
-
-    @media (min-width: $width-desktop) {
-      font-size: $_font-size-h5-lg;
-      line-height: $_line-height-h5-lg;
-    }
-
-  }
-}
-
-@each $_theme, $_color in $colors-by-theme {
-
-  .#{$_theme}-theme {
-    .epic-cover,
-    .epic-read-more {
-      background-color: $_color;
-      color: color-invert($_color);
-    }
-  }
-
-  .epic-cover.epic-cover-#{$_theme},
-  .epic-read-more.epic-read-more-#{$_theme} {
-    background-color: $_color;
-    color: color-invert($_color);
-  }
-}
-
-
-.epic-intro .epic-cover {
-  margin-top: -$menu-pad-top-mobile;
-  padding-top: $menu-pad-top-mobile;
-}
-
-@media (min-width: $width-desktop) {
-  .epic-intro .epic-cover {
-    margin-top: -$menu-pad-top-desktop;
-    padding-top: $menu-pad-top-desktop;
-  }
-}
-
-.epic-content p,
-.epic-content li {
-  font-size: $_font-size-copy;
-  line-height: $_line-height-copy;
-  font-weight: $font-weight-light;
-
-  @media (min-width: $width-desktop) {
-    font-size: $_font-size-copy-lg;
-    line-height: $_line-height-copy-lg;
-  }
-
-  &.first-letter::first-letter {
-    padding-right: 4px;
-    padding-top: 4px;
-    margin-bottom: -1px;
-    font-size: $_font-size-first-letter;
-    line-height: $_line-height-first-letter;
-    font-weight: $font-weight-medium;
-    float: left;
-
-    @media (min-width: $width-desktop) {
-      font-size: $_font-size-first-letter-lg;
-      line-height: $_line-height-first-letter-lg;
+    &.first-letter::first-letter {
       padding-right: 4px;
-      padding-top: 2px;
-      margin-bottom: -2px;
+      padding-top: 4px;
+      margin-bottom: -1px;
+      font-size: $_font-size-first-letter;
+      line-height: $_line-height-first-letter;
+      font-weight: $font-weight-medium;
+      float: left;
+
+      @media (min-width: $width-desktop) {
+        font-size: $_font-size-first-letter-lg;
+        line-height: $_line-height-first-letter-lg;
+        padding-right: 4px;
+        padding-top: 2px;
+        margin-bottom: -2px;
+      }
     }
   }
-}
 
-.epic-icon svg {
-  width: 80px;
-  height: 80px;
-  margin-left: 30px;
-  margin-right: 15px;
-}
-
-.epic-content blockquote {
-
-  p {
-    font-size: $font-size-medium * 1.5;
-    line-height: $font-size-medium * 1.5 + 10px;
-
-    @media (min-width: $width-desktop) {
-      font-size: $font-size-large * 1.5;
-      line-height: $font-size-large * 1.5 + 10px;
-    }
-
+  .epic-icon svg {
+    width: 80px;
+    height: 80px;
+    margin-left: 30px;
+    margin-right: 15px;
   }
+
+  .epic-content blockquote {
+
+    p {
+      font-size: $font-size-medium * 1.5;
+      line-height: $font-size-medium * 1.5 + 10px;
+
+      @media (min-width: $width-desktop) {
+        font-size: $font-size-large * 1.5;
+        line-height: $font-size-large * 1.5 + 10px;
+      }
+
+    }
+  }
+
 }
