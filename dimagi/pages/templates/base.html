@@ -92,9 +92,13 @@
     <link href="{% sass_src 'style/app.critical.scss' %}" rel="stylesheet" media="screen" type="text/css" />
     {% endcompress %}
 
-    {% compress css %}
-    <link href="{% sass_src 'style/app.standard.scss' %}" rel="stylesheet" media="screen" type="text/css" />
-    {% endcompress %}
+    <noscript id="js-async-stylesheets">
+      {% compress css %}
+      <link href="{% sass_src 'style/app.standard.scss' %}" rel="stylesheet" media="screen" type="text/css" />
+      {% endcompress %}
+      {% block async_stylesheets %}
+      {% endblock %}
+    </noscript>
 
     {% block stylesheets %}{% endblock %}
     {% if request.is_amp %}
