@@ -1,0 +1,42 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<div class="hide-until-large display-flex flex-valign-middle" [class]="nav_hide1">
+  <a class="menu-open-sibling {% click_nav 'products' %}"
+     href="{% url 'commcare' %}">
+    {% blocktrans %}
+      Products
+    {% endblocktrans %}
+  </a>
+
+  <a class="menu-open-sibling {% click_nav 'services' %}"
+     href="{% url 'services' %}">
+    {% blocktrans %}
+      Services
+    {% endblocktrans %}
+  </a>
+  <a class="{% click_nav 'more' %}"
+     data-drawer="menu-drawer"
+     role="button"
+     href="#"
+   on="tap:AMP.setState({ drpdwn_cls :'menu-active-amp' , close_btn:'menu-close-amp' ,nav_hide1:'main-nav-content-hide' ,nav_hide2:'main-nav-content-hide'})">
+    {% blocktrans %}
+      More
+    {% endblocktrans %}
+  </a>
+</div>{# .hide-until-large #}
+
+<a class=" hide-at-large {% click_nav 'more-mobile' %}"
+   data-drawer="menu-drawer"
+   href="#"
+   [class]="nav_hide2"
+   role="button"
+   on="tap:AMP.setState({ drpdwn_cls :'menu-active-amp' , close_btn:'menu-close-amp' , nav_hide2:'main-nav-content-hide' ,nav_hide1:'main-nav-content-hide'})">
+  {% blocktrans %}
+    More
+  {% endblocktrans %}
+</a>
+
+<a class="menu-link menu-close {% click_nav 'more-close' %}" [class]="close_btn" role="button" on="tap:AMP.setState({ drpdwn_cls :'menu show-time-amp', close_btn:'menu-link menu-close' ,nav_hide1 :'hide-until-large display-flex flex-valign-middle' ,nav_hide2 :'hide-at-large'})">
+  {% include 'svg/close.html' %}
+</a>
