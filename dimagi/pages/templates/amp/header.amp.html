@@ -1,0 +1,31 @@
+<header id="header">
+
+  {# This is the navigation across the top #}
+  <nav class="banner"
+       role="navigation">
+    <div class="content">
+      <div class="column column-fill flex-align-left">
+        {% include "./left.amp.html" %}
+      </div>{# .column.flex-align-left #}
+
+      <div class="column flex-align-center">
+        {% include "partials/menu/center.html" %}
+      </div>{# .column.flex-align-center #}
+
+      <div class="column column-fill flex-align-right">
+        {% include "partials/menu/right.html" %}
+      </div>{# .column.flex-align-right #}
+    </div>{# .content #}
+  </nav>
+  {# end top bar navigation #}
+
+  {# This is the navigation when you click More #}
+  <nav role="navigation">
+    <div class="menu show-time-amp" [class]="drpdwn_cls"
+         id="menu">
+      {% include "./../partials/menu/more.html" %}
+    </div>
+  </nav>
+  {# end more menu #}
+
+</header>

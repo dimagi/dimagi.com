@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "amp/base.amp.html" %}
 {% load i18n %}
 {% load dimagidotcom %}
 
@@ -6,6 +6,10 @@
   Mobile Data Collection
 {% endblocktrans %}{% endblock %}
 
+{% block ampscripttag %}
+  <script async custom-element="amp-fx-collection" src="https://cdn.ampproject.org/v0/amp-fx-collection-0.1.js"></script>
+  <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
+{% endblock ampscripttag %}
 {% block description %}{% blocktrans %}
   Mobile data collection is a method of compiling qualitative
   and quantitative inputs via a mobile device (e.g. mobile phone,
