@@ -30,6 +30,9 @@ django-capture-tag = "*"
 django-require = "*"
 django-htmlmin = "*"
 reportlab = "*"
+ua-parser = "*"
+user-agents = "*"
+django-user-agents = "*"
 
 
 [requires]
