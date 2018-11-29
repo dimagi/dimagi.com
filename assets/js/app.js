@@ -53,6 +53,7 @@ require([
 ) {
   $(function () {
     _.each([
+      AMP,
       Menu,
       ShowTime,
       Modal,
