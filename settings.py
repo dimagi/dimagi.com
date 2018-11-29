@@ -28,6 +28,7 @@ THIRD_PARTY_APPS = [
     'compressor',
     'imagekit',
     'capture_tag',
+    'django_user_agents',
 ]
 if AWS_ENABLED:
     THIRD_PARTY_APPS.append('storages')
@@ -43,6 +44,7 @@ MIDDLEWARE = [
     'django.middleware.gzip.GZipMiddleware',
     'htmlmin.middleware.HtmlMinifyMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django_user_agents.middleware.UserAgentMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',

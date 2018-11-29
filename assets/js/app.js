@@ -8,6 +8,7 @@ requirejs.config({
 require([
   'jquery',
   'lodash',
+  'app/amp',
   'app/menu',
   'app/showTime',
   'app/modal',
@@ -26,10 +27,12 @@ require([
   'app/demoForm',
   'app/abAudit',
   'app/progressBar',
+  'app/initial',
   'modernizr',
 ], function (
     $,
     _,
+    AMP,
     Menu,
     ShowTime,
     Modal,
@@ -47,10 +50,12 @@ require([
     ContactForm,
     DemoForm,
     ABAudit,
-    ProgressBar
+    ProgressBar,
+    Initial
 ) {
   $(function () {
     _.each([
+      AMP,
       Menu,
       ShowTime,
       Modal,
@@ -69,19 +74,9 @@ require([
       DemoForm,
       ABAudit,
       ProgressBar,
+      Initial,
     ], function (m) {
       m.initialize();
     });
-
-    var ua = navigator.userAgent,
-    iOS = /iPad|iPhone|iPod/.test(ua),
-    iOS11 = /OS 11_0|OS 11_1|OS 11_2/.test(ua);
-
-    // ios 11 bug caret position
-    if ( iOS && iOS11 ) {
-      // Add CSS class to body
-      $("html").addClass("ios-modal-fix");
-    }
-
   });
 });
