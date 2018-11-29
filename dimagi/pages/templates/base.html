@@ -30,6 +30,9 @@
     <meta property="dimagi:contactFormId" content="{% block contact_form_id %}160467c5-1ae9-401c-81f2-09334ce10b1a{% endblock %}">
     <meta property="dimagi:demoFormId" content="{% block demo_form_id %}afb4d5a0-826f-4a56-8c21-552d4b6dafa3{% endblock %}">
 
+    <meta property="dimagi:isAmp" content="{{ request.is_amp|BOOL }}">
+    <meta property="dimagi:ampPageType" content="{{ request.amp_page_type }}">
+
     {% if request.hide_drift %}
       <meta property="dimagi:driftHide" content="true">
     {% endif %}

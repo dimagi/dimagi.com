@@ -8,6 +8,7 @@ requirejs.config({
 require([
   'jquery',
   'lodash',
+  'app/amp',
   'app/menu',
   'app/showTime',
   'app/modal',
@@ -30,6 +31,7 @@ require([
 ], function (
     $,
     _,
+    AMP,
     Menu,
     ShowTime,
     Modal,
