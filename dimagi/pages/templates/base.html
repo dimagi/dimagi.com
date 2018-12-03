@@ -88,7 +88,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:100,300,400,500,700,800" rel="stylesheet">
 
-    {% compress css %}
+    {% compress css inline %}
     <link href="{% sass_src 'style/app.critical.scss' %}" rel="stylesheet" media="screen" type="text/css" />
     {% endcompress %}
 
