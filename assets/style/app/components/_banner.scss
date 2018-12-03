@@ -62,9 +62,8 @@
 }
 
 @include jacket($jacket-critical) {
-  .banner a {
+  .banner a:not(.button) {
     align-items: center;
-    color: inherit !important; // scss-lint:disable ImportantRule
     display: flex;
     font-size: $font-size-banner-link;
     font-weight: $font-weight-banner;
@@ -72,6 +71,12 @@
     letter-spacing: $letter-spacing-banner-link;
     line-height: $line-height-banner;
     text-transform: uppercase;
+
+    &.hide-at-large {
+      @media (min-width: $width-desktop-lg) {
+        display: none;
+      }
+    }
 
     &.logo svg {
       height: $banner-logo-height-mobile;
@@ -96,14 +101,27 @@
 
     &.login-link,
     &.trial-link {
-      padding-left: 20px !important;
-      padding-right: 0 !important;
-      transition: color 300ms 0s;
+      padding-left: 20px;
+      padding-right: 0;
     }
 
     &.menu-open-sibling {
       opacity: 1;
-      padding-right: 20px !important;
+      padding-right: 20px;
+    }
+  }
+}
+
+.banner a:not(.button) {
+  color: inherit; // necessary to have this here so it overrides _links
+}
+
+@include jacket($jacket-standard) {
+  .banner a:not(.button) {
+
+    &.login-link,
+    &.trial-link {
+      transition: color 300ms 0s;
     }
   }
 }
@@ -139,7 +157,7 @@
 
 @include jacket($jacket-standard) {
   .banner {
-    a {
+    a:not(.button) {
       &.menu-open {
         transition: opacity 300ms 600ms, visibility 0s, color 300ms;
       }
@@ -182,17 +200,31 @@
 }
 
 @include jacket ($jacket-critical) {
-  .menu-active .banner a {
+  .menu-active .banner a:not(.button) {
     &.menu-open {
       opacity: 0;
-      transition: opacity 150ms 0s, visibility 0s 300ms, color 300ms;
       visibility: hidden;
     }
 
     &.menu-close {
       opacity: 1;
-      transition: opacity 300ms 300ms, visibility 0s;
       visibility: visible;
+    }
+
+    &.menu-open-sibling {
+      opacity: 0;
+    }
+  }
+}
+
+@include jacket ($jacket-standard) {
+  .menu-active .banner a:not(.button) {
+    &.menu-open {
+      transition: opacity 150ms 0s, visibility 0s 300ms, color 300ms;
+    }
+
+    &.menu-close {
+      transition: opacity 300ms 300ms, visibility 0s;
     }
 
     &.login-link,
@@ -201,7 +233,6 @@
     }
 
     &.menu-open-sibling {
-      opacity: 0;
       transition: opacity 150ms 0s, visibility 0s 300ms, color 300ms;
     }
   }

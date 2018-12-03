@@ -18,7 +18,7 @@
       stroke: $color-white;
     }
 
-    a {
+    a:not(.button) {
       color: $color-white;
       font-weight: 300;
 
@@ -47,7 +47,7 @@
         border-bottom: 1px solid $color-footer-border;
       }
 
-      a {
+      a:not(.button) {
         color: $color-footer-text;
         font-weight: $font-weight-light;
 

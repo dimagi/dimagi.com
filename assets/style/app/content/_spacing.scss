@@ -3,93 +3,170 @@
 
 @mixin _make-pad($_type, $_space, $_suffix) {
   .pad-#{$_type}#{$_suffix} {
-    padding: $_space !important; // scss-lint:disable ImportantRule
+    @include jacket ($jacket-critical) {
+      padding: $_space;
+    }
+    @include jacket ($jacket-standard) {
+      padding: $_space !important; // scss-lint:disable ImportantRule
+    }
   }
 
   .pad-vert-#{$_type}#{$_suffix} {
-    padding-bottom: $_space !important; // scss-lint:disable ImportantRule
-    padding-top: $_space !important; // scss-lint:disable ImportantRule
+    @include jacket ($jacket-critical) {
+      padding-bottom: $_space;
+      padding-top: $_space;
+    }
+    @include jacket ($jacket-standard) {
+      padding-bottom: $_space !important; // scss-lint:disable ImportantRule
+      padding-top: $_space !important; // scss-lint:disable ImportantRule
+    }
   }
 
   .pad-horz-#{$_type}#{$_suffix} {
-    padding-left: $_space !important; // scss-lint:disable ImportantRule
-    padding-right: $_space !important; // scss-lint:disable ImportantRule
+    @include jacket ($jacket-critical) {
+      padding-left: $_space;
+      padding-right: $_space;
+    }
+    @include jacket ($jacket-standard) {
+      padding-left: $_space !important; // scss-lint:disable ImportantRule
+      padding-right: $_space !important; // scss-lint:disable ImportantRule
+    }
   }
 
   .pad-top-#{$_type}#{$_suffix} {
-    padding-top: $_space !important; // scss-lint:disable ImportantRule
+    @include jacket ($jacket-critical) {
+      padding-top: $_space;
+    }
+    @include jacket ($jacket-standard) {
+      padding-top: $_space !important; // scss-lint:disable ImportantRule
+    }
   }
 
   .pad-bottom-#{$_type}#{$_suffix} {
-    padding-bottom: $_space !important; // scss-lint:disable ImportantRule
+    @include jacket ($jacket-critical) {
+      padding-bottom: $_space;
+    }
+    @include jacket ($jacket-standard) {
+      padding-bottom: $_space !important; // scss-lint:disable ImportantRule
+    }
   }
 
   .pad-left-#{$_type}#{$_suffix} {
-    padding-left: $_space !important; // scss-lint:disable ImportantRule
+    @include jacket ($jacket-critical) {
+      padding-left: $_space;
+    }
+    @include jacket ($jacket-standard) {
+      padding-left: $_space !important; // scss-lint:disable ImportantRule
+    }
   }
 
   .pad-right-#{$_type}#{$_suffix} {
-    padding-right: $_space !important; // scss-lint:disable ImportantRule
+    @include jacket ($jacket-critical) {
+      padding-right: $_space;
+    }
+    @include jacket ($jacket-standard) {
+      padding-right: $_space !important; // scss-lint:disable ImportantRule
+    }
   }
 }
 
 @mixin _make-gap($_type, $_space, $_suffix) {
   .gap-vert-#{$_type}#{$_suffix} {
-    margin-bottom: $_space !important; // scss-lint:disable ImportantRule
-    margin-top: $_space !important; // scss-lint:disable ImportantRule
+    @include jacket ($jacket-critical) {
+      margin-bottom: $_space;
+      margin-top: $_space;
+    }
+    @include jacket ($jacket-standard) {
+      margin-bottom: $_space !important; // scss-lint:disable ImportantRule
+      margin-top: $_space !important; // scss-lint:disable ImportantRule
+    }
   }
 
   .gap-#{$_type}#{$_suffix} {
-    margin: $_space !important; // scss-lint:disable ImportantRule
+    @include jacket ($jacket-critical) {
+      margin: $_space;
+    }
+    @include jacket ($jacket-standard) {
+      margin: $_space !important; // scss-lint:disable ImportantRule
+    }
   }
 
-  .gap-horz-#{$_type}#{$_suffix} {
-    margin-left: $_space !important; // scss-lint:disable ImportantRule
-    margin-right: $_space !important; // scss-lint:disable ImportantRule
+  @include jacket ($jacket-standard) {
+    .gap-horz-#{$_type}#{$_suffix} {
+      margin-left: $_space !important; // scss-lint:disable ImportantRule
+      margin-right: $_space !important; // scss-lint:disable ImportantRule
+    }
   }
 
   .gap-top-#{$_type}#{$_suffix} {
-    margin-top: $_space !important; // scss-lint:disable ImportantRule
+    @include jacket ($jacket-critical) {
+      margin-top: $_space;
+    }
+    @include jacket ($jacket-standard) {
+      margin-top: $_space !important; // scss-lint:disable ImportantRule
+    }
   }
 
   .gap-bottom-#{$_type}#{$_suffix} {
-    margin-bottom: $_space !important; // scss-lint:disable ImportantRule
+    @include jacket ($jacket-critical) {
+      margin-bottom: $_space;
+    }
+    @include jacket ($jacket-standard) {
+      margin-bottom: $_space !important; // scss-lint:disable ImportantRule
+    }
   }
 
-  .gap-left-#{$_type}#{$_suffix} {
-    margin-left: $_space !important; // scss-lint:disable ImportantRule
+  @include jacket ($jacket-standard) {
+    .gap-left-#{$_type}#{$_suffix} {
+      margin-left: $_space !important; // scss-lint:disable ImportantRule
+    }
   }
 
   .gap-right-#{$_type}#{$_suffix} {
-    margin-right: $_space !important; // scss-lint:disable ImportantRule
+    @include jacket ($jacket-critical) {
+      margin-right: $_space;
+    }
+    @include jacket ($jacket-standard) {
+      margin-right: $_space !important; // scss-lint:disable ImportantRule
+    }
   }
 }
 
 @mixin _make-offset($_type, $_space, $_suffix) {
-  .offset-#{$_type}#{$_suffix} {
-    margin: -$_space !important; // scss-lint:disable ImportantRule
-  }
+  @include jacket ($jacket-standard) {
+    .offset-#{$_type}#{$_suffix} {
+      margin: -$_space !important; // scss-lint:disable ImportantRule
+    }
 
-  .offset-horz-#{$_type}#{$_suffix} {
-    margin-left: -$_space !important; // scss-lint:disable ImportantRule
-    margin-right: -$_space !important; // scss-lint:disable ImportantRule
+    .offset-horz-#{$_type}#{$_suffix} {
+      margin-left: -$_space !important; // scss-lint:disable ImportantRule
+      margin-right: -$_space !important; // scss-lint:disable ImportantRule
+    }
   }
 
   .offset-top-#{$_type}#{$_suffix} {
-    margin-top: -$_space !important; // scss-lint:disable ImportantRule
+    @include jacket ($jacket-critical) {
+      margin-top: -$_space;
+    }
+    @include jacket ($jacket-standard) {
+      margin-top: -$_space !important; // scss-lint:disable ImportantRule
+    }
   }
 
-  .offset-bottom-#{$_type}#{$_suffix} {
-    margin-bottom: -$_space !important; // scss-lint:disable ImportantRule
+  @include jacket ($jacket-standard) {
+    .offset-bottom-#{$_type}#{$_suffix} {
+      margin-bottom: -$_space !important; // scss-lint:disable ImportantRule
+    }
+
+    .offset-left-#{$_type}#{$_suffix} {
+      margin-left: -$_space !important; // scss-lint:disable ImportantRule
+    }
+
+    .offset-right-#{$_type}#{$_suffix} {
+      margin-right: -$_space !important; // scss-lint:disable ImportantRule
+    }
   }
 
-  .offset-left-#{$_type}#{$_suffix} {
-    margin-left: -$_space !important; // scss-lint:disable ImportantRule
-  }
-
-  .offset-right-#{$_type}#{$_suffix} {
-    margin-right: -$_space !important; // scss-lint:disable ImportantRule
-  }
 }
 
 @mixin _make-spacing-at($_size: null) {
@@ -101,8 +178,17 @@
   }
 }
 
+@include _make-spacing-at();
+
 @include jacket ($jacket-critical) {
-  @include _make-spacing-at();
+  @each $_size, $_width in $widths-by-size {
+    $_suffix: if($_size != null, -at-#{$_size}, null);
+    @each $_type, $_space in $space-by-type {
+      @media (min-width: $_width) {
+        @include _make-gap($_type, $_space, $_suffix);
+      }
+    }
+  }
 }
 
 @include jacket ($jacket-standard) {

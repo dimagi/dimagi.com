@@ -131,18 +131,18 @@ $min-width-lg: map-get($widths-by-size, large);
     color: $color-header-inverted;
   }
 
-  h1 a,
-  .h1 a,
-  h2 a,
-  .h2 a,
-  h3 a,
-  .h3 a,
-  h4 a,
-  .h4 a,
-  h5 a,
-  .h5 a,
-  h6 a,
-  .h6 a {
+  h1 a:not(.button),
+  .h1 a:not(.button),
+  h2 a:not(.button),
+  .h2 a:not(.button),
+  h3 a:not(.button),
+  .h3 a:not(.button),
+  h4 a:not(.button),
+  .h4 a:not(.button),
+  h5 a:not(.button),
+  .h5 a:not(.button),
+  h6 a:not(.button),
+  .h6 a:not(.button) {
     font-weight: inherit;
   }
 }

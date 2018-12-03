@@ -21,7 +21,7 @@
     .content-width-#{$_size} {
       margin-left: auto;
       margin-right: auto;
-      max-width: $_width !important; // scss-lint:disable ImportantRule
+      max-width: $_width;
     }
   }
 
@@ -34,6 +34,14 @@
       .content-cell-padding-right {
         padding-right: $_pad;
       }
+    }
+  }
+}
+
+@include jacket ($jacket-standard) {
+  @each $_size, $_width in $content-widths-by-size {
+    .content-width-#{$_size} {
+      max-width: $_width !important; // scss-lint:disable ImportantRule
     }
   }
 }

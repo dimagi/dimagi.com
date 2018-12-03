@@ -18,7 +18,12 @@
     left, center, right, justify
   ) {
     .align-#{$_align}#{$_suffix} {
-      text-align: $_align !important; // scss-lint:disable ImportantRule
+      @include jacket ($jacket-critical) {
+        text-align: $_align;
+      }
+      @include jacket ($jacket-standard) {
+        text-align: $_align !important; // scss-lint:disable ImportantRule
+      }
     }
   }
 
@@ -26,7 +31,12 @@
     baseline, top, middle, bottom
   ) {
     .valign-#{$_valign}#{$_suffix} {
-      vertical-align: $_valign !important; // scss-lint:disable ImportantRule
+      @include jacket ($jacket-critical) {
+        vertical-align: $_valign;
+      }
+      @include jacket ($jacket-standard) {
+        vertical-align: $_valign !important; // scss-lint:disable ImportantRule
+      }
     }
 
     .valign-#{$_valign}#{$_suffix} * {
@@ -35,12 +45,10 @@
   }
 }
 
-@include jacket ($jacket-critical) {
-  @include _align-at();
+@include _align-at();
 
-  @each $_size, $_width in $widths-by-size {
-    @media (min-width: $_width) {
-      @include _align-at($_size);
-    }
+@each $_size, $_width in $widths-by-size {
+  @media (min-width: $_width) {
+    @include _align-at($_size);
   }
 }

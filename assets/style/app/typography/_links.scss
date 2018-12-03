@@ -18,7 +18,9 @@
   a .link {
     font-weight: $font-weight-link;
   }
+}
 
+@include jacket ($jacket-standard) {
   .show-time a,
   .show-time a .link {
     transition: color 150ms linear;
@@ -27,15 +29,15 @@
 
 
 @mixin _make-link($_color) {
-  a,
+  a:not(.button),
   a .link,
-  a:visited {
+  a:not(.button):visited {
     color: $_color;
   }
 
-  a:hover,
+  a:not(.button):hover,
   a:hover .link,
-  a:focus,
+  a:not(.button):focus,
   a:focus .link {
     color: color-hover($_color);
   }
@@ -44,25 +46,25 @@
     outline: 0;
   }
 
-  a:active,
+  a:not(.button):active,
   a:active .link {
     color: color-active($_color);
   }
 
-  a.inverted,
+  a:not(.button).inverted,
   a.inverted .link,
-  .inverted a,
+  .inverted a:not(.button),
   .inverted a .link {
     color: color-invert($_color);
   }
 
-  a.inverted:hover,
+  a.inverted:not(.button):hover,
   a.inverted:hover .link,
-  a.inverted:focus,
+  a.inverted:not(.button):focus,
   a.inverted:focus .link,
-  .inverted a:hover,
+  .inverted a:not(.button):hover,
   .inverted a:hover .link,
-  .inverted a:focus,
+  .inverted a:not(.button):focus,
   .inverted a:focus .link {
     color: color-invert-hover($_color);
   }
@@ -72,9 +74,9 @@
     outline: 0;
   }
 
-  a.inverted:active,
+  a.inverted:not(.button):active,
   a.inverted:active .link,
-  .inverted a:active,
+  .inverted a:not(.button):active,
   .inverted a:active .link {
     color: color-invert-active($_color);
   }
@@ -119,7 +121,7 @@
       vertical-align: middle;
     }
 
-    a:hover {
+    a:not(.button):hover {
       [fill]:not([fill="none"]):not([fill^=url]) {
         fill: $color-body-text !important; // scss-lint:disable ImportantRule
       }
@@ -131,7 +133,7 @@
   }
 
   .show-time .links-social {
-    a {
+    a:not(.button) {
       [fill]:not([fill="none"]):not([fill^=url]) { // scss-lint:disable SelectorDepth
         transition: fill .5s ease-in-out;
       }

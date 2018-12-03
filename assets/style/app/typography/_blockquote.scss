@@ -4,7 +4,7 @@
 
 $_min-width-lg: map-get($widths-by-size, large);
 
-@include jacket ($jacket-critical) {
+@include jacket ($jacket-standard) {
   blockquote,
   .callout {
     font-size: $font-size-blockquote;

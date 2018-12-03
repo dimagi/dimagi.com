@@ -22,26 +22,24 @@
   }
 }
 
-@include jacket ($jacket-critical) {
-  .hero {
-    h1,
-    .h1,
-    h2,
-    .h2,
-    h3,
-    .h3,
-    h4,
-    .h4,
-    h5,
-    .h5,
-    h6,
-    .h6,
-    p,
-    ul,
-    ol,
-    a:not(.button) {
-      color: inherit;
-    }
+.hero {
+  h1,
+  .h1,
+  h2,
+  .h2,
+  h3,
+  .h3,
+  h4,
+  .h4,
+  h5,
+  .h5,
+  h6,
+  .h6,
+  p,
+  ul,
+  ol,
+  a:not(.button) {
+    color: inherit;
   }
 }
 
@@ -72,8 +70,12 @@
       font-weight: $font-weight-medium;
       letter-spacing: 1px;
       line-height: $space-line;
-      margin-bottom: 0;
       text-transform: uppercase;
+    }
+
+    h2:not(.gap-vert-*):not(.gap-bottom-*),
+    .h2:not(.gap-vert-*):not(.gap-bottom-*) {
+      margin-bottom: 0;
     }
   }
 

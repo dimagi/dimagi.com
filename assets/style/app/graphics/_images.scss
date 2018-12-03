@@ -8,11 +8,6 @@
     vertical-align: middle;
   }
 
-  img.max-width-none,
-  svg.max-width-none {
-    max-width: none !important; // scss-lint:disable ImportantRule
-  }
-
   img {
     display: block;
   }

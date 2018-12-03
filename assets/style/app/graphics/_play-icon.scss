@@ -3,7 +3,7 @@
 @import 'app/variables/sizes';
 
 @include jacket ($jacket-critical) {
-  [class*="play-icon-"] {
+  :not(.button)[class*="play-icon-"] {
     display: block;
     position: relative;
 
@@ -33,28 +33,28 @@
     }
 
     &.alt:before {
-      background-color: transparent !important; // scss-lint:disable ImportantRule
+      background-color: transparent;
       border: 2px solid $color-white;
     }
   }
 }
 
 @include jacket ($jacket-standard) {
-  .show-time [class*="play-icon-"]:before {
+  .show-time [class*="play-icon-"]:not(.button):before {
     transition: background-color 300ms;
   }
 }
 
 @include jacket ($jacket-standard) {
-  a:hover[class*="play-icon-"]:before,
-  a:hover [class*="play-icon-"]:before,
-  a:focus[class*="play-icon-"]:before,
-  a:focus [class*="play-icon-"]:before {
+  a:hover[class*="play-icon-"]:not(.button):before,
+  a:hover [class*="play-icon-"]:not(.button):before,
+  a:focus[class*="play-icon-"]:not(.button):before,
+  a:focus [class*="play-icon-"]:not(.button):before {
     background-color: color-hover($color-link);
   }
 
-  a:active[class*="play-icon-"]:before,
-  a:active [class*="play-icon-"]:before {
+  a:active[class*="play-icon-"]:not(.button):before,
+  a:active [class*="play-icon-"]:not(.button):before {
     background-color: color-active($color-link);
   }
 }
@@ -62,20 +62,20 @@
 @include jacket ($jacket-standard) {
   @each $_theme, $_color in $colors-by-theme {
     .#{$_theme}-theme {
-      [class*="play-icon-"]:before {
+      [class*="play-icon-"]:not(.button):before {
         background-color: $_color;
       }
 
-      a:hover[class*="play-icon-"]:before,
-      a:hover [class*="play-icon-"]:before,
-      a:focus[class*="play-icon-"]:before,
-      a:focus [class*="play-icon-"]:before {
+      a:hover[class*="play-icon-"]:not(.button):before,
+      a:hover [class*="play-icon-"]:not(.button):before,
+      a:focus[class*="play-icon-"]:not(.button):before,
+      a:focus [class*="play-icon-"]:not(.button):before {
         background-color: color-hover($_color);
       }
 
 
-      a:active[class*="play-icon-"]:before,
-      a:active [class*="play-icon-"]:before {
+      a:active[class*="play-icon-"]:not(.button):before,
+      a:active [class*="play-icon-"]:not(.button):before {
         background-color: color-active($_color);
       }
     }
@@ -93,12 +93,12 @@ $_sqrts-by-type: (
   @each $_type, $_sqrt in $_sqrts-by-type {
     $_space: map-get($space-by-type, $_type);
 
-    .play-icon-#{$_type}:before {
+    .play-icon-#{$_type}:not(.button):before {
       height: $_space;
       width: $_space;
     }
 
-    .play-icon-#{$_type}:after {
+    .play-icon-#{$_type}:not(.button):after {
       border-bottom-width: $_space / 5;
       border-left-width: $_sqrt;
       border-top-width: $_space / 5;
@@ -111,8 +111,8 @@ $_sqrts-by-type: (
       padding-left: $_space + 10px;
     }
 
-    .cta .play-icon-#{$_type}:before,
-    .cta .play-icon-#{$_type}:after {
+    .cta .play-icon-#{$_type}:not(.button):before,
+    .cta .play-icon-#{$_type}:not(.button):after {
       left: $_space / 2;
     }
   }

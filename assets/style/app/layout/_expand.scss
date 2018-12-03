@@ -1,13 +1,28 @@
 @import 'app/lib/jacket';
 
-@include jacket ($jacket-standard) {
-  .expand {
+
+.expand {
+  @include jacket ($jacket-critical) {
+    max-width: 100%;
+    min-width: 0;
+    width: 100%;
+  }
+
+  @include jacket ($jacket-standard) {
     max-width: 100% !important; // scss-lint:disable ImportantRule
     min-width: 0 !important; // scss-lint:disable ImportantRule
     width: 100% !important; // scss-lint:disable ImportantRule
   }
+}
 
-  .expand-vertical {
+.expand-vertical {
+  @include jacket ($jacket-critical) {
+    height: 100%;
+    max-height: 100%;
+    min-height: 0;
+  }
+
+  @include jacket ($jacket-standard) {
     height: 100% !important; // scss-lint:disable ImportantRule
     max-height: 100% !important; // scss-lint:disable ImportantRule
     min-height: 0 !important; // scss-lint:disable ImportantRule

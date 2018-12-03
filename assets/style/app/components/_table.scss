@@ -44,6 +44,12 @@
     background-color: transparent;
     border-width: 1px;
     padding: $space-base;
+  }
+}
+
+@include jacket ($jacket-standard) {
+  th,
+  td {
     transition: background-color 150ms;
   }
 }

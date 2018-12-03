@@ -28,11 +28,9 @@
   }
 }
 
-@include jacket ($jacket-critical) {
-  @include _make-floats-at();
-}
-
 @include jacket ($jacket-standard) {
+  @include _make-floats-at();
+
   @each $_size, $_width in $widths-by-size {
     @media (min-width: $_width) {
       @include _make-floats-at($_width);
@@ -40,7 +38,7 @@
   }
 }
 
-@include jacket ($jacket-critical) {
+@include jacket ($jacket-standard) {
   .clearfix:before,
   .clearfix:after {
     clear: both;

@@ -45,10 +45,21 @@ The final compressor filter is `rCSSMinFilter` which minifies the css.
 `essential`
 
 Embeds the compiled output of `app.essential.css` in the `<head>`.
-Cannot be larger than 50 kb due to Google AMP Page rules.
+Cannot be larger than 50 kb due to Google AMP rules.
 
 `standard`
 
 Includes all the non-essential CSS. Linked asynchronously as `app.standard.css`
 
+### What is considered `critical` css?
+
+`critical` css is anything that's definitely needed to render page structure and
+especially render absolutely everything "above the fold"---with anything below
+the fold looking a little more skeleton-like (but still structurally sound)
+
+`critical` css should *NOT* include:
+
+- `:hover`, `:focus`, `:active` states
+- `!important` tags
+- the `transition` property
 

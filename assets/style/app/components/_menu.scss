@@ -26,7 +26,7 @@
       transition: opacity 300ms 0s;
     }
 
-    a {
+    a:not(.button) {
       color: $color-menu-link;
       display: inline-block;
       position: relative;
@@ -37,7 +37,7 @@
       }
     }
 
-    a[class*="-swatch"] {
+    a:not(.button)[class*="-swatch"] {
       padding-left: $space-line;
 
       &::before {
