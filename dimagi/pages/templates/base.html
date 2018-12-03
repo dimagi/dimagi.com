@@ -4,20 +4,22 @@
 {#     js, no-js, touch, no-touch, cssanimations, #}
 {#     csstransformations3d, csstransitions, video, audio, svg, inlinesvg #}
 {#     pointerevents, show-time #}
-<html lang="en">
+<html {% if request.is_amp %} amp {% endif %} lang="en">
   <head>
-    {% if meta.tracking.GTM %}
-      <!-- Google Tag Manager -->
-      <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer','{{ meta.tracking.GTM }}');</script>
-      <!-- End Google Tag Manager -->
+    {% if not request.is_amp %}
+      {% if meta.tracking.GTM %}
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','{{ meta.tracking.GTM }}');</script>
+        <!-- End Google Tag Manager -->
+      {% endif %}
     {% endif %}
-
+    <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, shrink-to-fit=no, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=no, shrink-to-fit=no, viewport-fit=cover">
     <meta name="format-detection" content="telephone=no">
     <meta property="dimagi:baseUrl" content="{{ meta.baseUrl }}">
 
@@ -90,8 +92,41 @@
     {% endcompress %}
 
     {% block stylesheets %}{% endblock %}
+    {% if request.is_amp %}
+      <link rel="canonical" href="{{request.build_absolute_uri}}">
+      <style amp-custom>
+        {% block ampcss %}
+        {% endblock ampcss %}
+      </style>
+      <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+      <script async src="https://cdn.ampproject.org/v0.js"></script>
+      <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+      {% block ampscript %}
+      {% endblock ampscript %}
+    {% endif %}
   </head>
   <body class="{% block body_class %}{% endblock %}">
+    {% if request.is_amp %}
+      {% if meta.tracking.GTM %}
+        <!-- Google Tag Manager -->
+        <amp-analytics type="googleanalytics" id="analytics1">
+          <script type="application/json">
+            {
+            "vars": {
+                "account": "{{ meta.tracking.GTM }}"
+              },
+              "triggers": {
+                "trackPageview": {
+                  "on": "visible",
+                  "request": "pageview"
+                }
+              }
+            }
+          </script>
+        </amp-analytics>
+        <!-- End Google Tag Manager -->
+      {% endif %}
+    {% endif %}
     {% if meta.tracking.GTM %}
       <!-- Google Tag Manager (noscript) -->
       <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ meta.tracking.GTM }}"
@@ -165,10 +200,12 @@
       <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
     <![endif]-->
     <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
-
-    {% block requirejs_module %}
+    {% if request.is_amp %}
+      {% block requirejs_module %}
+      {% endblock %}
+    {% else %}
       {% require_module 'app' %}
-    {% endblock %}
+    {% endif %}
 
     {% block js %}{% endblock %}
 

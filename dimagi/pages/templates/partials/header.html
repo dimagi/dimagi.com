@@ -21,7 +21,7 @@
 
   {# This is the navigation when you click More #}
   <nav role="navigation">
-    <div class="menu"
+    <div class="menu {% if request.is_amp %} show-time-amp {% endif %}" {% if request.is_amp %} [class]="drpdwn_cls" {% endif %}
          id="menu">
       {% include "partials/menu/more.html" %}
     </div>
