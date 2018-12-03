@@ -110,9 +110,6 @@ define([
   var internalClick = function (selector, name, properties) {
     self.ready.done(function() {
       self.logger.debug.log(self.logger.fmt.labelArgs(["Selector", "Name", "Properties"], arguments), 'Track Internal Click');
-      console.log(selector)
-      console.log(name);
-      console.log(properties);
       _kmqPushCommand('trackClick', properties, undefined, name);
     });
   };
@@ -166,6 +163,8 @@ define([
 
     _.each($('[data-kmq-external="true"]'), function ($elem) {
 
+      $elem = $($elem);
+      
       var name = $elem.attr('data-kmq-name'),
           properties = $.parseJSON($elem.attr('data-kmq-properties') || "{}");
 
