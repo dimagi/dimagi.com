@@ -6,7 +6,7 @@
   <section class="epic-cover"
            data-lazybg="true">
     <div class="content">
-      <h1 class="pad-top-large">
+      <h1 class="pad-top-large" {% if request.is_amp %} amp-fx="fade-in" data-duration="1000ms" {% endif %}>
         {% blocktrans %}
           How to Establish<br />
           Data Collection<br />
