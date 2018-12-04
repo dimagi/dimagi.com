@@ -39,6 +39,8 @@
 
 @include jacket ($jacket-standard) {
   .sub-nav a:not(.button) {
+    color: $color-body-text;
+
     &:hover,
     &:focus {
       color: $color-link;
