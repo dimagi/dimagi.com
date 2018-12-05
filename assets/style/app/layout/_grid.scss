@@ -1,52 +1,76 @@
+@import 'app/lib/jacket';
 @import 'app/variables/sizes';
 
-.grid,
-[class*="grid-"] {
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: -$space-line !important; // scss-lint:disable ImportantRule
-  margin-left: -$space-base;
-  margin-right: -$space-base;
-}
-
-.grid > *,
-[class*="grid-"] > * {
-  flex: 0 1 auto;
-  margin-bottom: $space-line !important; // scss-lint:disable ImportantRule
-  padding-left: $space-base;
-  padding-right: $space-base;
-  width: 100%;
-}
-
-@each $_type, $_space in $space-by-type {
-  $_gap: space-gap-grid($_space);
-
-  .grid.gap-#{$_type},
-  .grid.gap-vert-#{$_type},
-  .grid.gap-bottom-#{$_type},
-  [class*="grid-"].gap-#{$_type},
-  [class*="grid-"].gap-vert-#{$_type},
-  [class*="grid-"].gap-bottom-#{$_type} {
-    margin-bottom: $_gap !important; // scss-lint:disable ImportantRule
+@include jacket ($jacket-critical) {
+  .grid,
+  [class*="grid-"] {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: -$space-line;
+    margin-left: -$space-base;
+    margin-right: -$space-base;
   }
-}
 
-.grid-reverse {
-  flex-direction: row-reverse;
-}
-
-.grid-row-equal-heights > * {
-  display: flex;
-  flex-wrap: wrap;
-
-  > * {
+  .grid > *,
+  [class*="grid-"] > * {
     flex: 0 1 auto;
+    margin-bottom: $space-line;
+    padding-left: $space-base;
+    padding-right: $space-base;
     width: 100%;
   }
 }
 
+@include jacket ($jacket-standard) {
+  .grid,
+  [class*="grid-"] {
+    margin-bottom: -$space-line !important; // scss-lint:disable ImportantRule
+  }
+
+  .grid > *,
+  [class*="grid-"] > * {
+    margin-bottom: $space-line !important; // scss-lint:disable ImportantRule
+  }
+}
+
+@include jacket ($jacket-critical) {
+  .grid-reverse {
+    flex-direction: row-reverse;
+  }
+}
+
+@include jacket ($jacket-standard) {
+  @each $_type, $_space in $space-by-type {
+    $_gap: space-gap-grid($_space);
+
+    .grid.gap-#{$_type},
+    .grid.gap-vert-#{$_type},
+    .grid.gap-bottom-#{$_type},
+    [class*="grid-"].gap-#{$_type},
+    [class*="grid-"].gap-vert-#{$_type},
+    [class*="grid-"].gap-bottom-#{$_type} {
+      margin-bottom: $_gap !important; // scss-lint:disable ImportantRule
+    }
+  }
+
+  .grid-row-equal-heights > * {
+    display: flex;
+    flex-wrap: wrap;
+
+    > * {
+      flex: 0 1 auto;
+      width: 100%;
+    }
+  }
+}
+
 .no-shrink {
-  flex-shrink: 0 !important; // scss-lint:disable ImportantRule
+  @include jacket ($jacket-critical) {
+    flex-shrink: 0;
+  }
+  @include jacket ($jacket-standard) {
+    flex-shrink: 0 !important; // scss-lint:disable ImportantRule
+  }
 }
 
 @mixin _make-grid-at($_size: null) {
@@ -79,6 +103,10 @@
       }
     }
   }
+}
+
+@mixin _make-grid-space-at($_size: null) {
+  $_suffix: if($_size != null, -at-#{$_size}, null);
 
   @each $_type, $_space in $space-by-type {
     $_margin: space-margin($_space);
@@ -97,10 +125,20 @@
 
     .grid-space-#{$_type}#{$_suffix},
     .grid-row-space-#{$_type}#{$_suffix} {
-      margin-bottom: $_space !important; // scss-lint:disable ImportantRule
+      @include jacket ($jacket-critical) {
+        margin-bottom: $_space;
+      }
+      @include jacket ($jacket-standard) {
+        margin-bottom: $_space !important; // scss-lint:disable ImportantRule
+      }
 
       > * {
-        margin-bottom: $_space !important; // scss-lint:disable ImportantRule
+        @include jacket ($jacket-critical) {
+          margin-bottom: $_space;
+        }
+        @include jacket ($jacket-standard) {
+          margin-bottom: $_space !important; // scss-lint:disable ImportantRule
+        }
       }
     }
 
@@ -111,10 +149,19 @@
       .grid-row-space-#{$_type}#{$_suffix}.gap-#{$_sub-type},
       .grid-row-space-#{$_type}#{$_suffix}.gap-vert-#{$_sub-type},
       .grid-row-space-#{$_type}#{$_suffix}.gap-bottom-#{$_sub-type} {
-        margin-bottom: $_space - $_sub-space !important; // scss-lint:disable ImportantRule
+        @include jacket ($jacket-critical) {
+          margin-bottom: $_space - $_sub-space;
+        }
+        @include jacket ($jacket-standard) {
+          margin-bottom: $_space - $_sub-space !important; // scss-lint:disable ImportantRule
+        }
       }
     }
   }
+}
+
+@mixin _make-grid-align-at($_size: null) {
+  $_suffix: if($_size != null, -at-#{$_size}, null);
 
   $_grid-align: (
     left: flex-start,
@@ -126,8 +173,14 @@
   @each $_justify, $_content in $_grid-align {
     .grid-align-#{$_justify}#{$_suffix},
     .flex-align-#{$_justify}#{$_suffix} {
-      display: flex !important; // scss-lint:disable ImportantRule
-      justify-content: $_content !important; // scss-lint:disable ImportantRule
+        @include jacket ($jacket-critical) {
+          display: flex;
+          justify-content: $_content;
+        }
+        @include jacket ($jacket-standard) {
+          display: flex !important; // scss-lint:disable ImportantRule
+          justify-content: $_content !important; // scss-lint:disable ImportantRule
+        }
     }
   }
 
@@ -145,19 +198,38 @@
       @if $_content == null {
         $_content: $_items;
       }
-
-      align-content: $_content !important; // scss-lint:disable ImportantRule
-      align-items: $_items !important; // scss-lint:disable ImportantRule
-      display: flex !important; // scss-lint:disable ImportantRule
+      @include jacket ($jacket-critical) {
+        align-content: $_content;
+        align-items: $_items;
+        display: flex;
+      }
+      @include jacket ($jacket-standard) {
+        align-content: $_content !important; // scss-lint:disable ImportantRule
+        align-items: $_items !important; // scss-lint:disable ImportantRule
+        display: flex !important; // scss-lint:disable ImportantRule
+      }
     }
   }
-
 }
 
-@include _make-grid-at();
+@include jacket ($jacket-critical) {
+  @include _make-grid-at();
+  @include _make-grid-align-at();
+}
+
+@include jacket ($jacket-standard) {
+  @include _make-grid-align-at();
+  @include _make-grid-space-at();
+}
 
 @each $_size, $_width in $widths-by-size {
   @media (min-width: $_width) {
-    @include _make-grid-at($_size);
+    @include jacket ($jacket-critical) {
+      @include _make-grid-at($_size);
+    }
+    @include jacket ($jacket-standard) {
+      @include _make-grid-space-at($_size);
+      @include _make-grid-align-at($_size);
+    }
   }
 }

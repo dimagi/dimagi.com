@@ -43,8 +43,8 @@ define([
 
   return {
     initialize: function () {
-
-      if($("meta[property='dimagi:auditABClicks']").attr("content")) {
+      
+      if($.parseJSON($("meta[property='dimagi:auditABClicks']").attr("content"))) {
         self.auditClicks();
       }
 

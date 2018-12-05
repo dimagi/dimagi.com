@@ -1,35 +1,43 @@
+@import 'app/lib/jacket';
 @import 'app/variables/colors';
 @import 'app/variables/sizes';
 @import 'app/variables/type';
 
-body {
-  -webkit-tap-highlight-color: $color-tap-highlight;
+@include jacket ($jacket-standard) {
+  body {
+    -webkit-tap-highlight-color: $color-tap-highlight;
+  }
 }
 
-a {
-  text-decoration: none;
+@include jacket ($jacket-critical) {
+  a {
+    text-decoration: none;
+  }
+
+  a,
+  a .link {
+    font-weight: $font-weight-link;
+  }
 }
 
-a,
-a .link {
-  font-weight: $font-weight-link;
+@include jacket ($jacket-standard) {
+  .show-time a,
+  .show-time a .link {
+    transition: color 150ms linear;
+  }
 }
 
-.show-time a,
-.show-time a .link {
-  transition: color 150ms linear;
-}
 
 @mixin _make-link($_color) {
-  a,
+  a:not(.button),
   a .link,
-  a:visited {
+  a:not(.button):visited {
     color: $_color;
   }
 
-  a:hover,
+  a:not(.button):hover,
   a:hover .link,
-  a:focus,
+  a:not(.button):focus,
   a:focus .link {
     color: color-hover($_color);
   }
@@ -38,25 +46,25 @@ a .link {
     outline: 0;
   }
 
-  a:active,
+  a:not(.button):active,
   a:active .link {
     color: color-active($_color);
   }
 
-  a.inverted,
+  a:not(.button).inverted,
   a.inverted .link,
-  .inverted a,
+  .inverted a:not(.button),
   .inverted a .link {
     color: color-invert($_color);
   }
 
-  a.inverted:hover,
+  a.inverted:not(.button):hover,
   a.inverted:hover .link,
-  a.inverted:focus,
+  a.inverted:not(.button):focus,
   a.inverted:focus .link,
-  .inverted a:hover,
+  .inverted a:not(.button):hover,
   .inverted a:hover .link,
-  .inverted a:focus,
+  .inverted a:not(.button):focus,
   .inverted a:focus .link {
     color: color-invert-hover($_color);
   }
@@ -66,67 +74,73 @@ a .link {
     outline: 0;
   }
 
-  a.inverted:active,
+  a.inverted:not(.button):active,
   a.inverted:active .link,
-  .inverted a:active,
+  .inverted a:not(.button):active,
   .inverted a:active .link {
     color: color-invert-active($_color);
   }
 }
 
-@include _make-link($color-link);
+@include jacket ($jacket-standard) {
+  @include _make-link($color-link);
+}
 
-@each $_name, $_color in $colors-by-theme {
-  .#{$_name}-theme {
-    @include _make-link($_color);
+@include jacket ($jacket-standard) {
+  @each $_name, $_color in $colors-by-theme {
+    .#{$_name}-theme {
+      @include _make-link($_color);
+    }
   }
 }
 
-a.hotspot {
-  color: inherit;
-  display: block;
-  font-weight: inherit;
-
-  &:hover,
-  &:focus {
+@include jacket ($jacket-standard) {
+  a.hotspot {
     color: inherit;
-  }
+    display: block;
+    font-weight: inherit;
 
-  &:active {
-    color: inherit;
-  }
-}
-
-.links-social {
-  span {
-    color: $color-body-text;
-    display: inline-block;
-    font-size: $font-size-small;
-    font-weight: $font-weight-bold;
-    padding-right: 5px;
-    text-transform: uppercase;
-    vertical-align: middle;
-  }
-
-  a:hover {
-    [fill]:not([fill="none"]):not([fill^=url]) {
-      fill: $color-body-text !important; // scss-lint:disable ImportantRule
+    &:hover,
+    &:focus {
+      color: inherit;
     }
 
-    [stroke]:not([stroke="transparent"]) {
-      stroke: $color-body-text !important; // scss-lint:disable ImportantRule
+    &:active {
+      color: inherit;
     }
   }
-}
 
-.show-time .links-social {
-  a {
-    [fill]:not([fill="none"]):not([fill^=url]) { // scss-lint:disable SelectorDepth
-      transition: fill .5s ease-in-out;
+  .links-social {
+    span {
+      color: $color-body-text;
+      display: inline-block;
+      font-size: $font-size-small;
+      font-weight: $font-weight-bold;
+      padding-right: 5px;
+      text-transform: uppercase;
+      vertical-align: middle;
     }
 
-    [stroke]:not([stroke="transparent"]) { // scss-lint:disable SelectorDepth
-      transition: stroke .5s ease-in-out;
+    a:not(.button):hover {
+      [fill]:not([fill="none"]):not([fill^=url]) {
+        fill: $color-body-text !important; // scss-lint:disable ImportantRule
+      }
+
+      [stroke]:not([stroke="transparent"]) {
+        stroke: $color-body-text !important; // scss-lint:disable ImportantRule
+      }
+    }
+  }
+
+  .show-time .links-social {
+    a:not(.button) {
+      [fill]:not([fill="none"]):not([fill^=url]) { // scss-lint:disable SelectorDepth
+        transition: fill .5s ease-in-out;
+      }
+
+      [stroke]:not([stroke="transparent"]) { // scss-lint:disable SelectorDepth
+        transition: stroke .5s ease-in-out;
+      }
     }
   }
 }

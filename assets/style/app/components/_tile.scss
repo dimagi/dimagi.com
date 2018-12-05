@@ -1,179 +1,188 @@
+@import 'app/lib/jacket';
 @import 'app/variables/colors';
 @import 'app/variables/sizes';
 
-.tile {
-  background: $color-white;
-  display: block;
-  padding: $space-small;
-  padding-bottom: $space-small * 2;
-  position: relative;
-
-  &:before { // scss-lint:disable PropertyCount
-    border: 1px solid rgba(0, 0, 0, .12);
-    border-radius: inherit;
-    bottom: 0;
-    content: ' ';
+@include jacket ($jacket-standard) {
+  .tile {
+    background: $color-white;
     display: block;
-    left: 0;
-    pointer-events: none;
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: 99;
-  }
+    padding: $space-small;
+    padding-bottom: $space-small * 2;
+    position: relative;
 
-  .theme-icon + * {
-    margin-top: $space-base;
-  }
+    &:before { // scss-lint:disable PropertyCount
+      border: 1px solid rgba(0, 0, 0, .12);
+      border-radius: inherit;
+      bottom: 0;
+      content: ' ';
+      display: block;
+      left: 0;
+      pointer-events: none;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 99;
+    }
 
-  &.full-bleed {
-    padding: 0;
+    .theme-icon + * {
+      margin-top: $space-base;
+    }
 
-    .copy {
-      padding: $space-small;
+    &.full-bleed {
+      padding: 0;
+
+      .copy {
+        padding: $space-small;
+      }
+    }
+
+    .button-container {
+      height: $space-small;
+      position: relative;
+    }
+
+    .button {
+      bottom: $space-small;
+      left: $space-small;
+      min-width: calc(100% - 60px);
+      position: absolute;
+      padding: 10px;
     }
   }
 
-  .button-container {
-    height: $space-small;
+  a.tile {
+    border-radius: 5px;
+    color: inherit;
+    font-weight: inherit;
     position: relative;
+
+    &:after { // scss-lint:disable PropertyCount
+      border: 2px solid $color-blue;
+      border-radius: inherit;
+      bottom: 0;
+      content: ' ';
+      display: block;
+      left: 0;
+      opacity: 0;
+      pointer-events: none;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 99;
+    }
   }
 
-  .button {
-    bottom: $space-small;
-    left: $space-small;
-    min-width: calc(100% - 60px);
-    position: absolute;
-    padding: 10px;
-  }
-}
-
-a.tile {
-  border-radius: 5px;
-  color: inherit;
-  font-weight: inherit;
-  position: relative;
-
-  &:after { // scss-lint:disable PropertyCount
-    border: 2px solid $color-blue;
-    border-radius: inherit;
-    bottom: 0;
-    content: ' ';
-    display: block;
-    left: 0;
-    opacity: 0;
-    pointer-events: none;
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: 99;
-  }
-}
-
-.show-time a.tile:after {
-  transition: border 300ms, opacity 300ms;
-}
-
-a.tile:hover,
-a.tile:focus {
-  color: inherit;
-}
-
-a.tile:hover:after,
-a.tile:focus:after {
-  opacity: 1;
-}
-
-@each $_name, $_color in $colors-by-theme {
-
-  .tile .#{$_name}-icon+* {
-    margin-top: $space-base;
+  .show-time a.tile:after {
+    transition: border 300ms, opacity 300ms;
   }
 
-  .#{$_name}-theme a.tile:after {
-    border-color: $_color;
+  a.tile:hover,
+  a.tile:focus {
+    color: inherit;
   }
 
-  .#{$_name}-theme a.tile:hover:after,
-  .#{$_name}-theme a.tile:focus:after {
-    border-color: $_color;
-  }
-
-  a.tile.#{$_name}-border:after {
-    border-color: $_color !important; // scss-lint:disable ImportantRule
-  }
-
-  a.tile.#{$_name}-border:hover:after,
-  a.tile.#{$_name}-border:focus:after {
-    border-color: $_color !important; // scss-lint:disable ImportantRule
+  a.tile:hover:after,
+  a.tile:focus:after {
+    opacity: 1;
   }
 }
 
-a.tile.full-bleed .image { // scss-lint:disable MergeableSelector
-  background-color: $color-white;
-  overflow: hidden;
-  position: relative;
-  z-index: 100;
+@include jacket ($jacket-standard) {
 
-  &::first-child {
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
-  }
+  @each $_name, $_color in $colors-by-theme {
 
-  &:first-child:not(:last-child):before,
-  &:first-child:not(:last-child):after {
-    bottom: -2px;
-  }
+    .tile .#{$_name}-icon+* {
+      margin-top: $space-base;
+    }
 
-  &:last-child {
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
-  }
+    .#{$_name}-theme a.tile:after {
+      border-color: $_color;
+    }
 
-  &:last-child:not(:first-child):before,
-  &:last-child:not(:first-child):after {
-    top: -2px;
-  }
+    .#{$_name}-theme a.tile:hover:after,
+    .#{$_name}-theme a.tile:focus:after {
+      border-color: $_color;
+    }
 
-  &:before { // scss-lint:disable PropertyCount
-    border: 1px solid rgba(0, 0, 0, .12);
-    border-radius: inherit;
-    bottom: 0;
-    content: ' ';
-    display: block;
-    left: 0;
-    pointer-events: none;
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: 99;
-  }
+    a.tile.#{$_name}-border:after {
+      border-color: $_color !important; // scss-lint:disable ImportantRule
+    }
 
-  &:after { // scss-lint:disable PropertyCount
-    border: 2px solid $color-black;
-    border-radius: inherit;
-    bottom: 0;
-    content: ' ';
-    display: block;
-    left: 0;
-    opacity: 0;
-    pointer-events: none;
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: 99;
+    a.tile.#{$_name}-border:hover:after,
+    a.tile.#{$_name}-border:focus:after {
+      border-color: $_color !important; // scss-lint:disable ImportantRule
+    }
   }
 }
 
-.show-time a.tile.full-bleed .image:after {
-  transition: opacity 300ms;
-}
+@include jacket ($jacket-standard) {
 
-a.tile.full-bleed:hover .image:after,
-a.tile.full-bleed:focus .image:after {
-  opacity: .2;
-}
+  a.tile.full-bleed .image { // scss-lint:disable MergeableSelector
+    background-color: $color-white;
+    overflow: hidden;
+    position: relative;
+    z-index: 100;
 
-a.tile.full-bleed:active .image:after { // scss-lint:disable MergeableSelector
-  opacity: .25;
+    &::first-child {
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+    }
+
+    &:first-child:not(:last-child):before,
+    &:first-child:not(:last-child):after {
+      bottom: -2px;
+    }
+
+    &:last-child {
+      border-bottom-left-radius: 4px;
+      border-bottom-right-radius: 4px;
+    }
+
+    &:last-child:not(:first-child):before,
+    &:last-child:not(:first-child):after {
+      top: -2px;
+    }
+
+    &:before { // scss-lint:disable PropertyCount
+      border: 1px solid rgba(0, 0, 0, .12);
+      border-radius: inherit;
+      bottom: 0;
+      content: ' ';
+      display: block;
+      left: 0;
+      pointer-events: none;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 99;
+    }
+
+    &:after { // scss-lint:disable PropertyCount
+      border: 2px solid $color-black;
+      border-radius: inherit;
+      bottom: 0;
+      content: ' ';
+      display: block;
+      left: 0;
+      opacity: 0;
+      pointer-events: none;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 99;
+    }
+  }
+
+  .show-time a.tile.full-bleed .image:after {
+    transition: opacity 300ms;
+  }
+
+  a.tile.full-bleed:hover .image:after,
+  a.tile.full-bleed:focus .image:after {
+    opacity: .2;
+  }
+
+  a.tile.full-bleed:active .image:after { // scss-lint:disable MergeableSelector
+    opacity: .25;
+  }
 }

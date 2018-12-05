@@ -1,270 +1,291 @@
+@import 'app/lib/jacket';
 @import 'app/variables/colors';
 @import 'app/variables/sizes';
 
-html.modal-active {
-  overflow: hidden;
-}
-
-html.touch {
-  height: auto;
-  position: relative;
-  transition: height 0s;
-
-  &.modal-active {
-    height: 100%;
-    transition: height 0s 300ms;
-  }
-}
-
-html.modal-active.ios-modal-fix body {
-  position: fixed;
-  width: 100%;
-}
-
-.modal {
-  bottom: 0;
-  left: 0;
-  opacity: 0;
-  overflow: hidden;
-  pointer-events: none;
-  position: fixed;
-  right: 0;
-  top: 0;
-  visibility: hidden;
-  z-index: -1;
-}
-
-.modal[data-active="true"] {
-  opacity: 1;
-  overflow: auto;
-  pointer-events: auto;
-  transition: visibility 0s, z-index 0s;
-  visibility: visible;
-  z-index: 99;
-}
-
-.show-time .modal {
-  transition: opacity 0s 300ms, visibility 0s 300ms, z-index 0s 300ms;
-}
-
-.touch .modal[data-active="true"] {
-  -webkit-overflow-scrolling: touch;
-  overflow-y: scroll;
-}
-
-.modal-content {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 276px;
-}
-
-.modal-wrapper {
-  background-color: $color-white;
-  margin-left: auto;
-  margin-right: auto;
-  min-height: 100%;
-  overflow-x: hidden;
-  padding-bottom: $space-medium;
-  padding-top: $space-medium;
-  position: relative;
-  transform: translate(0, 100%);
-}
-
-.show-time .modal-wrapper {
-  transition: transform 300ms ease-out;
-}
-
-[data-active="true"] .modal-wrapper {
-  transform: translate(0, 0);
-  transition: transform 300ms ease-out;
-}
-
-@media (min-width: $width-mobile) {
+@include jacket ($jacket-critical) {
   .modal {
-    background-color: rgba(0, 0, 0, .5);
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    overflow: hidden;
+    position: fixed;
+    visibility: hidden;
+    z-index: -1;
+    right: 0;
+    top: 0;
+  }
+}
+
+@include jacket ($jacket-standard) {
+
+  html.modal-active {
+    overflow: hidden;
   }
 
-  .show-time .modal {
-    transition: opacity 150ms, visibility 150ms, z-index 150ms;
+  html.touch {
+    height: auto;
+    position: relative;
+    transition: height 0s;
+
+    &.modal-active {
+      height: 100%;
+      transition: height 0s 300ms;
+    }
+  }
+
+  html.modal-active.ios-modal-fix body {
+    position: fixed;
+    width: 100%;
+  }
+
+  .modal {
+    pointer-events: none;
   }
 
   .modal[data-active="true"] {
-    transition: opacity 150ms, visibility 0s, z-index 0s;
-  }
-
-  .modal-wrapper {
-    border-radius: 5px;
-    margin-bottom: 21px;
-    margin-top: 21px;
-    min-height: 0;
-    transform: translate(0, -15px);
-  }
-
-  .show-time .modal-wrapper {
-    transition: transform 150ms ease-out;
-  }
-
-  [data-active="true"] .modal-wrapper {
-    transform: translate(0, 0);
-    transition: transform 150ms ease-out;
-  }
-
-  .dialog .modal-wrapper {
-    left: 50%;
-    margin-bottom: 0 !important; // scss-lint:disable ImportantRule
-    margin-top: 0 !important; // scss-lint:disable ImportantRule
-    max-height: calc(100% - 42px);
-    min-height: 0;
+    opacity: 1;
     overflow: auto;
-    position: fixed;
-    top: 50%;
-    transform: translate(-50%, calc(-50% - 15px));
+    pointer-events: auto;
+    transition: visibility 0s, z-index 0s;
+    visibility: visible;
+    z-index: 99;
+  }
+}
+
+@include jacket ($jacket-standard) {
+  .show-time .modal {
+    transition: opacity 0s 300ms, visibility 0s 300ms, z-index 0s 300ms;
   }
 
-  .touch .dialog .modal-wrapper {
+  .touch .modal[data-active="true"] {
     -webkit-overflow-scrolling: touch;
     overflow-y: scroll;
   }
 
-  .dialog .modal-wrapper {
-    width: 424px;
+  .modal-content {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 276px;
   }
 
-  .dialog[data-active="true"] .modal-wrapper {
-    transform: translate(-50%, -50%);
-  }
-
-  .dialog.shake .modal-wrapper {
-    animation-duration: 300ms;
-    animation-name: shake-dialog;
-  }
-}
-
-@media (min-width: $width-desktop) {
   .modal-wrapper {
-    margin-bottom: 36.5px;
-    margin-top: 36.5px;
+    background-color: $color-white;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 100%;
+    overflow-x: hidden;
+    padding-bottom: $space-medium;
+    padding-top: $space-medium;
+    position: relative;
+    transform: translate(0, 100%);
   }
 
-  .dialog .modal-wrapper {
-    max-height: calc(100% - 73px);
+  .show-time .modal-wrapper {
+    transition: transform 300ms ease-out;
   }
 
-  .dialog .modal-wrapper {
-    width: 680px;
+  [data-active="true"] .modal-wrapper {
+    transform: translate(0, 0);
+    transition: transform 300ms ease-out;
   }
 }
 
-@each $_size, $_width in $modal-wrapper-widths-by-size {
-  @media (min-width: map-get($widths-by-size, $_size)) {
+@include jacket ($jacket-standard) {
+  @media (min-width: $width-mobile) {
+    .modal {
+      background-color: rgba(0, 0, 0, .5);
+    }
+
+    .show-time .modal {
+      transition: opacity 150ms, visibility 150ms, z-index 150ms;
+    }
+
+    .modal[data-active="true"] {
+      transition: opacity 150ms, visibility 0s, z-index 0s;
+    }
+
     .modal-wrapper {
-      max-width: $_width;
+      border-radius: 5px;
+      margin-bottom: 21px;
+      margin-top: 21px;
+      min-height: 0;
+      transform: translate(0, -15px);
+    }
+
+    .show-time .modal-wrapper {
+      transition: transform 150ms ease-out;
+    }
+
+    [data-active="true"] .modal-wrapper {
+      transform: translate(0, 0);
+      transition: transform 150ms ease-out;
+    }
+
+    .dialog .modal-wrapper {
+      left: 50%;
+      margin-bottom: 0 !important; // scss-lint:disable ImportantRule
+      margin-top: 0 !important; // scss-lint:disable ImportantRule
+      max-height: calc(100% - 42px);
+      min-height: 0;
+      overflow: auto;
+      position: fixed;
+      top: 50%;
+      transform: translate(-50%, calc(-50% - 15px));
+    }
+
+    .touch .dialog .modal-wrapper {
+      -webkit-overflow-scrolling: touch;
+      overflow-y: scroll;
+    }
+
+    .dialog .modal-wrapper {
+      width: 424px;
+    }
+
+    .dialog[data-active="true"] .modal-wrapper {
+      transform: translate(-50%, -50%);
+    }
+
+    .dialog.shake .modal-wrapper {
+      animation-duration: 300ms;
+      animation-name: shake-dialog;
     }
   }
-};
 
-@each $_size, $_width in $modal-content-widths-by-size {
-  @media (min-width: map-get($widths-by-size, $_size)) {
-    .modal-content {
-      max-width: $_width;
+  @media (min-width: $width-desktop) {
+    .modal-wrapper {
+      margin-bottom: 36.5px;
+      margin-top: 36.5px;
+    }
+
+    .dialog .modal-wrapper {
+      max-height: calc(100% - 73px);
+    }
+
+    .dialog .modal-wrapper {
+      width: 680px;
     }
   }
-};
+}
 
-@media (min-width: $width-desktop) {
-  .dialog .modal-content {
-    max-width: map-get($modal-content-widths-by-size, medium) !important; // scss-lint:disable ImportantRule
+@include jacket ($jacket-standard) {
+  @each $_size, $_width in $modal-wrapper-widths-by-size {
+    @media (min-width: map-get($widths-by-size, $_size)) {
+      .modal-wrapper {
+        max-width: $_width;
+      }
+    }
+  }
+
+  @each $_size, $_width in $modal-content-widths-by-size {
+    @media (min-width: map-get($widths-by-size, $_size)) {
+      .modal-content {
+        max-width: $_width;
+      }
+    }
+  }
+
+  @media (min-width: $width-desktop) {
+    .dialog .modal-content {
+      max-width: map-get($modal-content-widths-by-size, medium) !important; // scss-lint:disable ImportantRule
+    }
   }
 }
 
-.modal-close-button {
-  background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCIgd2lkdGg9IjIwIiBoZWlnaHQ9IjIwIj4KICA8cGF0aCBmaWxsPSIjMkUzQjRFIiBkPSJNMTEuNDE0LDEwbDYuMjkzLTYuMjkzYzAuMzkxLTAuMzkxLDAuMzkxLTEuMDIzLDAtMS40MTRzLTEuMDIzLTAuMzkxLTEuNDE0LDBMMTAsOC41ODZMMy43MDcsMi4yOTMgYy0wLjM5MS0wLjM5MS0xLjAyMy0wLjM5MS0xLjQxNCwwcy0wLjM5MSwxLjAyMywwLDEuNDE0TDguNTg2LDEwbC02LjI5Myw2LjI5M2MtMC4zOTEsMC4zOTEtMC4zOTEsMS4wMjMsMCwxLjQxNCBzMS4wMjMsMC4zOTEsMS40MTQsMEwxMCwxMS40MTRsNi4yOTMsNi4yOTNjMC4zOTEsMC4zOTEsMS4wMjMsMC4zOTEsMS40MTQsMHMwLjM5MS0xLjAyMywwLTEuNDE0TDExLjQxNCwxMHoiIC8+Cjwvc3ZnPgo=") center center no-repeat;
-  display: block;
-  height: 60px;
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 60px;
-}
-
-.video-modal {
-  height: 100%;
-  left: 0;
-  opacity: 0;
-  pointer-events: none;
-  position: fixed;
-  top: 0;
-  transform: translate3d(0, 0, 0);
-  visibility: hidden;
-  width: 100%;
-  z-index: 5;
-
-  video {
-    height: 100%;
-    left: 50%;
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-  }
-
-  .close-icon {
-    background: transparent;
-    position: absolute;
-    right: 30px;
-    top: 30px;
-    z-index: 5;
-  }
-}
-
-.touch .video-modal .close-icon {
-  bottom: 30px;
-  top: auto;
-}
-
-@media (min-width: $width-desktop) {
-  .video-modal .close-icon {
+@include jacket ($jacket-standard) {
+  .modal-close-button {
+    background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCIgd2lkdGg9IjIwIiBoZWlnaHQ9IjIwIj4KICA8cGF0aCBmaWxsPSIjMkUzQjRFIiBkPSJNMTEuNDE0LDEwbDYuMjkzLTYuMjkzYzAuMzkxLTAuMzkxLDAuMzkxLTEuMDIzLDAtMS40MTRzLTEuMDIzLTAuMzkxLTEuNDE0LDBMMTAsOC41ODZMMy43MDcsMi4yOTMgYy0wLjM5MS0wLjM5MS0xLjAyMy0wLjM5MS0xLjQxNCwwcy0wLjM5MSwxLjAyMywwLDEuNDE0TDguNTg2LDEwbC02LjI5Myw2LjI5M2MtMC4zOTEsMC4zOTEtMC4zOTEsMS4wMjMsMCwxLjQxNCBzMS4wMjMsMC4zOTEsMS40MTQsMEwxMCwxMS40MTRsNi4yOTMsNi4yOTNjMC4zOTEsMC4zOTEsMS4wMjMsMC4zOTEsMS40MTQsMHMwLjM5MS0xLjAyMywwLTEuNDE0TDExLjQxNCwxMHoiIC8+Cjwvc3ZnPgo=") center center no-repeat;
     display: block;
+    height: 60px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 60px;
   }
 }
 
-.show-time .video-modal {
-  transition: visibility 0s 300ms, opacity 300ms ease-in-out 0s;
-}
-
-.video-active .video-modal {
-  opacity: 1;
-  pointer-events: auto;
-  transition: visibility 0s 0s, opacity 300ms ease-in-out 300ms;
-  visibility: visible;
-}
-
-.youtube-modal {
-  height: 100vh;
-  left: 0;
-  opacity: 0;
-  position: fixed;
-  top: 0;
-  transform: translateZ(0);
-  transition: visibility 0s 1s, opacity 1s 0s ease;
-  visibility: hidden;
-  width: 100vw;
-  z-index: 10;
-
-  .ytplayer {
-    height: 100vh;
-    width: 100vw;
-  }
-
-  .close-icon {
+@include jacket ($jacket-standard) {
+  .video-modal {
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
     position: fixed;
-    right: 30px;
-    top: 30px;
+    top: 0;
+    transform: translate3d(0, 0, 0);
+    visibility: hidden;
+    width: 100%;
+    z-index: 5;
+
+    video {
+      height: 100%;
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+    }
+
+    .close-icon {
+      background: transparent;
+      position: absolute;
+      right: 30px;
+      top: 30px;
+      z-index: 5;
+    }
+  }
+
+  .touch .video-modal .close-icon {
+    bottom: 30px;
+    top: auto;
+  }
+
+  @media (min-width: $width-desktop) {
+    .video-modal .close-icon {
+      display: block;
+    }
+  }
+
+  .show-time .video-modal {
+    transition: visibility 0s 300ms, opacity 300ms ease-in-out 0s;
+  }
+
+  .video-active .video-modal {
+    opacity: 1;
+    pointer-events: auto;
+    transition: visibility 0s 0s, opacity 300ms ease-in-out 300ms;
+    visibility: visible;
   }
 }
 
-.youtube-modal[data-active='true'] {
-  opacity: 1;
-  transition: visibility 0s, opacity 1s 0s ease;
-  visibility: visible;
+@include jacket ($jacket-standard) {
+  .youtube-modal {
+    height: 100vh;
+    left: 0;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    transform: translateZ(0);
+    transition: visibility 0s 1s, opacity 1s 0s ease;
+    visibility: hidden;
+    width: 100vw;
+    z-index: 10;
+
+    .ytplayer {
+      height: 100vh;
+      width: 100vw;
+    }
+
+    .close-icon {
+      position: fixed;
+      right: 30px;
+      top: 30px;
+    }
+  }
+
+  .youtube-modal[data-active='true'] {
+    opacity: 1;
+    transition: visibility 0s, opacity 1s 0s ease;
+    visibility: visible;
+  }
 }

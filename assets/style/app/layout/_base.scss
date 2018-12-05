@@ -1,19 +1,22 @@
+@import 'app/lib/jacket';
 @import 'app/variables/colors';
 @import 'app/variables/sizes';
 
-html {
-  background-color: $color-bg-html;
-}
+@include jacket ($jacket-critical) {
+  html {
+    background-color: $color-bg-html;
+  }
 
-body {
-  background-color: $color-bg;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: $body-width-max;
-  min-width: $body-width-min;
-  overflow-x: hidden;
-}
+  body {
+    background-color: $color-bg;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: $body-width-max;
+    min-width: $body-width-min;
+    overflow-x: hidden;
+  }
 
-.main-content {
-  overflow-x: hidden;
+  .main-content {
+    overflow-x: hidden;
+  }
 }

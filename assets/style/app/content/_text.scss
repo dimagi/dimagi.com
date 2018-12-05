@@ -1,69 +1,73 @@
+@import 'app/lib/jacket';
 @import 'app/variables/sizes';
 @import 'app/variables/type';
 
-.fine-print {
-  font-size: $font-size-small;
-  font-weight: $font-weight-medium;
-  letter-spacing: 1px;
-  line-height: $space-line;
-  text-transform: uppercase;
-}
+@include jacket ($jacket-standard) {
+  .fine-print {
+    font-size: $font-size-small;
+    font-weight: $font-weight-medium;
+    letter-spacing: 1px;
+    line-height: $space-line;
+    text-transform: uppercase;
+  }
 
-.legal-text {
-  font-size: $font-size-small;
-  line-height: $space-line;
-}
+  .legal-text {
+    font-size: $font-size-small;
+    line-height: $space-line;
+  }
 
-.upperspaced {
-  font-weight: $font-weight-medium;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
+  .upperspaced {
+    font-weight: $font-weight-medium;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
 
-.text-truncate {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
+  .text-truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
 
-.no-wrap {
-  white-space: nowrap;
-}
+  .no-wrap {
+    white-space: nowrap;
+  }
 
-.font-weight-thin {
-  font-weight: $font-weight-thin !important; //scss-lint:disable ImportantRule
-}
+  .font-weight-thin {
+    font-weight: $font-weight-thin !important; //scss-lint:disable ImportantRule
+  }
 
-.font-weight-light {
-  font-weight: $font-weight-light !important; //scss-lint:disable ImportantRule
-}
+  .font-weight-light {
+    font-weight: $font-weight-light !important; //scss-lint:disable ImportantRule
+  }
 
-.font-weight-regular {
-  font-weight: $font-weight-regular !important; //scss-lint:disable ImportantRule
-}
+  .font-weight-regular {
+    font-weight: $font-weight-regular !important; //scss-lint:disable ImportantRule
+  }
 
-.font-weight-medium {
-  font-weight: $font-weight-medium !important; //scss-lint:disable ImportantRule
-}
+  .font-weight-medium {
+    font-weight: $font-weight-medium !important; //scss-lint:disable ImportantRule
+  }
 
-.font-weight-bold {
-  font-weight: $font-weight-bold !important; //scss-lint:disable ImportantRule
-}
+  .font-weight-bold {
+    font-weight: $font-weight-bold !important; //scss-lint:disable ImportantRule
+  }
 
-.uppercase {
-  text-transform: uppercase !important; //scss-lint:disable ImportantRule
-}
+  .uppercase {
+    text-transform: uppercase !important; //scss-lint:disable ImportantRule
+  }
 
-.capitalize {
-  text-transform: capitalize !important; //scss-lint:disable ImportantRule
-}
+  .capitalize {
+    text-transform: capitalize !important; //scss-lint:disable ImportantRule
+  }
 
-.lowercase {
-  text-transform: lowercase !important; //scss-lint:disable ImportantRule
-}
+  .lowercase {
+    text-transform: lowercase !important; //scss-lint:disable ImportantRule
+  }
 
-.normalcase {
-  text-transform: none !important; //scss-lint:disable ImportantRule
+  .normalcase {
+    text-transform: none !important; //scss-lint:disable ImportantRule
+  }
+
 }
 
 @mixin _make-font-sizes($_size: null, $_at-or-until: at) {
@@ -86,14 +90,17 @@
   }
 }
 
-@include _make-font-sizes();
+@include jacket ($jacket-standard) {
 
-@each $_size, $_width in $widths-by-size {
-  @media (min-width: $_width) {
-    @include _make-font-sizes($_size);
+  @include _make-font-sizes();
+
+  @each $_size, $_width in $widths-by-size {
+    @media (min-width: $_width) {
+      @include _make-font-sizes($_size);
+    }
+    @media (max-width: $_width - 1px) {
+      @include _make-font-sizes($_size, until);
+    }
   }
-  @media (max-width: $_width - 1px) {
-    @include _make-font-sizes($_size, until);
-  }
+
 }
-

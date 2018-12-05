@@ -1,37 +1,41 @@
-.abtest {
-  a.abtest-variant-a {
-    display: none;
-  }
+@import 'app/lib/jacket';
 
-  a.abtest-variant-b {
-    display: none;
-  }
-}
+@include jacket ($jacket-critical) {
+  .abtest {
+    a.abtest-variant-a {
+      display: none;
+    }
 
-.abtest.show-a {
-  a.abtest-control {
-    display: none;
-  }
+    a.abtest-variant-b {
+      display: none;
+    }
 
-  a.abtest-variant-a {
-    display: inline-block;
-  }
+    &.show-a {
+      a.abtest-control {
+        display: none;
+      }
 
-  a.abtest-variant-b {
-    display: none;
-  }
-}
+      a.abtest-variant-a {
+        display: inline-block;
+      }
 
-.abtest.show-b {
-  a.abtest-control {
-    display: none;
-  }
+      a.abtest-variant-b {
+        display: none;
+      }
+    }
 
-  a.abtest-variant-a {
-    display: none;
-  }
+    &.show-b {
+      a.abtest-control {
+        display: none;
+      }
 
-  a.abtest-variant-b {
-    display: inline-block;
+      a.abtest-variant-a {
+        display: none;
+      }
+
+      a.abtest-variant-b {
+        display: inline-block;
+      }
+    }
   }
 }

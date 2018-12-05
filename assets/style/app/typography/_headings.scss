@@ -1,143 +1,148 @@
+@import 'app/lib/jacket';
 @import 'app/variables/colors';
 @import 'app/variables/sizes';
 @import 'app/variables/type';
 
 $min-width-lg: map-get($widths-by-size, large);
 
-h1,
-.h1 {
-  font-size: $font-size-h1;
-  font-weight: $font-weight-h1;
-  line-height: $line-height-h1;
-  margin-bottom: $space-line;
-}
-
-@media (min-width: $min-width-lg) {
+@include jacket ($jacket-critical) {
   h1,
   .h1 {
-    font-size: $font-size-h1-lg;
-    line-height: $line-height-h1-lg;
+    font-size: $font-size-h1;
+    font-weight: $font-weight-h1;
+    line-height: $line-height-h1;
     margin-bottom: $space-line;
   }
-}
 
-h2,
-.h2 {
-  font-size: $font-size-h2;
-  font-weight: $font-weight-h2;
-  line-height: $line-height-header;
-  margin-bottom: $space-line;
-}
+  @media (min-width: $min-width-lg) {
+    h1,
+    .h1 {
+      font-size: $font-size-h1-lg;
+      line-height: $line-height-h1-lg;
+      margin-bottom: $space-line;
+    }
+  }
 
-@media (min-width: $min-width-lg) {
   h2,
   .h2 {
-    font-size: $font-size-h2-lg;
-    line-height: $line-height-header-lg;
-    margin-bottom: $space-line;
-  }
-}
-
-h3,
-.h3 {
-  font-size: $font-size-h3;
-  font-weight: $font-weight-h3;
-  line-height: $line-height-header;
-  margin-bottom: $space-line;
-}
-
-@media (min-width: $min-width-lg) {
-  h3,
-  .h3 {
-    font-size: $font-size-h3-lg;
+    font-size: $font-size-h2;
+    font-weight: $font-weight-h2;
     line-height: $line-height-header;
     margin-bottom: $space-line;
   }
-}
 
-h4,
-.h4 {
-  font-size: $font-size-h4;
-  font-weight: $font-weight-h4;
-  line-height: $space-line;
-  margin-bottom: $space-line;
-}
+  @media (min-width: $min-width-lg) {
+    h2,
+    .h2 {
+      font-size: $font-size-h2-lg;
+      line-height: $line-height-header-lg;
+      margin-bottom: $space-line;
+    }
+  }
 
-h5,
-.h5 {
-  font-size: $font-size-h5;
-  font-weight: $font-weight-h5;
-  line-height: $space-line;
-  margin-bottom: $space-line/2;
-}
+  h3,
+  .h3 {
+    font-size: $font-size-h3;
+    font-weight: $font-weight-h3;
+    line-height: $line-height-header;
+    margin-bottom: $space-line;
+  }
 
-h6,
-.h6 {
-  font-size: $font-size-h6;
-  font-weight: $font-weight-h6;
-  line-height: $space-line;
-  margin-bottom: $space-line/2;
-
-  strong,
-  b {
-    font-weight: $font-weight-h6-bold;
+  @media (min-width: $min-width-lg) {
+    h3,
+    .h3 {
+      font-size: $font-size-h3-lg;
+      line-height: $line-height-header;
+      margin-bottom: $space-line;
+    }
   }
 }
 
-h1,
-.h1,
-h2,
-.h2,
-h3,
-.h3,
-h4,
-.h4,
-h5,
-.h5,
-h6,
-.h6 {
-  color: $color-header;
-}
+@include jacket ($jacket-standard) {
+  h4,
+  .h4 {
+    font-size: $font-size-h4;
+    font-weight: $font-weight-h4;
+    line-height: $space-line;
+    margin-bottom: $space-line;
+  }
 
-h1.inverted,
-.inverted.h1,
-.inverted h1,
-.inverted .h1,
-h2.inverted,
-.inverted.h2,
-.inverted h2,
-.inverted .h2,
-h3.inverted,
-.inverted.h3,
-.inverted h3,
-.inverted .h3,
-h4.inverted,
-.inverted.h4,
-.inverted h4,
-.inverted .h4,
-h5.inverted,
-.inverted.h5,
-.inverted h5,
-.inverted .h5,
-h6.inverted,
-.inverted.h6,
-.inverted h6,
-.inverted
-.h6 {
-  color: $color-header-inverted;
-}
+  h5,
+  .h5 {
+    font-size: $font-size-h5;
+    font-weight: $font-weight-h5;
+    line-height: $space-line;
+    margin-bottom: $space-line/2;
+  }
 
-h1 a,
-.h1 a,
-h2 a,
-.h2 a,
-h3 a,
-.h3 a,
-h4 a,
-.h4 a,
-h5 a,
-.h5 a,
-h6 a,
-.h6 a {
-  font-weight: inherit;
+  h6,
+  .h6 {
+    font-size: $font-size-h6;
+    font-weight: $font-weight-h6;
+    line-height: $space-line;
+    margin-bottom: $space-line/2;
+
+    strong,
+    b {
+      font-weight: $font-weight-h6-bold;
+    }
+  }
+
+  h1,
+  .h1,
+  h2,
+  .h2,
+  h3,
+  .h3,
+  h4,
+  .h4,
+  h5,
+  .h5,
+  h6,
+  .h6 {
+    color: $color-header;
+  }
+
+  h1.inverted,
+  .inverted.h1,
+  .inverted h1,
+  .inverted .h1,
+  h2.inverted,
+  .inverted.h2,
+  .inverted h2,
+  .inverted .h2,
+  h3.inverted,
+  .inverted.h3,
+  .inverted h3,
+  .inverted .h3,
+  h4.inverted,
+  .inverted.h4,
+  .inverted h4,
+  .inverted .h4,
+  h5.inverted,
+  .inverted.h5,
+  .inverted h5,
+  .inverted .h5,
+  h6.inverted,
+  .inverted.h6,
+  .inverted h6,
+  .inverted
+  .h6 {
+    color: $color-header-inverted;
+  }
+
+  h1 a:not(.button),
+  .h1 a:not(.button),
+  h2 a:not(.button),
+  .h2 a:not(.button),
+  h3 a:not(.button),
+  .h3 a:not(.button),
+  h4 a:not(.button),
+  .h4 a:not(.button),
+  h5 a:not(.button),
+  .h5 a:not(.button),
+  h6 a:not(.button),
+  .h6 a:not(.button) {
+    font-weight: inherit;
+  }
 }

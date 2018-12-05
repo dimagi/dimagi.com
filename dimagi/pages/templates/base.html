@@ -87,9 +87,18 @@
           href="{% static 'pages/home/favicon.png' %}">
 
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:100,300,400,500,700,800" rel="stylesheet">
-    {% compress css %}
-    <link href="{% sass_src 'style/app.scss' %}" rel="stylesheet" media="screen" type="text/css" />
+
+    {% compress css inline %}
+    <link href="{% sass_src 'style/app.critical.scss' %}" rel="stylesheet" media="screen" type="text/css" />
     {% endcompress %}
+
+    <noscript id="js-async-stylesheets">
+      {% compress css %}
+      <link href="{% sass_src 'style/app.standard.scss' %}" rel="stylesheet" media="screen" type="text/css" />
+      {% endcompress %}
+      {% block async_stylesheets %}
+      {% endblock %}
+    </noscript>
 
     {% block stylesheets %}{% endblock %}
     {% if request.is_amp %}

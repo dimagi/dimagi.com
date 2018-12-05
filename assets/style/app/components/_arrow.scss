@@ -1,103 +1,79 @@
+@import 'app/lib/jacket';
 @import 'app/variables/sizes';
 
-.arrow,
-.arrow-right,
-.arrow-left,
-.arrow-down,
-.arrow-up {
-  position: relative;
-
-  &:before,
-  &:after {
-    border-right-style: solid;
-    border-right-width: 1px;
-    border-top-style: solid;
-    border-top-width: 1px;
-    display: inline-block;
-    height: 6px;
-    pointer-events: none;
-    width: 6px;
-  }
-}
-
-.arrow,
-.arrow-right,
-.arrow-left {
-  &:before,
-  &:after {
+@include jacket($jacket-standard) {
+  .arrow,
+  .arrow-right,
+  .arrow-left,
+  .arrow-down,
+  .arrow-up {
     position: relative;
-    vertical-align: middle;
+
+    &::before,
+    &::after {
+      border-right-style: solid;
+      border-right-width: 1px;
+      border-top-style: solid;
+      border-top-width: 1px;
+      display: inline-block;
+      height: 6px;
+      pointer-events: none;
+      width: 6px;
+    }
   }
-}
 
-.arrow:after,
-.arrow-right:after {
-  content: ' ';
-  margin-left: .3em;
-  transform: rotate(45deg);
-}
+  .arrow,
+  .arrow-right,
+  .arrow-left {
+    &::before,
+    &::after {
+      position: relative;
+      vertical-align: middle;
+    }
+  }
 
-.arrow-left:before {
-  content: ' ';
-  margin-right: .3em;
-  transform: rotate(-135deg);
-}
-
-.arrow-up,
-.arrow-down {
-  position: relative;
-}
-
-.arrow-up {
-  padding-top: $space-base;
-
-  &:before {
+  .arrow::after,
+  .arrow-right::after {
     content: ' ';
-    display: block;
-    left: 50%;
-    position: absolute;
-    top: 0;
-    transform: translate(-50%, 50%) rotate(-45deg);
+    margin-left: .3em;
+    transform: rotate(45deg);
   }
-}
 
-.arrow-down {
-  padding-bottom: $space-base;
-
-  :after {
-    bottom: 0;
+  .arrow-left::before {
     content: ' ';
-    display: block;
-    left: 50%;
-    position: absolute;
-    transform: translate(-50%, -50%) rotate(135deg);
+    margin-right: .3em;
+    transform: rotate(-135deg);
   }
-}
 
-.arrow[data-transition-target],
-[data-transition-target] .arrow {
-  padding-right: 1.3em;
-
-  &:after {
-    height: 1ex;
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 1ex;
+  .arrow-up,
+  .arrow-down {
+    position: relative;
   }
-}
 
-.show-time .arrow[data-transition-target]:after,
-.show-time [data-transition-target] .arrow:after {
-  transition: border-color 150ms, transform 150ms;
-}
+  .arrow-up {
+    padding-top: $space-base;
 
-.arrow[data-transition-target][data-transition-state="off"]:after,
-[data-transition-target][data-transition-state="off"] .arrow:after {
-  transform: translate(-50%, 115%) rotate(-45deg);
-}
+    &::before {
+      content: ' ';
+      display: block;
+      left: 50%;
+      position: absolute;
+      top: 0;
+      transform: translate(-50%, 50%) rotate(-45deg);
+    }
+  }
 
-.arrow[data-transition-target][data-transition-state="on"]:after,
-[data-transition-target][data-transition-state="on"] .arrow:after {
-  transform: translate(-50%, 65%) rotate(135deg);
+  .arrow-down {
+    padding-bottom: $space-base;
+
+    &::after {
+      bottom: 0;
+      content: ' ';
+      display: block;
+      left: 50%;
+      position: absolute;
+      transform: translate(-50%, -50%) rotate(135deg);
+    }
+  }
+
 }

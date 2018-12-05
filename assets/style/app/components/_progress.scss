@@ -1,40 +1,42 @@
+@import 'app/lib/jacket';
 @import 'app/variables/colors';
 @import 'app/variables/sizes';
 @import 'app/variables/type';
 
+@include jacket ($jacket-standard) {
+  progress {
+    display: inline-block;
+  }
 
-progress {
-  display: inline-block;
-}
-
-.progress-bar {
-  appearance: none;
-  background-color: transparent;
-  border: 0;
-  height: 5px;
-  left: 0;
-  position: fixed;
-  top: 0;
-  transition: width, .1s, linear;
-  width: 100%;
-  z-index: 100;
-}
-
-.progress-bar::-webkit-progress-bar {
-  background-color: transparent;
-}
-
-@each $_name, $_color in $colors-by-theme {
-  .progress-bar.#{$_name} {
+  .progress-bar {
+    appearance: none;
     background-color: transparent;
-    color: $_color !important;
+    border: 0;
+    height: 5px;
+    left: 0;
+    position: fixed;
+    top: 0;
+    transition: width, .1s, linear;
+    width: 100%;
+    z-index: 100;
   }
 
-  .progress-bar.#{$_name}::-webkit-progress-value {
-    background: $_color;
+  .progress-bar::-webkit-progress-bar {
+    background-color: transparent;
   }
 
-  .progress-bar.#{$_name}::-moz-progress-bar{
-    background: $_color;
+  @each $_name, $_color in $colors-by-theme {
+    .progress-bar.#{$_name} {
+      background-color: transparent;
+      color: $_color !important;
+    }
+
+    .progress-bar.#{$_name}::-webkit-progress-value {
+      background: $_color;
+    }
+
+    .progress-bar.#{$_name}::-moz-progress-bar{
+      background: $_color;
+    }
   }
 }

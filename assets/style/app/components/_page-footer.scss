@@ -1,108 +1,110 @@
+@import 'app/lib/jacket';
 @import 'app/variables/colors';
 @import 'app/variables/sizes';
 @import 'app/variables/type';
 
-
-.page-footer {
-  background-color: $color-banner;
-  color: $color-footer-text;
-  font-size: $font-size-medium;
-  line-height: $line-height-banner;
-
-  [fill]:not([fill="none"]):not([fill^=url]) {
-    fill: $color-white;
-  }
-
-  [stroke]:not([stroke="transparent"]) {
-    stroke: $color-white;
-  }
-
-  a {
-    color: $color-white;
-    font-weight: 300;
-
-    &:hover,
-    &:focus {
-      color: $color-footer-text;
-    }
-  }
-
-  h1,
-  .h1,
-  h2,
-  .h2,
-  h3,
-  .h3,
-  h4,
-  .h4,
-  h5,
-  .h5,
-  h6,
-  .h6 {
+@include jacket ($jacket-standard) {
+  .page-footer {
+    background-color: $color-banner;
     color: $color-footer-text;
-    padding-bottom: $space-base;
+    font-size: $font-size-medium;
+    line-height: $line-height-banner;
 
-    @media (min-width: $width-mobile) {
-      border-bottom: 1px solid $color-footer-border;
+    [fill]:not([fill="none"]):not([fill^=url]) {
+      fill: $color-white;
     }
 
-    a {
-      color: $color-footer-text;
-      font-weight: $font-weight-light;
+    [stroke]:not([stroke="transparent"]) {
+      stroke: $color-white;
+    }
 
-      &:hover, // scss-lint:disable NestingDepth
+    a:not(.button) {
+      color: $color-white;
+      font-weight: 300;
+
+      &:hover,
       &:focus {
-        color: $color-text;
+        color: $color-footer-text;
       }
     }
+
+    h1,
+    .h1,
+    h2,
+    .h2,
+    h3,
+    .h3,
+    h4,
+    .h4,
+    h5,
+    .h5,
+    h6,
+    .h6 {
+      color: $color-footer-text;
+      padding-bottom: $space-base;
+
+      @media (min-width: $width-mobile) {
+        border-bottom: 1px solid $color-footer-border;
+      }
+
+      a:not(.button) {
+        color: $color-footer-text;
+        font-weight: $font-weight-light;
+
+        &:hover, // scss-lint:disable NestingDepth
+        &:focus {
+          color: $color-text;
+        }
+      }
+    }
+
+    .destination-links {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+      margin-bottom: $space-base;
+    }
+
+    .primary {
+      border-bottom: 1px solid $color-footer-border;
+      margin-bottom: $space-small;
+      padding-bottom: $space-medium;
+    }
+
+    .links-social li {
+      display: inline-block;
+      margin: 0 $space-base/2;
+      vertical-align: middle;
+
+      svg {
+        margin-top: -2px;
+      }
+    }
+
+    .b-corp-logo {
+      svg > * {
+        fill: $color-accent-gray;
+      }
+    }
+
   }
 
-  .destination-links {
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 20px;
-    margin-bottom: $space-base;
-  }
+  @media (min-width: $width-mobile) {
+    .page-footer [data-transition-target] {
+      cursor: default;
+      pointer-events: none;
+    }
 
-  .primary {
-    border-bottom: 1px solid $color-footer-border;
-    margin-bottom: $space-small;
-    padding-bottom: $space-medium;
-  }
-
-  .links-social li {
-    display: inline-block;
-    margin: 0 $space-base/2;
-    vertical-align: middle;
-
-    svg {
-      margin-top: -2px;
+    .page-footer [data-transition-target]:after {
+      display: none;
     }
   }
 
-  .b-corp-logo {
-    svg > * {
-      fill: $color-accent-gray;
+  @media (min-width: $width-mobile) {
+    .page-footer [data-transition-types="collapse fade"] {
+      height: auto !important; // scss-lint:disable ImportantRule
+      opacity: 1 !important; // scss-lint:disable ImportantRule
+      overflow: hidden !important; // scss-lint:disable ImportantRule
     }
-  }
-
-}
-
-@media (min-width: $width-mobile) {
-  .page-footer [data-transition-target] {
-    cursor: default;
-    pointer-events: none;
-  }
-
-  .page-footer [data-transition-target]:after {
-    display: none;
-  }
-}
-
-@media (min-width: $width-mobile) {
-  .page-footer [data-transition-types="collapse fade"] {
-    height: auto !important; // scss-lint:disable ImportantRule
-    opacity: 1 !important; // scss-lint:disable ImportantRule
-    overflow: hidden !important; // scss-lint:disable ImportantRule
   }
 }

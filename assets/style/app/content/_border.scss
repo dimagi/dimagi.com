@@ -1,3 +1,4 @@
+@import 'app/lib/jacket';
 @import 'app/variables/colors';
 @import 'app/variables/sizes';
 
@@ -80,10 +81,12 @@
 
 }
 
-@include _make-border-at();
+@include jacket($jacket-standard) {
+  @include _make-border-at();
 
-@each $_size, $_width in $widths-by-size {
-  @media (min-width: $_width) {
-    @include _make-border-at($_size);
+  @each $_size, $_width in $widths-by-size {
+    @media (min-width: $_width) {
+      @include _make-border-at($_size);
+    }
   }
 }

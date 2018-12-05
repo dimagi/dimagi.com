@@ -158,7 +158,7 @@ if AWS_ENABLED:
 
 COMPRESS_CSS_FILTERS = (
     'compressor_postcss.PostCSSFilter',
-    'dimagi.compress.ImagekitCssAbsoluteFilter',
+    'compressor.filters.css_default.CssAbsoluteFilter',
     'compressor.filters.cssmin.rCSSMinFilter',
 )
 COMPRESS_POSTCSS_PLUGINS = (

@@ -1,32 +1,63 @@
+@import 'app/lib/jacket';
 @import 'app/variables/sizes';
 
 @mixin _make-display-at($_size: null) {
   $_suffix: if($_size != null, -at-#{$_size}, null);
 
   .display-block#{$_suffix} {
-    display: block !important; // scss-lint:disable ImportantRule
+    @include jacket ($jacket-critical) {
+      display: block;
+    }
+    @include jacket ($jacket-standard) {
+      display: block !important; // scss-lint:disable ImportantRule
+    }
   }
 
   .display-flex#{$_suffix} {
-    display: flex !important; // scss-lint:disable ImportantRule
+    @include jacket ($jacket-critical) {
+      display: flex;
+    }
+    @include jacket ($jacket-standard) {
+      display: flex !important; // scss-lint:disable ImportantRule
+    }
   }
 
   .display-inline#{$_suffix} {
-    display: inline !important; // scss-lint:disable ImportantRule
+    @include jacket ($jacket-critical) {
+      display: inline;
+    }
+    @include jacket ($jacket-standard) {
+      display: inline !important; // scss-lint:disable ImportantRule
+    }
   }
 
   .display-inline-block#{$_suffix} {
-    display: inline-block !important; // scss-lint:disable ImportantRule
+    @include jacket ($jacket-critical) {
+      display: inline-block;
+    }
+    @include jacket ($jacket-standard) {
+      display: inline-block !important; // scss-lint:disable ImportantRule
+    }
     vertical-align: middle;
   }
 
   .display-inline-flex#{$_suffix} {
-    display: inline-flex !important; // scss-lint:disable ImportantRule
+    @include jacket ($jacket-critical) {
+      display: inline-flex;
+    }
+    @include jacket ($jacket-standard) {
+      display: inline-flex !important; // scss-lint:disable ImportantRule
+    }
   }
 
   .display-none#{$_suffix},
   .hide#{$_suffix} {
-    display: none !important; // scss-lint:disable ImportantRule
+    @include jacket ($jacket-critical) {
+      display: none;
+    }
+    @include jacket ($jacket-standard) {
+      display: none !important; // scss-lint:disable ImportantRule
+    }
   }
 }
 
@@ -39,35 +70,67 @@
 
   @media (max-width: $_width - 1) {
     .hide-until-#{$_size} {
-      display: none !important; // scss-lint:disable ImportantRule
+      @include jacket ($jacket-critical) {
+        display: none;
+      }
+      @include jacket ($jacket-standard) {
+        display: none !important; // scss-lint:disable ImportantRule
+      }
     }
   }
 }
 
-.js .hide-if-js {
-  display: none !important; // scss-lint:disable ImportantRule
-}
+@include jacket ($jacket-standard) {
+  .js .hide-if-js {
+    display: none !important; // scss-lint:disable ImportantRule
+  }
 
-.no-js .hide-unless-js {
-  display: none !important; // scss-lint:disable ImportantRule
+  .no-js .hide-unless-js {
+    display: none !important; // scss-lint:disable ImportantRule
+  }
 }
 
 .touch .hide-if-touch {
-  display: none !important; // scss-lint:disable ImportantRule
+  @include jacket ($jacket-critical) {
+    display: none;
+  }
+  @include jacket ($jacket-standard) {
+    display: none !important; // scss-lint:disable ImportantRule
+  }
 }
 
 .no-touch .hide-unless-touch {
-  display: none !important; // scss-lint:disable ImportantRule
+  @include jacket ($jacket-critical) {
+    display: none;
+  }
+  @include jacket ($jacket-standard) {
+    display: none !important; // scss-lint:disable ImportantRule
+  }
 }
 
 .video .hide-if-video {
-  display: none !important; // scss-lint:disable ImportantRule
+  @include jacket ($jacket-critical) {
+    display: none;
+  }
+  @include jacket ($jacket-standard) {
+    display: none !important; // scss-lint:disable ImportantRule
+  }
 }
 
 .no-video .hide-unless-video {
-  display: none !important; // scss-lint:disable ImportantRule
+  @include jacket ($jacket-critical) {
+    display: none;
+  }
+  @include jacket ($jacket-standard) {
+    display: none !important; // scss-lint:disable ImportantRule
+  }
 }
 
 .hidden {
-  display: none !important; // scss-lint:disable ImportantRule
+  @include jacket ($jacket-critical) {
+    display: none;
+  }
+  @include jacket ($jacket-standard) {
+    display: none !important; // scss-lint:disable ImportantRule
+  }
 }

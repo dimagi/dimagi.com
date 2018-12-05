@@ -1,60 +1,81 @@
+@import 'app/lib/jacket';
 @import 'app/variables/colors';
 
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-[data-lazyplaceholder] {
-  position: relative;
-
-  &::before {
-    border: 16px solid $color-black;
-    border-radius: 50%;
-    content: ' ';
-    display: block;
-    height: 60px;
-    left: calc(50% - 30px);
-    opacity: 0;
-    position: absolute;
-    top: calc(50% - 30px);
-    transition: opacity 500ms ease-in-out;
-    width: 60px;
-    z-index: 3;
+@include jacket ($jacket-critical) {
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
   }
 
-  &::after {
-    background-color: $color-text;
-    content: ' ';
-    display: block;
-    height: 100%;
-    left: 0;
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    transition: opacity 500ms ease-in-out;
-    width: 100%;
-    z-index: 2;
+  [data-lazyplaceholder] {
+    position: relative;
+
+    &::before {
+      border: 16px solid $color-black;
+      border-radius: 50%;
+      content: ' ';
+      display: block;
+      height: 60px;
+      left: calc(50% - 30px);
+      opacity: 0;
+      position: absolute;
+      top: calc(50% - 30px);
+      width: 60px;
+      z-index: 3;
+    }
+
+    &::after {
+      background-color: $color-text;
+      content: ' ';
+      display: block;
+      height: 100%;
+      left: 0;
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: 2;
+    }
+  }
+
+  [data-lazyplaceholder="true"]::before {
+    border-top: 16px solid $color-white;
+    opacity: .5;
+  }
+
+  [data-lazyplaceholder="true"]::after {
+    opacity: 1;
+  }
+
+  @each $_theme, $_color in $colors-by-theme {
+    [data-lazyplaceholder].#{$_theme}-lazy-bg::after {
+      background-color: $_color;
+    }
+  }
+
+  [data-lazyplaceholder].white-lazy-bg::after {
+    background-color: $color-white;
   }
 }
 
-[data-lazyplaceholder="true"]::before {
-  animation: spin 2s linear infinite;
-  border-top: 16px solid $color-white;
-  opacity: .5;
-}
-
-
-[data-lazyplaceholder="true"]::after {
-  opacity: 1;
-}
-
-@each $_theme, $_color in $colors-by-theme {
-  [data-lazyplaceholder].#{$_theme}-lazy-bg::after {
-    background-color: $_color;
+@include jacket ($jacket-standard) {
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
   }
-}
 
-[data-lazyplaceholder].white-lazy-bg::after {
-  background-color: $color-white;
+  [data-lazyplaceholder] {
+
+    &::before {
+      transition: opacity 500ms ease-in-out;
+    }
+
+    &::after {
+      transition: opacity 500ms ease-in-out;
+    }
+  }
+
+  [data-lazyplaceholder="true"]::before {
+    animation: spin 2s linear infinite;
+  }
 }

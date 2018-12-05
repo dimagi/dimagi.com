@@ -1,73 +1,77 @@
+@import 'app/lib/jacket';
 @import 'app/variables/colors';
 @import 'app/variables/sizes';
 
-.device-container {
-  background-color: $color-white;
-  border: 2px solid $color-border;
-  border-radius: 5px 5px 0 0;
-  overflow: hidden;
-  position: relative;
-
-  .screen {
-    border-top: 1px solid $color-border;
+@include jacket ($jacket-standard) {
+  .device-container {
+    background-color: $color-white;
+    border: 2px solid $color-border;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
     position: relative;
 
-    > * {
-      display: block;
-      width: 100%;
-    }
-  }
-
-  &.browser-ui {
-    &::before {
-      background-color: $color-border;
-      border-radius: 999em;
-      box-shadow: 9px 0 0 $color-border, 18px 0 0 $color-border;
-      content: ' ';
-      display: block;
-      height: 0;
-      margin: 8px;
-      padding: 3px;
-      width: 0;
-    }
-  }
-
-  &.mobile-ui {
-    border-radius: 15px;
-
     .screen {
-      border: 1px solid $color-border;
-      margin-left: $space-base;
-      margin-right: $space-base;
+      border-top: 1px solid $color-border;
+      position: relative;
+
+      > * {
+        display: block;
+        width: 100%;
+      }
     }
 
-    &::before {
-      content: ' ';
-      display: block;
-      height: 25px;
-      width: 100%;
+    &.browser-ui {
+      &::before {
+        background-color: $color-border;
+        border-radius: 999em;
+        box-shadow: 9px 0 0 $color-border, 18px 0 0 $color-border;
+        content: ' ';
+        display: block;
+        height: 0;
+        margin: 8px;
+        padding: 3px;
+        width: 0;
+      }
     }
 
-    &::after { // scss-lint:disable PropertyCount
-      border: 1px solid $color-border;
-      border-radius: 999em;
-      content: ' ';
-      display: block;
-      height: 0;
-      margin-bottom: 6px;
-      margin-left: calc(50% - 15px);
-      margin-top: 6px;
-      padding: 8px 15px;
-      text-align: center;
-      width: 0;
+    &.mobile-ui {
+      border-radius: 15px;
+
+      .screen {
+        border: 1px solid $color-border;
+        margin-left: $space-base;
+        margin-right: $space-base;
+      }
+
+      &::before {
+        content: ' ';
+        display: block;
+        height: 25px;
+        width: 100%;
+      }
+
+      &::after { // scss-lint:disable PropertyCount
+        border: 1px solid $color-border;
+        border-radius: 999em;
+        content: ' ';
+        display: block;
+        height: 0;
+        margin-bottom: 6px;
+        margin-left: calc(50% - 15px);
+        margin-top: 6px;
+        padding: 8px 15px;
+        text-align: center;
+        width: 0;
+      }
     }
   }
-}
 
-@media (min-width: $width-mobile) {
-  .device-container.browser-ui:before {
-    box-shadow: 12px 0 0 $color-border, 24px 0 0 $color-border;
-    margin: 8px;
-    padding: 4px;
+  @media (min-width: $width-mobile) {
+    .device-container.browser-ui::before {
+      box-shadow: 12px 0 0 $color-border, 24px 0 0 $color-border;
+      margin: 8px;
+      padding: 4px;
+    }
   }
+
 }

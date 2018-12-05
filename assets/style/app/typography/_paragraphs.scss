@@ -1,10 +1,14 @@
-p+.cta {
-  margin-top: -10px;
-}
+@import 'app/lib/jacket';
 
-.center-horizontally {
-  margin-left: auto;
-  margin-right: auto;
+@include jacket ($jacket-standard) {
+  p + .cta {
+    margin-top: -10px;
+  }
+
+  .center-horizontally {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 @mixin _align-at($_size: null) {
@@ -14,7 +18,12 @@ p+.cta {
     left, center, right, justify
   ) {
     .align-#{$_align}#{$_suffix} {
-      text-align: $_align !important; // scss-lint:disable ImportantRule
+      @include jacket ($jacket-critical) {
+        text-align: $_align;
+      }
+      @include jacket ($jacket-standard) {
+        text-align: $_align !important; // scss-lint:disable ImportantRule
+      }
     }
   }
 
@@ -22,7 +31,12 @@ p+.cta {
     baseline, top, middle, bottom
   ) {
     .valign-#{$_valign}#{$_suffix} {
-      vertical-align: $_valign !important; // scss-lint:disable ImportantRule
+      @include jacket ($jacket-critical) {
+        vertical-align: $_valign;
+      }
+      @include jacket ($jacket-standard) {
+        vertical-align: $_valign !important; // scss-lint:disable ImportantRule
+      }
     }
 
     .valign-#{$_valign}#{$_suffix} * {

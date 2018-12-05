@@ -1,47 +1,57 @@
+@import 'app/lib/jacket';
 @import 'app/variables/colors';
 @import 'app/variables/sizes';
 @import 'app/variables/type';
 
-table {
-  background-color: transparent;
-  border: 0 solid $color-border;
-  border-collapse: collapse;
-  border-spacing: 0;
-  margin-bottom: $space-line;
-  max-width: 100%;
-  text-align: left;
-  vertical-align: top;
-  width: 100%;
+
+@include jacket ($jacket-critical) {
+  table {
+    background-color: transparent;
+    border: 0 solid $color-border;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin-bottom: $space-line;
+    max-width: 100%;
+    text-align: left;
+    vertical-align: top;
+    width: 100%;
+  }
+
+  thead,
+  tbody,
+  tfoot,
+  tr,
+  th,
+  td {
+    border-color: inherit;
+    border-style: inherit;
+    text-align: inherit;
+    vertical-align: inherit;
+  }
+
+  thead,
+  tfoot {
+    background-color: rgba(0, 0, 0, .06);
+  }
+
+  th {
+    color: $color-header;
+    font-weight: $font-weight-medium;
+  }
+
+  th,
+  td {
+    background-color: transparent;
+    border-width: 1px;
+    padding: $space-base;
+  }
 }
 
-thead,
-tbody,
-tfoot,
-tr,
-th,
-td {
-  border-color: inherit;
-  border-style: inherit;
-  text-align: inherit;
-  vertical-align: inherit;
-}
-
-thead,
-tfoot {
-  background-color: rgba(0, 0, 0, .06);
-}
-
-th {
-  color: $color-header;
-  font-weight: $font-weight-medium;
-}
-
-th,
-td {
-  background-color: transparent;
-  border-width: 1px;
-  padding: $space-base;
-  transition: background-color 150ms;
+@include jacket ($jacket-standard) {
+  th,
+  td {
+    transition: background-color 150ms;
+  }
 }
 
 @mixin _make-table-at($_size: null) {
@@ -166,64 +176,32 @@ td {
     }
 
     tr:not(:last-child) th:last-child,
-    tr:not(:last-c 1pxhild) td:last-child {
+    tr:not(:last-child) td:last-child {
       border-bottom-width: 0;
     }
   }
 }
 
-@include _make-table-at();
-@include _make-table-until();
+@include jacket ($jacket-standard) {
 
-@each $_size, $_width in $widths-by-size {
-  @media (min-width: $_width) {
-    @include _make-table-at($_size);
+  @include _make-table-at();
+  @include _make-table-until();
+
+  @each $_size, $_width in $widths-by-size {
+    @media (min-width: $_width) {
+      @include _make-table-at($_size);
+    }
+
+    @media (max-width: $_width - 1px) {
+      @include _make-table-until($_size);
+    }
   }
 
-  @media (max-width: $_width - 1px) {
-    @include _make-table-until($_size);
-  }
-}
-
-.table-scrollable {
-  margin-bottom: $space-line;
-  position: relative;
-
-  &:before { // scss-lint: disable PropertyCount
-    border: 1px solid $color-border;
-    border-radius: inherit;
-    bottom: 0;
-    content: ' ';
-    display: block;
-    left: 0;
-    pointer-events: none;
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: 99;
-  }
-
-  table {
-    margin-bottom: 0;
-  }
-
-  .table-scroll {
-    -webkit-overflow-scrolling: touch;
-    overflow-x: auto;
-    overflow-y: hidden;
+  .table-scrollable {
+    margin-bottom: $space-line;
     position: relative;
-    width: 100%;
-  }
 
-  .table-pinned {
-    background-color: $color-white;
-    bottom: 0;
-    left: 0;
-    overflow: hidden;
-    position: absolute;
-    top: 0;
-
-    &:before { // scss-lint:disable PropertyCount
+    &:before { // scss-lint: disable PropertyCount
       border: 1px solid $color-border;
       border-radius: inherit;
       bottom: 0;
@@ -237,22 +215,57 @@ td {
       z-index: 99;
     }
 
-    th:not(:first-child),
-    td:not(:first-child) {
-      display: none;
+    table {
+      margin-bottom: 0;
+    }
+
+    .table-scroll {
+      -webkit-overflow-scrolling: touch;
+      overflow-x: auto;
+      overflow-y: hidden;
+      position: relative;
+      width: 100%;
+    }
+
+    .table-pinned {
+      background-color: $color-white;
+      bottom: 0;
+      left: 0;
+      overflow: hidden;
+      position: absolute;
+      top: 0;
+
+      &:before { // scss-lint:disable PropertyCount
+        border: 1px solid $color-border;
+        border-radius: inherit;
+        bottom: 0;
+        content: ' ';
+        display: block;
+        left: 0;
+        pointer-events: none;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 99;
+      }
+
+      th:not(:first-child),
+      td:not(:first-child) {
+        display: none;
+      }
     }
   }
-}
 
-[role="tabpanel"],
-[role="tabpanel"][aria-hidden="true"] {
-  display: none;
-}
+  [role="tabpanel"],
+  [role="tabpanel"][aria-hidden="true"] {
+    display: none;
+  }
 
-[role="tabpanel"][aria-hidden="false"] {
-  display: block;
-}
+  [role="tabpanel"][aria-hidden="false"] {
+    display: block;
+  }
 
-a[role="tab"][aria-selected="false"]:not(:hover):not(:focus):not(:active) {
-  color: $color-link-inactive;
+  a[role="tab"][aria-selected="false"]:not(:hover):not(:focus):not(:active) {
+    color: $color-link-inactive;
+  }
 }

@@ -1,20 +1,15 @@
+@import 'app/lib/jacket';
 @import 'app/variables/colors';
 @import 'app/variables/sizes';
 @import 'app/variables/type';
 
-.button, // scss-lint:disable PropertyCount
-button:not(.w-vulcan-v2-button),
-input[type="button"],
-input[type="submit"],
-input[type="reset"] {
-  appearance: none;
+
+%base-button {
   border: none;
   border-radius: $border-radius;
-  cursor: pointer;
   display: inline-block;
   font-family: $font-family-base;
   font-size: $font-size-small;
-  font-smoothing: always;
   font-weight: $font-weight-button;
   letter-spacing: 1px;
   line-height: $space-line;
@@ -25,232 +20,330 @@ input[type="reset"] {
   padding: $space-base $space-line * 2;
   text-align: center;
   text-decoration: none;
-  text-rendering: optimizeLegibility;
   text-transform: uppercase;
 }
 
-.chrome-android .button,
-.chrome-android button,
-.chrome-android input[type="button"],
-.chrome-android input[type="submit"],
-.chrome-android input[type="reset"] {
-  white-space: nowrap;
+@include jacket ($jacket-critical) {
+  .button {
+    @extend %base-button;
+  }
 }
 
-.show-time .button,
-.show-time button,
-.show-time input[type="button"],
-.show-time input[type="submit"],
-.show-time input[type="reset"] {
-  transition: background-color 300ms, color 300ms, box-shadow 300ms;
+@include jacket ($jacket-standard) {
+  button,
+  input[type="button"],
+  input[type="submit"],
+  input[type="reset"] {
+    @extend %base-button;
+  }
 }
 
-.button.expand,
-button.expand,
-input[type="button"].expand,
-input[type="submit"].expand,
-input[type="reset"].expand {
+
+@include jacket($jacket-standard) {
+  .button,
+  button,
+  input[type="button"],
+  input[type="submit"],
+  input[type="reset"] {
+    appearance: none;
+    cursor: pointer;
+    font-smoothing: always;
+    text-rendering: optimizeLegibility;
+  }
+}
+
+@include jacket($jacket-standard) {
+  .chrome-android .button,
+  .chrome-android button,
+  .chrome-android input[type="button"],
+  .chrome-android input[type="submit"],
+  .chrome-android input[type="reset"] {
+    white-space: nowrap;
+  }
+}
+
+@include jacket($jacket-standard) {
+  .show-time .button,
+  .show-time button,
+  .show-time input[type="button"],
+  .show-time input[type="submit"],
+  .show-time input[type="reset"] {
+    transition: background-color 300ms, color 300ms, box-shadow 300ms;
+  }
+}
+
+%base-button-expand {
   padding-left: 10px;
   padding-right: 10px;
 }
 
+@include jacket($jacket-critical) {
+  .button.expand {
+    @extend %base-button-expand;
+  }
+}
+
+@include jacket($jacket-standard) {
+  button.expand,
+  input[type="button"].expand,
+  input[type="submit"].expand,
+  input[type="reset"].expand {
+    @extend %base-button-expand;
+  }
+}
+
 @mixin _make-button-color($_color) {
-  .button,
-  button:not(.w-vulcan-v2-button),
-  input[type="button"],
-  input[type="submit"],
-  input[type="reset"] {
+
+  %base-button-color {
     background-color: $_color;
-    color: color-invert($_color) !important; // scss-lint:disable ImportantRule
+    color: color-invert($_color);
   }
 
-  .button:hover,
-  .button:focus,
-  button:hover,
-  button:focus,
-  input[type="button"]:hover,
-  input[type="button"]:focus,
-  input[type="submit"]:hover,
-  input[type="submit"]:focus,
-  input[type="reset"]:hover,
-  input[type="reset"]:focus {
-    background-color: color-hover($_color);
-    color: color-invert($_color) !important; // scss-lint:disable ImportantRule
+  .button {
+    @extend %base-button-color;
   }
 
-  .button:active,
-  button:active,
-  input[type="button"]:active,
-  input[type="submit"]:active,
-  input[type="reset"]:active {
-    background-color: color-button-active($_color);
-    color: color-invert($_color) !important; // scss-lint:disable ImportantRule
+  @include jacket($jacket-standard) {
+    button,
+    input[type="button"],
+    input[type="submit"],
+    input[type="reset"] {
+      @extend %base-button-color;
+    }
+  }
+
+  @include jacket($jacket-standard) {
+    .button:hover,
+    .button:focus,
+    button:hover,
+    button:focus,
+    input[type="button"]:hover,
+    input[type="button"]:focus,
+    input[type="submit"]:hover,
+    input[type="submit"]:focus,
+    input[type="reset"]:hover,
+    input[type="reset"]:focus {
+      background-color: color-hover($_color);
+      color: color-invert($_color);
+    }
+  }
+
+  @include jacket($jacket-standard) {
+    .button:active,
+    button:active,
+    input[type="button"]:active,
+    input[type="submit"]:active,
+    input[type="reset"]:active {
+      background-color: color-button-active($_color);
+      color: color-invert($_color);
+    }
   }
 
   // An inverted button (transparent BG)
-  .button.alt,
-  button.alt,
-  input[type="button"].alt,
-  input[type="submit"].alt,
-  input[type="reset"].alt {
+  %inverted-base-button-color {
     background-color: transparent;
     box-shadow: inset 0 0 0 1px $_color;
-    color: $_color !important; // scss-lint:disable ImportantRule
+    color: $_color;
   }
 
-  .button.alt:hover,
-  .button.alt:focus,
-  button.alt:hover,
-  button.alt:focus,
-  input[type="button"].alt:hover,
-  input[type="button"].alt:focus,
-  input[type="submit"].alt:hover,
-  input[type="submit"].alt:focus,
-  input[type="reset"].alt:hover,
-  input[type="reset"].alt:focus {
-    box-shadow: inset 0 0 0 1px color-hover($_color);
-    color: color-hover($_color) !important; // scss-lint:disable ImportantRule
+  .button.alt {
+    @extend %inverted-base-button-color;
   }
 
-  .button.alt:active,
-  .button.alt:active,
-  input[type="button"].alt:active,
-  input[type="submit"].alt:active,
-  input[type="reset"].alt:active {
-    box-shadow: inset 0 0 0 1px color-active($_color);
-    color: color-active($_color) !important; // scss-lint:disable ImportantRule
+  @include jacket($jacket-standard) {
+    button.alt,
+    input[type="button"].alt,
+    input[type="submit"].alt,
+    input[type="reset"].alt {
+      @extend %inverted-base-button-color;
+    }
+  }
+
+  @include jacket($jacket-standard) {
+    .button.alt:hover,
+    .button.alt:focus,
+    button.alt:hover,
+    button.alt:focus,
+    input[type="button"].alt:hover,
+    input[type="button"].alt:focus,
+    input[type="submit"].alt:hover,
+    input[type="submit"].alt:focus,
+    input[type="reset"].alt:hover,
+    input[type="reset"].alt:focus {
+      box-shadow: inset 0 0 0 1px color-hover($_color);
+      color: color-hover($_color);
+    }
+  }
+
+  @include jacket($jacket-standard) {
+    .button.alt:active,
+    button.alt:active,
+    input[type="button"].alt:active,
+    input[type="submit"].alt:active,
+    input[type="reset"].alt:active {
+      box-shadow: inset 0 0 0 1px color-active($_color);
+      color: color-active($_color);
+    }
   }
 }
 
 @include _make-button-color($color-button);
 
-.button:disabled,
-.button.disabled,
-.disabled .button,
-button:disabled,
-button.disabled,
-.disabled button,
-input[type="button"]:disabled,
-input[type="button"].disabled,
-.disabled input[type="button"],
-input[type="submit"]:disabled,
-input[type="submit"].disabled,
-.disabled input[type="submit"],
-input[type="reset"]:disabled,
-input[type="reset"].disabled,
-.disabled input[type="reset"] {
-  background-color: $color-button-disabled !important; // scss-lint:disable ImportantRule
-  cursor: not-allowed;
-  outline: none;
-}
-
-
-.button.alt:disabled,
-.button.alt.disabled,
-.disabled .button.alt,
-button.alt:disabled,
-button.alt.disabled,
-.disabled button.alt,
-input[type="button"].alt:disabled,
-input[type="button"].alt.disabled,
-.disabled input[type="button"].alt,
-input[type="submit"].alt:disabled,
-input[type="submit"].alt.disabled,
-.disabled input[type="submit"].alt,
-input[type="reset"].alt:disabled,
-input[type="reset"].alt.disabled,
-.disabled input[type="reset"].alt {
-  background-color: transparent !important; // scss-lint:disable ImportantRule
-  box-shadow: inset 0 0 0 1px $color-button-disabled !important; // scss-lint:disable ImportantRule
-  color: $color-button-disabled !important; // scss-lint:disable ImportantRule
-}
-
-.button.alt.inverted,
-.inverted .button.alt,
-button.alt.inverted,
-.inverted button.alt,
-input[type="button"].alt.inverted,
-.inverted input[type="button"].alt,
-input[type="submit"].alt.inverted,
-.inverted input[type="submit"].alt,
-input[type="reset"].alt.inverted,
-.inverted input[type="reset"].alt {
-  background-color: transparent !important; // scss-lint:disable ImportantRule
-  box-shadow: inset 0 0 0 1px $color-white !important; // scss-lint:disable ImportantRule
-  color: $color-white !important; // scss-lint:disable ImportantRule
-
-  &:hover,
-  &:focus {
-    background-color: rgba($color-white, .3) !important; // scss-lint:disable ImportantRule
+@include jacket($jacket-standard) {
+  .button:disabled,
+  .button.disabled,
+  .disabled .button,
+  button:disabled,
+  button.disabled,
+  .disabled button,
+  input[type="button"]:disabled,
+  input[type="button"].disabled,
+  .disabled input[type="button"],
+  input[type="submit"]:disabled,
+  input[type="submit"].disabled,
+  .disabled input[type="submit"],
+  input[type="reset"]:disabled,
+  input[type="reset"].disabled,
+  .disabled input[type="reset"] {
+    background-color: $color-button-disabled;
+    cursor: not-allowed;
+    outline: none;
   }
 }
 
-@each $_theme, $_color in $colors-by-theme {
-  .#{$_theme}-theme {
-    @include _make-button-color($_color);
+@include jacket($jacket-standard) {
+  .button.alt:disabled,
+  .button.alt.disabled,
+  .disabled .button.alt,
+  button.alt:disabled,
+  button.alt.disabled,
+  .disabled button.alt,
+  input[type="button"].alt:disabled,
+  input[type="button"].alt.disabled,
+  .disabled input[type="button"].alt,
+  input[type="submit"].alt:disabled,
+  input[type="submit"].alt.disabled,
+  .disabled input[type="submit"].alt,
+  input[type="reset"].alt:disabled,
+  input[type="reset"].alt.disabled,
+  .disabled input[type="reset"].alt {
+    background-color: transparent;
+    box-shadow: inset 0 0 0 1px $color-button-disabled;
+    color: $color-button-disabled;
   }
-  
-  .button.button-#{$_theme},
-  button.button-#{$_theme},
-  input[type="button"].button-#{$_theme},
-  input[type="submit"].button-#{$_theme},
-  input[type="reset"].button-#{$_theme} {
-    background-color: $_color;
-    color: color-invert($_color) !important; // scss-lint:disable ImportantRule
+}
+
+%inverted-button {
+  background-color: transparent;
+  box-shadow: inset 0 0 0 1px $color-white;
+  color: $color-white;
+}
+
+@include jacket($jacket-critical) {
+  .button.alt.inverted {
+    @extend %inverted-button;
   }
-  
-  .button.button-#{$_theme}:hover,
-  .button.button-#{$_theme}:focus,
-  button.button-#{$_theme}:hover,
-  button.button-#{$_theme}:focus,
-  input[type="button"].button-#{$_theme}:hover,
-  input[type="button"].button-#{$_theme}:focus,
-  input[type="submit"].button-#{$_theme}:hover,
-  input[type="submit"].button-#{$_theme}:focus,
-  input[type="reset"].button-#{$_theme}:hover,
-  input[type="reset"].button-#{$_theme}:focus {
-    background-color: color-hover($_color);
-    color: color-invert($_color) !important; // scss-lint:disable ImportantRule
+}
+
+@include jacket($jacket-standard) {
+  .button.alt.inverted,
+  .inverted .button.alt,
+  button.alt.inverted,
+  .inverted button.alt,
+  input[type="button"].alt.inverted,
+  .inverted input[type="button"].alt,
+  input[type="submit"].alt.inverted,
+  .inverted input[type="submit"].alt,
+  input[type="reset"].alt.inverted,
+  .inverted input[type="reset"].alt {
+    @extend %inverted-button;
+
+    &:hover,
+    &:focus {
+      background-color: rgba($color-white, .3);
+    }
   }
-  
-  .button.button-#{$_theme}:active,
-  button.button-#{$_theme}:active,
-  input[type="button"].button-#{$_theme}:active,
-  input[type="submit"].button-#{$_theme}:active,
-  input[type="reset"].button-#{$_theme}:active {
-    background-color: color-active($_color);
-    color: color-invert($_color);
+
+}
+
+@include jacket ($jacket-critical) {
+  .button.button-accent-gray {
+    background-color: $color-accent-gray;
+    color: color-invert($color-accent-gray);
   }
-  
-  .button.button-#{$_theme}.alt,
-  button.button-#{$_theme}.alt,
-  input[type="button"].button-#{$_theme}.alt,
-  input[type="submit"].button-#{$_theme}.alt,
-  input[type="reset"].button-#{$_theme}.alt {
-    box-shadow: inset 0 0 0 1px $_color;
-    color: $_color !important; // scss-lint:disable ImportantRule
+}
+
+
+@include jacket ($jacket-standard) {
+
+  @each $_theme, $_color in $colors-by-theme {
+    .#{$_theme}-theme {
+      @include _make-button-color($_color);
+    }
+
+    .button.button-#{$_theme},
+    button.button-#{$_theme},
+    input[type="button"].button-#{$_theme},
+    input[type="submit"].button-#{$_theme},
+    input[type="reset"].button-#{$_theme} {
+      background-color: $_color;
+      color: color-invert($_color);
+    }
+
+    .button.button-#{$_theme}:hover,
+    .button.button-#{$_theme}:focus,
+    button.button-#{$_theme}:hover,
+    button.button-#{$_theme}:focus,
+    input[type="button"].button-#{$_theme}:hover,
+    input[type="button"].button-#{$_theme}:focus,
+    input[type="submit"].button-#{$_theme}:hover,
+    input[type="submit"].button-#{$_theme}:focus,
+    input[type="reset"].button-#{$_theme}:hover,
+    input[type="reset"].button-#{$_theme}:focus {
+      background-color: color-hover($_color);
+      color: color-invert($_color);
+    }
+
+    .button.button-#{$_theme}:active,
+    button.button-#{$_theme}:active,
+    input[type="button"].button-#{$_theme}:active,
+    input[type="submit"].button-#{$_theme}:active,
+    input[type="reset"].button-#{$_theme}:active {
+      background-color: color-active($_color);
+      color: color-invert($_color);
+    }
+
+    .button.button-#{$_theme}.alt,
+    button.button-#{$_theme}.alt,
+    input[type="button"].button-#{$_theme}.alt,
+    input[type="submit"].button-#{$_theme}.alt,
+    input[type="reset"].button-#{$_theme}.alt {
+      box-shadow: inset 0 0 0 1px $_color;
+      color: $_color;
+    }
+
+    .button.button-#{$_theme}.alt:hover,
+    .button.button-#{$_theme}.alt:focus,
+    button.button-#{$_theme}.alt:hover,
+    button.button-#{$_theme}.alt:focus,
+    input[type="button"].button-#{$_theme}.alt:hover,
+    input[type="button"].button-#{$_theme}.alt:focus,
+    input[type="submit"].button-#{$_theme}.alt:hover,
+    input[type="submit"].button-#{$_theme}.alt:focus,
+    input[type="reset"].button-#{$_theme}.alt:hover,
+    input[type="reset"].button-#{$_theme}.alt:focus {
+      box-shadow: inset 0 0 0 1px color-hover($_color);
+      color: color-hover($_color);
+    }
+
+    .button.button-#{$_theme}.alt:active,
+    button.button-#{$_theme}.alt:active,
+    input[type="button"].button-#{$_theme}.alt:active,
+    input[type="submit"].button-#{$_theme}.alt:active,
+    input[type="reset"].button-#{$_theme}.alt:active {
+      box-shadow: inset 0 0 0 1px color-active($_color);
+      color: color-active($_color);
+    }
   }
-  
-  .button.button-#{$_theme}.alt:hover,
-  .button.button-#{$_theme}.alt:focus,
-  button.button-#{$_theme}.alt:hover,
-  button.button-#{$_theme}.alt:focus,
-  input[type="button"].button-#{$_theme}.alt:hover,
-  input[type="button"].button-#{$_theme}.alt:focus,
-  input[type="submit"].button-#{$_theme}.alt:hover,
-  input[type="submit"].button-#{$_theme}.alt:focus,
-  input[type="reset"].button-#{$_theme}.alt:hover,
-  input[type="reset"].button-#{$_theme}.alt:focus {
-    box-shadow: inset 0 0 0 1px color-hover($_color);
-    color: color-hover($_color) !important; // scss-lint:disable ImportantRule
-  }
-  
-  .button.button-#{$_theme}.alt:active,
-  button.button-#{$_theme}.alt:active,
-  input[type="button"].button-#{$_theme}.alt:active,
-  input[type="submit"].button-#{$_theme}.alt:active,
-  input[type="reset"].button-#{$_theme}.alt:active {
-    box-shadow: inset 0 0 0 1px color-active($_color);
-    color: color-active($_color) !important; // scss-lint:disable ImportantRule
-  }
+
 }
