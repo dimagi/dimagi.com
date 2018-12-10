@@ -25,7 +25,7 @@
 
     <meta property="dimagi:trackingConfig" content="{{ meta.trackingConfig|JSON|META_STR }}">
     <meta property="dimagi:tracking" content="{{ meta.tracking|JSON|META_STR }}">
-    <meta property="dimagi:trackingAB" content="{{ meta.trackingAB|JSON|META_STR }}">
+    <meta property="dimagi:trackingAB" content="{{ request.ab_test_meta|JSON|META_STR }}">
 
     <meta property="dimagi:auditABClicks" content="{{ meta.auditABClicks|BOOL }}">
 
