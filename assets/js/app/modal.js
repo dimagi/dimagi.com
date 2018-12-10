@@ -27,9 +27,6 @@ define([
     modal.hasCloseButton = modal.$closeButton.length;
     modal.$triggers = $("[href='#" + modal.id + "'], [data-modal='" + modal.id + "']");
     modal.dismissible = Boolean(modal.$modal.data("dismissible"));
-    modal.activateCallbacks = [];
-    modal.deactivateCallbacks = [];
-    modal.responseCallbacks = [];
 
     modal.initialize = function () {
       modal.setupTriggerLinks();
@@ -46,7 +43,6 @@ define([
       });
 
       modal.$modal.on("click", "[data-modal-confirm='" + modal.id + "']", function (e) {
-        modal.setResponse(true);
         modal.deactivate();
         if(!$(e.currentTarget).is('a[href]:not([href="#"])')) {
           e.preventDefault();
@@ -54,7 +50,6 @@ define([
       });
 
       modal.$modal.on("click", "[data-modal-dismiss='" + modal.id + "']", function (e) {
-        modal.setResponse(false);
         modal.deactivate();
         e.preventDefault();
       });
@@ -80,8 +75,8 @@ define([
     modal.activate = function () {
       modal.active = true;
       $(document).trigger(Constants.EVENTS.MODAL_SHOW);
-      modal.activateHandler();
       modal.toggleModalState();
+      modal.$modal.trigger('modal.open');
     };
 
     modal.dismiss = function () {
@@ -94,8 +89,8 @@ define([
 
     modal.deactivate = function () {
       modal.active = false;
-      modal.deactivateHandler();
       modal.toggleModalState();
+      modal.$modal.trigger('modal.close');
     };
 
     modal.toggleModalState = function () {
@@ -127,41 +122,6 @@ define([
         }
       }
       modal.$closeButton = modal.$modal.find(".modal-close-button");
-    };
-
-    modal.setResponse = function (response) {
-      modal.response = response;
-      modal.responseHandler();
-    };
-
-    modal.activateHandler = function () {
-      $.each(modal.activateCallbacks, function() {
-          return _.isFunction(this) ?  console.log(this + " is not a function") : this.call();
-      });
-    };
-
-    modal.deactivateHandler = function () {
-      $.each(modal.deactivateCallbacks, function() {
-          return _.isFunction(this) ?  console.log(this + " is not a function") : this.call();
-      });
-    };
-
-    modal.responseHandler = function () {
-      $.each(modal.responseCallbacks, function() {
-          return _.isFunction(this) ?  console.log(this + " is not a function") : this.call();
-      });
-    };
-
-    modal.onActivate = function (fn) {
-      modal.activateCallbacks.push(fn);
-    };
-
-    modal.onDeactivate = function (fn) {
-      modal.deactivateCallbacks.push(fn);
-    };
-
-    modal.onResponse = function (fn) {
-      modal.responseCallbacks.push(fn);
     };
 
     modal.setupTriggerLinks = function () {
