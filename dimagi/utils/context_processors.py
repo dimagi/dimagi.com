@@ -1,4 +1,3 @@
-from dimagi.utils.ab_tests import ACTIVE_AB_TESTS
 from dimagi.utils.config import setting
 from dimagi.utils.web import get_static_url
 
@@ -17,7 +16,6 @@ def metas(request):
         'enabled': setting('TRACKING_ENABLED', False),
         'optimizeId': setting('GOOGLE_OPTIMIZE_ID', ''),
     }
-    _metas["trackingAB"] = [ab.context for ab in ACTIVE_AB_TESTS]
 
     return {
         "meta": _metas,
@@ -32,3 +30,11 @@ def external_urls(request):
         "URL_LOGIN": "https://www.commcarehq.org/accounts/login/",
         "URL_TRIAL": "https://www.commcarehq.org/register/user/",
     }
+
+
+def ab_tests(request):
+    if not hasattr(request, 'ab_test_meta'):
+        request.ab_test_meta = []
+    if not hasattr(request, 'ab_test'):
+        request.ab_test = {}
+    return {}

@@ -13,11 +13,14 @@ define([
       $stylesheet = $('#js-async-stylesheets'),
       styleLinks = $stylesheet.text();
 
-      // ios 11 bug caret position
-      if ( iOS && iOS11 ) {
-        // Add CSS class to body
-        $("html").addClass("ios-modal-fix");
-      }
+
+      $(function () {
+        // ios 11 bug caret position
+        if ( iOS && iOS11 ) {
+          // Add CSS class to body
+          $("html").addClass("ios-modal-fix");
+        }
+      });
 
       // load async styles
       styleLinks = styleLinks.substring(1, styleLinks.length - 1);

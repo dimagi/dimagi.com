@@ -4,7 +4,10 @@
 {#     js, no-js, touch, no-touch, cssanimations, #}
 {#     csstransformations3d, csstransitions, video, audio, svg, inlinesvg #}
 {#     pointerevents, show-time #}
-<html {% if request.is_amp %} amp {% endif %} lang="en">
+<!--[if lt IE 7]><html {% if request.is_amp %} amp {% endif %} lang="en" class="lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html {% if request.is_amp %} amp {% endif %} lang="en" class="lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html {% if request.is_amp %} amp {% endif %} lang="en" class="lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!--><html lang="{{ LANGUAGE_CODE }}"><!--<![endif]-->
   <head>
     {% if not request.is_amp %}
       {% if meta.tracking.GTM %}
@@ -25,7 +28,7 @@
 
     <meta property="dimagi:trackingConfig" content="{{ meta.trackingConfig|JSON|META_STR }}">
     <meta property="dimagi:tracking" content="{{ meta.tracking|JSON|META_STR }}">
-    <meta property="dimagi:trackingAB" content="{{ meta.trackingAB|JSON|META_STR }}">
+    <meta property="dimagi:trackingAB" content="{{ request.ab_test_meta|JSON|META_STR }}">
 
     <meta property="dimagi:auditABClicks" content="{{ meta.auditABClicks|BOOL }}">
 
@@ -205,10 +208,6 @@
 
     {% block modals %}{% endblock %}
 
-    <!--[if lte IE 8]>
-      <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
-    <![endif]-->
-    <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
     {% if request.is_amp %}
       {% block requirejs_module %}
       {% endblock %}

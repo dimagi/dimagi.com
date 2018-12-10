@@ -1,27 +1,33 @@
 /* globals hbspt */
 define([
   'jquery',
-  'app/analytix/utils',
+  'app/analytix/hubspot',
 ], function (
     $,
-    Utils
+    hubspot
 ) {
-  'use strict';
+    'use strict';
+    var self = {};
 
-  return {
-    initialize: function () {
-      var apiId = Utils.getApiId('HUBSPOT'),
-          contactFormId = $("meta[property='dimagi:contactFormId']").attr('content');
+    self.loadContactForm = function () {
+        var apiId = hubspot.apiId(),
+            contactFormId = $("meta[property='dimagi:contactFormId']").attr('content');
 
-      if (contactFormId && apiId) {
-        hbspt.forms.create({
-          portalId: apiId,
-          formId: contactFormId,
-          target: "#contact-form-content",
-          css: ""
-        });
-      }
+        if (contactFormId) {
+            hbspt.forms.create({
+                portalId: apiId,
+                formId: contactFormId,
+                target: "#contact-form-content",
+                css: ""
+            });
+        }
+    };
 
-    },
-  };
+    return {
+        initialize: function () {
+            $(function () {
+                hubspot.onFormsReady(self.loadContactForm);
+            });
+        },
+    };
 });

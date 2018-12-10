@@ -72,6 +72,7 @@ TEMPLATES = [
                 'django.template.context_processors.static',
                 'dimagi.utils.context_processors.metas',
                 'dimagi.utils.context_processors.external_urls',
+                'dimagi.utils.context_processors.ab_tests',
             ],
             'loaders': [
                 'django.template.loaders.filesystem.Loader',
