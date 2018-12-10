@@ -1,45 +1,126 @@
 from __future__ import absolute_import
-import collections
 import random
+from django.core.cache import cache
 
 from dimagi.utils.decorators import memoized
 
-ABTestConfig = collections.namedtuple('ABTestConfig', ('name', 'slug', 'options'))
+
+class AbTestConfig(object):
+
+    def __init__(self, name, slug, options, is_debug=False, force_refresh=False):
+        """
+        :param name: (string) The name passed to the analytics API
+        :param slug: (string) a unique slug, preferably with a date
+            (my_test_dec2018). Used to set cookies and can be accessed from
+            the template to retrieve the current version.
+        :param options: (tuple) a tuple of option values
+
+        Optional for DEV USE ONLY:
+        :param is_debug: (boolean) whether debug (logging) mode is active
+        :param force_refresh: (boolean) whether to force a refresh of the values
+        """
+        self.name = name
+        self.slug = slug
+        self.options = options
+        self.is_debug = is_debug
+        self.force_refresh = force_refresh
 
 
-class ABTest(object):
+class AbTest(object):
     """
-    Initialize A/B test with an ABTestConfig.
+    Initialize a user session A/B test from a AbTestConfig.
+    Access the ab test in the template via ab_test.<slug>
+    Enable storing of the A/B test in a cookie via
+    @enable_ab_test(<ABTestConfig instance>) decorator
     """
 
     def __init__(self, config, request):
-        self.name = config.name
-        self.slug = config.slug
-        self.options = config.options
+        """
+        :param config: an instance of SessionABTestConfig
+        :param request: view request
+        """
+        self.config = config
         self.request = request
 
     @property
     def _cookie_id(self):
-        return "{}_ab".format(self.slug)
+        return "{}_ab".format(self.config.slug)
 
     @property
+    def _cache_id(self):
+        return "{}_{}".format(self._cookie_id, self.request.session.session_key)
+
     @memoized
-    def version(self):
-        if self._cookie_id not in self.request.COOKIES:
-            version = random.sample(self.options, 1)[0]  # todo weighted options
-        else:
-            version = self.request.COOKIES[self._cookie_id]
-        return version
+    def version(self, assign_if_blank=True):
+        value = None
+        if cache.get(self._cache_id):
+            value = cache.get(self._cache_id)
+            self._debug_message("fetched version from cache '{}'".format(value))
+        elif (self._cookie_id in self.request.COOKIES
+              and not self.config.force_refresh):
+            value = self.request.COOKIES[self._cookie_id]
+            self._debug_message("fetched version from cookie '{}'".format(value))
+        elif assign_if_blank:
+            value = random.choice(self.config.options)
+            self._debug_message("fetched new version '{}'".format(value))
+        self.cache_version(value)
+        return value
+
+    def cache_version(self, version):
+        self._debug_message("cache version '{}' under '{}'".format(
+            version, self._cache_id))
+        cache.set(self._cache_id, version)
+        # fyi default cache timeout is 300 sec (5 min)
+
+    def _clear_cache(self):
+        self._debug_message("clearing cache '{}'".format(self._cache_id))
+        cache.delete(self._cache_id)
+
+    def _debug_message(self, message):
+        if self.config.is_debug:
+            print("SESSION AB TEST [{}]: {}".format(self._cookie_id, message))
 
     def update_response(self, response):
-        response.set_cookie(self._cookie_id, self.version)
+        if self.config.force_refresh:
+            self._clear_response(response)
+        version = self.version()
+        self._debug_message("storing cookie value '{}' in '{}'".format(
+            version, self._cookie_id))
+        response.set_cookie(self._cookie_id, version)
+
+    def _clear_response(self, response):
+        self._debug_message("clearing cookies '{}'".format(self._cookie_id))
+        response.delete_cookie(self._cookie_id)
 
     @property
     def context(self):
-        return {
-            'name': self.name,
-            'version': self.version,
+        """
+        Assign this to a variable in your template context.
+
+        To activate A/B test add it to the ACTIVE_AB_TESTS list below.
+
+        :return: dict
+        """
+        if self.config.force_refresh:
+            self._clear_cache()
+        context = {
+            'name': self.config.name,
+            'version': self.version(),
         }
+        self._debug_message("Fetching Template Context {}".format(context))
+        return context
 
 
-ACTIVE_AB_TESTS = []
+DEMO_WORKFLOW_HUBSPOT = 'hubspot'
+DEMO_WORKFLOW_DRIFT = 'drift'
+
+DEMO_WORKFLOW = AbTestConfig(
+    'Demo Workflow A/B',
+    'demo_workflow_dec2018',
+    (DEMO_WORKFLOW_HUBSPOT, DEMO_WORKFLOW_DRIFT)
+)
+
+
+ACTIVE_AB_TESTS = [
+    DEMO_WORKFLOW,
+]

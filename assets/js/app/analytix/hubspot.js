@@ -91,6 +91,10 @@ define([
 
   };
 
+  var onFormsReadyCallback = function (callback) {
+    self.onFormsReady.done(callback);
+  };
+
 
   return {
     initialize: function () {
@@ -101,12 +105,29 @@ define([
         self.logger = Logging.getLoggerForApi('Hubspot');
 
         self.ready = $.Deferred();
+        self.onFormsReady = $.Deferred();
         self.ready = Utils.initApi(self.ready, apiId, scriptUrl, self.logger, function () {
           bindEvents();
         });
+
+        self.ready.done(function () {
+            var formScriptUrls = ['//js.hsforms.net/forms/v2.js'];
+            if ($('html').hasClass('lt-ie9')) {
+                formScriptUrls = _.union(['//js.hsforms.net/forms/v2-legacy.js'], formScriptUrls);
+            }
+
+            $.when.apply($, _.map(formScriptUrls, function (url) { return $.getScript(url); }))
+              .done(function () {
+                  self.onFormsReady.resolve();
+              });
+          });
       });
+    },
+    apiId: function () {
+      return Utils.getApiId('HUBSPOT');
     },
     identify: identify,
     trackEvent: trackEvent,
+    onFormsReady: onFormsReadyCallback,
   };
 });

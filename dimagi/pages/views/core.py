@@ -1,10 +1,14 @@
 from __future__ import absolute_import
 from django.shortcuts import render
+
+from dimagi.utils.ab_tests import DEMO_WORKFLOW
 from dimagi.utils.decorators import no_index
+from dimagi.utils.decorators.enable_ab_test import enable_ab_test
 from dimagi.utils.partners import get_logos
 from dimagi.data.case_management import longitudinal_data
 
 
+@enable_ab_test(DEMO_WORKFLOW)
 def home(request):
     context = {
         'partners': get_logos(),

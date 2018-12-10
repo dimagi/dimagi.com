@@ -196,18 +196,24 @@ define([
 
         // Initialize AB Tests
         var abTests = Utils.getAbTests();
-        _.each(abTests, function (ab, testName) {
+        _.each(abTests, function (ab) {
           var test = {};
-          testName = _.last(testName.split('.'));
           if (_.isObject(ab) && ab.version) {
-            test[ab.name || testName] = ab.version;
-            self.logger.debug.log(test, ["AB Test", "New Test: " + testName]);
+            test[ab.name] = ab.version;
+            self.logger.debug.log(test, ["AB Test", "New Test: " + ab.name]);
             _kmqPushCommand('set', test);
             _.extend(_allAbTests, test);
           }
         });
 
         bindEvents();
+      });
+
+      self.ready.done(function () {
+        $('.cta-schedule-demo').click(function () {
+          var clickClass = $(this).data('clickclass');
+          trackEvent("Demo Workflow - Dimagi.com Button Clicked - " + clickClass);
+        });
       });
 
     },
