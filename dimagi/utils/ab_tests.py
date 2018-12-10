@@ -29,14 +29,11 @@ class AbTestConfig(object):
 class AbTest(object):
     """
     Initialize a user session A/B test from a AbTestConfig.
-    Access the ab test in the template via ab_test.<slug>
-    Enable storing of the A/B test in a cookie via
-    @enable_ab_test(<ABTestConfig instance>) decorator
     """
 
     def __init__(self, config, request):
         """
-        :param config: an instance of SessionABTestConfig
+        :param config: an instance of ABTestConfig
         :param request: view request
         """
         self.config = config
@@ -97,7 +94,11 @@ class AbTest(object):
         """
         Assign this to a variable in your template context.
 
-        To activate A/B test add it to the ACTIVE_AB_TESTS list below.
+        To activate an AB test on a view, use the decorator:
+        @enable_ab_test(<ab test config>)
+
+        You can access the version in the template context by calling
+        request.ab_test.<slug>
 
         :return: dict
         """
@@ -119,8 +120,3 @@ DEMO_WORKFLOW = AbTestConfig(
     'demo_workflow_dec2018',
     (DEMO_WORKFLOW_HUBSPOT, DEMO_WORKFLOW_DRIFT)
 )
-
-
-ACTIVE_AB_TESTS = [
-    DEMO_WORKFLOW,
-]
