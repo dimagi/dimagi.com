@@ -84,8 +84,16 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'dimagi.wsgi.application'
 
-# We aren't going to use a database just yet. Simplify.
-DATABASES = {}
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': env.str('DATABASE_NAME', default=''),
+        'USER': env.str('DATABASE_USER', default=''),
+        'PASSWORD': env.str('DATABASE_PASSWORD', default=''),
+        'HOST': env.str('DATABASE_HOST', default=''),
+        'PORT': env.str('DATABASE_PORT', default=''),
+    },
+}
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/

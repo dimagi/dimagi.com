@@ -39,6 +39,9 @@ class AbTest(object):
         self.config = config
         self.request = request
 
+        if not self.request.session.session_key:
+            self.request.session.save()
+
     @property
     def _cookie_id(self):
         return "{}_ab".format(self.config.slug)
