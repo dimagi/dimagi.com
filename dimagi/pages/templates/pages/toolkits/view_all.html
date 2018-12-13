@@ -9,10 +9,7 @@
 {% endblocktrans %}{% endblock %}
 
 {% block description %}{% blocktrans %}
-  Drawing from 10+ years of experience, Dimagi has developed
-  several resources to support users in implementing digital
-  solutions. Download our toolkits to help you plan and
-  implement your project.
+  10+ years of experience in implementing digital solutions.
 {% endblocktrans %}{% endblock %}
 
 {% block stylesheets %}
@@ -22,34 +19,30 @@
 {% endblock %}
 
 {% block hero %}
-  <div class="orange-theme">
-    <section class="hero hero-toolkits"
-             data-lazybg="true"
-             id="hero">
-      <div class="content content-width-large inverted align-center display-flex flex-valign-middle expand-vertical offset-top-small flex-align-center">
-        <div class="copy expand position-relative">
-
-          <h1>
-            {% blocktrans %}
-              Toolkits
-            {% endblocktrans %}
-          </h1>
-
-          <div class="headline content-width-small">
-            {% blocktrans %}
-              Drawing from 10+ years of experience, Dimagi has developed
-              several resources to support users in implementing digital
-              solutions. Download the toolkits below to help you plan and
-              implement your project.
-            {% endblocktrans %}
-          </div>{# .headline #}
-
-        </div>{# .copy #}
-      </div>{# .content #}
-    </section>
-  </div>
+  <div id="top"></div>
+  <section class="hero"
+           data-lazybg="true"
+           id="hero">
+    <div class="content align-left-at-medium align-center gap-top-large gap-top-small-at-medium gap-top-line-at-large">
+      <h2 class="gap-vert-line">
+        {% blocktrans %}
+          Toolkits
+        {% endblocktrans %}
+      </h2>
+      <h1>
+        {% blocktrans %}
+          10+ years of experience in implementing digital solutions.
+        {% endblocktrans %}
+      </h1>
+      <a class="button button-accent-gray {% click_hero 'contact' %}" 
+         href="#global-services-form">
+        {% blocktrans %}
+          Learn More
+        {% endblocktrans %}
+      </a>
+    </div> {# .content #}
+  </section>
 {% endblock %}
-
 {% block content %}
   <section class="toolkits-container orange-theme">
     {% include 'sections/toolkits/list.html' %}

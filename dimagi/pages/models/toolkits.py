@@ -3,5 +3,5 @@ from collections import namedtuple
 
 
 Toolkit = namedtuple(
-    'Toolkit', 'title tagline template slug download_url hubspot_form'
+    'Toolkit', 'title tagline template slug icon download_url hubspot_form'
 )

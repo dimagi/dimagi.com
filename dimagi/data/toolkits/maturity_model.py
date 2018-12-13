@@ -13,6 +13,7 @@ TOOLKIT = Toolkit(
     ),
     template="data/toolkits/summaries/maturity_model.html",
     slug="maturity-model",
+    icon="svg/commcare/icon/heart_health.html",
     download_url="https://www.dropbox.com/s/juqabe8bykwuq3n/Dimagi%20Maturity%20Model.zip?dl=1",
     hubspot_form="edd74f83-1893-43a3-bb60-f31e20e5f43a",
 )

@@ -1,23 +1,74 @@
-  {% load i18n %}
+{% load i18n %}
 {% load dimagidotcom %}
 
 
 <section class="overview" id="overview">
   <div class="content pad-vert-medium">
-
-    <h3 class="gap-bottom-small">
-      {% blocktrans %}
-        Toolkits
-      {% endblocktrans %}
-    </h3>
+    <div class="intro content-width-medium gap-bottom-medium">
+      <h2>
+        {% blocktrans %}
+          Toolkits
+        {% endblocktrans %}
+      </h2>
+      <p>
+        {% blocktrans %}
+          Drawing from 10+ years of experience, Dimagi has developed several
+          resources to support users in implementing digital solutions.
+          Download the toolkits below to help you plan and implement your project.
+        {% endblocktrans %}
+      </p>
+    </div>{# .intro #}
 
     <div class="grid-3-at-large grid-2-at-medium grid-row-space-small grid-row-equal-heights">
       {% for toolkit in toolkits %}
-        <div class="column">
-          {% include "partials/toolkits_brief.html" with toolkit=toolkit %}
-        </div>
+      <div class="column">
+        {% include "partials/toolkits_brief.html" with toolkit=toolkit %}
+      </div>
       {% endfor %}
     </div>{# .grid-4-at-medium #}
 
   </div>{# .content #}
+  
+  <div class="trial accent-gray-bg border-top"
+         id="trial">
+  <div class="content content-width-medium pad-vert-medium">
+    <div class="intro gap-bottom-small">
+      <h4>
+        {% blocktrans %}
+          Trust Our Expertise
+        {% endblocktrans %}
+      </h4>
+      <p>
+        {% blocktrans %}
+          More than 2000+ projects have relied on Dimagi's technology, CommCare, 
+          for their mobile data collection and reporting needs.
+        {% endblocktrans %}
+      </p>
+    </div>{# .intro #}
+
+    <div class="grid-2">
+
+      <div class="column flex-align-right">
+        <p>
+          {% click_body 'demo' as click_class %}
+          {% include "partials/schedule_demo_button.html" with click_class=click_class button_class="button alt" %}
+        </p>
+      </div>{# .column #}
+
+      <div class="column flex-align-left">
+        <p>
+          <a class="button cta-product-trial-get-started {% click_body 'trial' %}"
+             href="{{ URL_TRIAL }}"
+             data-kmq-external="true"
+             data-kmq-name="Clicked Start Trial - CommCare (Get started)">
+            {% blocktrans %}
+              Start Trail
+            {% endblocktrans %}
+          </a>
+        </p>
+      </div>{#  .column #}
+
+    </div>{# .grid-2 #}
+  </div>{# .content #}
+  </div> {# trail border #}
 </section>

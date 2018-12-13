@@ -1,8 +1,10 @@
 {% load dimagidotcom %}
 {% load i18n %}
 
-<a class="tile toolkit-tile orange-border align-left ab-body--toolkits--view-{{ toolkit.slug }}"
-   href="{% url 'toolkit' toolkit.slug %}">
+<a class="tile toolkit-tile orange-border align-center ab-body--toolkits--view-{{ toolkit.slug }}" href="{% url 'toolkit' toolkit.slug %}">
+  <div class="theme-icon">
+    {% include toolkit.icon %}
+  </div>
   <h5 class="orange">
     {{ toolkit.title }}
   </h5>
@@ -10,7 +12,7 @@
     {{ toolkit.tagline }}
   </p>
   <p class="cta">
-    <span class="link orange arrow">
+    <span class="link orange">
       {% trans "View Toolkit" %}
     </span>
   </p>
