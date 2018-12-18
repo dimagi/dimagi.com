@@ -50,8 +50,11 @@
 
       <div class="column flex-align-right">
         <p>
-          {% click_body 'demo' as click_class %}
-          {% include "partials/schedule_demo_button.html" with click_class=click_class button_class="button alt" %}
+          <a href="#global-services-form" class="button alt {% click_body 'learn-more-contact' %}">
+            {% blocktrans%}
+            Contact Us
+            {% endblocktrans %}
+          </a>
         </p>
       </div>{# .column #}
 

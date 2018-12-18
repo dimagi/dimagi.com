@@ -13,7 +13,7 @@ TOOLKIT = Toolkit(
     ),
     template="data/toolkits/summaries/managing_devices_ebook.html",
     slug="managing-devices-ebook",
-    icon="svg/commcare/icon/heart_health.html",
+    icon="svg/tookits/icons/ManagingDevices_Scale.html",
     download_url="https://www.dropbox.com/s/lk5gujyrk3lm7v7/Managing%20Devices%20at%20Scale.pdf?dl=1",
     hubspot_form="186d64b8-8dcc-45d3-af92-03259efc96a8",
 )
