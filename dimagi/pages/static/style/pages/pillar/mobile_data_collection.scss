@@ -40,8 +40,9 @@
 }
 
 
-a.tile-more {
+a:not(.button).tile-more {
   background: transparent;
+  color: $color-white;
   padding: $space-small;
   padding-bottom: $space-small + $space-base;
 
@@ -54,11 +55,15 @@ a.tile-more {
     padding-bottom: 0;
   }
 
-  &:before {
+  &:hover {
+    color: $color-white;
+  }
+
+  &::before {
     border-color: transparent !important;
   }
 
-  &:after {
+  &::after {
     border-color: $color-white !important;
   }
 
@@ -68,7 +73,7 @@ a.tile-more {
   height: 400px;
 }
 
-.sub-nav a.social {
+.sub-nav a:not(.button).social {
   cursor: pointer;
 
   svg * {
