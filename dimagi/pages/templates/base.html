@@ -116,6 +116,7 @@
       {% block ampscript %}
       {% endblock ampscript %}
     {% endif %}
+    {% block head %}{% endblock %}
   </head>
   <body class="{% block body_class %}{% endblock %}">
     {% if request.is_amp %}
