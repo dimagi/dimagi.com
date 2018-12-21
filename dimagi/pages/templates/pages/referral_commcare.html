@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block body_class %}referrals-commcare-page tucked-hero{% endblock %}
+
+{% block head %}
+<script>
+    window.friendbuy = window.friendbuy || [];
+    window.friendbuy.push(['site', 'site-8fefca7c-www.dimagi.com']);
+    (function (f, r, n, d, b, y) {
+        b = f.createElement(r), y = f.getElementsByTagName(r)[0];b.async = 1;b.src = n;y.parentNode.insertBefore(b, y);
+    })(document, 'script', '//djnf6e5yyirys.cloudfront.net/js/friendbuy.min.js');
+</script>
+{% endblock %}
+
+{% block title %}{% blocktrans %}
+  CommCare Referral Program
+{% endblocktrans %}{% endblock %}
+
+{% block stylesheets %}
+  {% compress css %}
+    <link href="{% sass_src 'style/pages/referral-commcare.scss' %}" rel="stylesheet" media="screen" type="text/css" />
+  {% endcompress %}
+{% endblock %}
+
+{% block hero %}
+  <div class="blue-theme">
+    <section class="hero"
+             data-lazybg="true"
+             id="hero">
+
+      <div class="content content-width-medium">
+        <div class="friendbuy-widget friendbuy-dW7-pZh"></div>
+        <script>
+            window.friendbuy = window.friendbuy || [];
+            window.friendbuy.push(['widget', "dW7-pZh"]);
+        </script>
+      </div>
+    </section>
+  </div>
+{% endblock %}
+
+{% block content %}
+  <section class="referral-container blue-theme">
+
+  </section>
+{% endblock %}

@@ -1,0 +1,18 @@
+@import 'app/mixins/background';
+@import 'app/variables/colors';
+@import 'app/variables/sizes';
+@import 'app/variables/type';
+
+.referrals-commcare-page {
+  @include make-bg(hero, '../../pages/commcare/product/hero');
+
+  .hero {
+    height: 850px;
+  }
+}
+
+.friendbuy-widget {
+  iframe body {
+    background-color: $color-white;
+  }
+}
