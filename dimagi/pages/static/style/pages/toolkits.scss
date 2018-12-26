@@ -17,6 +17,12 @@
     width: calc(100% - 60px);
   }
 }
+
+.request-demo-form {
+  label {
+    text-align: left;
+  }
+}
 @media (min-width: $width-desktop) {
   .toolkits-page .hero h1 {
     margin-left: 0;
@@ -27,8 +33,8 @@
 
 $_toolkit-tile-heights: (
   small: auto,
-  medium: 210px,
-  large: 265px,
+  medium: auto, // Because of SVG
+  large: auto, // Because of SVG
   extra-large: 320px,
 );
 

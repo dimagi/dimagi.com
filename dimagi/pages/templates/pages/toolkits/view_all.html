@@ -34,8 +34,8 @@
           10+ years of experience in implementing digital solutions.
         {% endblocktrans %}
       </h1>
-      <a class="button button-accent-gray {% click_hero 'contact' %}" 
-         href="#global-services-form">
+      <a class="button button-accent-gray {% click_hero 'overview' %}" 
+         href="#overview">
         {% blocktrans %}
           Learn More
         {% endblocktrans %}
@@ -43,8 +43,43 @@
     </div> {# .content #}
   </section>
 {% endblock %}
+
 {% block content %}
   <section class="toolkits-container orange-theme">
     {% include 'sections/toolkits/list.html' %}
+    <div class="request-demo align-center border-top accent-gray-bg" id="request-demo">
+      <div class="content pad-vert-large content-width-medium">
+
+        <h2>
+          {% blocktrans %}
+            Trust Our Expertise
+          {% endblocktrans %}
+        </h2>
+        <p>
+          {% blocktrans %}
+            More than 2000+ projects have relied on Dimagi's technology, CommCare, 
+            for their mobile data collection and reporting needs.
+          {% endblocktrans %}
+        </p>
+
+        <div class="request-demo-form" id="hubspot-request-demo-form"></div>
+
+      </div>{# .content #}
+    </div>{# .request-demo #}
   </section>
+{% endblock %}
+
+{% block js %}
+  <!--[if lte IE 8]>
+    <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+  <![endif]-->
+  <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+  <script>
+    hbspt.forms.create({
+      portalId: "503070",
+      formId: "8e323239-7dec-44fc-998c-6c4e2b77295c",
+      target: "#hubspot-request-demo-form",
+      css: "",
+    });
+  </script>
 {% endblock %}
