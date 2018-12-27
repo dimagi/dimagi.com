@@ -15,4 +15,6 @@ TOOLKIT = Toolkit(
     slug="business-development",
     download_url="https://www.dropbox.com/s/n61uasvfxr44uzu/Dimagi%27s%20BD%20Toolkit.zip?dl=1",
     hubspot_form="c5cf9f9e-75fc-4e1f-942e-8f3e4e9056a7",
+    hubspot_formId="785a986c-343a-483f-bdf7-0f3def6742d9",
+    icon="svg/case_management/broken_link.html",
 )

@@ -1,0 +1,26 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="overview align-center blue-theme accent-gray-bg" id="other_toolkits">
+  <div class="content pad-top-medium pad-bottom-small">
+    <div class="intro gap-bottom-none">
+      <h2>
+        {% blocktrans %}
+          Other Toolkits offered by dimagi
+        {% endblocktrans %}
+      </h2>
+    </div>{# .intro #}
+
+    <p class="content-width-medium">
+      {% blocktrans %}
+        A look at what's inside
+      {% endblocktrans %}
+    </p>
+
+    <div class="grid-3-at-medium grid-row-space-small pad-top-line">
+      {% include "sections/case_management/overview/step_1.html" %}
+      {% include "sections/case_management/overview/step_2.html" %}
+      {% include "sections/case_management/overview/step_3.html" %}
+    </div>{# .grid-2-at-small #}
+  </div>{# .content #}
+</section>

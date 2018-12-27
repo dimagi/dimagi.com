@@ -1,26 +1,51 @@
-  {% load i18n %}
+{% load i18n %}
 {% load dimagidotcom %}
 
 
 <section class="overview" id="overview">
-  <div class="content pad-vert-medium content-width-medium">
-    <h4 class="uppercase gap-bottom-base">
-      {% blocktrans %}
-        Toolkit
-      {% endblocktrans %}
-    </h4>
-    <h1 class="gap-bottom-base">
-      {{ toolkit.title }}
-    </h1>
-    <h4>
-      {{ toolkit.tagline }}
-    </h4>
-
-    <p>
-      {% include 'partials/social.html' with url=request.build_absolute_uri %}
-    </p>
-
-    {% include toolkit.template %}
-
-  </div>{# .content #}
+  <div class="content pad-vert-medium">
+    <div class="grid-2-at-medium">
+      <div class="column">
+        <h1>
+          {{ toolkit.title }}
+        </h1>
+        <h4>
+          {{ toolkit.tagline }}
+        </h4>
+        <p>
+          {% include 'partials/social.html' with url=request.build_absolute_uri %}
+        </p>
+        {% include toolkit.template %}
+      </div>{# .column #}
+      <div class="column pad-vert-medium">
+        <div class="tile align-center">
+          <div class="theme-icon">
+            {% include toolkit.icon %}
+          </div>
+          <h3>
+            Download {{ toolkit.title }}
+          </h3>
+          <div id="hubspot-download-form-summary" class="hubspot-download"></div>
+        </div>
+      </div>{# .column #}
+    </div>{# .grid-2-at-medium #}
+  </div>{# .content #} 
 </section>
+
+{% block js %}
+  <!--[if lte IE 8]>
+    <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+  <![endif]-->
+  <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+  <script>
+    hbspt.forms.create({
+      portalId: "503070",
+      formId: "{{ toolkit.hubspot_form }}",
+      target: "#hubspot-download-form-summary",
+      css: "",
+      onFormSubmit: function () {
+        window.open('{{ toolkit.download_url }}', "_blank");
+      },
+    });
+  </script>
+{% endblock %}
