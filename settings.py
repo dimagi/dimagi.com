@@ -199,8 +199,7 @@ WORDPRESS_API_USER_AGENT = env.str(
 SITE_URL = env.str('SITE_URL', default='http://dimagi.com')
 
 # analytics
-TRACKING = {
-    'GOOGLE': env.str('GOOGLE', default=''),
+ANALYTICS = {
     'GTM': env.str('GTM', default=''),
     'HUBSPOT': env.str('HUBSPOT', default=''),
     'KISSMETRICS': env.str('KISSMETRICS', default=''),
@@ -209,7 +208,6 @@ TRACKING = {
 
 AUDIT_AB_CLICKS = env.bool('AUDIT_AB_CLICKS', default=False)
 
-GOOGLE_OPTIMIZE_ID = env.str('GOOGLE_OPTIMIZE_ID', default='')
+ANALYTICS_LOG_LEVEL = env.str('ANALYTICS_LOG_LEVEL', default='')
+ANALYTICS_ENABLED = env.bool('ANALYTICS_ENABLED', default=False)
 
-TRACKING_LOG_LEVEL = env.str('TRACKING_LOG_LEVEL', default='')
-TRACKING_ENABLED = env.bool('TRACKING_ENABLED', default=False)
