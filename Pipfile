@@ -30,6 +30,7 @@ reportlab = "*"
 ua-parser = "*"
 user-agents = "*"
 django-user-agents = "*"
+simplejson = "*"
 
 [requires]
 python_version = "3.6"
