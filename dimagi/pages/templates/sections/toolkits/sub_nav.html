@@ -5,11 +5,11 @@
          id="sub-nav">
   <div class="content">
     <div class="actions">
-      <a class="primary {% click_subnav 'trial' %}"
-         href="{{ URL_TRIAL }}">
+      <a class="primary {% click_subnav 'download' %}"
+         href="#download">
         <span>
           {% blocktrans %}
-            Start Trial
+            Download
           {% endblocktrans %}
         </span>
       </a>
@@ -22,22 +22,28 @@
     </a>
     <div class="destinations">
       <div class="content">
-        <a href="{% url 'toolkits' %}"
-           class="{% click_subnav 'all' %}">
-          {% blocktrans %}
-            All Toolkits
-          {% endblocktrans %}
-        </a>
         <a href="#overview"
            class="{% click_subnav 'overview' %}">
           {% blocktrans %}
             Overview
           {% endblocktrans %}
         </a>
-        <a href="#download"
-           class="{% click_subnav 'download' %}">
+        <a href="#highlights"
+           class="{% click_subnav 'highlights' %}">
           {% blocktrans %}
-            Download
+            Highlights
+          {% endblocktrans %}
+        </a>
+        <a href="#other_toolkits"
+           class="{% click_subnav 'other_toolkits' %}">
+          {% blocktrans %}
+            Other Toolkits
+          {% endblocktrans %}
+        </a>
+        <a href="#request-demo"
+           class="{% click_subnav 'request-demo' %}">
+          {% blocktrans %}
+            Contact Us
           {% endblocktrans %}
         </a>
       </div>{# .content #}

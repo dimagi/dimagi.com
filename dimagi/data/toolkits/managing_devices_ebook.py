@@ -16,4 +16,6 @@ TOOLKIT = Toolkit(
     icon="svg/tookits/icons/managingdevices_scale.html",
     download_url="https://www.dropbox.com/s/lk5gujyrk3lm7v7/Managing%20Devices%20at%20Scale.pdf?dl=1",
     hubspot_form="186d64b8-8dcc-45d3-af92-03259efc96a8",
+    hubspot_formId="61ca299b-1e89-4d2f-85b1-7ea182cf0170",
+    icon="svg/case_management/broken_link.html",
 )
