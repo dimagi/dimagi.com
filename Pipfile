@@ -1,11 +1,8 @@
 [[source]]
-
-url = "https://pypi.python.org/simple"
+url = "https://pypi.org/simple/"
 verify_ssl = true
 
-
 [packages]
-
 dj-database-url = "*"
 django = "*"
 gunicorn = "*"
@@ -34,7 +31,5 @@ ua-parser = "*"
 user-agents = "*"
 django-user-agents = "*"
 
-
 [requires]
-
 python_version = "3.6"
