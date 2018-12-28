@@ -9,7 +9,7 @@ def metas(request):
     _metas = {}
 
     _metas["baseUrl"] = get_static_url('')
-    _metas["tracking"] = setting('ANALYTICS')
+    _metas["analytics"] = setting('ANALYTICS')
     _metas["auditABClicks"] = setting('AUDIT_AB_CLICKS')
     _metas["analyticsConfig"] = {
         'logLevel': setting('ANALYTICS_LOG_LEVEL', ''),
