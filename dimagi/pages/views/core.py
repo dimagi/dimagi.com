@@ -8,7 +8,7 @@ from django.views.decorators.http import require_http_methods
 from dimagi.utils.ab_tests import DEMO_WORKFLOW
 from dimagi.utils.decorators import no_index, hide_drift
 from dimagi.utils.decorators.enable_ab_test import enable_ab_test
-from dimagi.utils.friendbuy_api import get_share, get_customers
+from dimagi.utils.friendbuy_api import get_share
 from dimagi.utils.hubspot_api import update_contact
 from dimagi.utils.partners import get_logos
 from dimagi.data.case_management import longitudinal_data
