@@ -61,6 +61,8 @@ urlpatterns = [
     url(r'^test_500/$', pages.test_500),
     url(r'^test_404/$', pages.test_404),
     url(r'^referral-commcare/$', pages.referral_commcare, name='referral_commcare'),
+    url(r'^referral/update/$', pages.update_referral_status,
+        name='update_referral_status'),
     url(r'^certified-partners/$', commcare.partners, name='partner_program'),
 
     url(r'^mobile-data-collection/$',
