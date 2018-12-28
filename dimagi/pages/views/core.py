@@ -1,9 +1,15 @@
 from __future__ import absolute_import
+
+import json
+from django.http import HttpResponse
 from django.shortcuts import render
+from django.views.decorators.http import require_http_methods
 
 from dimagi.utils.ab_tests import DEMO_WORKFLOW
 from dimagi.utils.decorators import no_index, hide_drift
 from dimagi.utils.decorators.enable_ab_test import enable_ab_test
+from dimagi.utils.friendbuy_api import get_share, get_customers
+from dimagi.utils.hubspot_api import update_contact
 from dimagi.utils.partners import get_logos
 from dimagi.data.case_management import longitudinal_data
 
@@ -42,6 +48,21 @@ def case_management(request):
 @hide_drift
 def referral_commcare(request):
     return render(request, 'pages/referral_commcare.html')
+
+
+@require_http_methods(["POST"])
+@no_index
+def update_referral_status(request):
+    share_id = request.POST.get('id')
+    share_info = get_share(share_id)
+    email = share_info.get('sharer', {}).get('email')
+    referral_code = share_info.get('referral_code')
+    update_req = update_contact(email, [
+        ('referral_customer', 'Yes'),
+        ('referral_code_email', referral_code),
+    ])
+    return HttpResponse(json.dumps({"status": update_req.status_code}),
+                        content_type="application/json")
 
 
 @no_index

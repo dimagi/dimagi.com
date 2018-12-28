@@ -4,6 +4,10 @@
 
 {% block body_class %}referrals-commcare-page tucked-hero{% endblock %}
 
+{% block meta %}
+  <meta property="dimagi:referralUpdateUrl" content="{% url "update_referral_status" %}">
+{% endblock %}
+
 {% block head %}
 <script>
     window.friendbuy = window.friendbuy || [];
@@ -12,6 +16,10 @@
         b = f.createElement(r), y = f.getElementsByTagName(r)[0];b.async = 1;b.src = n;y.parentNode.insertBefore(b, y);
     })(document, 'script', '//djnf6e5yyirys.cloudfront.net/js/friendbuy.min.js');
 </script>
+{% endblock %}
+
+{% block js %}
+  <script type="text/javascript" src="{% static 'js/referrals.js' %}"></script>
 {% endblock %}
 
 {% block title %}{% blocktrans %}
@@ -31,6 +39,7 @@
              id="hero">
 
       <div class="content content-width-medium">
+        {% csrf_token %}
         <div class="friendbuy-widget friendbuy-dW7-pZh"></div>
         <script>
             window.friendbuy = window.friendbuy || [];
