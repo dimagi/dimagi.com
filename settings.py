@@ -211,3 +211,7 @@ AUDIT_AB_CLICKS = env.bool('AUDIT_AB_CLICKS', default=False)
 ANALYTICS_LOG_LEVEL = env.str('ANALYTICS_LOG_LEVEL', default='')
 ANALYTICS_ENABLED = env.bool('ANALYTICS_ENABLED', default=False)
 
+FRIENDBUY_ACCESS = env.str('FRIENDBUY_ACCESS', default='')
+FRIENDBUY_SECRET = env.str('FRIENDBUY_SECRET', default='')
+
+HUBSPOT_API_KEY = env.str('HUBSPOT_API_KEY', default='')
