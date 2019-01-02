@@ -87,4 +87,7 @@ urlpatterns = [
         template_name=get_robots(),
         content_type='text/plain'
     )),
+
+    url(r'^styleguide/', include('dimagi.styleguide.urls')),
+
 ] + redirect_urlpatterns + get_sitemap_patterns()

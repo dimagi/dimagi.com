@@ -1,0 +1,53 @@
+{% load dimagidotcom %}{% load capture_tags %}<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=no, shrink-to-fit=no, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <meta property="dimagi:baseUrl" content="{{ meta.baseUrl }}">
+
+    <meta property="dimagi:analytixConfig" content="{{ meta.analyticsConfig|JSON|META_STR }}">
+    <meta property="dimagi:analytix" content="{{ meta.analytics|JSON|META_STR }}">
+    <meta property="dimagi:analytixAB" content="{{ request.ab_test_meta|JSON|META_STR }}">
+
+    <meta property="dimagi:auditABClicks" content="{{ meta.auditABClicks|BOOL }}">
+
+    <meta property="dimagi:contactFormId" content="{% block contact_form_id %}160467c5-1ae9-401c-81f2-09334ce10b1a{% endblock %}">
+    <meta property="dimagi:demoFormId" content="{% block demo_form_id %}afb4d5a0-826f-4a56-8c21-552d4b6dafa3{% endblock %}">
+
+    <meta property="dimagi:isAmp" content="{{ request.is_amp|BOOL }}">
+    <meta property="dimagi:ampPageType" content="{{ request.amp_page_type }}">
+
+    {% if request.hide_drift %}
+      <meta property="dimagi:driftHide" content="true">
+    {% endif %}
+
+    {% capture as page_title silent %}
+      {% block title %}Dimagi Styleguide{% endblock %}
+    {% endcapture %}
+
+    <title>{{ page_title|escape|TRIM }}</title>
+
+    {% compress css inline %}
+    <link href="{% sass_src 'style/app.critical.scss' %}" rel="stylesheet" media="screen" type="text/css" />
+    <link href="{% sass_src 'style/app.standard.scss' %}" rel="stylesheet" media="screen" type="text/css" />
+    {% endcompress %}
+
+  </head>
+  <body class="{% block body_class %}{% endblock %}">
+    <main class="main-content position-relative" id="main-content" role="main">
+      <div id="top"></div>
+      {% include 'styleguide/partials/header.html' %}
+      {% block article %}
+        {% block hero %}<section class="hero" id="hero"></section>{% endblock hero %}
+        {% block content %}{% endblock %}
+      {% endblock article %}
+      {% include 'styleguide/partials/footer.html' %}
+    </main>
+
+    {% require_module 'app' %}
+    {% block js %}{% endblock %}
+  </body>
+</html>
