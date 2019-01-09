@@ -2,7 +2,7 @@
 {% load i18n %}
 {% load dimagidotcom %}
 
-{% block body_class %}toolkits-page tucked-hero{% endblock %}
+{% block body_class %}{{ toolkit.image }} tucked-hero{% endblock %}
 
 {% block title %}
   {{ toolkit.title }}
@@ -25,14 +25,10 @@
            id="hero">
     <div class="content align-left-at-medium align-center gap-top-large gap-top-small-at-medium gap-top-line-at-large">
       <h2 class="gap-vert-line">
-        {% blocktrans %}
-          {{ toolkit.title }}
-        {% endblocktrans %}
+        {{ toolkit.title }}
       </h2>
       <h1>
-        {% blocktrans %}
-          10+ years of experience in implementing digital solutions.
-        {% endblocktrans %}
+        {{ toolkit.tagline }}
       </h1>
       <a class="button button-accent-gray {% click_hero 'contact' %}" 
          href="#overview">
@@ -40,8 +36,8 @@
           Learn More
         {% endblocktrans %}
       </a>
-    </div> {# .content #}
-  </section>
+    </div>{# .content #}
+  </section>{# .hero #}
 {% endblock %}
 
 {% block content %}
@@ -52,7 +48,6 @@
     {% include 'sections/toolkits/download.html' %}
     {% include 'sections/toolkits/other_toolkits.html' %}
     {% include 'sections/toolkits/contact_us.html' %}
-
   </section>
 {% endblock %}
 

@@ -6,6 +6,31 @@
 .toolkits-page {
   @include make-bg(hero, '../../pages/toolkits/hero');
 }
+.business-development {
+  @include make-bg(hero, '../../pages/toolkits/business-development/hero');
+}
+.commcare-evidence-base {
+  @include make-bg(hero, '../../pages/toolkits/commcare-evidence-base/hero');
+}
+.commcare-managing-data {
+  @include make-bg(hero, '../../pages/toolkits/commcare-managing-data/hero');
+}
+.managing-devices-ebook {
+  @include make-bg(hero, '../../pages/toolkits/managing-devices-ebook/hero');
+}
+.maturity-model {
+  @include make-bg(hero, '../../pages/toolkits/maturity-model/hero');
+}
+.total-cost-ownership {
+  @include make-bg(hero, '../../pages/toolkits/total-cost-ownership/hero');
+}
+.overview .image.highlights {
+  @include background-cover('../../pages/toolkits/highlights/highlights.jpg');
+}
+
+.max-width-initial {
+  max-width: initial;
+}
 
 .toolkit-tile {
   position: relative;
@@ -18,9 +43,45 @@
   }
 }
 
+.hubspot-summary-download .hs-form-field {
+  display: inline-block;
+  vertical-align: top;
+  width: calc(100% + 20px) !important;
+
+  label,
+  legend {
+    display: none;
+  }
+}
+
+.hubspot-summary-download .hs-submit {
+  display: inline-block;
+  vertical-align: top;
+}
+
 .request-demo-form {
   label {
     text-align: left;
+    color: $color-white;
+  }
+  input[type="submit"] {
+    background-color: $color-white !important;
+    color: $color-text !important;
+  }
+  input[type="submit"]:hover {
+    background-color: $color-white !important;
+    color: $color-text !important;
+  }
+  .hs-richtext {
+    color: $color-white;
+    a {
+      color: $color-white !important;
+
+      &:hover {
+        color: $color-white;
+        text-decoration: underline;
+      }
+    }
   }
 }
 
@@ -29,6 +90,18 @@
     margin-left: 0;
     margin-right: 0;
     max-width: 55%;
+  }
+
+  .toolkit-pad-left-small {
+    padding-left: 30px;
+  }
+
+  .toolkit-pad-right-small {
+    padding-right: 30px;
+  }
+
+  .toolkit-pad-left-large {
+    padding-left: 80px;
   }
 }
 

@@ -1,6 +1,12 @@
 {% load i18n %}
 {% load dimagidotcom %}
 
+{% block stylesheets %}
+  {% compress css %}
+    <link href="{% sass_src 'style/pages/toolkits.scss' %}" rel="stylesheet" media="screen" type="text/css" />
+  {% endcompress %}
+{% endblock %}
+
 <section class="overview align-center blue-theme accent-gray-bg" id="highlights">
   <div class="content pad-top-medium pad-bottom-small">
     <div class="intro gap-bottom-none">
@@ -18,9 +24,19 @@
     </p>
 
     <div class="grid-3-at-medium grid-row-space-small pad-top-line">
-      {% include "sections/case_management/overview/step_1.html" %}
-      {% include "sections/case_management/overview/step_2.html" %}
-      {% include "sections/case_management/overview/step_3.html" %}
-    </div>{# .grid-2-at-small #}
+      {% for highlights in toolkit.highlights %}
+        <div class="column toolkit-pad-left-small toolkit-pad-right-small">
+          <div class="aspect-ratio-square
+              gap-bottom-line
+              post-thumbnail
+              image {% block image %}highlights{% endblock %}"
+              data-lazybg="true">
+          </div>
+          <p>
+          {{ highlights.description }}
+          </p>
+        </div>{# .column #}
+      {% endfor %}
+    </div>
   </div>{# .content #}
-</section>
+</section>{# .overview #}
