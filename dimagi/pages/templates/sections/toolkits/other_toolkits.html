@@ -1,26 +1,50 @@
 {% load i18n %}
 {% load dimagidotcom %}
 
-<section class="overview align-center blue-theme accent-gray-bg" id="other_toolkits">
-  <div class="content pad-top-medium pad-bottom-small">
-    <div class="intro gap-bottom-none">
-      <h2>
+<section class="projects" id="other_toolkits">
+  <div class="content pad-top-medium pad-bottom-none">
+    <div class="intro gap-bottom-line max-width-initial">
+
+      <h3>
         {% blocktrans %}
           Other Toolkits offered by dimagi
         {% endblocktrans %}
-      </h2>
+      </h3>
+      <p class="content-width-medium">
+      {% blocktrans %}
+        Drawing from 10+ years of experience, Dimagi has developed several resources
+        to support users in implementing digital solutions. Download the toolkits below
+        to help you plan and implement your project.
+      {% endblocktrans %}
+      </P>
+    
     </div>{# .intro #}
 
-    <p class="content-width-medium">
-      {% blocktrans %}
-        A look at what's inside
-      {% endblocktrans %}
-    </p>
+    <div class="carousel carousel-fade-inactive pad-bottom-medium">
+      <div class="carousel-container">
+        <div class="spinner spinner-large"></div>
+        <div class="carousel-slider">
 
-    <div class="grid-3-at-medium grid-row-space-small pad-top-line">
-      {% include "sections/case_management/overview/step_1.html" %}
-      {% include "sections/case_management/overview/step_2.html" %}
-      {% include "sections/case_management/overview/step_3.html" %}
-    </div>{# .grid-2-at-small #}
+          {% for oToolkit in toolkit.other_toolkits%}
+            <div class="carousel-slide">
+              <div class="content-width-small align-center gap-horz-small">
+                <div class="theme-icon pad-top-small pad-bottom-small">
+                  {% include toolkit.icon %}
+                </div>
+                <h3 class="gap-bottom-base">
+                  {{ oToolkit.name }}
+                </h3>
+                <p class="align-center">
+                  {{ oToolkit.description }}
+                </p>
+                <a class="ab-body--toolkits--view-{{ oToolkit.view_url }}" href="{% url 'toolkit' oToolkit.view_url %}"> View Toolkit </a>
+              </div>
+            </div>{# .carousel-slide #}
+          {% endfor %}
+
+        </div>{# .carousel-slider #}
+      </div>{# .carousel-container #}
+    </div>{# .carousel #}
+
   </div>{# .content #}
-</section>
+</section>{# .projects #}

@@ -1,7 +1,6 @@
 {% load i18n %}
 {% load dimagidotcom %}
 
-
 <section class="overview" id="overview">
   <div class="content pad-vert-medium">
     <div class="grid-2-at-medium">
@@ -17,7 +16,7 @@
         </p>
         {% include toolkit.template %}
       </div>{# .column #}
-      <div class="column pad-vert-medium">
+      <div class="column pad-vert-medium toolkit-pad-left-large">
         <div class="tile align-center">
           <div class="theme-icon">
             {% include toolkit.icon %}
@@ -25,12 +24,12 @@
           <h3>
             Download {{ toolkit.title }}
           </h3>
-          <div id="hubspot-download-form-summary" class="hubspot-download"></div>
+          <div id="hubspot-download-form-summary" class="hubspot-summary-download"></div>
         </div>
       </div>{# .column #}
     </div>{# .grid-2-at-medium #}
   </div>{# .content #} 
-</section>
+</section>{# .overview #} 
 
 {% block js %}
   <!--[if lte IE 8]>
