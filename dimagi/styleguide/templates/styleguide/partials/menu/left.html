@@ -1,0 +1,24 @@
+<div class="hide-until-large display-flex flex-valign-middle">
+
+  <a class="menu-open-sibling"
+     href="{% url 'styleguide' %}">
+    Overview
+  </a>
+
+  <a class="menu-open"
+     data-drawer="menu-drawer"
+     href="#">
+      More
+  </a>
+
+</div>{# .hide-until-large #}
+
+<a class="menu-open hide-at-large"
+   data-drawer="menu-drawer"
+   href="#">
+    More
+</a>
+
+<a class="menu-link menu-close" href="#">
+  {% include 'svg/close.html' %}
+</a>

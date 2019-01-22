@@ -1,0 +1,75 @@
+{% load dimagidotcom %}
+
+<section class="flex-docs"
+         id="flex-docs">
+  <div class="content content-width-medium gap-vert-medium">
+    <h2>Flexible Grid</h2>
+    <p>
+      A flexible grid re-sizes the child item's width based on the size of the content
+      inside each <code>item</code>. <code>grid-flex</code> will maximize the amount of space each
+      column can take up. This is useful for "floating" images and icons
+      alongside text.
+    </p>
+    <pre class="gap-top-line"><code>grid-flex</code></pre>
+
+    <div class="grid-flex">
+      {% include 'styleguide/sections/grid/partials/flex_columns.html' %}
+    </div>{# .grid-flex #}
+
+    <h3 class="gap-top-small">no-shrink</h3>
+
+    <p>
+      If you have a content like the icon above that is reduces in width inside
+      a <code>grid-flex</code> <code>item</code>, you should apply the
+      <code>no-shrink</code> class to the <code>item</code>.
+    </p>
+
+    <h4>Without <code>no-shrink</code></h4>
+
+    <div class="grid-flex">
+      <div class="item theme-icon">
+        {% include 'svg/commcare/icon/messaging.html' %}
+      </div>{# .item #}
+      <div class="item">
+        <p>
+          Quisque sit amet turpis quis turpis congue volutpat quis in magna.
+          Suspendisse maximus massa dui, in iaculis ex vehicula in.
+          Integer sollicitudin, tortor id pretium
+          tristique, diam magna tempus velit, eget viverra leo elit id tellus.
+          Morbi porta suscipit vulputate. Aliquam vel rhoncus odio. Sed
+          eleifend vehicula metus non gravida.
+        </p>
+      </div>{# .item #}
+    </div>{# .grid-flex #}
+
+    <h4 class="pad-top-line">With <code>no-shrink</code></h4>
+
+    <div class="grid-flex">
+      <div class="item theme-icon no-shrink">
+        {% include 'svg/commcare/icon/messaging.html' %}
+      </div>{# .item #}
+      <div class="item">
+        <p>
+          Quisque sit amet turpis quis turpis congue volutpat quis in magna.
+          Suspendisse maximus massa dui, in iaculis ex vehicula in.
+          Integer sollicitudin, tortor id pretium
+          tristique, diam magna tempus velit, eget viverra leo elit id tellus.
+          Morbi porta suscipit vulputate. Aliquam vel rhoncus odio. Sed
+          eleifend vehicula metus non gravida.
+        </p>
+      </div>{# .item #}
+    </div>{# .grid-flex #}
+
+    <h3 class="gap-top-small">Responsive Flexible Grid</h3>
+
+    <p>
+      You can trigger content to be flexible based on screen size by using the
+      <code>-at-&lt;size&gt;</code> suffix. For instance if you want content to
+      only be flexible at <code>medium</code> screen sizes and higher, you would
+      use:
+    </p>
+
+    <pre>grid-flex-at-medium</pre>
+
+  </div>{# .content #}
+</section>

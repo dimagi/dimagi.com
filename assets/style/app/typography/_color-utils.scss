@@ -8,18 +8,6 @@
         color: $_color !important; // scss-lint:disable ImportantRule
       }
 
-      .theme-muted-color {
-        color: color-mute($_color) !important; // scss-lint:disable ImportantRule
-      }
-
-      .theme-ui-color {
-        color: $_color !important; // scss-lint:disable ImportantRule
-      }
-
-      .theme-text-color {
-        color: color-mute($_color) !important; // scss-lint:disable ImportantRule
-      }
-
       .theme-border {
         border-color: $_color !important; // scss-lint:disable ImportantRule
       }
@@ -36,28 +24,11 @@
         background-color: $_color !important; // scss-lint:disable ImportantRule
         color: $color-white !important; // scss-lint:disable ImportantRule
       }
-
-      .theme-muted-bg {
-        background-color: color-mute($_color) !important; // scss-lint:disable ImportantRule
-        color: $color-white !important; // scss-lint:disable ImportantRule
-      }
     }
 
     .#{$_name},
     .#{$_name}-color {
       color: $_color !important; // scss-lint:disable ImportantRule
-    }
-
-    .#{$_name}-muted {
-      color: color-mute($_color) !important; // scss-lint:disable ImportantRule
-    }
-
-    .#{$_name}-ui-color {
-      color: $_color !important; // scss-lint:disable ImportantRule
-    }
-
-    .#{$_name}-text-color {
-      color: $color-white !important; // scss-lint:disable ImportantRule
     }
 
     .#{$_name}-border {
@@ -84,10 +55,6 @@
 
     .#{$_name}-bg {
       background-color: $_color !important; // scss-lint:disable ImportantRule
-    }
-
-    .#{$_name}-muted-bg {
-      background-color: color-mute($_color) !important; // scss-lint:disable ImportantRule
     }
 
   }
@@ -125,13 +92,5 @@
 
   .white-bg {
     background-color: $color-white !important; // scss-lint:disable ImportantRule
-  }
-
-  .header-color-bg {
-    background-color: $color-header-bg !important; // scss-lint:disable ImportantRule
-  }
-
-  .body-color-bg {
-    background-color: $color-body-bg !important; // scss-lint:disable ImportantRule
   }
 }

@@ -1,0 +1,26 @@
+{% extends 'styleguide/_base.html' %}
+
+{% block title %}Spacing and Sizing{% endblock %}
+
+{% block hero %}
+  <div class="blue-theme">
+    <section class="hero" id="hero">
+      <div class="conent display-flex flex-valign-middle expand-vertical flex-align-center">
+        <h1>Sizes</h1>
+      </div>
+    </section>
+  </div>
+{% endblock %}
+
+{% block content %}
+  <section>
+
+    {% include "styleguide/sections/sizes/screen_widths.html" %}
+    {% include "styleguide/sections/sizes/content_widths.html" %}
+    {% include "styleguide/sections/sizes/spacing.html" %}
+    {% include "styleguide/sections/sizes/pad.html" %}
+    {% include "styleguide/sections/sizes/gap.html" %}
+    {% include "styleguide/sections/sizes/offset.html" %}
+
+  </section>
+{% endblock %}

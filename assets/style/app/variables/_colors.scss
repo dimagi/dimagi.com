@@ -1,59 +1,55 @@
-$color-bg:          #ffffff;
-$color-bg-html:     #161b1f;
-$color-text:        #5f6a7d;
+$color-bg:              #ffffff;
+$color-bg-html:         #161b1f;
+$color-text:            #5f6a7d;
 
-$color-slate:       $color-text;
-$color-slate-light: lighten($color-slate, 20);
+$color-white:           #ffffff;
+$color-black:           #000000;
 
-$color-white:         #ffffff;
-$color-black:         #000000;
+$color-slate:           $color-text;
+$color-slate-light:     lighten($color-slate, 20);
 
-$color-neutral:       #685c53;
-$color-neutral-light: #d6d6d4;
-$color-neutral-dark:  #373534;
+$color-neutral-dark:    #373534;
+$color-neutral:         #685c53;
+$color-neutral-light:   #d6d6d4;
 
-$color-blue:          #004ebc;
-$color-blue-light:    #bcdeff;
-$color-blue-dark:     #002c5f;
+$color-blue-dark:       #002c5f;
+$color-blue:            #004ebc;
+$color-blue-light:      #bcdeff;
 
+$color-purple-dark:     #5d3f82;
+$color-purple:          #9060c8;
+$color-purple-light:    #d6c5ea;
+
+$color-turquoise-dark:  #00799a;
 $color-turquoise:       #00bdc5;
 $color-turquoise-light: #ccf3f4;
-$color-turquoise-dark:  #00799a;
-$color-turquoise-muted: #ccf3f4;
+$color-turquoise-muted: $color-turquoise-light; // for color-utils only
 
-$color-purple:        #9060c8;
-$color-purple-light:  #d6c5ea;
-$color-purple-dark:   #5d3f82;
+$color-orange-dark:     #994f00;
+$color-orange:          #ff8400;
+$color-orange-light:    #ffe3c2;
 
-$color-orange:        #ff8400;
-$color-orange-light:  #ffe3c2;
-$color-orange-dark:   #994f00;
+$color-green-dark:      #216f00;
+$color-green:           #47b700;
+$color-green-light:     #d5eaca;
 
-$color-yellow:      #f9c700;
-$color-yellow-light:   #f8ecbd;
-$color-yellow-dark:  #685300;
+$color-red-dark:        #812627;
+$color-red:             #e53e30;
+$color-red-light:       #efcfcb;
 
-$color-green:       #47b700;
-$color-green-light:    #d5eaca;
-$color-green-dark:   #216f00;
+$color-code-text:       $color-blue-dark;
+$color-code-bg:         #f0f0f0;
 
-$color-red:         #e53e30;
-$color-red-light:      #efcfcb;
-$color-red-dark:     #812627;
-
-$color-code-text:   $color-blue-dark;
-$color-code-bg:     #f0f0f0;
-
-$color-header: $color-text;
+$color-header:          $color-text;
 $color-header-inverted: $color-white;
 
-$color-menu-text: #6c7980;
-$color-menu-bg: #1b2126;
-$color-menu-link: $color-white;
+$color-menu-text:       #6c7980;
+$color-menu-bg:         #1b2126;
+$color-menu-link:       $color-white;
 
-$color-swatch-default: #636466;
+$color-swatch-default:  #636466;
 
-$color-accent-gray: #fafafa;
+$color-accent-gray:     #fafafa;
 
 $color-tap-highlight: rgba(255, 255, 255, 0);
 $color-footer-text: $color-menu-text;
@@ -63,19 +59,25 @@ $colors-by-theme: (
   blue-dark: $color-blue-dark,
   blue: $color-blue,
   blue-light: $color-blue-light,
+  green-dark: $color-green-dark,
   green: $color-green,
   green-light: $color-green-light,
+  turquoise-dark: $color-turquoise-dark,
   turquoise: $color-turquoise,
   turquoise-light: $color-turquoise-light,
+  purple-dark: $color-purple-dark,
   purple: $color-purple,
   purple-light: $color-purple-light,
+  neutral-dark: $color-neutral-dark,
   neutral: $color-neutral,
   neutral-light: $color-neutral-light,
   accent-gray: $color-accent-gray,
+  orange-dark: $color-orange-dark,
   orange: $color-orange,
   orange-light: $color-orange-light,
   slate: $color-slate,
   slate-light: $color-slate-light,
+  red-dark: $color-red-dark,
   red: $color-red,
   red-light: $color-red-light,
 );
@@ -109,14 +111,6 @@ $color-error-input: $color-red;
 
 $color-error: $color-red;
 $color-validated: $color-green;
-
-
-@function color-mute($_color) {
-  @if $_color == $color-turquoise {
-    @return $color-turquoise-muted;
-  }
-  @return lighten($_color, 20);
-}
 
 @function color-hover($_color) {
   @return darken($_color, 20);

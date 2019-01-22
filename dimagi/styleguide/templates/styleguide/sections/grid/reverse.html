@@ -1,0 +1,25 @@
+{% load dimagidotcom %}
+
+<section class="reversed-grid"
+         id="reversed-grid">
+  <div class="content content-width-medium gap-vert-medium">
+    <h2>Grid Reverse</h2>
+    <p>
+      You can reverse the order of the original grid <code>column</code> / <code>item</code>
+      children with <code>grid-reverse</code>.
+    </p>
+
+    <h4 class="gap-top-small">Default State</h4>
+    <pre>grid-3</pre>
+    <div class="grid-3">
+      {% include 'styleguide/sections/grid/partials/column_example.html' %}
+    </div>{# .grid-4 #}
+
+    <h4 class="gap-top-small">Reverse State</h4>
+    <pre>grid-3 grid-reverse</pre>
+    <div class="grid-3 grid-reverse">
+      {% include 'styleguide/sections/grid/partials/column_example.html' %}
+    </div>{# .grid-4 #}
+
+  </div>{# .content #}
+</section>

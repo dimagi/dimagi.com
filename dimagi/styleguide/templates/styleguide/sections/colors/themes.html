@@ -1,0 +1,119 @@
+{% load dimagidotcom %}
+
+<section class="themes"
+         id="themes">
+  <div class="content content-width-medium gap-vert-medium">
+
+    <h2>Themes</h2>
+
+    <p>
+      You can apply a color theme to an element's class that will apply to all
+      of its children.
+
+    </p>
+
+    <p>
+      For instance, the <code>h1</code>, <code>h2</code>, <code>h3</code>
+      elements inside the <code>intro</code> parent will inherit the theme's colors
+      automatically. <strong>Very rarely</strong>, should the regular headings
+      (<code>h1</code>, <code>h2</code>, <code>h3</code>, <code>h4</code>, etc) outside
+      of <code>intro</code> get a color accent applied to it.
+    </p>
+
+    <div class="purple-theme">
+      <div class="intro">
+        <h1>Heading 1 - Intro</h1>
+        <h2>Heading 2 - Intro</h2>
+        <h3>Heading 3 - Intro</h3>
+        <p>Intro text</p>
+      </div>
+      <button>button</button>
+      <a class="tile" href="#">
+        <p>
+          This is a tile
+          <span class="link">
+            Tile link
+          </span>
+        </p>
+        <span class="button">
+          Tile Button
+        </span>
+      </a>
+    </div>
+
+    <h3 class="gap-top-small">Color Text</h3>
+
+    <p>
+      Use the <code>theme-color</code> class to color text based on the parent
+      theme.
+    </p>
+
+    <pre>&lt;div class="green-theme"&gt;
+  &lt;p&gt;
+    Add a &lt;span class="<strong>theme-color</strong>"&gt;color accent&lt;/span&gt;
+  &lt;/p&gt;
+&lt;/div&gt;</pre>
+
+    <div class="green-theme">
+      <p>
+        Add a <span class="theme-color">color accent</span>
+      </p>
+    </div>
+
+    <h3 class="gap-top-small">Border Color</h3>
+
+    <p>
+      Use the <code>theme-border</code> class to apply the theme color to the
+      border of an element that has an existing border.
+    </p>
+
+    <pre>&lt;div class="orange-theme"&gt;
+  &lt;p class="border-top <strong>theme-border</strong>"&gt;
+    Top border color
+  &lt;/p&gt;
+&lt;/div&gt;</pre>
+
+    <div class="orange-theme">
+      <p class="border-top theme-border">
+        Top border color
+      </p>
+    </div>
+
+    <h3 class="gap-top-small">Background Color</h3>
+
+    <p>
+      Use the <code>theme-bg</code> class to apply the theme color as the background
+      on a block element
+    </p>
+
+    <pre>&lt;div class="turquoise-theme"&gt;
+  &lt;div class="<strong>theme-bg</strong> pad-small"&gt;
+    Top border color
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+    <div class="turquoise-theme">
+      <div class="theme-bg pad-small"></div>
+    </div>
+
+    <h3 class="gap-top-small">Icon Color</h3>
+
+    <p>
+      Use the <code>theme-icon</code> to use the theme color as the background
+      on a block element
+    </p>
+
+    <pre>&lt;div class="turquoise-theme"&gt;
+  &lt;div class="<strong>theme-icon</strong>"&gt;
+    &lt;svg&gt;...&lt;/svg&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+    <div class="turquoise-theme">
+      <div class="theme-icon">
+        {% include 'svg/commcare/icon/data_over_time.html' %}
+      </div>
+    </div>
+
+  </div> {# .content #}
+</section>
