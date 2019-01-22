@@ -18,11 +18,24 @@
   }
 }
 
+.request-demo-form {
+  label {
+    text-align: left;
+  }
+}
+@media (min-width: $width-desktop) {
+  .toolkits-page .hero h1 {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 55%;
+  }
+}
+
 $_toolkit-tile-heights: (
   small: auto,
-  medium: 210px,
-  large: 250px,
-  extra-large: 210px,
+  medium: auto, // Because of SVG
+  large: auto, // Because of SVG
+  extra-large: 320px,
 );
 
 @each $_size, $_width in $widths-by-size {

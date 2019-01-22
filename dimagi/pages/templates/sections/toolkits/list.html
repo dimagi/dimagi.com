@@ -1,21 +1,29 @@
-  {% load i18n %}
+{% load i18n %}
 {% load dimagidotcom %}
 
 
 <section class="overview" id="overview">
   <div class="content pad-vert-medium">
-
-    <h3 class="gap-bottom-small">
-      {% blocktrans %}
-        Toolkits
-      {% endblocktrans %}
-    </h3>
+    <div class="intro content-width-medium gap-bottom-medium">
+      <h2>
+        {% blocktrans %}
+          Toolkits
+        {% endblocktrans %}
+      </h2>
+      <p>
+        {% blocktrans %}
+          Drawing from 10+ years of experience, Dimagi has developed several
+          resources to support users in implementing digital solutions.
+          Download the toolkits below to help you plan and implement your project.
+        {% endblocktrans %}
+      </p>
+    </div>{# .intro #}
 
     <div class="grid-3-at-large grid-2-at-medium grid-row-space-small grid-row-equal-heights">
       {% for toolkit in toolkits %}
-        <div class="column">
-          {% include "partials/toolkits_brief.html" with toolkit=toolkit %}
-        </div>
+      <div class="column">
+        {% include "partials/toolkits_brief.html" with toolkit=toolkit %}
+      </div>
       {% endfor %}
     </div>{# .grid-4-at-medium #}
 
