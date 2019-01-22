@@ -1,5 +1,19 @@
 {% extends 'styleguide/_base.html' %}
 
-{% block title %}{% endblock %}
+{% block title %}Styleguide Overview{% endblock %}
 
-{% block content %}{% endblock %}
+{% block hero %}
+  <div class="turquoise-dark-theme">
+    <section class="hero" id="hero">
+      <div class="conent display-flex flex-valign-middle expand-vertical flex-align-center">
+        <h1>Style Guide</h1>
+      </div>
+    </section>
+  </div>
+{% endblock %}
+
+{% block content %}
+  <section>
+    {% include "styleguide/sections/home/overview.html" %}
+  </section>
+{% endblock %}
