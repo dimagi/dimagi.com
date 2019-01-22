@@ -30,9 +30,10 @@
 
     <title>{{ page_title|escape|TRIM }}</title>
 
-    {% compress css inline %}
+    {% compress css %}
     <link href="{% sass_src 'style/app.critical.scss' %}" rel="stylesheet" media="screen" type="text/css" />
     <link href="{% sass_src 'style/app.standard.scss' %}" rel="stylesheet" media="screen" type="text/css" />
+    <link href="{% sass_src 'style/styleguide.scss' %}" rel="stylesheet" media="screen" type="text/css" />
     {% endcompress %}
 
   </head>

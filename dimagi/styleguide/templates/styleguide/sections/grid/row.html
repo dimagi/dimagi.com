@@ -1,0 +1,86 @@
+{% load dimagidotcom %}
+
+<section class="rows"
+         id="rows">
+  <div class="content content-width-medium gap-vert-medium">
+    <h2>Grid Space</h2>
+    <p>
+      You can specify how large the white space should be between the <code>grid</code>
+      <code>column</code> / <code>item</code> children with <code>grid-space</code>.
+    </p>
+
+    <p>
+      Use <code>grid-space-&lt;size&gt;</code> class where <code>&lt;size&gt;</code>
+      is one of <code>none</code>, <code>base</code>, <code>line</code>, <code>small</code>,
+      <code>medium</code>, <code>large</code>&mdash;as described in the
+      <a href="{% url 'styleguide_sizes' %}">sizes section</a>.
+    </p>
+
+    <p>
+      For instance, <code>grid-3 grid-space-medium</code> produces the following:
+    </p>
+    <div class="grid-3 grid-space-medium">
+      {% include "styleguide/sections/grid/partials/make_empty_columns.html" with num=6 %}
+    </div>
+
+    <h3 class="offset-top-large">Grid Row Spacing</h3>
+
+    <p>
+      You can set how large the white space should be between grid rows with the
+      <code>grid-row-space-&lt;size&gt;</code> class where <code>&lt;size&gt;</code>
+      is one of <code>none</code>, <code>base</code>, <code>line</code>, <code>small</code>,
+      <code>medium</code>, <code>large</code>&mdash;as described in the
+      <a href="{% url 'styleguide_sizes' %}">sizes section</a>.
+    </p>
+
+    <p>
+      For instance, <code>grid-3 grid-row-space-small</code> produces the following:
+    </p>
+    <div class="grid-3 grid-row-space-small">
+      {% include "styleguide/sections/grid/partials/make_empty_columns.html" with num=6 %}
+    </div>
+
+    <h3 class="offset-top-line">Grid Column Spacing</h3>
+
+    <p>
+      You can set how large the white space should be between grid columns with the
+      <code>grid-col-space-&lt;size&gt;</code> class where <code>&lt;size&gt;</code>
+      is one of <code>none</code>, <code>base</code>, <code>line</code>, <code>small</code>,
+      <code>medium</code>, <code>large</code>&mdash;as described in the
+      <a href="{% url 'styleguide_sizes' %}">sizes section</a>.
+    </p>
+
+    <p>
+      For instance, <code>grid-3 grid-col-space-none</code> produces the following:
+    </p>
+    <div class="grid-3 grid-col-space-none">
+      {% include "styleguide/sections/grid/partials/make_empty_columns.html" with num=6 %}
+    </div>
+
+    <h3 class="gap-top-small">Grid Gap</h3>
+
+    <p>
+      Just like any other element, you can add <code>gap-&lt;size&gt;</code>,
+      <code>gap-vert-&lt;size&gt;</code>, and <code>gap-bottom-&lt;size&gt;</code> to
+      the <code>grid-*</code> class&mdash; where<code>&lt;size&gt;</code>
+      is one of <code>none</code>, <code>base</code>, <code>line</code>, <code>small</code>,
+      <code>medium</code>, <code>large</code>&mdash;as described in the
+      <a href="{% url 'styleguide_sizes' %}">sizes section</a>. This adds a margin
+      of <code>gap-&lt;size&gt;</code> around the <strong>whole</strong> grid.
+    </p>
+
+    <pre>grid-3 gap-small</pre>
+    <div class="grid-3 gap-small">
+      {% include "styleguide/sections/grid/partials/make_empty_columns.html" with num=6 %}
+    </div>
+
+    <h3>Responsive Grid Spaces</h3>
+
+    <p>
+      You can add the suffix <code>-at-&lt;size&gt;</code> to any of the above
+      classes to apply that class at a particular
+      <a href="{% url 'styleguide_sizes' %}">screen size</a> (or larger).
+    </p>
+
+  </div>{# .content #}
+</section>

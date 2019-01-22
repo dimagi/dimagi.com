@@ -1,0 +1,27 @@
+{% extends 'styleguide/_base.html' %}
+
+{% block title %}Grids & Columns{% endblock %}
+
+{% block hero %}
+  <div class="blue-theme">
+    <section class="hero" id="hero">
+      <div class="conent display-flex flex-valign-middle expand-vertical flex-align-center">
+        <h1>Grids &amp; Columns</h1>
+      </div>
+    </section>
+  </div>
+{% endblock %}
+
+{% block content %}
+  <section>
+
+    {% include "styleguide/sections/grid/overview.html" %}
+    {% include "styleguide/sections/grid/row.html" %}
+    {% include "styleguide/sections/grid/align.html" %}
+    {% include "styleguide/sections/grid/reverse.html" %}
+    {% include "styleguide/sections/grid/equal_heights.html" %}
+    {% include "styleguide/sections/grid/flex.html" %}
+    {% include "styleguide/sections/grid/flex_align.html" %}
+
+  </section>
+{% endblock %}

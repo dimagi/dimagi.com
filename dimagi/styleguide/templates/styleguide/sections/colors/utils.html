@@ -1,0 +1,114 @@
+{% load dimagidotcom %}
+
+<section class="utils"
+         id="utils">
+  <div class="content content-width-medium gap-vert-medium">
+
+    <h2>Other Color Utils</h2>
+
+    <p>
+      There are a few utility classes for resetting colors to their base color, or
+      inverting colors.
+    </p>
+
+    <h3>Inverting Colors</h3>
+    <p>
+      You can invert a <code>theme-icon</code> so that it turns white on any
+      color background by wrapping <code>theme-icon</code> with the
+      <code>inverted</code> class.
+    </p>
+
+    <pre>&lt;div class="purple-theme <strong>inverted</strong>"&gt;
+  &lt;div class="theme-bg pad-small gap-bottom-small"&gt;
+    &lt;div class="theme-icon"&gt;&lt;svg&gt;...&lt;/svg&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+    <div class="purple-theme inverted">
+      <div class="theme-bg pad-small gap-bottom-small">
+        <div class="theme-icon">
+          {% include 'svg/commcare/icon/cloud_storage.html' %}
+        </div>
+      </div>
+    </div>
+
+    <h4>Inverted Buttons</h4>
+
+    <p>
+      For any button, add the <code>alt</code> class to show the inverted
+      (secondary) style of the button.
+    </p>
+
+    <pre>&lt;a href="#" class="button button-purple <strong>inverted</strong>"&gt;
+  A Button
+&lt;/a&gt;</pre>
+
+    <p>
+      <a href="#" class="button button-purple alt">A Button</a>
+    </p>
+
+    <p>
+      Or if you have a button on a color / dark background, the <code>alt inverted</code>
+      class combination will turn the button white.
+    </p>
+
+    <pre>&lt;p class="purple-bg pad-small"&gt;
+  &lt;a href="#" class="button <strong>alt inverted</strong>"&gt;
+    A Button
+  &lt;/a&gt;
+&lt;/p&gt;</pre>
+
+    <p class="purple-bg pad-small">
+      <a href="#" class="button alt inverted">A Button</a>
+    </p>
+
+    <h3>White Text</h3>
+    <p>
+      Use <code>white</code> to make text white (for instance if you have text
+      on a color background.
+    </p>
+
+    <pre>&lt;div class="tile purple-bg"&gt;&lt;p class="<strong>white</strong>"&gt;White Text&lt;/p&gt;&lt;/div&gt;</pre>
+    <div class="tile purple-bg"><p class="white">White Text</p></div>
+
+    <h3 class="pad-top-small">Body Color</h3>
+    <p>
+      Use <code>body-color</code> to make text the regular / default color.
+    </p>
+    <p>
+      Example: Due  to the css structure the body text inside the themed
+      <code>tile</code> is the theme color, so use <code>body-color</code>
+      to reset it.
+    </p>
+
+    <pre>&lt;div class="purple-theme"&gt;
+  &lt;a href="#" class="tile"&gt;
+    &lt;p class="<strong>body-color</strong>"&gt;Tile Text&lt;/p&gt;
+  &lt;/a&gt;
+&lt;/div&gt;</pre>
+    <div class="purple-theme">
+      <a href="#" class="tile">
+        <p class="body-color">Tile Text</p>
+      </a>
+    </div>
+
+    <h3 class="pad-top-small">Header Color</h3>
+    <p>
+      Use <code>header-color</code> to make text the default color
+      for headings.
+    </p>
+
+    <h3 class="pad-top-small">Link Gray Color</h3>
+    <p>
+      Use <code>link-gray</code> to make text the default color
+      for links. <a href="#" class="link-gray">example</a>.
+    </p>
+
+    <h3 class="pad-top-small">White Backgrounds</h3>
+    <p>
+      Use <code>white-bg</code> to make the background color of an element
+      white.
+    </p>
+
+  </div> {# .content #}
+</section>
+

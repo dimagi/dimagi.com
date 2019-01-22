@@ -1,0 +1,22 @@
+{% extends 'styleguide/_base.html' %}
+
+{% block title %}Colors & Themes{% endblock %}
+
+{% block hero %}
+  <div class="blue-theme">
+    <section class="hero" id="hero">
+      <div class="conent display-flex flex-valign-middle expand-vertical flex-align-center">
+        <h1>Colors &amp; Themes</h1>
+      </div>
+    </section>
+  </div>
+{% endblock %}
+
+{% block content %}
+  <section>
+    {% include 'styleguide/sections/colors/base.html' %}
+    {% include 'styleguide/sections/colors/themes.html' %}
+    {% include 'styleguide/sections/colors/accents.html' %}
+    {% include 'styleguide/sections/colors/utils.html' %}
+  </section>
+{% endblock %}
