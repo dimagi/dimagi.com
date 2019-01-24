@@ -59,7 +59,7 @@ TOOLKIT.add_other_toolkits([
         name=ugettext_lazy(
             "The CommCare Evidence Base"
         ),
-        icon="svg/case_management/broken_link.html",
+        icon="svg/tookits/icons/commcare_evidence_base.html",
         description=ugettext_lazy("""
 Over 50 studies have assessed CommCare's impact, making it the most
 evidence-based mobile platform for frontline workers in low-resource
@@ -71,7 +71,7 @@ settings.
         name=ugettext_lazy(
             "Managing Data in CommCare"
         ),
-        icon="svg/case_management/broken_link.html",
+        icon="svg/tookits/icons/managingdata_commcare.html",
         description=ugettext_lazy("""
 A starter guide to inspecting, cleaning and exporting data in
 CommCare.
@@ -82,7 +82,7 @@ CommCare.
         name=ugettext_lazy(
             "Managing Devices at Scale"
         ),
-        icon="svg/case_management/broken_link.html",
+        icon="svg/tookits/icons/managingdevices_scale.html",
         description=ugettext_lazy("""
 Key learnings from managing thousands of devices in a
 large-scale mobile health project.
@@ -93,7 +93,7 @@ large-scale mobile health project.
         name=ugettext_lazy(
             "The Maturity Model"
         ),
-        icon="svg/case_management/broken_link.html",
+        icon="svg/tookits/icons/maturity_model.html",
         description=ugettext_lazy("""
 Use the Maturity Model to establish a long-term
 vision for building and scaling your mobile system.
@@ -104,7 +104,7 @@ vision for building and scaling your mobile system.
         name=ugettext_lazy(
             "Total Cost of Ownership Model"
         ),
-        icon="svg/case_management/broken_link.html",
+        icon="svg/tookits/icons/total_cost_ownership_model.html",
         description=ugettext_lazy("""
 Use the Total Cost of Ownership Model to budget for your
 mobile solution.

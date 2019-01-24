@@ -16,16 +16,18 @@
         </p>
         {% include toolkit.template %}
       </div>{# .column #}
-      <div class="column pad-vert-medium toolkit-pad-left-large">
-        <div class="tile align-center">
+      <div class="column toolkit-pad-left-large">
+        <a class="tile align-center">
           <div class="theme-icon">
             {% include toolkit.icon %}
           </div>
-          <h3>
+          <h4>
             Download {{ toolkit.title }}
-          </h3>
-          <div id="hubspot-download-form-summary" class="hubspot-summary-download"></div>
-        </div>
+          </h4>
+          <div class="body-color">
+            <div id="hubspot-download-form-summary" class="hubspot-summary-download"></div>
+          </div>
+        </a>
       </div>{# .column #}
     </div>{# .grid-2-at-medium #}
   </div>{# .content #} 

@@ -27,18 +27,22 @@
 
           {% for oToolkit in toolkit.other_toolkits%}
             <div class="carousel-slide">
-              <div class="content-width-small align-center gap-horz-small">
-                <div class="theme-icon pad-top-small pad-bottom-small">
-                  {% include toolkit.icon %}
+              <a class="tile toolkit-tile-ip theme-border content-width-small align-center gap-horz-small ab-body--toolkits--view-{{ oToolkit.view_url }}" href="{% url 'toolkit' oToolkit.view_url %}">
+                <div class="theme-icon">
+                  {% include oToolkit.icon %}
                 </div>
-                <h3 class="gap-bottom-base">
+                <h4 class="">
                   {{ oToolkit.name }}
-                </h3>
-                <p class="align-center">
+                </h4>
+                <p class="body-color">
                   {{ oToolkit.description }}
                 </p>
-                <a class="ab-body--toolkits--view-{{ oToolkit.view_url }}" href="{% url 'toolkit' oToolkit.view_url %}"> View Toolkit </a>
-              </div>
+                <p class="cta">
+                  <span class="link orange">
+                    {% trans "View Toolkit" %}
+                  </span>
+                </p>
+              </a>
             </div>{# .carousel-slide #}
           {% endfor %}
 
