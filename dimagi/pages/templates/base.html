@@ -10,13 +10,13 @@
 <!--[if gt IE 8]><!--><html lang="{{ LANGUAGE_CODE }}"><!--<![endif]-->
   <head>
     {% if not request.is_amp %}
-      {% if meta.tracking.GTM %}
+      {% if meta.analytics.GTM %}
         <!-- Google Tag Manager -->
         <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
         j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','{{ meta.tracking.GTM }}');</script>
+        })(window,document,'script','dataLayer','{{ meta.analytics.GTM }}');</script>
         <!-- End Google Tag Manager -->
       {% endif %}
     {% endif %}
@@ -26,9 +26,9 @@
     <meta name="format-detection" content="telephone=no">
     <meta property="dimagi:baseUrl" content="{{ meta.baseUrl }}">
 
-    <meta property="dimagi:trackingConfig" content="{{ meta.trackingConfig|JSON|META_STR }}">
-    <meta property="dimagi:tracking" content="{{ meta.tracking|JSON|META_STR }}">
-    <meta property="dimagi:trackingAB" content="{{ request.ab_test_meta|JSON|META_STR }}">
+    <meta property="dimagi:analytixConfig" content="{{ meta.analyticsConfig|JSON|META_STR }}">
+    <meta property="dimagi:analytix" content="{{ meta.analytics|JSON|META_STR }}">
+    <meta property="dimagi:analytixAB" content="{{ request.ab_test_meta|JSON|META_STR }}">
 
     <meta property="dimagi:auditABClicks" content="{{ meta.auditABClicks|BOOL }}">
 
@@ -43,15 +43,12 @@
     {% endif %}
 
     {% capture as page_title silent %}
-      {% block title %}Dimagi{% endblock %}
+      {% block title %}Dimagi | Technology for Social Impact{% endblock %}
     {% endcapture %}
 
     {% capture as page_description silent %}{% block description %}
       {% blocktrans %}
-        Dimagi builds technology solutions designed for impact. We on a mission
-        to improve the efficiency and quality of impact-driven work globally.
-        Our core product is CommCare - mobile data collection with the power
-        of case management.
+        Dimagi offers technology for social impact. Build a mobile data collection app to gather actionable data, while guiding your team to do their best work.
       {% endblocktrans %}
     {% endblock %}{% endcapture %}
 
@@ -116,16 +113,17 @@
       {% block ampscript %}
       {% endblock ampscript %}
     {% endif %}
+    {% block head %}{% endblock %}
   </head>
   <body class="{% block body_class %}{% endblock %}">
     {% if request.is_amp %}
-      {% if meta.tracking.GTM %}
+      {% if meta.analytics.GTM %}
         <!-- Google Tag Manager -->
         <amp-analytics type="googleanalytics" id="analytics1">
           <script type="application/json">
             {
             "vars": {
-                "account": "{{ meta.tracking.GTM }}"
+                "account": "{{ meta.analytics.GTM }}"
               },
               "triggers": {
                 "trackPageview": {
@@ -139,9 +137,9 @@
         <!-- End Google Tag Manager -->
       {% endif %}
     {% endif %}
-    {% if meta.tracking.GTM %}
+    {% if meta.analytics.GTM %}
       <!-- Google Tag Manager (noscript) -->
-      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ meta.tracking.GTM }}"
+      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ meta.analytics.GTM }}"
       height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <!-- End Google Tag Manager (noscript) -->
     {% endif %}

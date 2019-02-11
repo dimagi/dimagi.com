@@ -9,7 +9,7 @@ SECTOR = Sector(
         "Gender-based Violence"
     ),
     summary=ugettext_lazy(
-        "Learn how CommCare can help address gender-based violence issues."
+        "Learn how mobile data applications can help address gender-based violence issues."
     ),
     template="data/sectors/content/gender_based_violence.html",
     area=areas.DEVELOPMENT,

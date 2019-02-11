@@ -5,12 +5,11 @@ from dimagi.pages.models.toolkits import Toolkit
 
 TOOLKIT = Toolkit(
     title=ugettext_lazy(
-        "The CommCare Evidence Base"
+        "Mobile Data Collection Research | CommCare Evidence Base"
     ),
     tagline=ugettext_lazy(
-        "Over 50 studies have assessed CommCare's impact, making it the most "
-        "evidence-based mobile platform for frontline workers in low-resource "
-        "settings."
+        "The CommCare Evidence Base is a collection of mobile data collection research," 
+        "with 50+ studies evaluating the impact of mobile data collection in frontline programs."
     ),
     template="data/toolkits/summaries/commcare_evidence_base.html",
     slug="commcare-evidence-base",

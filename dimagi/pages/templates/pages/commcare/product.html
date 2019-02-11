@@ -3,12 +3,11 @@
 {% load dimagidotcom %}
 
 {% block title %}{% blocktrans %}
-  CommCare
+  CommCare by Dimagi | Data Collection App
 {% endblocktrans %}{% endblock %}
 
 {% block description %}{% blocktrans %}
-  The world's most powerful mobile data collection platform.
-  Powered by Dimagi.
+  Build a smarter data collection app that works offline and tracks data over time with CommCare, the world's most poweful mobile data collection platform. 
 {% endblocktrans %}{% endblock %}
 
 {% block body_class %}products-commcare-page tucked-hero{% endblock %}
@@ -36,15 +35,16 @@
   <section class="hero hero-products-commcare"
            data-lazybg="true"
            id="hero">
-    <div class="content offset-top-extra-large align-left-at-medium align-center">
+    <div class="content offset-top-extra-large align-center">
       <h2>
         {% include "svg/commcare/logo.html" %}
       </h2>
-      <h1>
+      <h1 class="align-center">
         {% blocktrans %}
-          The world's most powerful mobile data collection platform.
+          Build A Smarter Data Collection App.
         {% endblocktrans %}
       </h1>
+      <p>CommCare is the world's most powerful mobile data collection platform.</p>
       <a class="button button-accent-gray {% click_hero 'trial' %}"
          href="{{ URL_TRIAL }}">
         {% blocktrans %}

@@ -9,7 +9,7 @@ SECTOR = Sector(
         "Agricultural Cooperatives"
     ),
     summary=ugettext_lazy(
-        "CommCare's agriculture management applications provide real-time "
+        "Mobile data collection's agriculture management applications provide real-time "
         "visibility into key data."
     ),
     template="data/sectors/content/agricultural_cooperatives.html",

@@ -7,33 +7,15 @@
     <div class="intro gap-bottom-small">
       <h4>
         {% blocktrans %}
-          Try a FREE 30-day CommCare trial.
+          Ready to improve your mobile data collection?
         {% endblocktrans %}
       </h4>
     </div>{# .intro #}
-
-    <div class="grid-2">
-
-      <div class="column flex-align-right">
+      <div class=" column flex-align-center">
         <p>
           {% click_body 'trial-demo' as click_class %}
           {% include "partials/schedule_demo_button.html" with click_class=click_class button_class="button alt" %}
         </p>
       </div>{# .column #}
-
-      <div class="column flex-align-left">
-        <p>
-          <a class="button {% click_body 'trial-start' %}"
-             data-kmq-external="true"
-             data-kmq-name="Clicked Start Trial - Home CTA"
-             href="{{ URL_TRIAL }}">
-            {% blocktrans %}
-              Get started
-            {% endblocktrans %}
-          </a>
-        </p>
-      </div>{#  .column #}
-
-    </div>{# .grid-2 #}
   </div>{# .content #}
 </section>

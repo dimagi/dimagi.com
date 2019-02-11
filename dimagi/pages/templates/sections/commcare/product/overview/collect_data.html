@@ -5,14 +5,15 @@
   <div class="copy content-cell-padding-right">
     <h3>
       {% blocktrans %}
-        Collect better data with an app your workforce will love to use.
+        Collect better data with a data collection app your workforce will love to use.
       {% endblocktrans %}
     </h3>
     <p>
+      {% url 'case_management' as cm_url %}
       {% blocktrans %}
-        The key to securing cleaner data is offering your workforce a data collection tool
+        The key to securing cleaner data is offering your workforce a data collection app
         that guides them to do their best work. Make magic happen
-        behind-the-scenes with features like case management (our secret sauce)
+        behind-the-scenes with features like <a href="{{ cm_url }}">case management</a>
         that simplify their work.
       {% endblocktrans %}
     </p>
