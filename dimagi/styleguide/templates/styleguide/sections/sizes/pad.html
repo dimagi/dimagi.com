@@ -1,0 +1,87 @@
+{% load dimagidotcom %}
+
+<section class="padding"
+         id="padding">
+  <div class="content content-width-medium gap-vert-medium">
+
+    <h2>Pad</h2>
+
+    <p>
+      You can add padding to any element by specifying the following.
+    </p>
+
+
+    <div class="grid-2 gap-bottom-line">
+      <div class="column">
+        <pre><code>pad-&lt;type&gt;</code></pre>
+        <p>
+          This adds <code>padding</code> of <code>&lt;type&gt;</code> equally
+          to all sides of an element.
+        </p>
+      </div>{# .column #}
+      <div class="column">
+        <pre><code>pad-none
+pad-base
+pad-line
+pad-small
+pad-medium
+pad-large</code></pre>
+      </div>{# .column #}
+    </div>{# .grid-2 #}
+
+    <pre><code>pad-vert-&lt;type&gt;</code></pre>
+    <p>
+      This adds <code>padding</code> of <code>&lt;type&gt;</code>
+      (<code>none</code>, <code>base</code>, etc)
+      only to the <strong>top</strong> and <strong>bottom</strong> of an element.
+    </p>
+
+    <pre><code>pad-horiz-&lt;type&gt;</code></pre>
+    <p>
+      This adds <code>padding</code> of <code>&lt;type&gt;</code>
+      (<code>none</code>, <code>base</code>, etc)
+      only to the <strong>left</strong> and <strong>right</strong> of an element.
+    </p>
+
+    <pre><code>pad-&lt;position&gt;-&lt;type&gt;</code></pre>
+    <p>
+      This adds <code>padding</code> of <code>&lt;type&gt;</code>
+      (<code>none</code>, <code>base</code>, etc)
+      to the specified <code>&lt;position&gt;</code>
+      (<code>top</code>, <code>bottom</code>, <code>left</code>, <code>right</code>)
+      of an element.
+    </p>
+
+    <h3 class="gap-top-medium">Responsive Pad</h3>
+
+    <p>
+      You can change the padding on a given element based on the screen width
+      (<code>extra-small</code>, <code>small</code>, <code>medium</code>,
+      <code>large</code>, <code>extra-large</code>) by appending any of the
+      classes above with <code>-at-&lt;screen-width&gt;</code>
+    </p>
+
+    <p>
+      For instance if you wanted <code>pad-bottom-medium</code> to apply to an
+      element only at screen width sizes <code>medium</code> or wider, you would write
+      the class as <code>pad-bottom-medium-at-medium</code>.
+    </p>
+
+    <p>
+      If you wanted the <code>pad-top-base</code> to apply only on all small screen sizes (even
+      smaller than <code>extra-small</code>) and <code>pad-top-line</code> to apply on larger screen
+      sizes greater than <code>medium</code> and <code>pad-top-medium</code> to apply to the largest
+      screen size, you would specify an element's class as the following:
+    </p>
+    <pre><code>pad-top-base pad-top-line-at-medium pad-top-medium-at-extra-large</code></pre>
+
+    <p>
+      With these classes the top padding will be <code>base</code> until the
+      <code>medium</code> screen width. Then the padding will be <code>line</code>
+      from the <code>medium</code> screen width until the <code>extra-large</code> screen
+      width. Finally, the padding will be <code>medium</code> from <code>extra-large</code>
+      screens and larger.
+    </p>
+
+  </div> {# .content #}
+</section>

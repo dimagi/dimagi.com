@@ -9,12 +9,11 @@ def metas(request):
     _metas = {}
 
     _metas["baseUrl"] = get_static_url('')
-    _metas["tracking"] = setting('TRACKING')
+    _metas["analytics"] = setting('ANALYTICS')
     _metas["auditABClicks"] = setting('AUDIT_AB_CLICKS')
-    _metas["trackingConfig"] = {
-        'logLevel': setting('TRACKING_LOG_LEVEL', ''),
-        'enabled': setting('TRACKING_ENABLED', False),
-        'optimizeId': setting('GOOGLE_OPTIMIZE_ID', ''),
+    _metas["analyticsConfig"] = {
+        'logLevel': setting('ANALYTICS_LOG_LEVEL', ''),
+        'enabled': setting('ANALYTICS_ENABLED', False),
     }
 
     return {

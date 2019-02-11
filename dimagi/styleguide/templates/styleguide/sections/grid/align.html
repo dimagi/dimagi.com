@@ -1,0 +1,92 @@
+{% load dimagidotcom %}
+
+<section class="alignments"
+         id="alignments">
+  <div class="content content-width-medium gap-vert-medium">
+    <h2>Grid Alignment</h2>
+    <p>
+      You can specify the right-to-left alignment with <code>grid-align-&lt;type&gt;</code>
+      where <code>&lt;type&gt;</code> is <code>left</code>, <code>center</code>,
+      <code>right</code>, <code>justify</code>.
+    </p>
+
+    <h4 class="gap-top-small">Default State</h4>
+    <pre>grid-4</pre>
+    <div class="grid-4">
+      {% include 'styleguide/sections/grid/partials/column_example.html' %}
+    </div>{# .grid-4 #}
+
+    <h4 class="gap-top-small">Left Align</h4>
+    <pre>grid-4 grid-align-left</pre>
+    <div class="grid-4 grid-align-left">
+      {% include 'styleguide/sections/grid/partials/column_example.html' %}
+    </div>{# .grid-4 #}
+
+    <h4 class="gap-top-small">Right Align</h4>
+    <pre>grid-4 grid-align-right</pre>
+    <div class="grid-4 grid-align-right">
+      {% include 'styleguide/sections/grid/partials/column_example.html' %}
+    </div>{# .grid-4 #}
+
+
+    <h4 class="gap-top-small">Center Align</h4>
+    <pre>grid-4 grid-align-center</pre>
+    <div class="grid-4 grid-align-center">
+      {% include 'styleguide/sections/grid/partials/column_example.html' %}
+    </div>{# .grid-4 #}
+
+
+    <h4 class="gap-top-small">Justify</h4>
+    <pre>grid-4 grid-align-justify</pre>
+    <div class="grid-4 grid-align-justify">
+      {% include 'styleguide/sections/grid/partials/column_example.html' %}
+    </div>{# .grid-4 #}
+
+    <h3 class="gap-top-medium">Grid Vertical Alignment</h3>
+    <p>
+      You can specify the vertical alignment with <code>grid-valign-&lt;type&gt;</code>
+      where <code>&lt;type&gt;</code> is <code>top</code>, <code>middle</code>,
+      <code>bottom</code>, <code>justify</code>.
+    </p>
+
+    <h4 class="gap-top-small">Default State</h4>
+    <pre>grid-3</pre>
+    <div class="grid-3">
+      {% include 'styleguide/sections/grid/partials/column_example.html' %}
+    </div>{# .grid-4 #}
+
+    <h4 class="gap-top-small">Top Align</h4>
+    <pre>grid-3 grid-valign-top</pre>
+    <div class="grid-3 grid-valign-top">
+      {% include 'styleguide/sections/grid/partials/column_example.html' %}
+    </div>{# .grid-4 #}
+
+    <h4 class="gap-top-small">Middle Align</h4>
+    <pre>grid-3 grid-valign-middle</pre>
+    <div class="grid-3 grid-valign-middle">
+      {% include 'styleguide/sections/grid/partials/column_example.html' %}
+    </div>{# .grid-4 #}
+
+    <h4 class="gap-top-small">Bottom Align</h4>
+    <pre>grid-3 grid-valign-bottom</pre>
+    <div class="grid-3 grid-valign-bottom">
+      {% include 'styleguide/sections/grid/partials/column_example.html' %}
+    </div>{# .grid-4 #}
+
+    <h4 class="gap-top-small">Justify Align</h4>
+    <pre>grid-3 grid-valign-justify</pre>
+    <div class="grid-3 grid-valign-justify">
+      {% include 'styleguide/sections/grid/partials/column_example.html' %}
+    </div>{# .grid-4 #}
+
+
+    <h3 class="gap-top-small">Responsive Grid Alignment</h3>
+
+    <p>
+      You can add the suffix <code>-at-&lt;size&gt;</code> to any of the above
+      classes to apply that class at a particular
+      <a href="{% url 'styleguide_sizes' %}">screen size</a> (or larger).
+    </p>
+
+  </div>{# .content #}
+</section>

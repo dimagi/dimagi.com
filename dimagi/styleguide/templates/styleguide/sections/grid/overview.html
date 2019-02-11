@@ -1,0 +1,68 @@
+{% load dimagidotcom %}
+
+<section class="overview"
+         id="overview">
+  <div class="content content-width-medium gap-vert-medium">
+    <h2>Grid</h2>
+    <p>
+      The layout is based on a maximum of 6 grid columns. You can specify the
+      structure of a grid by wrapping
+      <code>&lt;div class="column"&gt;&lt;/div&gt;</code> elements with
+      <code>grid-*</code> where <code>*</code> is a number from 1 to 6.
+    </p>
+    <pre class="gap-top-line"><code>grid-1</code></pre>
+    <div class="grid-1">
+      {% include "styleguide/sections/grid/partials/make_empty_columns.html" with num=1 %}
+    </div>{# .grid-1 #}
+
+    <pre class="gap-top-line"><code>grid-2</code></pre>
+    <div class="grid-2">
+      {% include "styleguide/sections/grid/partials/make_empty_columns.html" with num=2 %}
+    </div>{# .grid-2 #}
+
+    <pre class="gap-top-line"><code>grid-3</code></pre>
+    <div class="grid-3">
+      {% include "styleguide/sections/grid/partials/make_empty_columns.html" with num=3 %}
+    </div>{# .grid-3 #}
+
+    <pre class="gap-top-line"><code>grid-4</code></pre>
+    <div class="grid-4">
+      {% include "styleguide/sections/grid/partials/make_empty_columns.html" with num=4 %}
+    </div>{# .grid-4 #}
+
+    <pre class="gap-top-line"><code>grid-5</code></pre>
+    <div class="grid-5">
+      {% include "styleguide/sections/grid/partials/make_empty_columns.html" with num=5 %}
+    </div>{# .grid-5 #}
+
+    <pre class="gap-top-line"><code>grid-6</code></pre>
+    <div class="grid-6">
+      {% include "styleguide/sections/grid/partials/make_empty_columns.html" with num=6 %}
+    </div>{# .grid-6 #}
+
+    <h3 class="gap-top-small">Responsive Grid</h3>
+    <p>
+      You can specify different grids based on a
+      <a href="{% url 'styleguide_sizes' %}">screen size</a> by using the
+      <code>-at-&lt;size&gt;</code> suffix.
+    </p>
+
+    <p>
+      For instance, if you wanted to have a 4 grid layout at large screen sizes
+      a 3 grid layout at medium screen sizes, a 2 grid layout at small screen sizes,
+      and everything else a grid size of 1, you would specify the following classes:
+    </p>
+
+    <pre>grid-1 gird-2-at-small grid-3-at-medium grid-4-at-large</pre>
+
+    <h3 class="gap-top-small"><code>column</code> vs <code>item</code></h3>
+
+    <p>
+      In the code you might see <code>column</code> and <code>item</code> used
+      as children of <code>grid-*</code> classes. Generally <code>item</code> is
+      used inside <code>grid-flex</code> and <code>column</code> inside
+      <code>grid-*</code>.
+    </p>
+
+  </div>{# .content #}
+</section>

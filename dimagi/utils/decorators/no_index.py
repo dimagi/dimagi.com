@@ -9,7 +9,6 @@ def no_index(view_func):
     @wraps(view_func)
     def _added_header(request, *args, **kwargs):
         response = view_func(request, *args, **kwargs)
-        if setting('NO_INDEX_ENABLED'):
-            response['X-Robots-Tag'] = 'noindex'
+        response['X-Robots-Tag'] = 'noindex'
         return response
     return _added_header

@@ -109,6 +109,11 @@ def HTTPS(value):
     return value
 
 
+@register.filter(name='times')
+def times(number):
+    return range(number)
+
+
 @register.tag
 def compress(parser, token):
     return original_compress(parser, token)

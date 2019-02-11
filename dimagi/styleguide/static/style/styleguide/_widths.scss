@@ -1,0 +1,8 @@
+@import 'app/variables/sizes';
+
+
+.fill-width {
+  background: $color-accent-gray;
+  height: $space-small;
+  width: 100%;
+}

@@ -6,4 +6,6 @@ from dimagi.pages.views.core import (
     case_management,
     test_404,
     test_500,
+    referral_commcare,
+    update_referral_status,
 )

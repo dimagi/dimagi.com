@@ -60,6 +60,9 @@ urlpatterns = [
     url(r'^case-management/$', pages.case_management,  name='case_management'),
     url(r'^test_500/$', pages.test_500),
     url(r'^test_404/$', pages.test_404),
+    url(r'^referral-commcare/$', pages.referral_commcare, name='referral_commcare'),
+    url(r'^referral/update/$', pages.update_referral_status,
+        name='update_referral_status'),
     url(r'^certified-partners/$', commcare.partners, name='partner_program'),
 
     url(r'^mobile-data-collection/$',
@@ -84,4 +87,7 @@ urlpatterns = [
         template_name=get_robots(),
         content_type='text/plain'
     )),
+
+    url(r'^styleguide/', include('dimagi.styleguide.urls')),
+
 ] + redirect_urlpatterns + get_sitemap_patterns()

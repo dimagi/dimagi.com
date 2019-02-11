@@ -1,0 +1,67 @@
+{% load dimagidotcom %}
+
+<section class="flex-alignments"
+         id="flex-alignments">
+  <div class="content content-width-medium gap-vert-medium">
+
+    <h2>
+      Flexible Grid Alignment
+    </h2>
+
+    <p>
+      Flexible grids can be aligned vertically or horizontally just like other
+      <code>grid-*</code> elements.
+    </p>
+
+    <p>
+      Horizontal flexible grid alignments will only be visible if none of the
+      elements allowed to flex allow for the possibility of <code>width: 100%</code>.
+    </p>
+
+    <h4>Align Left</h4>
+    <pre>grid-flex flex-align-left</pre>
+
+    <h4 class="gap-top-small">Align Right</h4>
+    <pre>grid-flex flex-align-right</pre>
+
+    <h4 class="gap-top-small">Align Center</h4>
+    <pre>grid-flex flex-align-center</pre>
+
+    <h4 class="gap-top-small">Align Justify</h4>
+    <pre>grid-flex flex-align-justify</pre>
+
+    <h3 class="gap-top-small">Vertical Alignment (Flexible)</h3>
+
+    <h4 class="gap-top-small">Default State</h4>
+    <pre>grid-flex</pre>
+    <div class="grid-flex flex-valign-top">
+      {% include 'styleguide/sections/grid/partials/flex_columns.html' %}
+    </div>{# .grid-flex #}
+
+    <h4 class="gap-top-small">Align Top</h4>
+    <pre>grid-flex flex-valign-top</pre>
+    <div class="grid-flex flex-valign-top">
+      {% include 'styleguide/sections/grid/partials/flex_columns.html' %}
+    </div>{# .grid-flex #}
+
+    <h4 class="gap-top-small">Align Middle</h4>
+    <pre>grid-flex flex-valign-middle</pre>
+    <div class="grid-flex flex-valign-middle">
+      {% include 'styleguide/sections/grid/partials/flex_columns.html' %}
+    </div>{# .grid-flex #}
+
+    <h4 class="gap-top-small">Align Bottom</h4>
+    <pre>grid-flex flex-valign-bottom</pre>
+    <div class="grid-flex flex-valign-bottom">
+      {% include 'styleguide/sections/grid/partials/flex_columns.html' %}
+    </div>{# .grid-flex #}
+
+    <h4 class="gap-top-small">Align Justify</h4>
+    <pre>grid-flex flex-valign-justify</pre>
+    <div class="grid-flex flex-valign-justify">
+      {% include 'styleguide/sections/grid/partials/flex_columns.html' %}
+    </div>{# .grid-flex #}
+
+
+  </div>{# .content #}
+</section>

@@ -158,9 +158,9 @@ define([
 
   return {
     initialize: function () {
-      self.config = $.parseJSON($("meta[property='dimagi:trackingConfig']").attr("content"));
-      self.apiIds = $.parseJSON($("meta[property='dimagi:tracking']").attr("content"));
-      self.abTests = $.parseJSON($("meta[property='dimagi:trackingAB']").attr("content"));
+      self.config = $.parseJSON($("meta[property='dimagi:analytixConfig']").attr("content"));
+      self.apiIds = $.parseJSON($("meta[property='dimagi:analytix']").attr("content"));
+      self.abTests = $.parseJSON($("meta[property='dimagi:analytixAB']").attr("content"));
     },
     getConfig: function (key) {
       return self.config[key];

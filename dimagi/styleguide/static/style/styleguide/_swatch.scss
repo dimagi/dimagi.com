@@ -1,0 +1,53 @@
+@import 'app/mixins/background';
+@import 'app/variables/colors';
+@import 'app/variables/sizes';
+@import 'app/variables/type';
+
+$_palette-square-size: 106px;
+
+
+.swatch {
+  padding: $space-base;
+
+  code {
+    white-space: nowrap;
+  }
+}
+
+.swatch-shade {
+  background-color: $color-text;
+  height: 20px;
+  width: 25px;
+}
+
+.swatch-body {
+  height: $_palette-square-size;
+  margin: 0 $space-base;
+  padding: 5px;
+  width: 100%;
+
+  > p {
+    line-height: 25px;
+    margin-bottom: $space-base;
+    position: relative;
+    text-align: right;
+
+    &.inverse {
+      color: $color-white;
+    }
+
+    .name {
+      font-weight: bold;
+    }
+
+    .description {
+      position: absolute;
+      bottom: 0;
+      right: 5px;
+    }
+
+    .swatch-shade {
+      margin-bottom: 5px;
+    }
+  }
+}
