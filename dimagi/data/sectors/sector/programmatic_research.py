@@ -9,7 +9,7 @@ SECTOR = Sector(
         "Programmatic Research"
     ),
     summary=ugettext_lazy(
-        "CommCare helps field-based studies increase efficiency, "
+        "Mobile data collection helps field-based studies increase efficiency, "
         "visibility, and scalability."
     ),
     template="data/sectors/content/programmatic_research.html",

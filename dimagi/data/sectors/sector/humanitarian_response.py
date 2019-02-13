@@ -10,7 +10,7 @@ SECTOR = Sector(
     ),
     summary=ugettext_lazy(
         "Quickly organize and share data during humanitarian crises with "
-        "the help of CommCare mobile apps."
+        "the help of mobile data collection apps."
     ),
     template="data/sectors/content/humanitarian_response.html",
     area=areas.DEVELOPMENT,
