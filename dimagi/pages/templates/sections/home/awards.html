@@ -3,15 +3,15 @@
 
 <section class="awards border-top blue-theme" id="awards">
   <div class="content pad-top-large-at-medium pad-bottom-small">
-    <div class="grid-2-at-medium grid-reverse">
+    <!-- <div class="grid-2-at-medium grid-reverse"> -->
 
       <div class="copy">
-        <div class="grid-1 grid-row-space-small gap-bottom-line">
+        <div class="grid-row-space-small gap-bottom-line">
 
-          <div class="column align-center align-left-at-small">
+          <div class="column align-center">
             <h2>
               {% blocktrans %}
-                How CommCare Stacks Up
+                Proven Mobile Data Collection Platform
               {% endblocktrans %}
             </h2>
             <p>
@@ -20,23 +20,23 @@
               {% endblocktrans %}
             </p>
           </div>{# .column #}
+          <div class="grid-2-at-medium grid-reverse">
+            {% click_body 'awards-first' as click_first %}
+            {% include 'sections/home/awards/kopernik.html' with click_class=click_first %}
 
-          {% click_body 'awards-first' as click_first %}
-          {% include 'sections/home/awards/kopernik.html' with click_class=click_first %}
+            {% click_body 'awards-second' as click_second %}
+            {% include 'sections/home/awards/johns_hopkins.html' with click_class=click_second %}
 
-          {% click_body 'awards-second' as click_second %}
-          {% include 'sections/home/awards/johns_hopkins.html' with click_class=click_second %}
+            {% click_body 'awards-third' as click_third %}
+            {% include 'sections/home/awards/australian_gov.html' with click_class=click_third %}
 
-          {% click_body 'awards-third' as click_third %}
-          {% include 'sections/home/awards/australian_gov.html' with click_class=click_third %}
-
-          {% click_body 'awards-fourth' as click_fourth %}
-          {% include 'sections/home/awards/studies.html' with click_class=click_fourth %}
-
+            {% click_body 'awards-fourth' as click_fourth %}
+            {% include 'sections/home/awards/studies.html' with click_class=click_fourth %}
+        </div>
         </div>{# .grid-flex #}
       </div>{# .copy #}
-    </div>{# .grid-2-at-medium #}
+    <!-- </div>{# .grid-2-at-medium #} -->
   </div>{# .content #}
- <div class="image off-grid white-lazy-bg"
-      data-lazybg="true"></div>{# .awards .image {} => home.scss #}
+ <!-- <div class="image off-grid white-lazy-bg"
+      data-lazybg="true"></div>{# .awards .image {} => home.scss #} -->
 </section>
