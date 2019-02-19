@@ -156,6 +156,10 @@
     margin-left: 0;
     margin-right: 0;
     max-width: 60%;
+
+    &.toolkit-tagline {
+      max-width: 80%;
+    }
   }
 
   .toolkit-pad-left-small {
