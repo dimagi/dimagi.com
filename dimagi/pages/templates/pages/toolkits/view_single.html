@@ -51,3 +51,41 @@
   </section>
 {% endblock %}
 
+{% block js %}
+  <!--[if lte IE 8]>
+    <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+  <![endif]-->
+  <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+  <script>
+
+    // Inline Download form.
+    hbspt.forms.create({
+      portalId: "503070",
+      formId: "{{ toolkit.hubspot_form }}",
+      target: "#hubspot-download-form",
+      css: "",
+      onFormSubmit: function () {
+        window.open('{{ toolkit.download_url }}', "_blank");
+      },
+    });
+
+    // Summary download form
+    hbspt.forms.create({
+      portalId: "503070",
+      formId: "{{ toolkit.hubspot_form }}",
+      target: "#hubspot-download-form-summary",
+      css: "",
+      onFormSubmit: function () {
+        window.open('{{ toolkit.download_url }}', "_blank");
+      },
+    });
+
+    // Contact Us Form
+    hbspt.forms.create({
+      portalId: "503070",
+      formId: "{{ toolkit.hubspot_formId }}",
+      target: "#hubspot-contact-us-form",
+      css: "",
+    });
+  </script>
+{% endblock %}

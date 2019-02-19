@@ -12,21 +12,3 @@
     <div id="hubspot-download-form" class="hubspot-download request-demo-form-ip"></div>
   </div>
 </section>
-
-{% block js %}
-  <!--[if lte IE 8]>
-    <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
-  <![endif]-->
-  <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
-  <script>
-    hbspt.forms.create({
-      portalId: "503070",
-      formId: "{{ toolkit.hubspot_form }}",
-      target: "#hubspot-download-form",
-      css: "",
-      onFormSubmit: function () {
-        window.open('{{ toolkit.download_url }}', "_blank");
-      },
-    });
-  </script>
-{% endblock %}
