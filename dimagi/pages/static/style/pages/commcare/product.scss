@@ -53,10 +53,12 @@
 }
 
 @media (min-width: $width-desktop) {
-  .products-commcare-page .hero h1 {
-    margin-left: 0;
-    margin-right: 0;
-    max-width: 55%;
+  .products-commcare-page .hero {
+    h1 {
+      margin-left: 0;
+      margin-right: 0;
+      max-width: 66%;
+    }
   }
 }
 
@@ -102,8 +104,13 @@
     }
   }
 
+  @media (min-width: $width-desktop-xl) {
+    .bg-loader {
+      border-top: 1px solid $color-border;
+    }
+  }
+
   .bg-loader {
     background-color: $color-accent-gray;
-    border-top: 1px solid $color-border;
   }
 }

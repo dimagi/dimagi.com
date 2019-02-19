@@ -3,21 +3,24 @@
 
 <section class="case-management accent-gray-bg border-top"
          id="case-management">
-  <div class="content content-width-medium pad-vert-medium-at-medium pad-top-medium pad-bottom-small">
+  <div class="content content-width-medium pad-bottom-medium pad-top-medium">
 
-    <div class="intro content-width-large">
+    <div class="intro content-width-large gap-bottom-line">
       <h2 class="normalcase">
         {% blocktrans %}
-          Collect Actionable Data, Amplify Your Impact
+          Collect Actionable Data,
+          Amplify Your Impact
         {% endblocktrans %}
       </h2>
       <p>
         {% url 'case_management' as cm_url %}
         {% blocktrans %}
-          CommCare’s suite of
-          <a href="{{ cm_url }}">case management</a> features help you
-          collect actionable data over time,<br class="hide-until-medium"/>
-          and faster than ever before.
+          Build a powerful data collection app with CommCare's suite of 
+          <a href="{{ cm_url }}">case management</a> features
+          <br class="hide-until-medium" />
+          that allow you to collect actionable data over time, and faster
+          than ever before.
+          <br class="hide-until-medium" />
           Learn how case management can extend your team’s impact today.
         {% endblocktrans %}
       </p>
