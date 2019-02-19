@@ -36,16 +36,18 @@
   <section class="hero hero-products-commcare"
            data-lazybg="true"
            id="hero">
-    <div class="content offset-top-extra-large align-center">
-      <h2>
+    <div class="content offset-top-small-at-medium align-left-at-medium align-center">
+      <h2 class="gap-top-small gap-top-none-at-medium">
         {% include "svg/commcare/logo.html" %}
       </h2>
-      <h1 class="align-center">
+      <h1>
         {% blocktrans %}
-          Build A Smarter Data Collection App.
+          Build A Smarter<br />
+          Data Collection App.
         {% endblocktrans %}
       </h1>
-      <p>CommCare is the world's most powerful mobile data collection platform.</p>
+      <p>CommCare is the world's most powerful<br />
+        mobile data collection platform.</p>
       <a class="button button-accent-gray {% click_hero 'trial' %}"
          href="{{ URL_TRIAL }}">
         {% blocktrans %}
