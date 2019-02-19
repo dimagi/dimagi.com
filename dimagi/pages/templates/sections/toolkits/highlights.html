@@ -28,9 +28,9 @@
         <div class="column toolkit-pad-left-small toolkit-pad-right-small">
           <div class="aspect-ratio-square
               gap-bottom-line
-              post-thumbnail
-              image {% block image %}highlights{% endblock %}"
-              data-lazybg="true">
+              post-thumbnail {% block image %}{{ highlights.highlight_image }}{% endblock %}"
+              data-lazybg="true"
+              >
           </div>
           <p>
           {{ highlights.description }}

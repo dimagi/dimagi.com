@@ -27,6 +27,7 @@ TOOLKIT.add_highlights([
         name=ugettext_lazy(
             "The CommCare Evidence Base"
         ),
+        highlight_image="total-cost-ownership-highlights-one",
         description=ugettext_lazy("""
 Map out the scale of your operation over time
 to project how your growth will impact your
@@ -37,6 +38,7 @@ data collection costs.
         name=ugettext_lazy(
             "Managing Data in CommCare"
         ),
+        highlight_image="total-cost-ownership-highlights-two",
         description=ugettext_lazy("""
 Consider whether your team will need
 traning and how that might impact your
@@ -47,6 +49,7 @@ expenses.
         name=ugettext_lazy(
             "Managing Devices at Scale"
         ),
+        highlight_image="total-cost-ownership-highlights-three",
         description=ugettext_lazy("""
 Know your monthly operating costs
 such as your voice and data plan, as

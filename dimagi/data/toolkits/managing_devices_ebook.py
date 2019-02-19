@@ -27,6 +27,7 @@ TOOLKIT.add_highlights([
         name=ugettext_lazy(
             "The CommCare Evidence Base"
         ),
+        highlight_image="managing-devices-ebook-highlights-one",
         description=ugettext_lazy("""
 Aligning responsibilities across
 stakeholders is key while rolling out a
@@ -37,6 +38,7 @@ mobile project at scale.
         name=ugettext_lazy(
             "Managing Data in CommCare"
         ),
+        highlight_image="managing-devices-ebook-highlights-two",
         description=ugettext_lazy("""
 Know what details you should
 include in your explanation guide
@@ -47,6 +49,7 @@ for your device.
         name=ugettext_lazy(
             "Managing Devices at Scale"
         ),
+        highlight_image="managing-devices-ebook-highlights-three",
         description=ugettext_lazy("""
 When should you set up a call center
 or help desk for support? Our team

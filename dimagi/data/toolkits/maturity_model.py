@@ -27,6 +27,7 @@ TOOLKIT.add_highlights([
         name=ugettext_lazy(
             "The CommCare Evidence Base"
         ),
+        highlight_image="maturity-model-highlights-one",
         description=ugettext_lazy("""
 Take a 30-minute assessment to see
 what stage of maturity your project is
@@ -37,6 +38,7 @@ at across six program areas.
         name=ugettext_lazy(
             "Managing Data in CommCare"
         ),
+        highlight_image="maturity-model-highlights-two",
         description=ugettext_lazy("""
 Identify opportunities for growth so
 that you can manage your time and
@@ -47,6 +49,7 @@ palnning accordingly.
         name=ugettext_lazy(
             "Managing Devices at Scale"
         ),
+        highlight_image="maturity-model-highlights-three",
         description=ugettext_lazy("""
 Set a long-term plan for your project and
 how you will manage your mobile solution

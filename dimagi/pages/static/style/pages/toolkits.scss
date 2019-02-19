@@ -27,6 +27,66 @@
 .overview .image.highlights {
   @include background-cover('../../pages/toolkits/highlights/highlights.jpg');
 }
+// images of highlights for business-development-highlights 
+.business-development-highlights-one {
+  @include background-cover('../../pages/toolkits/highlights/business-development/business-development-highlights-one.jpg');
+}
+.business-development-highlights-two {
+  @include background-cover('../../pages/toolkits/highlights/business-development/business-development-highlights-two.jpg');
+}
+.business-development-highlights-three {
+  @include background-cover('../../pages/toolkits/highlights/business-development/business-development-highlights-three.jpg');
+}
+// images of highlights for commcare-evidence-base-highlights
+.commcare-evidence-base-highlights-one {
+  @include background-cover('../../pages/toolkits/highlights/commcare-evidence-base/commcare-evidence-base-highlights-one.jpg');
+}
+.commcare-evidence-base-highlights-two {
+  @include background-cover('../../pages/toolkits/highlights/commcare-evidence-base/commcare-evidence-base-highlights-two.jpg');
+}
+.commcare-evidence-base-highlights-three {
+  @include background-cover('../../pages/toolkits/highlights/commcare-evidence-base/commcare-evidence-base-highlights-three.jpg');
+}
+// images of highlights for commcare-managing-data-highlights
+.commcare-managing-data-highlights-one {
+  @include background-cover('../../pages/toolkits/highlights/commcare-evidence-base/commcare-evidence-base-highlights-one.jpg');
+}
+.commcare-managing-data-highlights-two {
+  @include background-cover('../../pages/toolkits/highlights/commcare-evidence-base/commcare-evidence-base-highlights-two.jpg');
+}
+.commcare-managing-data-highlights-three {
+  @include background-cover('../../pages/toolkits/highlights/commcare-evidence-base/commcare-evidence-base-highlights-three.jpg');
+}
+// images of highlights for managing-devices-ebook-highlights
+.managing-devices-ebook-highlights-one {
+  @include background-cover('../../pages/toolkits/highlights/managing-devices-ebook/managing-devices-ebook-highlights-one.jpg');
+}
+.managing-devices-ebook-highlights-two {
+  @include background-cover('../../pages/toolkits/highlights/managing-devices-ebook/managing-devices-ebook-highlights-two.jpg');
+}
+.managing-devices-ebook-highlights-three {
+  @include background-cover('../../pages/toolkits/highlights/managing-devices-ebook/managing-devices-ebook-highlights-three.jpg');
+}
+// images of highlights for maturity-model-highlights
+.maturity-model-highlights-one {
+  @include background-cover('../../pages/toolkits/highlights/maturity-model/maturity-model-highlights-one.jpg');
+}
+.maturity-model-highlights-two {
+  @include background-cover('../../pages/toolkits/highlights/maturity-model/maturity-model-highlights-two.jpg');
+}
+.maturity-model-highlights-three {
+  @include background-cover('../../pages/toolkits/highlights/maturity-model/maturity-model-highlights-three.jpg');
+}
+// images of highlights for total-cost-ownership-highlights
+.total-cost-ownership-highlights-one {
+  @include background-cover('../../pages/toolkits/highlights/total-cost-ownership/total-cost-ownership-highlights-one.jpg');
+}
+.total-cost-ownership-highlights-two {
+  @include background-cover('../../pages/toolkits/highlights/total-cost-ownership/total-cost-ownership-highlights-two.jpg');
+}
+.total-cost-ownership-highlights-three {
+  @include background-cover('../../pages/toolkits/highlights/total-cost-ownership/total-cost-ownership-highlights-three.jpg');
+}
 
 .max-width-initial {
   max-width: initial;

@@ -27,6 +27,7 @@ TOOLKIT.add_highlights([
         name=ugettext_lazy(
             "The CommCare Evidence Base"
         ),
+        highlight_image="commcare-evidence-base-highlights-one",
         description=ugettext_lazy("""
 Building a business development team at
 a social enterprise? Using this guide to
@@ -37,6 +38,7 @@ jumpstart your planning.
         name=ugettext_lazy(
             "Managing Data in CommCare"
         ),
+        highlight_image="commcare-evidence-base-highlights-two",
         description=ugettext_lazy("""
 Learn how to project your revenue
 and opportunities with the help of
@@ -47,6 +49,7 @@ this guide.
         name=ugettext_lazy(
             "Managing Devices at Scale"
         ),
+        highlight_image="commcare-evidence-base-highlights-three",
         description=ugettext_lazy("""
 Understand how your win-rat, total
 expected value, and other key factors

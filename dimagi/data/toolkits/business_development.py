@@ -30,6 +30,7 @@ Building a business development team
 at a social enterprise? Use this guide to
 jumpstartyour planning.
         """),
+        highlight_image="business-development-highlights-one",
     ),
     Highlight(
         name=ugettext_lazy(
@@ -40,6 +41,7 @@ Learn how to project your revenue
 and opportunities with the help of
 this guide.
         """),
+        highlight_image="business-development-highlights-two",
     ),
     Highlight(
         name=ugettext_lazy(
@@ -50,6 +52,7 @@ Understand how your win-rat, total
 expected value, and other key factors
 impact estimations.
         """),
+        highlight_image="business-development-highlights-three",
     ),  
 ])
 

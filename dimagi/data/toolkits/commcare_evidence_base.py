@@ -28,6 +28,7 @@ TOOLKIT.add_highlights([
         name=ugettext_lazy(
             "The CommCare Evidence Base"
         ),
+        highlight_image="commcare-evidence-base-highlights-one",
         description=ugettext_lazy("""
 An RCT in South Africa found that
 FLWs using CommCare for
@@ -39,6 +40,7 @@ took 75% less time...
         name=ugettext_lazy(
             "Managing Data in CommCare"
         ),
+        highlight_image="commcare-evidence-base-highlights-two",
         description=ugettext_lazy("""
 In a study with Pathfinder
 international, the use of CommCare
@@ -50,6 +52,7 @@ tests from 67.5% to 82.2%.
         name=ugettext_lazy(
             "Managing Devices at Scale"
         ),
+        highlight_image="commcare-evidence-base-highlights-three",
         description=ugettext_lazy("""
 After incorprating performance feedback,
 frontline workers in one study made

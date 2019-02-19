@@ -36,9 +36,11 @@ class Highlight(object):
     issues.
     """
 
-    def __init__(self, name=None, description=None):
+    def __init__(self, name=None, description=None, highlight_image=None):
         self.name = name
         self.description = description
+        self.highlight_image = highlight_image
+        print(highlight_image, name)
 
 
 class OtherToolkit(object):
