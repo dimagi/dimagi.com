@@ -1,0 +1,54 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="projects" id="other_toolkits">
+  <div class="content pad-top-medium pad-bottom-none">
+    <div class="intro gap-bottom-line max-width-initial">
+
+      <h3>
+        {% blocktrans %}
+          Other Toolkits offered by dimagi
+        {% endblocktrans %}
+      </h3>
+      <p class="content-width-medium">
+      {% blocktrans %}
+        Drawing from 10+ years of experience, Dimagi has developed several resources
+        to support users in implementing digital solutions. Download the toolkits below
+        to help you plan and implement your project.
+      {% endblocktrans %}
+      </P>
+    
+    </div>{# .intro #}
+
+    <div class="carousel carousel-fade-inactive pad-bottom-medium">
+      <div class="carousel-container">
+        <div class="spinner spinner-large"></div>
+        <div class="carousel-slider">
+
+          {% for oToolkit in toolkit.other_toolkits%}
+            <div class="carousel-slide">
+              <a class="tile toolkit-tile-ip theme-border content-width-small align-center gap-horz-small ab-body--toolkits--view-{{ oToolkit.view_url }}" href="{% url 'toolkit' oToolkit.view_url %}">
+                <div class="theme-icon">
+                  {% include oToolkit.icon %}
+                </div>
+                <h4 class="">
+                  {{ oToolkit.name }}
+                </h4>
+                <p class="body-color">
+                  {{ oToolkit.description }}
+                </p>
+                <p class="cta">
+                  <span class="link orange">
+                    {% trans "View Toolkit" %}
+                  </span>
+                </p>
+              </a>
+            </div>{# .carousel-slide #}
+          {% endfor %}
+
+        </div>{# .carousel-slider #}
+      </div>{# .carousel-container #}
+    </div>{# .carousel #}
+
+  </div>{# .content #}
+</section>{# .projects #}

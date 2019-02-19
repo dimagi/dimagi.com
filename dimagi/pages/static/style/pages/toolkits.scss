@@ -6,8 +6,93 @@
 .toolkits-page {
   @include make-bg(hero, '../../pages/toolkits/hero');
 }
+.business-development {
+  @include make-bg(hero, '../../pages/toolkits/business-development/hero');
+}
+.commcare-evidence-base {
+  @include make-bg(hero, '../../pages/toolkits/commcare-evidence-base/hero');
+}
+.commcare-managing-data {
+  @include make-bg(hero, '../../pages/toolkits/commcare-managing-data/hero');
+}
+.managing-devices-ebook {
+  @include make-bg(hero, '../../pages/toolkits/managing-devices-ebook/hero');
+}
+.maturity-model {
+  @include make-bg(hero, '../../pages/toolkits/maturity-model/hero');
+}
+.total-cost-ownership {
+  @include make-bg(hero, '../../pages/toolkits/total-cost-ownership/hero');
+}
+.overview .image.highlights {
+  @include background-cover('../../pages/toolkits/highlights/highlights.jpg');
+}
+// images of highlights for business-development-highlights 
+.business-development-highlights-one {
+  @include background-cover('../../pages/toolkits/highlights/business-development/business-development-highlights-one.jpg');
+}
+.business-development-highlights-two {
+  @include background-cover('../../pages/toolkits/highlights/business-development/business-development-highlights-two.jpg');
+}
+.business-development-highlights-three {
+  @include background-cover('../../pages/toolkits/highlights/business-development/business-development-highlights-three.jpg');
+}
+// images of highlights for commcare-evidence-base-highlights
+.commcare-evidence-base-highlights-one {
+  @include background-cover('../../pages/toolkits/highlights/commcare-evidence-base/commcare-evidence-base-highlights-one.jpg');
+}
+.commcare-evidence-base-highlights-two {
+  @include background-cover('../../pages/toolkits/highlights/commcare-evidence-base/commcare-evidence-base-highlights-two.jpg');
+}
+.commcare-evidence-base-highlights-three {
+  @include background-cover('../../pages/toolkits/highlights/commcare-evidence-base/commcare-evidence-base-highlights-three.jpg');
+}
+// images of highlights for commcare-managing-data-highlights
+.commcare-managing-data-highlights-one {
+  @include background-cover('../../pages/toolkits/highlights/commcare-evidence-base/commcare-evidence-base-highlights-one.jpg');
+}
+.commcare-managing-data-highlights-two {
+  @include background-cover('../../pages/toolkits/highlights/commcare-evidence-base/commcare-evidence-base-highlights-two.jpg');
+}
+.commcare-managing-data-highlights-three {
+  @include background-cover('../../pages/toolkits/highlights/commcare-evidence-base/commcare-evidence-base-highlights-three.jpg');
+}
+// images of highlights for managing-devices-ebook-highlights
+.managing-devices-ebook-highlights-one {
+  @include background-cover('../../pages/toolkits/highlights/managing-devices-ebook/managing-devices-ebook-highlights-one.jpg');
+}
+.managing-devices-ebook-highlights-two {
+  @include background-cover('../../pages/toolkits/highlights/managing-devices-ebook/managing-devices-ebook-highlights-two.jpg');
+}
+.managing-devices-ebook-highlights-three {
+  @include background-cover('../../pages/toolkits/highlights/managing-devices-ebook/managing-devices-ebook-highlights-three.jpg');
+}
+// images of highlights for maturity-model-highlights
+.maturity-model-highlights-one {
+  @include background-cover('../../pages/toolkits/highlights/maturity-model/maturity-model-highlights-one.jpg');
+}
+.maturity-model-highlights-two {
+  @include background-cover('../../pages/toolkits/highlights/maturity-model/maturity-model-highlights-two.jpg');
+}
+.maturity-model-highlights-three {
+  @include background-cover('../../pages/toolkits/highlights/maturity-model/maturity-model-highlights-three.jpg');
+}
+// images of highlights for total-cost-ownership-highlights
+.total-cost-ownership-highlights-one {
+  @include background-cover('../../pages/toolkits/highlights/total-cost-ownership/total-cost-ownership-highlights-one.jpg');
+}
+.total-cost-ownership-highlights-two {
+  @include background-cover('../../pages/toolkits/highlights/total-cost-ownership/total-cost-ownership-highlights-two.jpg');
+}
+.total-cost-ownership-highlights-three {
+  @include background-cover('../../pages/toolkits/highlights/total-cost-ownership/total-cost-ownership-highlights-three.jpg');
+}
 
-.toolkit-tile {
+.max-width-initial {
+  max-width: initial;
+}
+
+.toolkit-tile, .toolkit-tile-ip {
   position: relative;
 
   .cta {
@@ -18,16 +103,75 @@
   }
 }
 
-.request-demo-form {
+.hubspot-summary-download .hs-form-field {
+  display: inline-block;
+  vertical-align: top;
+  width: calc(100% + 20px) !important;
+
+  label,
+  legend {
+    display: none;
+  }
+}
+
+.hubspot-summary-download .hs-submit {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.request-demo-form-lp {
   label {
     text-align: left;
   }
 }
+
+.request-demo-form-ip {
+  label {
+    text-align: left;
+    color: $color-white;
+  }
+  input[type="submit"] {
+    box-shadow: inset 0 0 0 1px #fafafa;
+    background-color: transparent;
+  }
+  input[type="submit"]:hover {
+    box-shadow: inset 0 0 0 1px #c7c7c7;
+    background-color: rgba(255,255,255,0.3);
+  }
+  .hs-richtext {
+    color: $color-white;
+    a {
+      color: $color-white !important;
+
+      &:hover {
+        color: $color-white;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
 @media (min-width: $width-desktop) {
   .toolkits-page .hero h1 {
     margin-left: 0;
     margin-right: 0;
-    max-width: 55%;
+    max-width: 60%;
+
+    &.toolkit-tagline {
+      max-width: 80%;
+    }
+  }
+
+  .toolkit-pad-left-small {
+    padding-left: 30px;
+  }
+
+  .toolkit-pad-right-small {
+    padding-right: 30px;
+  }
+
+  .toolkit-pad-left-large {
+    padding-left: 80px;
   }
 }
 
@@ -38,10 +182,22 @@ $_toolkit-tile-heights: (
   extra-large: 320px,
 );
 
-@each $_size, $_width in $widths-by-size {
+$_toolkit-tile-ip-heights: (
+  small: 340px,
+  medium: 300px,
+  large: 340px,
+  extra-large: 340px,
+);
+
+
+@each $_size,
+$_width in $widths-by-size {
   @media (min-width: $_width) {
     .toolkit-tile {
       height: map-get($_toolkit-tile-heights, $_size);
+    }
+    .toolkit-tile-ip {
+      height: map-get($_toolkit-tile-ip-heights, $_size);
     }
   }
 }

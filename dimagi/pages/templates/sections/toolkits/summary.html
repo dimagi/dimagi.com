@@ -1,26 +1,34 @@
-  {% load i18n %}
+{% load i18n %}
 {% load dimagidotcom %}
 
-
 <section class="overview" id="overview">
-  <div class="content pad-vert-medium content-width-medium">
-    <h4 class="uppercase gap-bottom-base">
-      {% blocktrans %}
-        Toolkit
-      {% endblocktrans %}
-    </h4>
-    <h1 class="gap-bottom-base">
-      {{ toolkit.title }}
-    </h1>
-    <h4>
-      {{ toolkit.tagline }}
-    </h4>
-
-    <p>
-      {% include 'partials/social.html' with url=request.build_absolute_uri %}
-    </p>
-
-    {% include toolkit.template %}
-
-  </div>{# .content #}
-</section>
+  <div class="content pad-vert-medium">
+    <div class="grid-2-at-medium">
+      <div class="column">
+        <h1>
+          {{ toolkit.title }}
+        </h1>
+        <h4>
+          {{ toolkit.tagline }}
+        </h4>
+        <p>
+          {% include 'partials/social.html' with url=request.build_absolute_uri %}
+        </p>
+        {% include toolkit.template %}
+      </div>{# .column #}
+      <div class="column toolkit-pad-left-large">
+        <a class="tile align-center">
+          <div class="theme-icon gap-top-small">
+            {% include toolkit.icon %}
+          </div>
+          <h4>
+            Download {{ toolkit.title }}
+          </h4>
+          <div class="body-color">
+            <div id="hubspot-download-form-summary" class="hubspot-summary-download"></div>
+          </div>
+        </a>
+      </div>{# .column #}
+    </div>{# .grid-2-at-medium #}
+  </div>{# .content #} 
+</section>{# .overview #}

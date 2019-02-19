@@ -2,7 +2,7 @@
 {% load i18n %}
 {% load dimagidotcom %}
 
-{% block body_class %}case-study-page tucked-hero{% endblock %}
+{% block body_class %}{{ toolkit.image }} toolkits-page tucked-hero{% endblock %}
 
 {% block title %}
   {{ toolkit.title }}
@@ -14,33 +14,40 @@
 
 {% block stylesheets %}
   {% compress css %}
-    <link href="{% sass_src 'style/pages/case_studies/view_single.scss' %}" rel="stylesheet" media="screen" type="text/css" />
+    <link href="{% sass_src 'style/pages/toolkits.scss' %}" rel="stylesheet" media="screen" type="text/css" />
   {% endcompress %}
 {% endblock %}
 
 {% block hero %}
-  <div class="orange-theme">
-    <section class="hero hero-case-study" id="hero"></section>
-  </div>
+  <div id="top"></div>
+  <section class="hero"
+           data-lazybg="true"
+           id="hero">
+    <div class="content align-left-at-medium align-center gap-top-large gap-top-small-at-medium gap-top-line-at-large">
+      <h2 class="gap-vert-line">
+        {{ toolkit.title }}
+      </h2>
+      <h1 class="toolkit-tagline">
+        {{ toolkit.tagline }}
+      </h1>
+      <a class="button button-accent-gray {% click_hero 'contact' %}" 
+         href="#overview">
+        {% blocktrans %}
+          Learn More
+        {% endblocktrans %}
+      </a>
+    </div>{# .content #}
+  </section>{# .hero #}
 {% endblock %}
 
 {% block content %}
   <section class="case-study-container orange-theme">
     {% include 'sections/toolkits/sub_nav.html' %}
     {% include 'sections/toolkits/summary.html' %}
-
-    <section class="border-vert accent-gray-bg download"
-             id="download">
-      <div class="content pad-vert-medium align-center">
-        <h3>
-          {% blocktrans with title=toolkit.title %}
-            Download {{ title }}
-          {% endblocktrans %}
-        </h3>
-        <div id="hubspot-download-form" class="hubspot-download"></div>
-      </div>
-    </section>
-
+    {% include 'sections/toolkits/highlights.html' %}
+    {% include 'sections/toolkits/download.html' %}
+    {% include 'sections/toolkits/other_toolkits.html' %}
+    {% include 'sections/toolkits/contact_us.html' %}
   </section>
 {% endblock %}
 
@@ -50,6 +57,8 @@
   <![endif]-->
   <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
   <script>
+
+    // Inline Download form.
     hbspt.forms.create({
       portalId: "503070",
       formId: "{{ toolkit.hubspot_form }}",
@@ -58,6 +67,25 @@
       onFormSubmit: function () {
         window.open('{{ toolkit.download_url }}', "_blank");
       },
+    });
+
+    // Summary download form
+    hbspt.forms.create({
+      portalId: "503070",
+      formId: "{{ toolkit.hubspot_form }}",
+      target: "#hubspot-download-form-summary",
+      css: "",
+      onFormSubmit: function () {
+        window.open('{{ toolkit.download_url }}', "_blank");
+      },
+    });
+
+    // Contact Us Form
+    hbspt.forms.create({
+      portalId: "503070",
+      formId: "{{ toolkit.hubspot_formId }}",
+      target: "#hubspot-contact-us-form",
+      css: "",
     });
   </script>
 {% endblock %}
