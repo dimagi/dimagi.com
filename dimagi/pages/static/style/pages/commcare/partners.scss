@@ -24,7 +24,7 @@
     large: 265px,
     extra-large: 320px,
   );
-  @include make-bg(agimpact-image, '../../../pages/commcare/partners/agimpact', $_base-height, $_height-by-size);
+  @include make-bg(oikoi-image, '../../../pages/commcare/partners/oikoi', $_base-height, $_height-by-size);
   @include make-bg(noukod-image, '../../../pages/commcare/partners/noukod', $_base-height, $_height-by-size);
 }
 
@@ -37,7 +37,7 @@
     extra-large: (w: 1016px, h: 408px),
   );
 
-  @include make-carousel-slide(image-agimpact, $_sizes, '../../../pages/commcare/product/testimonial1.jpg');
+  @include make-carousel-slide(image-oikoi, $_sizes, '../../../pages/commcare/product/testimonial1.jpg');
   @include make-carousel-slide(image-nou-kod, $_sizes, '../../../pages/commcare/product/testimonial2.jpg');
   @include make-carousel-slide(image-delivery-services, $_sizes, '../../../pages/commcare/product/testimonial3.jpg');
   @include make-carousel-slide(image-cleaning-data, $_sizes, '../../../pages/commcare/product/testimonial4.jpg');

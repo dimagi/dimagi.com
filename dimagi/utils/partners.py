@@ -27,7 +27,7 @@ WEB = [
         "svg/partner/pih.html",
     ],
     [
-        "svg/partner/agimpact.html",
+        "svg/partner/oikoi.html",
         "svg/partner/usaid.html",
     ],
 ]
@@ -50,7 +50,7 @@ MOBILE = [
         "svg/partner/abt.html",
         "svg/partner/crs.html",
         "svg/partner/irc.html",
-        "svg/partner/agimpact.html",
+        "svg/partner/oikoi.html",
     ],
     [
         "svg/partner/gates.html",
