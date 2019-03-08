@@ -5,7 +5,7 @@ from django.http import HttpResponse
 from django.shortcuts import render
 from django.views.decorators.http import require_http_methods
 
-from dimagi.utils.ab_tests import DEMO_WORKFLOW
+from dimagi.utils.ab_tests import DEMO_WORKFLOW_V2
 from dimagi.utils.decorators import no_index, hide_drift
 from dimagi.utils.decorators.enable_ab_test import enable_ab_test
 from dimagi.utils.friendbuy_api import get_share
@@ -14,7 +14,7 @@ from dimagi.utils.partners import get_logos
 from dimagi.data.case_management import longitudinal_data
 
 
-@enable_ab_test(DEMO_WORKFLOW)
+@enable_ab_test(DEMO_WORKFLOW_V2)
 def home(request):
     context = {
         'partners': get_logos(),
