@@ -1,29 +1,12 @@
 {% load i18n %}
 {% load dimagidotcom %}
 
-{% if request.ab_test.demo_workflow_dec2018 %}
-
-  {% if request.ab_test.demo_workflow_dec2018 == 'hubspot' %}
-  <a class="{{ button_class }} {{ click_class }} cta-schedule-demo"
-     data-clickclass="{{ click_class }}"
-     href="#demo-form-modal">
-    <span>
-      {% blocktrans %}
-        Schedule a Demo
-      {% endblocktrans %}
-    </span>
-  </a>
-  {% endif %}
-
-  {% if request.ab_test.demo_workflow_dec2018 == 'drift' %}
-  <button class="{{ button_class }} {{ click_class }} cta-schedule-demo cta-schedule-demo-drift"
-          data-clickclass="{{ click_class }}">
-    <span>
-      {% blocktrans %}
-        Schedule a Demo
-      {% endblocktrans %}
-    </span>
-  </button>
-  {% endif %}
-
-{% endif %}
+<a class="{{ button_class }} {{ click_class }} cta-schedule-demo"
+   data-clickclass="{{ click_class }}"
+   href="#demo-form-modal">
+  <span>
+    {% blocktrans %}
+      Schedule a Demo
+    {% endblocktrans %}
+  </span>
+</a>

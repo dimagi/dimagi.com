@@ -33,7 +33,14 @@
     <meta property="dimagi:auditABClicks" content="{{ meta.auditABClicks|BOOL }}">
 
     <meta property="dimagi:contactFormId" content="{% block contact_form_id %}160467c5-1ae9-401c-81f2-09334ce10b1a{% endblock %}">
-    <meta property="dimagi:demoFormId" content="{% block demo_form_id %}afb4d5a0-826f-4a56-8c21-552d4b6dafa3{% endblock %}">
+
+    {% if request.ab_test.demo_workflow_mar2019 %}
+      {% if request.ab_test.demo_workflow_mar2019 == 'variant' %}
+        <meta property="dimagi:demoFormId" content="fafedecc-c3d8-4e10-a3fe-bd8978162da1">
+      {% else %}
+        <meta property="dimagi:demoFormId" content="8a721256-2974-4a79-8088-eb4720f8b290">
+      {% endif %}
+    {% endif %}
 
     <meta property="dimagi:isAmp" content="{{ request.is_amp|BOOL }}">
     <meta property="dimagi:ampPageType" content="{{ request.amp_page_type }}">
