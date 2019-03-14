@@ -29,9 +29,7 @@ TOOLKIT.add_highlights([
         ),
         highlight_image="commcare-evidence-base-highlights-one",
         description=ugettext_lazy("""
-Building a business development team at
-a social enterprise? Using this guide to
-jumpstart your planning.
+Improve data cleanliness for accurate reporting and analysis.
         """),
     ),
     Highlight(
@@ -40,9 +38,7 @@ jumpstart your planning.
         ),
         highlight_image="commcare-evidence-base-highlights-two",
         description=ugettext_lazy("""
-Learn how to project your revenue
-and opportunities with the help of
-this guide.
+Understand best practices for exporting data.
         """),
     ),
     Highlight(
@@ -51,9 +47,7 @@ this guide.
         ),
         highlight_image="commcare-evidence-base-highlights-three",
         description=ugettext_lazy("""
-Understand how your win-rat, total
-expected value, and other key factors
-impact estimations.
+Learn how to inspect and clean raw data.
         """),
     ),  
 ])
