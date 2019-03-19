@@ -72,10 +72,6 @@ redirect_urlpatterns = [
     url(r'^team.html$', redirect.page('team')),
     url(r'^about-mgmt.php$', redirect.page('about')),
 
-    url(r'^blog/mobile-data-collection-standards/$', redirect.page('mobile-data-collection-mobile-survey-design')),
-    url(r'^blog/mobile-data-collection-design-and-test/$', redirect.page('mobile-data-collection-mobile-survey-design')),
-    url(r'^blog/mobile-data-collection-implement-and-train/$', redirect.page('mobile-data-collection-app-deploy')),
-
     url(r'^mobile-e-imci/$', redirect.sector(child_health.SECTOR.slug)),
     url(r'^content/mobile-e-imci.html$', redirect.sector(child_health.SECTOR.slug)),
     url(r'^mlabour/$', redirect.sector(mlabor.SECTOR.slug)),
@@ -177,4 +173,7 @@ redirect_urlpatterns = [
     url(r'^an-asha-calls-me-and-tells-me-stories-of-change/$', redirect.blog('an-asha-calls-me-and-tells-me-stories-of-change')),
     url(r'^africare-dimagi-project-selected-as-a-slb-finalist/$', redirect.blog('africare-dimagi-project-selected-as-a-slb-finalist')),
     url(r'^5-div-grantees-to-be-showcased-at-the-unga-mdg-countdown/$', redirect.blog('5-div-grantees-to-be-showcased-at-the-unga-mdg-countdown')),
+    url(r'^blog/mobile-data-collection-standards/$', redirect.blog('mobile-data-collection-mobile-survey-design')),
+    url(r'^blog/mobile-data-collection-design-and-test/$', redirect.blog('mobile-data-collection-mobile-survey-design')),
+    url(r'^blog/mobile-data-collection-implement-and-train/$', redirect.blog('mobile-data-collection-app-deploy')),
 ]
