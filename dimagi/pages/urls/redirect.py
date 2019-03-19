@@ -72,6 +72,10 @@ redirect_urlpatterns = [
     url(r'^team.html$', redirect.page('team')),
     url(r'^about-mgmt.php$', redirect.page('about')),
 
+    url(r'^blog/mobile-data-collection-standards/$', redirect.page('mobile-data-collection-mobile-survey-design')),
+    url(r'^blog/mobile-data-collection-design-and-test/$', redirect.page('mobile-data-collection-mobile-survey-design')),
+    url(r'^blog/mobile-data-collection-implement-and-train/$', redirect.page('mobile-data-collection-app-deploy')),
+
     url(r'^mobile-e-imci/$', redirect.sector(child_health.SECTOR.slug)),
     url(r'^content/mobile-e-imci.html$', redirect.sector(child_health.SECTOR.slug)),
     url(r'^mlabour/$', redirect.sector(mlabor.SECTOR.slug)),
