@@ -70,6 +70,13 @@ urlpatterns = [
     url(r'^blog/mobile-data-collection-introduction/$',
         redirect.page('mobile_data_collection')),
 
+    url(r'^blog/mobile-data-collection-standards/$',
+        redirect.blog('mobile-data-collection-mobile-survey-design')),
+    url(r'^blog/mobile-data-collection-design-and-test/$',
+        redirect.blog('mobile-data-collection-mobile-survey-design')),
+    url(r'^blog/mobile-data-collection-implement-and-train/$',
+        redirect.blog('mobile-data-collection-app-deploy')),
+
     url(r'^blog/', include(blog.blog_urls)),
     url(r'^about/', include(team.about_urls)),
     url(r'^team/', include(team.team_urls)),
