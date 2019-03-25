@@ -1,7 +1,7 @@
 from __future__ import absolute_import
 
 import json
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 from django.views.decorators.http import require_http_methods
 
@@ -73,3 +73,7 @@ def test_500(request):
 @no_index
 def test_404(request):
     return render(request, '404.html')
+
+
+def focus_placeholder(request):
+    return HttpResponseRedirect("http://focusmdm.com/")
