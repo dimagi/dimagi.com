@@ -1,0 +1,20 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<article class="epic blue-theme" id="beneficiaries">
+
+  <section class="epic-cover"
+           data-lazybg="true">
+    <div class="content pad-top-medium">
+      <h2 class="align-left pad-top-large">
+        {% blocktrans %}
+          Find a tool that can ask your
+          questions in a way your beneficiaries
+           are sure to understand.
+        {% endblocktrans %}
+      </h2>
+    </div> {# .content #}
+  </section>
+  {% include 'sections/blog/mobile_blog_single/blog_affect.html' %}
+  {% include 'sections/blog/mobile_blog_single/blog_choose.html' %}
+</article>

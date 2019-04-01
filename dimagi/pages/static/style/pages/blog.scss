@@ -7,6 +7,30 @@
   @include make-bg(hero, '../../pages/blog/hero');
 }
 
+#how-to-choose {
+  @include make-bg(epic-cover, '../../pages/blog/mobiledata_blog_page/how_to_choose/hero');
+}
+
+#learn-more {
+  @include make-bg(epic-cover, '../../pages/blog/mobiledata_blog_page/learn_more/hero');
+}
+
+#cms-india {
+  @include make-bg(epic-cover, '../../pages/blog/mobiledata_blog_page/cms/hero');
+}
+
+#sehgal {
+  @include make-bg(epic-cover, '../../pages/blog/mobiledata_blog_page/sehgal_foundation/hero');
+}
+
+#beneficiaries {
+  @include make-bg(epic-cover, '../../pages/blog/mobiledata_blog_page/find_tool/hero');
+}
+
+.blog-contact {
+  white-space: nowrap;
+}
+
 .post-thumbnail {
   @include background-placeholder();
   background-position: center;
@@ -71,4 +95,31 @@ a.post {
     extra-large: 320px,
   );
   @include make-bg(powerful-data-image, '../../pages/blog/cta', $_base-height, $_height-by-size, '.png');
+}
+
+.build {
+  $_base-height: 400px;
+  $_height-by-size: (
+    small: 440px,
+    medium: 720px,
+    large: 660px,
+    extra-large: 625px,
+  );
+  @include make-bg(image, '../../pages/blog/mobiledata_blog_page/blog_build/hero', $_base-height, $_height-by-size);
+
+  @media (min-width: $width-desktop) {
+    .off-grid {
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      right: auto;
+      width: 100%;
+      z-index: 1;
+    }
+
+    .content {
+      position: relative;
+      z-index: 2;
+    }
+  }
 }

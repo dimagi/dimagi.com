@@ -1,0 +1,43 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="blue-theme">
+  <div class="content pad-top-medium pad-bottom-small-at-medium">
+
+      <div class="copy">
+        <div class="grid-1 grid-row-space-line">
+
+          <div class="column">
+            <h2>
+              {% blocktrans %}
+                Why mobile surveys instead of paper?
+              {% endblocktrans %}
+            </h2>
+            <p>
+              {% blocktrans %}
+                While it may be the standard method of data collection at many organizations, there are significant issues associated with a
+                paper-based data approach.
+              {% endblocktrans %}
+            </p>
+            <p>
+              <strong>The most prominent challenges associated with paper-based collection include</strong>:
+            </p>
+          </div>{# .column #}
+
+          {% include 'sections/blog/mobile_survey/error_rate.html' %}
+          {% include 'sections/blog/mobile_survey/slow_report.html' %}
+          {% include 'sections/blog/mobile_survey/lack_flexible.html' %}
+          {% include 'sections/blog/mobile_survey/benefits.html' %}
+          {% include 'sections/blog/mobile_survey/supervision.html' %}
+          
+          <p>
+            {% blocktrans %}
+              With the proper implementation, each of these issues can be minimized with the use of a mobile data collection tool.
+            {% endblocktrans %}
+          </p>
+        </div>{# .grid-flex #}
+      </div>{# .copy #}
+  </div>{# .content #}
+ <div class="image off-grid white-lazy-bg"
+      data-lazybg="true"></div>{# .features .image {} => commcare/product.scss #}
+</section>

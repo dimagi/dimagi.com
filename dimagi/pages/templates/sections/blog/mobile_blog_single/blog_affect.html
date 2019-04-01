@@ -1,0 +1,41 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="blue-theme">
+  <div class="content pad-top-medium pad-bottom-small-at-medium">
+
+      <div class="copy">
+        <div class="grid-1 grid-row-space-line">
+
+          <div class="column">
+            <h3>
+              {% blocktrans %}
+                How does your program and its environment affect your
+                mobile data collection tool?
+              {% endblocktrans %}
+            </h3>
+            <p>
+              {% blocktrans %}
+                Mobile data collection offerings range in price, some are harder to maintain than others, and they all have different strengths and
+                weaknesses. Beyond the features that deal with what data you collect, look at how the structure of your program or the
+                characteristics of the region you work in might affect your platform needs. Here are some considerations:
+              {% endblocktrans %}
+            </p>
+          </div>{# .column #}
+
+          {% include 'sections/blog/environment_affect/large.html' %}
+          {% include 'sections/blog/environment_affect/experience.html' %}
+          {% include 'sections/blog/environment_affect/connection.html' %}
+          {% include 'sections/blog/environment_affect/languages.html' %}
+          
+          <p>
+            {% blocktrans %}
+              With the proper implementation, each of these issues can be minimized with the use of a mobile data collection tool.
+            {% endblocktrans %}
+          </p>
+        </div>{# .grid-flex #}
+      </div>{# .copy #}
+  </div>{# .content #}
+ <div class="image off-grid white-lazy-bg"
+      data-lazybg="true"></div>{# .features .image {} => commcare/product.scss #}
+</section>

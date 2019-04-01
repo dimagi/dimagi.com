@@ -1,0 +1,25 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="trial border-top blue-bg"
+         id="trial">
+  <div class="content content-width-medium pad-vert-medium">
+    <div class="intro gap-bottom-small white">
+      <h4 class="white">
+        {% blocktrans %}
+          Learn more about CommCare
+        {% endblocktrans %}
+      </h4>
+      <p class="blog-contact">
+        {% blocktrans %}
+          Learn how the world’s most powerful mobile data collection platform can help your program
+        {% endblocktrans %}
+      </p>
+    </div>{# .intro #}
+
+    <p class="align-center">
+      {% include "partials/schedule_demo_button.html" with click_class=click_class button_class="button button-accent-gray" %}
+      </p>
+
+  </div>{# .content #}
+</section>

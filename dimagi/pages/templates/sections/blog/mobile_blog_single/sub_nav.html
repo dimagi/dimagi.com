@@ -1,0 +1,35 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="sub-nav"
+         id="sub-nav">
+  <div class="content">
+    <div class="actions">
+      <a class="primary cta-blog-subnav-trial"
+         data-kmq-external="true"
+         data-kmq-name="Clicked Start Trial - Blog Sticky"
+         href="{{ URL_TRIAL }}">
+        <span>
+          {% blocktrans %}
+            Start Trial
+          {% endblocktrans %}
+        </span>
+      </a>
+    </div>{# .actions #}
+    <a class="prompt-link"
+       href="#">
+      {% blocktrans %}
+        Browse
+      {% endblocktrans %}
+    </a>
+    <div class="destinations">
+      <div class="content">
+        <a href="{% url 'blog_home' %}">
+          {% blocktrans %}
+            Blog Home
+          {% endblocktrans %}
+        </a>
+      </div>{# .content #}
+    </div>{# .destinations #}
+  </div>{# .content #}
+</section>

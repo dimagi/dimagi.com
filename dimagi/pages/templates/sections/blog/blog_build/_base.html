@@ -1,0 +1,16 @@
+<div class="column align-center align-left-at-small">
+  <div class="grid-flex-at-small">
+
+    <div class="column no-shrink">
+      <div class="theme-icon">
+        {% block icon %}{% endblock %} {# usually an embeded svg #}
+      </div>{# .theme-icon #}
+    </div>{# .column.no-shrink #}
+
+    <div class="column">
+      <h6 class="gap-bottom-none">{% block header %}{% endblock %}</h6>
+      {% block content %}{% endblock %}
+    </div>{# .column #}
+
+  </div>{# .grid-flex #}
+</div>{# .column #}

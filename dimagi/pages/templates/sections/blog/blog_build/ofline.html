@@ -1,0 +1,15 @@
+{% extends "sections/blog/blog_build/_base.html" %}
+{% load i18n %}
+
+{% block icon %}
+  {% include "svg/blog/icon/blog_build/ofline.html" %}
+{% endblock %}
+
+{% block header %}{% blocktrans %}
+  Work offline
+{% endblocktrans %}{% endblock %}
+
+{% block content %}{% blocktrans %}
+  No signal, no problem. CommCare works offline, allowing your field
+  team to collect data wherever, without interruption.
+{% endblocktrans %}{% endblock %}
