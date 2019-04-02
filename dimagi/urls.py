@@ -56,6 +56,7 @@ urlpatterns = [
     url(r'^$', pages.home, name='home'),
     url(r'^services/$', pages.services, name='services'),
     url(r'^contact/$', pages.contact,  name='contact'),
+    url(r'^focus/$', pages.focus_placeholder,  name='focus'),
     url(r'^proposals/$', pages.proposals,  name='proposals'),
     url(r'^case-management/$', pages.case_management,  name='case_management'),
     url(r'^test_500/$', pages.test_500),
@@ -69,6 +70,13 @@ urlpatterns = [
         pillar.mobile_data_collection, name="mobile_data_collection"),
     url(r'^blog/mobile-data-collection-introduction/$',
         redirect.page('mobile_data_collection')),
+
+    url(r'^blog/mobile-data-collection-standards/$',
+        redirect.blog('mobile-data-collection-mobile-survey-design')),
+    url(r'^blog/mobile-data-collection-design-and-test/$',
+        redirect.blog('mobile-data-collection-mobile-survey-design')),
+    url(r'^blog/mobile-data-collection-implement-and-train/$',
+        redirect.blog('mobile-data-collection-app-deploy')),
 
     url(r'^blog/', include(blog.blog_urls)),
     url(r'^about/', include(team.about_urls)),

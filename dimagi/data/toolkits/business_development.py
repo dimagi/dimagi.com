@@ -28,7 +28,7 @@ TOOLKIT.add_highlights([
         description=ugettext_lazy("""
 Building a business development team
 at a social enterprise? Use this guide to
-jumpstartyour planning.
+jumpstart your planning.
         """),
         highlight_image="business-development-highlights-one",
     ),
@@ -48,9 +48,8 @@ this guide.
             "Managing Devices at Scale"
         ),
         description=ugettext_lazy("""
-Understand how your win-rat, total
-expected value, and other key factors
-impact estimations.
+Understand how your win-rate, total 
+expected value, and other key factors impact estimations.
         """),
         highlight_image="business-development-highlights-three",
     ),  

@@ -20,6 +20,7 @@ WEB = [
         "svg/partner/gates.html",
         "svg/partner/jhu.html",
         "svg/partner/tdh.html",
+        "svg/partner/sbir.html",
     ],
     [
         "svg/partner/bu.html",
@@ -29,6 +30,7 @@ WEB = [
     [
         "svg/partner/oikoi.html",
         "svg/partner/usaid.html",
+        "svg/partner/nih.html",
     ],
 ]
 
@@ -51,6 +53,7 @@ MOBILE = [
         "svg/partner/crs.html",
         "svg/partner/irc.html",
         "svg/partner/oikoi.html",
+        "svg/partner/sbir.html",
     ],
     [
         "svg/partner/gates.html",
@@ -58,6 +61,7 @@ MOBILE = [
         "svg/partner/tdh.html",
         "svg/partner/bwh.html",
         "svg/partner/one_acre_fund.html",
+        "svg/partner/nih.html",
     ],
 ]
 
