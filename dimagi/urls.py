@@ -77,6 +77,8 @@ urlpatterns = [
         redirect.blog('mobile-data-collection-mobile-survey-design')),
     url(r'^blog/mobile-data-collection-implement-and-train/$',
         redirect.blog('mobile-data-collection-app-deploy')),
+    url(r'^blog/what-is-your-data-collection-process/$',
+        redirect.blog('data-collection-data-collection-plan')),
 
     url(r'^blog/', include(blog.blog_urls)),
     url(r'^about/', include(team.about_urls)),
