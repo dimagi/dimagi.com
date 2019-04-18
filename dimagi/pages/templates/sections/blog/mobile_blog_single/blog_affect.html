@@ -2,13 +2,20 @@
 {% load dimagidotcom %}
 
 <section class="blue-theme">
-  <div class="content pad-top-medium pad-bottom-small-at-medium">
+  <div class="content content-width-medium pad-bottom-small-at-medium">
 
       <div class="copy">
         <div class="grid-1 grid-row-space-line">
 
           <div class="column">
-            <h3>
+            <p class="align-left pad-bottom-base">
+              {% blocktrans %}
+                Find a tool that can ask your
+                questions in a way your beneficiaries
+                are sure to understand.
+              {% endblocktrans %}
+            </p>
+            <h3 class="blue">
               {% blocktrans %}
                 How does your program and its environment affect your
                 mobile data collection tool?
@@ -37,5 +44,5 @@
       </div>{# .copy #}
   </div>{# .content #}
  <div class="image off-grid white-lazy-bg"
-      data-lazybg="true"></div>{# .features .image {} => commcare/product.scss #}
+      data-lazybg="true"></div>{# .build .image {} => home.scss #}
 </section>

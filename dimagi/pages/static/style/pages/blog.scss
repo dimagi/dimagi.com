@@ -31,6 +31,16 @@
   white-space: nowrap;
 }
 
+.border-left-blog {
+  border-left: 3px solid #004ebc;
+  padding-left: 10px;
+  line-height: 30px;
+}
+
+.point-spacing {
+  margin-left: 0px !important;
+}
+
 .post-thumbnail {
   @include background-placeholder();
   background-position: center;
@@ -98,21 +108,21 @@ a.post {
 }
 
 .build {
-  $_base-height: 400px;
+  $_base-height: 290px;
   $_height-by-size: (
-    small: 440px,
-    medium: 720px,
-    large: 660px,
-    extra-large: 625px,
+    small: 390px,
+    medium: 390px,
+    large: 390px,
+    extra-large: 392px,
   );
   @include make-bg(image, '../../pages/blog/mobiledata_blog_page/blog_build/hero', $_base-height, $_height-by-size);
 
   @media (min-width: $width-desktop) {
     .off-grid {
-      bottom: 0;
-      left: 0;
+      bottom: 20px;
+      left: -337px;
       position: absolute;
-      right: auto;
+      right: 0;
       width: 100%;
       z-index: 1;
     }

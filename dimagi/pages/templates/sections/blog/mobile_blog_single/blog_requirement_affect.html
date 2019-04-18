@@ -1,9 +1,9 @@
 {% load i18n %}
 {% load dimagidotcom %}
 
-<section class="border-top blue-theme">
-  <div class="content pad-top-medium pad-bottom-small">
-      <h2>
+<section class="border-top blue-theme content-width-medium">
+  <div class="content content-width-medium pad-top-medium pad-bottom-small">
+      <h2 class="blue">
         {% blocktrans %}
           How Do Your Data Requirements Affect Your
           Mobile Data Collection Tool?
@@ -12,40 +12,50 @@
       <p>
         {% blocktrans %}
           Mobile data collection tools have immense potential but there isn’t a single solution that will work for everyone. As you might
-          expect, different tools offer different features. Dimagi’s User Engagement Manager Marshall Daly recommends evaluating your
-          data needs before you start looking at different market offerings. “Like any other data collection program, start with the data you
-          want, and then find a tool that allows you to collect that data,” Daly said. Even after identifying your data requirements, selecting
+          expect, different tools offer different features.
+        {% endblocktrans %}
+      </p>
+      <p>
+        {% blocktrans %}
+          Dimagi’s User Engagement Manager Marshall Daly recommends evaluating your
+          data needs before you start looking at different market offerings.
+        {% endblocktrans %}
+      </p>
+      <h4 class="border-left-blog">
+        {% blocktrans %}
+          “Like any other data collection program, start with the data you
+          want, and then find a tool that allows you to collect that data,”
+        {% endblocktrans %}
+      </h4>
+      <p>
+        {% blocktrans %}
+          Daly said. Even after identifying your data requirements, selecting
           the right platform is often a challenge, and there are several points you should consider throughout the selection process:
         {% endblocktrans %}
       </p>
   </div>{# .content #}
 
-  <div class="carousel carousel-fade-inactive pad-top-medium">
-    <div class="carousel-container">
-      <div class="spinner spinner-large"></div>
-      <div class="carousel-slider">
-
-        {% include "sections/blog/blog_requriments/format.html" %}
-        {% include "sections/blog/blog_requriments/update.html" %}
-        {% include "sections/blog/blog_requriments/access.html" %}
-        {% include "sections/blog/blog_requriments/share.html" %}
-
-      </div>{# .carousel-slider #}
-    </div>{# .carousel-container #}
-  </div>{# .carousel #}
-   <div class="content pad-top-medium pad-bottom-small">
-      <p>
-        {% blocktrans %}
-          As always with the sharing of data, consider any privacy and security needs associated with patient information.
-          Many tools offer various levels of security, so be sure to check whether your chosen platform will be compliant with all relevant
-          data privacy regulations.
-        {% endblocktrans %}
-      </p>
-      <p>
-        {% blocktrans %}
-          Not only does the type of data you collect affect the tools and features you need to collect it, but its characteristics and those of
-          its environment will also be important considerations when deciding on the right mobile data collection application for your team.
-        {% endblocktrans %}
-      </p>
+  <div class="grid-2 pad-bottom-small grid-row-space-small">
+      {% include "sections/blog/blog_requriments/format.html" %}
+      {% include "sections/blog/blog_requriments/update.html" %}
+      {% include "sections/blog/blog_requriments/access.html" %}
+      {% include "sections/blog/blog_requriments/share.html" %}
+  </div>
+  <div class="pad-bottom-medium">
+    <p>
+      {% blocktrans %}
+        As always with the sharing of data, consider any privacy and security needs associated with patient information.
+        Many tools offer various levels of security, so be sure to check whether your chosen platform will be compliant with all relevant
+        data privacy regulations.
+      {% endblocktrans %}
+    </p>
+    <p>
+      {% blocktrans %}
+        Not only does the type of data you collect affect the tools and features you need to collect it, but its characteristics and those of
+        its environment will also be important considerations when deciding on the right mobile data collection application for your team.
+      {% endblocktrans %}
+    </p>
+  </div>
+      
   </div>{# .content #}
 </section>
