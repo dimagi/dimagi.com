@@ -28,7 +28,7 @@ TOOLKIT.add_highlights([
         description=ugettext_lazy("""
 Building a business development team
 at a social enterprise? Use this guide to
-jumpstart your planning.
+jump start your planning.
         """),
         highlight_image="business-development-highlights-one",
     ),
