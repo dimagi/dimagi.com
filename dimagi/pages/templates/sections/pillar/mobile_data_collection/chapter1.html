@@ -1,24 +1,26 @@
 {% load i18n %}
 {% load dimagidotcom %}
 
-<article class="epic purple-theme" id="chapter-1">
+<article class="epic blue-theme" id="chapter-1">
 
   <section class="epic-cover"
            data-lazybg="true">
     <div class="content">
-      <h1 class="pad-top-large" {% if request.is_amp %} amp-fx="fade-in" data-duration="1000ms" {% endif %}>
+       
+      <h2 class="pad-top-large" {% if request.is_amp %} amp-fx="fade-in" data-duration="1000ms" {% endif %}>
+          <p class="chapter-number">
+              1
+            </p>
         {% blocktrans %}
-          What Are <br />
-          Your Project <br />
-          Objectives?
+          How to Choose the Right  <br />
+          Mobile Data Collection Tool 
         {% endblocktrans %}
-      </h1>
+      </h2>
     </div> {# .content #}
   </section>
 
   {% include "sections/pillar/mobile_data_collection/chapter1/part1.html" %}
-  <div class="parallax-ch1-1"
-       data-lazybg="true"></div>
+  {% include "sections/pillar/mobile_data_collection/chapter1/partcms.html" %}
   {% include "sections/pillar/mobile_data_collection/chapter1/part2.html" %}
 
 </article>

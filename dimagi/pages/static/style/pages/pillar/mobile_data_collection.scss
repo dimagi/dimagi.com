@@ -116,6 +116,16 @@ a:not(.button).tile-more {
   }
 
 }
+.tile-chapter-position{
+  position: absolute;
+}
+
+.cms-india-border-left {
+  border-left: 5px solid #004ebc;
+  padding-left: 10px;
+  line-height: 30px !important;
+  margin-left: 8px;
+}
 
 $_max-mobile: $width-desktop - 1px;
 @media (max-width: $_max-mobile) {
@@ -180,19 +190,22 @@ $_max-mobile: $width-desktop - 1px;
 #chapter-1 {
   $_base-height: 190px;
   $_height-by-size: (
-    small: 249px,
-    medium: 400px,
+    // small: 248px,
+    // medium: 399px,
+    small: 324px,
+    medium: 540px,
   );
-  @include make-bg(chart-image, '../../../pages/pillar/mdc/chapter1/chart', $_base-height, $_height-by-size);
+  @include make-bg(cms, '../../../pages/pillar/mdc/chapter1/cms', $_base-height, $_height-by-size);
+  @include make-bg(environmental-image, '../../../pages/pillar/mdc/chapter1/environmental', $_base-height, $_height-by-size);
 }
 
 #chapter-2 {
   $_base-height: 190px;
   $_height-by-size: (
-    small: 249px,
-    medium: 340px,
+    small: 324px,
+    medium: 540px,
   );
-  @include make-bg(infographic-image, '../../../pages/pillar/mdc/chapter2/infographic', $_base-height, $_height-by-size);
+  @include make-bg(identify-image, '../../../pages/pillar/mdc/chapter2/identify', $_base-height, $_height-by-size);
 }
 
 #chapter-3 {
@@ -201,7 +214,16 @@ $_max-mobile: $width-desktop - 1px;
     small: 324px,
     medium: 520px,
   );
-  @include make-bg(infographic-image, '../../../pages/pillar/mdc/chapter3/infographic', $_base-height, $_height-by-size);
+  @include make-bg(agile-image, '../../../pages/pillar/mdc/chapter3/agile', $_base-height, $_height-by-size);
+}
+
+#chapter-4 {
+  $_base-height: 247px;
+  $_height-by-size: (
+    small: 324px,
+    medium: 520px,
+  );
+  @include make-bg(qaprocess-image, '../../../pages/pillar/mdc/chapter4/qaprocess', $_base-height, $_height-by-size);
 }
 
 #chapter-5 {
@@ -210,14 +232,55 @@ $_max-mobile: $width-desktop - 1px;
     small: 353px,
     medium: 566px,
   );
-  @include make-bg(infographic-image, '../../../pages/pillar/mdc/chapter5/infographic', $_base-height, $_height-by-size);
+  @include make-bg(pitfalls-image, '../../../pages/pillar/mdc/chapter5/pitfalls', $_base-height, $_height-by-size);
 }
 
 #chapter-6 {
-  $_base-height: 128px;
+  $_base-height: 190px;
   $_height-by-size: (
-    small: 168px,
-    medium: 270px,
+    small: 324px,
+    medium: 520px,
   );
-  @include make-bg(table-image, '../../../pages/pillar/mdc/chapter6/table', $_base-height, $_height-by-size);
+  @include make-bg(trainning-image, '../../../pages/pillar/mdc/chapter6/train', $_base-height, $_height-by-size);
+}
+
+
+#chapter-7 {
+  $_base-height: 190px;
+  $_height-by-size: (
+    small: 324px,
+    medium: 520px,
+  );
+  @include make-bg(supervisors-image, '../../../pages/pillar/mdc/chapter7/supervisors', $_base-height, $_height-by-size);
+}
+.strip-1 {
+  background-image: url(/static/pages/pillar/mdc/intro/strips/1.jpg);
+  }
+
+.strip-2 {
+  background-image: url(/static/pages/pillar/mdc/intro/strips/2.jpg);
+}
+
+.strip-3 {
+  background-image: url(/static/pages/pillar/mdc/intro/strips/3.jpg);
+}
+
+.strip-4 {
+  background-image: url(/static/pages/pillar/mdc/intro/strips/4.jpg);
+}
+
+.strip-5 {
+  background-image: url(/static/pages/pillar/mdc/intro/strips/5.jpg);
+}
+
+.strip-6 {
+  background-image: url(/static/pages/pillar/mdc/intro/strips/6.jpg);
+  }
+
+.strip-7 {
+  background-image: url(/static/pages/pillar/mdc/intro/strips/7.jpg);
+}
+
+.background{
+  color:#5f6a7d;
 }

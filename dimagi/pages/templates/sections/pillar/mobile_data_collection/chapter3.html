@@ -1,24 +1,24 @@
 {% load i18n %}
 {% load dimagidotcom %}
 
-<article class="epic turquoise-theme" id="chapter-3">
+<article class="epic blue-theme" id="chapter-3">
 
   <section class="epic-cover"
            data-lazybg="true">
     <div class="content">
-      <h1 class="pad-top-large" {% if request.is_amp %} amp-fx="fade-in" data-duration="1000ms" {% endif %}>
+      <h2 class="pad-top-large" {% if request.is_amp %} amp-fx="fade-in" data-duration="1000ms" {% endif %}>
+          <p class="chapter-number">
+              3
+          </p>
         {% blocktrans %}
-          What Are<br />
-          Your Data<br />
-          Needs?<br />
+          How to Build Your <br />
+          Mobile Data Collection App
         {% endblocktrans %}
-      </h1>
+      </h2>
     </div> {# .content #}
   </section>
 
   {% include "sections/pillar/mobile_data_collection/chapter3/summary.html" %}
-  <div class="parallax-ch3-1"
-       data-lazybg="true"></div>
   {% include "sections/pillar/mobile_data_collection/chapter3/part1.html" %}
   {% include "sections/pillar/mobile_data_collection/chapter3/part2.html" %}
   {% include "sections/pillar/mobile_data_collection/chapter3/part3.html" %}
