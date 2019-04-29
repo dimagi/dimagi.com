@@ -2,115 +2,105 @@
 @import 'app/variables/colors';
 @import 'app/variables/sizes';
 @import 'app/variables/type';
-
 .about-page {
-  @include make-bg(hero, '../../pages/about/hero');
+    @include make-bg(hero, '../../pages/about/hero');
 }
 
 .team-page {
-  @include make-bg(hero, '../../pages/team/hero');
+    @include make-bg(hero, '../../pages/team/hero');
 }
 
 .mission {
-  $_base-height: 400px;
-  $_height-by-size: (
-    medium: 720px,
-    large: 500px,
-    extra-large: 500px,
-  );
-  @include make-bg(image, '../../pages/about/datalines', $_base-height, $_height-by-size);
-
-  .off-grid {
-    display: none;
-  }
-
-  @media (min-width: $width-desktop) {
+    $_base-height: 400px;
+    $_height-by-size: ( medium: 720px, large: 500px, extra-large: 500px, );
+    @include make-bg(image, '../../pages/about/datalines', $_base-height, $_height-by-size);
     .off-grid {
-      display: block;
-      left: 0;
-      position: absolute;
-      right: auto;
-      top: 0;
-      width: 100%;
-      z-index: 1;
+        display: none;
     }
-
-    .content {
-      position: relative;
-      z-index: 2;
+    @media (min-width: $width-desktop) {
+        .off-grid {
+            display: block;
+            left: 0;
+            position: absolute;
+            right: auto;
+            top: 0;
+            width: 100%;
+            z-index: 1;
+        }
+        .content {
+            position: relative;
+            z-index: 2;
+        }
     }
-  }
 }
 
-
 @media (min-width: $width-desktop) {
-  .about-page .hero h1,
-  .team-page .hero h1 {
-    margin-left: 0;
-    margin-right: 0;
-    max-width: 55%;
-  }
+    .about-page .hero h1,
+    .team-page .hero h1 {
+        margin-left: 0;
+        margin-right: 0;
+        max-width: 55%;
+    }
 }
 
 .team .image.teampic1 {
-  @include background-cover('../../pages/about/teampic1.jpg');
+    @include background-cover('../../pages/about/teampic1.jpg');
 }
 
 .team .image.teampic2 {
-  @include background-cover('../../pages/about/teampic2.jpg');
+    @include background-cover('../../pages/about/teampic2.jpg');
 }
 
 .team .image.teampic3 {
-  @include background-cover('../../pages/about/teampic3.jpg');
+    @include background-cover('../../pages/about/teampic3.jpg');
 }
 
 .team .image.teampic4 {
-  @include background-cover('../../pages/about/teampic4.jpg');
+    @include background-cover('../../pages/about/teampic4.jpg');
 }
 
 .employee-image {
-  @include background-placeholder();
+    @include background-placeholder();
 }
 
 .modal .employee-image,
 .bio .employee-image {
-  width: 300px;
+    width: 300px;
 }
 
 @media (max-width: $width-desktop - 1px) {
-  .modal .employee-image,
-  .bio .employee-image {
-    width: 100%;
-  }
+    .modal .employee-image,
+    .bio .employee-image {
+        width: 100%;
+    }
 }
 
 @media (max-width: $width-desktop-lg - 1px) {
-  .modal .employee-image,
-  .bio .employee-image {
-    height: 300px;
-    margin: 0 auto;
-    padding: 0;
-    width: 300px;
-  }
+    .modal .employee-image,
+    .bio .employee-image {
+        height: 300px;
+        margin: 0 auto;
+        padding: 0;
+        width: 300px;
+    }
 }
 
 .company-info .image.infopic1 {
-  @include background-cover('../../pages/about/infopic1.jpg');
+    @include background-cover('../../pages/about/infopic1.jpg');
 }
 
 .company-info .image.infopic2 {
-  @include background-cover('../../pages/about/infopic2.jpg');
+    @include background-cover('../../pages/about/infopic2.jpg');
 }
 
-.company-info  .image.infopic3 {
-  @include background-cover('../../pages/about/infopic3.jpg');
+.company-info .image.infopic3 {
+    @include background-cover('../../pages/about/infopic3.jpg');
 }
 
 .office-country-icon svg {
-  height: 80px;
-  width: 80px;
-
-  * {
-    stroke-width: 3;
-  }
+    height: 80px;
+    width: 80px;
+    * {
+        stroke-width: 3;
+    }
 }

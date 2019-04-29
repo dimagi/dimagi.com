@@ -6,7 +6,7 @@
 
 {% block stylesheets %}
   {% compress css %}
-    <link href="{% sass_src 'style/pages/blog.scss' %}" rel="stylesheet" media="screen" type="text/css" />
+    <link href="{% sass_src 'style/pages/mdc_tool_blog.scss' %}" rel="stylesheet" media="screen" type="text/css" />
   {% endcompress %}
 {% endblock %}
 
@@ -19,7 +19,7 @@
 {% block content %}
   <section class="blog-container">
     {% include 'sections/blog/mobile_blog_single/sub_nav.html' %}
-    {% include 'sections/blog/mobile_blog_single/blog_image.html' %}
+    {% include 'sections/blog/mobile_blog_single/blog_intro.html' %}
     {% include 'sections/blog/mobile_blog_single/blog_learnmore.html' %}
     {% include 'sections/blog/mobile_blog_single/blog_cms.html' %}
     {% include 'sections/blog/mobile_blog_single/blog_sehgal.html' %}
