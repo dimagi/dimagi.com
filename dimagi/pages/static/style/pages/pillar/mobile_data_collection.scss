@@ -116,9 +116,6 @@ a:not(.button).tile-more {
   }
 
 }
-.tile-chapter-position{
-  position: absolute;
-}
 
 .cms-india-border-left {
   border-left: 5px solid #004ebc;
@@ -143,28 +140,32 @@ $_max-mobile: $width-desktop - 1px;
   }
 }
 
-.parallax-ch1-1 {
-  @include make-parallax-bg(hero, '../../../pages/pillar/mdc/chapter1/parallax');
+.strip-1 {
+  background-image: url(/static/pages/pillar/mdc/intro/strips/1.jpg);
+  }
+
+.strip-2 {
+  background-image: url(/static/pages/pillar/mdc/intro/strips/2.jpg);
 }
 
-.parallax-ch3-1 {
-  @include make-parallax-bg(hero, '../../../pages/pillar/mdc/chapter3/parallax');
+.strip-3 {
+  background-image: url(/static/pages/pillar/mdc/intro/strips/3.jpg);
 }
 
-.parallax-ch5-1 {
-  @include make-parallax-bg(hero, '../../../pages/pillar/mdc/chapter5/parallax');
+.strip-4 {
+  background-image: url(/static/pages/pillar/mdc/intro/strips/4.jpg);
 }
 
-.parallax-ch6-1 {
-  @include make-parallax-bg(hero, '../../../pages/pillar/mdc/chapter6/parallax');
+.strip-5 {
+  background-image: url(/static/pages/pillar/mdc/intro/strips/5.jpg);
 }
 
-.parallax-ch7-1 {
-  @include make-parallax-bg(hero, '../../../pages/pillar/mdc/chapter7/parallax');
-}
+.strip-6 {
+  background-image: url(/static/pages/pillar/mdc/intro/strips/6.jpg);
+  }
 
-.parallax-ch7-2 {
-  @include make-parallax-bg(hero, '../../../pages/pillar/mdc/chapter7/parallax-2');
+.strip-7 {
+  background-image: url(/static/pages/pillar/mdc/intro/strips/7.jpg);
 }
 
 .epic {
@@ -190,8 +191,6 @@ $_max-mobile: $width-desktop - 1px;
 #chapter-1 {
   $_base-height: 190px;
   $_height-by-size: (
-    // small: 248px,
-    // medium: 399px,
     small: 324px,
     medium: 540px,
   );
@@ -252,35 +251,4 @@ $_max-mobile: $width-desktop - 1px;
     medium: 520px,
   );
   @include make-bg(supervisors-image, '../../../pages/pillar/mdc/chapter7/supervisors', $_base-height, $_height-by-size);
-}
-.strip-1 {
-  background-image: url(/static/pages/pillar/mdc/intro/strips/1.jpg);
-  }
-
-.strip-2 {
-  background-image: url(/static/pages/pillar/mdc/intro/strips/2.jpg);
-}
-
-.strip-3 {
-  background-image: url(/static/pages/pillar/mdc/intro/strips/3.jpg);
-}
-
-.strip-4 {
-  background-image: url(/static/pages/pillar/mdc/intro/strips/4.jpg);
-}
-
-.strip-5 {
-  background-image: url(/static/pages/pillar/mdc/intro/strips/5.jpg);
-}
-
-.strip-6 {
-  background-image: url(/static/pages/pillar/mdc/intro/strips/6.jpg);
-  }
-
-.strip-7 {
-  background-image: url(/static/pages/pillar/mdc/intro/strips/7.jpg);
-}
-
-.background{
-  color:#5f6a7d;
 }
