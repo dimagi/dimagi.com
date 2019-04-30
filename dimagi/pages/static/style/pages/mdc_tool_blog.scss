@@ -39,7 +39,7 @@
 .blog_build {
     $_base-height: 290px;
     $_height-by-size: ( small: 390px, medium: 390px, large: 390px, extra-large: 392px, );
-    @include make-bg(image, '../../pages/blog/mobiledata_blog_page/blog_build/hero', $_base-height, $_height-by-size);
+    @include make-bg(blog_image, '../../pages/blog/mobiledata_blog_page/blog_build/hero', $_base-height, $_height-by-size);
     @media (min-width: $width-desktop) {
         .off-grid {
             bottom: 20px;
@@ -52,6 +52,11 @@
         .content {
             position: relative;
             z-index: 2;
+        }
+    }
+    @media (min-width: $width-desktop-lg) {
+        .off-grid {
+            left: -180px;
         }
     }
 }
