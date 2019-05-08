@@ -1,0 +1,27 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<article class="epic epic-chapter-5 purple-theme" id="chapter-6">
+
+  <section class="parallax-ch6-1 epic-cover"
+           data-lazybg="true">
+    <div class="content">
+      <h1 class="pad-top-small white" {% if request.is_amp %} amp-fx="fade-in" data-duration="1000ms" {% endif %}>
+        <p class="chapter-number">
+          6
+        </p>
+        {% blocktrans %}
+          How to Train <br class="hide-until-medium" />
+          Your Team in Mobile <br class="hide-until-medium" />
+          Data Collection
+        {% endblocktrans %}
+      </h1>
+    </div> {# .content #}
+  </section>
+
+  {% include "sections/pillar/data_collection/chapter6/summary.html" %}
+  {% include "sections/pillar/data_collection/chapter6/part1a.html" %}
+  {% include "sections/pillar/data_collection/chapter6/part1b.html" %}
+  {% include "sections/pillar/data_collection/chapter6/part2.html" %}
+
+</article>

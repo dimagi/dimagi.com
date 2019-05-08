@@ -1,0 +1,28 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<article class="epic blue-theme" id="chapter-1">
+
+  <section class="parallax-ch1-1 epic-cover"
+           data-lazybg="true">
+    <div class="content">
+      <h1 class="pad-top-small white" {% if request.is_amp %} amp-fx="fade-in" data-duration="1000ms" {% endif %}>
+        <p class="chapter-number">
+          1
+        </p>
+        {% blocktrans %}
+          How to Define Your <br class="hide-until-medium" />
+          Project Objectives
+        {% endblocktrans %}
+      </h1>
+    </div> {# .content #}
+  </section>
+  <!-- <div class="hero"
+       data-lazybg="true"></div> -->
+  
+
+  {% include "sections/pillar/data_collection/chapter1/part1.html" %}
+  <!-- {% include "sections/pillar/data_collection/chapter1/partcms.html" %} -->
+  {% include "sections/pillar/data_collection/chapter1/part2.html" %}
+
+</article>

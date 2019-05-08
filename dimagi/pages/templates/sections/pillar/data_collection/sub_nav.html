@@ -1,0 +1,60 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="sub-nav"
+         id="sub-nav">
+  <div class="content">
+    <div class="actions hide-until-medium">
+
+      {% facebook_link request.build_absolute_uri 'svg/footer/facebook.html' %}
+      {% linkedin_link request.build_absolute_uri 'svg/footer/linkedin.html' %}
+      {% twitter_link request.build_absolute_uri 'Mobile Data Collection' '' 'svg/footer/twitter.html' %}
+
+    </div>{# .actions #}
+
+    <a class="dropdown-toggle"
+       href="#">
+      <span class="more-icon">{% include 'svg/more.html' %}</span>
+      {% blocktrans %}
+        Mobile Data Collection Guide
+      {% endblocktrans %}
+    </a>
+
+    <div class="dropdown">
+      <div class="content">
+
+        <div class="social-links hide-at-medium">
+          {% facebook_link request.build_absolute_uri 'svg/footer/facebook.html' %}
+          {% linkedin_link request.build_absolute_uri 'svg/footer/linkedin.html' %}
+          {% twitter_link request.build_absolute_uri 'Mobile Data Collection' '' 'svg/footer/twitter.html' %}
+        </div>
+
+        <a href="#chapter-1">
+          {% blocktrans %}
+             Chapter 1: How to define your project objectives
+          {% endblocktrans %}
+        </a>
+
+        <a href="#chapter-2">
+          {% blocktrans %}
+             Chapter 2: How to identify your data requirements
+          {% endblocktrans %}
+        </a>
+
+        <a href="#chapter-3">
+          {% blocktrans %}
+             Chapter 3: How to determine your method of data collection
+          {% endblocktrans %}
+        </a>
+
+        <a href="#chapter-4">
+          {% blocktrans %}
+             Chapter 4: How to organize your data collection plan
+          {% endblocktrans %}
+        </a>
+
+      </div>{# .content #}
+    </div>{# .dropdown #}
+
+  </div>{# .content #}
+</section>

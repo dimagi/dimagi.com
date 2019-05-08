@@ -1,0 +1,229 @@
+@import 'app/mixins/background';
+@import 'app/variables/colors';
+@import 'app/variables/sizes';
+@import 'app/variables/type';
+
+#intro {
+  @include make-bg(epic-cover, '../../../pages/pillar/mdc/intro/hero');
+}
+
+
+
+.sub-nav-menu-active .sub-nav .dropdown {
+  height: 400px;
+}
+
+.sub-nav a:not(.button).social {
+  cursor: pointer;
+
+  svg * {
+    fill: $color-text;
+    transition: fill 150ms ease-in-out;
+  }
+
+  svg {
+    cursor: pointer;
+    margin-top: -1px;
+    height: 20px;
+    width: 20px;
+  }
+
+  &:hover svg * {
+    fill: $color-blue;
+  }
+}
+
+$_max-mobile: $width-desktop - 1px;
+@media (max-width: $_max-mobile) {
+  .sub-nav-menu-active .sub-nav .dropdown {
+    height: auto;
+  }
+}
+
+.dropdown .social-links {
+  padding-top: $space-small;
+
+  .social {
+    display: inline-block;
+    padding-right: $space-base;
+  }
+}
+
+
+a:not(.button).tile-more {
+  background: transparent;
+  color: $color-white;
+  padding: $space-small;
+  padding-bottom: $space-small + $space-base;
+
+  h2 {
+    font-weight: $font-weight-medium;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  &:hover {
+    color: $color-white;
+  }
+
+  &::before {
+    border-color: transparent !important;
+  }
+
+  &::after {
+    border-color: $color-white !important;
+  }
+
+}
+
+.tile-chapter {
+  position: relative;
+
+  &:after {
+    border-width: 10px !important;
+  }
+
+  h2 {
+    color: $color-white;
+    font-size: $font-size-h3;
+    line-height: $line-height-header;
+    // margin-bottom: 60px;
+  }
+
+  .chapter-number {
+    color: $color-white;
+    font-size: 60px;
+    line-height: 60px;
+    position: absolute;
+    bottom: $space-small;
+  }
+
+}
+
+.cms-india-border-left {
+  border-left: 5px solid #004ebc;
+  padding-left: 10px;
+  line-height: 30px !important;
+  margin-left: 8px;
+}
+
+
+.parallax-ch1-1{
+  @include make-parallax-bg(epic-cover, '../../../pages/pillar/mdc/chapter1/hero');
+  height: auto  !important;
+}
+
+.parallax-ch2-1{
+  @include make-parallax-bg(hero, '../../../pages/pillar/mdc/chapter2/hero');
+  height: auto  !important;
+}
+
+.parallax-ch3-1{
+  @include make-parallax-bg(hero, '../../../pages/pillar/mdc/chapter3/hero');
+  height: auto  !important;
+}
+
+.parallax-ch4-1{
+  @include make-parallax-bg(hero, '../../../pages/pillar/mdc/chapter4/hero');
+  height: auto  !important;
+}
+
+.parallax-ch5-1{
+  @include make-parallax-bg(hero, '../../../pages/pillar/mdc/chapter5/hero');
+  height: auto  !important;
+}
+
+.parallax-ch6-1{
+  @include make-parallax-bg(hero, '../../../pages/pillar/mdc/chapter6/hero');
+  height: auto  !important;
+}
+
+.parallax-ch7-1{
+  @include make-parallax-bg(hero, '../../../pages/pillar/mdc/chapter7/hero');
+  height: auto  !important;
+}
+
+.epic {
+  $_base-height: 190px;
+  $_height-by-size: (
+    small: 249px,
+    medium: 399px,
+  );
+}
+
+#chapter-6 {
+  $_base-height: 229px;
+  $_height-by-size: (
+    small: 300px,
+    medium: 636px,
+  );
+  @include make-bg(case-list-image, '../../../pages/pillar/mdc/chapter6/case-list', $_base-height, $_height-by-size);
+}
+
+#chapter-1 {
+  $_base-height: auto;
+  $_height-by-size: (
+    small: 324px,
+    medium: 540px,
+  );
+  @include make-bg(cms, '../../../pages/pillar/mdc/chapter1/cms/hero', $_base-height, $_height-by-size);
+  @include make-bg(environmental-image, '../../../pages/pillar/mdc/chapter1/environmental', $_base-height, $_height-by-size);
+}
+
+#chapter-2 {
+  $_base-height: 190px;
+  $_height-by-size: (
+    small: 324px,
+    medium: 540px,
+  );
+  @include make-bg(identify-image, '../../../pages/pillar/mdc/chapter2/identify', $_base-height, $_height-by-size);
+}
+
+#chapter-3 {
+  $_base-height: 247px;
+  $_height-by-size: (
+    small: 324px,
+    medium: 520px,
+  );
+  @include make-bg(agile-image, '../../../pages/pillar/mdc/chapter3/agile', $_base-height, $_height-by-size);
+}
+
+#chapter-4 {
+  $_base-height: 247px;
+  $_height-by-size: (
+    small: 324px,
+    medium: 520px,
+  );
+  @include make-bg(qaprocess-image, '../../../pages/pillar/mdc/chapter4/qaprocess', $_base-height, $_height-by-size);
+}
+
+#chapter-5 {
+  $_base-height: 269px;
+  $_height-by-size: (
+    small: 353px,
+    medium: 566px,
+  );
+  @include make-bg(pitfalls-image, '../../../pages/pillar/mdc/chapter5/pitfalls', $_base-height, $_height-by-size);
+}
+
+#chapter-6 {
+  $_base-height: 190px;
+  $_height-by-size: (
+    small: 324px,
+    medium: 520px,
+  );
+  @include make-bg(trainning-image, '../../../pages/pillar/mdc/chapter6/train', $_base-height, $_height-by-size);
+}
+
+
+#chapter-7 {
+  $_base-height: 190px;
+  $_height-by-size: (
+    small: 324px,
+    medium: 520px,
+  );
+  @include make-bg(supervisors-image, '../../../pages/pillar/mdc/chapter7/supervisors', $_base-height, $_height-by-size);
+}

@@ -1,0 +1,26 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<article class="epic neutral-theme" id="chapter-7">
+
+  <section class="parallax-ch7-1 epic-cover"
+           data-lazybg="true">
+    <div class="content">
+      <h1 class="pad-top-small white" {% if request.is_amp %} amp-fx="fade-in" data-duration="1000ms" {% endif %}>
+        <p class="chapter-number">
+          7
+        </p>
+        {% blocktrans %}
+          How to Sustain Your <br class="hide-until-medium" />
+          Mobile Data Collection Program
+        {% endblocktrans %}
+      </h1>
+    </div> {# .content #}
+  </section>
+
+  {% include "sections/pillar/data_collection/chapter7/summary.html" %}
+  {% include "sections/pillar/data_collection/chapter7/part1.html" %}
+  {% include "sections/pillar/data_collection/chapter7/part2a.html" %}
+  {% include "sections/pillar/data_collection/chapter7/part2b.html" %}
+
+</article>

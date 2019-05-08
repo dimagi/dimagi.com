@@ -1,0 +1,27 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<article class="epic red-theme" id="chapter-4">
+
+  <section class="parallax-ch4-1 epic-cover"
+           data-lazybg="true">
+    <div class="content">
+      <h1 class="pad-top-small white" {% if request.is_amp %} amp-fx="fade-in" data-duration="1000ms" {% endif %}>
+        <p class="chapter-number">
+          4
+        </p>
+        {% blocktrans %}
+          How to Test <br class="hide-until-medium" />
+          Your Mobile Data <br class="hide-until-medium" />
+          Collection App
+        {% endblocktrans %}
+      </h1>
+    </div> {# .content #}
+  </section>
+
+  {% include "sections/pillar/data_collection/chapter4/summary.html" %}
+  {% include "sections/pillar/data_collection/chapter4/part1.html" %}
+  {% include "sections/pillar/data_collection/chapter4/part2.html" %}
+  {% include "sections/pillar/data_collection/chapter4/part3.html" %}
+
+</article>

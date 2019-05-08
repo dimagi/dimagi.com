@@ -1,0 +1,82 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="epic-content pad-top-small pad-bottom-large"
+         id="plan-for-development">
+  <div class="content content-width-medium">
+
+    <h2>
+      {% blocktrans %}
+         Reinforce your training
+      {% endblocktrans %}
+    </h2>
+
+    <p>
+      {% blocktrans %}
+        Post-training reinforcement helps a great deal in retention of newly-learned skills and knowledge by filling any gaps that remained from 
+        the initial training. Two ways we reinforce our training are:
+      {% endblocktrans %}
+    </p>
+     
+    <div class="grid grid-flex-at-small grid-valign-middle pad-vert-line">
+        <div class="column no-shrink">
+          <div class="theme-icon epic-icon align-center align-left-at-small">
+            {% include "svg/pillar/dc/chapter6/icon1.html" %}
+          </div>
+        </div>{# .column #}
+        <div class="column">
+          <h4 class="purple">
+            {% blocktrans %}
+               Repetition
+            {% endblocktrans %}
+          </h4>
+          <p>
+            {% blocktrans %}
+              We conduct refresher trainings at regular intervals to cover both the things that our workers have forgotten and our new workers. 
+              It also provides a good opportunity to notify workers of new features or for workers to share advice and feedback.
+            {% endblocktrans %}
+          </p>
+        </div>{# .column #}
+    </div>{# .grid #}
+
+    <div class="grid grid-flex-at-small grid-valign-middle pad-vert-line">
+        <div class="column no-shrink">
+          <div class="theme-icon epic-icon align-center align-left-at-small">
+            {% include "svg/pillar/dc/chapter6/icon2.html" %}
+          </div>
+        </div>{# .column #}
+        <div class="column">
+          <h4 class="purple">
+            {% blocktrans %}
+               Resources
+            {% endblocktrans %}
+          </h4>
+          <p>
+            {% blocktrans %}
+              We develop support mechanisms to guide workers as they use the application in real time. Whether it’s a one-pager, comprehensive 
+              user manual, or in-app training module, the idea is to provide your team with the tools they need to troubleshoot any issues on their own. 
+              For more advice on how to compile a training guide for your app, check out our guide.
+            {% endblocktrans %}
+          </p>
+        </div>{# .column #}
+    </div>{# .grid #}
+  
+    <p>
+      {% blocktrans %}
+        Give yourself and your team the best shot at successfully launching your mobile data collection program by arming them with the tools and 
+        training they need. Tailor your approach to their needs, just like you did with the app, and they will be better for it. 
+      {% endblocktrans %}
+    </p>
+
+    <p class="align-center pad-vert-small">
+        <a href="https://dimagi.com/blog/mobile-data-collection-training"
+           target="_blank"
+           class="button">
+          {% blocktrans %}
+            Learn more about how to train your team 
+          {% endblocktrans %}
+        </a>
+    </p>
+
+  </div>
+</section>
