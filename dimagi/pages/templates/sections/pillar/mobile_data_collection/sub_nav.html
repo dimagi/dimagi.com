@@ -1,0 +1,78 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="sub-nav"
+         id="sub-nav">
+  <div class="content">
+    <div class="actions hide-until-medium">
+
+      {% facebook_link request.build_absolute_uri 'svg/footer/facebook.html' %}
+      {% linkedin_link request.build_absolute_uri 'svg/footer/linkedin.html' %}
+      {% twitter_link request.build_absolute_uri 'Mobile Data Collection' '' 'svg/footer/twitter.html' %}
+
+    </div>{# .actions #}
+
+    <a class="dropdown-toggle"
+       href="#">
+      <span class="more-icon">{% include 'svg/more.html' %}</span>
+      {% blocktrans %}
+        Mobile Data Collection Guide
+      {% endblocktrans %}
+    </a>
+
+    <div class="dropdown">
+      <div class="content">
+
+        <div class="social-links hide-at-medium">
+          {% facebook_link request.build_absolute_uri 'svg/footer/facebook.html' %}
+          {% linkedin_link request.build_absolute_uri 'svg/footer/linkedin.html' %}
+          {% twitter_link request.build_absolute_uri 'Mobile Data Collection' '' 'svg/footer/twitter.html' %}
+        </div>
+
+        <a href="#chapter-1">
+          {% blocktrans %}
+             Chapter 1: How to choose the right mobile data collection tool
+          {% endblocktrans %}
+        </a>
+
+        <a href="#chapter-2">
+          {% blocktrans %}
+             Chapter 2: How to design your mobile surveys
+          {% endblocktrans %}
+        </a>
+
+        <a href="#chapter-3">
+          {% blocktrans %}
+             Chapter 3: How to build your mobile data collection app
+          {% endblocktrans %}
+        </a>
+
+        <a href="#chapter-4">
+          {% blocktrans %}
+             Chapter 4: How to test your mobile data collection app
+          {% endblocktrans %}
+        </a>
+
+        <a href="#chapter-5">
+          {% blocktrans %}
+             Chapter 5: How to deploy your mobile data collection software
+          {% endblocktrans %}
+        </a>
+
+        <a href="#chapter-6">
+          {% blocktrans %}
+             Chapter 6: How to train your team in mobile data collection
+          {% endblocktrans %}
+        </a>
+
+        <a href="#chapter-7">
+          {% blocktrans %}
+             Chapter 7: How to sustain your mobile data collection program
+          {% endblocktrans %}
+        </a>
+
+      </div>{# .content #}
+    </div>{# .dropdown #}
+
+  </div>{# .content #}
+</section>

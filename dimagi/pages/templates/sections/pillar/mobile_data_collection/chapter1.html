@@ -3,20 +3,24 @@
 
 <article class="epic blue-theme" id="chapter-1">
 
-  <section class="epic-cover"
+  <section class="parallax-ch1-1 epic-cover"
            data-lazybg="true">
     <div class="content">
-      <h2 class="pad-top-large" {% if request.is_amp %} amp-fx="fade-in" data-duration="1000ms" {% endif %}>
+      <h1 class="pad-top-small white" {% if request.is_amp %} amp-fx="fade-in" data-duration="1000ms" {% endif %}>
         <p class="chapter-number">
           1
         </p>
         {% blocktrans %}
-          How to Choose the Right  <br class="hide-until-medium" />
-          Mobile Data Collection Tool 
+          How to Choose the  <br class="hide-until-medium" />
+          Right Mobile Data  <br class="hide-until-medium" />
+          Collection Tool 
         {% endblocktrans %}
-      </h2>
+      </h1>
     </div> {# .content #}
   </section>
+  <!-- <div class="hero"
+       data-lazybg="true"></div> -->
+  
 
   {% include "sections/pillar/mobile_data_collection/chapter1/part1.html" %}
   {% include "sections/pillar/mobile_data_collection/chapter1/partcms.html" %}

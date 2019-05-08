@@ -7,36 +7,46 @@
   @include make-bg(epic-cover, '../../../pages/pillar/mdc/intro/hero');
 }
 
-#chapter-1 {
-  @include make-bg(epic-cover, '../../../pages/pillar/mdc/chapter1/hero');
+
+
+.sub-nav-menu-active .sub-nav .dropdown {
+  height: 400px;
 }
 
-#chapter-2 {
-  @include make-bg(epic-cover, '../../../pages/pillar/mdc/chapter2/hero');
+.sub-nav a:not(.button).social {
+  cursor: pointer;
+
+  svg * {
+    fill: $color-text;
+    transition: fill 150ms ease-in-out;
+  }
+
+  svg {
+    cursor: pointer;
+    margin-top: -1px;
+    height: 20px;
+    width: 20px;
+  }
+
+  &:hover svg * {
+    fill: $color-blue;
+  }
 }
 
-#chapter-3 {
-  @include make-bg(epic-cover, '../../../pages/pillar/mdc/chapter3/hero');
+$_max-mobile: $width-desktop - 1px;
+@media (max-width: $_max-mobile) {
+  .sub-nav-menu-active .sub-nav .dropdown {
+    height: auto;
+  }
 }
 
-#chapter-4 {
-  @include make-bg(epic-cover, '../../../pages/pillar/mdc/chapter4/hero');
-}
+.dropdown .social-links {
+  padding-top: $space-small;
 
-#chapter-5 {
-  @include make-bg(epic-cover, '../../../pages/pillar/mdc/chapter5/hero');
-}
-
-#chapter-6 {
-  @include make-bg(epic-cover, '../../../pages/pillar/mdc/chapter6/hero');
-}
-
-#chapter-7 {
-  @include make-bg(epic-cover, '../../../pages/pillar/mdc/chapter7/hero');
-}
-
-#chapter-8 {
-  @include make-bg(epic-cover, '../../../pages/pillar/mdc/chapter8/hero');
+  .social {
+    display: inline-block;
+    padding-right: $space-base;
+  }
 }
 
 
@@ -80,7 +90,7 @@ a:not(.button).tile-more {
     color: $color-white;
     font-size: $font-size-h3;
     line-height: $line-height-header;
-    margin-bottom: 60px;
+    // margin-bottom: 60px;
   }
 
   .chapter-number {
@@ -101,32 +111,39 @@ a:not(.button).tile-more {
 }
 
 
-.strip-1 {
-  background-image: url(/static/pages/pillar/mdc/intro/strips/1.jpg);
-  }
-
-.strip-2 {
-  background-image: url(/static/pages/pillar/mdc/intro/strips/2.jpg);
+.parallax-ch1-1{
+  @include make-parallax-bg(epic-cover, '../../../pages/pillar/mdc/chapter1/hero');
+  height: auto  !important;
 }
 
-.strip-3 {
-  background-image: url(/static/pages/pillar/mdc/intro/strips/3.jpg);
+.parallax-ch2-1{
+  @include make-parallax-bg(hero, '../../../pages/pillar/mdc/chapter2/hero');
+  height: auto  !important;
 }
 
-.strip-4 {
-  background-image: url(/static/pages/pillar/mdc/intro/strips/4.jpg);
+.parallax-ch3-1{
+  @include make-parallax-bg(hero, '../../../pages/pillar/mdc/chapter3/hero');
+  height: auto  !important;
 }
 
-.strip-5 {
-  background-image: url(/static/pages/pillar/mdc/intro/strips/5.jpg);
+.parallax-ch4-1{
+  @include make-parallax-bg(hero, '../../../pages/pillar/mdc/chapter4/hero');
+  height: auto  !important;
 }
 
-.strip-6 {
-  background-image: url(/static/pages/pillar/mdc/intro/strips/6.jpg);
-  }
+.parallax-ch5-1{
+  @include make-parallax-bg(hero, '../../../pages/pillar/mdc/chapter5/hero');
+  height: auto  !important;
+}
 
-.strip-7 {
-  background-image: url(/static/pages/pillar/mdc/intro/strips/7.jpg);
+.parallax-ch6-1{
+  @include make-parallax-bg(hero, '../../../pages/pillar/mdc/chapter6/hero');
+  height: auto  !important;
+}
+
+.parallax-ch7-1{
+  @include make-parallax-bg(hero, '../../../pages/pillar/mdc/chapter7/hero');
+  height: auto  !important;
 }
 
 .epic {

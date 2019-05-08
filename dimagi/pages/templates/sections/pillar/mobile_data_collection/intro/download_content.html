@@ -3,7 +3,7 @@
 
 <section class="trial gap-top-medium blue-bg"
          id="trial">
-  <div class="content pad-vert-medium">
+  <div class="content content-width-medium pad-vert-medium">
     <div class="align-center gap-top-small white">
       <h3 class="white">
         {% blocktrans %}
@@ -16,17 +16,52 @@
         That's why we made a complete guide of more than thirty pages of advice, insights, tips, and examples.
         {% endblocktrans %}
       </p>
-      <p class="align-center pad-top-small pad-bottom-medium">
-        <a href="https://app.hubspot.com/forms/503070/editor/6d2f8b0a-f085-4a9a-be6e-383f02b1769f/edit/form"
-           target="_blank"
-           class="button white-bg">
+
+      <div class="cta gap-vert-line">
+        <a class="button button-accent-gray {% click_hero 'download_content' %}"
+           href="#download-form-modal">
           {% blocktrans %}
-            <span class="slate">download the complete guide </span>
+            download the complete guide 
           {% endblocktrans %}
         </a>
-      </p>
+      </div>
+
+
     </div>{# .intro #}
 
 
   </div>{# .content #}
 </section>
+
+{% block modal %}
+  <div class="modal"
+    data-dismissible="true"
+    data-size="medium"
+    id="download-form-modal">
+    <div class="modal-scroll">
+      <div class="modal-wrapper">
+          <a href="#" class="modal-close-button"></a>
+        <div class="content pad-horz-medium pad-vert-none neutral-theme">
+          <h3>
+           {% blocktrans %}
+             Download Complete Guide
+           {% endblocktrans %}
+          </h3>
+          <section id="download-form-content"></section>
+        </div>{# .content #}
+      </div>{# .modal-wrapper #}
+    </div>{# .modal-scroll #}
+  </div>{# .modal #}
+{% endblock %}
+
+{% block js %}
+  <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+  <script>
+    hbspt.forms.create({
+      portalId: "503070",
+      formId: "6d2f8b0a-f085-4a9a-be6e-383f02b1769f",
+      target: "#download-form-content",
+      css: ""
+    });
+  </script>
+{% endblock %}
