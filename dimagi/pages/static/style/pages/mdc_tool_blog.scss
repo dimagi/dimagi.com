@@ -10,16 +10,18 @@
     @include make-bg(epic-cover, '../../pages/blog/mobiledata_blog_page/learn_more/hero');
 }
 
-#cms-india {
-    @include make-bg(epic-cover, '../../pages/blog/mobiledata_blog_page/cms/hero');
+.cms-india {
+    @include background-cover('../../pages/blog/mobiledata_blog_page/cms/hero.large.jpg');
+    height: 328px !important;
 }
 
-#sehgal {
-    @include make-bg(epic-cover, '../../pages/blog/mobiledata_blog_page/sehgal_foundation/hero');
+.sehgal {
+    @include background-cover('../../pages/blog/mobiledata_blog_page/sehgal_foundation/hero.large.jpg');
+    height: 328px !important;
 }
 
-#beneficiaries {
-    @include make-bg(epic-cover, '../../pages/blog/mobiledata_blog_page/find_tool/hero');
+.beneficiaries {
+    @include background-cover('../../pages/blog/mobiledata_blog_page/find_tool/hero.large.jpg');
 }
 
 .blog-contact {
