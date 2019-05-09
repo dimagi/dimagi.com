@@ -4,13 +4,13 @@
 @import 'app/variables/type';
 
 #intro {
-  @include make-bg(epic-cover, '../../../pages/pillar/mdc/intro/hero');
+  @include make-bg(epic-cover, '../../../pages/pillar/dc/intro/hero');
 }
 
 
 
 .sub-nav-menu-active .sub-nav .dropdown {
-  height: 400px;
+  height: 220px;
 }
 
 .sub-nav a:not(.button).social {
@@ -104,7 +104,7 @@ a:not(.button).tile-more {
 }
 
 .cms-india-border-left {
-  border-left: 5px solid #004ebc;
+  border-left: 5px solid color;
   padding-left: 10px;
   line-height: 30px !important;
   margin-left: 8px;
@@ -131,20 +131,6 @@ a:not(.button).tile-more {
   height: auto  !important;
 }
 
-.parallax-ch5-1{
-  @include make-parallax-bg(hero, '../../../pages/pillar/mdc/chapter5/hero');
-  height: auto  !important;
-}
-
-.parallax-ch6-1{
-  @include make-parallax-bg(hero, '../../../pages/pillar/mdc/chapter6/hero');
-  height: auto  !important;
-}
-
-.parallax-ch7-1{
-  @include make-parallax-bg(hero, '../../../pages/pillar/mdc/chapter7/hero');
-  height: auto  !important;
-}
 
 .epic {
   $_base-height: 190px;
@@ -154,14 +140,6 @@ a:not(.button).tile-more {
   );
 }
 
-#chapter-6 {
-  $_base-height: 229px;
-  $_height-by-size: (
-    small: 300px,
-    medium: 636px,
-  );
-  @include make-bg(case-list-image, '../../../pages/pillar/mdc/chapter6/case-list', $_base-height, $_height-by-size);
-}
 
 #chapter-1 {
   $_base-height: auto;
@@ -169,8 +147,7 @@ a:not(.button).tile-more {
     small: 324px,
     medium: 540px,
   );
-  @include make-bg(cms, '../../../pages/pillar/mdc/chapter1/cms/hero', $_base-height, $_height-by-size);
-  @include make-bg(environmental-image, '../../../pages/pillar/mdc/chapter1/environmental', $_base-height, $_height-by-size);
+  @include make-bg(community-image, '../../../pages/pillar/dc/chapter1/community', $_base-height, $_height-by-size);
 }
 
 #chapter-2 {
@@ -179,7 +156,7 @@ a:not(.button).tile-more {
     small: 324px,
     medium: 540px,
   );
-  @include make-bg(identify-image, '../../../pages/pillar/mdc/chapter2/identify', $_base-height, $_height-by-size);
+  @include make-bg(child-growth-image, '../../../pages/pillar/dc/chapter2/growth', $_base-height, $_height-by-size);
 }
 
 #chapter-3 {
@@ -188,7 +165,7 @@ a:not(.button).tile-more {
     small: 324px,
     medium: 520px,
   );
-  @include make-bg(agile-image, '../../../pages/pillar/mdc/chapter3/agile', $_base-height, $_height-by-size);
+  @include make-bg(agile-image, '../../../pages/pillar/dc/chapter3/align', $_base-height, $_height-by-size);
 }
 
 #chapter-4 {
@@ -197,33 +174,6 @@ a:not(.button).tile-more {
     small: 324px,
     medium: 520px,
   );
-  @include make-bg(qaprocess-image, '../../../pages/pillar/mdc/chapter4/qaprocess', $_base-height, $_height-by-size);
+  @include make-bg(plan-image, '../../../pages/pillar/dc/chapter4/plan', $_base-height, $_height-by-size);
 }
 
-#chapter-5 {
-  $_base-height: 269px;
-  $_height-by-size: (
-    small: 353px,
-    medium: 566px,
-  );
-  @include make-bg(pitfalls-image, '../../../pages/pillar/mdc/chapter5/pitfalls', $_base-height, $_height-by-size);
-}
-
-#chapter-6 {
-  $_base-height: 190px;
-  $_height-by-size: (
-    small: 324px,
-    medium: 520px,
-  );
-  @include make-bg(trainning-image, '../../../pages/pillar/mdc/chapter6/train', $_base-height, $_height-by-size);
-}
-
-
-#chapter-7 {
-  $_base-height: 190px;
-  $_height-by-size: (
-    small: 324px,
-    medium: 520px,
-  );
-  @include make-bg(supervisors-image, '../../../pages/pillar/mdc/chapter7/supervisors', $_base-height, $_height-by-size);
-}
