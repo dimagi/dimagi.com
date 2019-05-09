@@ -170,9 +170,17 @@ a:not(.button).tile-more {
   $_base-height: auto;
   $_height-by-size: (
     small: 324px,
-    medium: 540px,
+    medium: 360px,
   );
   @include make-bg(cms, '../../../pages/pillar/mdc/chapter1/cms/hero', $_base-height, $_height-by-size);
+}
+
+#chapter-1-chart-1 {
+  $_base-height: auto;
+  $_height-by-size: (
+    small: 324px,
+    medium: 390px,
+  );
   @include make-bg(environmental-image, '../../../pages/pillar/mdc/chapter1/environmental', $_base-height, $_height-by-size);
 }
 
@@ -180,7 +188,7 @@ a:not(.button).tile-more {
   $_base-height: 190px;
   $_height-by-size: (
     small: 324px,
-    medium: 540px,
+    medium: 390px,
   );
   @include make-bg(identify-image, '../../../pages/pillar/mdc/chapter2/identify', $_base-height, $_height-by-size);
 }
@@ -189,7 +197,7 @@ a:not(.button).tile-more {
   $_base-height: 247px;
   $_height-by-size: (
     small: 324px,
-    medium: 520px,
+    medium: 390px,
   );
   @include make-bg(agile-image, '../../../pages/pillar/mdc/chapter3/agile', $_base-height, $_height-by-size);
 }
@@ -198,7 +206,7 @@ a:not(.button).tile-more {
   $_base-height: 247px;
   $_height-by-size: (
     small: 324px,
-    medium: 520px,
+    medium: 390px,
   );
   @include make-bg(qaprocess-image, '../../../pages/pillar/mdc/chapter4/qaprocess', $_base-height, $_height-by-size);
 }
@@ -207,7 +215,7 @@ a:not(.button).tile-more {
   $_base-height: 269px;
   $_height-by-size: (
     small: 353px,
-    medium: 566px,
+    medium: 390px,
   );
   @include make-bg(pitfalls-image, '../../../pages/pillar/mdc/chapter5/pitfalls', $_base-height, $_height-by-size);
 }
@@ -216,7 +224,7 @@ a:not(.button).tile-more {
   $_base-height: 190px;
   $_height-by-size: (
     small: 324px,
-    medium: 520px,
+    medium: 390px,
   );
   @include make-bg(trainning-image, '../../../pages/pillar/mdc/chapter6/train', $_base-height, $_height-by-size);
 }
@@ -226,7 +234,7 @@ a:not(.button).tile-more {
   $_base-height: 190px;
   $_height-by-size: (
     small: 324px,
-    medium: 520px,
+    medium: 390px,
   );
   @include make-bg(supervisors-image, '../../../pages/pillar/mdc/chapter7/supervisors', $_base-height, $_height-by-size);
 }
