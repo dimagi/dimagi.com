@@ -1,0 +1,56 @@
+@import 'app/mixins/background';
+@import 'app/variables/colors';
+@import 'app/variables/sizes';
+@import 'app/variables/type';
+
+#ag-intro {
+  $_base-height: 190px;
+  $_height-by-size: (
+    small: 280px,
+    medium: 280px,
+    large: 280px,
+    extra-large: 320px,
+	);
+	@include make-bg(hero-data-image, '../../../pages/sectors/agriculture-extension-programs/intro/hero', $_base-height, $_height-by-size);
+}
+
+.part3 {
+	@include make-bg(epic-cover, '../../../pages/sectors/agriculture-extension-programs/part3/hero');
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ac-part3 {
+    $_base-height: 290px;
+    $_height-by-size: (
+      small: 290px,
+      medium: 290px,
+      large: 290px,
+      extra-large: 292px,
+    );
+    @include make-bg(image, '../../../pages/sectors/agriculture-extension-programs/news/Phone', $_base-height, $_height-by-size, '.png');
+  
+    @media (min-width: $width-desktop) {
+      .off-grid {
+        top: 30px;
+        left: 0;
+        position: absolute;
+        right: auto;
+        width: 70%;
+        z-index: 1;
+      }
+  
+      .content {
+        position: relative;
+        z-index: 2;
+      }
+    }
+
+  }
+
+  .ac-part3 .image .bg-loader{
+    background-color: transparent;
+}

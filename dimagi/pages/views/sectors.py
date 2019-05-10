@@ -16,6 +16,12 @@ def view_all(request):
     }
     return render(request, 'pages/sectors/view_all.html', context)
 
+def agriculture_extension_programs(request):
+    context = {
+        'sector': 'agriculture_extension_programs',
+    }
+    return render(request, 'pages/sectors/agriculture_extension_programs.html', context)
+
 
 def view_single(request, slug):
     sector = get_sector_by_slug(slug)
