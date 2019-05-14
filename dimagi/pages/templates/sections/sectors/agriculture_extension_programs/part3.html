@@ -3,75 +3,35 @@
 <!-- {% block meta %}
   <meta property="wistia:videoId" content="jzm3ggrinr" />
   <meta property="wistia:videoTrigger" content="demo-video" />
-{% endblock %}
-
-<article class="epic part3" id="part3">
-<section class="pad-bottom-small epic-cover" 
-				 >
-				 
-	<div class="ac-part3   pad-top-medium pad-bottom-medium">
-		<div class="content ">
-			<div class=" ">
-				<h2 class="white">
-					{% blocktrans %}
-						See CommCare in Action
-					{% endblocktrans %}
-				</h2>
-				<p class="white">
-					{% blocktrans %}
-						Watch as our team takes you through the design of a basic <br>
-						app in CommCare
-					{% endblocktrans %}
-				</p>
-				<p class="cta">
-					{% trans 'Watch Now' as video_text %}
-					{% click_hero 'video' as video_click_class %}
-					{% include "partials/wistia_popover.html" with wistia_id='jzm3ggrinr' show_play=True text=video_text click_class=video_click_class %}
-				</p>								
-			</div>				
-		</div>{# .content #}
-		<div class="image off-grid white-lazy-bg"
-				 data-lazybg="true">
-		</div>
-	</div>{# .ac-part3 #}
-
-	
-</section>
-</article> -->
-
+{% endblock %} -->
 
 <article class="epic part3">
-
-		<section class="epic-cover"
-						 data-lazybg="true">
-						 <div class="ac-part3 pad-top-medium pad-bottom-medium">
-								<div class="content content-width-medium">
-					
-									<div class="content-width-large gap-left-medium align-left ">
-										<h2 class="white">
-												{% blocktrans %}
-												See CommCare in Action
-												{% endblocktrans %}
-										</h2>
-										<p class="white">
-												{% blocktrans %}
-												Watch as our team takes you through the design of a basic <br>
-												app in CommCare
-												{% endblocktrans %}
-												<p class="cta">
-														{% trans 'Watch Now' as video_text %}
-														{% click_hero 'video' as video_click_class %}
-														{% include "partials/wistia_popover.html" with wistia_id='jzm3ggrinr' show_play=True text=video_text click_class=video_click_class %}
-													</p>
-										</p>				
-									</div>				
-							</div>{# .content #}
-							<div class="image off-grid white-lazy-bg"
-									data-lazybg="true">
-							</div>
-						</div>
-							
-		</div>
-		
-		</section>
-	</article>
+	<section class="epic-cover aspect-ratio-rect"
+					 data-lazybg="true">
+		<div class="ac-part3 pad-top-medium pad-bottom-medium pad-top-medium-at-small pad-left-large-at-small">
+			<div class="content content-width-medium">
+				<div class=" content-width-small">
+					<h2 class="white">
+							{% blocktrans %}
+							See CommCare in Action
+							{% endblocktrans %}
+					</h2>
+					<p class="white">
+						{% blocktrans %}
+							Watch as our team takes you through the design of a basic <br>
+							app in CommCare
+						{% endblocktrans %}							
+					</p>		
+					<p class="cta">
+						{% trans 'Watch Now' as video_text %}
+						{% click_hero 'video' as video_click_class %}
+						{% include "partials/wistia_popover.html" with wistia_id='jzm3ggrinr' show_play=True text=video_text click_class=video_click_class %}
+					</p>		
+				</div>				
+			</div>{# .content #}
+			<div class="phone-image off-grid white-lazy-bg"
+					 data-lazybg="true">
+			</div>
+		</div> {# .ac-part3 #}							
+	</section>
+</article>

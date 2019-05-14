@@ -9,13 +9,20 @@
     small: 280px,
     medium: 280px,
     large: 280px,
-    extra-large: 320px,
+    extra-large: 340px,
 	);
 	@include make-bg(hero-data-image, '../../../pages/sectors/agriculture-extension-programs/intro/hero', $_base-height, $_height-by-size);
 }
 
 .part3 {
-	@include make-bg(epic-cover, '../../../pages/sectors/agriculture-extension-programs/part3/hero');
+  $_base-height: 620px;
+    $_height-by-size: (
+      small: 620px,
+      medium: 375px,
+      large: 397px,
+      extra-large: 440px,
+      );
+	@include make-bg(epic-cover, '../../../pages/sectors/agriculture-extension-programs/part3/hero', $_base-height, $_height-by-size);
 }
 .center {
   display: block;
@@ -29,17 +36,17 @@
       small: 290px,
       medium: 290px,
       large: 290px,
-      extra-large: 292px,
+      extra-large: 290px,
     );
-    @include make-bg(image, '../../../pages/sectors/agriculture-extension-programs/news/Phone', $_base-height, $_height-by-size, '.png');
+    @include make-bg(phone-image, '../../../pages/sectors/agriculture-extension-programs/news/Phone', $_base-height, $_height-by-size, '.png');
   
     @media (min-width: $width-desktop) {
       .off-grid {
-        top: 30px;
+        top: 10%;
         left: 0;
         position: absolute;
         right: auto;
-        width: 70%;
+        width: 100%;
         z-index: 1;
       }
   
@@ -53,4 +60,8 @@
 
   .ac-part3 .image .bg-loader{
     background-color: transparent;
+}
+
+.part3 .aspect-ratio-rect{
+  padding-top:calc(31% - 10px);
 }
