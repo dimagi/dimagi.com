@@ -16,6 +16,12 @@ def view_all(request):
     }
     return render(request, 'pages/sectors/view_all.html', context)
 
+def disease_treatment(request):
+    context = {
+        'sector': 'disease_treatment',
+    }
+    return render(request, 'pages/sectors/disease_treatment.html', context)
+
 
 def view_single(request, slug):
     sector = get_sector_by_slug(slug)
