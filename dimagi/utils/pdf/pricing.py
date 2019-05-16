@@ -407,3 +407,4 @@ def get_pricing_pdf(groups, is_monthly=False):
 
     doc.build(story)
     return data
+    
