@@ -16,12 +16,12 @@
 
 .part3 {
   $_base-height: 620px;
-    $_height-by-size: (
-      small: 620px,
-      medium: 375px,
-      large: 397px,
-      extra-large: 440px,
-      );
+  $_height-by-size: (
+    small: 620px,
+    medium: 375px,
+    large: 397px,
+    extra-large: 440px,
+  );
 	@include make-bg(epic-cover, '../../../pages/sectors/agriculture-extension-programs/part3/hero', $_base-height, $_height-by-size);
 }
 .center {
@@ -31,35 +31,33 @@
 }
 
 .ac-part3 {
-    $_base-height: 290px;
-    $_height-by-size: (
-      small: 290px,
-      medium: 290px,
-      large: 290px,
-      extra-large: 290px,
-    );
-    @include make-bg(phone-image, '../../../pages/sectors/agriculture-extension-programs/news/Phone', $_base-height, $_height-by-size, '.png');
-  
-    @media (min-width: $width-desktop) {
-      .off-grid {
-        top: 10%;
-        left: 0;
-        position: absolute;
-        right: auto;
-        width: 100%;
-        z-index: 1;
-      }
-  
-      .content {
-        position: relative;
-        z-index: 2;
-      }
+  $_base-height: 290px;
+  $_height-by-size: (
+    small: 290px,
+    medium: 290px,
+    large: 290px,
+    extra-large: 290px,
+  );
+  @include make-bg(phone-image, '../../../pages/sectors/agriculture-extension-programs/news/Phone', $_base-height, $_height-by-size, '.png');
+
+  @media (min-width: $width-desktop) {
+    .off-grid {
+      top: 10%;
+      left: 0;
+      position: absolute;
+      right: auto;
+      width: 100%;
+      z-index: 1;
     }
-
+    .content {
+      position: relative;
+      z-index: 2;
+    }
   }
+}
 
-  .ac-part3 .image .bg-loader{
-    background-color: transparent;
+.ac-part3 .image .bg-loader{
+  background-color: transparent;
 }
 
 .part3 .aspect-ratio-rect{
