@@ -1,0 +1,158 @@
+// @import 'app/mixins/background';
+// @import 'app/variables/colors';
+// @import 'app/variables/sizes';
+// @import 'app/variables/type';
+
+// #ag-intro {
+//   $_base-height: 190px;
+//   $_height-by-size: (
+//     small: 280px,
+//     medium: 280px,
+//     large: 280px,
+//     extra-large: 320px,
+// 	);
+// 	@include make-bg(hero-data-image, '../../../pages/sectors/maternal-and-newborn-health/intro/hero', $_base-height, $_height-by-size);
+// }
+
+// .part3 {
+// 	@include make-bg(epic-cover, '../../../pages/sectors/maternal-and-newborn-health/part3/hero');
+// }
+
+// // .ac-part3 {
+
+// //   $_base-height: 290px;
+// //   $_height-by-size: (
+// //     small: 150px,
+// //     medium: 180px,
+// //     large: 200px,
+// //     extra-large: 220px,
+// //   );
+// //   @include make-bg(phone-image, '../../pages/sectors/agriculture-extension-programs/news/Phone', $_base-height, $_height-by-size);
+
+// //   @media (min-width: $width-desktop) {
+// //     .off-grid {
+// //       top: 0;
+// //       left: 0;
+// //       position: absolute;
+// //       right: auto;
+// //       width: 100%;
+// //       z-index: 1;
+// //     }
+
+// //     .content {
+// //       position: relative;
+// //       z-index: 2;
+// //     }
+// // 	}
+// // }
+// .center {
+//   display: block;
+//   margin-left: auto;
+//   margin-right: auto;
+// }
+
+
+// .ac-part3 {
+//     $_base-height: 290px;
+//     $_height-by-size: (
+//       small: 290px,
+//       medium: 290px,
+//       large: 290px,
+//       extra-large: 292px,
+//     );
+//     @include make-bg(image, '../../../pages/sectors/maternal-and-newborn-health/news/Phone', $_base-height, $_height-by-size, '.png');
+  
+//     @media (min-width: $width-desktop) {
+//       .off-grid {
+//         bottom: 0;
+//         left: 0;
+//         position: absolute;
+//         right: auto;
+//         width: 100%;
+//         z-index: 1;
+//       }
+  
+//       .content {
+//         position: relative;
+//         z-index: 2;
+//       }
+//     }
+  
+//     .bg-loader {
+//       background-color: $color-accent-gray;
+//     }
+//   }
+
+//   .ac-part3 .image .bg-loader{
+//       background-color: transparent;
+//   }
+
+
+
+
+@import 'app/mixins/background';
+@import 'app/variables/colors';
+@import 'app/variables/sizes';
+@import 'app/variables/type';
+
+#ag-intro {
+  $_base-height: 190px;
+  $_height-by-size: (
+    small: 280px,
+    medium: 280px,
+    large: 280px,
+    extra-large: 320px,
+	);
+	@include make-bg(hero-data-image, '../../../pages/sectors/maternal-and-newborn-health/intro/hero', $_base-height, $_height-by-size);
+}
+
+.part3 {
+  $_base-height: 620px;
+    $_height-by-size: (
+      small: 620px,
+      medium: 375px,
+      large: 397px,
+      extra-large: 440px,
+      );
+	@include make-bg(epic-cover, '../../../pages/sectors/maternal-and-newborn-health/part3/hero', $_base-height, $_height-by-size);
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ac-part3 {
+    $_base-height: 290px;
+    $_height-by-size: (
+      small: 290px,
+      medium: 290px,
+      large: 290px,
+      extra-large: 292px,
+    );
+    @include make-bg(phone-image, '../../../pages/sectors/maternal-and-newborn-health/news/Phone', $_base-height, $_height-by-size, '.png');
+  
+    @media (min-width: $width-desktop) {
+      .off-grid {
+        top: 10%;
+        left: 0;
+        position: absolute;
+        right: auto;
+        width: 100%;
+        z-index: 1;
+      }
+  
+      .content {
+        position: relative;
+        z-index: 2;
+      }
+    }
+
+  }
+
+  .ac-part3 .phone-image .bg-loader{
+    background-color: transparent;
+}
+.part3 .aspect-ratio-rect{
+  padding-top:calc(31% - 10px);
+}

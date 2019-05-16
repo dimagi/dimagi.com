@@ -25,3 +25,9 @@ def view_single(request, slug):
         'sector': sector,
     }
     return render(request, 'pages/sectors/view_single.html', context)
+
+def maternal_and_child_health(request):
+    context = {
+        'sector': 'maternal_and_child_health',
+    }
+    return render(request, 'pages/sectors/maternal_and_child_health.html', context)
