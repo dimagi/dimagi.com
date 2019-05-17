@@ -166,14 +166,6 @@ a:not(.button).tile-more {
   @include make-bg(case-list-image, '../../../pages/pillar/mdc/chapter6/case-list', $_base-height, $_height-by-size);
 }
 
-// #chapter-1 {
-//   $_base-height: auto;
-//   $_height-by-size: (
-//     small: 324px,
-//     medium: 360px,
-//   );
-//   @include make-bg(cms-india, '../../../pages/pillar/mdc/chapter1/cms/hero', $_base-height, $_height-by-size);
-// }
 
 .cms-india {
   @include background-cover('../../../pages/pillar/mdc/chapter1/cms/hero.large.jpg');
