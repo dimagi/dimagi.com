@@ -2,62 +2,63 @@
 @import 'app/variables/colors';
 @import 'app/variables/sizes';
 @import 'app/variables/type';
+
 .blog-page {
-    @include make-bg(hero, '../../pages/blog/hero');
+  @include make-bg(hero, '../../pages/blog/hero');
 }
 
 .post-thumbnail {
-    @include background-placeholder();
-    background-position: center;
+  @include background-placeholder();
+  background-position: center;
 }
 
 a.post {
-    color: $color-text !important; // scss-lint:disable ImportantRule
-    font-weight: $font-weight-regular;
-    &:hover {
-        .post-thumbnail::after {
-            opacity: .5;
-        }
+  color: $color-text !important; // scss-lint:disable ImportantRule
+  font-weight: $font-weight-regular;
+  &:hover {
+    .post-thumbnail::after {
+      opacity: .5;
     }
+  }
 }
 
 .category-tile {
-    position: relative;
-    .cta {
-        bottom: 30px;
-        left: 0;
-        margin: 0;
-        padding: 0;
-        position: absolute;
-        width: 100%;
-    }
+  position: relative;
+  .cta {
+    bottom: 30px;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+  }
 }
 
 .category-desc {
-    margin-bottom: 20px;
-    br {
-        display: none;
-    }
+  margin-bottom: 20px;
+  br {
+    display: none;
+  }
 }
 
 .post-author-image {
-    width: 80px;
-    @include background-placeholder();
+  width: 80px;
+  @include background-placeholder();
 }
 
 .post-content-text {
-    img {
-        margin-bottom: $space-small;
-    }
-    h2,
-    h3,
-    h4 {
-        font-size: $font-size-extra-large;
-    }
+  img {
+    margin-bottom: $space-small;
+  }
+  h2,
+  h3,
+  h4 {
+    font-size: $font-size-extra-large;
+  }
 }
 
 .powerful-data {
-    $_base-height: 175px;
-    $_height-by-size: ( extra-small: 205px, small: 270px, medium: 210px, large: 265px, extra-large: 320px, );
-    @include make-bg(powerful-data-image, '../../pages/blog/cta', $_base-height, $_height-by-size, '.png');
+  $_base-height: 175px;
+  $_height-by-size: ( extra-small: 205px, small: 270px, medium: 210px, large: 265px, extra-large: 320px, );
+  @include make-bg(powerful-data-image, '../../pages/blog/cta', $_base-height, $_height-by-size, '.png');
 }
