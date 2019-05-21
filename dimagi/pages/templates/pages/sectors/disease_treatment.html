@@ -6,6 +6,8 @@
   Disease Treatment
 {% endblocktrans %}{% endblock %}
 
+{% block body_class %}agriculture-page tucked-hero{% endblock %}
+
 {% block stylesheets %}
   {% compress css %}
     <link href="{% sass_src 'style/pages/sectors/disease_treatment.scss' %}" rel="stylesheet" media="screen" type="text/css" />
@@ -13,6 +15,9 @@
 {% endblock %}
 
 {% block hero %}
+  <div class="blue-theme">
+    <section class="hero hero-blog" id="hero"></section>
+  </div>
 {% endblock %}
 
 {% block content %}

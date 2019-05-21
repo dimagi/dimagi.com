@@ -5,7 +5,9 @@
          id="sub-nav">
   <div class="content">
     <div class="actions">
-      <a href="https://share.hsforms.com/1zvR8iQQlR0yEil2QNC2zvAas66" class="hide-until-medium {% click_subnav 'download' %}">
+      <a class="primary"
+          id="hubspot-download-form-pdf-summary"
+         href="https://share.hsforms.com/1zvR8iQQlR0yEil2QNC2zvAas66">
         <span>
           {% blocktrans %}
             Download PDF Summary
@@ -26,14 +28,6 @@
           {% blocktrans %}
             All Sectors
           {% endblocktrans %}
-        </a>
-        <a href="https://share.hsforms.com/1zvR8iQQlR0yEil2QNC2zvAas66"
-           class="hide-at-medium {% click_subnav 'download-pdf-mobile' %}">
-          <span>
-            {% blocktrans %}
-              Download PDF Summary 66
-            {% endblocktrans %}
-          </span>
         </a>
         <a href="#overview"
            class="{% click_subnav 'overview' %}">
@@ -58,7 +52,7 @@
           {% blocktrans %}
             News
           {% endblocktrans %}
-        </a>
+        </a>  
       </div>{# .content #}
     </div>{# .destinations #}
   </div>{# .content #}
