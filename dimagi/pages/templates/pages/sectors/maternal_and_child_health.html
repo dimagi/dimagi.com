@@ -6,13 +6,18 @@
 Maternal & Child Healthcare
 {% endblocktrans %}{% endblock %}
 
+{% block body_class %}meternal-health-page tucked-hero{% endblock %}
+
 {% block stylesheets %}
   {% compress css %}
     <link href="{% sass_src 'style/pages/sectors/maternal-and-child-health.scss' %}" rel="stylesheet" media="screen" type="text/css" />
   {% endcompress %}
 {% endblock %}
 
-{% block hero %}  
+{% block hero %} 
+<div class="blue-theme">
+  <section class="hero hero-blog" id="hero"></section>
+</div> 
 {% endblock %}
 
 {% block content %}
