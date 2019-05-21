@@ -9,3 +9,6 @@ from dimagi.utils.decorators.enable_amp import enable_amp
 @set_amp_page_type(AmpPageType.PILLAR)
 def mobile_data_collection(request):
     return render(request, 'pages/pillar/mobile_data_collection.html')
+
+def data_collection(request):
+    return render(request, 'pages/pillar/data_collection.html')
