@@ -3,7 +3,7 @@
 @import 'app/variables/sizes';
 @import 'app/variables/type';
 
-#ag-intro {
+#page-intro {
   $_base-height: 190px;
   $_height-by-size: (
     small: 280px,
@@ -30,7 +30,7 @@
   margin-right: auto;
 }
 
-.ac-part3 {
+.part3 {
   $_base-height: 290px;
   $_height-by-size: (
     small: 290px,
@@ -56,7 +56,7 @@
   }
 }
 
-.ac-part3 .image .bg-loader{
+.part3 .image .bg-loader{
   background-color: transparent;
 }
 
