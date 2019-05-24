@@ -5,83 +5,89 @@
   <div class="accent-gray-bg" >
     <div class="content pad-top-medium pad-bottom-medium">
       <div class="grid grid-3-at-large grid-1-at-medium grid-row-equal-heights grid-col-space-small">
-        <div class="column  pad-bottom-small ">
+        <div class="column">
           <div class="pad-bottom-base white-bg">
             <img  src="../../../../static/pages/sectors/disease-treatment/programs/FeaturedProject1.jpg" />
             <div class="pad-line">
-              <h5 class=""><strong class="body-color">
-                {% blocktrans %}
-                  Médecins Sans Frontières  <br>
-                  South Africa
-                {% endblocktrans %}
-              </strong></h5>
+              <h5 class="">
+                <strong class="body-color">
+                  {% blocktrans %}
+                    Médecins Sans Frontières  <br>
+                    South Africa
+                  {% endblocktrans %}
+                </strong>
+              </h5>
               <p class="body-color">
                 {% blocktrans %}
-                  MSF used CommCare to track HIV/AIDs treatment attendance in real time, make referrals to clinics, and identify defaulters.
+                  MSF used CommCare to track HIV/AIDs treatment attendance in real time, make
+                  referrals to clinics, and identify defaulters.
                 {% endblocktrans %}
               </p>
-              <p><a href="#agri-ep-feature-card-1" class="link-gray">
+              <p>
+                <a href="#modal-feature-card-1" class="link-gray">
                   {% blocktrans %}
                     Read More &gt;
-                {% endblocktrans %}
-              </a></p>
-            </div>
+                  {% endblocktrans %}
+                </a>
+              </p>
+            </div> {# .pad-line #}
           </div>
-        </div>{# .column #}
-
-        <div class="column pad-bottom-small">
+        </div> {# .column #}
+        <div class="column">
           <div class="pad-bottom-base white-bg">
             <img src="../../../../static/pages/sectors/disease-treatment/programs/FeaturedProject2.jpg" />
-          <div class="pad-line">
-            <h5 class="">
-              <strong class="body-color">
+            <div class="pad-line">
+              <h5 class="">
+                <strong class="body-color">
+                  {% blocktrans %}
+                    Innovations for Poverty Action <br>
+                    Sierra Leone and Guinea
+                  {% endblocktrans %}
+                </strong>
+              </h5>
+              <p class="body-color">
                 {% blocktrans %}
-                  Innovations for Poverty Action <br>
-                  Sierra Leone and Guinea
+                  A CommCare app replaced a paper-based system for Ebola management, registering
+                  contacts and follow-ups.
                 {% endblocktrans %}
-              </strong>
-            </h5>
-            <p class="body-color">
-              {% blocktrans %}
-                A CommCare app replaced a paper-based system for Ebola management, registering contacts and follow-ups.
-              {% endblocktrans %}
-            </p>
-            <p>
-              <a href="#agri-ep-feature-card-2" class="link-gray">
-                {% blocktrans %}
-                  Read More &gt;
-                {% endblocktrans %}
-              </a>
-            </p>
+              </p>
+              <br>
+              <p>
+                <a href="#modal-feature-card-2" class="link-gray">
+                  {% blocktrans %}
+                    Read More &gt;
+                  {% endblocktrans %}
+                </a>
+              </p>
+            </div> {# .pad-line #}
           </div>
-          </div>
-        </div>{# .column #}
-
-        <div class="column pad-bottom-small">
+        </div> {# .column #}
+        <div class="column">
           <div class="pad-bottom-base white-bg">
             <img src="../../../../static/pages/sectors/disease-treatment/programs/FeaturedProject3.jpg" />
-          <div class="pad-line">
-            <h5 class="">
-              <strong class="body-color">
+            <div class="pad-line">
+              <h5 class="">
+                <strong class="body-color">
+                  {% blocktrans %}
+                    The International Union for TB and Lung Disease <br>
+                    India
+                  {% endblocktrans %}
+                </strong>
+              </h5>
+              <p class="body-color">
                 {% blocktrans %}
-                  The International Union for TB and Lung Disease <br>
-                  India
+                  In rural Jharkhand, CommCare improves TB case detection, follow-up rates,
+                  symptomatic case management, and DOTS adherence.
                 {% endblocktrans %}
-              </strong>
-            </h5>
-            <p class="body-color">
-              {% blocktrans %}
-                In rural Jharkhand, CommCare improves TB case detection, follow-up rates, symptomatic case management, and DOTS adherence.
-              {% endblocktrans %}
-            </p>
-            <p>
-              <a href="#agri-ep-feature-card-3" class="link-gray">
-                {% blocktrans %}
-                  Read More &gt;
-                {% endblocktrans %}
-              </a>
-            </p>
-          </div>
+              </p>
+              <p>
+                <a href="#modal-feature-card-3" class="link-gray">
+                  {% blocktrans %}
+                    Read More &gt;
+                  {% endblocktrans %}
+                </a>
+              </p>
+            </div> {# .pad-line #}
           </div>
         </div> {# .column #}
       </div> {# .grid #}
@@ -93,7 +99,7 @@
   <div class="modal"
        data-dismissible="true"
        data-size="medium"
-       id="agri-ep-feature-card-1">
+       id="modal-feature-card-1">
     <div class="modal-scroll">
       <div class="modal-wrapper">
         <a href="#" class="modal-close-button"></a>
@@ -101,37 +107,45 @@
           <div class="grid grid-2-at-large grid-1-at-medium grid-row-equal-heights ">
             <div class="column pad-top-small">
               <img src="../../../../static/pages/sectors/disease-treatment/programs/FeaturedProject1.jpg" />
-            </div>
+            </div> {# .column #}
             <div class="column pad-top-small">
-              <h5 class="">
-                <strong class="body-color">
+              <h5>
+                <strong>
                   {% blocktrans %}
                     Médecins Sans Frontières  <br>
                     South Africa
                   {% endblocktrans %}
                 </strong>
               </h5>
-              <p class="body-color">
+              <p>
                 {% blocktrans %}
-                  MSF used CommCare to track HIV/AIDs treatment attendance in real time, make referrals to clinics, and identify defaulters.
+                  MSF used CommCare to track HIV/AIDs treatment attendance in real time, make
+                  referrals to clinics, and identify defaulters.
                 {% endblocktrans %}
               </p>
-              <p class="body-color">
+              <p>
                 {% blocktrans %}
-                  Médecins Sans Frontières (or, Doctors Without Borders) tested a proof of concept CommCare App in the community of Khayelitsha, Cape Town to keep track of patients in ART Adherence Club (AC) clubs. By using the application, MSF staff were able to track club attendance in real time, make referrals to local clinics, and identify defaulters. The system also offered individual feedback to facilitators based on their mobile activity and shared regular email reports of clubs activities with their M&E team. Filters on the raw data identified at-risk patients and sent alerts to refer high-risk or defaulting clients to clinics.
+                  Médecins Sans Frontières (or, Doctors Without Borders) tested a proof of concept
+                  CommCare App in the community of Khayelitsha, Cape Town to keep track of patients
+                  in ART Adherence Club (AC) clubs. By using the application, MSF staff were able to
+                  track club attendance in real time, make referrals to local clinics, and identify
+                  defaulters. The system also offered individual feedback to facilitators based on
+                  their mobile activity and shared regular email reports of clubs activities with
+                  their M&E team. Filters on the raw data identified at-risk patients and sent alerts
+                  to refer high-risk or defaulting clients to clinics.
                 {% endblocktrans %}
               </p>
-            </div>
-          </div>
-        </div>{# .content #}
-      </div>{# .modal-wrapper #}
-    </div>{# .modal-scroll #}
-  </div>{# .modal #}
+            </div> {# .column #}
+          </div> {# .grid #}
+        </div> {# .content #}
+      </div> {# .modal-wrapper #}
+    </div> {# .modal-scroll #}
+  </div> {# .modal #}
 
   <div class="modal"
        data-dismissible="true"
        data-size="medium"
-       id="agri-ep-feature-card-2">
+       id="modal-feature-card-2">
     <div class="modal-scroll">
       <div class="modal-wrapper">
         <a href="#" class="modal-close-button"></a>
@@ -139,37 +153,44 @@
           <div class="grid grid-2-at-large grid-1-at-medium grid-row-equal-heights ">
             <div class="column pad-top-small">
               <img src="../../../../static/pages/sectors/disease-treatment/programs/FeaturedProject2.jpg" />
-            </div>
+            </div> {# .column #}
             <div class="column pad-top-small">
-              <h5 class="">
-                <strong class="body-color">
+              <h5>
+                <strong>
                   {% blocktrans %}
                     Innovations for Poverty Action <br>
                     Sierra Leone and Guinea
                   {% endblocktrans %}
                 </strong>
               </h5>
-              <p class="body-color">
+              <p>
                 {% blocktrans %}
-                  A CommCare app replaced a paper-based system for Ebola management, registering contacts and follow-ups.
+                  A CommCare app replaced a paper-based system for Ebola management, registering
+                  contacts and follow-ups.
                 {% endblocktrans %}
               </p>
-              <p class="body-color">
+              <p>
                 {% blocktrans %}
-                  Together with the London School of Hygiene and Tropical Medicine (LSHTM) and International Medical Corps (IMC), IPA developed a two-armed cluster-randomized trial to evaluate the effectiveness of a smartphone-based CommCare data collection and management system relative to their prior paper-based system for Ebola contact tracing and monitoring in Sierra Leone. The 11 chiefdoms in Port Loko district were randomized to receive either the CommCare intervention or the paper-based system control.
+                  Together with the London School of Hygiene and Tropical Medicine (LSHTM) and
+                  International Medical Corps (IMC), IPA developed a two-armed cluster-randomized
+                  trial to evaluate the effectiveness of a smartphone-based CommCare data collection
+                  and management system relative to their prior paper-based system for Ebola contact
+                   tracing and monitoring in Sierra Leone. The 11 chiefdoms in Port Loko district
+                    were randomized to receive either the CommCare intervention or the paper-based
+                    system control.
                 {% endblocktrans %}
               </p>
-            </div>
-          </div>
-        </div>{# .content #}
-      </div>{# .modal-wrapper #}
-    </div>{# .modal-scroll #}
+            </div> {# .column #}
+          </div> {# .grid #}
+        </div> {# .content #}
+      </div> {# .modal-wrapper #}
+    </div> {# .modal-scroll #}
   </div>{# .modal #}
 
   <div class="modal"
-     data-dismissible="true"
-     data-size="medium"
-     id="agri-ep-feature-card-3">
+       data-dismissible="true"
+       data-size="medium"
+       id="modal-feature-card-3">
     <div class="modal-scroll">
       <div class="modal-wrapper">
         <a href="#" class="modal-close-button"></a>
@@ -177,30 +198,35 @@
           <div class="grid grid-2-at-large grid-1-at-medium grid-row-equal-heights ">
             <div class="column pad-top-small">
               <img src="../../../../static/pages/sectors/disease-treatment/programs/FeaturedProject3.jpg" />
-            </div>
+            </div> {# .column #}
             <div class="column pad-top-small">
-              <h5 class="">
-                <strong class="body-color">
+              <h5>
+                <strong>
                   {% blocktrans %}
                     The International Union for TB and Lung Disease <br>
                     India
                   {% endblocktrans %}
                 </strong>
               </h5>
-              <p class="body-color">
+              <p>
                 {% blocktrans %}
-                  In rural Jharkhand, CommCare improves TB case detection, follow-up rates, symptomatic case management, and DOTS adherence.
+                  In rural Jharkhand, CommCare improves TB case detection, follow-up rates,
+                  symptomatic case management, and DOTS adherence.
                 {% endblocktrans %}
               </p>
-              <p class="body-color">
+              <p>
                 {% blocktrans %}
-                  In rural Jharkhand, Rural Health Care Providers (RHCP) and Lab Technicians (LT) use CommCare to improve TB case detection, follow-up rates, symptomatic case management, and DOTS adherence. The RHCP refers any symptomatic cases to the LT, where sputum is tested for TB. If lost to follow up, an SMS is sent to the patient, RHCP, and LT. An SMS is also sent to the patient with their final lab results.
+                  In rural Jharkhand, Rural Health Care Providers (RHCP) and Lab Technicians (LT)
+                  use CommCare to improve TB case detection, follow-up rates, symptomatic case
+                  management, and DOTS adherence. The RHCP refers any symptomatic cases to the LT,
+                  where sputum is tested for TB. If lost to follow up, an SMS is sent to the patient,
+                  RHCP, and LT. An SMS is also sent to the patient with their final lab results.
                 {% endblocktrans %}
               </p>
-            </div>
-          </div>
-        </div>{# .content #}
-      </div>{# .modal-wrapper #}
-    </div>{# .modal-scroll #}
-  </div>{# .modal #}
+            </div> {# .column #}
+          </div> {# .grid #}
+        </div> {# .content #}
+      </div> {# .modal-wrapper #}
+    </div> {# .modal-scroll #}
+  </div> {# .modal #}
 {% endblock %}

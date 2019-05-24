@@ -6,19 +6,19 @@
 {% endblock %}
 
 <article class="epic part3">
-  <section class="epic-cover aspect-ratio-rect"
-           data-lazybg="true">
-    <div class="ac-part3 pad-top-medium pad-bottom-medium pad-top-medium-at-small pad-left-large-at-small">
+  <section class="epic-cover"
+    data-lazybg="true">
+    <div class="commcare-text pad-top-base pad-top-medium-at-medium pad-top-medium-at-large pad-top-medium-at-extra-large pad-top-base-at-small pad-bottom-medium pad-left-large-at-small">
       <div class="content content-width-medium">
         <div class=" content-width-small">
-          <h2 class="white">
+          <h2 class="white mb-10">
             {% blocktrans %}
               See CommCare in Action
             {% endblocktrans %}
           </h2>
           <p class="white">
             {% blocktrans %}
-              Watch as our team takes you through the design of a basic <br>
+              Watch as our team takes you through the design of a basic
               app in CommCare
             {% endblocktrans %}
           </p>
@@ -28,10 +28,10 @@
             {% include "partials/wistia_popover.html" with wistia_id='jzm3ggrinr' show_play=True text=video_text click_class=video_click_class %}
           </p>
         </div>
-      </div>{# .content #}
+      </div> {# .content #}
       <div class="phone-image off-grid white-lazy-bg"
-           data-lazybg="true">
+        data-lazybg="true">
       </div>
-    </div> {# .ac-part3 #}
+    </div> {# .commcare-text #}
   </section>
 </article>

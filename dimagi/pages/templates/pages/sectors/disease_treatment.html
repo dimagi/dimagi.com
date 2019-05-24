@@ -6,7 +6,7 @@
   Disease Treatment
 {% endblocktrans %}{% endblock %}
 
-{% block body_class %}agriculture-page tucked-hero{% endblock %}
+{% block body_class %}disease-treatment-page tucked-hero{% endblock %}
 
 {% block stylesheets %}
   {% compress css %}
@@ -52,6 +52,20 @@
       </div>{# .modal-wrapper #}
     </div>{# .modal-scroll #}
   </div>{# .modal #}
+
+  <div class="modal"
+       data-dismissible="true"
+       data-size="medium"
+       id="hubspot-download-form-pdf-summary">
+    <div class="modal-scroll">
+      <div class="modal-wrapper">
+        <a href="#" class="modal-close-button"></a>
+        <div class="content pad-horz-medium-at-medium pad-horz-line pad-vert-none turquoise-theme">
+          <section id="download-pdf-summary-form-content"></section>
+        </div>{# .content #}
+      </div>{# .modal-wrapper #}
+    </div>{# .modal-scroll #}
+  </div>{# .modal #}
 {% endblock %}
 
 {% block js %}
@@ -60,11 +74,22 @@
   <![endif]-->
   <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
   <script>
+    //  Schedule demo form
     hbspt.forms.create({
       portalId: "503070",
       formId: "afb4d5a0-826f-4a56-8c21-552d4b6dafa3",
       target: "#schedule-demo-form-content",
       css: ""
+    });
+    //  Download pdf summary form
+    hbspt.forms.create({
+      portalId: "503070",
+      formId: "f0a1a767-82f9-48d1-a4ba-4a3a4b21107c",
+      target: "#download-pdf-summary-form-content",
+      css: "",
+      onFormSubmit: function () {
+        window.open('https://cdn2.hubspot.net/hubfs/503070/Sector%20PDFs/CommCare_DiseaseTreatment.pdf', "_blank");
+      },
     });
   </script>
 {% endblock %}
