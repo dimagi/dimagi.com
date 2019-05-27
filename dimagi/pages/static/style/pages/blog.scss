@@ -15,6 +15,7 @@
 a.post {
   color: $color-text !important; // scss-lint:disable ImportantRule
   font-weight: $font-weight-regular;
+
   &:hover {
     .post-thumbnail::after {
       opacity: .5;
@@ -24,6 +25,7 @@ a.post {
 
 .category-tile {
   position: relative;
+
   .cta {
     bottom: 30px;
     left: 0;
@@ -36,6 +38,7 @@ a.post {
 
 .category-desc {
   margin-bottom: 20px;
+
   br {
     display: none;
   }
@@ -50,6 +53,7 @@ a.post {
   img {
     margin-bottom: $space-small;
   }
+
   h2,
   h3,
   h4 {
@@ -59,6 +63,12 @@ a.post {
 
 .powerful-data {
   $_base-height: 175px;
-  $_height-by-size: ( extra-small: 205px, small: 270px, medium: 210px, large: 265px, extra-large: 320px, );
+  $_height-by-size: (
+    extra-small: 205px,
+    small: 270px,
+    medium: 210px,
+    large: 265px,
+    extra-large: 320px,
+  );
   @include make-bg(powerful-data-image, '../../pages/blog/cta', $_base-height, $_height-by-size, '.png');
 }
