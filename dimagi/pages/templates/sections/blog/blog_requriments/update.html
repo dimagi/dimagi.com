@@ -1,0 +1,18 @@
+{% extends "sections/blog/blog_requriments/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block icon %}
+  {% include "svg/blog/icon/data_requriments/update.html" %}
+{% endblock %}
+
+{% block header %}{% blocktrans %}
+  Will you need to update your data?
+{% endblocktrans %}{% endblock %}
+
+{% block content %}{% blocktrans %}
+  Often, programs require that workers revisit data source (beneficiaries, locations, etc)
+  to collect updated information. In this case, a platform that allows you to link and review multiple data
+  entries with a feature, such as case management, can be helpful. Otherwise, a paper-based program might require
+  frontline workers to carry around several forms to have the full context of a patient's medical history.
+{% endblocktrans %}{% endblock %}

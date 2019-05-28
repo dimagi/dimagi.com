@@ -1,0 +1,21 @@
+{% extends "sections/blog/mobile_survey/_base.html" %}
+{% load i18n %}
+
+{% block icon %}
+  {% include "svg/blog/icon/environment_affect/large.html" %}
+{% endblock %}
+
+{% block header %}{% blocktrans %}
+  How large is your data collection program?
+{% endblocktrans %}{% endblock %}
+
+{% block content %}{% blocktrans %}
+  The number of end users in your program is one of the most important considerations for deciding on a mobile data
+  collection tool, because not all platforms are built for scale. If you expect your program to grow, ask your prospective
+  technology vendor if they have any current projects at scale. This will give you a sense of whether a nation-wide
+  project, for example, is possible with their data collection tool. Our recommendation is to invest in a tool that can grow
+  with your program so you are prepared at any stage.
+  You should also be aware that certain tools limit the number of end users for lower-tier subscriptions, but may offer
+  strong supervisory functionality for larger deployments on higher-tier accounts.
+{% endblocktrans %}{% endblock %}
+
