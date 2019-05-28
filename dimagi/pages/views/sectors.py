@@ -16,6 +16,12 @@ def view_all(request):
     }
     return render(request, 'pages/sectors/view_all.html', context)
 
+def nutrition_programs(request):
+    context = {
+        'sector': 'nutrition_programs',
+    }
+    return render(request, 'pages/sectors/nutrition_programs.html', context)
+
 
 def view_single(request, slug):
     sector = get_sector_by_slug(slug)
@@ -25,3 +31,4 @@ def view_single(request, slug):
         'sector': sector,
     }
     return render(request, 'pages/sectors/view_single.html', context)
+    
