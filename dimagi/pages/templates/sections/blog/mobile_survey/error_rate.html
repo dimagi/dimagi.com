@@ -1,0 +1,15 @@
+{% extends "sections/blog/mobile_survey/_base.html" %}
+{% load i18n %}
+
+{% block icon %}
+  {% include "svg/blog/icon/mobile_surveys/error_rate.html" %}
+{% endblock %}
+
+{% block header %}{% blocktrans %}
+  High Error Rates
+{% endblocktrans %}{% endblock %}
+
+{% block content %}{% blocktrans %}
+  Human error, such as poor handwriting or typos, mean the data collected is incorrect.
+{% endblocktrans %}{% endblock %}
+

@@ -102,3 +102,7 @@ def post(request, slug):
     context = _get_global_context()
     context['post'] = _post
     return render(request, 'pages/blog/post.html', context)
+
+def mobile_data_collection_blog_post(request):
+    template= "pages/blog/mobile_blog.html"
+    return render(request, template)
