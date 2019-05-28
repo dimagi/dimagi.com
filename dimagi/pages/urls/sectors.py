@@ -3,7 +3,7 @@ from django.conf.urls import url
 from dimagi.pages.views.sectors import (
     view_all,
     view_single,
-    agriculture_extension_programs
+    agriculture_extension_programs,
 )
 
 
