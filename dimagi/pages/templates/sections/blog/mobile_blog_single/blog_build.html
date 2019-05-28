@@ -1,0 +1,33 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="blog_build blue-theme" id="build">
+  <div class="content content-width-medium pad-top-medium">
+    <div class="grid-1-at-medium grid-reverse">
+      <div class="copy">
+        <div class="grid-1 grid-row-space-line">
+          <div class="column">
+            <h2 class="blue">
+              {% blocktrans %}
+                Build your app on the world’s most powerful mobile data collection platform
+              {% endblocktrans %}
+            </h2>
+            <p>
+              {% blocktrans %}
+                Collect the data you need to drive impact with an app your team will love.
+              {% endblocktrans %}
+            </p>
+          </div>{# .column #}
+          <div class="grid-2-at-medium">
+            {% include 'sections/blog/blog_build/track.html' %}
+            {% include 'sections/blog/blog_build/ofline.html' %}
+            {% include 'sections/blog/blog_build/endusers.html' %}
+            {% include 'sections/blog/blog_build/scale.html' %}
+          </div>
+        </div>{# .grid-flex #}
+      </div>{# .copy #}
+    </div>{# .grid-2-at-medium #}
+  </div>{# .content #}
+ <div class="blog_image off-grid white-lazy-bg hide-until-medium"
+      data-lazybg="true"></div>{# .blog_build .blog_image {} => mdc_tool_blog.scss #}
+</section>

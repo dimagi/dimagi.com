@@ -191,15 +191,16 @@ class FeatureLine(Flowable):
         self.width = inches(7.5)
         self.height = inches(.5)
         self.x = list(map(lambda x: inches(3.2 + 1.2 * x), range(4)))
+        self.Y = list(map(lambda Y: inches(3.2 + 1.2 * Y), range(4)))
         self._style = CommCareStyle()
 
     def wrap(self, *args):
         return self.width, self.height
 
-    def _draw_value(self, x, color, value, slug):
+    def _draw_value(self, x, Y, color, value, slug):
         self.canv.setFillColor(color)
         self.canv.setStrokeColor(color)
-        self.canv.setLineWidth(1)
+        self.canv.setLineWidth(1.5)
         if not isinstance(value, bool):
             value = force_text(value)
             value = value.upper()
@@ -208,13 +209,19 @@ class FeatureLine(Flowable):
             t.setStyle(TableStyle([('VALIGN', (0, -1), (-1, -1), 'MIDDLE')]))
             t.wrapOn(self.canv, inches(1), inches(.5))
             t.drawOn(self.canv, x - inches(.55), inches(0.01))
+            t.drawOn(self.canv, Y - inches(.55), inches(0.01))
         elif value:
-            self.canv.circle(
-                x,
+            self.canv.line(
+                x - inches(.06),
                 inches(.25),
-                inches(.08),
-                stroke=1,
-                fill=0
+                Y - inches(-.01),
+                inches(.21)
+            )
+            self.canv.line(
+                x + inches(.00),
+                inches(.21),
+                Y + inches(.12),
+                inches(.33)
             )
         else:
             self.canv.line(
@@ -233,6 +240,7 @@ class FeatureLine(Flowable):
 
         self._draw_value(
             self.x[0],
+            self.Y[0],
             CommCareStyle.COLOR_GREEN,
             self.support.standard,
             'standard'
@@ -240,6 +248,7 @@ class FeatureLine(Flowable):
 
         self._draw_value(
             self.x[1],
+            self.Y[1],
             CommCareStyle.COLOR_TURQUOISE,
             self.support.pro,
             'pro'
@@ -247,6 +256,7 @@ class FeatureLine(Flowable):
 
         self._draw_value(
             self.x[2],
+            self.Y[2],
             CommCareStyle.COLOR_PURPLE,
             self.support.advanced,
             'advanced'
@@ -254,6 +264,7 @@ class FeatureLine(Flowable):
 
         self._draw_value(
             self.x[3],
+            self.Y[3],
             CommCareStyle.COLOR_BLUE,
             self.support.enterprise,
             'enterprise'
