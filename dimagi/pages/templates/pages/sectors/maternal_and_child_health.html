@@ -21,16 +21,16 @@ Maternal & Child Healthcare
 {% endblock %}
 
 {% block content %}
-  {% include "sections/sectors/maternal_and_child_health/sub_nav.html" %}
-	{% include "sections/sectors/maternal_and_child_health/overview.html" %}
-	{% include "sections/sectors/maternal_and_child_health/part1.html" %}
-	{% include "sections/sectors/maternal_and_child_health/benefit.html" %}
-	{% include "sections/sectors/maternal_and_child_health/part2.html" %}
-	{% include "sections/sectors/maternal_and_child_health/programs.html" %}
-	{% include "sections/sectors/maternal_and_child_health/part3.html" %}
-	{% include "sections/sectors/maternal_and_child_health/news.html" %}
-	{% include "sections/sectors/maternal_and_child_health/part4.html" %}
-	{% include "sections/sectors/maternal_and_child_health/testimonial.html" %}
+    {% include "sections/sectors/maternal_and_child_health/sub_nav.html" %}
+	  {% include "sections/sectors/maternal_and_child_health/overview.html" %}
+	  {% include "sections/sectors/maternal_and_child_health/part1.html" %}
+	  {% include "sections/sectors/maternal_and_child_health/benefit.html" %}
+	  {% include "sections/sectors/maternal_and_child_health/part2.html" %}
+	  {% include "sections/sectors/maternal_and_child_health/programs.html" %}
+	  {% include "sections/sectors/maternal_and_child_health/part3.html" %}
+	  {% include "sections/sectors/maternal_and_child_health/news.html" %}
+	  {% include "sections/sectors/maternal_and_child_health/part4.html" %}
+    {% include "sections/sectors/maternal_and_child_health/testimonial.html" %}
 {% endblock %}
 
 {% block modals %}
@@ -41,13 +41,27 @@ Maternal & Child Healthcare
     <div class="modal-scroll">
       <div class="modal-wrapper">
         <a href="#" class="modal-close-button"></a>
-        <div class="content pad-horz-medium-at-medium pad-horz-line pad-vert-none turquoise-theme">
+        <div class="content pad-horz-medium-at-medium pad-horz-line pad-vert-none blue-theme">
           <h3>
             {% blocktrans %}
               Schedule A Demo
             {% endblocktrans %}
           </h3>
           <section id="schedule-demo-form-content"></section>
+        </div>{# .content #}
+      </div>{# .modal-wrapper #}
+    </div>{# .modal-scroll #}
+  </div>{# .modal #}
+
+  <div class="modal"
+       data-dismissible="true"
+       data-size="medium"
+       id="hubspot-download-form-pdf-summary">
+    <div class="modal-scroll">
+      <div class="modal-wrapper">
+        <a href="#" class="modal-close-button"></a>
+        <div class="content pad-horz-medium-at-medium pad-horz-line pad-vert-none blue-theme">
+          <section id="download-pdf-summary-form-content"></section>
         </div>{# .content #}
       </div>{# .modal-wrapper #}
     </div>{# .modal-scroll #}
@@ -65,6 +79,15 @@ Maternal & Child Healthcare
       formId: "afb4d5a0-826f-4a56-8c21-552d4b6dafa3",
       target: "#schedule-demo-form-content",
       css: ""
+    });
+    hbspt.forms.create({
+      portalId: "503070",
+      formId: "949e4151-51c6-496a-a924-a2237c85f8a6",
+      target: "#download-pdf-summary-form-content",
+      css: "",
+      onFormSubmit: function () {
+        window.open('https://cdn2.hubspot.net/hubfs/503070/Sector%20PDFs/CommCare_MaternalChildHealth.pdf', "_blank");
+      },
     });
   </script>
 {% endblock %}
