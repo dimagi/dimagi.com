@@ -15,22 +15,24 @@
 {% endblock %}
 
 {% block hero %}
-  <div class="blue-theme">
+  <div class="green-theme">
     <section class="hero hero-blog" id="hero"></section>
   </div>
 {% endblock %}
 
 {% block content %}
-  {% include "sections/sectors/agriculture_extension_programs/sub_nav.html" %}
-  {% include "sections/sectors/agriculture_extension_programs/overview.html" %}
-  {% include "sections/sectors/agriculture_extension_programs/part1.html" %}
-  {% include "sections/sectors/agriculture_extension_programs/benefit.html" %}
-  {% include "sections/sectors/agriculture_extension_programs/part2.html" %}
-  {% include "sections/sectors/agriculture_extension_programs/programs.html" %}
-  {% include "sections/sectors/agriculture_extension_programs/part3.html" %}
-  {% include "sections/sectors/agriculture_extension_programs/news.html" %}
-  {% include "sections/sectors/agriculture_extension_programs/part4.html" %}
-  {% include "sections/sectors/agriculture_extension_programs/testimonial.html" %}
+  <section>
+    {% include "sections/sectors/agriculture_extension_programs/sub_nav.html" %}
+    {% include "sections/sectors/agriculture_extension_programs/overview.html" %}
+    {% include "sections/sectors/agriculture_extension_programs/part1.html" %}
+    {% include "sections/sectors/agriculture_extension_programs/benefit.html" %}
+    {% include "sections/sectors/agriculture_extension_programs/part2.html" %}
+    {% include "sections/sectors/agriculture_extension_programs/programs.html" %}
+    {% include "sections/sectors/agriculture_extension_programs/part3.html" %}
+    {% include "sections/sectors/agriculture_extension_programs/news.html" %}
+    {% include "sections/sectors/agriculture_extension_programs/part4.html" %}
+    {% include "sections/sectors/agriculture_extension_programs/testimonial.html" %}
+  </section>  
 {% endblock %}
 
 {% block modals %}
@@ -41,7 +43,7 @@
     <div class="modal-scroll">
       <div class="modal-wrapper">
         <a href="#" class="modal-close-button"></a>
-        <div class="content pad-horz-medium-at-medium pad-horz-line pad-vert-none turquoise-theme">
+        <div class="content pad-horz-medium-at-medium pad-horz-line pad-vert-none green-theme">
           <h3>
             {% blocktrans %}
               Schedule A Demo
@@ -60,7 +62,7 @@
     <div class="modal-scroll">
       <div class="modal-wrapper">
         <a href="#" class="modal-close-button"></a>
-        <div class="content pad-horz-medium-at-medium pad-horz-line pad-vert-none turquoise-theme">
+        <div class="content pad-horz-medium-at-medium pad-horz-line pad-vert-none green-theme">
           <section id="download-pdf-summary-form-content"></section>
         </div>{# .content #}
       </div>{# .modal-wrapper #}

@@ -64,3 +64,9 @@
 .mb-10 {
   margin-bottom: 10px;
 }
+
+.touch .sub-nav a:not(.button).primary span, .no-touch.sub-nav-fixed-top .sub-nav a.primary span {
+  background-color:#47b700;
+  border-color:#47b700;
+  color: #ffffff;
+}
