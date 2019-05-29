@@ -10,8 +10,8 @@
     medium: 280px,
     large: 280px,
     extra-large: 340px,
-	);
-	@include make-bg(hero-data-image, '../../../pages/sectors/disease-treatment/intro/hero', $_base-height, $_height-by-size);
+  );
+  @include make-bg(hero-data-image, '../../../pages/sectors/disease-treatment/intro/hero', $_base-height, $_height-by-size);
 }
 
 .news-images .image.blog1 {
@@ -63,7 +63,7 @@
     large: 360px,
     extra-large: 360px,
   );
-	@include make-bg(epic-cover, '../../../pages/sectors/disease-treatment/part3/hero', $_base-height, $_height-by-size);
+  @include make-bg(epic-cover, '../../../pages/sectors/disease-treatment/part3/hero', $_base-height, $_height-by-size);
 }
 
 .center {
