@@ -3,7 +3,7 @@ from django.conf.urls import url
 from dimagi.pages.views.sectors import (
     view_all,
     view_single,
-    disease_treatment
+    disease_treatment,
 )
 
 
