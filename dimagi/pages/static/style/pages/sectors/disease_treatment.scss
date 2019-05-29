@@ -14,6 +14,47 @@
 	@include make-bg(hero-data-image, '../../../pages/sectors/disease-treatment/intro/hero', $_base-height, $_height-by-size);
 }
 
+.news-images .image.blog1 {
+  @include background-cover('../../../pages/sectors/disease-treatment/news/Blog1.jpg');
+  height: 200px;
+  background-size: contain;
+  background-position: left;
+}
+.news-images .image.blog2 {
+  @include background-cover('../../../pages/sectors/disease-treatment/news/Blog2.jpg');
+  height: 200px;
+  background-size: contain;
+  background-position: left;
+}
+.news-images .image.blog3 {
+  @include background-cover('../../../pages/sectors/disease-treatment/news/Blog3.jpg');
+  height: 200px;
+  background-size: contain;
+  background-position: left;
+}
+.programs-images .image.featured-project1 {
+  @include background-cover('../../../pages/sectors/disease-treatment/programs/FeaturedProject1.jpg');
+  height: 200px;
+  background-size: contain;
+  background-position: left;
+}
+.programs-images .image.featured-project2 {
+  @include background-cover('../../../pages/sectors/disease-treatment/programs/FeaturedProject2.jpg');
+  height: 200px;
+  background-size: contain;
+  background-position: left;
+}
+.programs-images .image.featured-project3 {
+  @include background-cover('../../../pages/sectors/disease-treatment/programs/FeaturedProject3.jpg');
+  height: 200px;
+  background-size: contain;
+  background-position: left;
+}
+
+.modal-popup {
+  height: 275px !important;
+}
+
 .part3 {
   $_base-height: 550px;
   $_height-by-size: (
