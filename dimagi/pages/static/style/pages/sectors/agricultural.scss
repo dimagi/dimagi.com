@@ -14,37 +14,37 @@
   @include make-bg(hero-data-image, '../../../pages/sectors/agriculture-extension-programs/intro/hero', $_base-height, $_height-by-size);
 }
 
-.news-images .image-1 {
+.news-images .image.blog1 {
   @include background-cover('../../../pages/sectors/agriculture-extension-programs/news/AgExtension_Blog1.jpg');
   height: 200px;
   background-size: contain;
   background-position: left;
 }
-.news-images .image-2 {
+.news-images .image.blog2 {
   @include background-cover('../../../pages/sectors/agriculture-extension-programs/news/AgExtension_Blog2.jpg');
   height: 200px;
   background-size: contain;
   background-position: left;
 }
-.news-images .image-3 {
+.news-images .image.blog3 {
   @include background-cover('../../../pages/sectors/agriculture-extension-programs/news/AgExtension_Blog3.jpg');
   height: 200px;
   background-size: contain;
   background-position: left;
 }
-.programs-images .image-1 {
+.programs-images .image.featured-project1 {
   @include background-cover('../../../pages/sectors/agriculture-extension-programs/programs/AgExtension_FeaturedProject1.jpg');
   height: 200px;
   background-size: contain;
   background-position: left;
 }
-.programs-images .image-2 {
+.programs-images .image.featured-project2 {
   @include background-cover('../../../pages/sectors/agriculture-extension-programs/programs/AgExtension_FeaturedProject2.jpg');
   height: 200px;
   background-size: contain;
   background-position: left;
 }
-.programs-images .image-3 {
+.programs-images .image.featured-project3 {
   @include background-cover('../../../pages/sectors/agriculture-extension-programs/programs/AgExtension_FeaturedProject3.jpg');
   height: 200px;
   background-size: contain;
