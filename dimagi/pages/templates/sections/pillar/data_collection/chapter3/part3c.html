@@ -1,0 +1,71 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="epic-content pad-bottom-small accent-gray-bg border-vert"
+         id="observational-data-collection">
+  <div class="content content-width-medium pad-right-small">
+    <div class="grid grid-flex-at-small grid-valign-middle pad-bottom-line">
+      <div class="column lign-center align-left-at-small">
+        <h3 class="display-block theme-color">
+          {% blocktrans %}
+            Observational <br class="hide-until-medium" />
+          {% endblocktrans %}
+        </h3>
+        <p>
+          {% blocktrans %}
+            Observational data collection is much more low-touch. The idea is that in the absence of an opportunity to interact with your subject
+            (either due to distance, scale, or other reasons for their inaccessibility), you can observe them to collect certain types of information.
+          {% endblocktrans %}
+        </p>
+      </div>{# .column #}
+    </div>{# .grid #}
+    <div class="grid grid-flex-at-small grid-valign-middle pad-bottom-line">
+      <div class="column no-shrink">
+        <div class="theme-icon dc-icon align-center align-left-at-small">
+          {% include "svg/pillar/dc/chapter3/firsthand.html" %}
+        </div>
+      </div>{# .column #}
+      <div class="column pad-left-small">
+        <p>
+          <strong class="display-block theme-color">
+            {% blocktrans %}
+              Firsthand Data Collection
+            {% endblocktrans %}
+          </strong>
+        </p>
+      </div>{# .column #}
+      <div class="column pad-left-small">
+        <p>
+          {% blocktrans %}
+            Firsthand observation allows for the data collector to directly observe and gather notes on an individual or group.
+            This approach is often used when direct observation is available but not direct contact either for reasons of inaccessibility or fears of bias.
+          {% endblocktrans %}
+        </p>
+      </div>{# .column #}
+    </div>{# .grid #}
+    <div class="grid grid-flex-at-small grid-valign-middle pad-bottom-line">
+      <div class="column no-shrink">
+        <div class="theme-icon dc-icon align-center align-left-at-small">
+          {% include "svg/pillar/dc/chapter3/doc_record.html" %}
+        </div>
+      </div>{# .column #}
+      <div class="column pad-left-small">
+        <p>
+          <strong class="display-block theme-color">
+            {% blocktrans %}
+              Document / Record Review
+            {% endblocktrans %}
+          </strong>
+        </p>
+      </div>{# .column #}
+      <div class="column pad-left-small">
+        <p>
+          {% blocktrans %}
+            Often used when information is needed from the past, document review allows for secondhand observation of sources when firsthand
+            observation is unavailable.
+          {% endblocktrans %}
+        </p>
+      </div>{# .column #}
+    </div>{# .grid #}
+  </div>
+</section>
