@@ -18,4 +18,3 @@ POSTS = [
 def get_canonical_link(slug):
     slug_to_link = {c.slug: c.url for c in POSTS}
     return slug_to_link.get(slug)
-    
