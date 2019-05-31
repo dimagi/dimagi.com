@@ -9,7 +9,7 @@
     small: 280px,
     medium: 280px,
     large: 280px,
-    extra-large: 340px,
+    extra-large: 320px,
   );
   @include make-bg(hero-data-image, '../../../pages/sectors/disease-treatment/intro/hero', $_base-height, $_height-by-size);
 }
