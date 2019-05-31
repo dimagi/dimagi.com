@@ -1,16 +1,19 @@
 {% load i18n %}
 {% load dimagidotcom %}
 
-<article class="epic epic-chapter-5 red-theme" id="chapter-6">
+<article class="epic epic-chapter-5 purple-theme" id="chapter-6">
 
-  <section class="epic-cover"
+  <section class="parallax-ch6-1 epic-cover"
            data-lazybg="true">
     <div class="content">
-      <h1 class="pad-top-large" {% if request.is_amp %} amp-fx="fade-in" data-duration="1000ms" {% endif %}>
+      <h1 class="white section-header" {% if request.is_amp %} amp-fx="fade-in" data-duration="1000ms" {% endif %}>
+       
         {% blocktrans %}
-          How to Design &amp; Test<br />
-          Your Mobile Data<br />
-          Collection Tool
+          <span class="section-number gap-top-none">6</span>
+          <span class="pad-left-medium-at-medium">
+            How to Train Your Team <br class="hide-until-large" />
+            in Mobile Data Collection
+          </span>
         {% endblocktrans %}
       </h1>
     </div> {# .content #}
@@ -18,11 +21,7 @@
 
   {% include "sections/pillar/mobile_data_collection/chapter6/summary.html" %}
   {% include "sections/pillar/mobile_data_collection/chapter6/part1a.html" %}
-  <div class="parallax-ch6-1"
-       data-lazybg="true"></div>
   {% include "sections/pillar/mobile_data_collection/chapter6/part1b.html" %}
   {% include "sections/pillar/mobile_data_collection/chapter6/part2.html" %}
-  {% include "sections/pillar/mobile_data_collection/chapter6/part3.html" %}
-  {% include "sections/pillar/mobile_data_collection/chapter6/part4.html" %}
 
 </article>

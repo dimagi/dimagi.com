@@ -54,9 +54,12 @@
   <script>
     hbspt.forms.create({
       portalId: "503070",
-      formId: "6d2f8b0a-f085-4a9a-be6e-383f02b1769f",
+      formId: "842ffc90-4166-407d-8fa2-3794b6f9773d",
       target: "#download-form-content",
-      css: ""
+      css: "",
+      onFormSubmit: function () {
+        window.open("https://cdn2.hubspot.net/hubfs/503070/Pillar%20Page%20PDFs/Guide%20to%20Data%20Collection.pdf", "_blank");
+      },
     });
   </script>
 {% endblock %}

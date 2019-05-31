@@ -1,16 +1,18 @@
 {% load i18n %}
 {% load dimagidotcom %}
 
-<article class="epic blue-theme" id="chapter-4">
+<article class="epic red-theme" id="chapter-4">
 
-  <section class="epic-cover"
+  <section class="parallax-ch4-1 epic-cover"
            data-lazybg="true">
     <div class="content">
-      <h1 class="pad-top-large" {% if request.is_amp %} amp-fx="fade-in" data-duration="1000ms" {% endif %}>
+      <h1 class="white section-header" {% if request.is_amp %} amp-fx="fade-in" data-duration="1000ms" {% endif %}>
         {% blocktrans %}
-          How to Choose the<br/>
-          Right Mobile Data <br />
-          Collection Solution
+          <span class="section-number gap-top-none">4</span>
+          <span class="pad-left-medium-at-medium">
+            How to Test Your Mobile <br class="hide-until-large" />
+            Data Collection App
+          </span>
         {% endblocktrans %}
       </h1>
     </div> {# .content #}

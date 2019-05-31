@@ -1,24 +1,25 @@
 {% load i18n %}
 {% load dimagidotcom %}
 
-<article class="epic purple-theme" id="chapter-1">
+<article class="epic blue-theme" id="chapter-1">
 
-  <section class="epic-cover"
+  <section class="parallax-ch1-1 epic-cover"
            data-lazybg="true">
     <div class="content">
-      <h1 class="pad-top-large" {% if request.is_amp %} amp-fx="fade-in" data-duration="1000ms" {% endif %}>
+      <h1 class="white section-header" {% if request.is_amp %} amp-fx="fade-in" data-duration="1000ms" {% endif %}>
         {% blocktrans %}
-          What Are <br />
-          Your Project <br />
-          Objectives?
+          <span class="section-number gap-top-none">1</span>
+          <span class="pad-left-medium-at-medium">
+            How to Choose the Right <br class="hide-until-large" />
+            Mobile Data Collection Tool 
+          </span>
         {% endblocktrans %}
       </h1>
     </div> {# .content #}
   </section>
-
+  
   {% include "sections/pillar/mobile_data_collection/chapter1/part1.html" %}
-  <div class="parallax-ch1-1"
-       data-lazybg="true"></div>
+  {% include "sections/pillar/mobile_data_collection/chapter1/partcms.html" %}
   {% include "sections/pillar/mobile_data_collection/chapter1/part2.html" %}
 
 </article>

@@ -4,111 +4,138 @@
 <section class="epic-content pad-vert-large">
   <div class="content content-width-medium">
 
-    <p class="first-letter">
+    <p  class="first-letter">
       {% blocktrans %}
-        It can be tempting to conclude that a mobile data collection tool
-        will solve all the problems you currently face with your data
-        collection program. Except first, you have to know what that
-        program looks like, what its strengths and weaknesses are,
-        and how the information flows in the field.
+        The proceess of designing you app involves both (1) defining who will use your app and 
+        (2) determining how to best structure the app with the right modules and features. 
+        A well-thought out design will make the building and testing phase that much easier.
+      {% endblocktrans %}
+    </p>
+
+    <h2 class="pad-top-small"> 
+      {% blocktrans %}
+        Identify your user stories
+      {% endblocktrans %}
+    </h2>
+
+    <p>
+      {% blocktrans %}
+        Your first step is to identify the users and user stories to build your app around.
+        These should be centered around the biggest pain points and opportunities for impact you identified in scoping&mdash;not just the loudest voice in the room.
       {% endblocktrans %}
     </p>
 
     <p>
       {% blocktrans %}
-        This process will reveal things about where your data comes from,
-        who has access to it, and how it is collected and stored &mdash; all
-        key pieces of information that will inform the design and
-        implementation of any new system you choose. Most mobile
-        data collection tools will claim to speed up the process
-        and make it more efficient, and that's probably true &mdash;
-        but only when you know which parts of your current process
-        could benefit from those improvements the most.
+        Ask your team:
       {% endblocktrans %}
     </p>
 
+     <ul class="checked grid grid-row-space-base pad-bottom-base pad-left-base">
+      <li>
+        {% blocktrans %}
+          How will this app change existing processes and roles?
+        {% endblocktrans %}
+      </li>
+      <li>
+        {% blocktrans %}
+          How will those changes affect each player in the system?
+        {% endblocktrans %}
+      </li>
+      <li>
+        {% blocktrans %}
+          Are those changes addressing pain points and improving workflows, or just complicating things?
+        {% endblocktrans %}
+      </li>
+    </ul>
+    
     <p>
       {% blocktrans %}
-        Gillian Javetski, COO &amp; Co-Founder of TecSalud &mdash; an ICT4D company
-        in Bogotá and Cambridge &mdash;
-        <a href="https://dimagi.com/blog/how-simple-mobile-apps-can-help-womens-organizations-grow-their-impact/"
-           target="_blank">explains</a>:
+        They should be able to answer these questions in a way that indicates whether your new mobile data collection tool aligns with
+        original objectives of your program.
       {% endblocktrans %}
     </p>
 
-    <blockquote>
-      <p class="green">
-        When you have to map out your project from square one,
-        it opens your eyes to gaps you didn't see earlier and
-        that technology may not be able to fix. All of a sudden,
-        the conversation may shift from 'What do we want this
-        technology to do' to 'Wait, actually, is the problem
-        in our workflow?'
-      </p>
-    </blockquote>
-
-    <p>
-      {% blocktrans %}
-        An information flow diagram is most often what we use
-        when mapping how information flows through an existing
-        data collection process. It typically starts with what
-        data is being collected (e.g. quantitative data vs
-        qualitative data) and follows through from how it is
-        collected (e.g. paper forms vs mobile device) to where
-        it is stored and how it is shared from the bottom to the
-        top of your organization (e.g. reporting presentation vs
-        online dashboard).
-      {% endblocktrans %}
-    </p>
-
-    <div class="infographic-image white-lazy-bg gap-top-small gap-bottom-line"
+    <div class="identify-image white-lazy-bg gap-top-small gap-bottom-line"
          data-lazybg="true"></div>
 
     <p class="align-center">
-      This is the most basic version of an information flow diagram.
+      {% blocktrans %}
+        Understand the precise needs for your application and its implications on everyone in the program.
+      {% endblocktrans %}
     </p>
+
+    <h2>
+      {% blocktrans %}
+        Design the structure of your system
+      {% endblocktrans %}
+    </h2>
 
     <p>
       {% blocktrans %}
-        Data from beneficiaries is collected by community health
-        workers (or other data collectors) using a mobile data
-        collection tool that wirelessly sends data to the cloud.
-        There, it is accessed by a program manager or analyst on a
-        desktop platform.
+        Once you validate your user stories, it is time to <a href="https://dimagi.com/blog/mobile-data-collection-app-design-tips-stc" target="_blank">
+        translate these into your app's module and form structure.</a> This is important to
+        do before you start building to ensure your vision is possible with the set of features at your disposal. Essentially, it is about
+        confirming whether your chosen platform can do precisely what you need it to.
+      {% endblocktrans %}
+    </p>
+    
+    <p>
+      {% blocktrans %}
+        So while these user stories are an important start, you still need to map out how they actually look in your app, in the form of
+        modules (groups of forms), individual forms, and features, which define how your app performs tasks.
       {% endblocktrans %}
     </p>
 
     <p>
       {% blocktrans %}
-        Of course, this version doesn't include what type of data
-        it is or how that program analyst shares reports with their
-        superiors, funders, or the government. However, that
-        is exactly the type of information that is covered in
-        more complex information flow diagrams.
+        Check out a sample form structure in our <a href="https://dimagi.com/blog/mobile-data-collection-mobile-survey-design/" target="_blank">Guide to Survey Design.</a>
+      {% endblocktrans %}
+    </p>
+
+    <h2 class="pad-top-small">
+      {% blocktrans %}
+        Develop your content &amp; delivery design
+      {% endblocktrans %}
+    </h2>
+
+    <p>
+      {% blocktrans %}
+        By now, you know what data you need to collect, but the way you actually solicit  it might still be in question. 
+        Content and delivery design are how you determine the phrasing and actual delivery of the questions you need to ask.
       {% endblocktrans %}
     </p>
 
     <p>
       {% blocktrans %}
-        Two key questions to ask when designing your information
-        flow diagram are (1) What are the major activities or
-        milestones that occur in this process? And (2) What
-        are the major component types (e.g. actions/activities,
-        documents, decisions, etc.)? The answers to these
-        questions are like the pieces to your puzzle. Once
-        you collect them all, start with the outside and
-        work your way in. In other words, begin with your
-        data source and your final output and then fill out
-        the pieces in-between.
+        Content design focuses on developing a survey of clear questions that avoid bias, maintain consistency in phrasing, and are 
+        culturally appropriate. Delivery design is all about how to best structure and disseminate your survey (e.g. order of questions, 
+        requried questions, mode of communication, etc.).
       {% endblocktrans %}
     </p>
 
-    <p class="align-center pad-top-small pad-bottom-medium">
-      <a href="http://dimagi.com/blog/data-collection-data-collection-plan/"
+    <p>
+      {% blocktrans %}
+        Spending a bit of time planning and strategically designing the content that will be used in your surveys, 
+        as well as how those surveys will reach your beneficiaries, will help ensure that you follow a systematic process collecting data
+        from the beginning to the end of data collection period.
+      {% endblocktrans %}
+    </p>
+
+    <p>
+      {% blocktrans %}
+        It is not about putting all the questions you can think of in the survey and sending it to everyone you can. 
+        With a consistent, well thought out design, results that emerge from data collection will be cleaner and more reliable.
+      {% endblocktrans %}
+    </p>
+
+
+    <p class="align-center pad-vert-small">
+      <a href="https://dimagi.com/blog/mobile-data-collection-mobile-survey-design/"
          target="_blank"
          class="button">
         {% blocktrans %}
-        Learn more about your data collection process
+        Get more advice on mobile survey design
         {% endblocktrans %}
       </a>
     </p>

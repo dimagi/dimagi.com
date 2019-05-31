@@ -2,155 +2,227 @@
 @import 'app/variables/colors';
 @import 'app/variables/sizes';
 @import 'app/variables/type';
+
 #intro {
-    @include make-bg(epic-cover, '../../../pages/pillar/dc/intro/hero');
+  @include make-bg(epic-cover, '../../../pages/pillar/dc/intro/hero');
 }
 
 .sub-nav-menu-active .sub-nav .dropdown {
-    height: 220px;
+  height: 220px;
 }
 
 .sub-nav a:not(.button).social {
-    cursor: pointer;
-    svg * {
-        fill: $color-text;
-        transition: fill 150ms ease-in-out;
-    }
-    svg {
-        cursor: pointer;
-        margin-top: -1px;
-        height: 20px;
-        width: 20px;
-    }
-    &:hover svg * {
-        fill: $color-blue;
-    }
+  cursor: pointer;
+  svg * {
+    fill: $color-text;
+    transition: fill 150ms ease-in-out;
+  }
+  svg {
+  	cursor: pointer;
+    margin-top: -1px;
+    height: 20px;
+    width: 20px;
+  }
+  &:hover svg * {
+    fill: $color-blue;
+  }
 }
 
 $_max-mobile: $width-desktop - 1px;
 @media (max-width: $_max-mobile) {
-    .sub-nav-menu-active .sub-nav .dropdown {
-        height: auto;
-    }
+  .sub-nav-menu-active .sub-nav .dropdown {
+    height: auto;
+  }
 }
 
 .dropdown .social-links {
-    padding-top: $space-small;
-    .social {
-        display: inline-block;
-        padding-right: $space-base;
-    }
+  padding-top: $space-small;
+  .social {
+    display: inline-block;
+    padding-right: $space-base;
+  }
 }
 
 a:not(.button).tile-more {
-    background: transparent;
+  background: transparent;
+  color: $color-white;
+  padding: $space-small;
+  padding-bottom: $space-small + $space-base;
+  h2 {
+    font-weight: $font-weight-medium;
+  }
+  p:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  &:hover {
     color: $color-white;
-    padding: $space-small;
-    padding-bottom: $space-small + $space-base;
-    h2 {
-        font-weight: $font-weight-medium;
-    }
-    p:last-child {
-        margin-bottom: 0;
-        padding-bottom: 0;
-    }
-    &:hover {
-        color: $color-white;
-    }
-    &::before {
-        border-color: transparent !important;
-    }
-    &::after {
-        border-color: $color-white !important;
-    }
+  }
+  &::before {
+    border-color: transparent !important;
+  }
+  &::after {
+    border-color: $color-white !important;
+  }
 }
 
 .tile-chapter {
-    position: relative;
-    &:after {
-        border-width: 10px !important;
-    }
-    h2 {
-        color: $color-white;
-        font-size: $font-size-h3;
-        line-height: $line-height-header;
-        // margin-bottom: 60px;
-    }
-    .chapter-number {
-        color: $color-white;
-        font-size: 60px;
-        line-height: 60px;
-        position: absolute;
-        bottom: $space-small;
-    }
+  position: relative;
+  &:after {
+    border-width: 10px !important;
+  }
+  h2 {
+    color: $color-white;
+    font-size: $font-size-h3;
+    line-height: $line-height-header;
+  }
+  .chapter-number {
+  	color: $color-white;
+    font-size: 60px;
+    line-height: 60px;
+    position: absolute;
+    bottom: $space-small;
+  }
 }
 
 .dark-gray-bg {
-    background-color: #E6E6E5 !important;
+  background-color: #E6E6E5 !important;
 }
 
 .dc-icon svg {
-    width: 60px !important;
-    height: 70px;
-    margin-left: 30px;
-    margin-right: 0px;
+  width: 60px !important;
+  height: 70px;
+  margin-left: 30px;
+  margin-right: 0px;
 }
 
 .parallax-ch1-1 {
-    @include make-parallax-bg(epic-cover, '../../../pages/pillar/dc/chapter1/hero');
-    height: auto !important;
+  @include make-parallax-bg(epic-cover, '../../../pages/pillar/dc/chapter1/hero');
+  height: auto !important;
 }
 
 .parallax-ch2-1 {
-    @include make-parallax-bg(hero, '../../../pages/pillar/dc/chapter2/hero');
-    height: auto !important;
+  @include make-parallax-bg(hero, '../../../pages/pillar/dc/chapter2/hero');
+  height: auto !important;
 }
 
 .parallax-ch3-1 {
-    @include make-parallax-bg(hero, '../../../pages/pillar/dc/chapter3/hero');
-    height: auto !important;
+  @include make-parallax-bg(hero, '../../../pages/pillar/dc/chapter3/hero');
+  height: auto !important;
 }
 
 .parallax-ch4-1 {
-    @include make-parallax-bg(hero, '../../../pages/pillar/dc/chapter4/hero');
-    height: auto !important;
+  @include make-parallax-bg(hero, '../../../pages/pillar/dc/chapter4/hero');
+  height: auto !important;
 }
 
 .epic {
-    $_base-height: 190px;
-    $_height-by-size: ( small: 249px, medium: 399px, );
+  $_base-height: 190px;
+  $_height-by-size: (
+    small: 249px,
+    medium: 399px,
+  );
 }
 
 #chapter-1 {
-    $_base-height: auto;
-    $_height-by-size: ( small: 324px, medium: 390px, );
-    @include make-bg(community-image, '../../../pages/pillar/dc/chapter1/community', $_base-height, $_height-by-size);
+  $_base-height: auto;
+  $_height-by-size: (
+    small: 324px,
+    medium: 390px,
+  );
+  @include make-bg(community-image, '../../../pages/pillar/dc/chapter1/community', $_base-height, $_height-by-size);
 }
 
 #chapter-2 {
-    $_base-height: 190px;
-    $_height-by-size: ( small: 324px, medium: 390px, );
-    @include make-bg(child-growth-image, '../../../pages/pillar/dc/chapter2/growth', $_base-height, $_height-by-size);
+  $_base-height: 190px;
+  $_height-by-size: (
+    small: 324px,
+    medium: 390px,
+  );
+  @include make-bg(child-growth-image, '../../../pages/pillar/dc/chapter2/growth', $_base-height, $_height-by-size);
 }
 
 #chapter-3 {
-    $_base-height: 247px;
-    $_height-by-size: ( small: 324px, medium: 390px, );
-    @include make-bg(agile-image, '../../../pages/pillar/dc/chapter3/align', $_base-height, $_height-by-size);
+  $_base-height: 247px;
+  $_height-by-size: (
+    small: 324px,
+    medium: 390px,
+  );
+  @include make-bg(agile-image, '../../../pages/pillar/dc/chapter3/align', $_base-height, $_height-by-size);
 }
 
 #chapter-4 {
-    $_base-height: 247px;
-    $_height-by-size: ( small: 324px, medium: 390px, );
-    @include make-bg(plan-image, '../../../pages/pillar/dc/chapter4/plan', $_base-height, $_height-by-size);
+  $_base-height: 247px;
+  $_height-by-size: (
+    small: 324px,
+    medium: 390px,
+  );
+  @include make-bg(plan-image, '../../../pages/pillar/dc/chapter4/plan', $_base-height, $_height-by-size);
 }
 
 .section-header span {
-    font-size: 57px !important;
-    line-height: 72px !important;
-    font-weight: 700 !important;
+  font-size: 57px !important;
+  line-height: 72px !important;
+  font-weight: 700 !important;
 }
 
 .section-number {
+  position: absolute;
+}
+
+#chapter-1 .community-image .bg-loader {
+  background-size: 100% auto;
+}
+
+#chapter-2 .child-growth-image .bg-loader {
+  background-size: 100% auto;
+}
+
+#chapter-3 .agile-image .bg-loader {
+  background-size: 100% auto;
+}
+
+#chapter-4 .plan-image .bg-loader {
+  background-size: 100% auto;
+}
+
+.blog_build {
+  $_base-height: 290px;
+  $_height-by-size: (
+    small: 390px,
+    medium: 390px,
+    large: 390px,
+    extra-large: 392px,
+  );
+  @include make-bg(blog_image, '../../../pages/blog/mobiledata_blog_page/blog_build/hero', $_base-height, $_height-by-size);
+  @media (min-width: $width-desktop) {
+    .off-grid {
+      bottom: 20px;
+      left: -337px;
+      position: absolute;
+      right: 0;
+      width: 100%;
+      z-index: 1;
+    }
+    
+    .content {
+      position: relative;
+      z-index: 2;
+    }
+  }
+  @media (min-width: $width-desktop-lg) {
+    .off-grid {
+      left: -180px;
+    }
+  }
+}
+
+blockquote.rowena p {
+  position: relative;
+
+  &:after{
     position: absolute;
+    right: -10px;
+    bottom: 0;
+  }
 }
