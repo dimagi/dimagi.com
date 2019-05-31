@@ -80,7 +80,7 @@
     large: 290px,
     extra-large: 290px,
   );
-  @include make-bg(phone-image, '../../../pages/sectors/disease-treatment/news/Phone', $_base-height, $_height-by-size, '.png');
+  @include make-bg(phone-image, '../../../pages/sectors/disease-treatment/part3/Phone', $_base-height, $_height-by-size, '.png');
 
   @media (min-width: $width-desktop) {
     .off-grid {
