@@ -10,8 +10,49 @@
     medium: 280px,
     large: 280px,
     extra-large: 340px,
-	);
-	@include make-bg(hero-data-image, '../../../pages/sectors/agriculture-extension-programs/intro/hero', $_base-height, $_height-by-size);
+  );
+  @include make-bg(hero-data-image, '../../../pages/sectors/nutrition/intro/hero', $_base-height, $_height-by-size);
+}
+
+.news-images .image.blog1 {
+  @include background-cover('../../../pages/sectors/nutrition/news/Blog1.jpg');
+  height: 200px;
+  background-size: contain;
+  background-position: left;
+}
+.news-images .image.blog2 {
+  @include background-cover('../../../pages/sectors/nutrition/news/Blog2.jpg');
+  height: 200px;
+  background-size: contain;
+  background-position: left;
+}
+.news-images .image.blog3 {
+  @include background-cover('../../../pages/sectors/nutrition/news/Blog3.jpg');
+  height: 200px;
+  background-size: contain;
+  background-position: left;
+}
+.programs-images .image.featured-project1 {
+  @include background-cover('../../../pages/sectors/nutrition/programs/FeaturedProject1.jpg');
+  height: 200px;
+  background-size: contain;
+  background-position: left;
+}
+.programs-images .image.featured-project2 {
+  @include background-cover('../../../pages/sectors/nutrition/programs/FeaturedProject2.jpg');
+  height: 200px;
+  background-size: contain;
+  background-position: left;
+}
+.programs-images .image.featured-project3 {
+  @include background-cover('../../../pages/sectors/nutrition/programs/FeaturedProject3.jpg');
+  height: 200px;
+  background-size: contain;
+  background-position: left;
+}
+
+.modal-popup {
+  height: 275px !important;
 }
 
 .part3 {
@@ -22,7 +63,7 @@
     large: 360px,
     extra-large: 360px,
   );
-	@include make-bg(epic-cover, '../../../pages/sectors/agriculture-extension-programs/part3/hero', $_base-height, $_height-by-size);
+  @include make-bg(epic-cover, '../../../pages/sectors/nutrition/part3/hero', $_base-height, $_height-by-size);
 }
 
 .center {
@@ -39,7 +80,7 @@
     large: 290px,
     extra-large: 290px,
   );
-  @include make-bg(phone-image, '../../../pages/sectors/agriculture-extension-programs/news/Phone', $_base-height, $_height-by-size, '.png');
+  @include make-bg(phone-image, '../../../pages/sectors/nutrition/part3/Phone', $_base-height, $_height-by-size, '.png');
 
   @media (min-width: $width-desktop) {
     .off-grid {
