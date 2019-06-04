@@ -13,7 +13,7 @@ SECTOR = Sector(
         "mHealth apps can help with women and child healthcare, nutrition programs, and disease treatment."
     ),
     template="data/sectors/content/child_health.html",
-    icon="svg/tookits/icons/business_development.html",
+    area=areas.HEALTH,
     slug="child-health",
     slides=[
         "data/sectors/content/child_health/programs.html",

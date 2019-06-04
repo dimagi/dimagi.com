@@ -53,9 +53,9 @@
     {% include "sections/sectors/sub_nav.html" %}
     {% include sector.template%}
     {% include "sections/sectors/slides.html" %}
-    {% if sector.projects %}
+    {% comment %} {% if sector.projects %}
       {% include "sections/sectors/projects.html" %}
-    {% endif %}
+    {% endif %} {% endcomment %}
     {% if sector.case_studies %}
       {% include "sections/sectors/case_studies.html" %}
     {% endif %}
