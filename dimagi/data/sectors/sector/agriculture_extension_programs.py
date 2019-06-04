@@ -24,62 +24,73 @@ SECTOR = Sector(
 
 
 SECTOR.add_projects([
-    Project(
+    Sector(
         name=ugettext_lazy(
-            "CARE Pathways, India, Tanzania"
+            "AG1"
         ),
-        country=countries.INDIA,
-        description=ugettext_lazy("""
-Since 2013, Dimagi has been working on the CARE Pathways project, 
-which is focused on helping female self-help agricultural groups 
-improve their productivity and increase incomes. Dimagi has set up
-a custom, tablet based scheduling and activity tracking system for 
-CARE’s extension workers, providing a “Knowledge Base” for on-site 
-refresher training, as well as a complex data collection system to 
-track group and individual performance on yield, income, and 
-empowerment indicators. All content is locally contextualized and 
-summarized in easily parsed custom reporting.
-        """),
+        summary=ugettext_lazy(
+        "mHealth apps can help with women and child healthcare, nutrition programs, and disease treatment."
+        ),
+        template="data/sectors/content/child_health.html",
+        area=areas.HEALTH,
+        slug="child-health",
+        slides=[
+            "data/sectors/content/child_health/programs.html",
+            "data/sectors/content/child_health/clinics.html",
+            "data/sectors/content/child_health/patients.html",
+        ],
+        download_url="https://cdn2.hubspot.net/hubfs/503070/Child%20Health.pdf",
     ),
-    Project(
+    Sector(
         name=ugettext_lazy(
-            "Catholic Relief Services"
+            "AG2"
         ),
-        country=countries.INDIA,
-        description=ugettext_lazy("""
-Catholic Relief Services is using CommCare to support an agriculture 
-project in India through the Gates Foundation’s initiative: Improved 
-Rice-based Rainfed Agricultural Systems. This tests the extension 
-agents and supervisors to track the progress of farms growing these 
-various varieties of rice. Each rice variety’s effectiveness is tracked
-and evaluated, leading to better livelihood outcomes in this 
-agriculturally dependent region.
-        """),
+        summary=ugettext_lazy(
+        "mHealth apps can help with women and child healthcare, nutrition programs, and disease treatment."
+        ),
+        template="data/sectors/content/child_health.html",
+        area=areas.HEALTH,
+        slug="child-health",
+        slides=[
+            "data/sectors/content/child_health/programs.html",
+            "data/sectors/content/child_health/clinics.html",
+            "data/sectors/content/child_health/patients.html",
+        ],
+        download_url="https://cdn2.hubspot.net/hubfs/503070/Child%20Health.pdf",
     ),
-    Project(
+    Sector(
         name=ugettext_lazy(
-            "Vaagdhara"
+            "AG3"
         ),
-        country=countries.INDIA,
-        description=ugettext_lazy("""
-Vaagdhara has developed an application using CommCare to monitor fruit 
-orchards. The application includes functionalities to select a village 
-for the project, register the farmer, plan, plantation counseling, and 
-conducts harvest monitoring for fruits, forestry trees, and intercrops.
-        """),
+        summary=ugettext_lazy(
+        "mHealth apps can help with women and child healthcare, nutrition programs, and disease treatment."
+        ),
+        template="data/sectors/content/child_health.html",
+        area=areas.HEALTH,
+        slug="child-health",
+        slides=[
+            "data/sectors/content/child_health/programs.html",
+            "data/sectors/content/child_health/clinics.html",
+            "data/sectors/content/child_health/patients.html",
+        ],
+        download_url="https://cdn2.hubspot.net/hubfs/503070/Child%20Health.pdf",
     ),
-    Project(
+    Sector(
         name=ugettext_lazy(
-            "Technoserve: AgriPlus"
+            "AG4"
         ),
-        country=countries.SOUTH_AFRICA,
-        description=ugettext_lazy("""
-Technoserve supports agriculture extension workers and supervisors to 
-track crop status, financials, and payroll information. The CommCare 
-application records farmer information for easy access by extension 
-workers and contains multimedia counseling materials such as the safe 
-use of pesticides and seedling growing techniques.
-        """),
+        summary=ugettext_lazy(
+        "mHealth apps can help with women and child healthcare, nutrition programs, and disease treatment."
+        ),
+        template="data/sectors/content/child_health.html",
+        area=areas.HEALTH,
+        slug="child-health",
+        slides=[
+            "data/sectors/content/child_health/programs.html",
+            "data/sectors/content/child_health/clinics.html",
+            "data/sectors/content/child_health/patients.html",
+        ],
+        download_url="https://cdn2.hubspot.net/hubfs/503070/Child%20Health.pdf",
     ),
 ])
 

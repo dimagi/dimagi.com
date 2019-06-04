@@ -12,7 +12,7 @@ SECTOR = Sector(
         "Learn how mobile data collection can help address gender-based violence issues."
     ),
     template="data/sectors/content/gender_based_violence.html",
-    area=areas.DEVELOPMENT,
+    area=areas.RESPONSE,
     slug="gender-based-violence",
     slides=[
         "data/sectors/content/gender_based_violence/gender_based_violence.html",

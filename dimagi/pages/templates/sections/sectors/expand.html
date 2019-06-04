@@ -1,0 +1,54 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<div class="accordion-group"
+     id="detailed-feature-accordion">
+
+  {% for sector in sectors %}
+    <div class="accordion{% ifnotequal forloop.counter0 0 %} collapsed{% endifnotequal %}">
+      <div class="accordion-header">
+        <a class="tile theme-border align-center ab-body-sectors--{{ sector.slug }} accent-gray-bg">
+          <div class="theme-icon">
+            {% include sector.icon %}
+          </div>
+          <h5 class="theme-color">
+            {{ sector.name }}
+          </h5>
+          <p class="body-color">
+            {{ sector.summary }}
+          </p>
+          <p class="cta">
+            <span class="link theme-color">
+              {% trans "Learn More" %}
+            </span>
+          </p>
+        </a>
+        <div class="accordion-content"{% ifnotequal forloop.counter0 0 %} style="display: none;"{% endifnotequal %}>
+        <div class="feature-group-description">
+            {% if group.description %}{{ group.description }}<br class="hide-until-medium" />{% endif %}
+             {% for sector in sector.projects %}
+          <div class="feature-row">
+            <a class="tile theme-border align-center ab-body-sectors--{{ sector.slug }}"
+               >
+               <div class="theme-icon">
+            {% include sector.area.icon %}
+          </div>
+          <h5 class="theme-color">
+            {{ sector.name }}
+          </h5>
+          <p class="body-color">
+            {{ sector.summary }}
+          </p>
+          <p class="cta">
+            <span class="link theme-color">
+              {% trans "Learn More" %}
+            </span>
+        </a>
+          </div>{# .feature-row #}
+        {% endfor %} 
+          </p>
+        </div>
+      </div>    
+    </div>
+  {% endfor %}
+</div>
