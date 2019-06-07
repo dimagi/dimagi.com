@@ -63,17 +63,50 @@ GROUP.add_features([
         ),
         support=Support(
             standard=ugettext_lazy(
-                "3 Business Days"
+                ""
             ),
             pro=ugettext_lazy(
-                "1 Business Day"
+                ""
             ),
             advanced=ugettext_lazy(
-                "Priority"
+                ""
             ),
             enterprise=ugettext_lazy(
-                "Priority"
+                ""
             ),
         ),
+    ),
+    Feature(
+        title=ugettext_lazy(
+            "CommCare Bugs"
+        ),
+        description=ugettext_lazy(
+            "Dimagi support staff will review any issues you report "
+            "and contact you with a first response within the "
+            "guaranteed response time."
+        ),
+        support=Support(True, True, True, True),
+    ),
+    Feature(
+        title=ugettext_lazy(
+            "CommCare Questions"
+        ),
+        description=ugettext_lazy(
+            "Dimagi support staff will review any issues you report "
+            "and contact you with a first response within the "
+            "guaranteed response time."
+        ),
+        support=Support(False, True, True, True),
+    ),
+    Feature(
+        title=ugettext_lazy(
+            "App-specific Questions"
+        ),
+        description=ugettext_lazy(
+            "Dimagi support staff will review any issues you report "
+            "and contact you with a first response within the "
+            "guaranteed response time."
+        ),
+        support=Support(False, True, True, True),
     ),
 ])
