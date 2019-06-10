@@ -11,7 +11,7 @@
   across sectors to maximize their impact. 
 {% endblocktrans %}{% endblock %}
 
-{% block body_class %}sectors-page{% endblock %}
+{% block body_class %}sectors-page tucked-hero{% endblock %}
 
 {% block stylesheets %}
   {% compress css %}
@@ -46,5 +46,7 @@
 {% block content %}
   <section class="sectors-container">
     {% include 'sections/sectors/list.html' %}
+    {% include 'sections/blog/mobile_blog_single/blog_build.html' %}
+    {% include 'sections/blog/mobile_blog_single/blog_contact.html' %}
   </section>
 {% endblock %}

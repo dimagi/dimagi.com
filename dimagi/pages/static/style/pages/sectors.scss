@@ -62,3 +62,38 @@ a.study {
     }
   }
 }
+
+.blog_build {
+  $_base-height: 290px;
+  $_height-by-size: (
+    small: 390px,
+    medium: 390px,
+    large: 390px,
+    extra-large: 392px,
+  );
+  @include make-bg(blog_image, '../../pages/blog/mobiledata_blog_page/blog_build/hero', $_base-height, $_height-by-size);
+  @media (min-width: $width-desktop) {
+    .off-grid {
+      bottom: 20px;
+      left: -337px;
+      position: absolute;
+      right: 0;
+      width: 100%;
+      z-index: 1;
+    }
+
+    .content {
+      position: relative;
+      z-index: 2;
+    }
+  }
+  @media (min-width: $width-desktop-lg) {
+    .off-grid {
+      left: -180px;
+    }
+  }
+}
+
+.sector-hide {
+  display: none;
+}

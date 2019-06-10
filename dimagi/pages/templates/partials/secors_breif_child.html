@@ -1,7 +1,8 @@
 {% load dimagidotcom %}
 {% load i18n %}
 
-<a class="tile theme-border align-center ab-body-sectors--{{ sector.slug }} accent-gray-bg" >
+<a class="tile theme-border align-center ab-body-sectors--{{ sector.slug }} accent-gray-bg"
+   href="{% url 'sector' sector.slug %}">
   <div class="theme-icon">
     {% include sector.area.icon %}
   </div>
