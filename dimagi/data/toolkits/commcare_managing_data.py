@@ -18,7 +18,6 @@ TOOLKIT = Toolkit(
     icon="svg/tookits/icons/managingdata_commcare.html",
     download_url="https://www.dropbox.com/s/lguz3gth6kovw62/M%26E%20Starter%20Guide.pdf?dl=1",
     hubspot_form="f59879b3-23cb-41a6-b4f8-e1daa8ba4141",
-    hubspot_formId="7ad4227e-5f4a-4c39-bd87-bfa2151019cb",
 )
 
 
@@ -109,5 +108,15 @@ Use the Total Cost of Ownership Model to budget for your
 mobile solution.
         """),
         view_url="total-cost-ownership",
+    ),  
+    OtherToolkit(
+        name=ugettext_lazy(
+            "Digital Health Interventions Checklist"
+        ),
+        icon="svg/tookits/icons/digital_health_interventions.html",
+        description=ugettext_lazy("""
+Learn how to describe your digital health technology across stakeholders .
+        """),
+        view_url="digital-health-interventions",
     ),  
 ])

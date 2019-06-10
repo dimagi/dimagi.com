@@ -27,6 +27,9 @@
 .overview .image.highlights {
   @include background-cover('../../pages/toolkits/highlights/highlights.jpg');
 }
+.digital-health-interventions{
+  @include make-bg(hero, '../../pages/toolkits/digital-health-interventions/hero')
+}
 // images of highlights for business-development-highlights 
 .business-development-highlights-one {
   @include background-cover('../../pages/toolkits/highlights/business-development/business-development-highlights-one.jpg');
@@ -86,6 +89,16 @@
 }
 .total-cost-ownership-highlights-three {
   @include background-cover('../../pages/toolkits/highlights/total-cost-ownership/total-cost-ownership-highlights-three.jpg');
+}
+// images of highlights for digital-health-interventions
+.digital-health-interventions-highlight-one{
+  @include background-cover('../../pages/toolkits/highlights/digital-health-interventions/digital-health-interventions-highlight-one.jpg')
+}
+.digital-health-interventions-highlight-two{
+  @include background-cover('../../pages/toolkits/highlights/digital-health-interventions/digital-health-interventions-highlight-two.jpg')
+}
+.digital-health-interventions-highlight-three{
+  @include background-cover('../../pages/toolkits/highlights/digital-health-interventions/digital-health-interventions-highlight-three.jpg')
 }
 
 .max-width-initial {

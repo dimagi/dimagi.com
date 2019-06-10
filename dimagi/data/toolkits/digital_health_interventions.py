@@ -1,75 +1,61 @@
 from __future__ import absolute_import
 from django.utils.translation import ugettext_lazy
-from dimagi.pages.models.toolkits import Toolkit
 from dimagi.pages.models.toolkits import Toolkit, Highlight, OtherToolkit
 
 
 TOOLKIT = Toolkit(
     title=ugettext_lazy(
-        "Total Cost of Ownership Model"
+        "Digital Health Interventions Checklist"
     ),
     tagline=ugettext_lazy(
-        "Use the Total Cost of Ownership Model to budget for your "
-        "mobile solution."
+        "Learn how to describe your digital health technology across stakeholders "
     ),
-    image="total-cost-ownership",
-    template="data/toolkits/summaries/total_cost_ownership.html",
-    slug="total-cost-ownership",
-    icon="svg/tookits/icons/total_cost_ownership_model.html",
-    download_url="https://cdn2.hubspot.net/hubfs/503070/Dimagi-CommCare-TCO-Model-2018-2.xlsx",
-    hubspot_form="19bbc2bc-d6a3-4831-8088-770393235a75",
+    image="digital-health-interventions",
+    template="data/toolkits/summaries/digital_health_interventions.html",
+    slug="digital-health-interventions",
+    icon="svg/tookits/icons/digital_health_interventions.html",
+    download_url="https://cdn2.hubspot.net/hubfs/503070/ALL_Digital%20Health%20Interventions%20Checklist_v2.pdf",
+    hubspot_form="c5cf9f9e-75fc-4e1f-942e-8f3e4e9056a7",
 )
-
 
 TOOLKIT.add_highlights([
     Highlight(
         name=ugettext_lazy(
             "The CommCare Evidence Base"
         ),
-        highlight_image="total-cost-ownership-highlights-one",
         description=ugettext_lazy("""
-Map out the scale of your operation over time
-to project how your growth will impact your
-data collection costs.
+Defines the shared language to describe the 
+uses of digital technology for health.
         """),
+        highlight_image="digital-health-interventions-highlight-one",
     ),
     Highlight(
         name=ugettext_lazy(
             "Managing Data in CommCare"
         ),
-        highlight_image="total-cost-ownership-highlights-two",
         description=ugettext_lazy("""
-Consider whether your team will need
-traning and how that might impact your
-expenses.
+Shares different sets of recommendations for 
+clients, healthcare providers, health system 
+managers, and data services.
         """),
+        highlight_image="digital-health-interventions-highlight-two",
     ),
     Highlight(
         name=ugettext_lazy(
             "Managing Devices at Scale"
         ),
-        highlight_image="total-cost-ownership-highlights-three",
         description=ugettext_lazy("""
-Know your monthly operating costs
-such as your voice and data plan, as
-well as your equipment.
+Covers recommendations for specific 
+initiatives from client health records 
+management to health facilities assessment 
+and targeted client communications.
         """),
+        highlight_image="digital-health-interventions-highlight-three",
     ),  
 ])
 
 
 TOOLKIT.add_other_toolkits([
-    OtherToolkit(
-        name=ugettext_lazy(
-            "Business Development Toolkit"
-        ),
-        icon="svg/tookits/icons/business_development.html",
-        description=ugettext_lazy("""
-Use the Business Development Toolkit to develop a BD pipeline
-for your organization.
-        """),
-        view_url="business-development",
-    ),
     OtherToolkit(
         name=ugettext_lazy(
             "The CommCare Evidence Base"
@@ -114,15 +100,27 @@ Use the Maturity Model to establish a long-term
 vision for building and scaling your mobile system.
         """),
         view_url="maturity-model",
-    ), 
+    ),
     OtherToolkit(
         name=ugettext_lazy(
-            "Digital Health Interventions Checklist"
+            "Total Cost of Ownership Model"
         ),
-        icon="svg/tookits/icons/digital_health_interventions.html",
+        icon="svg/tookits/icons/total_cost_ownership_model.html",
         description=ugettext_lazy("""
-Learn how to describe your digital health technology across stakeholders .
+Use the Total Cost of Ownership Model to budget for your
+mobile solution.
         """),
-        view_url="digital-health-interventions",
+        view_url="total-cost-ownership",
+    ),
+    OtherToolkit(
+        name=ugettext_lazy(
+            "Business Development Toolkit"
+        ),
+        icon="svg/tookits/icons/business_development.html",
+        description=ugettext_lazy("""
+Use the Business Development Toolkit to develop a BD pipeline
+for your organization.
+        """),
+        view_url="business-development",
     ),  
 ])
