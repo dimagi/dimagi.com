@@ -1,9 +1,15 @@
 {% load i18n %}
 {% load dimagidotcom %}
 
-<section data-lazybg="true">
+<section data-lazybg="true"
+         id="programs">
   <div class="accent-gray-bg" >
     <div class="content pad-top-medium pad-bottom-medium programs-images">
+      <h2 class="align-center pad-bottom-small">
+        {% blocktrans %}
+          Featured CommCare-Based Agricultural <br class="hide-until-medium"> Extension Programs
+        {% endblocktrans %}
+      </h2>
       <div class="grid grid-3-at-large grid-1-at-medium grid-row-equal-heights grid-col-space-small">
         <div class="column">
           <div class="pad-bottom-base white-bg">
@@ -19,12 +25,13 @@
               <p class="body-color">
                 {% blocktrans %}
                   The Rice-based Rainfed
-                  Agricultural System initiative tracks
+                  Agricultural System tracks
                   the varying efficacy of rice crops…
                 {% endblocktrans %}
               </p>
-              <p>
-                <a href="#modal-feature-card-1" class="link-gray">
+              <p class="pad-top-line-at-extra-large">
+                <a href="#modal-feature-card-1"
+                   class="link-gray read-more">
                   {% blocktrans %}
                     Read More &gt;
                   {% endblocktrans %}
@@ -52,9 +59,9 @@
                   productivity and increase yields…
                 {% endblocktrans %}
               </p>
-              <br>
-              <p>
-                <a href="#modal-feature-card-2" class="link-gray">
+              <p class="pad-top-line-at-extra-large">
+                <a href="#modal-feature-card-2"
+                   class="link-gray read-more">
                   {% blocktrans %}
                     Read More &gt;
                   {% endblocktrans %}
@@ -83,7 +90,8 @@
                 {% endblocktrans %}
               </p>
               <p>
-                <a href="#modal-feature-card-3" class="link-gray">
+                <a href="#modal-feature-card-3"
+                   class="link-gray read-more">
                   {% blocktrans %}
                     Read More &gt;
                   {% endblocktrans %}
@@ -105,34 +113,34 @@
     <div class="modal-scroll">
       <div class="modal-wrapper">
         <a href="#" class="modal-close-button"></a>
-        <div class="content pad-horz-medium-at-medium pad-horz-line pad-vert-none turquoise-theme programs-images">
-          <div class="grid grid-2-at-large grid-1-at-medium grid-row-equal-heights ">
+        <div class="content pad-horz-medium-at-medium pad-horz-line pad-vert-none programs-images">
+          <h4>
+            <strong>
+            {% blocktrans %}
+              Catholic Relief Services <br>
+              India
+            {% endblocktrans %}
+            </strong>
+          </h4>
+          <div class="grid grid-2-at-large grid-1-at-medium">
             <div class="column pad-top-small">
-              <div class="image featured-project1 modal-popup" data-lazybg="true"></div>
-            </div> {# .column #}
-            <div class="column pad-top-small">
-              <h5>
-                <strong>
-                {% blocktrans %}
-                  Catholic Relief Services <br>
-                  India
-                {% endblocktrans %}
-                </strong>
-              </h5>
               <p>
                 {% blocktrans %}
-                  The Rice-based Rainfed Agricultural System initiative tracks the varying efficacy of rice crops.
+                  The Rice-based Rainfed Agricultural System tracks the varying efficacy of rice crops.
                 {% endblocktrans %}
               </p>
               <p>
                 {% blocktrans %}
                   Catholic Relief Services is using CommCare to support an agriculture project in India
-                  through the Gates Doundation's initiative: Improved Rice-based Rainfed Agricultural Systems.
-                  This test the extension agents and supervisors to track the progress of farms growing these
+                  through the Gates Foundation’s initiative, "Improved Rice-based Rainfed Agricultural Systems."
+                  Extension agents and supervisors track the progress of farms growing these
                   various varieties of rice. Each rice variety's effectiveness is tracked and evaluated,
-                  leading to better livelihood outcomes in this agriclturally dependent region.
+                  leading to better livelihood outcomes in this agriculturally dependent region.
                 {% endblocktrans %}
               </p>
+            </div> {# .column #}
+            <div class="column pad-top-small">
+              <div class="image featured-project1 modal-popup" data-lazybg="true"></div>
             </div> {# .column #}
           </div> {# .grid #}
         </div> {# .content #}
@@ -148,19 +156,16 @@
       <div class="modal-wrapper">
         <a href="#" class="modal-close-button"></a>
         <div class="content pad-horz-medium-at-medium pad-horz-line pad-vert-none turquoise-theme programs-images">
-          <div class="grid grid-2-at-large grid-1-at-medium grid-row-equal-heights ">
+          <h4>
+            <strong>
+            {% blocktrans %}
+              CARE Pathways <br>
+              India, Tanzania
+            {% endblocktrans %}
+            </strong>
+          </h4>
+          <div class="grid grid-2-at-large grid-1-at-medium">
             <div class="column pad-top-small">
-              <div class="image featured-project2 modal-popup" data-lazybg="true"></div>
-            </div> {# .column #}
-            <div class="column pad-top-small">
-              <h5>
-                <strong>
-                {% blocktrans %}
-                  CARE Pathways <br>
-                  India, Tanzania
-                {% endblocktrans %}
-                </strong>
-              </h5>
               <p>
                 {% blocktrans %}
                   CARE’s female self-help agricultural groups improve productivity and increase yields.
@@ -178,6 +183,9 @@
                 {% endblocktrans %}
               </p>
             </div> {# .column #}
+            <div class="column pad-top-small">
+              <div class="image featured-project2 modal-popup" data-lazybg="true"></div>
+            </div> {# .column #}
           </div> {# .grid #}
         </div> {# .content #}
       </div> {# .modal-wrapper #}
@@ -192,22 +200,19 @@
       <div class="modal-wrapper">
         <a href="#" class="modal-close-button"></a>
         <div class="content pad-horz-medium-at-medium pad-horz-line pad-vert-none turquoise-theme programs-images">
-          <div class="grid grid-2-at-large grid-1-at-medium grid-row-equal-heights ">
+          <h4>
+            <strong>
+            {% blocktrans %}
+              Technoserve: AgriPlus <br>
+              South Africa
+            {% endblocktrans %}
+            </strong>
+          </h4>
+          <div class="grid grid-2-at-large grid-1-at-medium">
             <div class="column pad-top-small">
-              <div class="image featured-project3 modal-popup" data-lazybg="true"></div>
-            </div> {# .column #}
-            <div class="column pad-top-small">
-              <h5>
-                <strong>
-                {% blocktrans %}
-                  Technoserve: AgriPlus <br>
-                  South Africa
-                {% endblocktrans %}
-                </strong>
-              </h5>
               <p>
                 {% blocktrans %}
-                  This FLW support system offersfarmer tracking and multimediabased counseling materials.
+                  This FLW support system offers farmer tracking and multimedia-based counseling materials.
                 {% endblocktrans %}
               </p>
               <p>
@@ -218,6 +223,9 @@
                   counseling materials such as the safe use of pesticides and seedling growing techniques.
                 {% endblocktrans %}
               </p>
+            </div> {# .column #}
+            <div class="column pad-top-small">
+              <div class="image featured-project3 modal-popup" data-lazybg="true"></div>
             </div> {# .column #}
           </div> {# .grid #}
         </div> {# .content #}
