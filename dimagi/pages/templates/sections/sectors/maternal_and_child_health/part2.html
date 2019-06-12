@@ -1,16 +1,34 @@
-{% load i18n %}
 {% load dimagidotcom %}
+{% load i18n %}
 
-<section class="" data-lazybg="true" id="programs">
-  <div class="blue-bg pad-top-small pad-bottom-small">
-    <div class="content align-center">
-      <div class="">
-        <h2 class="white">
-          {% blocktrans %}
-            Featured CommCare-Based Maternal & Child Healthcare Programs
-          {% endblocktrans %}
-        </h2>
-      </div>
-    </div> {# .content #}
-  </div>
-</section>
+  <article class="epic part3">
+    <section class="epic-cover"
+             data-lazybg="true">
+      <div class="commcare-text pad-top-base pad-top-medium-at-medium pad-top-medium-at-large pad-top-medium-at-extra-large pad-top-base-at-small pad-bottom-medium pad-left-large-at-small">
+        <div class="content content-width-medium">
+          <div class=" content-width-small">
+            <h3 class="white">
+              {% blocktrans %}
+                See CommCare in Action
+              {% endblocktrans %}
+            </h3>
+            <p class="white">
+              {% blocktrans %}
+                Watch as our team takes you through the design of a basic <br>
+                app in CommCare
+              {% endblocktrans %}
+              <p class="cta">
+                {% trans 'Watch Now' as video_text %}
+                {% click_hero 'video' as video_click_class %}
+                {% include "partials/wistia_popover.html" with wistia_id='jzm3ggrinr' show_play=True text=video_text click_class=video_click_class %}
+              </p>
+            </p>
+          </div>
+        </div>{# .content #}
+        <div class="phone-image off-grid white-lazy-bg"
+             data-lazybg="true">
+        </div>
+      </div> {# .ac-part3 #}
+    </section>
+  </article>
+  
