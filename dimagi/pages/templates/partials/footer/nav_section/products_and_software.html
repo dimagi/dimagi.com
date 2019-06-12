@@ -1,0 +1,82 @@
+{% extends 'partials/footer/nav_section/_base.html' %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block title %}
+  {% blocktrans %}
+    Products & Services
+  {% endblocktrans %}
+{% endblock %}
+
+{% block links %}
+  <li>
+    <a href="{% url 'commcare' %}"
+       class="{% click_footer 'commcare' %}">
+      {% blocktrans %}
+        CommCare
+      {% endblocktrans %}
+    </a>
+  </li>
+  <li>
+    <a href="{% url 'commcare' %}"
+       class="{% click_footer 'commcare' %}">
+      <span class="gap-right-base">&hyphen;</span>
+      {% blocktrans %}
+        About CommCare
+      {% endblocktrans %}
+    </a>
+  </li>
+  <li>
+    <a href="{% url 'commcare_pricing' %}"
+       class="{% click_footer 'commcare-pricing' %}">
+      <span class="gap-right-base">&hyphen;</span>
+      {% blocktrans %}
+        Pricing
+      {% endblocktrans %}
+    </a>
+  </li>
+  <li>
+    <a href="{% url 'case_management' %}"
+       class="{% click_footer 'case-management' %}">
+      <span class="gap-right-base">&hyphen;</span>
+      {% blocktrans %}
+        Case Management
+      {% endblocktrans %}
+    </a>
+  </li>
+  <li>
+    <a href="{% url 'toolkit' 'commcare-evidence-base' %}"
+       class="{% click_footer 'commcare-evidence-base' %}">
+      <span class="gap-right-base">&hyphen;</span>
+      {% blocktrans %}
+        Evidence Base
+      {% endblocktrans %}
+    </a>
+  </li>
+  <li>
+    <a href="{% url 'services' %}"
+       class="{% click_footer 'services' %}">
+      {% blocktrans %}
+        Global Services
+      {% endblocktrans %}
+    </a>
+  </li>
+  <li>
+    <a href="{% url 'services' %}"
+       class="{% click_footer 'services' %}">
+      <span class="gap-right-base">&hyphen;</span>
+      {% blocktrans %}
+        Implementation Packages
+      {% endblocktrans %}
+    </a>
+  </li>
+  <li>
+    <a href="{% url 'services' %}"
+       class="{% click_footer 'services' %}">
+      <span class="gap-right-base">&hyphen;</span>
+      {% blocktrans %}
+        Advisory Services
+      {% endblocktrans %}
+    </a>
+  </li>
+{% endblock %}

@@ -8,10 +8,10 @@
 
 {% block links %}
   <li>
-    <a href="{% url 'toolkits' %}"
-       class="{% click_footer 'toolkits' %}">
+    <a href="{% url 'blog_home' %}"
+       class="{% click_footer 'blog' %}">
       {% blocktrans %}
-        Toolkits
+        Blog
       {% endblocktrans %}
     </a>
   </li>
@@ -32,18 +32,44 @@
     </a>
   </li>
   <li>
-    <a href="{% url 'toolkit' 'commcare-evidence-base' %}"
-       class="{% click_footer 'research' %}">
+    <a href="{% url 'toolkits' %}"
+       class="{% click_footer 'toolkits' %}">
       {% blocktrans %}
-        CommCare Research
+        Toolkits
       {% endblocktrans %}
     </a>
   </li>
   <li>
-    <a href="{% url 'case_management' %}"
-       class="{% click_footer 'case-management' %}">
+    <a>
       {% blocktrans %}
-        Case Management
+        Guides
+      {% endblocktrans %}
+    </a>
+  </li>
+  <li>
+    <a href="{% url 'quick_start' %}"
+       class="{% click_footer 'quick-starts' %}">
+       <span class="gap-right-base">&hyphen;</span>
+      {% blocktrans %}
+        Quick Start Guides
+      {% endblocktrans %}
+    </a>
+  </li>
+  <li>
+    <a href="{% url 'mobile_data_collection' %}"
+       class="{% click_footer 'mobile-data-collection' %}">
+      <span class="gap-right-base">&hyphen;</span>
+      {% blocktrans %}
+        Mobile Data Collection
+      {% endblocktrans %}
+    </a>
+  </li>
+  <li>
+    <a href="{% url 'data_collection' %}"
+       class="{% click_footer 'data-collection' %}">
+      <span class="gap-right-base">&hyphen;</span>
+      {% blocktrans %}
+        Data Collection
       {% endblocktrans %}
     </a>
   </li>
@@ -51,15 +77,15 @@
     <a href="{% url 'partner_program' %}"
        class="{% click_footer 'partner-program' %}">
       {% blocktrans %}
-        Partner Program
+        Partners
       {% endblocktrans %}
     </a>
   </li>
   <li>
-    <a href="{% url 'mobile_data_collection' %}"
-       class="{% click_footer 'mobile-data-collection' %}">
+    <a href="//academy.dimagi.com" target="_blank"
+       class="{% click_footer 'academy' %}">
       {% blocktrans %}
-        Mobile Data Collection Guide
+        Dimagi Academy
       {% endblocktrans %}
     </a>
   </li>

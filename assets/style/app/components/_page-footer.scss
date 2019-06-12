@@ -59,7 +59,7 @@
     }
 
     .destination-links {
-      font-size: 14px;
+      font-size: 12px;
       font-weight: 400;
       line-height: 20px;
       margin-bottom: $space-base;
@@ -73,8 +73,8 @@
 
     .links-social li {
       display: inline-block;
-      margin: 0 $space-base/2;
-      vertical-align: middle;
+      vertical-align: webkit-baseline-middle;
+      margin-right: 15px;
 
       svg {
         margin-top: -2px;
