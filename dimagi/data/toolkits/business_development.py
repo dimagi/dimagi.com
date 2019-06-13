@@ -17,7 +17,6 @@ TOOLKIT = Toolkit(
     icon="svg/tookits/icons/business_development.html",
     download_url="https://www.dropbox.com/s/n61uasvfxr44uzu/Dimagi%27s%20BD%20Toolkit.zip?dl=1",
     hubspot_form="c5cf9f9e-75fc-4e1f-942e-8f3e4e9056a7",
-    hubspot_formId="785a986c-343a-483f-bdf7-0f3def6742d9",
 )
 
 TOOLKIT.add_highlights([
@@ -112,5 +111,15 @@ Use the Total Cost of Ownership Model to budget for your
 mobile solution.
         """),
         view_url="total-cost-ownership",
-    ),  
+    ),
+    OtherToolkit(
+        name=ugettext_lazy(
+            "Digital Health Interventions Checklist"
+        ),
+        icon="svg/tookits/icons/digital_health_interventions.html",
+        description=ugettext_lazy("""
+Learn how to describe your digital health technology across stakeholders .
+        """),
+        view_url="digital-health-interventions",
+    ),    
 ])

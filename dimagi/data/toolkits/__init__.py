@@ -5,6 +5,7 @@ from dimagi.data.toolkits import (
     business_development,
     commcare_managing_data,
     managing_devices_ebook,
+    digital_health_interventions,
 )
 
 
@@ -15,6 +16,7 @@ toolkits = (
     business_development,
     commcare_managing_data,
     managing_devices_ebook,
+    digital_health_interventions,
 )
 
 
