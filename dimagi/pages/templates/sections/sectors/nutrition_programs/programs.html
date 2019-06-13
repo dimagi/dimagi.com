@@ -1,9 +1,15 @@
 {% load i18n %}
 {% load dimagidotcom %}
 
-<section data-lazybg="true">
+<section data-lazybg="true"
+         id="programs">
   <div class="accent-gray-bg" >
     <div class="content pad-top-medium pad-bottom-medium programs-images">
+      <h2 class="align-center pad-bottom-small">
+        {% blocktrans %}
+          Featured CommCare-Based <br class="hide-until-medium"> Nutrition Programs
+        {% endblocktrans %}
+      </h2>
       <div class="grid grid-3-at-large grid-1-at-medium grid-row-equal-heights grid-col-space-small">
         <div class="column">
           <div class="pad-bottom-base white-bg">
@@ -23,9 +29,9 @@
                   Malnutrition, offering support & counseling.
                 {% endblocktrans %}
               </p>
-              <br>
-              <p>
-                <a href="#modal-feature-card-1" class="link-gray">
+              <p class="pad-top-line-at-large">
+                <a href="#modal-feature-card-1"
+                   class="link-gray read-more">
                   {% blocktrans %}
                     Read More &gt;
                   {% endblocktrans %}
@@ -53,7 +59,8 @@
                 {% endblocktrans %}
               </p>
               <p>
-                <a href="#modal-feature-card-2" class="link-gray">
+                <a href="#modal-feature-card-2"
+                   class="link-gray read-more">
                   {% blocktrans %}
                     Read More &gt;
                   {% endblocktrans %}
@@ -81,7 +88,8 @@
                 {% endblocktrans %}
               </p>
               <p>
-                <a href="#modal-feature-card-3" class="link-gray">
+                <a href="#modal-feature-card-3"
+                   class="link-gray read-more">
                   {% blocktrans %}
                     Read More &gt;
                   {% endblocktrans %}
@@ -104,19 +112,16 @@
       <div class="modal-wrapper">
         <a href="#" class="modal-close-button"></a>
         <div class="content pad-horz-medium-at-medium pad-horz-line pad-vert-none programs-images">
-          <div class="grid grid-2-at-large grid-1-at-medium grid-row-equal-heights ">
+          <h4>
+            <strong class="body-color">
+              {% blocktrans %}
+                Real Medicine Foundation <br>
+                India
+              {% endblocktrans %}
+            </strong>
+          </h4>
+          <div class="grid grid-2-at-large grid-1-at-medium">
             <div class="column pad-top-small">
-              <div class="image featured-project1 modal-popup" data-lazybg="true"></div>
-            </div> {# .column #}
-            <div class="column pad-top-small">
-              <h5>
-                <strong class="body-color">
-                  {% blocktrans %}
-                    Real Medicine Foundation <br>
-                    India
-                  {% endblocktrans %}
-                </strong>
-              </h5>
               <p class="body-color">
                 {% blocktrans %}
                   Educators calculate MUAC to identify children with Severe and Moderate Acute
@@ -135,6 +140,9 @@
                 {% endblocktrans %}
               </p>
             </div> {# .column #}
+            <div class="column pad-top-small">
+              <div class="image featured-project1 modal-popup" data-lazybg="true"></div>
+            </div> {# .column #}
           </div> {# .grid #}
         </div> {# .content #}
       </div> {# .modal-wrapper #}
@@ -149,19 +157,16 @@
       <div class="modal-wrapper">
         <a href="#" class="modal-close-button"></a>
         <div class="content pad-horz-medium-at-medium pad-horz-line pad-vert-none programs-images">
-          <div class="grid grid-2-at-large grid-1-at-medium grid-row-equal-heights ">
+          <h4>
+            <strong class="body-color">
+              {% blocktrans %}
+                Food for the Hungry <br>
+                Mozambique
+              {% endblocktrans %}
+            </strong>
+          </h4>
+          <div class="grid grid-2-at-large grid-1-at-medium">
             <div class="column pad-top-small">
-              <div class="image featured-project2 modal-popup" data-lazybg="true"></div>
-            </div> {# .column #}
-            <div class="column pad-top-small">
-              <h5>
-                <strong class="body-color">
-                  {% blocktrans %}
-                    Food for the Hungry <br>
-                    Mozambique
-                  {% endblocktrans %}
-                </strong>
-              </h5>
               <p class="body-color">
                 {% blocktrans %}
                   Health workers use CommCare during GMP sessions in Cabo Delgado, a province with
@@ -177,6 +182,9 @@
                 {% endblocktrans %}
               </p>
             </div> {# .column #}
+            <div class="column pad-top-small">
+              <div class="image featured-project2 modal-popup" data-lazybg="true"></div>
+            </div> {# .column #}
           </div> {# .grid #}
         </div> {# .content #}
       </div> {# .modal-wrapper #}
@@ -191,19 +199,16 @@
       <div class="modal-wrapper">
         <a href="#" class="modal-close-button"></a>
         <div class="content pad-horz-medium-at-medium pad-horz-line pad-vert-none programs-images">
-          <div class="grid grid-2-at-large grid-1-at-medium grid-row-equal-heights ">
+          <h4>
+            <strong class="body-color">
+              {% blocktrans %}
+                Operation Smile <br>
+                India
+              {% endblocktrans %}
+            </strong>
+          </h4>
+          <div class="grid grid-2-at-large grid-1-at-medium">
             <div class="column pad-top-small">
-              <div class="image featured-project3 modal-popup" data-lazybg="true"></div>
-            </div> {# .column #}
-            <div class="column pad-top-small">
-              <h5>
-                <strong class="body-color">
-                  {% blocktrans %}
-                    Operation Smile <br>
-                    India
-                  {% endblocktrans %}
-                </strong>
-              </h5>
               <p class="body-color">
                 {% blocktrans %}
                   Community health workers use CommCare to track the nutritional status of children
@@ -217,6 +222,9 @@
                   children’s progress in becoming sufficiently nourished to undergo cleft palate surgery.
                 {% endblocktrans %}
               </p>
+            </div> {# .column #}
+            <div class="column pad-top-small">
+              <div class="image featured-project3 modal-popup" data-lazybg="true"></div>
             </div> {# .column #}
           </div> {# .grid #}
         </div> {# .content #}
