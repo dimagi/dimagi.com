@@ -1,63 +1,53 @@
 from __future__ import absolute_import
 from django.utils.translation import ugettext_lazy
-from dimagi.pages.models.toolkits import Toolkit
 from dimagi.pages.models.toolkits import Toolkit, Highlight, OtherToolkit
 
 
 TOOLKIT = Toolkit(
     title=ugettext_lazy(
-        "The CommCare Evidence Base"
+        "Mobile Data Collection Guide"
     ),
     tagline=ugettext_lazy(
-        "Over 50 studies have assessed CommCare's impact, making it the most "
-        "evidence-based mobile platform for frontline workers in low-resource "
-        "settings."
+        "Read this guide to learn almost everything you need to know to set up your own successful mobile data collection program."
     ),
-    image="commcare-evidence-base",
-    template="data/toolkits/summaries/commcare_evidence_base.html",
-    slug="commcare-evidence-base",
-    icon="svg/tookits/icons/commcare_evidence_base.html",
-    download_url="https://www.dropbox.com/s/chn7t7dsubhe9qb/CommCare-Evidence-Base-July-2016.pdf?dl=1",
-    hubspot_form="f9b416b1-eb8b-430b-a2b6-644481b64a69",
+    image="mobile-data-collection",
+    template="data/toolkits/summaries/mobile_data_collection.html",
+    slug="mobile-data-collection",
+    icon="svg/tookits/icons/mobile_data_collection.html",
+    download_url="https://cdn2.hubspot.net/hubfs/503070/Pillar%20Page%20PDFs/Guide%20to%20Mobile%20Data%20Collection.pdf",
+    hubspot_form="a6b961bf-2a93-4d93-b2b5-46f71f82fd72",
 )
-
 
 TOOLKIT.add_highlights([
     Highlight(
         name=ugettext_lazy(
             "The CommCare Evidence Base"
         ),
-        highlight_image="commcare-evidence-base-highlights-one",
         description=ugettext_lazy("""
-An RCT in South Africa found that
-FLWs using CommCare for
-cardiovascular disease (CVD) screenings
-took 75% less time...
+Learn how your data requirements and the environmental implications of your 
+program inform your choice of mobile platform.
         """),
+        highlight_image="mobile-data-collection-highlight-one",
     ),
     Highlight(
         name=ugettext_lazy(
             "Managing Data in CommCare"
         ),
-        highlight_image="commcare-evidence-base-highlights-two",
         description=ugettext_lazy("""
-In a study with Pathfinder
-international, the use of CommCare
-helped increase the provisionof HIV
-tests from 67.5% to 82.2%.
+Identify your user stories, design the structure of your system, and develop your 
+content and delivery design.
         """),
+        highlight_image="mobile-data-collection-highlight-two",
     ),
     Highlight(
         name=ugettext_lazy(
             "Managing Devices at Scale"
         ),
-        highlight_image="commcare-evidence-base-highlights-three",
         description=ugettext_lazy("""
-After incorprating performance feedback,
-frontline workers in one study made
-21.5% more visits than control group over
-a 12-month period.
+Discover all the different tests to put your application through – from quality assurance, 
+usability testing, and pilot programs.
         """),
+        highlight_image="mobile-data-collection-highlight-three",
     ),  
 ])
 
@@ -65,14 +55,15 @@ a 12-month period.
 TOOLKIT.add_other_toolkits([
     OtherToolkit(
         name=ugettext_lazy(
-            "Business Development Toolkit"
+            "The CommCare Evidence Base"
         ),
-        icon="svg/tookits/icons/business_development.html",
+        icon="svg/tookits/icons/commcare_evidence_base.html",
         description=ugettext_lazy("""
-Use the Business Development Toolkit to develop a BD pipeline
-for your organization.
+Over 50 studies have assessed CommCare's impact, making it the most
+evidence-based mobile platform for frontline workers in low-resource
+settings.
         """),
-        view_url="business-development",
+        view_url="commcare-evidence-base",
     ),
     OtherToolkit(
         name=ugettext_lazy(
@@ -120,6 +111,17 @@ mobile solution.
     ),
     OtherToolkit(
         name=ugettext_lazy(
+            "Business Development Toolkit"
+        ),
+        icon="svg/tookits/icons/business_development.html",
+        description=ugettext_lazy("""
+Use the Business Development Toolkit to develop a BD pipeline
+for your organization.
+        """),
+        view_url="business-development",
+    ),
+    OtherToolkit(
+        name=ugettext_lazy(
             "Digital Health Interventions Checklist"
         ),
         icon="svg/tookits/icons/digital_health_interventions.html",
@@ -127,16 +129,5 @@ mobile solution.
 Learn how to describe your digital health technology across stakeholders .
         """),
         view_url="digital-health-interventions",
-    ),
-    OtherToolkit(
-        name=ugettext_lazy(
-            "Mobile Data Collection Guide"
-        ),
-        icon="svg/tookits/icons/mobile_data_collection.html",
-        description=ugettext_lazy("""
-Read this guide to learn almost everything you need to know to set up your own successful 
-mobile data collection program.
-        """),
-        view_url="mobile-data-collection",
-    ),        
+    ),    
 ])
