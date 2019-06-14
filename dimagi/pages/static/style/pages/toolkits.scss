@@ -30,6 +30,9 @@
 .digital-health-interventions{
   @include make-bg(hero, '../../pages/toolkits/digital-health-interventions/hero')
 }
+.data-collection{
+  @include make-bg(hero, '../../pages/toolkits/data-collection/hero')
+}
 // images of highlights for business-development-highlights 
 .business-development-highlights-one {
   @include background-cover('../../pages/toolkits/highlights/business-development/business-development-highlights-one.jpg');
@@ -70,6 +73,7 @@
 .managing-devices-ebook-highlights-three {
   @include background-cover('../../pages/toolkits/highlights/managing-devices-ebook/managing-devices-ebook-highlights-three.jpg');
 }
+
 // images of highlights for maturity-model-highlights
 .maturity-model-highlights-one {
   @include background-cover('../../pages/toolkits/highlights/maturity-model/maturity-model-highlights-one.jpg');
@@ -99,6 +103,16 @@
 }
 .digital-health-interventions-highlight-three{
   @include background-cover('../../pages/toolkits/highlights/digital-health-interventions/digital-health-interventions-highlight-three.jpg')
+}
+// images of highlights for data-collection
+.data-collection-highlight-one{
+  @include background-cover('../../pages/toolkits/highlights/data-collection/data-collection-highlight-one.jpg')
+}
+.data-collection-highlight-two{
+  @include background-cover('../../pages/toolkits/highlights/data-collection/data-collection-highlight-two.jpg')
+}
+.data-collection-highlight-three{
+  @include background-cover('../../pages/toolkits/highlights/data-collection/data-collection-highlight-three.jpg')
 }
 
 .max-width-initial {
