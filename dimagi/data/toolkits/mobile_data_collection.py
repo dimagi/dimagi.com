@@ -8,7 +8,7 @@ TOOLKIT = Toolkit(
         "Mobile Data Collection Guide"
     ),
     tagline=ugettext_lazy(
-        "Read this guide to learn almost everything you need to know to set up your own successful mobile data collection program."
+        "Learn how to set up a mobile data collection program."
     ),
     image="mobile-data-collection",
     template="data/toolkits/summaries/mobile_data_collection.html",
