@@ -30,7 +30,10 @@
 .digital-health-interventions{
   @include make-bg(hero, '../../pages/toolkits/digital-health-interventions/hero')
 }
-// images of highlights for business-development-highlights 
+.mobile-data-collection{
+  @include make-bg(hero, '../../pages/toolkits/mobile-data-collection/hero')
+}
+//images of highlights for business-development-highlights 
 .business-development-highlights-one {
   @include background-cover('../../pages/toolkits/highlights/business-development/business-development-highlights-one.jpg');
 }
@@ -99,6 +102,16 @@
 }
 .digital-health-interventions-highlight-three{
   @include background-cover('../../pages/toolkits/highlights/digital-health-interventions/digital-health-interventions-highlight-three.jpg')
+}
+//images of highlights for mobile-data-collection
+.mobile-data-collection-highlight-one{
+  @include background-cover('../../pages/toolkits/highlights/mobile-data-collection/mobile-data-collection-highlight-one.jpg')
+}
+.mobile-data-collection-highlight-two{
+  @include background-cover('../../pages/toolkits/highlights/mobile-data-collection/mobile-data-collection-highlight-two.jpg')
+}
+.mobile-data-collection-highlight-three{
+  @include background-cover('../../pages/toolkits/highlights/mobile-data-collection/mobile-data-collection-highlight-three.jpg')
 }
 
 .max-width-initial {

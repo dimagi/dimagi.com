@@ -122,5 +122,16 @@ Use the Business Development Toolkit to develop a BD pipeline
 for your organization.
         """),
         view_url="business-development",
-    ),  
+    ), 
+    OtherToolkit(
+        name=ugettext_lazy(
+            "Mobile Data Collection Guide"
+        ),
+        icon="svg/tookits/icons/mobile_data_collection.html",
+        description=ugettext_lazy("""
+Read this guide to learn almost everything you need to know to set up your own successful 
+mobile data collection program.
+        """),
+        view_url="mobile-data-collection",
+    ),     
 ])
