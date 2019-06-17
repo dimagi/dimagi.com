@@ -33,11 +33,7 @@
             <div class="grid-6-at-large grid-5 grid-valign-middle">
               <div class="column column-width-2-at-large gap-none">
                 <h5>
-                  {% if feature.title == 'Guaranteed First Response Time' %}
-                    <strong>{{ feature.title }}</strong>
-                  {% elif feature.title != 'Guaranteed First Response Time' %}
-                    {{ feature.title }}
-                  {% endif %}
+                  {{ feature.title }}
                 </h5>
               </div>{# .column #}
               <div class="column gap-none">
