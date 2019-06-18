@@ -21,8 +21,8 @@
       medium: 385px,
       large: 360px,
       extra-large: 360px,
-      );
-	@include make-bg(epic-cover, '../../../pages/sectors/maternal-and-newborn-health/part3/hero', $_base-height, $_height-by-size);
+    );
+	  @include make-bg(epic-cover, '../../../pages/sectors/maternal-and-newborn-health/part3/hero', $_base-height, $_height-by-size);
 }
 .center {
   display: block;
@@ -58,8 +58,8 @@
 
   }
 
-  .ac-part3 .phone-image .bg-loader{
-    background-color: transparent;
+.ac-part3 .phone-image .bg-loader{
+  background-color: transparent;
 }
 .news .image.testimonial1{
   @include background-cover('../../../pages/sectors/maternal-and-newborn-health/news/mdc-health-fico.jpg');
