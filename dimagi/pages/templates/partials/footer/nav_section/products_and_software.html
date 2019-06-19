@@ -10,73 +10,26 @@
 
 {% block links %}
   <li>
-    <a href="{% url 'commcare' %}"
-       class="{% click_footer 'commcare' %}">
+    <a class="arrow ab-footer-head-commcare"
+       data-transition-state="on"
+       data-transition-target="footer-commcare"
+       href="#">
       {% blocktrans %}
         CommCare
       {% endblocktrans %}
     </a>
+    {% include 'partials/footer/nav_section/commcare_menu.html' with slug="commcare" %}
   </li>
+  
   <li>
-    <a href="{% url 'commcare' %}"
-       class="{% click_footer 'commcare' %}">
-      <span class="gap-right-base">&hyphen;</span>
-      {% blocktrans %}
-        About CommCare
-      {% endblocktrans %}
-    </a>
-  </li>
-  <li>
-    <a href="{% url 'commcare_pricing' %}"
-       class="{% click_footer 'commcare-pricing' %}">
-      <span class="gap-right-base">&hyphen;</span>
-      {% blocktrans %}
-        Pricing
-      {% endblocktrans %}
-    </a>
-  </li>
-  <li>
-    <a href="{% url 'case_management' %}"
-       class="{% click_footer 'case-management' %}">
-      <span class="gap-right-base">&hyphen;</span>
-      {% blocktrans %}
-        Case Management
-      {% endblocktrans %}
-    </a>
-  </li>
-  <li>
-    <a href="{% url 'toolkit' 'commcare-evidence-base' %}"
-       class="{% click_footer 'commcare-evidence-base' %}">
-      <span class="gap-right-base">&hyphen;</span>
-      {% blocktrans %}
-        Evidence Base
-      {% endblocktrans %}
-    </a>
-  </li>
-  <li>
-    <a href="{% url 'services' %}"
-       class="{% click_footer 'services' %}">
+    <a class="arrow ab-footer-head-global_service"
+       data-transition-state="on"
+       data-transition-target="footer-global_service"
+       href="#">
       {% blocktrans %}
         Global Services
       {% endblocktrans %}
     </a>
-  </li>
-  <li>
-    <a href="{% url 'services' %}"
-       class="{% click_footer 'services' %}">
-      <span class="gap-right-base">&hyphen;</span>
-      {% blocktrans %}
-        Implementation Packages
-      {% endblocktrans %}
-    </a>
-  </li>
-  <li>
-    <a href="{% url 'services' %}"
-       class="{% click_footer 'services' %}">
-      <span class="gap-right-base">&hyphen;</span>
-      {% blocktrans %}
-        Advisory Services
-      {% endblocktrans %}
-    </a>
-  </li>
+    {% include 'partials/footer/nav_section/global_service_menu.html' with slug="global_service" %}
+  </li>  
 {% endblock %}

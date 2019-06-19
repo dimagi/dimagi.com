@@ -40,39 +40,16 @@
     </a>
   </li>
   <li>
-    <a>
+    <a class="arrow ab-footer-head-guides"
+       data-transition-state="on"
+       data-transition-target="footer-guides"
+       href="#">
       {% blocktrans %}
         Guides
       {% endblocktrans %}
     </a>
-  </li>
-  <li>
-    <a href="{% url 'quick_start' %}"
-       class="{% click_footer 'quick-starts' %}">
-       <span class="gap-right-base">&hyphen;</span>
-      {% blocktrans %}
-        Quick Start Guides
-      {% endblocktrans %}
-    </a>
-  </li>
-  <li>
-    <a href="{% url 'mobile_data_collection' %}"
-       class="{% click_footer 'mobile-data-collection' %}">
-      <span class="gap-right-base">&hyphen;</span>
-      {% blocktrans %}
-        Mobile Data Collection
-      {% endblocktrans %}
-    </a>
-  </li>
-  <li>
-    <a href="{% url 'data_collection' %}"
-       class="{% click_footer 'data-collection' %}">
-      <span class="gap-right-base">&hyphen;</span>
-      {% blocktrans %}
-        Data Collection
-      {% endblocktrans %}
-    </a>
-  </li>
+    {% include 'partials/footer/nav_section/guides_menu.html' with slug="guides" %}
+  </li>  
   <li>
     <a href="{% url 'partner_program' %}"
        class="{% click_footer 'partner-program' %}">
