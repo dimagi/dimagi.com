@@ -59,7 +59,7 @@
     }
 
     .destination-links {
-      font-size: 12px;
+      font-size: 14px;
       font-weight: 400;
       line-height: 20px;
       margin-bottom: $space-base;
@@ -82,12 +82,17 @@
     }
 
     .b-corp-logo {
-      svg > * {
+    svg > * {
         fill: $color-accent-gray;
       }
     }
-
-  }
+    .footer-icon-left-bottom > svg {
+      padding-bottom: 8px;
+    }
+    p {
+      line-height: 20px;
+    }
+  }  
 
   @media (min-width: $width-mobile) {
     .page-footer [data-transition-target] {

@@ -8,7 +8,17 @@
 
 {% block links %}
   <li>
-    <a href="//help.commcarehq.org" target="_blank"
+    <a href="//status.commcarehq.org/" 
+       target="_blank"
+       class="{% click_footer 'commcare-status' %}">
+      {% blocktrans %}
+        CommCare Status Page
+      {% endblocktrans %}
+    </a>
+  </li>
+  <li>
+    <a href="//help.commcarehq.org" 
+       target="_blank"
        class="{% click_footer 'help' %}">
       {% blocktrans %}
         CommCare Help Site
@@ -16,7 +26,8 @@
     </a>
   </li>
   <li>
-    <a href="//forum.dimagi.com" target="_blank"
+    <a href="//forum.dimagi.com" 
+       target="_blank"
        class="{% click_footer 'user-forum' %}">
       {% blocktrans %}
         User Forum
@@ -24,7 +35,8 @@
     </a>
   </li>
   <li>
-    <a href="//github.com/dimagi/commcare-hq" target="_blank"
+    <a href="//github.com/dimagi/commcare-hq" 
+       target="_blank"
        class="{% click_footer 'code' %}">
       {% blocktrans %}
         Code Base

@@ -4,23 +4,30 @@
 <footer class="page-footer"
         id="footer"
         role="footer">
-  <div class="content pad-vert-medium">
+  <div class="content pad-vert-small">
     <nav class="primary align-center align-left-at-small">
       {% include 'partials/footer/navigation.html' %}
     </nav>
-    <div class="grid-3 destination-links white">
-      <div class="column">
-        <ul class="reset">
-          <li>
-            <a href="#demo-form-modal">
-                {% blocktrans %}
-                  Schedule a Demo
-                {% endblocktrans %}
+    <div class="grid grid-3-at-medium white">
+      <div class="column align-center align-left-at-medium">
+        <ul class="reset destination-links">
+          <li class="pad-left-small pad-left-none-at-medium">
+            <a href="#demo-form-modal" 
+               data-modal="demo-form-modal">
+              <span class="footer-icon-left-bottom pad-right-base">
+                {% include 'svg/footer/date.html' %}
+              </span>
+              {% blocktrans %}
+                Schedule a Demo
+              {% endblocktrans %}
             </a>
           </li>
           <li>
             <a class="{% click_hero 'trial' %}"
                href="{{ URL_TRIAL }}">
+              <span class="footer-icon-left-bottom pad-right-base">
+                {% include 'svg/footer/web.html' %}
+              </span>
               {% blocktrans %}
                 Start a Trial
               {% endblocktrans %}
@@ -29,6 +36,9 @@
           <li>
             <a href="{% url 'contact' %}"
                class="{% click_footer 'contact' %}">
+              <span class="footer-icon-left-bottom pad-right-base">
+                {% include 'svg/footer/contact.html' %}
+              </span>
               {% blocktrans %}
                 Contact us
               {% endblocktrans %}
@@ -36,8 +46,8 @@
           </li>
         </ul>
       </div>{# .column #}
-      <div class="column">
-        <p class=" align-center align-left-at-small">
+      <div class="column align-center align-left-at-medium">
+        <p>
           Over 32,000 leaders from WHO, Save the children, the World  Bank. USAID,
           the Bill and Melinida Gates Foundation, and many Other impact-driven organzations subscribe
           to our newsletter for case studies, best practices, and other updates. Join then today!
@@ -46,8 +56,8 @@
           <div id="email-subscribtion-form-content"></div>
         </p>
       </div>{# .column #}
-      <div class="column align-center align-right-at-small">
-        <div class="grid-2">
+      <div class="column align-center align-right-at-extra-large">
+        <div class="grid-2-at-extra-large">
           <div class="column">
             <a href="https://bcorporation.net/"
                target="_blank"
@@ -86,7 +96,7 @@
                 </a>
               </li>
             </ul>
-            <p class="copyright align-center align-left-at-small">
+            <p class="copyright align-center align-left-at-extra-large">
               &copy; {% now "Y" %} Dimagi, Inc.
             </p>
           </div> {# .column #}
