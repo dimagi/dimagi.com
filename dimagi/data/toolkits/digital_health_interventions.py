@@ -122,5 +122,15 @@ Use the Business Development Toolkit to develop a BD pipeline
 for your organization.
         """),
         view_url="business-development",
-    ),  
+    ),
+    OtherToolkit(
+        name=ugettext_lazy(
+            "Data Collection Guide"
+        ),
+        icon="svg/tookits/icons/data_collection.html",
+        description=ugettext_lazy("""
+Use this introductory guide to data collection to organize your data collection plan.
+        """),
+        view_url="data-collection",
+    ),      
 ])

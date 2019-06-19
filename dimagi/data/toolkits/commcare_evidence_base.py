@@ -127,5 +127,15 @@ mobile solution.
 Learn how to describe your digital health technology across stakeholders .
         """),
         view_url="digital-health-interventions",
-    ),    
+    ),
+    OtherToolkit(
+        name=ugettext_lazy(
+            "Data Collection Guide"
+        ),
+        icon="svg/tookits/icons/data_collection.html",
+        description=ugettext_lazy("""
+Use this introductory guide to data collection to organize your data collection plan.
+        """),
+        view_url="data-collection",
+    ),        
 ])

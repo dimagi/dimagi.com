@@ -8,7 +8,7 @@ TOOLKIT = Toolkit(
         "Data Collection Guide"
     ),
     tagline=ugettext_lazy(
-        "This introductory guide to data collection will help you through the process of organizing your data collection plan."
+        "Use this introductory guide to data collection to organize your data collection plan."
     ),
     image="data-collection",
     template="data/toolkits/summaries/data_collection.html",
@@ -119,5 +119,15 @@ Use the Business Development Toolkit to develop a BD pipeline
 for your organization.
         """),
         view_url="business-development",
-    ),  
+    ),
+    OtherToolkit(
+        name=ugettext_lazy(
+            "Digital Health Interventions Checklist"
+        ),
+        icon="svg/tookits/icons/digital_health_interventions.html",
+        description=ugettext_lazy("""
+Learn how to describe your digital health technology across stakeholders .
+        """),
+        view_url="digital-health-interventions",
+    ),    
 ])
