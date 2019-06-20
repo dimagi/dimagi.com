@@ -65,6 +65,9 @@
       margin-bottom: $space-base;
     }
 
+    .sub-menu {
+      font-size: 12px !important;
+    }
     .primary {
       border-bottom: 1px solid $color-footer-border;
       margin-bottom: $space-small;
@@ -92,7 +95,16 @@
     p {
       line-height: 20px;
     }
-  }  
+    #email-subscribtion-form-content {
+      input{
+        padding-bottom: 10px;
+      }
+      label,
+      legend {
+        display: none;
+      }
+    }
+  }
 
   @media (min-width: $width-mobile) {
     .page-footer [data-transition-target] {
