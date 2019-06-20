@@ -57,7 +57,7 @@
 
     {% capture as page_description silent %}{% block description %}
       {% blocktrans %}
-        Dimagi offers technology for social impact. Build a mobile data collection app 
+        Dimagi offers technology for social impact. Build a mobile data collection app
         to gather actionable data, while guiding your team to do their best work.
       {% endblocktrans %}
     {% endblock %}{% endcapture %}
@@ -214,7 +214,26 @@
       </div>{# .modal-scroll #}
     </div>{# .modal #}
 
-    {% block modals %}{% endblock %}
+    {% block modals %}
+      <div class="modal"
+           data-dismissible="true"
+           data-size="medium"
+           id="schedule-demo-form">
+        <div class="modal-scroll">
+          <div class="modal-wrapper">
+            <a href="#" class="modal-close-button"></a>
+            <div class="content pad-horz-medium-at-medium pad-horz-line pad-vert-none">
+              <h3>
+                {% blocktrans %}
+                  Request a CommCare Demo
+                {% endblocktrans %}
+              </h3>
+              <section id="schedule-demo-form-content"></section>
+            </div>{# .content #}
+          </div>{# .modal-wrapper #}
+        </div>{# .modal-scroll #}
+      </div>{# .modal #}
+    {% endblock %}
 
     {% if request.is_amp %}
       {% block requirejs_module %}
@@ -223,7 +242,21 @@
       {% require_module 'app' %}
     {% endif %}
 
-    {% block js %}{% endblock %}
+    {% block js %}
+      <!--[if lte IE 8]>
+        <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+      <![endif]-->
+      <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+      <script>
+        //  Schedule a demo form
+        hbspt.forms.create({
+          portalId: "503070",
+          formId: "afb4d5a0-826f-4a56-8c21-552d4b6dafa3",
+          target: "#schedule-demo-form-content",
+          css: ""
+        });
+      </script>
+    {% endblock %}
 
   </body>
 </html>
