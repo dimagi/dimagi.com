@@ -9,7 +9,7 @@
     small: 280px,
     medium: 280px,
     large: 280px,
-    extra-large: 320px,
+    extra-large: 320px,  
 	);
 	@include make-bg(hero-data-image, '../../../pages/sectors/maternal-and-newborn-health/intro/hero', $_base-height, $_height-by-size);
 }
@@ -39,7 +39,7 @@
       extra-large: 290px,
     );
     @include make-bg(phone-image, '../../../pages/sectors/maternal-and-newborn-health/news/Phone', $_base-height, $_height-by-size, '.png');
-  
+
     @media (min-width: $width-desktop) {
       .off-grid {
         top: 10%;
@@ -49,7 +49,7 @@
         width: 120%;
         z-index: 1;
       }
-  
+
       .content {
         position: relative;
         z-index: 2;
