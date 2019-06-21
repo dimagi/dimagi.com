@@ -14,7 +14,7 @@ require([
   'app/imageLoader',
   'app/initial',
   'app/transition',
-  'app/extensions',
+  // 'app/extensions',
   'modernizr',
 ], function (
     $,
@@ -23,9 +23,9 @@ require([
     AMP,
     ProgressBar,
     ImageLoader,
-    Transition,
-    Extensions,
     Initial,
+    Transition
+    // Extensions
 ) {
   $(function () {
     _.each([
@@ -33,7 +33,7 @@ require([
       AMP,
       ProgressBar,
       ImageLoader,
-      Extensions,
+      // Extensions,
       Transition,
       Initial,
     ], function (m) {
