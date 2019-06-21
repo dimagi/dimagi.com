@@ -1,13 +1,13 @@
 {% load dimagidotcom %}
 {% load i18n %}
 
-<a class="tile theme-border align-center ab-body-sectors--{{ sector.slug }} accent-gray-bg" >
-  <div class="theme-icon">
-    {% include sector.area.icon %}
-  </div>
+<a class="tile theme-border align-center ab-body-sectors--{{ sector.slug }} accent-gray-bg home-{{ sector.slug }} sector-opacity" >
   <h5 class="theme-color">
     {{ sector.name }}
   </h5>
+  <div class="theme-icon">
+    {% include sector.icon %}
+  </div>
   <p class="body-color">
     {{ sector.summary }}
   </p>

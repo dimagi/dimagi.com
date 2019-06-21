@@ -49,13 +49,13 @@
 {% endblock %}
 
 {% block content %}
-  <section class="sections-container {{ sector.area.theme }}">
+  <section class="sections-container {{ sector.theme }}">
     {% include "sections/sectors/sub_nav.html" %}
     {% include sector.template%}
     {% include "sections/sectors/slides.html" %}
-    {% comment %} {% if sector.projects %}
+    {% if sector.projects %}
       {% include "sections/sectors/projects.html" %}
-    {% endif %} {% endcomment %}
+    {% endif %}
     {% if sector.case_studies %}
       {% include "sections/sectors/case_studies.html" %}
     {% endif %}

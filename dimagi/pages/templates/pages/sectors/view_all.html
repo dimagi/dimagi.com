@@ -3,15 +3,19 @@
 {% load dimagidotcom %}
 
 {% block title %}{% blocktrans %}
-  Sectors & Industries Using Mobile Data Collection
+  Sectors we work in
 {% endblocktrans %}{% endblock %}
 
 {% block description %}{% blocktrans %}
-  Learn how organizations are using mobile data collection
-  across sectors to maximize their impact. 
+  CommCare is an industry-leading mobile data 
+  collection tool that is making an impact across sectors
 {% endblocktrans %}{% endblock %}
 
 {% block body_class %}sectors-page tucked-hero{% endblock %}
+
+{% block js %}
+  <script type="text/javascript" src="{% static 'js/sector.js' %}"></script>
+{% endblock %}
 
 {% block stylesheets %}
   {% compress css %}
@@ -20,26 +24,22 @@
 {% endblock %}
 
 {% block hero %}
-<section class="hero orange-theme"
+<section class="sector-home-page hero"
          data-lazybg="true"
          id="hero">
-  <div class="content content-width-large inverted align-center display-flex flex-valign-middle expand-vertical offset-top-small flex-align-center">
-    <div class="copy expand position-relative">
-
-      <h1>
-        {% blocktrans %}
-          Sectors &amp; Industries: Leveraging Mobile Data Collection Across Sectors
-        {% endblocktrans %}
-      </h1>
-      <p>
-        {% blocktrans %}
-          Dimagi's signature solution, CommCare, is making an impact across all
-          social impact sectors with industry-leading mobile data collection tools.
-        {% endblocktrans %}
-      </p>
-
-    </div>{# .copy #}
-  </div>{# .content #}
+  <div class="content align-left-at-medium gap-top-large gap-top-small-at-medium gap-top-line-at-large">
+    <h2 class="gap-vert-line">
+      {% blocktrans %}
+        Sectors we work in
+      {% endblocktrans %}
+    </h2>
+    <h1>
+      {% blocktrans %}
+        CommCare is an industry-leading mobile data<br class="hide-until-medium" />
+        collection tool that is making an impact across sectors
+      {% endblocktrans %}
+    </h1>
+  </div> {# .content #}
 </section>
 {% endblock %}
 

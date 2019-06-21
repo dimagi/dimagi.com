@@ -1,7 +1,6 @@
 from __future__ import absolute_import
 from django.utils.translation import ugettext_lazy
 from dimagi.pages.models.sectors import Sector
-from dimagi.data.sectors import areas
 
 
 SECTOR = Sector(
@@ -13,7 +12,6 @@ SECTOR = Sector(
         "visibility, and scalability."
     ),
     template="data/sectors/content/programmatic_research.html",
-    area=areas.DEVELOPMENT,
     slug="programmatic-research",
     slides=[
         "data/sectors/content/programmatic_research/core_functionalities.html",
