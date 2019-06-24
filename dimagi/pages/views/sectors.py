@@ -16,6 +16,8 @@ def view_all(request):
     }
     return render(request, 'pages/sectors/view_all.html', context)
 
+def sector_reproductive_health(request):
+    return render(request, 'pages/sectors/reproductive_health.html')
 
 def view_single(request, slug):
     sector = get_sector_by_slug(slug)
