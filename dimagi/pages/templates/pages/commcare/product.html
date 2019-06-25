@@ -36,24 +36,16 @@
   <section class="hero hero-products-commcare"
            data-lazybg="true"
            id="hero">
-    <div class="content offset-top-small-at-medium align-left-at-medium align-center">
-      <h2 class="gap-top-small gap-top-none-at-medium">
+    <div class="content offset-top-small-at-medium align-left-at-medium align-center pad-top-large">
+      <h2 class="gap-top-small gap-top-medium-at-medium">
         {% include "svg/commcare/logo.html" %}
       </h2>
       <h1>
         {% blocktrans %}
-          Build A Smarter<br />
-          Data Collection App.
+          The world's most powerful mobile <br class="hide-until-medium" />
+          data collection platform.
         {% endblocktrans %}
       </h1>
-      <p>CommCare is the world's most powerful<br />
-        mobile data collection platform.</p>
-      <a class="button button-accent-gray {% click_hero 'trial' %}"
-         href="{{ URL_TRIAL }}">
-        {% blocktrans %}
-          Start Free Trial
-        {% endblocktrans %}
-      </a>
       <p class="cta">
         {% trans 'Watch a demo' as video_text %}
         {% click_hero 'video' as video_click_class %}
@@ -64,16 +56,17 @@
 {% endblock %}
 
 {% block content %}
-  <section id="ko-pricing-control" class="products-commcare-container">
+  <section id="ko-pricing-control" class="products-commcare-container blue-theme">
     {% include "sections/commcare/product/sub_nav.html" %}
     {% include "sections/commcare/product/brief_overview.html" %}
-    {% include "sections/commcare/product/case_management.html" %}
     {% include "sections/commcare/product/overview.html" %}
-    {% include "sections/commcare/product/features.html" %}
+    {% include "sections/commcare/product/case_management.html" %}
+    {% comment %} {% include "sections/commcare/product/features.html" %}
     {% include "sections/commcare/product/usage.html" %}
-    {% include "sections/commcare/product/impact.html" %}
+    {% include "sections/commcare/product/impact.html" %} {% endcomment %}
     {% include "sections/commcare/product/testimonials.html" %}
-    {% include "sections/commcare/product/pricing.html" %}
-    {% include "sections/commcare/product/trial.html" %}
+    {% include "sections/commcare/product/research.html" %}
+    {% include "sections/commcare/product/pricing_cta.html" %}
+    {% comment %}{% include "sections/commcare/product/trial.html" %} {% endcomment %}
   </section>
 {% endblock %}

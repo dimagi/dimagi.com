@@ -1,0 +1,26 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="usage blue-bg"
+         id="usage">
+  <div class="content pad-vert-medium">
+    <h2 class="white align-center">
+      {% blocktrans %}
+        PRICING
+      {% endblocktrans %}
+    </h2>
+    <h4 class="white align-center">
+      {% blocktrans %}
+        Affordable pricing plans to fit your budget and needs.
+      {% endblocktrans %}
+    </h4>
+    <p class="align-center">
+      <a class="button button-accent-gray {% click_body 'case-management' %}"
+         href="{% url 'case_management' %}">
+        {% blocktrans %}
+          View commcare plans
+        {% endblocktrans %}
+      </a>
+    </p>
+  </div>{# .content #}
+</section>
