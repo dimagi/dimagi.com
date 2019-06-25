@@ -57,23 +57,60 @@ GROUP.add_features([
             "Guaranteed First Response Time"
         ),
         description=ugettext_lazy(
-            "Dimagi support staff will review any issues you report "
-            "and contact you with a first response within the "
-            "guaranteed response time."
+            "Dimagi support staff will triage  "
+            "and provide the first response to your inquiry "
+            "within the specified first response time."
         ),
         support=Support(
             standard=ugettext_lazy(
-                "3 Business Days"
+                "3 business days"
             ),
             pro=ugettext_lazy(
-                "1 Business Day"
+                "1 business day"
             ),
             advanced=ugettext_lazy(
-                "Priority"
+                "1 business day"
             ),
             enterprise=ugettext_lazy(
-                "Priority"
+                "1 business day"
             ),
         ),
+    ),
+    Feature(
+        title=ugettext_lazy(
+            "Guaranteed Follow-up Time"
+        ),
+        description=ugettext_lazy(
+            "Dimagi support staff will follow-up with each of your replies "
+            "within the specified response time"
+        ),
+        support=Support(
+            False,
+            False,
+            advanced=ugettext_lazy(
+                "1 business day"
+            ),
+            enterprise=ugettext_lazy(
+                "1 business day"
+            ),
+        ),
+    ),
+    Feature(
+        title=ugettext_lazy(
+            "Support on CommCare Bugs"
+        ),
+        description=ugettext_lazy(
+            ""
+        ),
+        support=Support(True, True, True, True),
+    ),
+    Feature(
+        title=ugettext_lazy(
+            'Response to "App-specific Questions"'
+        ),
+        description=ugettext_lazy(
+            ""
+        ),
+        support=Support(False, True, True, True),
     ),
 ])

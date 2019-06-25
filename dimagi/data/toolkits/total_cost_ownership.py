@@ -18,7 +18,6 @@ TOOLKIT = Toolkit(
     icon="svg/tookits/icons/total_cost_ownership_model.html",
     download_url="https://cdn2.hubspot.net/hubfs/503070/Dimagi-CommCare-TCO-Model-2018-2.xlsx",
     hubspot_form="19bbc2bc-d6a3-4831-8088-770393235a75",
-    hubspot_formId="e3ecdc14-eea2-42fa-9dc5-d5988b549501",
 )
 
 
@@ -116,4 +115,25 @@ vision for building and scaling your mobile system.
         """),
         view_url="maturity-model",
     ), 
+    OtherToolkit(
+        name=ugettext_lazy(
+            "Digital Health Interventions Checklist"
+        ),
+        icon="svg/tookits/icons/digital_health_interventions.html",
+        description=ugettext_lazy("""
+Learn how to describe your digital health technology across stakeholders .
+        """),
+        view_url="digital-health-interventions",
+    ), 
+    OtherToolkit(
+        name=ugettext_lazy(
+            "Mobile Data Collection Guide"
+        ),
+        icon="svg/tookits/icons/mobile_data_collection.html",
+        description=ugettext_lazy("""
+Read this guide to learn almost everything you need to know to set up your own successful 
+mobile data collection program.
+        """),
+        view_url="mobile-data-collection",
+    ),     
 ])

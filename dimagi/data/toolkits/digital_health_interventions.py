@@ -1,63 +1,56 @@
 from __future__ import absolute_import
 from django.utils.translation import ugettext_lazy
-from dimagi.pages.models.toolkits import Toolkit
 from dimagi.pages.models.toolkits import Toolkit, Highlight, OtherToolkit
 
 
 TOOLKIT = Toolkit(
     title=ugettext_lazy(
-        "The CommCare Evidence Base"
+        "Digital Health Interventions Checklist"
     ),
     tagline=ugettext_lazy(
-        "Over 50 studies have assessed CommCare's impact, making it the most "
-        "evidence-based mobile platform for frontline workers in low-resource "
-        "settings."
+        "Learn how to describe your digital health technology across stakeholders "
     ),
-    image="commcare-evidence-base",
-    template="data/toolkits/summaries/commcare_evidence_base.html",
-    slug="commcare-evidence-base",
-    icon="svg/tookits/icons/commcare_evidence_base.html",
-    download_url="https://www.dropbox.com/s/chn7t7dsubhe9qb/CommCare-Evidence-Base-July-2016.pdf?dl=1",
-    hubspot_form="f9b416b1-eb8b-430b-a2b6-644481b64a69",
+    image="digital-health-interventions",
+    template="data/toolkits/summaries/digital_health_interventions.html",
+    slug="digital-health-interventions",
+    icon="svg/tookits/icons/digital_health_interventions.html",
+    download_url="https://cdn2.hubspot.net/hubfs/503070/ALL_Digital%20Health%20Interventions%20Checklist_v2.pdf",
+    hubspot_form="0e1517c2-5a8f-4dca-a442-11252bb305d8",
 )
-
 
 TOOLKIT.add_highlights([
     Highlight(
         name=ugettext_lazy(
             "The CommCare Evidence Base"
         ),
-        highlight_image="commcare-evidence-base-highlights-one",
         description=ugettext_lazy("""
-An RCT in South Africa found that
-FLWs using CommCare for
-cardiovascular disease (CVD) screenings
-took 75% less time...
+Defines the shared language to describe the 
+uses of digital technology for health.
         """),
+        highlight_image="digital-health-interventions-highlight-one",
     ),
     Highlight(
         name=ugettext_lazy(
             "Managing Data in CommCare"
         ),
-        highlight_image="commcare-evidence-base-highlights-two",
         description=ugettext_lazy("""
-In a study with Pathfinder
-international, the use of CommCare
-helped increase the provisionof HIV
-tests from 67.5% to 82.2%.
+Shares different sets of recommendations for 
+clients, healthcare providers, health system 
+managers, and data services.
         """),
+        highlight_image="digital-health-interventions-highlight-two",
     ),
     Highlight(
         name=ugettext_lazy(
             "Managing Devices at Scale"
         ),
-        highlight_image="commcare-evidence-base-highlights-three",
         description=ugettext_lazy("""
-After incorprating performance feedback,
-frontline workers in one study made
-21.5% more visits than control group over
-a 12-month period.
+Covers recommendations for specific 
+initiatives from client health records 
+management to health facilities assessment 
+and targeted client communications.
         """),
+        highlight_image="digital-health-interventions-highlight-three",
     ),  
 ])
 
@@ -65,14 +58,15 @@ a 12-month period.
 TOOLKIT.add_other_toolkits([
     OtherToolkit(
         name=ugettext_lazy(
-            "Business Development Toolkit"
+            "The CommCare Evidence Base"
         ),
-        icon="svg/tookits/icons/business_development.html",
+        icon="svg/tookits/icons/commcare_evidence_base.html",
         description=ugettext_lazy("""
-Use the Business Development Toolkit to develop a BD pipeline
-for your organization.
+Over 50 studies have assessed CommCare's impact, making it the most
+evidence-based mobile platform for frontline workers in low-resource
+settings.
         """),
-        view_url="business-development",
+        view_url="commcare-evidence-base",
     ),
     OtherToolkit(
         name=ugettext_lazy(
@@ -120,14 +114,15 @@ mobile solution.
     ),
     OtherToolkit(
         name=ugettext_lazy(
-            "Digital Health Interventions Checklist"
+            "Business Development Toolkit"
         ),
-        icon="svg/tookits/icons/digital_health_interventions.html",
+        icon="svg/tookits/icons/business_development.html",
         description=ugettext_lazy("""
-Learn how to describe your digital health technology across stakeholders .
+Use the Business Development Toolkit to develop a BD pipeline
+for your organization.
         """),
-        view_url="digital-health-interventions",
-    ),
+        view_url="business-development",
+    ), 
     OtherToolkit(
         name=ugettext_lazy(
             "Mobile Data Collection Guide"
@@ -138,5 +133,5 @@ Read this guide to learn almost everything you need to know to set up your own s
 mobile data collection program.
         """),
         view_url="mobile-data-collection",
-    ),        
+    ),     
 ])
