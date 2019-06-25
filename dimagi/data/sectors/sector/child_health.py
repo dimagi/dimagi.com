@@ -1,29 +1,22 @@
 from __future__ import absolute_import
 from django.utils.translation import ugettext_lazy
 from dimagi.pages.models.sectors import Sector, Project
-from dimagi.data.sectors import areas, countries
+from dimagi.data.sectors import countries
 from dimagi.data.case_studies import mhealth
 
 
 SECTOR = Sector(
     name=ugettext_lazy(
-        "Child Health"
+        "Health Care Delivery"
     ),
     summary=ugettext_lazy(
-        "Use CommCare to monitor and improve antenatal, natal, and "
-        "postnatal care."
+        "Mobile tools can monitor and improve maternal, antenatal, natal, and postnatal care."
     ),
     template="data/sectors/content/child_health.html",
-    area=areas.HEALTH,
+    icon="svg/sectors/healthcare/healthcare_delivery.html",
     slug="child-health",
-    slides=[
-        "data/sectors/content/child_health/programs.html",
-        "data/sectors/content/child_health/clinics.html",
-        "data/sectors/content/child_health/patients.html",
-    ],
-    download_url="https://cdn2.hubspot.net/hubfs/503070/Child%20Health.pdf",
+    theme="blue-theme",
 )
-
 
 SECTOR.add_case_studies([
     mhealth.lmrf_india.STUDY,

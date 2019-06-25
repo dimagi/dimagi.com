@@ -4,20 +4,19 @@
 
 <section class="overview" id="overview">
   <div class="content pad-vert-medium">
-
-    <h3 class="gap-bottom-small">
-      {% blocktrans %}
-        Sectors
-      {% endblocktrans %}
-    </h3>
-
-    <div class="grid-4-at-extra-large grid-3-at-medium grid-2-at-small grid-row-space-small grid-row-equal-heights gap-bottom-small">
+    <div class="sector-group grid-4-at-extra-large grid-3-at-medium grid-2-at-small grid-row-space-small grid-row-equal-heights gap-bottom-small">
       {% for sector in sectors %}
-        <div class="column {{ sector.area.theme }} {{ sector.area.css_class }}">
-          {% include "partials/sectors_brief.html" with sector=sector %}
+        <div class="sector-content column {{ sector.theme }}" >
+         {% include "partials/sectors_brief.html" with sector=sector %}
         </div>
       {% endfor %}
+      {% for sector in sectors %}
+        {% for sector in sector.sub_sectors %}
+          <div class="sector-content child-{{ sector.theme }} child-{{ sector.slug }} {{ sector.theme }}" >
+            {% include "partials/secors_breif_child.html" %}
+          </div>
+        {% endfor %}
+      {% endfor %}
     </div>{# .grid-4-at-medium #}
-
   </div>{# .content #}
 </section>

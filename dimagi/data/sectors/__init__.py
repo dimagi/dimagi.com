@@ -1,8 +1,8 @@
-from dimagi.data.sectors.sector import all_sectors
+from dimagi.data.sectors.sector import all_sectors, sub_sectors
 
 
 def get_sector_by_slug(slug):
-    sector_by_slug = dict((t.SECTOR.slug, t.SECTOR) for t in all_sectors)
+    sector_by_slug = dict((t.SECTOR.slug, t.SECTOR) for t in sub_sectors)
     return sector_by_slug.get(slug)
 
 

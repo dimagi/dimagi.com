@@ -13,6 +13,9 @@ from dimagi.data.blog import (
 from dimagi.pages.models.blog import BlogPost
 from dimagi.utils.wordpress_api import get_json
 
+from dimagi.utils.ab_tests import DEMO_WORKFLOW_V2
+from dimagi.utils.decorators.enable_ab_test import enable_ab_test
+
 
 def validate_category(fn):
     @wraps(fn)
@@ -103,6 +106,7 @@ def post(request, slug):
     context['post'] = _post
     return render(request, 'pages/blog/post.html', context)
 
+@enable_ab_test(DEMO_WORKFLOW_V2)
 def mobile_data_collection_blog_post(request):
     template= "pages/blog/mobile_blog.html"
     return render(request, template)

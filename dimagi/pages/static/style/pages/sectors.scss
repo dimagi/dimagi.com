@@ -7,6 +7,14 @@
   @include make-bg(hero, '../../pages/sectors/hero');
 }
 
+@media (min-width: $width-desktop) {
+  .hero h1 {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 100%;
+  }
+}
+
 $_slugs: (
   agricultural-cooperatives,
   agricultural-finance,
@@ -61,4 +69,41 @@ a.study {
       opacity: .5;
     }
   }
+}
+
+.blog_build {
+  $_base-height: 290px;
+  $_height-by-size: (
+  	  small: 390px,
+      medium: 390px,
+      large: 390px,
+      extra-large: 392px,
+    );
+  @include make-bg(blog_image, '../../pages/blog/mobiledata_blog_page/blog_build/hero', $_base-height, $_height-by-size);
+
+  @media (min-width: $width-desktop) {
+    .off-grid {
+      bottom: 20px;
+      left: -337px;
+      position: absolute;
+      right: 0;
+      width: 100%;
+      z-index: 1;
+    }
+
+    .content {
+      position: relative;
+      z-index: 2;
+    }
+  }
+
+  @media (min-width: $width-desktop-lg) {
+    .off-grid {
+      left: -180px;
+    }
+  }
+}
+
+.sector-home-inactive {
+  opacity: 0.4;
 }
