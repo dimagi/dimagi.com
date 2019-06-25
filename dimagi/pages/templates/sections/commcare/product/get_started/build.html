@@ -1,0 +1,29 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<div class="item align-center border-right">
+  <div class="theme-icon gap-bottom-line">
+    {% include "svg/commcare/icon/build.html" %}
+  </div>
+  <h3>
+    {% blocktrans %}
+      Build on your own
+    {% endblocktrans %}
+  </h3>
+  <p>
+    {% blocktrans %}
+      Select a plan that fits your needs and start building
+      with our drag-and-drop app builder.
+    {% endblocktrans %}
+  </p>
+  <p>
+    <a class="arrow {% click_body 'features-view' %}"
+       data-clickclass="{{ click_class }}"
+       href="#demo-form-modal">
+      {% blocktrans %}
+        Get A Demo
+      {% endblocktrans %}
+    </a>
+  </p>
+  
+</div>{# .item #}
