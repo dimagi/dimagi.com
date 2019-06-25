@@ -14,6 +14,7 @@ require([
   'app/imageLoader',
   'app/initial',
   'app/transition',
+  'app/contactForm',
   'app/scheduleDemoForm',
   'modernizr',
 ], function (
@@ -25,6 +26,7 @@ require([
     ImageLoader,
     Initial,
     Transition,
+    ContactForm,
     ScheduleDemoForm
 ) {
   $(function () {
@@ -34,6 +36,7 @@ require([
       ProgressBar,
       ImageLoader,
       Transition,
+      ContactForm,
       ScheduleDemoForm,
       Initial,
     ], function (m) {
