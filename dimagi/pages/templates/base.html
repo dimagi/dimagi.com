@@ -34,6 +34,8 @@
 
     <meta property="dimagi:contactFormId" content="{% block contact_form_id %}160467c5-1ae9-401c-81f2-09334ce10b1a{% endblock %}">
 
+    <meta property="dimagi:scheduleFormId" content="{% block schedule_form_id %}afb4d5a0-826f-4a56-8c21-552d4b6dafa3{% endblock %}">
+
     <!-- <meta property="dimagi:downloadFormId" content="{% block download_form_id %}6d2f8b0a-f085-4a9a-be6e-383f02b1769f{% endblock %}"> -->
 
     {% if request.ab_test.demo_workflow_mar2019 %}
@@ -213,9 +215,7 @@
         </div>{# .modal-wrapper #}
       </div>{# .modal-scroll #}
     </div>{# .modal #}
-
-    {% block modals %}
-      <div class="modal"
+    <div class="modal"
            data-dismissible="true"
            data-size="medium"
            id="schedule-demo-form">
@@ -228,11 +228,14 @@
                   Request a CommCare Demo
                 {% endblocktrans %}
               </h3>
-              <section id="schedule-demo-form-content"></section>
+              <section id="schedule-form-content"></section>
             </div>{# .content #}
           </div>{# .modal-wrapper #}
         </div>{# .modal-scroll #}
       </div>{# .modal #}
+
+    {% block modals %}
+      
     {% endblock %}
 
     {% if request.is_amp %}
@@ -243,19 +246,6 @@
     {% endif %}
 
     {% block js %}
-      <!--[if lte IE 8]>
-        <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
-      <![endif]-->
-      <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
-      <script>
-        //  Schedule a demo form
-        hbspt.forms.create({
-          portalId: "503070",
-          formId: "afb4d5a0-826f-4a56-8c21-552d4b6dafa3",
-          target: "#schedule-demo-form-content",
-          css: ""
-        });
-      </script>
     {% endblock %}
 
   </body>

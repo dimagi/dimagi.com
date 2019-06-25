@@ -25,6 +25,7 @@ require([
   'app/analytix',
   'app/contactForm',
   'app/demoForm',
+  'app/scheduleDemoForm',
   'app/abAudit',
   'app/progressBar',
   'modernizr',
@@ -48,6 +49,7 @@ require([
     Analytix,
     ContactForm,
     DemoForm,
+    ScheduleDemoForm,
     ABAudit,
     ProgressBar
 ) {
@@ -70,6 +72,7 @@ require([
       Analytix,
       ContactForm,
       DemoForm,
+      ScheduleDemoForm,
       ABAudit,
       ProgressBar,
     ], function (m) {
