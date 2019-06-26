@@ -4,7 +4,7 @@
 
 <section class="overview" id="overview">
   <div class="content pad-vert-medium">
-    <div class="sector-group grid-4-at-extra-large grid-3-at-medium grid-2-at-small grid-row-space-small grid-row-equal-heights gap-bottom-small">
+    <div class="sector-group grid-4-at-extra-large grid-2-at-medium grid-2-at-small grid-row-space-small grid-row-equal-heights gap-bottom-small">
       {% for sector in sectors %}
         <div class="sector-content column {{ sector.theme }}" >
          {% include "partials/sectors_brief.html" with sector=sector %}
@@ -12,7 +12,19 @@
       {% endfor %}
       {% for sector in sectors %}
         {% for sector in sector.sub_sectors %}
-          <div class="sector-content child-{{ sector.theme }} child-{{ sector.slug }} {{ sector.theme }}" >
+          <div class="sector-content child-{{ sector.theme }} child-{{ sector.slug }} {{ sector.theme }}">
+            {% include "partials/secors_breif_child.html" %}
+          </div>
+        {% endfor %}
+      {% endfor %}
+    </div>{# .grid-4-at-medium #}
+    <div class="sector-group-mobile grid-4-at-extra-large grid-2-at-medium grid-2-at-small grid-row-space-small grid-row-equal-heights gap-bottom-small">
+      {% for sector in sectors %}
+        <div class="sector-content column {{ sector.theme }}" >
+         {% include "partials/sectors_brief.html" with sector=sector %}
+        </div>
+        {% for sector in sector.sub_sectors %}
+          <div class="sector-content child-{{ sector.theme }} child-{{ sector.slug }} {{ sector.theme }}">
             {% include "partials/secors_breif_child.html" %}
           </div>
         {% endfor %}

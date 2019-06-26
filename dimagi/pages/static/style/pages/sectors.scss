@@ -74,11 +74,12 @@ a.study {
 .blog_build {
   $_base-height: 290px;
   $_height-by-size: (
-  	  small: 390px,
-      medium: 390px,
-      large: 390px,
-      extra-large: 392px,
-    );
+  	small: 390px,
+    medium: 390px,
+    large: 390px,
+    extra-large: 392px,
+   );
+   
   @include make-bg(blog_image, '../../pages/blog/mobiledata_blog_page/blog_build/hero', $_base-height, $_height-by-size);
 
   @media (min-width: $width-desktop) {
@@ -106,4 +107,23 @@ a.study {
 
 .sector-home-inactive {
   opacity: 0.4;
+}
+
+
+.sector-group-mobile {
+  display: none;
+}
+
+.sector-group-mobile {
+
+  @media (max-width: $width-mobile) {
+    display: block;
+  }
+}
+
+.sector-group {
+
+  @media (max-width: $width-mobile) {
+    display: none;
+  }
 }
