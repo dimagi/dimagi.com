@@ -47,7 +47,6 @@
     {% include 'sections/toolkits/highlights.html' %}
     {% include 'sections/toolkits/download.html' %}
     {% include 'sections/toolkits/other_toolkits.html' %}
-    {% include 'sections/toolkits/contact_us.html' %}
   </section>
 {% endblock %}
 
@@ -78,14 +77,6 @@
       onFormSubmit: function () {
         window.open('{{ toolkit.download_url }}', "_blank");
       },
-    });
-
-    // Contact Us Form
-    hbspt.forms.create({
-      portalId: "503070",
-      formId: "{{ toolkit.hubspot_formId }}",
-      target: "#hubspot-contact-us-form",
-      css: "",
     });
   </script>
 {% endblock %}

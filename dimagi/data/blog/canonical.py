@@ -14,6 +14,8 @@ POSTS = [
     CanonicalLink('mobile-data-collection-app-deploy', MDC_PILLAR_URL),
     CanonicalLink('mobile-data-collection-training', MDC_PILLAR_URL),
     CanonicalLink('mobile-data-collection-sustain', MDC_PILLAR_URL),
+    CanonicalLink('mobile-data-collection-app-usability-testing', MDC_PILLAR_URL),
+    CanonicalLink('mobile-data-collection-app-qa', MDC_PILLAR_URL),
     CanonicalLink('data-collection-project-objectives', DC_PILLAR_URL),
     CanonicalLink('data-collection-data-requirements', DC_PILLAR_URL),
     CanonicalLink('data-collection-method-of-data-collection', DC_PILLAR_URL),

@@ -18,7 +18,6 @@ TOOLKIT = Toolkit(
     icon="svg/tookits/icons/managingdevices_scale.html",
     download_url="https://www.dropbox.com/s/lk5gujyrk3lm7v7/Managing%20Devices%20at%20Scale.pdf?dl=1",
     hubspot_form="186d64b8-8dcc-45d3-af92-03259efc96a8",
-    hubspot_formId="61ca299b-1e89-4d2f-85b1-7ea182cf0170",
 )
 
 
@@ -115,5 +114,26 @@ Use the Total Cost of Ownership Model to budget for your
 mobile solution.
         """),
         view_url="total-cost-ownership",
+    ), 
+    OtherToolkit(
+        name=ugettext_lazy(
+            "Digital Health Interventions Checklist"
+        ),
+        icon="svg/tookits/icons/digital_health_interventions.html",
+        description=ugettext_lazy("""
+Learn how to describe your digital health technology across stakeholders .
+        """),
+        view_url="digital-health-interventions",
     ),  
+    OtherToolkit(
+        name=ugettext_lazy(
+            "Mobile Data Collection Guide"
+        ),
+        icon="svg/tookits/icons/mobile_data_collection.html",
+        description=ugettext_lazy("""
+Read this guide to learn almost everything you need to know to set up your own successful 
+mobile data collection program.
+        """),
+        view_url="mobile-data-collection",
+    ),     
 ])
