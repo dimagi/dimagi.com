@@ -12,7 +12,7 @@
       <div class="column align-center align-left-at-medium">
         <ul class="reset destination-links">
           <li class="pad-left-small pad-left-none-at-medium">
-            <a href="#demo-form-modal" 
+            <a href="#demo-form-modal"
                data-modal="demo-form-modal">
               <span class="footer-icon-left-bottom pad-right-base">
                 {% include 'svg/footer/date.html' %}
@@ -53,10 +53,10 @@
           to our newsletter for case studies, best practices, and other updates. Join then today!
         </p>
         <p>
-          <div id="email-subscribtion-form-content"></div>
+          <div id="email-subscribtion-form-content" class="email-subscribtion"></div>
         </p>
       </div>{# .column #}
-      <div class="column align-center align-right-at-extra-large">
+      <div class="column align-center align-right-at-extra-large pad-right-none">
         <div class="grid-2-at-extra-large">
           <div class="column">
             <a href="https://bcorporation.net/"
@@ -105,18 +105,3 @@
     </div>{# .grid-3 .destination-links #}
   </div>{# .content #}
 </footer>
-
-{% block js %}
-  <!--[if lte IE 8]>
-  <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
-  <![endif]-->
-  <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
-  <script>
-    hbspt.forms.create({
-      portalId: "503070",
-      formId: "46af351d-72ed-4c0f-9300-823e6c2f5b45",
-      target: "#email-subscribtion-form-content",
-      css: "",
-    });
-  </script>
-{% endblock %}

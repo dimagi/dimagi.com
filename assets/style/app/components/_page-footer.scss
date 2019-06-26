@@ -66,8 +66,9 @@
     }
 
     .sub-menu {
-      font-size: 12px !important;
+      font-size: 12px;
     }
+
     .primary {
       border-bottom: 1px solid $color-footer-border;
       margin-bottom: $space-small;
@@ -77,28 +78,32 @@
     .links-social li {
       display: inline-block;
       vertical-align: webkit-baseline-middle;
-      margin-right: 15px;
+      margin-right: $space-small/2;
 
       svg {
-        margin-top: -2px;
+        margin-top: $space-base/2;
       }
     }
 
     .b-corp-logo {
-    svg > * {
+      svg > * {
         fill: $color-accent-gray;
       }
     }
+
     .footer-icon-left-bottom > svg {
-      padding-bottom: 8px;
+      padding-bottom: $space-base;
     }
+
     p {
-      line-height: 20px;
+      line-height: $space-medium/3;
     }
-    #email-subscribtion-form-content {
-      input{
+
+    .email-subscribtion {
+      input {
         padding-bottom: 10px;
       }
+
       label,
       legend {
         display: none;
