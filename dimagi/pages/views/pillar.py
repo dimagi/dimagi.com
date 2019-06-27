@@ -7,13 +7,13 @@ from dimagi.utils.decorators.enable_ab_test import enable_ab_test
 from dimagi.utils.decorators.enable_amp import enable_amp
 
 
-@enable_amp
+# @enable_amp
 @enable_ab_test(DEMO_WORKFLOW_V2)
 @set_amp_page_type(AmpPageType.PILLAR)
 def mobile_data_collection(request):
     return render(request, 'pages/pillar/mobile_data_collection.html')
 
-@enable_amp
+# @enable_amp
 @enable_ab_test(DEMO_WORKFLOW_V2)
 @set_amp_page_type(AmpPageType.PILLAR)
 def data_collection(request):
