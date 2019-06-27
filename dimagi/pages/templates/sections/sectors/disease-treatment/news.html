@@ -35,11 +35,11 @@
               {% endblocktrans %}
             </p>
             <p class="pad-top-small-at-large pad-top-small-at-extra-large">
-              <a href="https://www.dimagi.com/blog/why-peace-corps-cameroon-is-leveraging-mobile-data-collection-in-the-fight-against-hiv-aids/"
-                 class="link-gray read-more"
+              <a href="{% url 'blog_post' 'why-peace-corps-cameroon-is-leveraging-mobile-data-collection-in-the-fight-against-hiv-aids' %}"
+                 class="arrow link-gray read-more"
                  target="_blank">
                 {% blocktrans %}
-                  Read More &gt;
+                  Read More
                 {% endblocktrans %}
               </a>
             </p>
@@ -65,11 +65,11 @@
               {% endblocktrans %}
             </p>
             <p>
-              <a href="https://www.dimagi.com/blog/usaid-awards-dimagi-partners-a-grand-challenge-to-combat-zika-and-future-outbreaks/"
-                 class="link-gray read-more"
+              <a href="{% url 'blog_post' 'usaid-awards-dimagi-partners-a-grand-challenge-to-combat-zika-and-future-outbreaks' %}"
+                 class="arrow link-gray read-more"
                  target="_blank">
                 {% blocktrans %}
-                  Read More &gt;
+                  Read More
                 {% endblocktrans %}
               </a>
             </p>
@@ -95,11 +95,11 @@
               {% endblocktrans %}
             </p>
             <p class="pad-top-small-at-large pad-top-base-at-extra-large">
-              <a href="https://www.dimagi.com/blog/contact-tracing-during-the-ebola-outbreak-notes-from-the-field/"
-                 class="link-gray read-more"
+              <a href="{% url 'blog_post' 'contact-tracing-during-the-ebola-outbreak-notes-from-the-field' %}"
+                 class="arrow link-gray read-more"
                  target="_blank">
                 {% blocktrans %}
-                  Read More &gt;
+                  Read More
                 {% endblocktrans %}
               </a>
             </p>
@@ -117,7 +117,7 @@
     <p>
       <div class="gap-left-base blue-theme">
         <div class="gap-bottom-base">
-          <a href="https://www.dimagi.com/sectors/hiv-aids/"
+          <a href="{% url 'sector' 'hiv-aids' %}"
              target="_blank">
             {% blocktrans %}
               HIV/AIDS Treatment with CommCare
@@ -125,7 +125,7 @@
           </a>
         </div>
         <div class="gap-bottom-base">
-          <a href="https://www.dimagi.com/sectors/tuberculosis/"
+          <a href="{% url 'sector' 'tuberculosis' %}"
              target="_blank">
             {% blocktrans %}
               Tuberculosis Treatment with CommCare
@@ -133,7 +133,7 @@
           </a>
         </div>
         <div class="gap-bottom-base">
-          <a href="https://www.dimagi.com/sectors/ebola-response/"
+          <a href="{% url 'sector' 'ebola-response' %}"
              target="_blank">
             {% blocktrans %}
               Ebola Response with CommCare
