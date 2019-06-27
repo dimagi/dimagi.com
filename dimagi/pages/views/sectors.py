@@ -5,8 +5,6 @@ from django.shortcuts import render
 
 from dimagi.utils.ab_tests import DEMO_WORKFLOW_V2
 from dimagi.utils.decorators.enable_ab_test import enable_ab_test
-
-
 from dimagi.data.sectors import (
     get_sector_by_slug,
     get_sectors_page,
