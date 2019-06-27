@@ -3,6 +3,10 @@ from __future__ import absolute_import
 from django.http import Http404
 from django.shortcuts import render
 
+from dimagi.utils.ab_tests import DEMO_WORKFLOW_V2
+from dimagi.utils.decorators.enable_ab_test import enable_ab_test
+
+
 from dimagi.data.sectors import (
     get_sector_by_slug,
     get_sectors_page,
@@ -16,6 +20,8 @@ def view_all(request):
     }
     return render(request, 'pages/sectors/view_all.html', context)
 
+
+@enable_ab_test(DEMO_WORKFLOW_V2)
 def agriculture_extension_programs(request):
     context = {
         'sector': 'agriculture_extension_programs',

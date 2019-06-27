@@ -39,11 +39,11 @@
               {% endblocktrans %}
             </p>
             <p  class="pad-top-line-at-extra-large pad-top-line-at-large">
-              <a href="https://www.dimagi.com/blog/whats-ahead-for-mobile-data-collection-in-agriculture/"
-                 class="link-gray read-more"
+              <a href="{% url 'blog_post' 'whats-ahead-for-mobile-data-collection-in-agriculture' %}"
+                 class="arrow link-gray read-more"
                  target="_blank">
                 {% blocktrans %}
-                  Read More &gt;
+                  Read More
                 {% endblocktrans %}
               </a>
             </p>
@@ -71,11 +71,11 @@
               {% endblocktrans %}
             </p>
             <p class="pad-top-line-at-extra-large">
-              <a href="https://dimagi.com/blog/mobile-data-collection-feedback/"
-                 class="link-gray read-more"
+              <a href="{% url 'blog_post' 'mobile-data-collection-feedback' %}"
+                 class="arrow link-gray read-more"
                  target="_blank">
                 {% blocktrans %}
-                  Read More &gt;
+                  Read More
                 {% endblocktrans %}
               </a>
             </p>
@@ -103,11 +103,11 @@
             {% endblocktrans %}
           </p>
           <p>
-            <a href="https://www.dimagi.com/blog/digitizing-coffee-agronomy-training-monitoring/"
-               class="link-gray read-more"
+            <a href="{% url 'blog_post' 'digitizing-coffee-agronomy-training-monitoring' %}"
+               class="arrow link-gray read-more"
                target="_blank">
               {% blocktrans %}
-                Read More &gt;
+                Read More
               {% endblocktrans %}
             </a>
           </p>
@@ -117,7 +117,7 @@
     </div>{# .grid #}
   </div>{# .content #}
   <div class="content pad-top-small">
-    <h2 class="">
+    <h2>
       {% blocktrans %}
         Additional Resources to Explore
       {% endblocktrans %}

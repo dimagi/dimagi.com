@@ -20,30 +20,35 @@
   background-size: contain;
   background-position: left;
 }
+
 .news-images .image.blog2 {
   @include background-cover('../../../pages/sectors/agriculture-extension-programs/news/AgExtension_Blog2.jpg');
   height: 200px;
   background-size: contain;
   background-position: left;
 }
+
 .news-images .image.blog3 {
   @include background-cover('../../../pages/sectors/agriculture-extension-programs/news/AgExtension_Blog3.jpg');
   height: 200px;
   background-size: contain;
   background-position: left;
 }
+
 .programs-images .image.featured-project1 {
   @include background-cover('../../../pages/sectors/agriculture-extension-programs/programs/AgExtension_FeaturedProject1.jpg');
   height: 200px;
   background-size: contain;
   background-position: left;
 }
+
 .programs-images .image.featured-project2 {
   @include background-cover('../../../pages/sectors/agriculture-extension-programs/programs/AgExtension_FeaturedProject2.jpg');
   height: 200px;
   background-size: contain;
   background-position: left;
 }
+
 .programs-images .image.featured-project3 {
   @include background-cover('../../../pages/sectors/agriculture-extension-programs/programs/AgExtension_FeaturedProject3.jpg');
   height: 200px;
@@ -91,6 +96,7 @@
       width: 120%;
       z-index: 1;
     }
+
     .content {
       position: relative;
       z-index: 2;
