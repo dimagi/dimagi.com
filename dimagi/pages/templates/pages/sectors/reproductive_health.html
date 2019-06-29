@@ -6,7 +6,7 @@
   Reproductive Health Programs
 {% endblocktrans %}{% endblock %}
 
-{% block body_class %}agriculture-page tucked-hero{% endblock %}
+{% block body_class %}reproductive-health-page tucked-hero{% endblock %}
 
 {% block stylesheets %}
   {% compress css %}
@@ -15,23 +15,21 @@
 {% endblock %}
 
 {% block hero %}
-  <div class="green-theme">
+  <div class="blue-theme">
     <section class="hero hero-blog" id="hero"></section>
   </div>
 {% endblock %}
 
 {% block content %}
-  <section>
-    {% include "sections/sectors/reproductive_health/sub_nav.html" %}
-    {% include "sections/sectors/reproductive_health/overview.html" %}
-    {% include "sections/sectors/reproductive_health/part1.html" %}
-    {% include "sections/sectors/reproductive_health/benefit.html" %}
-    {% include "sections/sectors/reproductive_health/programs.html" %}
-    {% include "sections/sectors/reproductive_health/part3.html" %}
-    {% include "sections/sectors/reproductive_health/news.html" %}
-    {% include "sections/sectors/reproductive_health/part4.html" %}
-    {% include "sections/sectors/reproductive_health/testimonial.html" %}
-  </section>  
+  {% include "sections/sectors/reproductive_health/sub_nav.html" %}
+  {% include "sections/sectors/reproductive_health/overview.html" %}
+  {% include "sections/sectors/reproductive_health/part1.html" %}
+  {% include "sections/sectors/reproductive_health/benefit.html" %}
+  {% include "sections/sectors/reproductive_health/programs.html" %}
+  {% include "sections/sectors/reproductive_health/part3.html" %}
+  {% include "sections/sectors/reproductive_health/news.html" %}
+  {% include "sections/sectors/reproductive_health/part4.html" %}
+  {% include "sections/sectors/reproductive_health/testimonial.html" %}
 {% endblock %}
 
 {% block modals %}
@@ -42,7 +40,7 @@
     <div class="modal-scroll">
       <div class="modal-wrapper">
         <a href="#" class="modal-close-button"></a>
-        <div class="content pad-horz-medium-at-medium pad-horz-line pad-vert-none green-theme">
+        <div class="content pad-horz-medium-at-medium pad-horz-line pad-vert-none blue-theme">
           <h3>
             {% blocktrans %}
               Schedule A Demo
@@ -61,7 +59,7 @@
     <div class="modal-scroll">
       <div class="modal-wrapper">
         <a href="#" class="modal-close-button"></a>
-        <div class="content pad-horz-medium-at-medium pad-horz-line pad-vert-none green-theme">
+        <div class="content pad-horz-medium-at-medium pad-horz-line pad-vert-none blue-theme">
           <section id="download-pdf-summary-form-content"></section>
         </div>{# .content #}
       </div>{# .modal-wrapper #}
@@ -75,22 +73,14 @@
   <![endif]-->
   <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
   <script>
-    //  Schedule demo form
-    hbspt.forms.create({
-      portalId: "503070",
-      formId: "afb4d5a0-826f-4a56-8c21-552d4b6dafa3",
-      target: "#schedule-demo-form-content",
-      css: ""
-    });
-
     //  Download pdf summary form
     hbspt.forms.create({
       portalId: "503070",
-      formId: "ab9a0878-b553-4884-9679-24625cfc636d",
+      formId: "9c6afadc-2531-4eb0-b07d-11cc85322ae7",
       target: "#download-pdf-summary-form-content",
       css: "",
       onFormSubmit: function () {
-        window.open('https://cdn2.hubspot.net/hubfs/503070/Sector%20PDFs/CommCare_Agriculture.pdf', "_blank");
+        window.open('https://cdn2.hubspot.net/hubfs/503070/Sector%20PDFs/CommCare_ReproductiveHealth.pdf', "_blank");
       },
     });
   </script>
