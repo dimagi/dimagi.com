@@ -15,45 +15,48 @@
 }
 
 .news-images .image.blog1 {
-  @include background-cover('../../../pages/sectors/agriculture-extension-programs/news/AgExtension_Blog1.jpg');
+  @include background-cover('../../../pages/sectors/agriculture-extension-programs/news/blog1.jpg');
   height: 200px;
   background-size: contain;
   background-position: left;
 }
 
 .news-images .image.blog2 {
-  @include background-cover('../../../pages/sectors/agriculture-extension-programs/news/AgExtension_Blog2.jpg');
+  @include background-cover('../../../pages/sectors/agriculture-extension-programs/news/blog2.jpg');
   height: 200px;
   background-size: contain;
   background-position: left;
 }
 
 .news-images .image.blog3 {
-  @include background-cover('../../../pages/sectors/agriculture-extension-programs/news/AgExtension_Blog3.jpg');
+  @include background-cover('../../../pages/sectors/agriculture-extension-programs/news/blog3.jpg');
   height: 200px;
   background-size: contain;
   background-position: left;
 }
 
 .programs-images .image.featured-project1 {
-  @include background-cover('../../../pages/sectors/agriculture-extension-programs/programs/AgExtension_FeaturedProject1.jpg');
+  @include background-cover('../../../pages/sectors/agriculture-extension-programs/programs/featured-project1.jpg');
   height: 200px;
   background-size: contain;
-  background-position: left;
 }
 
 .programs-images .image.featured-project2 {
-  @include background-cover('../../../pages/sectors/agriculture-extension-programs/programs/AgExtension_FeaturedProject2.jpg');
+  @include background-cover('../../../pages/sectors/agriculture-extension-programs/programs/featured-project2.jpg');
   height: 200px;
   background-size: contain;
-  background-position: left;
 }
 
 .programs-images .image.featured-project3 {
-  @include background-cover('../../../pages/sectors/agriculture-extension-programs/programs/AgExtension_FeaturedProject3.jpg');
+  @include background-cover('../../../pages/sectors/agriculture-extension-programs/programs/featured-project3.jpg');
   height: 200px;
   background-size: contain;
-  background-position: left;
+}
+
+.programs-images .image.featured-project1,
+.programs-images .image.featured-project2,
+.programs-images .image.featured-project3 {
+ background-position: initial;
 }
 
 .modal-popup {
@@ -85,13 +88,16 @@
     large: 290px,
     extra-large: 290px,
   );
-  @include make-bg(phone-image, '../../../pages/sectors/agriculture-extension-programs/news/Phone', $_base-height, $_height-by-size, '.png');
+  @include make-bg(phone-image, '../../../pages/sectors/agriculture-extension-programs/part3/phone', $_base-height, $_height-by-size, '.png');
 
   @media (min-width: $width-desktop) {
     .off-grid {
       top: 10%;
       left: 0;
       position: absolute;
+      background-size: auto 0%;
+      background-position: center;
+      background-repeat: no-repeat;
       right: auto;
       width: 120%;
       z-index: 1;
@@ -104,6 +110,10 @@
   }
 }
 
+.commcare-text .phone-image {
+  background-size: auto 0%;
+}
+
 .part3 .image .bg-loader{
   background-color: transparent;
 }
@@ -112,12 +122,14 @@
   margin-bottom: 10px;
 }
 
-.touch .sub-nav a:not(.button).primary span, .no-touch.sub-nav-fixed-top .sub-nav a.primary span {
-  background-color:#47b700;
-  border-color:#47b700;
-  color: #ffffff;
+.touch .sub-nav a:not(.button).primary span,
+.no-touch.sub-nav-fixed-top .sub-nav a.primary span {
+  background-color:$color-green;
+  border-color:$color-green;
+  color: $color-white;
 }
 
-.read-more:hover,.read-more:focus{
-  color: #47b700!important;
+.read-more:hover,
+.read-more:focus {
+  color: $color-green !important;
 }
