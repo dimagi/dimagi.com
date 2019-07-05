@@ -20,13 +20,13 @@
     </p>
   </div>{# .content #}
   <div class="content">
-    <div class="grid grid-3-at-large grid-1-at-medium grid-row-equal-heights ">
+    <div class="grid grid-3-at-large grid-1-at-medium grid-row-equal-heights">
       <div class="column pad-top-line">
-        <div class="">
+        <div class="news-image-testimonial">
           <div class="image testimonial1"
-          data-lazybg="true"></div>
+               data-lazybg="true"></div>
           <div class="pad-line">
-            <h5 >
+            <h5>
               <strong class="body-color">
                 {% blocktrans %}
                   How FIGO Used Mobile Data 
@@ -41,9 +41,9 @@
               {% endblocktrans %}
             </p>
             <p>
-              <a href="https://dimagi.com/blog/mobile-data-collection-figo/" target="_blank" class="link-gray">
+              <a href="{% url 'blog_post' 'mobile-data-collection-figo' %}" target="_blank" class="arrow link-gray">
                 {% blocktrans %}
-                  Read More >
+                  Read More
                 {% endblocktrans %}
               </a>
             </p>
@@ -52,11 +52,11 @@
       </div>{# .column #}
 
       <div class="column pad-top-line">
-        <div class="">
+        <div class="news-image-testimonial">
           <div class="image testimonial2"
-          data-lazybg="true"></div>
+               data-lazybg="true"></div>
           <div class="pad-line">
-            <h5 class="">
+            <h5>
               <strong class="body-color">
                 {% blocktrans %}
                   Midline Research Reveals
@@ -72,9 +72,9 @@
               {% endblocktrans %}
             </p>
             <p class="pad-top-line-at-extra-large">
-              <a href="https://www.dimagi.com/blog/midline-research-reveals-promising-results-for-mlabour-health-application/"  target="_blank" class="link-gray">
+              <a href="{% url 'blog_post' 'midline-research-reveals-promising-results-for-mlabour-health-application' %}"  target="_blank" class="arrow link-gray">
                 {% blocktrans %}
-                  Read More >
+                  Read More
                 {% endblocktrans %}
               </a>
             </p>
@@ -83,11 +83,11 @@
       </div>{# .column #}
 
       <div class="column pad-top-line">
-        <div class="">
+        <div class="news-image-testimonial">
           <div class="image testimonial3"
-          data-lazybg="true"></div>
+               data-lazybg="true"></div>
           <div class="pad-line">
-            <h5 class="">
+            <h5>
               <strong class="body-color">
                 {% blocktrans %}
                   Using Mobile Solutions to Improve 
@@ -102,9 +102,9 @@
               {% endblocktrans %}
             </p>
             <p class="pad-top-line-at-extra-large">
-              <a href="https://www.dimagi.com/blog/using-mobile-solutions-to-improve-intrapartum-care-in-tanzania/" target="_blank" class="link-gray">
+              <a href="{% url 'blog_post' 'using-mobile-solutions-to-improve-intrapartum-care-in-tanzania' %}" target="_blank" class="arrow link-gray">
                 {% blocktrans %}
-                  Read More >
+                  Read More
                 {% endblocktrans %}
               </a>
             </p>

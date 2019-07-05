@@ -9,7 +9,7 @@
     small: 280px,
     medium: 280px,
     large: 280px,
-    extra-large: 320px,  
+    extra-large: 320px,
 	);
 	@include make-bg(hero-data-image, '../../../pages/sectors/maternal-and-newborn-health/intro/hero', $_base-height, $_height-by-size);
 }
@@ -24,6 +24,7 @@
     );
 	  @include make-bg(epic-cover, '../../../pages/sectors/maternal-and-newborn-health/part3/hero', $_base-height, $_height-by-size);
 }
+
 .center {
   display: block;
   margin-left: auto;
@@ -31,36 +32,43 @@
 }
 
 .commcare-text {
-    $_base-height: 290px;
-    $_height-by-size: (
-      small: 290px,
-      medium: 290px,
-      large: 290px,
-      extra-large: 290px,
-    );
-    @include make-bg(phone-image, '../../../pages/sectors/maternal-and-newborn-health/news/Phone', $_base-height, $_height-by-size, '.png');
+  $_base-height: 290px;
+  $_height-by-size: (
+    small: 290px,
+    medium: 290px,
+    large: 290px,
+    extra-large: 290px,
+  );
+  @include make-bg(phone-image, '../../../pages/sectors/maternal-and-newborn-health/news/phone', $_base-height, $_height-by-size, '.png');
 
-    @media (min-width: $width-desktop) {
-      .off-grid {
-        top: 10%;
-        left: 0;
-        position: absolute;
-        right: auto;
-        width: 120%;
-        z-index: 1;
-      }
-
-      .content {
-        position: relative;
-        z-index: 2;
-      }
+  @media (min-width: $width-desktop) {
+    .off-grid {
+      top: 10%;
+      left: 0;
+      position: absolute;
+      right: auto;
+      width: 120%;
+      z-index: 1;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: auto 0%;
     }
 
+    .content {
+      position: relative;
+      z-index: 2;
+    }
   }
+}
+
+.commcare-text .phone-image{
+  background-size: auto 0%;
+}
 
 .ac-part3 .phone-image .bg-loader{
   background-color: transparent;
 }
+
 .news .image.testimonial1{
   @include background-cover('../../../pages/sectors/maternal-and-newborn-health/news/mdc-health-fico.jpg');
   height: 200px;
@@ -86,27 +94,31 @@
   @include background-cover('../../../pages/sectors/maternal-and-newborn-health/part2/mdc-health-crs.jpg');
   height: 200px;
   background-size: contain;
-  background-position: left;
 }
 
 .programs .image.testimonial2{
   @include background-cover('../../../pages/sectors/maternal-and-newborn-health/part2/mdc-healtn-kenya.jpg');
   height: 200px;
   background-size: contain;
-  background-position: left;
 }
 
 .programs .image.testimonial3{
   @include background-cover('../../../pages/sectors/maternal-and-newborn-health/part2/mdc-health-pathfinder.jpg');
   height: 200px;
   background-size: contain;
-  background-position: left;
+}
+
+.programs .image.testimonial1,
+.programs .image.testimonial2,
+.programs .image.testimonial3 {
+ background-position: initial;
 }
 
 .programs .image.crs{
   width: 309px;
 }
 
-.link-gray:hover,.link-gray:focus{
-  color: #004ebc!important;
+.link-gray:hover,
+.link-gray:focus {
+  color: $color-blue !important;
 }

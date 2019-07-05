@@ -3,7 +3,7 @@
 {% load dimagidotcom %}
 
 {% block title %}{% blocktrans %}
-Maternal & Child Healthcare
+  Maternal & Child Healthcare
 {% endblocktrans %}{% endblock %}
 
 {% block body_class %}meternal-health-page tucked-hero{% endblock %}
@@ -33,38 +33,38 @@ Maternal & Child Healthcare
 {% endblock %}
 
 {% block modals %}
-	<div class="modal"
-			 data-dismissible="true"
-		   data-size="medium"
-		   id="schedule-demo-form">
-    <div class="modal-scroll">
-      <div class="modal-wrapper">
-        <a href="#" class="modal-close-button"></a>
-        <div class="content pad-horz-medium-at-medium pad-horz-line pad-vert-none blue-theme">
-          <h3>
-            {% blocktrans %}
-              Schedule A Demo
-            {% endblocktrans %}
-          </h3>
-          <section id="schedule-demo-form-content"></section>
-        </div>{# .content #}
-      </div>{# .modal-wrapper #}
-    </div>{# .modal-scroll #}
-  </div>{# .modal #}
+<div class="modal"
+     data-dismissible="true"
+     data-size="medium"
+     id="schedule-demo-form">
+  <div class="modal-scroll">
+    <div class="modal-wrapper">
+      <a href="#" class="modal-close-button"></a>
+      <div class="content pad-horz-medium-at-medium pad-horz-line pad-vert-none blue-theme">
+        <h3>
+          {% blocktrans %}
+            Schedule A Demo
+          {% endblocktrans %}
+        </h3>
+        <section id="schedule-demo-form-content"></section>
+      </div>{# .content #}
+    </div>{# .modal-wrapper #}
+  </div>{# .modal-scroll #}
+</div>{# .modal #}
 
-  <div class="modal"
-       data-dismissible="true"
-       data-size="medium"
-       id="hubspot-download-form-pdf-summary">
-    <div class="modal-scroll">
-      <div class="modal-wrapper">
-        <a href="#" class="modal-close-button"></a>
-        <div class="content pad-horz-medium-at-medium pad-horz-line pad-vert-none blue-theme">
-          <section id="download-pdf-summary-form-content"></section>
-        </div>{# .content #}
-      </div>{# .modal-wrapper #}
-    </div>{# .modal-scroll #}
-  </div>{# .modal #}
+<div class="modal"
+     data-dismissible="true"
+     data-size="medium"
+     id="hubspot-download-form-pdf-summary">
+  <div class="modal-scroll">
+    <div class="modal-wrapper">
+      <a href="#" class="modal-close-button"></a>
+      <div class="content pad-horz-medium-at-medium pad-horz-line pad-vert-none blue-theme">
+        <section id="download-pdf-summary-form-content"></section>
+      </div>{# .content #}
+    </div>{# .modal-wrapper #}
+  </div>{# .modal-scroll #}
+</div>{# .modal #}
 {% endblock %}
 
 {% block js %}
@@ -73,12 +73,6 @@ Maternal & Child Healthcare
   <![endif]-->
   <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
   <script>
-    hbspt.forms.create({
-      portalId: "503070",
-      formId: "afb4d5a0-826f-4a56-8c21-552d4b6dafa3",
-      target: "#schedule-demo-form-content",
-      css: ""
-    });
     hbspt.forms.create({
       portalId: "503070",
       formId: "949e4151-51c6-496a-a924-a2237c85f8a6",
