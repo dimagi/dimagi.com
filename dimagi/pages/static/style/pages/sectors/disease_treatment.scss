@@ -15,45 +15,51 @@
 }
 
 .news-images .image.blog1 {
-  @include background-cover('../../../pages/sectors/disease-treatment/news/Blog1.jpg');
+  @include background-cover('../../../pages/sectors/disease-treatment/news/blog1.jpg');
   height: 200px;
   background-size: contain;
   background-position: left;
 }
 
 .news-images .image.blog2 {
-  @include background-cover('../../../pages/sectors/disease-treatment/news/Blog2.jpg');
+  @include background-cover('../../../pages/sectors/disease-treatment/news/blog2.jpg');
   height: 200px;
   background-size: contain;
   background-position: left;
 }
 
 .news-images .image.blog3 {
-  @include background-cover('../../../pages/sectors/disease-treatment/news/Blog3.jpg');
+  @include background-cover('../../../pages/sectors/disease-treatment/news/blog3.jpg');
   height: 200px;
   background-size: contain;
   background-position: left;
 }
 
 .programs-images .image.featured-project1 {
-  @include background-cover('../../../pages/sectors/disease-treatment/programs/FeaturedProject1.jpg');
+  @include background-cover('../../../pages/sectors/disease-treatment/programs/featured-project1.jpg');
   height: 200px;
   background-size: contain;
   background-position: left;
 }
 
 .programs-images .image.featured-project2 {
-  @include background-cover('../../../pages/sectors/disease-treatment/programs/FeaturedProject2.jpg');
+  @include background-cover('../../../pages/sectors/disease-treatment/programs/featured-project2.jpg');
   height: 200px;
   background-size: contain;
   background-position: left;
 }
 
 .programs-images .image.featured-project3 {
-  @include background-cover('../../../pages/sectors/disease-treatment/programs/FeaturedProject3.jpg');
+  @include background-cover('../../../pages/sectors/disease-treatment/programs/featured-project3.jpg');
   height: 200px;
   background-size: contain;
   background-position: left;
+}
+
+.programs-images .image.featured-project1,
+.programs-images .image.featured-project2,
+.programs-images .image.featured-project3 {
+  background-position: initial;
 }
 
 .modal-popup {
@@ -85,13 +91,16 @@
     large: 290px,
     extra-large: 290px,
   );
-  @include make-bg(phone-image, '../../../pages/sectors/disease-treatment/part3/Phone', $_base-height, $_height-by-size, '.png');
+  @include make-bg(phone-image, '../../../pages/sectors/disease-treatment/part3/phone', $_base-height, $_height-by-size, '.png');
 
   @media (min-width: $width-desktop) {
     .off-grid {
       top: 10%;
       left: 0;
       position: absolute;
+      background-size: auto 0%;
+      background-position: center;
+      background-repeat: no-repeat;
       right: auto;
       width: 120%;
       z-index: 1;
@@ -104,6 +113,10 @@
   }
 }
 
+.commcare-text .phone-image {
+  background-size: auto 0%;
+}
+
 .part3 .image .bg-loader{
   background-color: transparent;
 }
@@ -112,6 +125,7 @@
   margin-bottom: 10px;
 }
 
-.read-more:hover,.read-more:focus{
-  color: #004ebc!important;
+.read-more:hover,
+.read-more:focus{
+  color: $color-blue !important;
 }
