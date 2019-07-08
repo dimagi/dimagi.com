@@ -7,7 +7,6 @@ Country = namedtuple(
     'name icon',
 )
 
-
 Resource = namedtuple(
     'Resource',
     'url name',

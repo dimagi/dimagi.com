@@ -13,7 +13,7 @@ SECTOR = Sector(
         "consistency in curriculum."
     ),
     icon="svg/sectors/agriculture/agriculture_programs.html",
-    theme="green-theme",
+    theme="green",
     slug="agricultural-programs",
 )
 

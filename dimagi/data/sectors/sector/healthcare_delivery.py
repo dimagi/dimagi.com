@@ -14,7 +14,7 @@ SECTOR = Sector(
     ),
     template="data/sectors/content/child_health.html",
     icon="svg/sectors/healthcare/healthcare_delivery.html",
-    theme="blue-theme",
+    theme="blue",
     slug="child-health",
 )
 

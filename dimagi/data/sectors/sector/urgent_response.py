@@ -13,7 +13,7 @@ SECTOR = Sector(
     ),
     template="data/sectors/content/humanitarian_response.html",
     icon="svg/sectors/urgent_response/urgent_response.html",
-    theme="red-theme",
+    theme="red",
     slug="urgent-response",
 )
 

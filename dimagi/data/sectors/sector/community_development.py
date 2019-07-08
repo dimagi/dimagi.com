@@ -12,7 +12,7 @@ SECTOR = Sector(
         "From education to research and small business, mobile data collection can help."
     ),
     icon="svg/sectors/community_dev/community_development.html",
-    theme="purple-theme",
+    theme="purple",
     slug="community-development",
 )
 
