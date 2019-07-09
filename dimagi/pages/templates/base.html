@@ -33,7 +33,7 @@
     <meta property="dimagi:auditABClicks" content="{{ meta.auditABClicks|BOOL }}">
 
     <meta property="dimagi:contactFormId" content="{% block contact_form_id %}160467c5-1ae9-401c-81f2-09334ce10b1a{% endblock %}">
-
+    <meta property="dimagi:subscriptionFormId" content="46af351d-72ed-4c0f-9300-823e6c2f5b45">
     <!-- <meta property="dimagi:downloadFormId" content="{% block download_form_id %}6d2f8b0a-f085-4a9a-be6e-383f02b1769f{% endblock %}"> -->
 
     {% if request.ab_test.demo_workflow_mar2019 %}
@@ -223,20 +223,7 @@
       {% require_module 'app' %}
     {% endif %}
 
-    {% block js %}
-      <!--[if lte IE 8]>
-      <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
-      <![endif]-->
-      <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
-      <script>
-        hbspt.forms.create({
-          portalId: "503070",
-          formId: "46af351d-72ed-4c0f-9300-823e6c2f5b45",
-          target: "#email-subscribtion-form-content",
-          css: "",
-        });
-      </script>
-    {% endblock %}
+    {% block js %}{% endblock %}
     
   </body>
 </html>
