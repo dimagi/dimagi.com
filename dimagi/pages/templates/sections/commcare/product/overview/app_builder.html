@@ -1,8 +1,8 @@
 {% load i18n %}
 {% load dimagidotcom %}
 
-<div class="grid-2-at-medium grid-row-space-small blue-theme">
-  <div class="copy content-cell-padding-right">
+<div class="grid-2-at-medium blue-theme">
+  <div class="column pad-right-medium-at-base align-left">
     <h3>
       {% blocktrans %}
         Build your offline data collection app in days, not weeks.
@@ -13,44 +13,36 @@
         Our drag-and-drop app builder makes it easy for you to get started.
       {% endblocktrans %}
     </p>
-    <ul class="check-list grid-2 gap-bottom-small">
+    <ul class="check-list grid-2-at-medium">
       <li>
-        <strong>
-          {% blocktrans %}
-            Test app changes live with our app preview feature
-          {% endblocktrans %}
-        </strong>
+        {% blocktrans %}
+          Test app changes live with our app preview feature
+        {% endblocktrans %}
       </li>
       <li>
-        <strong>
-          {% blocktrans %}
-            No coding necessary, just drag-and-drop
-          {% endblocktrans %}
-        </strong>
+        {% blocktrans %}
+          No coding necessary, just drag-and-drop
+        {% endblocktrans %}
       </li>
       <li>
-        <strong>
-          {% blocktrans %}
-            Start small with simple surveys and add complexity as you go
-          {% endblocktrans %}
-        </strong>
+        {% blocktrans %}
+          Start small with simple surveys and add complexity as you go
+        {% endblocktrans %}
       </li>
       <li>
-        <strong>
-          {% blocktrans %}
-            Easily deploy your data collection app to Android devices in the field
-          {% endblocktrans %}
-        </strong>
+        {% blocktrans %}
+          Easily deploy your data collection app to Android devices in the field
+        {% endblocktrans %}
       </li>
     </ul>
-  </div>{# .copy #}
-  <div class="copy">
-    <div class="column flex-valign-middle-at-medium">
+  </div>{# .column #}
+  <div class="column">
+    <div class="flex-valign-middle-at-medium">
       <div class="device-container browser-ui">
         <div class="screen">
           {% include "partials/wistia_embed_autoplay.html" with wistia_id='3p3get3okj' %}
         </div>{# .screen #}
       </div>{# .device-container.browser-ui #}
-    </div>{# .column #}
-  </div>{# .copy #}
+    </div>{# .flex-valign-middle-at-medium #}
+  </div>{# .column #}
 </div>{# .grid-2-at-medium #}

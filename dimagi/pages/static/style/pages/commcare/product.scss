@@ -9,11 +9,12 @@
 
 .overview {
   $_base-height: 175px;
-  $_height-by-size: (extra-small: 205px,
+  $_height-by-size: (
+      extra-small: 190px,
       small: 270px,
-      medium: 210px,
-      large: 265px,
-      extra-large: 320px,
+      medium: 180px,
+      large: 235px,
+      extra-large: 290px,
     );
   @include make-bg(analyze-data-image, '../../../pages/commcare/product/analyze', $_base-height, $_height-by-size);
   @include make-bg(collect-data-image, '../../../pages/commcare/product/collect', $_base-height, $_height-by-size);
@@ -109,4 +110,73 @@
   .bg-loader {
     background-color: $color-white;
   }
+}
+
+.overview a:not(.button)[class*="play-icon-"]:after {
+  border-left-color: $color-blue;
+}
+
+.overview a:not(.button)[class*="play-icon-"].alt:before {
+  border: 1px solid $color-blue;
+}
+
+.overview [class*="play-icon-"]:not(.button):before {
+    background-color: $color-white;
+}
+
+// Carousel css
+.slide-container {
+  position: relative;
+}
+
+.slide {
+  display: none
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  color: $color-black !important;
+}
+
+.next {
+  right: 0;
+  padding-right: 1%;
+}
+
+.prev {
+  left: 0;
+  padding-left: 1%;
+}
+
+.left-arrow:hover,
+.right-arrow:hover {
+  stroke: $color-blue !important;
+}
+
+.dots {
+  display: -webkit-inline-box;
+}
+
+.slide-number {
+  cursor: pointer;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  display: inline-block;
+  padding-top: $space-base/2;
+  border: 1px solid $color-blue;
+}
+
+.active span, 
+.slide-number:hover {
+  background-color:$color-blue;
+  color: $color-white;
+}
+
+.active div {
+  color: $color-blue;
+  font-weight: 500;
 }

@@ -1,8 +1,8 @@
 {% load i18n %}
 {% load dimagidotcom %}
 
-<div class="grid-2-at-medium grid-row-space-small grid-reverse blue-theme">
-  <div class="copy content-cell-padding-right">
+<div class="grid-2-at-medium blue-theme">
+  <div class="column pad-right-medium-at-base align-left">
     <h3>
       {% blocktrans %}
         Collect better data with a data collection app your workforce will love to use.
@@ -16,38 +16,30 @@
         behind-the-scenes with features like <a href="{{ cm_url }}">case management</a> that simplify their work.
       {% endblocktrans %}
     </p>
-    <ul class="check-list grid-2 gap-bottom-small">
+    <ul class="check-list grid-2-at-medium ">
       <li>
-        <strong>
-          {% blocktrans %}
-            Build-in decision support and notifications to guide your team
-          {% endblocktrans %}
-        </strong>
+        {% blocktrans %}
+          Build-in decision support and notifications to guide your team
+        {% endblocktrans %}
       </li>
       <li>
-        <strong>
-          {% blocktrans %}
-            Link data from multiple forms to avoid duplicate
-            data entry and errors
-          {% endblocktrans %}
-        </strong>
+        {% blocktrans %}
+          Link data from multiple forms to avoid duplicate
+          data entry and errors
+        {% endblocktrans %}
       </li>
       <li>
-        <strong>
-          {% blocktrans %}
-            Incorporate performance feedback for regular progress updates
-          {% endblocktrans %}
-        </strong>
+        {% blocktrans %}
+          Incorporate performance feedback for regular progress updates
+        {% endblocktrans %}
       </li>
       <li>
-        <strong>
-          {% blocktrans %}
-            Enhance how your team communicates in the field with multimedia
-          {% endblocktrans %}
-        </strong>
+        {% blocktrans %}
+          Enhance how your team communicates in the field with multimedia
+        {% endblocktrans %}
       </li>
     </ul>
-  </div>{# .copy #}
-  <div class="collect-data-image white-lazy-bg"
+  </div>{# .column #}
+  <div class="column collect-data-image white-lazy-bg"
        data-lazybg="true"></div>
 </div>{# .grid-2-at-medium #}

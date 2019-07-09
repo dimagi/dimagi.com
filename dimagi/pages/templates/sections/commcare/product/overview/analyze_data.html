@@ -1,8 +1,8 @@
 {% load i18n %}
 {% load dimagidotcom %}
 
-<div class="grid-2-at-medium grid-row-space-small blue-theme">
-  <div class="copy content-cell-padding-right">
+<div class="grid-2-at-medium  blue-theme">
+  <div class="column pad-right-medium-at-base align-left">
     <h3>
       {% blocktrans %}
         Analyze data to improve decision making.
@@ -14,31 +14,26 @@
         and identify trends, so you can make informed decisions.
       {% endblocktrans %}
     </p>
-    <ul class="check-list grid-2 gap-bottom-small">
+    <ul class="check-list grid-2-at-medium">
       <li>
-        <strong>
-          {% blocktrans %}
-            Visualize trends with CommCare’s built-in reporting tool
-          {% endblocktrans %}
-        </strong>
+        {% blocktrans %}
+          Visualize trends with CommCare’s built-in reporting tool
+        {% endblocktrans %}
       </li>
       <li>
-        <strong>
-          {% blocktrans %}
-            Create daily reports to track workforce performance
-          {% endblocktrans %}
-        </strong>
+        {% blocktrans %}
+          Create daily reports to track workforce performance
+        {% endblocktrans %}
       </li>
       <li>
-        <strong>
-          {% blocktrans %}
-            Export your CommCare data to use in your favorite 3rd party
-            data analysis tool
-          {% endblocktrans %}
-        </strong>
+        {% blocktrans %}
+          Export your CommCare data to use in your favorite 3rd party
+          data analysis tool
+        {% endblocktrans %}
       </li>
     </ul>
-  </div>{# .copy #}
-  <div class="analyze-data-image white-lazy-bg"
-       data-lazybg="true"></div>
+  </div>{# .column #}
+  <div class="column analyze-data-image white-lazy-bg"
+       data-lazybg="true">
+  </div>{# .column #}
 </div>{# .grid-2-at-medium #}
