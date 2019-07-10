@@ -62,5 +62,16 @@
       <span class="dot collect" data-dot="2" data-active="false"></span>
       <span class="dot analyze" data-dot="3" data-active="false"></span>
     </nav>
+
+    <div class="cta pad-top-small">
+      <p>
+        <a class="arrow {% click_body 'features-view' %}" 
+           href="{% url 'commcare_pricing' %}#details">
+          {% blocktrans %}
+            View All Features
+          {% endblocktrans %}
+        </a>
+      </p>
+    </div>{# .cta #}
   </div>
 </section>
