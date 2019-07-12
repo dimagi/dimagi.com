@@ -180,3 +180,24 @@
   color: $color-blue;
   font-weight: 500;
 }
+
+.pricings-image {
+  $_base-height: 275px;
+  $_height-by-size: (
+      extra-small: 290px,
+      small: 270px,
+      medium: 270px,
+      large: 316px,
+      extra-large: 290px,
+    );
+  @include make-bg(epic-cover, '../../../pages/commcare/product/prcining/hero', $_base-height, $_height-by-size);
+}
+
+
+
+// 3750X640--extra-large
+// 2584X640--large
+// 2437X640--medium
+// 1825X640--small
+// 1037X640--extra-small
+// 1349X640--default
