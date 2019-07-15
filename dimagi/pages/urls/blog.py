@@ -1,7 +1,7 @@
 from django.conf.urls import url
 from django.urls import include
 
-from dimagi.pages.views.blog import archive, home, post
+from dimagi.pages.views.blog import archive, home, post, mobile_data_collection_blog_post
 from dimagi.pages.views import redirect
 
 
@@ -31,6 +31,7 @@ blog_urls = [
     url(r'^news/$', redirect.page('blog_home')),
     url(r'^issues-with-recent-case-data-in-reports/$', redirect.page('blog_home')),
     url(r'^how-to-prevent-plagiarism/$', redirect.page('blog_home')),
+    url(r'^mobile-data-collection-how-to-choose-the-right-tool/$', mobile_data_collection_blog_post),    
     url(r'^announcing-dimagi-south-africas-commcare-training-centre/$', redirect.page('blog_home')),
     url(r'^(?P<slug>[\w-]+)/$', post, name='blog_post'),
 ]

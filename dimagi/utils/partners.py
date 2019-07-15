@@ -10,6 +10,7 @@ WEB = [
         "svg/partner/bwh.html",
         "svg/partner/one_acre_fund.html",
         "svg/partner/novartis.html",
+        "svg/partner/dsme.html",
     ],
     [
         "svg/partner/abt.html",
@@ -47,6 +48,7 @@ MOBILE = [
         "svg/partner/mercy_corps.html",
         "svg/partner/pih.html",
         "svg/partner/novartis.html",
+        "svg/partner/dsme.html",
     ],
     [
         "svg/partner/abt.html",

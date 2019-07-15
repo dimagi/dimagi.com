@@ -1,0 +1,18 @@
+{% extends "sections/blog/blog_requriments/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block icon %}
+  {% include "svg/blog/icon/data_requriments/format.html" %}
+{% endblock %}
+
+{% block header %}{% blocktrans %}
+  What format do you need to present your data in?
+{% endblocktrans %}{% endblock %}
+
+{% block content %}{% blocktrans %}
+  Certain data formats (e.g. audio, video, GPS coordinates, etc.) require certain features in order to
+  capture them. Your data needs will determine whether you are collecting quantitative or qualitative
+  data, but also whether you will be recording GPS coordinates, audio, video, or other formats that will
+  require the appropriate functionality from your mobile data collection app
+{% endblocktrans %}{% endblock %}

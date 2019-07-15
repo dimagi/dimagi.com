@@ -1,0 +1,19 @@
+{% extends "sections/blog/mobile_survey/_base.html" %}
+{% load i18n %}
+
+{% block icon %}
+  {% include "svg/blog/icon/environment_affect/connection.html" %}
+{% endblock %}
+
+{% block header %}{% blocktrans %}
+  Will you have an internet connection while in the field?
+{% endblocktrans %}{% endblock %}
+
+{% block content %}{% blocktrans %}
+  Once you understand the factors in your control, it is time to consider the context of where you will be deploying your
+  program–including what is out of your control. If you are deploying in a low or no connectivity environment, look for a
+  system that includes offline functionality. Many platforms will allow you to record data on the device and upload
+  when connectivity returns. Some even allow for offline case management, meaning you can store data from prior
+  visits on the device to access and update even without an internet connection.
+{% endblocktrans %}{% endblock %}
+
