@@ -35,3 +35,19 @@ def view_single(request, slug):
         'sector': sector,
     }
     return render(request, 'pages/sectors/view_single.html', context)
+
+  
+@enable_ab_test(DEMO_WORKFLOW_V2)
+def disease_treatment(request):
+    context = {
+        'sector': 'disease_treatment',
+    }
+    return render(request, 'pages/sectors/disease_treatment.html', context)
+
+  
+@enable_ab_test(DEMO_WORKFLOW_V2)
+def maternal_and_child_health(request):
+    context = {
+        'sector': 'maternal_and_child_health',
+    }
+    return render(request, 'pages/sectors/maternal_and_child_health.html', context)

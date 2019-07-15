@@ -1,137 +1,51 @@
 {% load i18n %}
 {% load dimagidotcom %}
 
-<section class="epic-content pad-vert-small"
-         id="why-mobile-instead-of-paper">
+<section class="epic-content pad-top-none"
+         id="qa-process">
   <div class="content content-width-medium">
 
     <h2>
       {% blocktrans %}
-        Why Mobile Instead of Paper?
+        QA process
       {% endblocktrans %}
     </h2>
 
     <p>
       {% blocktrans %}
-        While paper might be the standard for collecting data at many
-        organizations, there are significant issues associated with a
-        paper-based data collection system. The most prominent
-        challenges include:
-      {% endblocktrans %}
-    </p>
-
-    <div class="grid grid-flex-at-small grid-valign-middle pad-vert-line align-center align-left-at-small">
-      <div class="column no-shrink">
-        <div class="theme-icon epic-icon">
-          {% include "svg/pillar/mdc/chapter4/icon1.html" %}
-        </div>
-      </div>{# .column #}
-      <div class="column">
-        <h4 class="gap-bottom-base">
-          {% blocktrans %}
-            High error rates
-          {% endblocktrans %}
-        </h4>
-        <p>
-          {% blocktrans %}
-            Human error, such as poor handwriting or typos,
-            mean the data collected is incorrect.
-          {% endblocktrans %}
-        </p>
-      </div>{# .column #}
-    </div>{# .grid #}
-
-    <div class="grid grid-flex-at-small grid-valign-middle pad-vert-line align-center align-left-at-small">
-      <div class="column no-shrink">
-        <div class="theme-icon epic-icon">
-          {% include "svg/pillar/mdc/chapter4/icon2.html" %}
-        </div>
-      </div>{# .column #}
-      <div class="column">
-        <h4 class="gap-bottom-base">
-          {% blocktrans %}
-            Slow reporting and delays in data entry
-          {% endblocktrans %}
-        </h4>
-        <p>
-          {% blocktrans %}
-            Users need additional time to return to a
-            computer and manually enter data.
-          {% endblocktrans %}
-        </p>
-      </div>{# .column #}
-    </div>{# .grid #}
-
-    <div class="grid grid-flex-at-small grid-valign-middle pad-vert-line align-center align-left-at-small">
-      <div class="column no-shrink">
-        <div class="theme-icon epic-icon">
-          {% include "svg/pillar/mdc/chapter4/icon3.html" %}
-        </div>
-      </div>{# .column #}
-      <div class="column">
-        <h4 class="gap-bottom-base">
-          {% blocktrans %}
-            A lack of flexibility in deploying programmatic changes
-          {% endblocktrans %}
-        </h4>
-        <p>
-          {% blocktrans %}
-            Each update to a paper form requires reprinting and distribution.
-          {% endblocktrans %}
-        </p>
-      </div>{# .column #}
-    </div>{# .grid #}
-
-    <div class="grid grid-flex-at-small grid-valign-middle pad-vert-line align-center align-left-at-small">
-      <div class="column no-shrink">
-        <div class="theme-icon epic-icon">
-          {% include "svg/pillar/mdc/chapter4/icon4.html" %}
-        </div>
-      </div>{# .column #}
-      <div class="column">
-        <h4 class="gap-bottom-base">
-          {% blocktrans %}
-            Disruptions to beneficiary interactions:
-          {% endblocktrans %}
-        </h4>
-        <p>
-          {% blocktrans %}
-            Frontline workers often spend similar amounts of time
-            speaking with beneficiaries and navigating their
-            paper forms and guides.
-          {% endblocktrans %}
-        </p>
-      </div>{# .column #}
-    </div>{# .grid #}
-
-    <p class="pad-top-line">
-      {% blocktrans %}
-        With the proper implementation, each of these issues can
-        be minimized with the use of a mobile data collection tool.
+        The quality assurance (QA) process can often be the most headache inducing phase of testing, but at the end of the day, you
+        need to make sure the app you have in your head actually works in real life. 
       {% endblocktrans %}
     </p>
 
     <p>
       {% blocktrans %}
-        Depending on the issues you face, the switch to a
-        mobile platform can clearly improve your program and even
-        lead to significant cost savings. One
-        <a href="http://siteresources.worldbank.org/INTLAC/Resources/257803-1269390034020/EnBreve_166_Web.pdf"
-           target="_blank">World Bank study</a>
-        found that the average survey cost was reduced by 71.3%
-        when adopting a mobile data collection solution over paper.
-        Frontline workers have also indicated that as a result of their
-        use of a mobile data collection tool,
-        <a href="https://www.dimagi.com/toolkits/commcare-evidence-base/"
-           target="_blank">their credibility in the community increased</a>.
-        Given these benefits, mobile data collection
-        might be an answer for your program. Before you start evaluating
-        potential solutions, you should first
-        <a href="https://dimagi.com/blog/data-collection-data-requirements/"
-           target="_blank">outline your data requirements</a>,
-        which will help you select the right tool.
+        This means building a dedicated QA period into your timeline and holding yourself to it. Documenting your use cases and all the
+        workflows you designed will make designing your test plan that much easier and even help you prioritize which tests to run
+        when you inevitably run short on time.
       {% endblocktrans %}
     </p>
+
+    <p>
+      {% blocktrans %}
+        Give your team an app they will love by making sure it actually works when they get their hands on it.
+      {% endblocktrans %}
+    </p>
+
+    <p class="align-center">
+      {% blocktrans %}
+        <a href="https://www.dimagi.com/blog/mobile-data-collection-app-qa/" target="_blank">Get more advice on the QA process</a>
+      {% endblocktrans %}
+    </p>
+
+    <div class="qaprocess-image white-lazy-bg gap-vert-small"
+    data-lazybg="true"></div>
+
+    <p class="align-center">
+      {% blocktrans %}
+         Work through your test plan to ensure your most important workflows are functioning properly.
+      {% endblocktrans %}
+    </p>     
 
   </div>
 </section>

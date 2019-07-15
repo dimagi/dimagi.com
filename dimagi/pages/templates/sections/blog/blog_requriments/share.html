@@ -1,0 +1,18 @@
+{% extends "sections/blog/blog_requriments/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block icon %}
+  {% include "svg/blog/icon/data_requriments/share.html" %}
+{% endblock %}
+
+{% block header %}{% blocktrans %}
+  How do you need to share your data?
+{% endblocktrans %}{% endblock %}
+
+{% block content %}{% blocktrans %}
+  One of the biggest questions around data collection, in general, is what you will do with all of the data you collect.
+  Are you going to export your data to a dedicated analytics platform? Or do you need an easily accessible dashboard 
+  for multiple stakeholders to review your data in real time? These types of considerations help determine whether you need a simple export to Excel, 
+  more complex data visualization features, or even full platform integrations with specialized reporting software, such as Tableau or Spotfire
+{% endblocktrans %}{% endblock %}

@@ -1,0 +1,65 @@
+@import 'app/mixins/background';
+@import 'app/variables/colors';
+@import 'app/variables/sizes';
+@import 'app/variables/type';
+
+#how-to-choose {
+  @include make-bg(epic-cover, '../../pages/blog/mobiledata_blog_page/how_to_choose/hero');
+}
+
+#learn-more {
+  @include make-bg(epic-cover, '../../pages/blog/mobiledata_blog_page/learn_more/hero');
+}
+
+.cms-india {
+  @include background-cover('../../pages/blog/mobiledata_blog_page/cms/hero.large.jpg');
+  height: 328px !important;
+}
+
+.sehgal {
+  @include background-cover('../../pages/blog/mobiledata_blog_page/sehgal_foundation/hero.large.jpg');
+  height: 328px !important;
+}
+
+.beneficiaries {
+  @include background-cover('../../pages/blog/mobiledata_blog_page/find_tool/hero.large.jpg');
+}
+
+.blog-contact {
+  white-space: nowrap;
+}
+
+.border-left-blog {
+  border-left: 3px solid #004ebc;
+  padding-left: 10px;
+  line-height: 30px;
+}
+
+.point-spacing {
+  margin-left: 0px !important;
+}
+
+.blog_build {
+  $_base-height: 290px;
+  $_height-by-size: ( small: 390px, medium: 390px, large: 390px, extra-large: 392px, );
+  @include make-bg(blog_image, '../../pages/blog/mobiledata_blog_page/blog_build/hero', $_base-height, $_height-by-size);
+  @media (min-width: $width-desktop) {
+    .off-grid {
+      bottom: 20px;
+      left: -337px;
+      position: absolute;
+      right: 0;
+      width: 100%;
+      z-index: 1;
+    }
+    .content {
+      position: relative;
+      z-index: 2;
+    }
+  }
+  @media (min-width: $width-desktop-lg) {
+    .off-grid {
+      left: -180px;
+    }
+  }
+}

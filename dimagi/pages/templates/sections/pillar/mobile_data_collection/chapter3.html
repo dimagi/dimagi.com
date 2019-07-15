@@ -3,22 +3,22 @@
 
 <article class="epic turquoise-theme" id="chapter-3">
 
-  <section class="epic-cover"
+  <section class="parallax-ch3-1 epic-cover"
            data-lazybg="true">
     <div class="content">
-      <h1 class="pad-top-large" {% if request.is_amp %} amp-fx="fade-in" data-duration="1000ms" {% endif %}>
+      <h1 class=" white section-header" {% if request.is_amp %} amp-fx="fade-in" data-duration="1000ms" {% endif %}>
         {% blocktrans %}
-          What Are<br />
-          Your Data<br />
-          Needs?<br />
+          <span class="section-number gap-top-none">3</span>
+          <span class="pad-left-medium-at-medium">
+            How to Build Your Mobile <br class="hide-until-large" />
+            Data Collection App
+          </span>
         {% endblocktrans %}
       </h1>
     </div> {# .content #}
   </section>
 
   {% include "sections/pillar/mobile_data_collection/chapter3/summary.html" %}
-  <div class="parallax-ch3-1"
-       data-lazybg="true"></div>
   {% include "sections/pillar/mobile_data_collection/chapter3/part1.html" %}
   {% include "sections/pillar/mobile_data_collection/chapter3/part2.html" %}
   {% include "sections/pillar/mobile_data_collection/chapter3/part3.html" %}

@@ -1,0 +1,16 @@
+<div class="column {% block class_column %}{% endblock %}">
+  <div class="grid-flex">
+
+    <div class="column no-shrink">
+      <div class="icon">
+        {% block icon %}{% endblock %} {# an embeded svg #}
+      </div>{# .icon #}
+    </div>{# .column.no-shrink #}
+
+    <div class="column">
+      <h6 class="gap-bottom-none">{% block header %}{% endblock %}</h6>
+      <p>{% block content %}{% endblock %}</p>
+    </div>{# .column #}
+
+  </div>{# .grid-flex #}
+</div>{# .column #}

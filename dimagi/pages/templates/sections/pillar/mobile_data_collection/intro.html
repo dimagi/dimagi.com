@@ -1,26 +1,29 @@
 {% load i18n %}
 {% load dimagidotcom %}
 
-<article class="epic epic-intro orange-theme" id="intro">
+<!-- {% block hero %}
+  <div class="orange-theme">
+    <section class="hero hero-blog" id="hero"></section>
+  </div>
+{% endblock %} -->
+
+<article class="epic epic-intro blue-theme" id="intro">
 
   <section class="epic-cover"
            data-lazybg="true">
     <div class="content">
       <h1 class="gap-top-line-at-medium gap-top-medium" {% if request.is_amp %} amp-fx="parallax" data-parallax-factor="1.3" {% endif %}>
         {% blocktrans %}
-          Mobile Data<br />
-          Collection:
+        Mobile Data <br class="hide-until-medium" /> Collection:
+        <!-- <span>Everything You Need to Know <br class="hide-until-medium" />
+          the speed and accuracy of your data collection</span> -->
+          <span>Everything you need to know to improve  <br class="hide-until-medium" /> 
+            the speed and accuracy of your data collection</span>
         {% endblocktrans %}
-        <span>
-          {% blocktrans %}
-            Everything You Need to Know
-          {% endblocktrans %}
-        </span>
       </h1>
     </div> {# .content #}
   </section>
 
   {% include "sections/pillar/mobile_data_collection/intro/about_mdc.html" %}
   {% include "sections/pillar/mobile_data_collection/intro/chapter_summary.html" %}
-
 </article>

@@ -71,6 +71,9 @@ urlpatterns = [
     url(r'^blog/mobile-data-collection-introduction/$',
         redirect.page('mobile_data_collection')),
 
+    url(r'^data-collection/$',
+        pillar.data_collection, name='data_collection'),
+
     url(r'^blog/mobile-data-collection-standards/$',
         redirect.blog('mobile-data-collection-mobile-survey-design')),
     url(r'^blog/mobile-data-collection-design-and-test/$',
