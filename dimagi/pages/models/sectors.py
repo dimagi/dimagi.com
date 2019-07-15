@@ -2,17 +2,10 @@ from __future__ import absolute_import
 from collections import namedtuple
 
 
-Area = namedtuple(
-    'Area',
-    'name theme icon css_class',
-)
-
-
 Country = namedtuple(
     'Country',
     'name icon',
 )
-
 
 Resource = namedtuple(
     'Resource',
@@ -28,17 +21,22 @@ class Sector(object):
     """
 
     def __init__(self, name=None, summary=None, template=None, slides=None,
-                 slug=None, area=None, download_url=None):
+                 slug=None, icon=None, theme=None, download_url=None):
         self.name = name
         self.summary = summary
         self.template = template
         self.slides = slides
         self.slug = slug
-        self.area = area
+        self.icon = icon
+        self.theme = theme
         self.projects = []
+        self.sub_sectors = []
         self.case_studies = []
         self.additional_resources = []
         self.download_url = download_url
+        
+    def add_sub_sectors(self, sub_sectors):
+        self.sub_sectors.extend(sub_sectors)
 
     def add_projects(self, projects):
         self.projects.extend(projects)
@@ -58,9 +56,10 @@ class Project(object):
     """
 
     def __init__(self, name=None, country=None, description=None, video_url=None,
-                 published_study_url=None, commcare_app_url=None):
+                 published_study_url=None, icon=None, theme=None, commcare_app_url=None):
         self.name = name
         self.country = country
+        self.theme = theme
         self.description = description
         self.video_url = video_url
         self.published_study = published_study_url

@@ -1,7 +1,6 @@
 from __future__ import absolute_import
 from django.utils.translation import ugettext_lazy
 from dimagi.pages.models.sectors import Sector
-from dimagi.data.sectors import areas
 
 
 SECTOR = Sector(
@@ -13,7 +12,8 @@ SECTOR = Sector(
         "the help of mobile data collection apps."
     ),
     template="data/sectors/content/humanitarian_response.html",
-    area=areas.DEVELOPMENT,
+    icon="svg/commcare/icon/agriculture.html",
+    theme="red-theme",
     slug="humanitarian-response",
     slides=[
         "data/sectors/content/humanitarian_response/"
@@ -25,3 +25,4 @@ SECTOR = Sector(
     ],
     download_url="https://cdn2.hubspot.net/hubfs/503070/Humanitarian%20Response.pdf",
 )
+

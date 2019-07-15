@@ -1,7 +1,7 @@
 from __future__ import absolute_import
 from django.utils.translation import ugettext_lazy
 from dimagi.pages.models.sectors import Sector, Project
-from dimagi.data.sectors import areas, countries
+from dimagi.data.sectors import countries
 from dimagi.data.case_studies import mhealth
 
 
@@ -14,7 +14,6 @@ SECTOR = Sector(
         "including 58 projects globally."
     ),
     template="data/sectors/content/maternal_and_newborn_health.html",
-    area=areas.HEALTH,
     slug="maternal-and-newborn-health",
     slides=[
         "data/sectors/content/maternal_and_newborn_health/"
