@@ -19,6 +19,14 @@ def view_all(request):
     return render(request, 'pages/sectors/view_all.html', context)
 
 
+@enable_ab_test(DEMO_WORKFLOW_V2)
+def nutrition_programs(request):
+    context = {
+        'sector': 'nutrition_programs',
+    }
+    return render(request, 'pages/sectors/nutrition_programs.html', context)
+
+
 def view_single(request, slug):
     sector = get_sector_by_slug(slug)
     if not sector:
