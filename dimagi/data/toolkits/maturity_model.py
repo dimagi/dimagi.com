@@ -18,7 +18,6 @@ TOOLKIT = Toolkit(
     icon="svg/tookits/icons/maturity_model.html",
     download_url="https://www.dropbox.com/s/juqabe8bykwuq3n/Dimagi%20Maturity%20Model.zip?dl=1",
     hubspot_form="edd74f83-1893-43a3-bb60-f31e20e5f43a",
-    hubspot_formId="d8869004-bfed-4cfd-8e28-cf395b0b5b9a",
 )
 
 
@@ -115,5 +114,26 @@ Use the Total Cost of Ownership Model to budget for your
 mobile solution.
         """),
         view_url="total-cost-ownership",
-    ),  
+    ), 
+    OtherToolkit(
+        name=ugettext_lazy(
+            "Digital Health Interventions Checklist"
+        ),
+        icon="svg/tookits/icons/digital_health_interventions.html",
+        description=ugettext_lazy("""
+Learn how to describe your digital health technology across stakeholders .
+        """),
+        view_url="digital-health-interventions",
+    ), 
+    OtherToolkit(
+        name=ugettext_lazy(
+            "Mobile Data Collection Guide"
+        ),
+        icon="svg/tookits/icons/mobile_data_collection.html",
+        description=ugettext_lazy("""
+Read this guide to learn almost everything you need to know to set up your own successful 
+mobile data collection program.
+        """),
+        view_url="mobile-data-collection",
+    ),      
 ])

@@ -1,0 +1,18 @@
+{% extends "sections/blog/mobile_survey/_base.html" %}
+{% load i18n %}
+
+{% block icon %}
+  {% include "svg/blog/icon/environment_affect/languages.html" %}
+{% endblock %}
+
+{% block header %}{% blocktrans %}
+  What languages do your end users and beneficiaries speak?
+{% endblocktrans %}{% endblock %}
+
+{% block content %}{% blocktrans %}
+  Sometimes your team and beneficiaries speak a range of languages. If this is the case for your program, you should
+  look for a tool that allows you to easily translate a given form. Some tools go even further, allowing a user to select a
+  language for their application depending on their audience. If the beneficiaries cannot read, some tools also allow for
+  audio playback of the text on the screen.
+{% endblocktrans %}{% endblock %}
+

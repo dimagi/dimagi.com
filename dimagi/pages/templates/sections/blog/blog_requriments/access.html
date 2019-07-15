@@ -1,0 +1,19 @@
+{% extends "sections/blog/blog_requriments/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block icon %}
+  {% include "svg/blog/icon/data_requriments/access.html" %}
+{% endblock %}
+
+{% block header %}{% blocktrans %}
+  Who has access to your data?
+{% endblocktrans %}{% endblock %}
+
+{% block content %}{% blocktrans %}
+  Just as important as the way data is collected are the people collecting and managing it.
+  Unlike paper-based systems, which do not allow multiple actors to update or review data,
+  some mobile solutions allow for multiple relevant and predefined users to view and update data from a single source.
+  Various parties may need to act on or review the most up-to-date information to fulfil their responsibilities, so a feature like case sharing,
+  which allows for efficient and secure data sharing, can be exactly what your program needs.
+{% endblocktrans %}{% endblock %}
