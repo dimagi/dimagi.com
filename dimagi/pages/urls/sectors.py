@@ -4,6 +4,7 @@ from django.conf.urls import url
 from dimagi.pages.views.sectors import (
     view_all,
     view_single,
+    sector_reproductive_health,
     nutrition_programs
     maternal_and_child_health,
     disease_treatment,
@@ -13,6 +14,8 @@ from dimagi.pages.views.sectors import (
 urlpatterns = [
     url(r'^$', view_all,
         name='sectors'),
+    url(r'^reproductive-health/$', sector_reproductive_health,
+        name='sector_reproductive_health'),
     url(r'^nutrition/$', nutrition_programs,
         name='nutrition_programs'),
     url(r'^maternal-and-child-health/$', maternal_and_child_health,
