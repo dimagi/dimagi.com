@@ -1,0 +1,237 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="testimonial programs" 
+         data-lazybg="true" 
+         id="programs">
+  <div class="accent-gray-bg">
+    <div class="content pad-vert-small">
+      <div class="mdc-sector-program">
+        <h2 class="align-center">
+          {% blocktrans %}
+            Featured CommCare-Based Maternal & 
+            <br class="hide-until-medium">Child Healthcare Programs
+          {% endblocktrans %}
+        </h2>
+      </div>
+      <div class="grid grid-3-at-large grid-1-at-medium grid-row-equal-heights grid-col-space-small pad-top-medium">
+        <div class="column  pad-bottom-small ">
+          <div class="pad-bottom-base white-bg">
+            <div class="image testimonial1"
+                 data-lazybg="true"></div>
+            <div class="pad-line pad-top-none-at-large pad-top-line-at-extra-large">
+              <h5><strong class="body-color">
+                {% blocktrans %}
+                  CRS - ReMiND  <br>
+                  India
+                {% endblocktrans %}
+              </strong></h5>
+              <p class="body-color">
+                {% blocktrans %}
+                  Accredited Social Health Activists (ASHAs) in UP counsel and evaluate women and newborns for danger signs before and after birth.
+                {% endblocktrans %}
+              </p>
+              <p><a href="#agri-ep-feature-card-1" class="arrow link-gray">
+                {% blocktrans %}
+                  Read More 
+                {% endblocktrans %}
+              </a></p>
+            </div>
+          </div>
+        </div>{# .column #}
+
+        <div class="column pad-bottom-small">
+          <div class="pad-bottom-base white-bg">
+            <div class="image testimonial2"
+                 data-lazybg="true"></div>
+          <div class="pad-line pad-top-none-at-large pad-top-line-at-extra-large">
+            <h5>
+              <strong class="body-color">
+               {% blocktrans %}
+                  USAID - mHMtaani <br>
+                  Kenya
+               {% endblocktrans %}
+              </strong>
+            </h5>
+            <p class="body-color">
+              {% blocktrans %}
+                Community health workers monitor and track the health of pregnant mothers, orphans, and vulnerable children in Kenya.
+              {% endblocktrans %}
+            </p>
+            <p class="pad-top-line-at-extra-large">
+              <a href="#agri-ep-feature-card-2" class="arrow link-gray">
+                {% blocktrans %}
+                  Read More
+                {% endblocktrans %}
+              </a>
+            </p>
+          </div>
+          </div>
+        </div>{# .column #}
+
+        <div class="column pad-bottom-small">
+          <div class="pad-bottom-base white-bg">
+              <div class="image testimonial3"
+                   data-lazybg="true"></div>
+          <div class="pad-line pad-top-none-at-large pad-top-line-at-extra-large">
+            <h5>
+              <strong class="body-color">
+                {% blocktrans %}
+                  Pathfinder - mSante mHealth <br>
+                  Haiti
+                {% endblocktrans %}
+              </strong>
+            </h5>
+            <p class="body-color">
+              {% blocktrans %}
+                The Haitian Ministry has trained more than 300 community health workers to treat and refer women and newborns to health facilities
+              {% endblocktrans %}
+            </p>
+            <p>
+              <a href="#agri-ep-feature-card-3" class="arrow link-gray">
+                {% blocktrans %}
+                  Read More
+                {% endblocktrans %}
+              </a>
+            </p>
+          </div>
+          </div>
+        </div>{# .column #}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% block modals %}
+  <div class="modal testimonial programs"
+       data-dismissible="true"
+       data-size="medium"
+       id="agri-ep-feature-card-1">
+    <div class="modal-scroll">
+      <div class="modal-wrapper">
+        <a href="#" class="modal-close-button"></a>
+        <div class="content pad-horz-medium-at-medium pad-horz-small pad-bottom-none turquoise-theme">
+          <h4>
+            <strong class="body-color">
+              {% blocktrans %}
+                CRS - ReMiND  <br>
+                India
+              {% endblocktrans %}
+            </strong>
+          </h4>
+          <div class="grid-flex-at-large">
+            <div class="column">
+              <p class="body-color">
+                {% blocktrans %}
+                  Accredited Social Health Activists (ASHAs) in Uttar Pradesh counsel and evaluate women and newborns for danger 
+                  signs before and after birth.
+                {% endblocktrans %}  
+              </p>
+              <p class="body-color">
+                {% blocktrans %}
+                  The ReMiND project in Uttar Pradesh, India, is well known as a leading example of best practices for using mobile health 
+                  technology to increase key maternal and newborn health practices. Through ReMiND, Catholic Relief Services (CRS) and 
+                  Dimagi are using CommCare to help Accredited Social Health Activists (ASHAs) counsel and evaluate women and their newborns 
+                  for danger signs both before and after birth. Case management allows ASHAs to register and track every pregnant patient through 
+                  pregnancy to the postpartum period, as well as newborns, through their first year of life. Over 200 ASHAs have been trained to 
+                  use these applications, ultimately reaching over 20,000 women and their children.
+                {% endblocktrans %}
+              </p>
+            </div>
+            <div class="column pad-top-none-until-large">
+              <div class="image testimonial1 crs"
+                   data-lazybg="true"></div>
+            </div>
+          </div>
+        </div>{# .content #}
+      </div>{# .modal-wrapper #}
+    </div>{# .modal-scroll #}
+  </div>{# .modal #}
+
+  <div class="modal testimonial programs"
+       data-dismissible="true"
+       data-size="medium"
+       id="agri-ep-feature-card-2">
+    <div class="modal-scroll">
+      <div class="modal-wrapper">
+        <a href="#" class="modal-close-button"></a>
+        <div class="content pad-horz-medium-at-medium pad-horz-line pad-vert-none turquoise-theme">
+          <h4>
+            <strong class="body-color">
+              {% blocktrans %}
+                USAID - mHMtaani <br>
+                Kenya
+              {% endblocktrans %}
+            </strong>
+          </h4>
+          <div class="grid-flex-at-large">
+            <div class="column">
+              <p class="body-color">
+                {% blocktrans %}
+                  Community health workers monitor and track the health of pregnant mothers, orphans, and vulnerable children in Kenya.
+                {% endblocktrans %}  
+              </p>
+              <p class="body-color">
+                {% blocktrans %}
+                  Under the APHIAplus project in Kenya, Pathfinder, with the support of USAID, has worked with Dimagi to monitor and track 
+                  the health of pregnant mothers, orphans, and vulnerable children. Using CommCare, CHWs are better able to monitor maternal 
+                  and newborn health indicators, keep women informed of their expected delivery date and signs of complications, 
+                  and help women prepare for delivery. As of spring 2014, over 260 CHWs trained through mHMtaani were using CommCare. 
+                  The application also contributed to an increased number of facility-based deliveries as a result of due date reminders.
+                {% endblocktrans %}
+              </p>
+            </div>
+            <div class="column">
+              <div class="image testimonial2 crs"
+                   data-lazybg="true"></div>
+            </div>
+          </div>
+        </div>{# .content #}
+      </div>{# .modal-wrapper #}
+    </div>{# .modal-scroll #}
+  </div>{# .modal #}
+
+  <div class="modal testimonial programs"
+       data-dismissible="true"
+       data-size="medium"
+       id="agri-ep-feature-card-3">
+    <div class="modal-scroll">
+      <div class="modal-wrapper">
+        <a href="#" class="modal-close-button"></a>
+        <div class="content pad-horz-medium-at-medium pad-horz-line pad-vert-none turquoise-theme">
+          <h4>
+            <strong class="body-color">
+              {% blocktrans %}
+                Pathfinder - mSante mHealth <br>
+                Haiti
+              {% endblocktrans %}
+            </strong>
+          </h4>
+          <div class="grid-flex-at-large">
+            <div class="column">
+              <p class="body-color">
+                {% blocktrans %}
+                  The Haitian Ministry has trained more than three hundred community health workers to treat and refer women and newborns to 
+                  health facilities.
+                {% endblocktrans %}  
+              </p>
+              <p class="body-color">
+                {% blocktrans %}
+                  Pathfinder International, in collaboration with Dimagi, USAID, and the Haitian Ministry, has trained more than 300 CHWs 
+                  under the mSante mHealth Project. This mobile application focuses on case management, health service delivery, referrals 
+                  for tracking patients between home and the health facility, and features modules focused on interventions targeted at 
+                  family planning and maternal and child health. Pathfinder and partners are currently working toward scaling this 
+                  project to the national level.
+                {% endblocktrans %}
+              </p>
+            </div>
+            <div class="column">
+              <div class="image testimonial3 crs"
+                   data-lazybg="true"></div>
+          </div>
+          </div>
+        </div>{# .content #}
+      </div>{# .modal-wrapper #}
+    </div>{# .modal-scroll #}
+  </div>{# .modal #}
+{% endblock %}
