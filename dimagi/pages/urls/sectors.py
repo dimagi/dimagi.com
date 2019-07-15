@@ -6,7 +6,7 @@ from dimagi.pages.views.sectors import (
     view_single,
     agriculture_extension_programs,
     sector_reproductive_health,
-    nutrition_programs
+    nutrition_programs,
     maternal_and_child_health,
     disease_treatment,
 )
