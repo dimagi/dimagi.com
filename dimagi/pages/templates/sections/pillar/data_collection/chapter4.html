@@ -1,0 +1,26 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<article class="epic red-theme" id="chapter-4">
+
+  <section class="parallax-ch4-1 epic-cover"
+           data-lazybg="true">
+    <div class="content">
+      <h1 class="white section-header" {% if request.is_amp %} amp-fx="fade-in" data-duration="1000ms" {% endif %}>
+        {% blocktrans %}
+          <span class="section-number gap-top-none">4</span>
+          <span class="pad-left-medium-at-medium">
+            How to Organize Your <br class="hide-until-large" />
+            Data Collection Plan
+          </span>
+        {% endblocktrans %}
+      </h1>
+    </div> {# .content #}
+  </section>
+
+  {% include "sections/pillar/data_collection/chapter4/summary.html" %}
+  {% include "sections/pillar/data_collection/chapter4/part1.html" %}
+  {% include "sections/pillar/data_collection/chapter4/part2.html" %}
+  {% include "sections/pillar/data_collection/chapter4/part3.html" %}
+
+</article>

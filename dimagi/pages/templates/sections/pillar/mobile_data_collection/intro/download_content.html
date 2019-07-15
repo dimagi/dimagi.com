@@ -1,0 +1,61 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="trial gap-top-medium blue-bg"
+         id="trial">
+  <div class="content content-width-medium pad-vert-medium">
+    <div class="align-center gap-top-small white">
+      <h3 class="white">
+        {% blocktrans %}
+         Download the complete guide to mobile data collection
+        {% endblocktrans %}
+      </h3>
+      <p class="blog-contact">
+        {% blocktrans %}
+          There's so much more to mobile data collection than what we could include on this page.
+          That's why we made a complete guide of more than 30 pages of advice, insights, tips, and examples.
+        {% endblocktrans %}
+      </p>
+
+      <div class="cta gap-vert-line">
+        <a class="button button-accent-gray {% click_hero 'download_content' %}"
+           href="#hubspot-download-form-pdf-summary">
+          {% blocktrans %}
+            download the complete guide 
+          {% endblocktrans %}
+        </a>
+      </div>
+    </div>{# .intro #}
+  </div>{# .content #}
+</section>
+
+{% block modal %}
+  <div class="modal"
+       data-dismissible="true"
+       data-size="medium"
+       id="hubspot-download-form-pdf-summary">
+    <div class="modal-scroll">
+      <div class="modal-wrapper">
+        <a href="#" class="modal-close-button"></a>
+        <div class="content pad-horz-medium-at-medium pad-horz-line pad-vert-none blue-theme">
+          <section id="download-pdf-summary-form-content"></section>
+        </div>{# .content #}
+      </div>{# .modal-wrapper #}
+    </div>{# .modal-scroll #}
+  </div>{# .modal #}
+{% endblock %}
+
+{% block js %}
+  <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+  <script>
+   hbspt.forms.create({
+      portalId: "503070",
+      formId: "6d2f8b0a-f085-4a9a-be6e-383f02b1769f",
+      target: "#download-pdf-summary-form-content",
+      css: "",
+      onFormSubmit: function () {
+        window.open('https://cdn2.hubspot.net/hubfs/503070/Pillar%20Page%20PDFs/Guide%20to%20Mobile%20Data%20Collection.pdf', "_blank");
+      },
+    });
+  </script>
+{% endblock %}

@@ -1,0 +1,240 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section data-lazybg="true"
+         id="programs">
+  <div class="accent-gray-bg" >
+    <div class="content pad-top-medium pad-bottom-medium programs-images">
+      <h2 class="align-center pad-bottom-small">
+        {% blocktrans %}
+          Featured CommCare-Based Reproductive<br class="hide-until-medium"> Health Programs
+        {% endblocktrans %}
+      </h2>
+      <div class="grid grid-3-at-large grid-1-at-medium grid-row-equal-heights grid-col-space-small">
+        <div class="column">
+          <div class="pad-bottom-base white-bg">
+            <div class="image featured-project1" data-lazybg="true"></div>
+            <div class="pad-line pad-top-none-at-large pad-top-line-at-extra-large">
+              <h5 class="pad-bottom-base-at-large">
+                <strong class="body-color">
+                  {% blocktrans %}
+                    MIntraHealth <br>
+                    Senegal
+                  {% endblocktrans %}
+                </strong>
+              </h5>
+              <p class="pad-top-small-at-large">
+                {% blocktrans %}
+                  Mobile logisticians armed with CommCare manage the stock of all family planning
+                  commodities in 1,400 facilities across Senegal.
+
+                {% endblocktrans %}
+              </p>
+              <p>
+                <a href="#modal-feature-card-1"
+                   class="arrow link-gray read-more">
+                  {% blocktrans %}
+                    Read More
+                  {% endblocktrans %}
+                </a>
+              </p>
+            </div> {# .pad-line #}
+          </div> {# .white-bg #}
+        </div> {# .column #}
+        <div class="column">
+          <div class="pad-bottom-base white-bg">
+            <div class="image featured-project2" data-lazybg="true"></div>
+            <div class="pad-line pad-top-none-at-large pad-top-line-at-extra-large">
+              <h5>
+                <strong class="body-color">
+                  {% blocktrans %}
+                    International Federation of Gynecology and Obstetrics <br>
+                    Sri Lanka, Nepal, Tanzania, India, Kenya
+                  {% endblocktrans %}
+                </strong>
+              </h5>
+              <p>
+                {% blocktrans %}
+                  Community health workers use CommCare to track the performance of a postpartum IUD
+                  initiative for more than a year after delivery.
+                {% endblocktrans %}
+              </p>
+              <p>
+                <a href="#modal-feature-card-2"
+                   class="arrow link-gray read-more">
+                  {% blocktrans %}
+                    Read More
+                  {% endblocktrans %}
+                </a>
+              </p>
+            </div> {# .pad-line #}
+          </div> {# .white-bg #}
+        </div> {# .column #}
+        <div class="column">
+          <div class="pad-bottom-base white-bg">
+            <div class="image featured-project3" data-lazybg="true"></div>
+            <div class="pad-line pad-top-none-at-large pad-top-line-at-extra-large">
+              <h5 class="pad-bottom-base-at-large">
+                <strong class="body-color">
+                  {% blocktrans %}
+                    D-Tree International <br>
+                    Tanzania
+                  {% endblocktrans %}
+                </strong>
+              </h5>
+              <p class="pad-top-small-at-large">
+                {% blocktrans %}
+                  Community health workers use CommCare to monitor geographical demand for preferred
+                  methods of family planning across Tanzania.
+                {% endblocktrans %}
+              </p>
+              <p>
+                <a href="#modal-feature-card-3"
+                   class="arrow link-gray read-more">
+                  {% blocktrans %}
+                    Read More
+                  {% endblocktrans %}
+                </a>
+              </p>
+            </div> {# .pad-line #}
+          </div> {# .white-bg #}
+        </div> {# .column #}
+      </div> {# .grid #}
+    </div> {# .content #}
+  </div> {# .accent-gray-bg #}
+</section>
+
+{% block modals %}
+  <div class="modal"
+       data-dismissible="true"
+       data-size="medium"
+       id="modal-feature-card-1">
+    <div class="modal-scroll">
+      <div class="modal-wrapper">
+        <a href="#" class="modal-close-button"></a>
+        <div class="content pad-horz-medium-at-medium pad-horz-line pad-vert-none programs-images">
+          <h4>
+            <strong>
+              {% blocktrans %}
+                MIntraHealth <br>
+                Senegal
+              {% endblocktrans %}
+            </strong>
+          </h4>
+          <div class="grid-flex-at-large">
+            <div class="column">
+              <p>
+                {% blocktrans %}
+                  Mobile logisticians armed with CommCare manage the stock of all family planning
+                  commodities in 1,400 facilities across Senegal.
+                {% endblocktrans %}
+              </p>
+              <p>
+                {% blocktrans %}
+                  IntraHealth and Dimagi have worked together to develop and deploy a CommCare
+                  application for the management of all family planning commodities in 1,400 facilities
+                  across Senegal. In this deployment, mobile logisticians equipped with commodities
+                  travel to each facility to perform inventory management tasks, track indicators,
+                  calculate resupply levels, and delivery commodities on the spot. Each logistician
+                  is equipped with a tablet running CommCare, which allows them to easily record,
+                  manage, and review stock information for hundreds of facilities. This intervention
+                  is currently being scaled nationally in Senegal.
+                {% endblocktrans %}
+              </p>
+            </div> {# .column #}
+            <div class="column">
+              <div class="image featured-project1 modal-popup" data-lazybg="true"></div>
+            </div> {# .column #}
+          </div> {# .grid #}
+        </div> {# .content #}
+      </div> {# .modal-wrapper #}
+    </div> {# .modal-scroll #}
+  </div> {# .modal #}
+
+  <div class="modal"
+       data-dismissible="true"
+       data-size="medium"
+       id="modal-feature-card-2">
+    <div class="modal-scroll">
+      <div class="modal-wrapper">
+        <a href="#" class="modal-close-button"></a>
+        <div class="content pad-horz-medium-at-medium pad-horz-line pad-vert-none programs-images">
+          <h4>
+            <strong>
+              {% blocktrans %}
+                International Federation of Gynecology and Obstetrics <br>
+                Sri Lanka, Nepal, Tanzania, India, Kenya
+              {% endblocktrans %}
+            </strong>
+          </h4>
+          <div class="grid-flex-at-large">
+            <div class="column">
+              <p>
+                {% blocktrans %}
+                  Community health workers use CommCare to track the performance of a postpartum IUD
+                  initiative for more than a year after delivery.
+                {% endblocktrans %}
+              </p>
+              <p>
+                {% blocktrans %}
+                  The postpartum IUD initiative aims to address the postpartum contraceptive needs of
+                  women by training community midwives, health workers, doctors, and delivery unit
+                  staff in postpartum IUD counseling and insertion. As part of this project, project
+                  staff are using CommCare to collect baseline and intervention data, including data
+                  with women at the hospital after delivery, at nine months, and at 18 months after
+                  delivery.
+                {% endblocktrans %}
+              </p>
+            </div> {# .column #}
+            <div class="column">
+              <div class="image featured-project2 modal-popup" data-lazybg="true"></div>
+            </div> {# .column #}
+          </div> {# .grid #}
+        </div> {# .content #}
+      </div> {# .modal-wrapper #}
+    </div> {# .modal-scroll #}
+  </div>{# .modal #}
+
+  <div class="modal"
+       data-dismissible="true"
+       data-size="medium"
+       id="modal-feature-card-3">
+    <div class="modal-scroll">
+      <div class="modal-wrapper">
+        <a href="#" class="modal-close-button"></a>
+        <div class="content pad-horz-medium-at-medium pad-horz-line pad-vert-none programs-images">
+          <h4>
+            <strong>
+              {% blocktrans %}
+                D-Tree International <br>
+                Tanzania
+              {% endblocktrans %}
+            </strong>
+          </h4>
+          <div class="grid-flex-at-large">
+            <div class="column">
+              <p>
+                {% blocktrans %}
+                  Community health workers use CommCare to monitor geographical demand for preferred
+                  methods of family planning across Tanzania.
+                {% endblocktrans %}
+              </p>
+              <p>
+                {% blocktrans %}
+                  D-Tree International and Dimagi have developed a CommCare application that monitors
+                  geographical demand for specific kinds of family planning methods. CHWs collect
+                  information on which method of contraception a woman is using versus which method
+                  she would have chosen had it been available. This data can inform programs on which
+                  forms of contraception are preferred.
+                {% endblocktrans %}
+              </p>
+            </div> {# .column #}
+            <div class="column">
+              <div class="image featured-project3 modal-popup" data-lazybg="true"></div>
+            </div> {# .column #}
+          </div> {# .grid #}
+        </div> {# .content #}
+      </div> {# .modal-wrapper #}
+    </div> {# .modal-scroll #}
+  </div> {# .modal #}
+{% endblock %}

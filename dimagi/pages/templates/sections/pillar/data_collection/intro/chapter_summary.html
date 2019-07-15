@@ -1,0 +1,62 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="epic-content pad-bottom-none"
+         id="intro-chapter-summary">
+  <div class="content content-width-medium">
+    <div class="grid  grid-row-equal-heights">
+
+      <div class="column">
+        <a href="#chapter-1"
+           class="tile tile-chapter pad-bottom-small blue-bg blue-light-border">
+          <h2>
+            {% blocktrans %}
+              1 &nbsp;How to define your project objectives
+            {% endblocktrans %}
+          </h2>
+          
+        </a>
+      </div>{# .column #}
+
+      <div class="column">
+        <a href="#chapter-2"
+           class="tile tile-chapter pad-bottom-small green-bg green-light-border">
+          <h2>
+            {% blocktrans %}
+               2  &nbsp;How to identify your data requirements
+            {% endblocktrans %}
+          </h2>
+        </a>
+      </div>{# .column #}
+
+      <div class="column">
+        <a href="#chapter-3"
+           class="tile tile-chapter pad-bottom-small turquoise-bg turquoise-light-border">
+          <h2>
+            {% blocktrans %}
+               3  &nbsp;How to determine your method of data collection
+            {% endblocktrans %}
+          </h2>
+        </a>
+      </div>{# .column #}
+
+      <div class="column">
+        <a href="#chapter-4"
+           class="tile tile-chapter pad-bottom-small red-bg red-light-border">
+          <h2>
+            {% blocktrans %}
+               4  &nbsp;How to organize your data collection plan
+            {% endblocktrans %}
+          </h2>
+        </a>
+      </div>{# .column #}
+    </div>{# .grid #}
+    <p class="gap-top-small">
+      {% blocktrans %}
+        This guide is made up of advice compiled from our helpful partners and experienced Global Services team. If you have any
+        questions, please don’t hesistate to reach out to <a href="mailto:info@dimagi.com" target="_blank">info@dimagi.com</a>
+      {% endblocktrans %}
+    </p>
+  </div>{# .content #}
+  {% include "sections/pillar/data_collection/intro/download_content.html" %}
+</section>
