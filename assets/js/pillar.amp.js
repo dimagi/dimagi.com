@@ -12,9 +12,9 @@ require([
   'app/amp',
   'app/progressBar',
   'app/imageLoader',
-  'app/initial',
   'app/transition',
   'app/extensions',
+  'app/initial',
   'modernizr',
 ], function (
     $,
