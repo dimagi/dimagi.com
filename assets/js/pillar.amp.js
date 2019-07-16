@@ -25,7 +25,7 @@ require([
     ImageLoader,
     Transition,
     Extensions,
-    Initial,
+    Initial
 ) {
   $(function () {
     _.each([
