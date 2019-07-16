@@ -14,6 +14,9 @@ require([
   'app/imageLoader',
   'app/transition',
   'app/extensions',
+  'app/modal',
+  'app/analytix',
+  'app/demoForm',
   'app/initial',
   'modernizr',
 ], function (
@@ -25,6 +28,9 @@ require([
     ImageLoader,
     Transition,
     Extensions,
+    Modal,
+    Analytix,
+    DemoForm,
     Initial
 ) {
   $(function () {
@@ -35,6 +41,9 @@ require([
       ImageLoader,
       Extensions,
       Transition,
+      Modal,
+      Analytix,
+      DemoForm,
       Initial,
     ], function (m) {
       m.initialize();
