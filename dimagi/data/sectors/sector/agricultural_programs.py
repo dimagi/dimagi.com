@@ -1,7 +1,7 @@
 from __future__ import absolute_import
+
 from django.utils.translation import ugettext_lazy
-from dimagi.pages.models.sectors import Sector, Project, Resource
-from dimagi.data.sectors import  countries
+from dimagi.pages.models.sectors import Sector
 
 
 SECTOR = Sector(
@@ -28,7 +28,8 @@ SECTOR.add_sub_sectors([
         ),
         icon="svg/sectors/agriculture/agricultural_extension_programs.html",
         theme="green-theme",
-        slug="agricultural-extension-programs",
+        slug="sector_agriculture_extension_programs",
+        is_v2=True,
     ),
     Sector(
         name=ugettext_lazy(
