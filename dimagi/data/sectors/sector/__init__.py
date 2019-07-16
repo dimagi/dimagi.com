@@ -3,6 +3,9 @@ from dimagi.data.sectors.sector import (
     agricultural_programs,
     community_development,
     urgent_response,
+)
+
+from dimagi.data.sectors.sector.sub_sectors import (
     education,
     humanitarian_response,
     gender_based_violence,
