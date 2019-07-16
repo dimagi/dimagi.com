@@ -10,12 +10,12 @@
 .overview {
   $_base-height: 175px;
   $_height-by-size: (
-      extra-small: 190px,
-      small: 270px,
-      medium: 180px,
-      large: 235px,
-      extra-large: 290px,
-    );
+    extra-small: 190px,
+    small: 270px,
+    medium: 180px,
+    large: 235px,
+    extra-large: 290px,
+  );
   @include make-bg(analyze-data-image, '../../../pages/commcare/product/analyze', $_base-height, $_height-by-size);
   @include make-bg(collect-data-image, '../../../pages/commcare/product/collect', $_base-height, $_height-by-size);
 
@@ -27,11 +27,12 @@
 
 .features {
   $_base-height: 400px;
-  $_height-by-size: (small: 440px,
-      medium: 720px,
-      large: 660px,
-      extra-large: 625px,
-    );
+  $_height-by-size: (
+    small: 440px,
+    medium: 720px,
+    large: 660px,
+    extra-large: 625px,
+  );
   @include make-bg(image, '../../../pages/commcare/product/features', $_base-height, $_height-by-size);
 
   @media (min-width: $width-desktop) {
@@ -62,12 +63,13 @@
 }
 
 .testimonials {
-  $_sizes: (extra-small: (w: 276px, h: 135px),
-      small: (w: 424px, h: 158px),
-      medium: (w: 680px, h: 277px),
-      large: (w: 868px, h: 333px),
-      extra-large: (w: 1016px, h: 408px),
-    );
+  $_sizes: (
+    extra-small: (w: 276px, h: 135px),
+    small: (w: 424px, h: 158px),
+    medium: (w: 680px, h: 277px),
+    large: (w: 868px, h: 333px),
+    extra-large: (w: 1016px, h: 408px),
+  );
 
   @include make-carousel-slide(image-oikoi, $_sizes, '../../../pages/commcare/product/testimonial1.jpg');
   @include make-carousel-slide(image-nou-kod, $_sizes, '../../../pages/commcare/product/testimonial2.jpg');
@@ -78,11 +80,12 @@
 
 .case-management {
   $_base-height: 290px;
-  $_height-by-size: (small: 290px,
-      medium: 290px,
-      large: 290px,
-      extra-large: 292px,
-    );
+  $_height-by-size: (
+    small: 290px,
+    medium: 290px,
+    large: 290px,
+    extra-large: 292px,
+  );
   @include make-bg(image, '../../../pages/case_management/cm-cta', $_base-height, $_height-by-size, '.png');
 
   @media (min-width: $width-desktop) {
@@ -130,10 +133,11 @@
 }
 
 .slide {
-  display: none
+  display: none;
 }
 
-.prev, .next {
+.prev,
+.next {
   cursor: pointer;
   position: absolute;
   top: 40%;
@@ -172,7 +176,7 @@
 
 .active span, 
 .slide-number:hover {
-  background-color:$color-blue;
+  background-color: $color-blue;
   color: $color-white;
 }
 
@@ -184,20 +188,11 @@
 .pricings-image {
   $_base-height: 275px;
   $_height-by-size: (
-      extra-small: 290px,
-      small: 270px,
-      medium: 270px,
-      large: 316px,
-      extra-large: 290px,
-    );
+    extra-small: 290px,
+    small: 270px,
+    medium: 270px,
+    large: 316px,
+    extra-large: 290px,
+  );
   @include make-bg(epic-cover, '../../../pages/commcare/product/prcining/hero', $_base-height, $_height-by-size);
 }
-
-
-
-// 3750X640--extra-large
-// 2584X640--large
-// 2437X640--medium
-// 1825X640--small
-// 1037X640--extra-small
-// 1349X640--default
