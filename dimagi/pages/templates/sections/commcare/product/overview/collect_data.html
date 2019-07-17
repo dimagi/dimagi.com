@@ -1,53 +1,51 @@
+{% extends "sections/commcare/product/overview/_base.html" %}
 {% load i18n %}
 {% load dimagidotcom %}
 
-<div class="grid-2-at-medium grid-row-space-small grid-reverse blue-theme">
-  <div class="copy content-cell-padding-right">
-    <h3>
-      {% blocktrans %}
-        Collect better data with a data collection app your workforce will love to use.
-      {% endblocktrans %}
-    </h3>
-    <p>
-      {% url 'case_management' as cm_url %}
-      {% blocktrans %}
-        The key to securing cleaner data is offering your workforce a data collection app
-        that guides them to do their best work. Make magic happen
-        behind-the-scenes with features like <a href="{{ cm_url }}">case management</a> that simplify their work.
-      {% endblocktrans %}
-    </p>
-    <ul class="check-list grid-2 gap-bottom-small">
-      <li>
-        <strong>
+{% block collect_selected %}selected{% endblock %}
+
+{% block content %}
+  <h3>
+    {% blocktrans %}
+      Collect better data with a data collection app your workforce will love to use.
+    {% endblocktrans %}
+  </h3>
+  <div class="grid-2-at-large blue-theme grid-valign-middle">
+    <div class="column pad-right-medium-at-base align-left">
+
+      <p>
+        {% url 'case_management' as cm_url %}
+        {% blocktrans %}
+          The key to securing cleaner data is offering your workforce a data collection app
+          that guides them to do their best work. Make magic happen
+          behind-the-scenes with features like <a href="{{ cm_url }}">case management</a> that simplify their work.
+        {% endblocktrans %}
+      </p>
+      <ul class="check-list grid-2-at-extra-large">
+        <li>
           {% blocktrans %}
             Build-in decision support and notifications to guide your team
           {% endblocktrans %}
-        </strong>
-      </li>
-      <li>
-        <strong>
+        </li>
+        <li>
           {% blocktrans %}
             Link data from multiple forms to avoid duplicate
             data entry and errors
           {% endblocktrans %}
-        </strong>
-      </li>
-      <li>
-        <strong>
+        </li>
+        <li>
           {% blocktrans %}
             Incorporate performance feedback for regular progress updates
           {% endblocktrans %}
-        </strong>
-      </li>
-      <li>
-        <strong>
+        </li>
+        <li>
           {% blocktrans %}
             Enhance how your team communicates in the field with multimedia
           {% endblocktrans %}
-        </strong>
-      </li>
-    </ul>
-  </div>{# .copy #}
-  <div class="collect-data-image white-lazy-bg"
-       data-lazybg="true"></div>
-</div>{# .grid-2-at-medium #}
+        </li>
+      </ul>
+    </div>{# .column #}
+    <div class="column collect-data-image white-lazy-bg"
+         data-lazybg="true"></div>
+  </div>{# .grid-2-at-medium #}
+{% endblock %}

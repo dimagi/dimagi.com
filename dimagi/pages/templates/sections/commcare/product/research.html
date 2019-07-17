@@ -1,0 +1,72 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="advisory border-top"
+         id="advisory">
+  <div class="content pad-vert-medium">
+    <div class="align-center gap-bottom-small">
+      <h2 class="blue">
+        {% blocktrans %}
+          TRUST COMMCARE
+        {% endblocktrans %}
+      </h2>
+      <h3>
+        {% blocktrans %}
+          More than 2000 projects across 80 countries trust CommCare for
+          mobile data collection and reporting needs.
+        {% endblocktrans %}
+      </h3>
+    </div>{# .intro #}
+
+    <div class="grid-3-at-medium gap-bottom-small">
+      <div class="column border-right-at-medium pad-horz-medium-at-medium pad-top-small">
+        <h3 class="theme-color gap-bottom-line align-center">
+          {% blocktrans %}
+            45 million 
+          {% endblocktrans %}
+        </h3>
+        <h4 class="align-center">
+          {% blocktrans %}
+            Forms are Collected in CommCare on a Monthly Basis
+          {% endblocktrans %}
+        </h4>
+      </div>{# .column #}
+
+      <div class="column border-right-at-medium pad-horz-medium-at-medium pad-top-small">
+        <h3 class="theme-color gap-bottom-line align-center">
+          {% blocktrans %}
+            1 in 110
+          {% endblocktrans %}
+        </h3>
+        <h4 class="align-center">
+          {% blocktrans %}
+            Births Globally Are Tracked in CommCare
+          {% endblocktrans %}
+        </h4>
+      </div>{# .column #}
+
+      <div class="column pad-horz-medium-at-medium pad-top-small">
+        <h3 class="theme-color gap-bottom-line align-center">
+          {% blocktrans %}
+            1 in 50
+          {% endblocktrans %}
+        </h3>
+        <h4 class="align-center">
+          {% blocktrans %}
+            Malnourished Children Globally are Tracked in CommCare.
+          {% endblocktrans %}
+        </h4>
+      </div>{# .column #}
+    </div>{# .grid-2-at-medium #}
+
+    <div class="align-center">
+      <a class="arrow {% click_body 'impact-research' %} "
+         href="{% url 'toolkit' 'commcare-evidence-base' %}">
+        {% blocktrans %}
+          View The Research
+        {% endblocktrans %}
+      </a>
+    </div>{# .align-center #}
+    
+  </div>{# .content #}
+</section>
