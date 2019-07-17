@@ -4,11 +4,13 @@ python:
 
 services:
  - redis-server
+ - mysql
 
 before_install:
- - cp dev.env .env
+ - cp test.env .env
  - curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
  - echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+ - mysql -e 'CREATE DATABASE dimagidotcom_test;'
 
 install:
  - sudo apt-get update
