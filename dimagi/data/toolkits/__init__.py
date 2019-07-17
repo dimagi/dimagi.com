@@ -10,7 +10,6 @@ from dimagi.data.toolkits import (
     mobile_data_collection,
 )
 
-
 toolkits = (
     maturity_model,
     total_cost_ownership,
