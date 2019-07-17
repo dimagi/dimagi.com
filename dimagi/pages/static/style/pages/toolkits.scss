@@ -6,110 +6,158 @@
 .toolkits-page {
   @include make-bg(hero, '../../pages/toolkits/hero');
 }
+
 .business-development {
   @include make-bg(hero, '../../pages/toolkits/business-development/hero');
 }
+
 .commcare-evidence-base {
   @include make-bg(hero, '../../pages/toolkits/commcare-evidence-base/hero');
 }
+
 .commcare-managing-data {
   @include make-bg(hero, '../../pages/toolkits/commcare-managing-data/hero');
 }
+
 .managing-devices-ebook {
   @include make-bg(hero, '../../pages/toolkits/managing-devices-ebook/hero');
 }
+
 .maturity-model {
   @include make-bg(hero, '../../pages/toolkits/maturity-model/hero');
 }
+
 .total-cost-ownership {
   @include make-bg(hero, '../../pages/toolkits/total-cost-ownership/hero');
 }
+
 .overview .image.highlights {
   @include background-cover('../../pages/toolkits/highlights/highlights.jpg');
 }
+
 .digital-health-interventions{
   @include make-bg(hero, '../../pages/toolkits/digital-health-interventions/hero')
 }
+
+.data-collection{
+  @include make-bg(hero, '../../pages/toolkits/data-collection/hero')
+}
+
 .mobile-data-collection{
   @include make-bg(hero, '../../pages/toolkits/mobile-data-collection/hero')
 }
+
 //images of highlights for business-development-highlights 
 .business-development-highlights-one {
   @include background-cover('../../pages/toolkits/highlights/business-development/business-development-highlights-one.jpg');
 }
+
 .business-development-highlights-two {
   @include background-cover('../../pages/toolkits/highlights/business-development/business-development-highlights-two.jpg');
 }
 .business-development-highlights-three {
   @include background-cover('../../pages/toolkits/highlights/business-development/business-development-highlights-three.jpg');
 }
+
 // images of highlights for commcare-evidence-base-highlights
 .commcare-evidence-base-highlights-one {
   @include background-cover('../../pages/toolkits/highlights/commcare-evidence-base/commcare-evidence-base-highlights-one.jpg');
 }
+
 .commcare-evidence-base-highlights-two {
   @include background-cover('../../pages/toolkits/highlights/commcare-evidence-base/commcare-evidence-base-highlights-two.jpg');
 }
 .commcare-evidence-base-highlights-three {
   @include background-cover('../../pages/toolkits/highlights/commcare-evidence-base/commcare-evidence-base-highlights-three.jpg');
 }
+
 // images of highlights for commcare-managing-data-highlights
 .commcare-managing-data-highlights-one {
   @include background-cover('../../pages/toolkits/highlights/commcare-evidence-base/commcare-evidence-base-highlights-one.jpg');
 }
+
 .commcare-managing-data-highlights-two {
   @include background-cover('../../pages/toolkits/highlights/commcare-evidence-base/commcare-evidence-base-highlights-two.jpg');
 }
+
 .commcare-managing-data-highlights-three {
   @include background-cover('../../pages/toolkits/highlights/commcare-evidence-base/commcare-evidence-base-highlights-three.jpg');
 }
+
 // images of highlights for managing-devices-ebook-highlights
 .managing-devices-ebook-highlights-one {
   @include background-cover('../../pages/toolkits/highlights/managing-devices-ebook/managing-devices-ebook-highlights-one.jpg');
 }
+
 .managing-devices-ebook-highlights-two {
   @include background-cover('../../pages/toolkits/highlights/managing-devices-ebook/managing-devices-ebook-highlights-two.jpg');
 }
+
 .managing-devices-ebook-highlights-three {
   @include background-cover('../../pages/toolkits/highlights/managing-devices-ebook/managing-devices-ebook-highlights-three.jpg');
 }
+
 // images of highlights for maturity-model-highlights
 .maturity-model-highlights-one {
   @include background-cover('../../pages/toolkits/highlights/maturity-model/maturity-model-highlights-one.jpg');
 }
+
 .maturity-model-highlights-two {
   @include background-cover('../../pages/toolkits/highlights/maturity-model/maturity-model-highlights-two.jpg');
 }
+
 .maturity-model-highlights-three {
   @include background-cover('../../pages/toolkits/highlights/maturity-model/maturity-model-highlights-three.jpg');
 }
+
 // images of highlights for total-cost-ownership-highlights
 .total-cost-ownership-highlights-one {
   @include background-cover('../../pages/toolkits/highlights/total-cost-ownership/total-cost-ownership-highlights-one.jpg');
 }
+
 .total-cost-ownership-highlights-two {
   @include background-cover('../../pages/toolkits/highlights/total-cost-ownership/total-cost-ownership-highlights-two.jpg');
 }
+
 .total-cost-ownership-highlights-three {
   @include background-cover('../../pages/toolkits/highlights/total-cost-ownership/total-cost-ownership-highlights-three.jpg');
 }
+
 // images of highlights for digital-health-interventions
 .digital-health-interventions-highlight-one{
   @include background-cover('../../pages/toolkits/highlights/digital-health-interventions/digital-health-interventions-highlight-one.jpg')
 }
+
 .digital-health-interventions-highlight-two{
   @include background-cover('../../pages/toolkits/highlights/digital-health-interventions/digital-health-interventions-highlight-two.jpg')
 }
+
 .digital-health-interventions-highlight-three{
   @include background-cover('../../pages/toolkits/highlights/digital-health-interventions/digital-health-interventions-highlight-three.jpg')
 }
+
+// images of highlights for data-collection
+.data-collection-highlight-one{
+  @include background-cover('../../pages/toolkits/highlights/data-collection/data-collection-highlight-one.jpg')
+}
+
+.data-collection-highlight-two{
+  @include background-cover('../../pages/toolkits/highlights/data-collection/data-collection-highlight-two.jpg')
+}
+
+.data-collection-highlight-three{
+  @include background-cover('../../pages/toolkits/highlights/data-collection/data-collection-highlight-three.jpg')
+}
+
 //images of highlights for mobile-data-collection
 .mobile-data-collection-highlight-one{
   @include background-cover('../../pages/toolkits/highlights/mobile-data-collection/mobile-data-collection-highlight-one.jpg')
 }
+
 .mobile-data-collection-highlight-two{
   @include background-cover('../../pages/toolkits/highlights/mobile-data-collection/mobile-data-collection-highlight-two.jpg')
 }
+
 .mobile-data-collection-highlight-three{
   @include background-cover('../../pages/toolkits/highlights/mobile-data-collection/mobile-data-collection-highlight-three.jpg')
 }

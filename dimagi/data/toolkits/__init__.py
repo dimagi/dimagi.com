@@ -6,9 +6,9 @@ from dimagi.data.toolkits import (
     commcare_managing_data,
     managing_devices_ebook,
     digital_health_interventions,
+    data_collection,
     mobile_data_collection,
 )
-
 
 toolkits = (
     maturity_model,
@@ -18,6 +18,7 @@ toolkits = (
     commcare_managing_data,
     managing_devices_ebook,
     digital_health_interventions,
+    data_collection,  
     mobile_data_collection,
 )
 

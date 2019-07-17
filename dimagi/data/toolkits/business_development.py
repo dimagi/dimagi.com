@@ -1,6 +1,8 @@
 from __future__ import absolute_import
 from django.utils.translation import ugettext_lazy
-from dimagi.pages.models.toolkits import Toolkit, Highlight, OtherToolkit
+
+from dimagi.data.toolkits import summary
+from dimagi.pages.models.toolkits import Toolkit, Highlight
 
 
 TOOLKIT = Toolkit(
@@ -56,81 +58,12 @@ expected value, and other key factors impact estimations.
 
 
 TOOLKIT.add_other_toolkits([
-    OtherToolkit(
-        name=ugettext_lazy(
-            "The CommCare Evidence Base"
-        ),
-        icon="svg/tookits/icons/commcare_evidence_base.html",
-        description=ugettext_lazy("""
-Over 50 studies have assessed CommCare's impact, making it the most
-evidence-based mobile platform for frontline workers in low-resource
-settings.
-        """),
-        view_url="commcare-evidence-base",
-    ),
-    OtherToolkit(
-        name=ugettext_lazy(
-            "Managing Data in CommCare"
-        ),
-        icon="svg/tookits/icons/managingdata_commcare.html",
-        description=ugettext_lazy("""
-A starter guide to inspecting, cleaning and exporting data in
-CommCare.
-        """),
-        view_url="commcare-managing-data",
-    ),
-    OtherToolkit(
-        name=ugettext_lazy(
-            "Managing Devices at Scale"
-        ),
-        icon="svg/tookits/icons/managingdevices_scale.html",
-        description=ugettext_lazy("""
-Key learnings from managing thousands of devices in a
-large-scale mobile health project.
-        """),
-        view_url="managing-devices-ebook",
-    ),
-    OtherToolkit(
-        name=ugettext_lazy(
-            "The Maturity Model"
-        ),
-        icon="svg/tookits/icons/maturity_model.html",
-        description=ugettext_lazy("""
-Use the Maturity Model to establish a long-term
-vision for building and scaling your mobile system.
-        """),
-        view_url="maturity-model",
-    ),
-    OtherToolkit(
-        name=ugettext_lazy(
-            "Total Cost of Ownership Model"
-        ),
-        icon="svg/tookits/icons/total_cost_ownership_model.html",
-        description=ugettext_lazy("""
-Use the Total Cost of Ownership Model to budget for your
-mobile solution.
-        """),
-        view_url="total-cost-ownership",
-    ),
-    OtherToolkit(
-        name=ugettext_lazy(
-            "Digital Health Interventions Checklist"
-        ),
-        icon="svg/tookits/icons/digital_health_interventions.html",
-        description=ugettext_lazy("""
-Learn how to describe your digital health technology across stakeholders .
-        """),
-        view_url="digital-health-interventions",
-    ),
-    OtherToolkit(
-        name=ugettext_lazy(
-            "Mobile Data Collection Guide"
-        ),
-        icon="svg/tookits/icons/mobile_data_collection.html",
-        description=ugettext_lazy("""
-Read this guide to learn almost everything you need to know to set up your own successful 
-mobile data collection program.
-        """),
-        view_url="mobile-data-collection",
-    ),      
+    summary.COMMCARE_EVIDENCE_BASE,
+    summary.COMMCARE_MANAGING_DATA,
+    summary.MANAGING_DEVICES_EBOOK,
+    summary.MATURITY_MODEL,
+    summary.DIGITAL_HEALTH_INTERVENTIONS,
+    summary.DATA_COLLECTION,
+    summary.MOBILE_DATA_COLLECTION,
+    summary.TOTAL_COST_OWNERSHIP,
 ])

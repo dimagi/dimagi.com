@@ -7,48 +7,49 @@ from dimagi.pages.models.toolkits import Toolkit, Highlight
 
 TOOLKIT = Toolkit(
     title=ugettext_lazy(
-        "Managing Data in CommCare"
+        "Data Collection Guide"
     ),
     tagline=ugettext_lazy(
-        "A starter guide to inspecting, cleaning and exporting data in "
-        "CommCare."
+        "Use this introductory guide to data collection to organize your data collection plan."
     ),
-    image="commcare-managing-data",
-    template="data/toolkits/summaries/commcare_managing_data.html",
-    slug="commcare-managing-data",
-    icon="svg/tookits/icons/managingdata_commcare.html",
-    download_url="https://www.dropbox.com/s/lguz3gth6kovw62/M%26E%20Starter%20Guide.pdf?dl=1",
-    hubspot_form="f59879b3-23cb-41a6-b4f8-e1daa8ba4141",
+    image="data-collection",
+    template="data/toolkits/summaries/data_collection.html",
+    slug="data-collection",
+    icon="svg/tookits/icons/data_collection.html",
+    download_url="https://cdn2.hubspot.net/hubfs/503070/Pillar%20Page%20PDFs/Guide%20to%20Data%20Collection.pdf",
+    hubspot_form="781d61a5-25b1-4cc0-8f58-495a02f26bb1",
 )
-
 
 TOOLKIT.add_highlights([
     Highlight(
         name=ugettext_lazy(
             "The CommCare Evidence Base"
         ),
-        highlight_image="commcare-evidence-base-highlights-one",
         description=ugettext_lazy("""
-Improve data cleanliness for accurate reporting and analysis.
+Learn how to categorize your data requirements, including worker 
+and project performance metrics.
         """),
+        highlight_image="data-collection-highlight-one",
     ),
     Highlight(
         name=ugettext_lazy(
             "Managing Data in CommCare"
         ),
-        highlight_image="commcare-evidence-base-highlights-two",
         description=ugettext_lazy("""
-Understand best practices for exporting data.
+Read about the different methods of data collection, including surveys, 
+interviews, and observational data collection.
         """),
+        highlight_image="data-collection-highlight-two",
     ),
     Highlight(
         name=ugettext_lazy(
             "Managing Devices at Scale"
         ),
-        highlight_image="commcare-evidence-base-highlights-three",
         description=ugettext_lazy("""
-Learn how to inspect and clean raw data.
+Understand the basics of information workflow diagrams and data 
+collection plan outlines.
         """),
+        highlight_image="data-collection-highlight-three",
     ),  
 ])
 
@@ -56,10 +57,10 @@ Learn how to inspect and clean raw data.
 TOOLKIT.add_other_toolkits([
     summary.BUSINESS_DEVELOPMENT,
     summary.COMMCARE_EVIDENCE_BASE,
+    summary.COMMCARE_MANAGING_DATA,
     summary.MANAGING_DEVICES_EBOOK,
     summary.MATURITY_MODEL,
     summary.DIGITAL_HEALTH_INTERVENTIONS,
-    summary.DATA_COLLECTION,
     summary.MOBILE_DATA_COLLECTION,
     summary.TOTAL_COST_OWNERSHIP,
 ])
