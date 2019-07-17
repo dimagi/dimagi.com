@@ -24,7 +24,8 @@ SECTOR.add_sub_sectors([
             "Humanitarian Response"
         ),
         summary=ugettext_lazy(
-        "Quickly organize and share data during humanitarian crises with help of mobile data collection."
+            "Quickly organize and share data during humanitarian crises with "
+            "help of mobile data collection."
         ),
         template="data/sectors/content/child_health.html",
         icon="svg/sectors/urgent_response/humanitarian_response.html",
@@ -33,10 +34,10 @@ SECTOR.add_sub_sectors([
     ),
     Sector(
         name=ugettext_lazy(
-            "Gender-based Voilence"
+            "Gender-based Violence"
         ),
         summary=ugettext_lazy(
-        "Address and reduce gender-based voilence issues with mobile tools."
+            "Address and reduce gender-based violence issues with mobile tools."
         ),
         template="data/sectors/content/child_health.html",
         icon="svg/sectors/urgent_response/gender_based_violence.html",
