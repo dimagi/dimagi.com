@@ -7,70 +7,6 @@
   @include make-bg(hero, '../../../pages/commcare/product/hero');
 }
 
-.overview {
-  $_base-height: 175px;
-  $_height-by-size: (
-    extra-small: 190px,
-    small: 270px,
-    medium: 180px,
-    large: 235px,
-    extra-large: 290px,
-  );
-  @include make-bg(analyze-data-image, '../../../pages/commcare/product/analyze', $_base-height, $_height-by-size);
-  @include make-bg(collect-data-image, '../../../pages/commcare/product/collect', $_base-height, $_height-by-size);
-
-  .device-container,
-  .screen {
-    width: 100%;
-  }
-
-  .carousel-slide {
-
-    @media (min-width: $width-mobile) {
-      height: 890px;
-    }
-
-    @media (min-width: $width-desktop) {
-      height: 824px;
-    }
-
-    @media (min-width: $width-desktop-lg) {
-      height: 650px;
-    }
-
-    @media (min-width: $width-desktop-xl) {
-      height: 600px;
-    }
-  }
-}
-
-.features {
-  $_base-height: 400px;
-  $_height-by-size: (
-    small: 440px,
-    medium: 720px,
-    large: 660px,
-    extra-large: 625px,
-  );
-  @include make-bg(image, '../../../pages/commcare/product/features', $_base-height, $_height-by-size);
-
-  @media (min-width: $width-desktop) {
-    .off-grid {
-      bottom: 0;
-      left: 0;
-      position: absolute;
-      right: auto;
-      width: 100%;
-      z-index: 1;
-    }
-
-    .content {
-      position: relative;
-      z-index: 2;
-    }
-  }
-}
-
 @media (min-width: $width-desktop) {
   .products-commcare-page .hero {
     h1 {
@@ -134,6 +70,44 @@
   }
 }
 
+.overview {
+  $_base-height: 175px;
+  $_height-by-size: (
+    extra-small: 190px,
+    small: 270px,
+    medium: 180px,
+    large: 235px,
+    extra-large: 290px,
+  );
+  @include make-bg(analyze-data-image, '../../../pages/commcare/product/analyze', $_base-height, $_height-by-size);
+  @include make-bg(collect-data-image, '../../../pages/commcare/product/collect', $_base-height, $_height-by-size);
+
+  .device-container,
+  .screen {
+    width: 100%;
+  }
+
+  .carousel-slide {
+    background-color: $color-white;
+
+    @media (min-width: $width-mobile) {
+      height: 890px;
+    }
+
+    @media (min-width: $width-desktop) {
+      height: 824px;
+    }
+
+    @media (min-width: $width-desktop-lg) {
+      height: 650px;
+    }
+
+    @media (min-width: $width-desktop-xl) {
+      height: 600px;
+    }
+  }
+}
+
 .overview a:not(.button)[class*="play-icon-"]:after {
   border-left-color: $color-blue;
 }
@@ -146,7 +120,7 @@
   background-color: $color-white;
 }
 
-.pricings-image {
+.pricing-image {
   $_base-height: 275px;
   $_height-by-size: (
     extra-small: 290px,
@@ -156,9 +130,4 @@
     extra-large: 290px,
   );
   @include make-bg(epic-cover, '../../../pages/commcare/product/prcining/hero', $_base-height, $_height-by-size);
-}
-
-
-.overview-slide {
-  background-color: $color-white;
 }
