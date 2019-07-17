@@ -1,13 +1,16 @@
+{% extends "sections/commcare/product/overview/_base.html" %}
 {% load i18n %}
 {% load dimagidotcom %}
 
-<div>
+{% block collect_selected %}selected{% endblock %}
+
+{% block content %}
   <h3>
     {% blocktrans %}
       Collect better data with a data collection app your workforce will love to use.
     {% endblocktrans %}
   </h3>
-  <div class="grid-2-at-medium blue-theme">
+  <div class="grid-2-at-large blue-theme grid-valign-middle">
     <div class="column pad-right-medium-at-base align-left">
 
       <p>
@@ -18,7 +21,7 @@
           behind-the-scenes with features like <a href="{{ cm_url }}">case management</a> that simplify their work.
         {% endblocktrans %}
       </p>
-      <ul class="check-list grid-2-at-medium ">
+      <ul class="check-list grid-2-at-extra-large">
         <li>
           {% blocktrans %}
             Build-in decision support and notifications to guide your team
@@ -45,4 +48,4 @@
     <div class="column collect-data-image white-lazy-bg"
          data-lazybg="true"></div>
   </div>{# .grid-2-at-medium #}
-</div>
+{% endblock %}

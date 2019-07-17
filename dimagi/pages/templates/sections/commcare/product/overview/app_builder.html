@@ -1,13 +1,16 @@
+{% extends "sections/commcare/product/overview/_base.html" %}
 {% load i18n %}
 {% load dimagidotcom %}
 
-<div>
+{% block build_selected %}selected{% endblock %}
+
+{% block content %}
   <h3>
     {% blocktrans %}
       Build your offline data collection app in days, not weeks.
     {% endblocktrans %}
   </h3>
-  <div class="grid-2-at-medium blue-theme">
+  <div class="grid-2-at-large blue-theme grid-valign-middle">
     <div class="column pad-right-medium-at-base align-left">
 
       <p>
@@ -15,7 +18,7 @@
           Our drag-and-drop app builder makes it easy for you to get started.
         {% endblocktrans %}
       </p>
-      <ul class="check-list grid-2-at-medium">
+      <ul class="check-list grid-2-at-extra-large">
         <li>
           {% blocktrans %}
             Test app changes live with our app preview feature
@@ -48,4 +51,4 @@
       </div>{# .flex-valign-middle-at-medium #}
     </div>{# .column #}
   </div>{# .grid-2-at-medium #}
-</div>
+{% endblock %}

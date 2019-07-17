@@ -23,6 +23,25 @@
   .screen {
     width: 100%;
   }
+
+  .carousel-slide {
+
+    @media (min-width: $width-mobile) {
+      height: 890px;
+    }
+
+    @media (min-width: $width-desktop) {
+      height: 824px;
+    }
+
+    @media (min-width: $width-desktop-lg) {
+      height: 650px;
+    }
+
+    @media (min-width: $width-desktop-xl) {
+      height: 600px;
+    }
+  }
 }
 
 .features {
@@ -124,65 +143,7 @@
 }
 
 .overview [class*="play-icon-"]:not(.button):before {
-    background-color: $color-white;
-}
-
-// Carousel css
-.slide-container {
-  position: relative;
-}
-
-.slide {
-  display: none;
-}
-
-.prev,
-.next {
-  cursor: pointer;
-  position: absolute;
-  top: 40%;
-  width: auto;
-  color: $color-black !important;
-}
-
-.next {
-  right: 0;
-  padding-right: 1%;
-}
-
-.prev {
-  left: 0;
-  padding-left: 1%;
-}
-
-.left-arrow:hover,
-.right-arrow:hover {
-  stroke: $color-blue !important;
-}
-
-.dots {
-  display: -webkit-inline-box;
-}
-
-.slide-number {
-  cursor: pointer;
-  height: 30px;
-  width: 30px;
-  border-radius: 50%;
-  display: inline-block;
-  padding-top: $space-base/2;
-  border: 1px solid $color-blue;
-}
-
-.active span, 
-.slide-number:hover {
-  background-color: $color-blue;
-  color: $color-white;
-}
-
-.active div {
-  color: $color-blue;
-  font-weight: 500;
+  background-color: $color-white;
 }
 
 .pricings-image {
@@ -195,4 +156,9 @@
     extra-large: 290px,
   );
   @include make-bg(epic-cover, '../../../pages/commcare/product/prcining/hero', $_base-height, $_height-by-size);
+}
+
+
+.overview-slide {
+  background-color: $color-white;
 }

@@ -1,9 +1,9 @@
 {% load i18n %}
 {% load dimagidotcom %}
 
-<section class="accent-gray-bg overview"
+<section class="accent-gray-bg border-top overview"
          id="overview">
-  <div class="content pad-vert-medium border-top align-center">
+  <div class="content pad-vert-medium align-center">
     <div class="intro">
       <h2 class="blue">
         {% blocktrans %}
@@ -16,54 +16,19 @@
         {% include "partials/wistia_popover.html" with wistia_id='jzm3ggrinr' show_play=True text=video_text click_class=video_click_class %}
       </p>
     </div>
-    <div class="white-bg pad-vert-small">
-      <div class="dots pad-bottom-small">
 
-        <div class="pad-right-small slide-number-section">
-          <span class="slide-number build" >1</span>
-          <div class="pad-top-base bui">BUILD</div>
-        </div>
+    <div class="carousel carousel-fade-inactive carousel-numbered carousel-arrows hide-dots carousel-features">
+      <div class="carousel-container">
+        <div class="spinner spinner-large"></div>
+        <div class="carousel-slider">
+          {% include "sections/commcare/product/overview/app_builder.html" %}
+          {% include "sections/commcare/product/overview/collect_data.html" %}
+          {% include "sections/commcare/product/overview/analyze_data.html" %}
+        </div>{# .carousel-slider #}
+      </div>{# .carousel-container #}
+    </div>{# .carousel #}
 
-        <div class="pad-right-small slide-number-section">
-          <span class="slide-number collect" >2</span>
-          <div class="pad-top-base">COLLECT</div>
-        </div>
-
-        <div class="slide-number-section">
-          <span class="slide-number analyze" >3</span>
-          <div class="pad-top-base">ANALYZE</div>
-        </div>
-
-      </div>
-      <div class="slide-container">
-
-        <a class="prev hide-until-medium" >
-          {% include "svg/commcare/product/overview/arrow-left.html" %}
-        </a>
-        <a class="next hide-until-medium" >
-          {% include "svg/commcare/product/overview/arrow-right.html" %}
-        </a>
-        
-        <div class="content pad-left-large-at-medium pad-right-large-at-medium pad-left-line pad-right-line">
-          <div class="slide">
-            {% include "sections/commcare/product/overview/app_builder.html" %}
-          </div>
-          <div class="slide">
-            {% include "sections/commcare/product/overview/collect_data.html" %}
-          </div>
-          <div class="slide">
-            {% include "sections/commcare/product/overview/analyze_data.html" %}
-          </div>
-        </div>
-      </div>
-    </div>
-    <nav class="carousel-dots hide-at-medium">
-      <span class="dot build" data-dot="1" data-active="false"></span>
-      <span class="dot collect" data-dot="2" data-active="false"></span>
-      <span class="dot analyze" data-dot="3" data-active="false"></span>
-    </nav>
-
-    <div class="cta pad-top-small">
+    <div class="cta pad-vert-small">
       <p>
         <a class="arrow {% click_body 'features-view' %}" 
            href="{% url 'commcare_pricing' %}#details">
@@ -73,5 +38,6 @@
         </a>
       </p>
     </div>{# .cta #}
+
   </div>
 </section>

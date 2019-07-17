@@ -1,13 +1,16 @@
+{% extends "sections/commcare/product/overview/_base.html" %}
 {% load i18n %}
 {% load dimagidotcom %}
 
-<div>
+{% block analyze_selected %}selected{% endblock %}
+
+{% block content %}
   <h3>
     {% blocktrans %}
       Analyze data to improve decision making.
     {% endblocktrans %}
   </h3>
-  <div class="grid-2-at-medium  blue-theme">
+  <div class="grid-2-at-large blue-theme grid-valign-middle">
     <div class="column pad-right-medium-at-base align-left">
       <p>
         {% blocktrans %}
@@ -15,7 +18,7 @@
           and identify trends, so you can make informed decisions.
         {% endblocktrans %}
       </p>
-      <ul class="check-list grid-2-at-medium">
+      <ul class="check-list grid-2-at-extra-large">
         <li>
           {% blocktrans %}
             Visualize trends with CommCare’s built-in reporting tool
@@ -38,4 +41,4 @@
          data-lazybg="true">
     </div>{# .column #}
   </div>{# .grid-2-at-medium #}
-</div>
+{% endblock %}
