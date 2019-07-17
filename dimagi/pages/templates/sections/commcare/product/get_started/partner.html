@@ -1,0 +1,26 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<div class="item align-center">
+  <div class="theme-icon gap-bottom-line">
+    {% include "svg/commcare/icon/partner.html" %}
+  </div>
+  <h3>
+    {% blocktrans %}
+      Partner with us
+    {% endblocktrans %}
+  </h3>
+  <p>
+    {% blocktrans %}
+      Work with our dedicated Global Services team for full-scale
+      design and build support.
+    {% endblocktrans %}
+  </p>
+  <p>
+    <a class="arrow {% click_body 'partner_program' %}" href="{% url 'partner_program' %}">
+      {% blocktrans %}
+        Learn More
+      {% endblocktrans %}
+    </a>
+  </p>
+</div>{# .item #}

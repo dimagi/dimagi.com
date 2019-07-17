@@ -1,0 +1,26 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="get_started border-top"
+         id="get_started">
+  <div class="content pad-top-medium">
+    <div class="align-center gap-bottom-small">
+      <h2 class="blue">
+        {% blocktrans %}
+          Get Started
+        {% endblocktrans %}
+      </h2>
+      <p>
+        {% blocktrans %}
+          Choose from our support options
+        {% endblocktrans %}
+      </p>
+    </div>{# .intro #}
+
+    <div class="grid-1-at-small grid-3-at-large grid-row-space-small">
+      {% include "sections/commcare/product/get_started/build.html" %}
+      {% include "sections/commcare/product/get_started/support.html" %}
+      {% include "sections/commcare/product/get_started/partner.html" %}
+    </div>{# .grid-2-at-small #}
+  </div>{# .content #}
+</section>

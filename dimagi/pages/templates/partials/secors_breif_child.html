@@ -1,0 +1,20 @@
+{% load dimagidotcom %}
+{% load i18n %}
+
+<a class="tile theme-border align-center ab-body-sectors--{{ sector.slug }} accent-gray-bg sector-main-select"
+   href="{% if sector.is_v2 %}{% url sector.slug %}{% else %}{% url 'sector' sector.slug %}{% endif %}">
+  <div class="theme-icon">
+    {% include sector.icon %}
+  </div>
+  <h5 class="theme-color">
+    {{ sector.name }}
+  </h5>
+  <p class="body-color">
+    {{ sector.summary }}
+  </p>
+  <p class="cta">
+    <span class="link theme-color">
+      {% trans "Learn More" %}
+    </span>
+  </p>
+</a>

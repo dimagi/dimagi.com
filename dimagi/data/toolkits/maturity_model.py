@@ -134,5 +134,16 @@ Learn how to describe your digital health technology across stakeholders .
 Use this introductory guide to data collection to organize your data collection plan.
         """),
         view_url="data-collection",
-    ),       
+    ), 
+    OtherToolkit(
+        name=ugettext_lazy(
+            "Mobile Data Collection Guide"
+        ),
+        icon="svg/tookits/icons/mobile_data_collection.html",
+        description=ugettext_lazy("""
+Read this guide to learn almost everything you need to know to set up your own successful 
+mobile data collection program.
+        """),
+        view_url="mobile-data-collection",
+    ),
 ])

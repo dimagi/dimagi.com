@@ -1,10 +1,9 @@
 {% load dimagidotcom %}
 {% load i18n %}
 
-<a class="tile theme-border align-center ab-body-sectors--{{ sector.slug }}"
-   href="{% url 'sector' sector.slug %}">
+<a class="tile theme-border align-center ab-body-sectors--{{ sector.slug }} accent-gray-bg home-{{ sector.slug }} sector-opacity" >
   <div class="theme-icon">
-    {% include sector.area.icon %}
+    {% include sector.icon %}
   </div>
   <h5 class="theme-color">
     {{ sector.name }}
@@ -14,7 +13,7 @@
   </p>
   <p class="cta">
     <span class="link theme-color">
-      {% trans "Read More" %}
+      {% trans "Learn More" %}
     </span>
   </p>
 </a>

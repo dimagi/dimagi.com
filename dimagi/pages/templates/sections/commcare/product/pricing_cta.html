@@ -1,0 +1,27 @@
+{% load i18n %}
+{% load dimagidotcom %}
+<article class="epic pricing-image" id="pricing">
+  <section class="epic-cover"
+         data-lazybg="true">
+    <div class="content pad-vert-medium">
+      <h2 class="white align-center pad-top-base-at-medium">
+        {% blocktrans %}
+          PRICING
+        {% endblocktrans %}
+      </h2>
+      <h4 class="white align-center">
+        {% blocktrans %}
+          Affordable pricing plans to fit your budget and needs.
+        {% endblocktrans %}
+      </h4>
+      <p class="align-center">
+        <a class="button button-accent-gray {% click_body 'case-management' %}"
+           href="{% url 'commcare_pricing' %}">
+          {% blocktrans %}
+            View commcare plans
+          {% endblocktrans %}
+        </a>
+      </p>
+    </div>{# .content #}
+  </section>
+</article>

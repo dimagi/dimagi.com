@@ -57,6 +57,22 @@
   .carousel[data-loading="true"] .carousel-slide {
     opacity: 0;
   }
+
+  .carousel-number {
+    border: 2px solid $color-blue;
+    border-radius: 50%;
+    cursor: pointer;
+    display: inline-block;
+    height: $space-small;
+    padding-top: $space-base / 2;
+    text-align: center;
+    width: $space-small;
+
+    &.selected {
+      background-color: $color-blue;
+      color: $color-white;
+    }
+  }
 }
 
 
@@ -110,6 +126,65 @@
         &:last-of-type {
           margin-right: 0;
         }
+      }
+    }
+  }
+
+  .carousel-arrows {
+    .carousel-slide {
+      position: relative;
+    }
+  }
+
+  .carousel-arrow {
+    height: $space-medium * 2;
+    margin-top: - $space-medium;
+    position: absolute;
+    top: 50%;
+    width: $space-small;
+
+    @media (min-width: $width-desktop) {
+      width: $space-medium;
+    }
+
+    .arrow-nav {
+      display: inline-block;
+      border: $color-border solid;
+      border-width: 0 3px 3px 0;
+      position: absolute;
+      top: 50%;
+      margin-top: - $space-base / 4;
+      padding: $space-base / 2;
+
+      @media (min-width: $width-desktop) {
+        margin-top: - $space-base / 2;
+        padding: $space-base;
+      }
+    }
+
+    &.previous {
+      left: 4px;
+
+      @media (min-width: $width-desktop) {
+        left: $space-base;
+      }
+
+      .arrow-nav {
+        left: 6px;
+        transform: rotate(135deg);
+      }
+    }
+
+    &.next {
+      right: 4px;
+
+      @media (min-width: $width-desktop) {
+        right: $space-base;
+      }
+
+      .arrow-nav {
+        right: 6px;
+        transform: rotate(-45deg);
       }
     }
   }

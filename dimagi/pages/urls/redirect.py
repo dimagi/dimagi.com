@@ -2,7 +2,6 @@ from __future__ import absolute_import
 from django.conf.urls import url
 from dimagi.data.case_studies.mhealth import supply_chain_tanzania
 from dimagi.data.sectors.sector import (
-    child_health,
     mlabor,
     education,
     hiv_aids,
@@ -72,8 +71,8 @@ redirect_urlpatterns = [
     url(r'^team.html$', redirect.page('team')),
     url(r'^about-mgmt.php$', redirect.page('about')),
 
-    url(r'^mobile-e-imci/$', redirect.sector(child_health.SECTOR.slug)),
-    url(r'^content/mobile-e-imci.html$', redirect.sector(child_health.SECTOR.slug)),
+    url(r'^mobile-e-imci/$', redirect.page('sector_maternal_and_child_health')),
+    url(r'^content/mobile-e-imci.html$', redirect.page('sector_maternal_and_child_health')),
     url(r'^mlabour/$', redirect.sector(mlabor.SECTOR.slug)),
     url(r'^ivr-mobile-education/$', redirect.sector(education.SECTOR.slug)),
     url(r'^education/$', redirect.sector(education.SECTOR.slug)),

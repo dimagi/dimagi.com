@@ -12,9 +12,12 @@ require([
   'app/amp',
   'app/progressBar',
   'app/imageLoader',
-  'app/initial',
   'app/transition',
   'app/extensions',
+  'app/modal',
+  'app/analytix',
+  'app/demoForm',
+  'app/initial',
   'modernizr',
 ], function (
     $,
@@ -25,7 +28,10 @@ require([
     ImageLoader,
     Transition,
     Extensions,
-    Initial,
+    Modal,
+    Analytix,
+    DemoForm,
+    Initial
 ) {
   $(function () {
     _.each([
@@ -35,6 +41,9 @@ require([
       ImageLoader,
       Extensions,
       Transition,
+      Modal,
+      Analytix,
+      DemoForm,
       Initial,
     ], function (m) {
       m.initialize();
