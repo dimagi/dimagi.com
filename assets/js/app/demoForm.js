@@ -29,6 +29,8 @@ define([
 
         // Activate Demo Form
         if (demoFormId) {
+            console.log('got demo form');
+            console.log(demoFormId);
             hbspt.forms.create({
                 portalId: apiId,
                 formId: demoFormId,

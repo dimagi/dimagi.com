@@ -1,0 +1,236 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section data-lazybg="true"
+         id="programs">
+  <div class="accent-gray-bg" >
+    <div class="content pad-top-medium pad-bottom-medium programs-images">
+      <h2 class="align-center pad-bottom-small">
+        {% blocktrans %}
+          Featured CommCare-Based Agricultural <br class="hide-until-medium"> Extension Programs
+        {% endblocktrans %}
+      </h2>
+      <div class="grid grid-3-at-large grid-1-at-medium grid-row-equal-heights grid-col-space-small">
+        <div class="column">
+          <div class="pad-bottom-base white-bg">
+            <div class="image featured-project1" data-lazybg="true"></div>
+            <div class="pad-line pad-top-none-at-large pad-top-line-at-extra-large">
+              <h5 >
+                <strong class="body-color">
+                  {% blocktrans %}
+                    CRS <br>
+                    India
+                  {% endblocktrans %}
+                </strong>
+              </h5>
+              <p class="body-color">
+                {% blocktrans %}
+                  The Rice-based Rainfed
+                  Agricultural System tracks
+                  the varying efficacy of rice crops…
+                {% endblocktrans %}
+              </p>
+              <p class="pad-top-line-at-extra-large">
+                <a href="#modal-feature-card-1"
+                   class="arrow link-gray read-more">
+                  {% blocktrans %}
+                    Read More
+                  {% endblocktrans %}
+                </a>
+              </p>
+            </div> {# .pad-line #}
+          </div> {# .white-bg #}
+        </div> {# .column #}
+        <div class="column">
+          <div class="pad-bottom-base white-bg">
+            <div class="image featured-project2" data-lazybg="true"></div>
+            <div class="pad-line pad-top-none-at-large pad-top-line-at-extra-large">
+              <h5>
+                <strong class="body-color">
+                {% blocktrans %}
+                  CARE Pathways <br>
+                  India, Tanzania
+                {% endblocktrans %}
+                </strong>
+              </h5>
+              <p class="body-color">
+                {% blocktrans %}
+                  CARE’s female self-help
+                  agricultural groups improve
+                  productivity and increase yields…
+                {% endblocktrans %}
+              </p>
+              <p class="pad-top-line-at-extra-large">
+                <a href="#modal-feature-card-2"
+                   class="arrow link-gray read-more">
+                  {% blocktrans %}
+                    Read More
+                  {% endblocktrans %}
+                </a>
+              </p>
+            </div> {# .pad-line #}
+          </div> {# .white-bg #}
+        </div> {# .column #}
+        <div class="column">
+          <div class="pad-bottom-base white-bg">
+            <div class="image featured-project3" data-lazybg="true"></div>
+            <div class="pad-line pad-top-none-at-large pad-top-line-at-extra-large">
+              <h5>
+                <strong class="body-color">
+                {% blocktrans %}
+                  Technoserve: AgriPlus <br>
+                  South Africa
+                {% endblocktrans %}
+                </strong>
+              </h5>
+              <p class="body-color">
+                {% blocktrans %}
+                  This FLW support system offers
+                  farmer tracking and multimediabased
+                  counseling materials…
+                {% endblocktrans %}
+              </p>
+              <p>
+                <a href="#modal-feature-card-3"
+                   class="arrow link-gray read-more">
+                  {% blocktrans %}
+                    Read More
+                  {% endblocktrans %}
+                </a>
+              </p>
+            </div> {# .pad-line #}
+          </div> {# .white-bg #}
+        </div> {# .column #}
+      </div> {# .grid #}
+    </div> {# .content #}
+  </div> {# .accent-gray-bg #}
+</section>
+
+{% block modals %}
+  <div class="modal"
+       data-dismissible="true"
+       data-size="medium"
+       id="modal-feature-card-1">
+    <div class="modal-scroll">
+      <div class="modal-wrapper">
+        <a href="#" class="modal-close-button"></a>
+        <div class="content pad-horz-medium-at-medium pad-horz-line pad-vert-none programs-images">
+          <h4>
+            <strong>
+            {% blocktrans %}
+              Catholic Relief Services <br>
+              India
+            {% endblocktrans %}
+            </strong>
+          </h4>
+          <div class="grid-flex-at-large">
+            <div class="column">
+              <p>
+                {% blocktrans %}
+                  The Rice-based Rainfed Agricultural System tracks the varying efficacy of rice crops.
+                {% endblocktrans %}
+              </p>
+              <p>
+                {% blocktrans %}
+                  Catholic Relief Services is using CommCare to support an agriculture project in India
+                  through the Gates Foundation’s initiative, "Improved Rice-based Rainfed Agricultural Systems."
+                  Extension agents and supervisors track the progress of farms growing these
+                  various varieties of rice. Each rice variety's effectiveness is tracked and evaluated,
+                  leading to better livelihood outcomes in this agriculturally dependent region.
+                {% endblocktrans %}
+              </p>
+            </div> {# .column #}
+            <div class="column">
+              <div class="image featured-project1 modal-popup" data-lazybg="true"></div>
+            </div> {# .column #}
+          </div> {# .grid #}
+        </div> {# .content #}
+      </div> {# .modal-wrapper #}
+    </div> {# .modal-scroll #}
+  </div> {# .modal #}
+
+  <div class="modal"
+       data-dismissible="true"
+       data-size="medium"
+       id="modal-feature-card-2">
+    <div class="modal-scroll">
+      <div class="modal-wrapper">
+        <a href="#" class="modal-close-button"></a>
+        <div class="content pad-horz-medium-at-medium pad-horz-line pad-vert-none turquoise-theme programs-images">
+          <h4>
+            <strong>
+            {% blocktrans %}
+              CARE Pathways <br>
+              India, Tanzania
+            {% endblocktrans %}
+            </strong>
+          </h4>
+          <div class="grid-flex-at-large">
+            <div class="column">
+              <p>
+                {% blocktrans %}
+                  CARE’s female self-help agricultural groups improve productivity and increase yields.
+                {% endblocktrans %}
+              </p>
+              <p>
+                {% blocktrans %}
+                  Since 2013, Dimagi has been working on the CARE Pathways project, which is focused
+                  on helping female self-help agricultural groups improve their productivity and
+                  increase incomes. Dimagi has set up a custom, tablet-based scheduling and activity
+                  tracking system for CARE's extension workers, providing a "Knowledge Base" for
+                  on-site refresher training, as well as a complex data collection system to track
+                  group and individual performance on yield, income, and empowerment indicators. All
+                  content is locally contextualized a summarized in easily parsed custom reporting.
+                {% endblocktrans %}
+              </p>
+            </div> {# .column #}
+            <div class="column">
+              <div class="image featured-project2 modal-popup" data-lazybg="true"></div>
+            </div> {# .column #}
+          </div> {# .grid #}
+        </div> {# .content #}
+      </div> {# .modal-wrapper #}
+    </div> {# .modal-scroll #}
+  </div>{# .modal #}
+
+  <div class="modal"
+       data-dismissible="true"
+       data-size="medium"
+       id="modal-feature-card-3">
+    <div class="modal-scroll">
+      <div class="modal-wrapper">
+        <a href="#" class="modal-close-button"></a>
+        <div class="content pad-horz-medium-at-medium pad-horz-line pad-vert-none turquoise-theme programs-images">
+          <h4>
+            <strong>
+            {% blocktrans %}
+              Technoserve: AgriPlus <br>
+              South Africa
+            {% endblocktrans %}
+            </strong>
+          </h4>
+          <div class="grid-flex-at-large">
+            <div class="column">
+              <p>
+                {% blocktrans %}
+                  This FLW support system offers farmer tracking and multimedia-based counseling materials.
+                {% endblocktrans %}
+              </p>
+              <p>
+                {% blocktrans %}
+                  Technoserve supports agriculture extension workers and supervisors to track crop
+                  status, financials, and payroll information. The CommCare application records farmer
+                  information for easy access by extension workers and contains multimedia
+                  counseling materials such as the safe use of pesticides and seedling growing techniques.
+                {% endblocktrans %}
+              </p>
+            </div> {# .column #}
+            <div class="column">
+              <div class="image featured-project3 modal-popup" data-lazybg="true"></div>
+            </div> {# .column #}
+          </div> {# .grid #}
+        </div> {# .content #}
+      </div> {# .modal-wrapper #}
+    </div> {# .modal-scroll #}
+  </div> {# .modal #}
+{% endblock %}

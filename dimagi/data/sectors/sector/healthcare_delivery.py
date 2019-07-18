@@ -1,8 +1,7 @@
 from __future__ import absolute_import
+
 from django.utils.translation import ugettext_lazy
-from dimagi.pages.models.sectors import Sector, Project
-from dimagi.data.sectors import  countries
-from dimagi.data.case_studies import mhealth
+from dimagi.pages.models.sectors import Sector
 
 
 SECTOR = Sector(
@@ -14,7 +13,7 @@ SECTOR = Sector(
     ),
     template="data/sectors/content/child_health.html",
     icon="svg/sectors/healthcare/healthcare_delivery.html",
-    theme="blue-theme",
+    theme="blue",
     slug="child-health",
 )
 
@@ -30,7 +29,8 @@ SECTOR.add_sub_sectors([
         template="data/sectors/content/child_health.html",
         icon="svg/sectors/healthcare/maternal_and_childhealth.html",
         theme="blue-theme",
-        slug="child-health",
+        slug='sector_maternal_and_child_health',
+        is_v2=True,
         slides=[
             "data/sectors/content/child_health/programs.html",
             "data/sectors/content/child_health/clinics.html",
@@ -48,7 +48,8 @@ SECTOR.add_sub_sectors([
         template="data/sectors/content/child_health.html",
         icon="svg/sectors/healthcare/nutrition.html",
         theme="blue-theme",
-        slug="nutrition",
+        slug="sector_nutrition_programs",
+        is_v2=True,
     ),
     Sector(
         name=ugettext_lazy(
@@ -60,7 +61,8 @@ SECTOR.add_sub_sectors([
         template="data/sectors/content/child_health.html",
         icon="svg/sectors/healthcare/disease_treatment.html",
         theme="blue-theme",
-        slug="child-health",
+        slug="sector_disease_treatment",
+        is_v2=True,
     ),
     Sector(
         name=ugettext_lazy(
@@ -72,6 +74,7 @@ SECTOR.add_sub_sectors([
         template="data/sectors/content/child_health.html",
         icon="svg/sectors/healthcare/reproductive_health.html",
         theme="blue-theme",
-        slug="reproductive-health",
+        slug="sector_reproductive_health",
+        is_v2=True,
     ),
 ])

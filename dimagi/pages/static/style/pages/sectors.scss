@@ -15,8 +15,7 @@
   }
 }
 
-$_slugs: (
-  agricultural-cooperatives,
+$_slugs: (agricultural-cooperatives,
   agricultural-finance,
   agricultural-logistics,
   agriculture-extension-programs,
@@ -73,12 +72,12 @@ a.study {
 
 .blog_build {
   $_base-height: 290px;
-  $_height-by-size: (
-  	  small: 390px,
+  $_height-by-size: (small: 390px,
       medium: 390px,
       large: 390px,
       extra-large: 392px,
     );
+
   @include make-bg(blog_image, '../../pages/blog/mobiledata_blog_page/blog_build/hero', $_base-height, $_height-by-size);
 
   @media (min-width: $width-desktop) {
@@ -106,4 +105,68 @@ a.study {
 
 .sector-home-inactive {
   opacity: 0.4;
+
+  @media (max-width: $width-mobile) {
+    opacity: 0.4;
+  }
+}
+
+.sub-sector-selector {
+  z-index: 999 !important;
+}
+
+.selected {
+  border: 2px solid white;
+  background-color: $color-accent-gray;
+  border-radius: 5px;
+  margin: 0 auto;
+
+  .words {
+    display: inline-block;
+    padding-right: 5px;
+    font-size: 15px;
+  }
+
+  .caret {
+    display: inline-block;
+  }
+}
+
+.selector,
+.selected {
+  cursor: pointer;
+  position: relative;
+}
+
+.selected-container {
+  width: 300px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.selector {
+  border-radius: 5px;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+  left: 0;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  transform: translate3d(0, 20px, 0);
+  visibility: hidden;
+  box-sizing: border-box;
+  width: 100%;
+  z-index: 2;
+
+}
+
+.show-time .selector {
+  transition: visibility 0s .35s, opacity .35s 0s ease, transform .35s 0s ease;
+}
+
+.selector.show {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  transition: visibility 0s, opacity .25s 0s ease, transform .25s 0s ease;
+  visibility: visible;
 }

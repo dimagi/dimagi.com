@@ -37,6 +37,7 @@ define([
     SLIDE: ".carousel-slide",
     SLIDER: ".carousel-slider",
     CONTAINER: ".carousel-container",
+    ARROW: ".carousel-arrow",
     DOT: "[" + self.ATTR.DOT + "]",
   };
 
@@ -64,8 +65,11 @@ define([
       model.getHtml();
       model.getData();
       model.bindEvents();
-      if (model.hasDots) {
+      if (model.hasDots && !model.hideDots) {
         model.buildDots();
+      }
+      if (model.hasArrows) {
+        model.buildArrows();
       }
       model.onResize();
       model.updateUI();
@@ -86,6 +90,8 @@ define([
       model.count = model.$slides.length;
       model.position = 0;
       model.hasDots = model.count > 1;
+      model.hideDots = model.$carousel.hasClass('hide-dots');
+      model.hasArrows = model.$carousel.hasClass('carousel-arrows');
     };
 
     model.bindEvents = function () {
@@ -100,6 +106,12 @@ define([
       });
       if (model.hasDots) {
         model.$carousel.on(self.EVENTS.CLICK, self.SELECTORS.DOT, function (e) {
+          model.onDotClick(e);
+        });
+      }
+      if (model.hasArrows) {
+        model.$carousel.on(self.EVENTS.CLICK, self.SELECTORS.ARROW, function (e) {
+          // re-using functionality from dots for arrows
           model.onDotClick(e);
         });
       }
@@ -139,8 +151,10 @@ define([
           ind = target.attr(self.ATTR.DOT);
       e.preventDefault();
       if (model.index !== ind) {
-        model.$dots.find(self.SELECTORS.DOT).attr(self.ATTR.ACTIVE, false);
-        target.attr(self.ATTR.ACTIVE, true);
+        if (!model.hideDots) {
+          model.$dots.find(self.SELECTORS.DOT).attr(self.ATTR.ACTIVE, false);
+          target.attr(self.ATTR.ACTIVE, true);
+        }
         model.goToSlide(ind);
       }
     };
@@ -339,10 +353,32 @@ define([
       }
     };
 
+    model.buildArrows = function () {
+      console.log('build arrows');
+      console.log(model.$slides);
+
+      $(model.$slides).each(function (ind, slide) {
+        var $prev, $next;
+        if (ind > 0) {
+          console.log('add prev');
+          $prev = $('<div class="carousel-arrow previous"><div class="arrow-nav"></div></div>');
+          $prev.attr('data-dot', ind);
+          $(slide).append($prev);
+        }
+        if (ind < model.count - 1) {
+          console.log('add next');
+          $next = $('<div class="carousel-arrow next"><div class="arrow-nav"></div></div>');
+          $next.attr('data-dot', ind + 2);
+          $(slide).append($next);
+        }
+        console.log(ind);
+      });
+    };
+
     model.updateUI = function () {
       requestAnimationFrame(function() {
         model.updateSlides();
-        if (model.hasDots) {
+        if (model.hasDots && !model.hideDots) {
           model.updateDots();
         }
       });

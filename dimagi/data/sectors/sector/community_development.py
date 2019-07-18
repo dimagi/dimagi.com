@@ -12,7 +12,7 @@ SECTOR = Sector(
         "From education to research and small business, mobile data collection can help."
     ),
     icon="svg/sectors/community_dev/community_development.html",
-    theme="purple-theme",
+    theme="purple",
     slug="community-development",
 )
 
@@ -23,7 +23,7 @@ SECTOR.add_sub_sectors([
             "Education"
         ),
         summary=ugettext_lazy(
-        "Support and improve farmer training programs with mobile data collection."
+            "Support and improve farmer training programs with mobile data collection."
         ),
         icon="svg/sectors/community_dev/education.html",
         theme="purple-theme",
@@ -34,7 +34,8 @@ SECTOR.add_sub_sectors([
             "Small Business"
         ),
         summary=ugettext_lazy(
-        "mHealth apps can help with women and child healthcare, nutrition programs, and disease treatment."
+            "Inform and empower supervisors and improve decision-making for "
+            "small businesses with mobile tools."
         ),
         icon="svg/sectors/community_dev/small_business.html",
         theme="purple-theme",
@@ -45,7 +46,8 @@ SECTOR.add_sub_sectors([
             "Research"
         ),
         summary=ugettext_lazy(
-        "mHealth apps can help with women and child healthcare, nutrition programs, and disease treatment."
+            "Mobile data collection helps field-based studies increase "
+            "efficiency, visibility, and scalability."
         ),
         icon="svg/sectors/community_dev/research.html",
         theme="purple-theme",

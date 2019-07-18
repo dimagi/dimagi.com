@@ -1,56 +1,54 @@
+{% extends "sections/commcare/product/overview/_base.html" %}
 {% load i18n %}
 {% load dimagidotcom %}
 
-<div class="grid-2-at-medium grid-row-space-small blue-theme">
-  <div class="copy content-cell-padding-right">
-    <h3>
-      {% blocktrans %}
-        Build your offline data collection app in days, not weeks.
-      {% endblocktrans %}
-    </h3>
-    <p>
-      {% blocktrans %}
-        Our drag-and-drop app builder makes it easy for you to get started.
-      {% endblocktrans %}
-    </p>
-    <ul class="check-list grid-2 gap-bottom-small">
-      <li>
-        <strong>
+{% block build_selected %}selected{% endblock %}
+
+{% block content %}
+  <h3>
+    {% blocktrans %}
+      Build your offline data collection app in days, not weeks.
+    {% endblocktrans %}
+  </h3>
+  <div class="grid-2-at-large blue-theme grid-valign-middle">
+    <div class="column pad-right-medium-at-base align-left">
+
+      <p>
+        {% blocktrans %}
+          Our drag-and-drop app builder makes it easy for you to get started.
+        {% endblocktrans %}
+      </p>
+      <ul class="check-list grid-2-at-extra-large">
+        <li>
           {% blocktrans %}
             Test app changes live with our app preview feature
           {% endblocktrans %}
-        </strong>
-      </li>
-      <li>
-        <strong>
+        </li>
+        <li>
           {% blocktrans %}
             No coding necessary, just drag-and-drop
           {% endblocktrans %}
-        </strong>
-      </li>
-      <li>
-        <strong>
+        </li>
+        <li>
           {% blocktrans %}
             Start small with simple surveys and add complexity as you go
           {% endblocktrans %}
-        </strong>
-      </li>
-      <li>
-        <strong>
+        </li>
+        <li>
           {% blocktrans %}
             Easily deploy your data collection app to Android devices in the field
           {% endblocktrans %}
-        </strong>
-      </li>
-    </ul>
-  </div>{# .copy #}
-  <div class="copy">
-    <div class="column flex-valign-middle-at-medium">
-      <div class="device-container browser-ui">
-        <div class="screen">
-          {% include "partials/wistia_embed_autoplay.html" with wistia_id='3p3get3okj' %}
-        </div>{# .screen #}
-      </div>{# .device-container.browser-ui #}
+        </li>
+      </ul>
     </div>{# .column #}
-  </div>{# .copy #}
-</div>{# .grid-2-at-medium #}
+    <div class="column">
+      <div class="flex-valign-middle-at-medium">
+        <div class="device-container browser-ui">
+          <div class="screen">
+            {% include "partials/wistia_embed_autoplay.html" with wistia_id='3p3get3okj' %}
+          </div>{# .screen #}
+        </div>{# .device-container.browser-ui #}
+      </div>{# .flex-valign-middle-at-medium #}
+    </div>{# .column #}
+  </div>{# .grid-2-at-medium #}
+{% endblock %}

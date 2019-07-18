@@ -1,7 +1,7 @@
 from __future__ import absolute_import
+
 from django.utils.translation import ugettext_lazy
-from dimagi.pages.models.sectors import Sector, Project, Resource
-from dimagi.data.sectors import  countries
+from dimagi.pages.models.sectors import Sector
 
 
 SECTOR = Sector(
@@ -13,7 +13,7 @@ SECTOR = Sector(
         "consistency in curriculum."
     ),
     icon="svg/sectors/agriculture/agriculture_programs.html",
-    theme="green-theme",
+    theme="green",
     slug="agricultural-programs",
 )
 
@@ -24,18 +24,19 @@ SECTOR.add_sub_sectors([
             "Agricultural Extension"
         ),
         summary=ugettext_lazy(
-        "mHealth apps can help with women and child healthcare, nutrition programs, and disease treatment."
+            "Support and improve farmer training programs with mobile data collection."
         ),
         icon="svg/sectors/agriculture/agricultural_extension_programs.html",
         theme="green-theme",
-        slug="agricultural-extension-programs",
+        slug="sector_agriculture_extension_programs",
+        is_v2=True,
     ),
     Sector(
         name=ugettext_lazy(
             "Agricultural Finance"
         ),
         summary=ugettext_lazy(
-        "mHealth apps can help with women and child healthcare, nutrition programs, and disease treatment."
+            "Mitigate the risks associated with microfinance with mobile tools."
         ),
         icon="svg/sectors/agriculture/agricultural_finance.html",
         theme="green-theme",
@@ -46,7 +47,8 @@ SECTOR.add_sub_sectors([
             "Agricultural Logistics"
         ),
         summary=ugettext_lazy(
-        "mHealth apps can help with women and child healthcare, nutrition programs, and disease treatment."
+            "Manage input distribution, cold chain of perishable goods, and "
+            "warehouse receipt systems at lower cost with mobile tools."
         ),
         icon="svg/sectors/agriculture/agricultural_logistics.html",
         theme="green-theme",
@@ -57,7 +59,8 @@ SECTOR.add_sub_sectors([
             "Agricultural Cooperatives"
         ),
         summary=ugettext_lazy(
-        "mHealth apps can help with women and child healthcare, nutrition programs, and disease treatment."
+            "Mobile data collection's agricultural management apps provide "
+            "real-time insight into key data."
         ),
         icon="svg/sectors/agriculture/agricultural_cooperatives.html",
         theme="green-theme",

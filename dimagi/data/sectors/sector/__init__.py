@@ -3,11 +3,11 @@ from dimagi.data.sectors.sector import (
     agricultural_programs,
     community_development,
     urgent_response,
-    child_health,
+)
+
+from dimagi.data.sectors.sector.sub_sectors import (
     education,
-    nutrition,
     humanitarian_response,
-    agriculture_extension_programs,
     gender_based_violence,
     agricultural_finance,
     ebola_response,
@@ -32,11 +32,8 @@ all_sectors = (
 )
 
 sub_sectors = (
-    child_health,
     education,
-    nutrition,
     humanitarian_response,
-    agriculture_extension_programs,
     gender_based_violence,
     agricultural_finance,
     ebola_response,

@@ -1,25 +1,43 @@
 {% load i18n %}
 {% load dimagidotcom %}
 
-<section class="overview border-top"
+<section class="accent-gray-bg border-top overview"
          id="overview">
-  <div class="content pad-top-medium gap-bottom-small">
-    <div class="intro content-width-small">
+  <div class="content pad-vert-medium align-center">
+    <div class="intro">
       <h2 class="blue">
         {% blocktrans %}
-          How CommCare Works
+          How ComaCare Works
         {% endblocktrans %}
       </h2>
-      <p>
-        {% blocktrans %}
-          Collect the data you need to drive impact, <br class="hide-until-small"/>
-          with a data collection app your workforce will love.
-        {% endblocktrans %}
+      <p class="cta">
+        {% trans 'Watch a demo' as video_text %}
+        {% click_hero 'video' as video_click_class %}
+        {% include "partials/wistia_popover.html" with wistia_id='jzm3ggrinr' show_play=True text=video_text click_class=video_click_class %}
       </p>
-    </div>{# .intro #}
-    {% include "sections/commcare/product/overview/app_builder.html" %}
-    {% include "sections/commcare/product/overview/collect_data.html" %}
-    {% include "sections/commcare/product/overview/analyze_data.html" %}
-  </div> {# .content #}
-{#  <div class="image off-grid"></div>#}
+    </div>
+
+    <div class="carousel carousel-fade-inactive carousel-numbered carousel-arrows hide-dots carousel-features">
+      <div class="carousel-container">
+        <div class="spinner spinner-large"></div>
+        <div class="carousel-slider">
+          {% include "sections/commcare/product/overview/app_builder.html" %}
+          {% include "sections/commcare/product/overview/collect_data.html" %}
+          {% include "sections/commcare/product/overview/analyze_data.html" %}
+        </div>{# .carousel-slider #}
+      </div>{# .carousel-container #}
+    </div>{# .carousel #}
+
+    <div class="cta pad-vert-small">
+      <p>
+        <a class="arrow {% click_body 'features-view' %}" 
+           href="{% url 'commcare_pricing' %}#details">
+          {% blocktrans %}
+            View All Features
+          {% endblocktrans %}
+        </a>
+      </p>
+    </div>{# .cta #}
+
+  </div>
 </section>

@@ -1,0 +1,109 @@
+{% load dimagidotcom %}
+{% load i18n %}
+
+<section class="pad-bottom-medium"
+         id="news">
+  <div class="content pad-top-medium align-center">
+    <h2>
+      {% blocktrans %}
+        The Latest on Mobile Data Collection in <br class="hide-until-medium"> Reproductive Health Programs
+      {% endblocktrans %}
+    </h2>
+    <p>
+      {% blocktrans %}
+        Updates and advice from our world-class partners and Global Services team:
+      {% endblocktrans %}
+    </p>
+  </div>{# .content #}
+  <div class="content pad-top-line news-images">
+    <div class="grid grid-3-at-large grid-1-at-medium grid-row-equal-heights ">
+      <div class="column">
+        <div class="pad-bottom-base white-bg">
+          <div class="image blog1" data-lazybg="true"></div>
+          <div class="pad-line">
+            <h5>
+              <strong>
+                {% blocktrans %}
+                  How FIGO Used Mobile Data Collection to Improve Maternal Healthcare
+                {% endblocktrans %}
+              </strong>
+            </h5>
+            <p>
+              {% blocktrans %}
+                The International Federation of Gynecology and Obstetrics are improving healthcare
+                for over 214 million women looking to avoid pregnancy.
+              {% endblocktrans %}
+            </p>
+            <p>
+              <a href="{% url 'blog_post' 'mobile-data-collection-figo' %}"
+                 class="arrow link-gray read-more"
+                 target="_blank">
+                {% blocktrans %}
+                  Read More
+                {% endblocktrans %}
+              </a>
+            </p>
+          </div> {# .pad-line #}
+        </div> {# .white-bg #}
+      </div> {# .column #}
+      <div class="column">
+        <div class="pad-bottom-base white-bg">
+          <div class="image blog2" data-lazybg="true"></div>
+          <div class="pad-line">
+            <h5>
+              <strong>
+                {% blocktrans %}
+                  Technology in the Hands of Midwives: Seeing the Impact of Our Work
+                {% endblocktrans %}
+              </strong>
+            </h5>
+            <p class="pad-top-line-at-extra-large">
+              {% blocktrans %}
+                The Asociacón Corazón del Agua is using CommCare to implement the first
+                university-level midwifery course in Guatemala.
+              {% endblocktrans %}
+            </p>
+            <p class="pad-top-line-at-large">
+              <a href="{% url 'blog_post' 'technology-in-the-hands-of-midwives-seeing-the-impact-of-our-work' %}"
+                 class="arrow link-gray read-more"
+                 target="_blank">
+                {% blocktrans %}
+                  Read More
+                {% endblocktrans %}
+              </a>
+            </p>
+          </div> {# .pad-line #}
+        </div> {# .white-bg #}
+      </div> {# .column #}
+      <div class="column">
+        <div class="pad-bottom-base white-bg">
+          <div class="image blog3" data-lazybg="true"></div>
+          <div class="pad-line">
+            <h5>
+              <strong>
+                {% blocktrans %}
+                  Dimagi is a Member of the Reproductive Health Supplies Coalition!
+                {% endblocktrans %}
+              </strong>
+            </h5>
+            <p>
+              {% blocktrans %}
+                The Coalition is an partnership of 333 members to increase access to affordable,
+                quality reproductive health supplies in low- and middle-income countries.
+              {% endblocktrans %}
+            </p>
+            <p>
+              <a href="{% url 'blog_post' 'dimagi-is-a-member-of-the-reproductive-health-services-coalition' %}"
+                 class="arrow link-gray read-more"
+                 target="_blank">
+                {% blocktrans %}
+                  Read More
+                {% endblocktrans %}
+              </a>
+            </p>
+          </div> {# .pad-line #}
+        </div> {# .white-bg #}
+      </div> {# .column #}
+    </div>{# .grid #}
+  </div>{# .content #}
+</section>

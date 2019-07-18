@@ -40,7 +40,6 @@ class Highlight(object):
         self.name = name
         self.description = description
         self.highlight_image = highlight_image
-        print(highlight_image, name)
 
 
 class OtherToolkit(object):

@@ -6,7 +6,6 @@ verify_ssl = true
 dj-database-url = "*"
 django = "*"
 gunicorn = "*"
-"psycopg2" = "*"
 django-compressor = "*"
 django-sass-processor = "*"
 pyyaml = "*"
@@ -31,6 +30,8 @@ ua-parser = "*"
 user-agents = "*"
 django-user-agents = "*"
 simplejson = "*"
+virtualenv = "*"
+psycopg2-binary = "*"
 
 [requires]
 python_version = "3.6"

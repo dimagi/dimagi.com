@@ -1,7 +1,7 @@
 {% load dimagidotcom %}
 {% load i18n %}
 
-<section class="case-management accent-gray-bg border-top"
+<section class="case-management border-top"
          id="case-management">
   <div class="content content-width-medium pad-bottom-medium pad-top-medium">
 
@@ -15,13 +15,8 @@
       <p>
         {% url 'case_management' as cm_url %}
         {% blocktrans %}
-          Build a powerful data collection app with CommCare's suite of 
-          <a href="{{ cm_url }}">case management</a> features
-          <br class="hide-until-medium" />
-          that allow you to collect actionable data over time, and faster
-          than ever before.
-          <br class="hide-until-medium" />
-          Learn how case management can extend your team’s impact today.
+          CommCare's suite of case management features help you collect actionable data over time,
+          and faster than ever before. Learn how case management can extend your team’s impact today.
         {% endblocktrans %}
       </p>
     </div>{# .intro #}
