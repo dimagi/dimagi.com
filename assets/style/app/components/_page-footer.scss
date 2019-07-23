@@ -117,7 +117,7 @@
       pointer-events: none;
     }
 
-    .page-footer [data-transition-target]:after {
+    .page-footer [data-transition-target]::after {
       display: none;
     }
   }
