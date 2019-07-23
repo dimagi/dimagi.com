@@ -65,10 +65,6 @@
       margin-bottom: $space-base;
     }
 
-    .sub-menu {
-      font-size: 12px;
-    }
-
     .primary {
       border-bottom: 1px solid $color-footer-border;
       margin-bottom: $space-small;
@@ -119,6 +115,13 @@
 
     .page-footer [data-transition-target]::after {
       display: none;
+    }
+  }
+
+  @media (min-width: $width-desktop) {
+    .page-footer .sub-menu {
+      font-size: 12px;
+      padding-left: $space-base;
     }
   }
 
