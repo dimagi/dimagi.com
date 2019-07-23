@@ -77,11 +77,11 @@
 
     .links-social li {
       display: inline-block;
-      vertical-align: webkit-baseline-middle;
-      margin-right: $space-small/2;
+      margin-right: $space-small / 2;
+      vertical-align: middle;
 
       svg {
-        margin-top: $space-base/2;
+        margin-top: $space-base / 2;
       }
     }
 
@@ -96,7 +96,7 @@
     }
 
     p {
-      line-height: $space-medium/3;
+      line-height: $space-medium / 3;
     }
 
     .email-subscribtion {
