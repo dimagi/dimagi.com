@@ -1,0 +1,30 @@
+{% extends 'partials/footer/nav_section/_base_sub_menu.html' %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block links %}
+  <li>
+    <a href="{% url 'quick_start' %}"
+      class="{% click_footer 'quick-starts' %}">
+      {% blocktrans %}
+        Quick Start Guides
+      {% endblocktrans %}
+    </a>
+  </li>
+  <li>
+    <a href="{% url 'mobile_data_collection' %}"
+      class="{% click_footer 'mobile-data-collection' %}">
+      {% blocktrans %}
+        Mobile Data Collection
+      {% endblocktrans %}
+    </a>
+  </li>
+  <li>
+    <a href="{% url 'data_collection' %}"
+      class="{% click_footer 'data-collection' %}">
+      {% blocktrans %}
+        Data Collection
+      {% endblocktrans %}
+    </a>
+  </li>
+{% endblock %}

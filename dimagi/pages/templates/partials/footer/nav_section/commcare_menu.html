@@ -1,0 +1,38 @@
+{% extends 'partials/footer/nav_section/_base_sub_menu.html' %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block links %}
+  <li>
+    <a href="{% url 'commcare' %}"
+       class="{% click_footer 'commcare' %}">
+      {% blocktrans %}
+        About CommCare
+      {% endblocktrans %}
+    </a>
+  </li>
+  <li>
+    <a href="{% url 'commcare_pricing' %}"
+       class="{% click_footer 'commcare-pricing' %}">
+      {% blocktrans %}
+        Pricing
+      {% endblocktrans %}
+    </a>
+  </li>
+  <li>
+    <a href="{% url 'case_management' %}"
+       class="{% click_footer 'case-management' %}">
+      {% blocktrans %}
+        Case Management
+      {% endblocktrans %}
+    </a>
+  </li>
+  <li>
+    <a href="{% url 'toolkit' 'commcare-evidence-base' %}"
+       class="{% click_footer 'commcare-evidence-base' %}">
+      {% blocktrans %}
+        Evidence Base
+      {% endblocktrans %}
+    </a>
+  </li>
+{% endblock %}

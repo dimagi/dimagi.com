@@ -1,0 +1,35 @@
+{% extends 'partials/footer/nav_section/_base.html' %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block title %}
+  {% blocktrans %}
+    Products & Services
+  {% endblocktrans %}
+{% endblock %}
+
+{% block links %}
+  <li>
+    <a class="arrow ab-footer-head-commcare"
+       data-transition-state="on"
+       data-transition-target="footer-commcare"
+       href="#">
+      {% blocktrans %}
+        CommCare
+      {% endblocktrans %}
+    </a>
+    {% include 'partials/footer/nav_section/commcare_menu.html' with slug="commcare" %}
+  </li>
+  
+  <li>
+    <a class="arrow ab-footer-head-global_service"
+       data-transition-state="on"
+       data-transition-target="footer-global_service"
+       href="#">
+      {% blocktrans %}
+        Global Services
+      {% endblocktrans %}
+    </a>
+    {% include 'partials/footer/nav_section/global_service_menu.html' with slug="global_service" %}
+  </li>  
+{% endblock %}
