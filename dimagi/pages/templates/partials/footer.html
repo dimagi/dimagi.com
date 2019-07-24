@@ -4,68 +4,104 @@
 <footer class="page-footer"
         id="footer"
         role="footer">
-  <div class="content pad-vert-medium">
-
+  <div class="content pad-vert-small">
     <nav class="primary align-center align-left-at-small">
       {% include 'partials/footer/navigation.html' %}
     </nav>
-
-
-
-    <div class="grid-2-at-small grid-reverse">
-      <div class="column align-center align-right-at-small">
-        <ul class="reset links-social">
-          <li>
-            <a class="font-weight-bold {% click_footer 'contact-us' %}"
-               href="#contact-form-modal">
+    <div class="grid grid-3-at-medium white">
+      <div class="column align-center align-left-at-medium">
+        <ul class="reset destination-links">
+          <li class="pad-left-small pad-left-none-at-medium">
+            <a href="#demo-form-modal"
+               data-modal="demo-form-modal">
+              <span class="footer-icon-left-bottom pad-right-base">
+                {% include 'svg/footer/date.html' %}
+              </span>
               {% blocktrans %}
-                Contact Us
+                Schedule a Demo
               {% endblocktrans %}
             </a>
           </li>
           <li>
-            <a href="//facebook.com/dimagi.inc"
-               class="{% click_footer 'facebook' %}"
-               target="_blank">
-              {% include 'svg/footer/facebook.html' %}
+            <a class="{% click_hero 'trial' %}"
+               href="{{ URL_TRIAL }}">
+              <span class="footer-icon-left-bottom pad-right-base">
+                {% include 'svg/footer/web.html' %}
+              </span>
+              {% blocktrans %}
+                Start a Trial
+              {% endblocktrans %}
             </a>
           </li>
           <li>
-            <a href="//twitter.com/dimagi"
-               class="{% click_footer 'twitter' %}"
-               target="_blank">
-              {% include 'svg/footer/twitter.html' %}
-            </a>
-          </li>
-          <li>
-            <a href="//linkedin.com/company/dimagi"
-               class="{% click_footer 'linkedin' %}"
-               target="_blank">
-              {% include 'svg/footer/linkedin.html' %}
-            </a>
-          </li>
-          <li>
-            <a href="//youtube.com/channel/UCt8JcRhWywkVJRR_YWv4OhA"
-               class="{% click_footer 'youtube' %}"
-               target="_blank">
-              {% include 'svg/footer/youtube.html' %}
+            <a href="{% url 'contact' %}"
+               class="{% click_footer 'contact' %}">
+              <span class="footer-icon-left-bottom pad-right-base">
+                {% include 'svg/footer/contact.html' %}
+              </span>
+              {% blocktrans %}
+                Contact us
+              {% endblocktrans %}
             </a>
           </li>
         </ul>
-        <p class="b-corp-logo align-center align-right-at-small">
-          <a href="https://bcorporation.net/"
-             target="_blank">
-            {% include "svg/b_corp_logo.html" %}
-          </a>
+      </div>{# .column #}
+      <div class="column align-center align-left-at-medium">
+        <p>
+          Over 32,000 leaders from WHO, Save the children, the World  Bank. USAID,
+          the Bill and Melinida Gates Foundation, and many Other impact-driven organzations subscribe
+          to our newsletter for case studies, best practices, and other updates. Join then today!
+        </p>
+        <p>
+          <div id="email-subscribtion-form-content" class="email-subscribtion"></div>
         </p>
       </div>{# .column #}
-
-      <div class="column">
-        <p class="copyright align-center align-left-at-small">
-          &copy; {% now "Y" %} Dimagi, Inc.
-        </p>
+      <div class="column align-center align-right-at-extra-large pad-right-none">
+        <div class="grid-2-at-extra-large">
+          <div class="column">
+            <a href="https://bcorporation.net/"
+               target="_blank"
+               class="b-corp-logo">
+              {% include "svg/b_corp_logo.html" %}
+            </a>
+          </div> {# .column #}
+          <div class="column">
+            <ul class="reset links-social">
+              <li>
+                <a href="//facebook.com/dimagi.inc"
+                   class="{% click_footer 'facebook' %}"
+                   target="_blank">
+                  {% include 'svg/footer/facebook.html' %}
+                </a>
+              </li>
+              <li>
+                <a href="//twitter.com/dimagi"
+                   class="{% click_footer 'twitter' %}"
+                   target="_blank">
+                  {% include 'svg/footer/twitter.html' %}
+                </a>
+              </li>
+              <li>
+                <a href="//linkedin.com/company/dimagi"
+                   class="{% click_footer 'linkedin' %}"
+                   target="_blank">
+                  {% include 'svg/footer/linkedin.html' %}
+                </a>
+              </li>
+              <li>
+                <a href="//youtube.com/channel/UCt8JcRhWywkVJRR_YWv4OhA"
+                   class="{% click_footer 'youtube' %}"
+                   target="_blank">
+                  {% include 'svg/footer/youtube.html' %}
+                </a>
+              </li>
+            </ul>
+            <p class="copyright align-center align-left-at-extra-large">
+              &copy; {% now "Y" %} Dimagi, Inc.
+            </p>
+          </div> {# .column #}
+        </div> {# .grid-2 #}
       </div>{# .column #}
-    </div>{# .grid #}
-
+    </div>{# .grid-3 .destination-links #}
   </div>{# .content #}
 </footer>

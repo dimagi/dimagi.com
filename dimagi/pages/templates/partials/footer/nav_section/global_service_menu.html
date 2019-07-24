@@ -1,0 +1,22 @@
+{% extends 'partials/footer/nav_section/_base_sub_menu.html' %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block links %}
+  <li>
+    <a href="{% url 'services' %}#implementation-packages"
+       class="{% click_footer 'services' %} ">
+      {% blocktrans %}
+        Implementation Packages
+      {% endblocktrans %}
+    </a>
+  </li>
+  <li>
+    <a href="{% url 'services' %}#advisory-services"
+       class="{% click_footer 'services' %}">
+      {% blocktrans %}
+        Advisory Services
+      {% endblocktrans %}
+    </a>
+  </li>
+{% endblock %}
