@@ -1,0 +1,35 @@
+{% extends "sections/commcare/pricing/plans/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block kissmetrics_cta %}
+Clicked Read More - Pricing (Enterprise)
+{% endblock %}
+
+{% block name %}{% blocktrans %}
+  Enterprise
+{% endblocktrans %}{% endblock %}
+
+{% block price_monthly %}{% blocktrans %}
+  Custom
+{% endblocktrans %}{% endblock %}
+
+{% block text_monthly %}&nbsp;{% endblock %}
+
+{% block description %}{% blocktrans %}
+  A tailor-made plan for organizations with multiple projects.
+  All paid features included in this plan.
+{% endblocktrans %}{% endblock %}
+
+{% block features %}
+  <li>
+    {% blocktrans %}
+      All Advanced features
+    {% endblocktrans %}
+  </li>
+  <li>
+    {% blocktrans %}
+      Custom pricing is available for large scale projects
+    {% endblocktrans %}
+  </li>
+{% endblock %}

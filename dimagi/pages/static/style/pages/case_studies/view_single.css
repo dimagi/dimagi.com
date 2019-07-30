@@ -1,0 +1,11 @@
+.study-image {
+  background-position: "center";
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #5f6a7d;
+  transition: .5s background ease-in-out;
+  height: 395px;
+  position: relative;
+  width: 305px; }
+  .study-image::after {
+    background-color: #5f6a7d; }

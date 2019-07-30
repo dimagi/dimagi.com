@@ -1,0 +1,735 @@
+#intro .epic-cover {
+  background-image: url("../../../thumbnails/pages/pillar/mdc/intro/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  height: 500px;
+  transition: .5s background ease-in-out;
+  position: relative; }
+
+#intro .epic-cover .bg-loader {
+  background-image: url("../../../pages/pillar/mdc/intro/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%; }
+
+@media (min-width: 480px) {
+  #intro .epic-cover {
+    background-image: url("../../../thumbnails/pages/pillar/mdc/intro/hero.small.jpg");
+    height: 500px; }
+  #intro .epic-cover .bg-loader {
+    background-image: url("../../../pages/pillar/mdc/intro/hero.small.jpg"); } }
+
+@media (min-width: 718px) {
+  #intro .epic-cover {
+    background-image: url("../../../thumbnails/pages/pillar/mdc/intro/hero.medium.jpg");
+    height: 500px; }
+  #intro .epic-cover .bg-loader {
+    background-image: url("../../../pages/pillar/mdc/intro/hero.medium.jpg"); } }
+
+@media (min-width: 1024px) {
+  #intro .epic-cover {
+    background-image: url("../../../thumbnails/pages/pillar/mdc/intro/hero.large.jpg");
+    height: 500px; }
+  #intro .epic-cover .bg-loader {
+    background-image: url("../../../pages/pillar/mdc/intro/hero.large.jpg"); } }
+
+@media (min-width: 1292px) {
+  #intro .epic-cover {
+    background-image: url("../../../thumbnails/pages/pillar/mdc/intro/hero.extra-large.jpg");
+    height: 500px; }
+  #intro .epic-cover .bg-loader {
+    background-image: url("../../../pages/pillar/mdc/intro/hero.extra-large.jpg"); } }
+
+.sub-nav-menu-active .sub-nav .dropdown {
+  height: 400px; }
+
+.sub-nav a:not(.button).social {
+  cursor: pointer; }
+  .sub-nav a:not(.button).social svg * {
+    fill: #5f6a7d;
+    transition: fill 150ms ease-in-out; }
+  .sub-nav a:not(.button).social svg {
+    cursor: pointer;
+    margin-top: -1px;
+    height: 20px;
+    width: 20px; }
+  .sub-nav a:not(.button).social:hover svg * {
+    fill: #004ebc; }
+
+@media (max-width: 717px) {
+  .sub-nav-menu-active .sub-nav .dropdown {
+    height: auto; } }
+
+.dropdown .social-links {
+  padding-top: 30px; }
+  .dropdown .social-links .social {
+    display: inline-block;
+    padding-right: 10px; }
+
+a:not(.button).tile-more {
+  background: transparent;
+  color: #ffffff;
+  padding: 30px;
+  padding-bottom: 40px; }
+  a:not(.button).tile-more h2 {
+    font-weight: 700; }
+  a:not(.button).tile-more p:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0; }
+  a:not(.button).tile-more:hover {
+    color: #ffffff; }
+  a:not(.button).tile-more::before {
+    border-color: transparent !important; }
+  a:not(.button).tile-more::after {
+    border-color: #ffffff !important; }
+
+.tile-chapter {
+  position: relative; }
+  .tile-chapter:after {
+    border-width: 10px !important; }
+  .tile-chapter h2 {
+    color: #ffffff;
+    font-size: 22px;
+    line-height: 30px; }
+  .tile-chapter .chapter-number {
+    color: #ffffff;
+    font-size: 60px;
+    line-height: 60px;
+    position: absolute;
+    bottom: 30px; }
+
+.cms-india-border-left {
+  border-left: 5px solid #004ebc;
+  padding-left: 10px;
+  line-height: 30px !important;
+  margin-left: 8px; }
+
+.mdc-intro {
+  height: auto !important; }
+
+.parallax-ch1-1 {
+  background-image: url("../../../thumbnails/pages/pillar/mdc/chapter1/hero.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 180px;
+  position: relative;
+  transition: .5s background ease-in-out, .5s height ease-in-out;
+  height: auto  !important; }
+  .parallax-ch1-1.loaded,
+  .parallax-ch1-1 .bg-preload {
+    background-image: url("../../../pages/pillar/mdc/chapter1/hero.jpg"); }
+  @media (min-width: 480px) {
+    .parallax-ch1-1 {
+      background-image: url("../../../thumbnails/pages/pillar/mdc/chapter1/hero.small.jpg");
+      height: 180px; }
+      .parallax-ch1-1.loaded,
+      .parallax-ch1-1 .bg-preload {
+        background-image: url("../../../pages/pillar/mdc/chapter1/hero.small.jpg"); } }
+  @media (min-width: 718px) {
+    .parallax-ch1-1 {
+      background-image: url("../../../thumbnails/pages/pillar/mdc/chapter1/hero.medium.jpg");
+      height: 220px; }
+      .parallax-ch1-1.loaded,
+      .parallax-ch1-1 .bg-preload {
+        background-image: url("../../../pages/pillar/mdc/chapter1/hero.medium.jpg"); } }
+  @media (min-width: 1024px) {
+    .parallax-ch1-1 {
+      background-image: url("../../../thumbnails/pages/pillar/mdc/chapter1/hero.large.jpg");
+      height: 280px; }
+      .parallax-ch1-1.loaded,
+      .parallax-ch1-1 .bg-preload {
+        background-image: url("../../../pages/pillar/mdc/chapter1/hero.large.jpg"); } }
+  @media (min-width: 1292px) {
+    .parallax-ch1-1 {
+      background-image: url("../../../thumbnails/pages/pillar/mdc/chapter1/hero.extra-large.jpg");
+      height: 350px; }
+      .parallax-ch1-1.loaded,
+      .parallax-ch1-1 .bg-preload {
+        background-image: url("../../../pages/pillar/mdc/chapter1/hero.extra-large.jpg"); } }
+  @media (max-width: 717px) {
+    .parallax-ch1-1 {
+      background-attachment: initial; } }
+
+.parallax-ch2-1 {
+  background-image: url("../../../thumbnails/pages/pillar/mdc/chapter2/hero.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 180px;
+  position: relative;
+  transition: .5s background ease-in-out, .5s height ease-in-out;
+  height: auto  !important; }
+  .parallax-ch2-1.loaded,
+  .parallax-ch2-1 .bg-preload {
+    background-image: url("../../../pages/pillar/mdc/chapter2/hero.jpg"); }
+  @media (min-width: 480px) {
+    .parallax-ch2-1 {
+      background-image: url("../../../thumbnails/pages/pillar/mdc/chapter2/hero.small.jpg");
+      height: 180px; }
+      .parallax-ch2-1.loaded,
+      .parallax-ch2-1 .bg-preload {
+        background-image: url("../../../pages/pillar/mdc/chapter2/hero.small.jpg"); } }
+  @media (min-width: 718px) {
+    .parallax-ch2-1 {
+      background-image: url("../../../thumbnails/pages/pillar/mdc/chapter2/hero.medium.jpg");
+      height: 220px; }
+      .parallax-ch2-1.loaded,
+      .parallax-ch2-1 .bg-preload {
+        background-image: url("../../../pages/pillar/mdc/chapter2/hero.medium.jpg"); } }
+  @media (min-width: 1024px) {
+    .parallax-ch2-1 {
+      background-image: url("../../../thumbnails/pages/pillar/mdc/chapter2/hero.large.jpg");
+      height: 280px; }
+      .parallax-ch2-1.loaded,
+      .parallax-ch2-1 .bg-preload {
+        background-image: url("../../../pages/pillar/mdc/chapter2/hero.large.jpg"); } }
+  @media (min-width: 1292px) {
+    .parallax-ch2-1 {
+      background-image: url("../../../thumbnails/pages/pillar/mdc/chapter2/hero.extra-large.jpg");
+      height: 350px; }
+      .parallax-ch2-1.loaded,
+      .parallax-ch2-1 .bg-preload {
+        background-image: url("../../../pages/pillar/mdc/chapter2/hero.extra-large.jpg"); } }
+  @media (max-width: 717px) {
+    .parallax-ch2-1 {
+      background-attachment: initial; } }
+
+.parallax-ch3-1 {
+  background-image: url("../../../thumbnails/pages/pillar/mdc/chapter3/hero.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 180px;
+  position: relative;
+  transition: .5s background ease-in-out, .5s height ease-in-out;
+  height: auto  !important; }
+  .parallax-ch3-1.loaded,
+  .parallax-ch3-1 .bg-preload {
+    background-image: url("../../../pages/pillar/mdc/chapter3/hero.jpg"); }
+  @media (min-width: 480px) {
+    .parallax-ch3-1 {
+      background-image: url("../../../thumbnails/pages/pillar/mdc/chapter3/hero.small.jpg");
+      height: 180px; }
+      .parallax-ch3-1.loaded,
+      .parallax-ch3-1 .bg-preload {
+        background-image: url("../../../pages/pillar/mdc/chapter3/hero.small.jpg"); } }
+  @media (min-width: 718px) {
+    .parallax-ch3-1 {
+      background-image: url("../../../thumbnails/pages/pillar/mdc/chapter3/hero.medium.jpg");
+      height: 220px; }
+      .parallax-ch3-1.loaded,
+      .parallax-ch3-1 .bg-preload {
+        background-image: url("../../../pages/pillar/mdc/chapter3/hero.medium.jpg"); } }
+  @media (min-width: 1024px) {
+    .parallax-ch3-1 {
+      background-image: url("../../../thumbnails/pages/pillar/mdc/chapter3/hero.large.jpg");
+      height: 280px; }
+      .parallax-ch3-1.loaded,
+      .parallax-ch3-1 .bg-preload {
+        background-image: url("../../../pages/pillar/mdc/chapter3/hero.large.jpg"); } }
+  @media (min-width: 1292px) {
+    .parallax-ch3-1 {
+      background-image: url("../../../thumbnails/pages/pillar/mdc/chapter3/hero.extra-large.jpg");
+      height: 350px; }
+      .parallax-ch3-1.loaded,
+      .parallax-ch3-1 .bg-preload {
+        background-image: url("../../../pages/pillar/mdc/chapter3/hero.extra-large.jpg"); } }
+  @media (max-width: 717px) {
+    .parallax-ch3-1 {
+      background-attachment: initial; } }
+
+.parallax-ch4-1 {
+  background-image: url("../../../thumbnails/pages/pillar/mdc/chapter4/hero.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 180px;
+  position: relative;
+  transition: .5s background ease-in-out, .5s height ease-in-out;
+  height: auto  !important; }
+  .parallax-ch4-1.loaded,
+  .parallax-ch4-1 .bg-preload {
+    background-image: url("../../../pages/pillar/mdc/chapter4/hero.jpg"); }
+  @media (min-width: 480px) {
+    .parallax-ch4-1 {
+      background-image: url("../../../thumbnails/pages/pillar/mdc/chapter4/hero.small.jpg");
+      height: 180px; }
+      .parallax-ch4-1.loaded,
+      .parallax-ch4-1 .bg-preload {
+        background-image: url("../../../pages/pillar/mdc/chapter4/hero.small.jpg"); } }
+  @media (min-width: 718px) {
+    .parallax-ch4-1 {
+      background-image: url("../../../thumbnails/pages/pillar/mdc/chapter4/hero.medium.jpg");
+      height: 220px; }
+      .parallax-ch4-1.loaded,
+      .parallax-ch4-1 .bg-preload {
+        background-image: url("../../../pages/pillar/mdc/chapter4/hero.medium.jpg"); } }
+  @media (min-width: 1024px) {
+    .parallax-ch4-1 {
+      background-image: url("../../../thumbnails/pages/pillar/mdc/chapter4/hero.large.jpg");
+      height: 280px; }
+      .parallax-ch4-1.loaded,
+      .parallax-ch4-1 .bg-preload {
+        background-image: url("../../../pages/pillar/mdc/chapter4/hero.large.jpg"); } }
+  @media (min-width: 1292px) {
+    .parallax-ch4-1 {
+      background-image: url("../../../thumbnails/pages/pillar/mdc/chapter4/hero.extra-large.jpg");
+      height: 350px; }
+      .parallax-ch4-1.loaded,
+      .parallax-ch4-1 .bg-preload {
+        background-image: url("../../../pages/pillar/mdc/chapter4/hero.extra-large.jpg"); } }
+  @media (max-width: 717px) {
+    .parallax-ch4-1 {
+      background-attachment: initial; } }
+
+.parallax-ch5-1 {
+  background-image: url("../../../thumbnails/pages/pillar/mdc/chapter5/hero.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 180px;
+  position: relative;
+  transition: .5s background ease-in-out, .5s height ease-in-out;
+  height: auto  !important; }
+  .parallax-ch5-1.loaded,
+  .parallax-ch5-1 .bg-preload {
+    background-image: url("../../../pages/pillar/mdc/chapter5/hero.jpg"); }
+  @media (min-width: 480px) {
+    .parallax-ch5-1 {
+      background-image: url("../../../thumbnails/pages/pillar/mdc/chapter5/hero.small.jpg");
+      height: 180px; }
+      .parallax-ch5-1.loaded,
+      .parallax-ch5-1 .bg-preload {
+        background-image: url("../../../pages/pillar/mdc/chapter5/hero.small.jpg"); } }
+  @media (min-width: 718px) {
+    .parallax-ch5-1 {
+      background-image: url("../../../thumbnails/pages/pillar/mdc/chapter5/hero.medium.jpg");
+      height: 220px; }
+      .parallax-ch5-1.loaded,
+      .parallax-ch5-1 .bg-preload {
+        background-image: url("../../../pages/pillar/mdc/chapter5/hero.medium.jpg"); } }
+  @media (min-width: 1024px) {
+    .parallax-ch5-1 {
+      background-image: url("../../../thumbnails/pages/pillar/mdc/chapter5/hero.large.jpg");
+      height: 280px; }
+      .parallax-ch5-1.loaded,
+      .parallax-ch5-1 .bg-preload {
+        background-image: url("../../../pages/pillar/mdc/chapter5/hero.large.jpg"); } }
+  @media (min-width: 1292px) {
+    .parallax-ch5-1 {
+      background-image: url("../../../thumbnails/pages/pillar/mdc/chapter5/hero.extra-large.jpg");
+      height: 350px; }
+      .parallax-ch5-1.loaded,
+      .parallax-ch5-1 .bg-preload {
+        background-image: url("../../../pages/pillar/mdc/chapter5/hero.extra-large.jpg"); } }
+  @media (max-width: 717px) {
+    .parallax-ch5-1 {
+      background-attachment: initial; } }
+
+.parallax-ch6-1 {
+  background-image: url("../../../thumbnails/pages/pillar/mdc/chapter6/hero.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 180px;
+  position: relative;
+  transition: .5s background ease-in-out, .5s height ease-in-out;
+  height: auto  !important; }
+  .parallax-ch6-1.loaded,
+  .parallax-ch6-1 .bg-preload {
+    background-image: url("../../../pages/pillar/mdc/chapter6/hero.jpg"); }
+  @media (min-width: 480px) {
+    .parallax-ch6-1 {
+      background-image: url("../../../thumbnails/pages/pillar/mdc/chapter6/hero.small.jpg");
+      height: 180px; }
+      .parallax-ch6-1.loaded,
+      .parallax-ch6-1 .bg-preload {
+        background-image: url("../../../pages/pillar/mdc/chapter6/hero.small.jpg"); } }
+  @media (min-width: 718px) {
+    .parallax-ch6-1 {
+      background-image: url("../../../thumbnails/pages/pillar/mdc/chapter6/hero.medium.jpg");
+      height: 220px; }
+      .parallax-ch6-1.loaded,
+      .parallax-ch6-1 .bg-preload {
+        background-image: url("../../../pages/pillar/mdc/chapter6/hero.medium.jpg"); } }
+  @media (min-width: 1024px) {
+    .parallax-ch6-1 {
+      background-image: url("../../../thumbnails/pages/pillar/mdc/chapter6/hero.large.jpg");
+      height: 280px; }
+      .parallax-ch6-1.loaded,
+      .parallax-ch6-1 .bg-preload {
+        background-image: url("../../../pages/pillar/mdc/chapter6/hero.large.jpg"); } }
+  @media (min-width: 1292px) {
+    .parallax-ch6-1 {
+      background-image: url("../../../thumbnails/pages/pillar/mdc/chapter6/hero.extra-large.jpg");
+      height: 350px; }
+      .parallax-ch6-1.loaded,
+      .parallax-ch6-1 .bg-preload {
+        background-image: url("../../../pages/pillar/mdc/chapter6/hero.extra-large.jpg"); } }
+  @media (max-width: 717px) {
+    .parallax-ch6-1 {
+      background-attachment: initial; } }
+
+.parallax-ch7-1 {
+  background-image: url("../../../thumbnails/pages/pillar/mdc/chapter7/hero.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 180px;
+  position: relative;
+  transition: .5s background ease-in-out, .5s height ease-in-out;
+  height: auto  !important; }
+  .parallax-ch7-1.loaded,
+  .parallax-ch7-1 .bg-preload {
+    background-image: url("../../../pages/pillar/mdc/chapter7/hero.jpg"); }
+  @media (min-width: 480px) {
+    .parallax-ch7-1 {
+      background-image: url("../../../thumbnails/pages/pillar/mdc/chapter7/hero.small.jpg");
+      height: 180px; }
+      .parallax-ch7-1.loaded,
+      .parallax-ch7-1 .bg-preload {
+        background-image: url("../../../pages/pillar/mdc/chapter7/hero.small.jpg"); } }
+  @media (min-width: 718px) {
+    .parallax-ch7-1 {
+      background-image: url("../../../thumbnails/pages/pillar/mdc/chapter7/hero.medium.jpg");
+      height: 220px; }
+      .parallax-ch7-1.loaded,
+      .parallax-ch7-1 .bg-preload {
+        background-image: url("../../../pages/pillar/mdc/chapter7/hero.medium.jpg"); } }
+  @media (min-width: 1024px) {
+    .parallax-ch7-1 {
+      background-image: url("../../../thumbnails/pages/pillar/mdc/chapter7/hero.large.jpg");
+      height: 280px; }
+      .parallax-ch7-1.loaded,
+      .parallax-ch7-1 .bg-preload {
+        background-image: url("../../../pages/pillar/mdc/chapter7/hero.large.jpg"); } }
+  @media (min-width: 1292px) {
+    .parallax-ch7-1 {
+      background-image: url("../../../thumbnails/pages/pillar/mdc/chapter7/hero.extra-large.jpg");
+      height: 350px; }
+      .parallax-ch7-1.loaded,
+      .parallax-ch7-1 .bg-preload {
+        background-image: url("../../../pages/pillar/mdc/chapter7/hero.extra-large.jpg"); } }
+  @media (max-width: 717px) {
+    .parallax-ch7-1 {
+      background-attachment: initial; } }
+
+#chapter-6 .case-list-image {
+  background-image: url("../../../thumbnails/pages/pillar/mdc/chapter6/case-list.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  height: 229px;
+  transition: .5s background ease-in-out;
+  position: relative; }
+
+#chapter-6 .case-list-image .bg-loader {
+  background-image: url("../../../pages/pillar/mdc/chapter6/case-list.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%; }
+
+@media (min-width: 480px) {
+  #chapter-6 .case-list-image {
+    background-image: url("../../../thumbnails/pages/pillar/mdc/chapter6/case-list.small.jpg");
+    height: 300px; }
+  #chapter-6 .case-list-image .bg-loader {
+    background-image: url("../../../pages/pillar/mdc/chapter6/case-list.small.jpg"); } }
+
+@media (min-width: 718px) {
+  #chapter-6 .case-list-image {
+    background-image: url("../../../thumbnails/pages/pillar/mdc/chapter6/case-list.medium.jpg");
+    height: 636px; }
+  #chapter-6 .case-list-image .bg-loader {
+    background-image: url("../../../pages/pillar/mdc/chapter6/case-list.medium.jpg"); } }
+
+.cms-india {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../../../thumbnails/pages/pillar/mdc/chapter1/cms/hero.large.jpg");
+  transition: .5s background ease-in-out;
+  position: relative;
+  height: 328px !important; }
+  .cms-india.loaded,
+  .cms-india .bg-preload {
+    background-image: url("../../../pages/pillar/mdc/chapter1/cms/hero.large.jpg"); }
+
+#chapter-1-chart-1 .environmental-image {
+  background-image: url("../../../thumbnails/pages/pillar/mdc/chapter1/environmental.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  height: auto;
+  transition: .5s background ease-in-out;
+  position: relative; }
+
+#chapter-1-chart-1 .environmental-image .bg-loader {
+  background-image: url("../../../pages/pillar/mdc/chapter1/environmental.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%; }
+
+@media (min-width: 480px) {
+  #chapter-1-chart-1 .environmental-image {
+    background-image: url("../../../thumbnails/pages/pillar/mdc/chapter1/environmental.small.jpg");
+    height: 324px; }
+  #chapter-1-chart-1 .environmental-image .bg-loader {
+    background-image: url("../../../pages/pillar/mdc/chapter1/environmental.small.jpg"); } }
+
+@media (min-width: 718px) {
+  #chapter-1-chart-1 .environmental-image {
+    background-image: url("../../../thumbnails/pages/pillar/mdc/chapter1/environmental.medium.jpg");
+    height: 390px; }
+  #chapter-1-chart-1 .environmental-image .bg-loader {
+    background-image: url("../../../pages/pillar/mdc/chapter1/environmental.medium.jpg"); } }
+
+#chapter-2 .identify-image {
+  background-image: url("../../../thumbnails/pages/pillar/mdc/chapter2/identify.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  height: 190px;
+  transition: .5s background ease-in-out;
+  position: relative; }
+
+#chapter-2 .identify-image .bg-loader {
+  background-image: url("../../../pages/pillar/mdc/chapter2/identify.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%; }
+
+@media (min-width: 480px) {
+  #chapter-2 .identify-image {
+    background-image: url("../../../thumbnails/pages/pillar/mdc/chapter2/identify.small.jpg");
+    height: 324px; }
+  #chapter-2 .identify-image .bg-loader {
+    background-image: url("../../../pages/pillar/mdc/chapter2/identify.small.jpg"); } }
+
+@media (min-width: 718px) {
+  #chapter-2 .identify-image {
+    background-image: url("../../../thumbnails/pages/pillar/mdc/chapter2/identify.medium.jpg");
+    height: 390px; }
+  #chapter-2 .identify-image .bg-loader {
+    background-image: url("../../../pages/pillar/mdc/chapter2/identify.medium.jpg"); } }
+
+#chapter-3 .agile-image {
+  background-image: url("../../../thumbnails/pages/pillar/mdc/chapter3/agile.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  height: 247px;
+  transition: .5s background ease-in-out;
+  position: relative; }
+
+#chapter-3 .agile-image .bg-loader {
+  background-image: url("../../../pages/pillar/mdc/chapter3/agile.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%; }
+
+@media (min-width: 480px) {
+  #chapter-3 .agile-image {
+    background-image: url("../../../thumbnails/pages/pillar/mdc/chapter3/agile.small.jpg");
+    height: 324px; }
+  #chapter-3 .agile-image .bg-loader {
+    background-image: url("../../../pages/pillar/mdc/chapter3/agile.small.jpg"); } }
+
+@media (min-width: 718px) {
+  #chapter-3 .agile-image {
+    background-image: url("../../../thumbnails/pages/pillar/mdc/chapter3/agile.medium.jpg");
+    height: 390px; }
+  #chapter-3 .agile-image .bg-loader {
+    background-image: url("../../../pages/pillar/mdc/chapter3/agile.medium.jpg"); } }
+
+#chapter-4 .qaprocess-image {
+  background-image: url("../../../thumbnails/pages/pillar/mdc/chapter4/qaprocess.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  height: 247px;
+  transition: .5s background ease-in-out;
+  position: relative; }
+
+#chapter-4 .qaprocess-image .bg-loader {
+  background-image: url("../../../pages/pillar/mdc/chapter4/qaprocess.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%; }
+
+@media (min-width: 480px) {
+  #chapter-4 .qaprocess-image {
+    background-image: url("../../../thumbnails/pages/pillar/mdc/chapter4/qaprocess.small.jpg");
+    height: 324px; }
+  #chapter-4 .qaprocess-image .bg-loader {
+    background-image: url("../../../pages/pillar/mdc/chapter4/qaprocess.small.jpg"); } }
+
+@media (min-width: 718px) {
+  #chapter-4 .qaprocess-image {
+    background-image: url("../../../thumbnails/pages/pillar/mdc/chapter4/qaprocess.medium.jpg");
+    height: 390px; }
+  #chapter-4 .qaprocess-image .bg-loader {
+    background-image: url("../../../pages/pillar/mdc/chapter4/qaprocess.medium.jpg"); } }
+
+#chapter-5 .pitfalls-image {
+  background-image: url("../../../thumbnails/pages/pillar/mdc/chapter5/pitfalls.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  height: 269px;
+  transition: .5s background ease-in-out;
+  position: relative; }
+
+#chapter-5 .pitfalls-image .bg-loader {
+  background-image: url("../../../pages/pillar/mdc/chapter5/pitfalls.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%; }
+
+@media (min-width: 480px) {
+  #chapter-5 .pitfalls-image {
+    background-image: url("../../../thumbnails/pages/pillar/mdc/chapter5/pitfalls.small.jpg");
+    height: 353px; }
+  #chapter-5 .pitfalls-image .bg-loader {
+    background-image: url("../../../pages/pillar/mdc/chapter5/pitfalls.small.jpg"); } }
+
+@media (min-width: 718px) {
+  #chapter-5 .pitfalls-image {
+    background-image: url("../../../thumbnails/pages/pillar/mdc/chapter5/pitfalls.medium.jpg");
+    height: 390px; }
+  #chapter-5 .pitfalls-image .bg-loader {
+    background-image: url("../../../pages/pillar/mdc/chapter5/pitfalls.medium.jpg"); } }
+
+#chapter-6 .training-image {
+  background-image: url("../../../thumbnails/pages/pillar/mdc/chapter6/train.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  height: 190px;
+  transition: .5s background ease-in-out;
+  position: relative; }
+
+#chapter-6 .training-image .bg-loader {
+  background-image: url("../../../pages/pillar/mdc/chapter6/train.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%; }
+
+@media (min-width: 480px) {
+  #chapter-6 .training-image {
+    background-image: url("../../../thumbnails/pages/pillar/mdc/chapter6/train.small.jpg");
+    height: 324px; }
+  #chapter-6 .training-image .bg-loader {
+    background-image: url("../../../pages/pillar/mdc/chapter6/train.small.jpg"); } }
+
+@media (min-width: 718px) {
+  #chapter-6 .training-image {
+    background-image: url("../../../thumbnails/pages/pillar/mdc/chapter6/train.medium.jpg");
+    height: 390px; }
+  #chapter-6 .training-image .bg-loader {
+    background-image: url("../../../pages/pillar/mdc/chapter6/train.medium.jpg"); } }
+
+#chapter-7 .supervisors-image {
+  background-image: url("../../../thumbnails/pages/pillar/mdc/chapter7/supervisors.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  height: 190px;
+  transition: .5s background ease-in-out;
+  position: relative; }
+
+#chapter-7 .supervisors-image .bg-loader {
+  background-image: url("../../../pages/pillar/mdc/chapter7/supervisors.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%; }
+
+@media (min-width: 480px) {
+  #chapter-7 .supervisors-image {
+    background-image: url("../../../thumbnails/pages/pillar/mdc/chapter7/supervisors.small.jpg");
+    height: 324px; }
+  #chapter-7 .supervisors-image .bg-loader {
+    background-image: url("../../../pages/pillar/mdc/chapter7/supervisors.small.jpg"); } }
+
+@media (min-width: 718px) {
+  #chapter-7 .supervisors-image {
+    background-image: url("../../../thumbnails/pages/pillar/mdc/chapter7/supervisors.medium.jpg");
+    height: 390px; }
+  #chapter-7 .supervisors-image .bg-loader {
+    background-image: url("../../../pages/pillar/mdc/chapter7/supervisors.medium.jpg"); } }
+
+.section-header span {
+  font-size: 57px !important;
+  line-height: 72px !important;
+  font-weight: 700 !important; }
+
+.section-number {
+  position: absolute; }
+
+.blog_build .blog_image {
+  background-image: url("../../../thumbnails/pages/blog/mobiledata_blog_page/blog_build/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  height: 290px;
+  transition: .5s background ease-in-out;
+  position: relative; }
+
+.blog_build .blog_image .bg-loader {
+  background-image: url("../../../pages/blog/mobiledata_blog_page/blog_build/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%; }
+
+@media (min-width: 480px) {
+  .blog_build .blog_image {
+    background-image: url("../../../thumbnails/pages/blog/mobiledata_blog_page/blog_build/hero.small.jpg");
+    height: 390px; }
+  .blog_build .blog_image .bg-loader {
+    background-image: url("../../../pages/blog/mobiledata_blog_page/blog_build/hero.small.jpg"); } }
+
+@media (min-width: 718px) {
+  .blog_build .blog_image {
+    background-image: url("../../../thumbnails/pages/blog/mobiledata_blog_page/blog_build/hero.medium.jpg");
+    height: 390px; }
+  .blog_build .blog_image .bg-loader {
+    background-image: url("../../../pages/blog/mobiledata_blog_page/blog_build/hero.medium.jpg"); } }
+
+@media (min-width: 1024px) {
+  .blog_build .blog_image {
+    background-image: url("../../../thumbnails/pages/blog/mobiledata_blog_page/blog_build/hero.large.jpg");
+    height: 390px; }
+  .blog_build .blog_image .bg-loader {
+    background-image: url("../../../pages/blog/mobiledata_blog_page/blog_build/hero.large.jpg"); } }
+
+@media (min-width: 1292px) {
+  .blog_build .blog_image {
+    background-image: url("../../../thumbnails/pages/blog/mobiledata_blog_page/blog_build/hero.extra-large.jpg");
+    height: 392px; }
+  .blog_build .blog_image .bg-loader {
+    background-image: url("../../../pages/blog/mobiledata_blog_page/blog_build/hero.extra-large.jpg"); } }
+
+@media (min-width: 718px) {
+  .blog_build .off-grid {
+    bottom: 20px;
+    left: -337px;
+    position: absolute;
+    right: 0;
+    width: 100%;
+    z-index: 1; }
+  .blog_build .content {
+    position: relative;
+    z-index: 2; } }
+
+@media (min-width: 1024px) {
+  .blog_build .off-grid {
+    left: -180px; } }

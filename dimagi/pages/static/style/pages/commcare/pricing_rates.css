@@ -1,0 +1,49 @@
+.pricing-type {
+  background-color: #6c7980;
+  border: transparent 2px solid;
+  border-radius: 2px;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 11px;
+  padding-top: 2px;
+  text-transform: uppercase;
+  transition: .4s all ease-in-out; }
+  .pricing-type.monthly {
+    background-color: transparent;
+    border-color: #6c7980;
+    color: #6c7980; }
+
+.pricing-type-green {
+  background-color: #47b700; }
+  .pricing-type-green.monthly {
+    background-color: transparent;
+    border-color: #47b700;
+    color: #47b700; }
+
+.pricing-type-turquoise {
+  background-color: #00bdc5; }
+  .pricing-type-turquoise.monthly {
+    background-color: transparent;
+    border-color: #00bdc5;
+    color: #00bdc5; }
+
+.pricing-type-purple {
+  background-color: #9060c8; }
+  .pricing-type-purple.monthly {
+    background-color: transparent;
+    border-color: #9060c8;
+    color: #9060c8; }
+
+.pricing-type-blue {
+  background-color: #004ebc; }
+  .pricing-type-blue.monthly {
+    background-color: transparent;
+    border-color: #004ebc;
+    color: #004ebc; }
+
+.refund-text {
+  transition: opacity .4s ease-in-out;
+  opacity: 1.0; }
+
+.refund-text-hide {
+  opacity: 0; }

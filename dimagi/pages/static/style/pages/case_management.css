@@ -1,0 +1,175 @@
+.case-management-page .hero {
+  background-image: url("../../thumbnails/pages/case_management/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  height: 500px;
+  transition: .5s background ease-in-out;
+  position: relative; }
+
+.case-management-page .hero .bg-loader {
+  background-image: url("../../pages/case_management/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%; }
+
+@media (min-width: 480px) {
+  .case-management-page .hero {
+    background-image: url("../../thumbnails/pages/case_management/hero.small.jpg");
+    height: 500px; }
+  .case-management-page .hero .bg-loader {
+    background-image: url("../../pages/case_management/hero.small.jpg"); } }
+
+@media (min-width: 718px) {
+  .case-management-page .hero {
+    background-image: url("../../thumbnails/pages/case_management/hero.medium.jpg");
+    height: 500px; }
+  .case-management-page .hero .bg-loader {
+    background-image: url("../../pages/case_management/hero.medium.jpg"); } }
+
+@media (min-width: 1024px) {
+  .case-management-page .hero {
+    background-image: url("../../thumbnails/pages/case_management/hero.large.jpg");
+    height: 500px; }
+  .case-management-page .hero .bg-loader {
+    background-image: url("../../pages/case_management/hero.large.jpg"); } }
+
+@media (min-width: 1292px) {
+  .case-management-page .hero {
+    background-image: url("../../thumbnails/pages/case_management/hero.extra-large.jpg");
+    height: 500px; }
+  .case-management-page .hero .bg-loader {
+    background-image: url("../../pages/case_management/hero.extra-large.jpg"); } }
+
+.header-label {
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 700; }
+
+.request-demo-form label {
+  text-align: left;
+  color: #ffffff; }
+
+.request-demo-form .hs-richtext {
+  color: #ffffff; }
+  .request-demo-form .hs-richtext a {
+    color: #bcdeff; }
+    .request-demo-form .hs-richtext a:hover {
+      color: #ffffff; }
+
+.request-demo-form .submitted-message {
+  color: #ffffff; }
+
+table thead {
+  border: 1px solid #e0e0e0; }
+  table thead tr {
+    border: none;
+    background-color: #5f6a7d; }
+  table thead th,
+  table thead td {
+    color: #ffffff !important;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: none; }
+
+table tbody {
+  border: 1px solid #e0e0e0; }
+  table tbody tr {
+    border: none;
+    border-top: 1px solid #e0e0e0; }
+  table tbody td {
+    padding-top: 20px;
+    padding-bottom: 20px; }
+  table tbody tr:nth-child(even) {
+    background-color: #ffffff; }
+  table tbody .support svg > * {
+    stroke: #004ebc; }
+  table tbody .no-support svg > * {
+    stroke: #e0e0e0; }
+
+.actionable-data .phone-image {
+  background-image: url("../../thumbnails/pages/case_management/actionable-data.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  height: 295px;
+  transition: .5s background ease-in-out;
+  position: relative; }
+
+.actionable-data .phone-image .bg-loader {
+  background-image: url("../../pages/case_management/actionable-data.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%; }
+
+@media (min-width: 480px) {
+  .actionable-data .phone-image {
+    background-image: url("../../thumbnails/pages/case_management/actionable-data.small.png");
+    height: 410px; }
+  .actionable-data .phone-image .bg-loader {
+    background-image: url("../../pages/case_management/actionable-data.small.png"); } }
+
+@media (min-width: 718px) {
+  .actionable-data .phone-image {
+    background-image: url("../../thumbnails/pages/case_management/actionable-data.medium.png");
+    height: 506px; }
+  .actionable-data .phone-image .bg-loader {
+    background-image: url("../../pages/case_management/actionable-data.medium.png"); } }
+
+.greater-impact .phone-image {
+  background-image: url("../../thumbnails/pages/case_management/greater-impact.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  height: 295px;
+  transition: .5s background ease-in-out;
+  position: relative; }
+
+.greater-impact .phone-image .bg-loader {
+  background-image: url("../../pages/case_management/greater-impact.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%; }
+
+@media (min-width: 480px) {
+  .greater-impact .phone-image {
+    background-image: url("../../thumbnails/pages/case_management/greater-impact.small.png");
+    height: 410px; }
+  .greater-impact .phone-image .bg-loader {
+    background-image: url("../../pages/case_management/greater-impact.small.png"); } }
+
+@media (min-width: 718px) {
+  .greater-impact .phone-image {
+    background-image: url("../../thumbnails/pages/case_management/greater-impact.medium.png");
+    height: 506px; }
+  .greater-impact .phone-image .bg-loader {
+    background-image: url("../../pages/case_management/greater-impact.medium.png"); } }
+
+.efficient-teams .phone-image {
+  background-image: url("../../thumbnails/pages/case_management/efficient-teams.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  height: 295px;
+  transition: .5s background ease-in-out;
+  position: relative; }
+
+.efficient-teams .phone-image .bg-loader {
+  background-image: url("../../pages/case_management/efficient-teams.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%; }
+
+@media (min-width: 480px) {
+  .efficient-teams .phone-image {
+    background-image: url("../../thumbnails/pages/case_management/efficient-teams.small.png");
+    height: 410px; }
+  .efficient-teams .phone-image .bg-loader {
+    background-image: url("../../pages/case_management/efficient-teams.small.png"); } }
+
+@media (min-width: 718px) {
+  .efficient-teams .phone-image {
+    background-image: url("../../thumbnails/pages/case_management/efficient-teams.medium.png");
+    height: 506px; }
+  .efficient-teams .phone-image .bg-loader {
+    background-image: url("../../pages/case_management/efficient-teams.medium.png"); } }

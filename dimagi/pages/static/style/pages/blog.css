@@ -1,0 +1,141 @@
+.blog-page .hero {
+  background-image: url("../../thumbnails/pages/blog/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  height: 500px;
+  transition: .5s background ease-in-out;
+  position: relative; }
+
+.blog-page .hero .bg-loader {
+  background-image: url("../../pages/blog/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%; }
+
+@media (min-width: 480px) {
+  .blog-page .hero {
+    background-image: url("../../thumbnails/pages/blog/hero.small.jpg");
+    height: 500px; }
+  .blog-page .hero .bg-loader {
+    background-image: url("../../pages/blog/hero.small.jpg"); } }
+
+@media (min-width: 718px) {
+  .blog-page .hero {
+    background-image: url("../../thumbnails/pages/blog/hero.medium.jpg");
+    height: 500px; }
+  .blog-page .hero .bg-loader {
+    background-image: url("../../pages/blog/hero.medium.jpg"); } }
+
+@media (min-width: 1024px) {
+  .blog-page .hero {
+    background-image: url("../../thumbnails/pages/blog/hero.large.jpg");
+    height: 500px; }
+  .blog-page .hero .bg-loader {
+    background-image: url("../../pages/blog/hero.large.jpg"); } }
+
+@media (min-width: 1292px) {
+  .blog-page .hero {
+    background-image: url("../../thumbnails/pages/blog/hero.extra-large.jpg");
+    height: 500px; }
+  .blog-page .hero .bg-loader {
+    background-image: url("../../pages/blog/hero.extra-large.jpg"); } }
+
+.post-thumbnail {
+  background-position: "center";
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #5f6a7d;
+  transition: .5s background ease-in-out;
+  background-position: center; }
+  .post-thumbnail::after {
+    background-color: #5f6a7d; }
+
+a.post {
+  color: #5f6a7d !important;
+  font-weight: 400; }
+  a.post:hover .post-thumbnail::after {
+    opacity: .5; }
+
+.category-tile {
+  position: relative; }
+  .category-tile .cta {
+    bottom: 30px;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 100%; }
+
+.category-desc {
+  margin-bottom: 20px; }
+  .category-desc br {
+    display: none; }
+
+.post-author-image {
+  width: 80px;
+  background-position: "center";
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #5f6a7d;
+  transition: .5s background ease-in-out; }
+  .post-author-image::after {
+    background-color: #5f6a7d; }
+
+.post-content-text img {
+  margin-bottom: 30px; }
+
+.post-content-text h2,
+.post-content-text h3,
+.post-content-text h4 {
+  font-size: 18px; }
+
+.powerful-data .powerful-data-image {
+  background-image: url("../../thumbnails/pages/blog/cta.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  height: 175px;
+  transition: .5s background ease-in-out;
+  position: relative; }
+
+.powerful-data .powerful-data-image .bg-loader {
+  background-image: url("../../pages/blog/cta.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%; }
+
+@media (min-width: 374px) {
+  .powerful-data .powerful-data-image {
+    background-image: url("../../thumbnails/pages/blog/cta.extra-small.png");
+    height: 205px; }
+  .powerful-data .powerful-data-image .bg-loader {
+    background-image: url("../../pages/blog/cta.extra-small.png"); } }
+
+@media (min-width: 480px) {
+  .powerful-data .powerful-data-image {
+    background-image: url("../../thumbnails/pages/blog/cta.small.png");
+    height: 270px; }
+  .powerful-data .powerful-data-image .bg-loader {
+    background-image: url("../../pages/blog/cta.small.png"); } }
+
+@media (min-width: 718px) {
+  .powerful-data .powerful-data-image {
+    background-image: url("../../thumbnails/pages/blog/cta.medium.png");
+    height: 210px; }
+  .powerful-data .powerful-data-image .bg-loader {
+    background-image: url("../../pages/blog/cta.medium.png"); } }
+
+@media (min-width: 1024px) {
+  .powerful-data .powerful-data-image {
+    background-image: url("../../thumbnails/pages/blog/cta.large.png");
+    height: 265px; }
+  .powerful-data .powerful-data-image .bg-loader {
+    background-image: url("../../pages/blog/cta.large.png"); } }
+
+@media (min-width: 1292px) {
+  .powerful-data .powerful-data-image {
+    background-image: url("../../thumbnails/pages/blog/cta.extra-large.png");
+    height: 320px; }
+  .powerful-data .powerful-data-image .bg-loader {
+    background-image: url("../../pages/blog/cta.extra-large.png"); } }

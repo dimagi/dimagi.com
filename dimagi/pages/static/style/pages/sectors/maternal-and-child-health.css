@@ -1,0 +1,247 @@
+#ag-intro .hero-data-image {
+  background-image: url("../../../thumbnails/pages/sectors/maternal-and-newborn-health/intro/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  height: 190px;
+  transition: .5s background ease-in-out;
+  position: relative; }
+
+#ag-intro .hero-data-image .bg-loader {
+  background-image: url("../../../pages/sectors/maternal-and-newborn-health/intro/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%; }
+
+@media (min-width: 480px) {
+  #ag-intro .hero-data-image {
+    background-image: url("../../../thumbnails/pages/sectors/maternal-and-newborn-health/intro/hero.small.jpg");
+    height: 280px; }
+  #ag-intro .hero-data-image .bg-loader {
+    background-image: url("../../../pages/sectors/maternal-and-newborn-health/intro/hero.small.jpg"); } }
+
+@media (min-width: 718px) {
+  #ag-intro .hero-data-image {
+    background-image: url("../../../thumbnails/pages/sectors/maternal-and-newborn-health/intro/hero.medium.jpg");
+    height: 280px; }
+  #ag-intro .hero-data-image .bg-loader {
+    background-image: url("../../../pages/sectors/maternal-and-newborn-health/intro/hero.medium.jpg"); } }
+
+@media (min-width: 1024px) {
+  #ag-intro .hero-data-image {
+    background-image: url("../../../thumbnails/pages/sectors/maternal-and-newborn-health/intro/hero.large.jpg");
+    height: 280px; }
+  #ag-intro .hero-data-image .bg-loader {
+    background-image: url("../../../pages/sectors/maternal-and-newborn-health/intro/hero.large.jpg"); } }
+
+@media (min-width: 1292px) {
+  #ag-intro .hero-data-image {
+    background-image: url("../../../thumbnails/pages/sectors/maternal-and-newborn-health/intro/hero.extra-large.jpg");
+    height: 320px; }
+  #ag-intro .hero-data-image .bg-loader {
+    background-image: url("../../../pages/sectors/maternal-and-newborn-health/intro/hero.extra-large.jpg"); } }
+
+.part3 .epic-cover {
+  background-image: url("../../../thumbnails/pages/sectors/maternal-and-newborn-health/part3/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  height: 600px;
+  transition: .5s background ease-in-out;
+  position: relative; }
+
+.part3 .epic-cover .bg-loader {
+  background-image: url("../../../pages/sectors/maternal-and-newborn-health/part3/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%; }
+
+@media (min-width: 480px) {
+  .part3 .epic-cover {
+    background-image: url("../../../thumbnails/pages/sectors/maternal-and-newborn-health/part3/hero.small.jpg");
+    height: 620px; }
+  .part3 .epic-cover .bg-loader {
+    background-image: url("../../../pages/sectors/maternal-and-newborn-health/part3/hero.small.jpg"); } }
+
+@media (min-width: 718px) {
+  .part3 .epic-cover {
+    background-image: url("../../../thumbnails/pages/sectors/maternal-and-newborn-health/part3/hero.medium.jpg");
+    height: 385px; }
+  .part3 .epic-cover .bg-loader {
+    background-image: url("../../../pages/sectors/maternal-and-newborn-health/part3/hero.medium.jpg"); } }
+
+@media (min-width: 1024px) {
+  .part3 .epic-cover {
+    background-image: url("../../../thumbnails/pages/sectors/maternal-and-newborn-health/part3/hero.large.jpg");
+    height: 360px; }
+  .part3 .epic-cover .bg-loader {
+    background-image: url("../../../pages/sectors/maternal-and-newborn-health/part3/hero.large.jpg"); } }
+
+@media (min-width: 1292px) {
+  .part3 .epic-cover {
+    background-image: url("../../../thumbnails/pages/sectors/maternal-and-newborn-health/part3/hero.extra-large.jpg");
+    height: 360px; }
+  .part3 .epic-cover .bg-loader {
+    background-image: url("../../../pages/sectors/maternal-and-newborn-health/part3/hero.extra-large.jpg"); } }
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+.commcare-text .phone-image {
+  background-image: url("../../../thumbnails/pages/sectors/maternal-and-newborn-health/news/phone.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  height: 290px;
+  transition: .5s background ease-in-out;
+  position: relative; }
+
+.commcare-text .phone-image .bg-loader {
+  background-image: url("../../../pages/sectors/maternal-and-newborn-health/news/phone.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%; }
+
+@media (min-width: 480px) {
+  .commcare-text .phone-image {
+    background-image: url("../../../thumbnails/pages/sectors/maternal-and-newborn-health/news/phone.small.png");
+    height: 290px; }
+  .commcare-text .phone-image .bg-loader {
+    background-image: url("../../../pages/sectors/maternal-and-newborn-health/news/phone.small.png"); } }
+
+@media (min-width: 718px) {
+  .commcare-text .phone-image {
+    background-image: url("../../../thumbnails/pages/sectors/maternal-and-newborn-health/news/phone.medium.png");
+    height: 290px; }
+  .commcare-text .phone-image .bg-loader {
+    background-image: url("../../../pages/sectors/maternal-and-newborn-health/news/phone.medium.png"); } }
+
+@media (min-width: 1024px) {
+  .commcare-text .phone-image {
+    background-image: url("../../../thumbnails/pages/sectors/maternal-and-newborn-health/news/phone.large.png");
+    height: 290px; }
+  .commcare-text .phone-image .bg-loader {
+    background-image: url("../../../pages/sectors/maternal-and-newborn-health/news/phone.large.png"); } }
+
+@media (min-width: 1292px) {
+  .commcare-text .phone-image {
+    background-image: url("../../../thumbnails/pages/sectors/maternal-and-newborn-health/news/phone.extra-large.png");
+    height: 290px; }
+  .commcare-text .phone-image .bg-loader {
+    background-image: url("../../../pages/sectors/maternal-and-newborn-health/news/phone.extra-large.png"); } }
+
+@media (min-width: 718px) {
+  .commcare-text .off-grid {
+    top: 10%;
+    left: 0;
+    position: absolute;
+    right: auto;
+    width: 120%;
+    z-index: 1;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 0%; }
+  .commcare-text .content {
+    position: relative;
+    z-index: 2; } }
+
+.commcare-text .phone-image {
+  background-size: auto 0%; }
+
+.ac-part3 .phone-image .bg-loader {
+  background-color: transparent; }
+
+.news .image.testimonial1 {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../../../thumbnails/pages/sectors/maternal-and-newborn-health/news/mdc-health-fico.jpg");
+  transition: .5s background ease-in-out;
+  position: relative;
+  height: 200px;
+  background-size: contain;
+  background-position: left; }
+  .news .image.testimonial1.loaded,
+  .news .image.testimonial1 .bg-preload {
+    background-image: url("../../../pages/sectors/maternal-and-newborn-health/news/mdc-health-fico.jpg"); }
+
+.news .image.testimonial2 {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../../../thumbnails/pages/sectors/maternal-and-newborn-health/news/mdc-health-lp.jpg");
+  transition: .5s background ease-in-out;
+  position: relative;
+  height: 200px;
+  background-size: contain;
+  background-position: left; }
+  .news .image.testimonial2.loaded,
+  .news .image.testimonial2 .bg-preload {
+    background-image: url("../../../pages/sectors/maternal-and-newborn-health/news/mdc-health-lp.jpg"); }
+
+.news .image.testimonial3 {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../../../thumbnails/pages/sectors/maternal-and-newborn-health/news/mdc-health-care.jpg");
+  transition: .5s background ease-in-out;
+  position: relative;
+  height: 200px;
+  background-size: contain;
+  background-position: left; }
+  .news .image.testimonial3.loaded,
+  .news .image.testimonial3 .bg-preload {
+    background-image: url("../../../pages/sectors/maternal-and-newborn-health/news/mdc-health-care.jpg"); }
+
+.programs .image.testimonial1 {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../../../thumbnails/pages/sectors/maternal-and-newborn-health/part2/mdc-health-crs.jpg");
+  transition: .5s background ease-in-out;
+  position: relative;
+  height: 200px;
+  background-size: contain; }
+  .programs .image.testimonial1.loaded,
+  .programs .image.testimonial1 .bg-preload {
+    background-image: url("../../../pages/sectors/maternal-and-newborn-health/part2/mdc-health-crs.jpg"); }
+
+.programs .image.testimonial2 {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../../../thumbnails/pages/sectors/maternal-and-newborn-health/part2/mdc-healtn-kenya.jpg");
+  transition: .5s background ease-in-out;
+  position: relative;
+  height: 200px;
+  background-size: contain; }
+  .programs .image.testimonial2.loaded,
+  .programs .image.testimonial2 .bg-preload {
+    background-image: url("../../../pages/sectors/maternal-and-newborn-health/part2/mdc-healtn-kenya.jpg"); }
+
+.programs .image.testimonial3 {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../../../thumbnails/pages/sectors/maternal-and-newborn-health/part2/mdc-health-pathfinder.jpg");
+  transition: .5s background ease-in-out;
+  position: relative;
+  height: 200px;
+  background-size: contain; }
+  .programs .image.testimonial3.loaded,
+  .programs .image.testimonial3 .bg-preload {
+    background-image: url("../../../pages/sectors/maternal-and-newborn-health/part2/mdc-health-pathfinder.jpg"); }
+
+.programs .image.testimonial1,
+.programs .image.testimonial2,
+.programs .image.testimonial3 {
+  background-position: initial; }
+
+.programs .image.crs {
+  width: 309px; }
+
+.link-gray:hover,
+.link-gray:focus {
+  color: #004ebc !important; }

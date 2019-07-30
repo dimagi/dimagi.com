@@ -1,0 +1,473 @@
+.products-commcare-page .hero {
+  background-image: url("../../../thumbnails/pages/commcare/product/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  height: 500px;
+  transition: .5s background ease-in-out;
+  position: relative; }
+
+.products-commcare-page .hero .bg-loader {
+  background-image: url("../../../pages/commcare/product/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%; }
+
+@media (min-width: 480px) {
+  .products-commcare-page .hero {
+    background-image: url("../../../thumbnails/pages/commcare/product/hero.small.jpg");
+    height: 500px; }
+  .products-commcare-page .hero .bg-loader {
+    background-image: url("../../../pages/commcare/product/hero.small.jpg"); } }
+
+@media (min-width: 718px) {
+  .products-commcare-page .hero {
+    background-image: url("../../../thumbnails/pages/commcare/product/hero.medium.jpg");
+    height: 500px; }
+  .products-commcare-page .hero .bg-loader {
+    background-image: url("../../../pages/commcare/product/hero.medium.jpg"); } }
+
+@media (min-width: 1024px) {
+  .products-commcare-page .hero {
+    background-image: url("../../../thumbnails/pages/commcare/product/hero.large.jpg");
+    height: 500px; }
+  .products-commcare-page .hero .bg-loader {
+    background-image: url("../../../pages/commcare/product/hero.large.jpg"); } }
+
+@media (min-width: 1292px) {
+  .products-commcare-page .hero {
+    background-image: url("../../../thumbnails/pages/commcare/product/hero.extra-large.jpg");
+    height: 500px; }
+  .products-commcare-page .hero .bg-loader {
+    background-image: url("../../../pages/commcare/product/hero.extra-large.jpg"); } }
+
+@media (min-width: 718px) {
+  .products-commcare-page .hero h1 {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 66%; } }
+
+.testimonials .carousel .carousel-slide .image-oikoi {
+  background-image: url("../../../thumbnails/pages/commcare/product/testimonial1.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 135px;
+  transition: .5s background ease-in-out;
+  width: 276px; }
+
+.testimonials .carousel .carousel-slide .image-oikoi .bg-preload,
+.testimonials .carousel .carousel-slide .image-oikoi.loaded {
+  background-image: url("../../../pages/commcare/product/testimonial1.jpg"); }
+
+@media (min-width: 374px) {
+  .testimonials .carousel .carousel-slide .image-oikoi {
+    height: 135px;
+    width: 276px; } }
+
+@media (min-width: 480px) {
+  .testimonials .carousel .carousel-slide .image-oikoi {
+    height: 158px;
+    width: 424px; } }
+
+@media (min-width: 718px) {
+  .testimonials .carousel .carousel-slide .image-oikoi {
+    height: 277px;
+    width: 680px; } }
+
+@media (min-width: 1024px) {
+  .testimonials .carousel .carousel-slide .image-oikoi {
+    height: 333px;
+    width: 868px; } }
+
+@media (min-width: 1292px) {
+  .testimonials .carousel .carousel-slide .image-oikoi {
+    height: 408px;
+    width: 1016px; } }
+
+.testimonials .carousel .carousel-slide .image-nou-kod {
+  background-image: url("../../../thumbnails/pages/commcare/product/testimonial2.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 135px;
+  transition: .5s background ease-in-out;
+  width: 276px; }
+
+.testimonials .carousel .carousel-slide .image-nou-kod .bg-preload,
+.testimonials .carousel .carousel-slide .image-nou-kod.loaded {
+  background-image: url("../../../pages/commcare/product/testimonial2.jpg"); }
+
+@media (min-width: 374px) {
+  .testimonials .carousel .carousel-slide .image-nou-kod {
+    height: 135px;
+    width: 276px; } }
+
+@media (min-width: 480px) {
+  .testimonials .carousel .carousel-slide .image-nou-kod {
+    height: 158px;
+    width: 424px; } }
+
+@media (min-width: 718px) {
+  .testimonials .carousel .carousel-slide .image-nou-kod {
+    height: 277px;
+    width: 680px; } }
+
+@media (min-width: 1024px) {
+  .testimonials .carousel .carousel-slide .image-nou-kod {
+    height: 333px;
+    width: 868px; } }
+
+@media (min-width: 1292px) {
+  .testimonials .carousel .carousel-slide .image-nou-kod {
+    height: 408px;
+    width: 1016px; } }
+
+.testimonials .carousel .carousel-slide .image-delivery-services {
+  background-image: url("../../../thumbnails/pages/commcare/product/testimonial3.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 135px;
+  transition: .5s background ease-in-out;
+  width: 276px; }
+
+.testimonials .carousel .carousel-slide .image-delivery-services .bg-preload,
+.testimonials .carousel .carousel-slide .image-delivery-services.loaded {
+  background-image: url("../../../pages/commcare/product/testimonial3.jpg"); }
+
+@media (min-width: 374px) {
+  .testimonials .carousel .carousel-slide .image-delivery-services {
+    height: 135px;
+    width: 276px; } }
+
+@media (min-width: 480px) {
+  .testimonials .carousel .carousel-slide .image-delivery-services {
+    height: 158px;
+    width: 424px; } }
+
+@media (min-width: 718px) {
+  .testimonials .carousel .carousel-slide .image-delivery-services {
+    height: 277px;
+    width: 680px; } }
+
+@media (min-width: 1024px) {
+  .testimonials .carousel .carousel-slide .image-delivery-services {
+    height: 333px;
+    width: 868px; } }
+
+@media (min-width: 1292px) {
+  .testimonials .carousel .carousel-slide .image-delivery-services {
+    height: 408px;
+    width: 1016px; } }
+
+.testimonials .carousel .carousel-slide .image-cleaning-data {
+  background-image: url("../../../thumbnails/pages/commcare/product/testimonial4.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 135px;
+  transition: .5s background ease-in-out;
+  width: 276px; }
+
+.testimonials .carousel .carousel-slide .image-cleaning-data .bg-preload,
+.testimonials .carousel .carousel-slide .image-cleaning-data.loaded {
+  background-image: url("../../../pages/commcare/product/testimonial4.jpg"); }
+
+@media (min-width: 374px) {
+  .testimonials .carousel .carousel-slide .image-cleaning-data {
+    height: 135px;
+    width: 276px; } }
+
+@media (min-width: 480px) {
+  .testimonials .carousel .carousel-slide .image-cleaning-data {
+    height: 158px;
+    width: 424px; } }
+
+@media (min-width: 718px) {
+  .testimonials .carousel .carousel-slide .image-cleaning-data {
+    height: 277px;
+    width: 680px; } }
+
+@media (min-width: 1024px) {
+  .testimonials .carousel .carousel-slide .image-cleaning-data {
+    height: 333px;
+    width: 868px; } }
+
+@media (min-width: 1292px) {
+  .testimonials .carousel .carousel-slide .image-cleaning-data {
+    height: 408px;
+    width: 1016px; } }
+
+.testimonials .carousel .carousel-slide .image-sarah-baird {
+  background-image: url("../../../thumbnails/pages/commcare/product/testimonial5.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 135px;
+  transition: .5s background ease-in-out;
+  width: 276px; }
+
+.testimonials .carousel .carousel-slide .image-sarah-baird .bg-preload,
+.testimonials .carousel .carousel-slide .image-sarah-baird.loaded {
+  background-image: url("../../../pages/commcare/product/testimonial5.jpg"); }
+
+@media (min-width: 374px) {
+  .testimonials .carousel .carousel-slide .image-sarah-baird {
+    height: 135px;
+    width: 276px; } }
+
+@media (min-width: 480px) {
+  .testimonials .carousel .carousel-slide .image-sarah-baird {
+    height: 158px;
+    width: 424px; } }
+
+@media (min-width: 718px) {
+  .testimonials .carousel .carousel-slide .image-sarah-baird {
+    height: 277px;
+    width: 680px; } }
+
+@media (min-width: 1024px) {
+  .testimonials .carousel .carousel-slide .image-sarah-baird {
+    height: 333px;
+    width: 868px; } }
+
+@media (min-width: 1292px) {
+  .testimonials .carousel .carousel-slide .image-sarah-baird {
+    height: 408px;
+    width: 1016px; } }
+
+.case-management .image {
+  background-image: url("../../../thumbnails/pages/case_management/cm-cta.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  height: 290px;
+  transition: .5s background ease-in-out;
+  position: relative; }
+
+.case-management .image .bg-loader {
+  background-image: url("../../../pages/case_management/cm-cta.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%; }
+
+@media (min-width: 480px) {
+  .case-management .image {
+    background-image: url("../../../thumbnails/pages/case_management/cm-cta.small.png");
+    height: 290px; }
+  .case-management .image .bg-loader {
+    background-image: url("../../../pages/case_management/cm-cta.small.png"); } }
+
+@media (min-width: 718px) {
+  .case-management .image {
+    background-image: url("../../../thumbnails/pages/case_management/cm-cta.medium.png");
+    height: 290px; }
+  .case-management .image .bg-loader {
+    background-image: url("../../../pages/case_management/cm-cta.medium.png"); } }
+
+@media (min-width: 1024px) {
+  .case-management .image {
+    background-image: url("../../../thumbnails/pages/case_management/cm-cta.large.png");
+    height: 290px; }
+  .case-management .image .bg-loader {
+    background-image: url("../../../pages/case_management/cm-cta.large.png"); } }
+
+@media (min-width: 1292px) {
+  .case-management .image {
+    background-image: url("../../../thumbnails/pages/case_management/cm-cta.extra-large.png");
+    height: 292px; }
+  .case-management .image .bg-loader {
+    background-image: url("../../../pages/case_management/cm-cta.extra-large.png"); } }
+
+@media (min-width: 718px) {
+  .case-management .off-grid {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: auto;
+    width: 100%;
+    z-index: 1; }
+  .case-management .content {
+    position: relative;
+    z-index: 2; } }
+
+@media (min-width: 1292px) {
+  .case-management .bg-loader {
+    border-top: 1px solid #e0e0e0; } }
+
+.case-management .bg-loader {
+  background-color: #ffffff; }
+
+.overview .analyze-data-image {
+  background-image: url("../../../thumbnails/pages/commcare/product/analyze.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  height: 175px;
+  transition: .5s background ease-in-out;
+  position: relative; }
+
+.overview .analyze-data-image .bg-loader {
+  background-image: url("../../../pages/commcare/product/analyze.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%; }
+
+@media (min-width: 374px) {
+  .overview .analyze-data-image {
+    background-image: url("../../../thumbnails/pages/commcare/product/analyze.extra-small.jpg");
+    height: 190px; }
+  .overview .analyze-data-image .bg-loader {
+    background-image: url("../../../pages/commcare/product/analyze.extra-small.jpg"); } }
+
+@media (min-width: 480px) {
+  .overview .analyze-data-image {
+    background-image: url("../../../thumbnails/pages/commcare/product/analyze.small.jpg");
+    height: 270px; }
+  .overview .analyze-data-image .bg-loader {
+    background-image: url("../../../pages/commcare/product/analyze.small.jpg"); } }
+
+@media (min-width: 718px) {
+  .overview .analyze-data-image {
+    background-image: url("../../../thumbnails/pages/commcare/product/analyze.medium.jpg");
+    height: 180px; }
+  .overview .analyze-data-image .bg-loader {
+    background-image: url("../../../pages/commcare/product/analyze.medium.jpg"); } }
+
+@media (min-width: 1024px) {
+  .overview .analyze-data-image {
+    background-image: url("../../../thumbnails/pages/commcare/product/analyze.large.jpg");
+    height: 235px; }
+  .overview .analyze-data-image .bg-loader {
+    background-image: url("../../../pages/commcare/product/analyze.large.jpg"); } }
+
+@media (min-width: 1292px) {
+  .overview .analyze-data-image {
+    background-image: url("../../../thumbnails/pages/commcare/product/analyze.extra-large.jpg");
+    height: 290px; }
+  .overview .analyze-data-image .bg-loader {
+    background-image: url("../../../pages/commcare/product/analyze.extra-large.jpg"); } }
+
+.overview .collect-data-image {
+  background-image: url("../../../thumbnails/pages/commcare/product/collect.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  height: 175px;
+  transition: .5s background ease-in-out;
+  position: relative; }
+
+.overview .collect-data-image .bg-loader {
+  background-image: url("../../../pages/commcare/product/collect.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%; }
+
+@media (min-width: 374px) {
+  .overview .collect-data-image {
+    background-image: url("../../../thumbnails/pages/commcare/product/collect.extra-small.jpg");
+    height: 190px; }
+  .overview .collect-data-image .bg-loader {
+    background-image: url("../../../pages/commcare/product/collect.extra-small.jpg"); } }
+
+@media (min-width: 480px) {
+  .overview .collect-data-image {
+    background-image: url("../../../thumbnails/pages/commcare/product/collect.small.jpg");
+    height: 270px; }
+  .overview .collect-data-image .bg-loader {
+    background-image: url("../../../pages/commcare/product/collect.small.jpg"); } }
+
+@media (min-width: 718px) {
+  .overview .collect-data-image {
+    background-image: url("../../../thumbnails/pages/commcare/product/collect.medium.jpg");
+    height: 180px; }
+  .overview .collect-data-image .bg-loader {
+    background-image: url("../../../pages/commcare/product/collect.medium.jpg"); } }
+
+@media (min-width: 1024px) {
+  .overview .collect-data-image {
+    background-image: url("../../../thumbnails/pages/commcare/product/collect.large.jpg");
+    height: 235px; }
+  .overview .collect-data-image .bg-loader {
+    background-image: url("../../../pages/commcare/product/collect.large.jpg"); } }
+
+@media (min-width: 1292px) {
+  .overview .collect-data-image {
+    background-image: url("../../../thumbnails/pages/commcare/product/collect.extra-large.jpg");
+    height: 290px; }
+  .overview .collect-data-image .bg-loader {
+    background-image: url("../../../pages/commcare/product/collect.extra-large.jpg"); } }
+
+.overview .device-container,
+.overview .screen {
+  width: 100%; }
+
+.overview .carousel-slide {
+  background-color: #ffffff; }
+  @media (min-width: 480px) {
+    .overview .carousel-slide {
+      height: 890px; } }
+  @media (min-width: 718px) {
+    .overview .carousel-slide {
+      height: 824px; } }
+  @media (min-width: 1024px) {
+    .overview .carousel-slide {
+      height: 650px; } }
+  @media (min-width: 1292px) {
+    .overview .carousel-slide {
+      height: 600px; } }
+
+.overview a:not(.button)[class*="play-icon-"]:after {
+  border-left-color: #004ebc; }
+
+.overview a:not(.button)[class*="play-icon-"].alt:before {
+  border: 1px solid #004ebc; }
+
+.overview [class*="play-icon-"]:not(.button):before {
+  background-color: #ffffff; }
+
+.pricing-image .epic-cover {
+  background-image: url("../../../thumbnails/pages/commcare/product/prcining/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  height: 275px;
+  transition: .5s background ease-in-out;
+  position: relative; }
+
+.pricing-image .epic-cover .bg-loader {
+  background-image: url("../../../pages/commcare/product/prcining/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%; }
+
+@media (min-width: 374px) {
+  .pricing-image .epic-cover {
+    background-image: url("../../../thumbnails/pages/commcare/product/prcining/hero.extra-small.jpg");
+    height: 290px; }
+  .pricing-image .epic-cover .bg-loader {
+    background-image: url("../../../pages/commcare/product/prcining/hero.extra-small.jpg"); } }
+
+@media (min-width: 480px) {
+  .pricing-image .epic-cover {
+    background-image: url("../../../thumbnails/pages/commcare/product/prcining/hero.small.jpg");
+    height: 270px; }
+  .pricing-image .epic-cover .bg-loader {
+    background-image: url("../../../pages/commcare/product/prcining/hero.small.jpg"); } }
+
+@media (min-width: 718px) {
+  .pricing-image .epic-cover {
+    background-image: url("../../../thumbnails/pages/commcare/product/prcining/hero.medium.jpg");
+    height: 270px; }
+  .pricing-image .epic-cover .bg-loader {
+    background-image: url("../../../pages/commcare/product/prcining/hero.medium.jpg"); } }
+
+@media (min-width: 1024px) {
+  .pricing-image .epic-cover {
+    background-image: url("../../../thumbnails/pages/commcare/product/prcining/hero.large.jpg");
+    height: 316px; }
+  .pricing-image .epic-cover .bg-loader {
+    background-image: url("../../../pages/commcare/product/prcining/hero.large.jpg"); } }
+
+@media (min-width: 1292px) {
+  .pricing-image .epic-cover {
+    background-image: url("../../../thumbnails/pages/commcare/product/prcining/hero.extra-large.jpg");
+    height: 290px; }
+  .pricing-image .epic-cover .bg-loader {
+    background-image: url("../../../pages/commcare/product/prcining/hero.extra-large.jpg"); } }

@@ -1,0 +1,49 @@
+{% extends "sections/commcare/pricing/plans/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block kissmetrics_cta %}
+Clicked Read More - Pricing (Standard)
+{% endblock %}
+
+{% block name %}{% blocktrans %}
+  Standard
+{% endblocktrans %}{% endblock %}
+
+{% block price_monthly %}
+  $<span data-bind="text: standard.displayPrice">250</span>
+{% endblock %}
+
+{% block description %}{% blocktrans %}
+  Perfect to prove the value of
+  CommCare in the pilot phase. Access case
+  imports, API integrations, and better support.
+{% endblocktrans %}{% endblock %}
+
+{% block features %}
+  <li>
+    {% blocktrans %}
+      Guaranteed email support within 3 business days
+    {% endblocktrans %}
+  </li>
+  <li>
+    {% blocktrans %}
+      Lookup tables
+    {% endblocktrans %}
+  </li>
+  <li>
+    {% blocktrans %}
+      Case importer
+    {% endblocktrans %}
+  </li>
+  <li>
+    {% blocktrans %}
+      API access
+    {% endblocktrans %}
+  </li>
+  <li>
+    {% blocktrans %}
+      One-way SMS
+    {% endblocktrans %}
+  </li>
+{% endblock %}

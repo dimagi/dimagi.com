@@ -1,0 +1,190 @@
+#how-to-choose .epic-cover {
+  background-image: url("../../thumbnails/pages/blog/mobiledata_blog_page/how_to_choose/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  height: 500px;
+  transition: .5s background ease-in-out;
+  position: relative; }
+
+#how-to-choose .epic-cover .bg-loader {
+  background-image: url("../../pages/blog/mobiledata_blog_page/how_to_choose/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%; }
+
+@media (min-width: 480px) {
+  #how-to-choose .epic-cover {
+    background-image: url("../../thumbnails/pages/blog/mobiledata_blog_page/how_to_choose/hero.small.jpg");
+    height: 500px; }
+  #how-to-choose .epic-cover .bg-loader {
+    background-image: url("../../pages/blog/mobiledata_blog_page/how_to_choose/hero.small.jpg"); } }
+
+@media (min-width: 718px) {
+  #how-to-choose .epic-cover {
+    background-image: url("../../thumbnails/pages/blog/mobiledata_blog_page/how_to_choose/hero.medium.jpg");
+    height: 500px; }
+  #how-to-choose .epic-cover .bg-loader {
+    background-image: url("../../pages/blog/mobiledata_blog_page/how_to_choose/hero.medium.jpg"); } }
+
+@media (min-width: 1024px) {
+  #how-to-choose .epic-cover {
+    background-image: url("../../thumbnails/pages/blog/mobiledata_blog_page/how_to_choose/hero.large.jpg");
+    height: 500px; }
+  #how-to-choose .epic-cover .bg-loader {
+    background-image: url("../../pages/blog/mobiledata_blog_page/how_to_choose/hero.large.jpg"); } }
+
+@media (min-width: 1292px) {
+  #how-to-choose .epic-cover {
+    background-image: url("../../thumbnails/pages/blog/mobiledata_blog_page/how_to_choose/hero.extra-large.jpg");
+    height: 500px; }
+  #how-to-choose .epic-cover .bg-loader {
+    background-image: url("../../pages/blog/mobiledata_blog_page/how_to_choose/hero.extra-large.jpg"); } }
+
+#learn-more .epic-cover {
+  background-image: url("../../thumbnails/pages/blog/mobiledata_blog_page/learn_more/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  height: 500px;
+  transition: .5s background ease-in-out;
+  position: relative; }
+
+#learn-more .epic-cover .bg-loader {
+  background-image: url("../../pages/blog/mobiledata_blog_page/learn_more/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%; }
+
+@media (min-width: 480px) {
+  #learn-more .epic-cover {
+    background-image: url("../../thumbnails/pages/blog/mobiledata_blog_page/learn_more/hero.small.jpg");
+    height: 500px; }
+  #learn-more .epic-cover .bg-loader {
+    background-image: url("../../pages/blog/mobiledata_blog_page/learn_more/hero.small.jpg"); } }
+
+@media (min-width: 718px) {
+  #learn-more .epic-cover {
+    background-image: url("../../thumbnails/pages/blog/mobiledata_blog_page/learn_more/hero.medium.jpg");
+    height: 500px; }
+  #learn-more .epic-cover .bg-loader {
+    background-image: url("../../pages/blog/mobiledata_blog_page/learn_more/hero.medium.jpg"); } }
+
+@media (min-width: 1024px) {
+  #learn-more .epic-cover {
+    background-image: url("../../thumbnails/pages/blog/mobiledata_blog_page/learn_more/hero.large.jpg");
+    height: 500px; }
+  #learn-more .epic-cover .bg-loader {
+    background-image: url("../../pages/blog/mobiledata_blog_page/learn_more/hero.large.jpg"); } }
+
+@media (min-width: 1292px) {
+  #learn-more .epic-cover {
+    background-image: url("../../thumbnails/pages/blog/mobiledata_blog_page/learn_more/hero.extra-large.jpg");
+    height: 500px; }
+  #learn-more .epic-cover .bg-loader {
+    background-image: url("../../pages/blog/mobiledata_blog_page/learn_more/hero.extra-large.jpg"); } }
+
+.cms-india {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../../thumbnails/pages/blog/mobiledata_blog_page/cms/hero.large.jpg");
+  transition: .5s background ease-in-out;
+  position: relative;
+  height: 328px !important; }
+  .cms-india.loaded,
+  .cms-india .bg-preload {
+    background-image: url("../../pages/blog/mobiledata_blog_page/cms/hero.large.jpg"); }
+
+.sehgal {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../../thumbnails/pages/blog/mobiledata_blog_page/sehgal_foundation/hero.large.jpg");
+  transition: .5s background ease-in-out;
+  position: relative;
+  height: 328px !important; }
+  .sehgal.loaded,
+  .sehgal .bg-preload {
+    background-image: url("../../pages/blog/mobiledata_blog_page/sehgal_foundation/hero.large.jpg"); }
+
+.beneficiaries {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../../thumbnails/pages/blog/mobiledata_blog_page/find_tool/hero.large.jpg");
+  transition: .5s background ease-in-out;
+  position: relative; }
+  .beneficiaries.loaded,
+  .beneficiaries .bg-preload {
+    background-image: url("../../pages/blog/mobiledata_blog_page/find_tool/hero.large.jpg"); }
+
+.blog-contact {
+  white-space: nowrap; }
+
+.border-left-blog {
+  border-left: 3px solid #004ebc;
+  padding-left: 10px;
+  line-height: 30px; }
+
+.point-spacing {
+  margin-left: 0px !important; }
+
+.blog_build .blog_image {
+  background-image: url("../../thumbnails/pages/blog/mobiledata_blog_page/blog_build/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  height: 290px;
+  transition: .5s background ease-in-out;
+  position: relative; }
+
+.blog_build .blog_image .bg-loader {
+  background-image: url("../../pages/blog/mobiledata_blog_page/blog_build/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%; }
+
+@media (min-width: 480px) {
+  .blog_build .blog_image {
+    background-image: url("../../thumbnails/pages/blog/mobiledata_blog_page/blog_build/hero.small.jpg");
+    height: 390px; }
+  .blog_build .blog_image .bg-loader {
+    background-image: url("../../pages/blog/mobiledata_blog_page/blog_build/hero.small.jpg"); } }
+
+@media (min-width: 718px) {
+  .blog_build .blog_image {
+    background-image: url("../../thumbnails/pages/blog/mobiledata_blog_page/blog_build/hero.medium.jpg");
+    height: 390px; }
+  .blog_build .blog_image .bg-loader {
+    background-image: url("../../pages/blog/mobiledata_blog_page/blog_build/hero.medium.jpg"); } }
+
+@media (min-width: 1024px) {
+  .blog_build .blog_image {
+    background-image: url("../../thumbnails/pages/blog/mobiledata_blog_page/blog_build/hero.large.jpg");
+    height: 390px; }
+  .blog_build .blog_image .bg-loader {
+    background-image: url("../../pages/blog/mobiledata_blog_page/blog_build/hero.large.jpg"); } }
+
+@media (min-width: 1292px) {
+  .blog_build .blog_image {
+    background-image: url("../../thumbnails/pages/blog/mobiledata_blog_page/blog_build/hero.extra-large.jpg");
+    height: 392px; }
+  .blog_build .blog_image .bg-loader {
+    background-image: url("../../pages/blog/mobiledata_blog_page/blog_build/hero.extra-large.jpg"); } }
+
+@media (min-width: 718px) {
+  .blog_build .off-grid {
+    bottom: 20px;
+    left: -337px;
+    position: absolute;
+    right: 0;
+    width: 100%;
+    z-index: 1; }
+  .blog_build .content {
+    position: relative;
+    z-index: 2; } }
+
+@media (min-width: 1024px) {
+  .blog_build .off-grid {
+    left: -180px; } }

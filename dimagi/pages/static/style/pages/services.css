@@ -1,0 +1,131 @@
+.services-page .hero {
+  background-image: url("../../thumbnails/pages/services/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  height: 500px;
+  transition: .5s background ease-in-out;
+  position: relative; }
+
+.services-page .hero .bg-loader {
+  background-image: url("../../pages/services/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%; }
+
+@media (min-width: 480px) {
+  .services-page .hero {
+    background-image: url("../../thumbnails/pages/services/hero.small.jpg");
+    height: 500px; }
+  .services-page .hero .bg-loader {
+    background-image: url("../../pages/services/hero.small.jpg"); } }
+
+@media (min-width: 718px) {
+  .services-page .hero {
+    background-image: url("../../thumbnails/pages/services/hero.medium.jpg");
+    height: 500px; }
+  .services-page .hero .bg-loader {
+    background-image: url("../../pages/services/hero.medium.jpg"); } }
+
+@media (min-width: 1024px) {
+  .services-page .hero {
+    background-image: url("../../thumbnails/pages/services/hero.large.jpg");
+    height: 500px; }
+  .services-page .hero .bg-loader {
+    background-image: url("../../pages/services/hero.large.jpg"); } }
+
+@media (min-width: 1292px) {
+  .services-page .hero {
+    background-image: url("../../thumbnails/pages/services/hero.extra-large.jpg");
+    height: 500px; }
+  .services-page .hero .bg-loader {
+    background-image: url("../../pages/services/hero.extra-large.jpg"); } }
+
+@media (min-width: 718px) {
+  .services-page .hero h1 {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 55%; } }
+
+.overview .image.testimonial1 {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../../thumbnails/pages/services/overview1.jpg");
+  transition: .5s background ease-in-out;
+  position: relative; }
+  .overview .image.testimonial1.loaded,
+  .overview .image.testimonial1 .bg-preload {
+    background-image: url("../../pages/services/overview1.jpg"); }
+
+.overview .image.testimonial2 {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../../thumbnails/pages/services/overview2.jpg");
+  transition: .5s background ease-in-out;
+  position: relative; }
+  .overview .image.testimonial2.loaded,
+  .overview .image.testimonial2 .bg-preload {
+    background-image: url("../../pages/services/overview2.jpg"); }
+
+.testimonials .image.testimonial1 {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../../thumbnails/pages/services/testimonials1.jpg");
+  transition: .5s background ease-in-out;
+  position: relative; }
+  .testimonials .image.testimonial1.loaded,
+  .testimonials .image.testimonial1 .bg-preload {
+    background-image: url("../../pages/services/testimonials1.jpg"); }
+
+.testimonials .image.testimonial2 {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../../thumbnails/pages/services/testimonials2.jpg");
+  transition: .5s background ease-in-out;
+  position: relative; }
+  .testimonials .image.testimonial2.loaded,
+  .testimonials .image.testimonial2 .bg-preload {
+    background-image: url("../../pages/services/testimonials2.jpg"); }
+
+.packages-pricing,
+.packages-includes {
+  left: 0;
+  position: absolute;
+  width: 100%; }
+  .packages-pricing p,
+  .packages-includes p {
+    margin-left: 30px;
+    margin-right: 30px; }
+
+.packages-pricing {
+  bottom: 100px;
+  color: #6c7980;
+  font-size: 11px; }
+
+@media (min-width: 480px) {
+  .no-touch .packages .flip-card {
+    height: auto; }
+  .touch .packages .flip-card .front {
+    height: auto; } }
+
+@media (min-width: 718px) {
+  .no-touch .packages .flip-card {
+    height: 100px; }
+  .touch .packages .flip-card .front {
+    height: 100px; } }
+
+@media (min-width: 1024px) {
+  .no-touch .packages .flip-card {
+    height: 180px; }
+  .touch .packages .flip-card .front {
+    height: 185px; } }
+
+@media (min-width: 1292px) {
+  .no-touch .packages .flip-card {
+    height: 150px; }
+  .touch .packages .flip-card .front {
+    height: 160px; } }

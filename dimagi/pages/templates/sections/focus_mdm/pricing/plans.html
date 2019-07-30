@@ -1,0 +1,78 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="plans accent-gray-bg border-bottom"
+         id="plans">
+  <div class="content pad-bottom-medium pad-top-medium align-center">
+
+    <div class="intro gap-bottom-line">
+      <h2>
+        {% blocktrans %}
+          CommCare Pricing
+        {% endblocktrans %}
+      </h2>
+      <p class="content-width-small">
+        {% blocktrans %}
+          Affordable mobile data collection pricing plans.
+        {% endblocktrans %}
+      </p>
+    </div>
+
+    <p class="switch-label">
+      {% trans "Pay Annually" %}
+      <label class="switch">
+        <input type="checkbox" data-bind="checked: showMonthly">
+        <span class="slider round slider-blue slider-blue-on"></span>
+      </label>
+      {% trans "Pay Monthly" %}
+    </p>
+
+
+    <p class="gap-bottom-base">
+      {% blocktrans %}
+        Save close to 20% when you pay annually.
+      {% endblocktrans %}
+    </p>
+
+    <p class="refund-text"
+       data-bind="css: { 'refund-text-hide': showMonthly }">
+      <a href="{% url 'terms' 'latest' 'tos' %}"
+         class="{% click_body 'plans-refund' %} check-icon blue">
+        {% trans '90 day refund policy' %}
+      </a>
+    </p>
+
+    <div class="grid-2-at-medium grid-4-at-large grid-row-equal-heights gap-bottom-small gap-top-medium">
+
+      {% click_body 'plans-standard' as click_standard %}
+      {% include "sections/commcare/pricing/plans/standard.html" with theme="green" css_id="plans-standard" click_class=click_standard %}
+
+      {% click_body 'plans-pro' as click_pro %}
+      {% include "sections/commcare/pricing/plans/pro.html" with theme="turquoise" highlight=True css_id="plans-pro" click_class=click_pro %}
+
+      {% click_body 'plans-advanced' as click_advanced %}
+      {% include "sections/commcare/pricing/plans/advanced.html" with theme="purple" css_id="plans-advanced" click_class=click_advanced %}
+
+      {% click_body 'plans-enterprise' as click_enterprise %}
+      {% include "sections/commcare/pricing/plans/enterprise.html" with theme="blue" css_id="plans-enterprise" click_class=click_enterprise %}
+
+    </div>{# .grid-2-at-medium #}
+
+    <p>
+      {% click_body 'plans-community' as click_community %}
+      {% blocktrans %}
+        Just looking to test CommCare? Check out our free
+        <a href="https://www.commcarehq.org/register/user"
+           class="{{ click_community }}"
+           data-kmq-external="true"
+           data-kmq-name="Clicked Start Trial - Pricing (Community)">Community</a> plan.
+      {% endblocktrans %}<br />
+      {% url 'proposals' as proposal_url %}
+      {% click_body 'plans-proposals' as click_proposals %}
+      {% blocktrans %}
+        Pursuing a large-scale bid? Contact our <a href="{{ proposal_url }}" class="{{ click_proposals }}">proposal team</a>.
+      {% endblocktrans %}
+    </p>
+
+  </div>{# .content #}
+</section>

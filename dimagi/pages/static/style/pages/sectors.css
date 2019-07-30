@@ -1,0 +1,962 @@
+.sectors-page .hero {
+  background-image: url("../../thumbnails/pages/sectors/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  height: 500px;
+  transition: .5s background ease-in-out;
+  position: relative; }
+
+.sectors-page .hero .bg-loader {
+  background-image: url("../../pages/sectors/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%; }
+
+@media (min-width: 480px) {
+  .sectors-page .hero {
+    background-image: url("../../thumbnails/pages/sectors/hero.small.jpg");
+    height: 500px; }
+  .sectors-page .hero .bg-loader {
+    background-image: url("../../pages/sectors/hero.small.jpg"); } }
+
+@media (min-width: 718px) {
+  .sectors-page .hero {
+    background-image: url("../../thumbnails/pages/sectors/hero.medium.jpg");
+    height: 500px; }
+  .sectors-page .hero .bg-loader {
+    background-image: url("../../pages/sectors/hero.medium.jpg"); } }
+
+@media (min-width: 1024px) {
+  .sectors-page .hero {
+    background-image: url("../../thumbnails/pages/sectors/hero.large.jpg");
+    height: 500px; }
+  .sectors-page .hero .bg-loader {
+    background-image: url("../../pages/sectors/hero.large.jpg"); } }
+
+@media (min-width: 1292px) {
+  .sectors-page .hero {
+    background-image: url("../../thumbnails/pages/sectors/hero.extra-large.jpg");
+    height: 500px; }
+  .sectors-page .hero .bg-loader {
+    background-image: url("../../pages/sectors/hero.extra-large.jpg"); } }
+
+@media (min-width: 718px) {
+  .hero h1 {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 100%; } }
+
+.agricultural-cooperatives-page .hero {
+  background-image: url("../../thumbnails/pages/sectors/agricultural-cooperatives/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  height: 500px;
+  transition: .5s background ease-in-out;
+  position: relative; }
+
+.agricultural-cooperatives-page .hero .bg-loader {
+  background-image: url("../../pages/sectors/agricultural-cooperatives/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%; }
+
+@media (min-width: 480px) {
+  .agricultural-cooperatives-page .hero {
+    background-image: url("../../thumbnails/pages/sectors/agricultural-cooperatives/hero.small.jpg");
+    height: 500px; }
+  .agricultural-cooperatives-page .hero .bg-loader {
+    background-image: url("../../pages/sectors/agricultural-cooperatives/hero.small.jpg"); } }
+
+@media (min-width: 718px) {
+  .agricultural-cooperatives-page .hero {
+    background-image: url("../../thumbnails/pages/sectors/agricultural-cooperatives/hero.medium.jpg");
+    height: 500px; }
+  .agricultural-cooperatives-page .hero .bg-loader {
+    background-image: url("../../pages/sectors/agricultural-cooperatives/hero.medium.jpg"); } }
+
+@media (min-width: 1024px) {
+  .agricultural-cooperatives-page .hero {
+    background-image: url("../../thumbnails/pages/sectors/agricultural-cooperatives/hero.large.jpg");
+    height: 500px; }
+  .agricultural-cooperatives-page .hero .bg-loader {
+    background-image: url("../../pages/sectors/agricultural-cooperatives/hero.large.jpg"); } }
+
+@media (min-width: 1292px) {
+  .agricultural-cooperatives-page .hero {
+    background-image: url("../../thumbnails/pages/sectors/agricultural-cooperatives/hero.extra-large.jpg");
+    height: 500px; }
+  .agricultural-cooperatives-page .hero .bg-loader {
+    background-image: url("../../pages/sectors/agricultural-cooperatives/hero.extra-large.jpg"); } }
+
+.agricultural-finance-page .hero {
+  background-image: url("../../thumbnails/pages/sectors/agricultural-finance/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  height: 500px;
+  transition: .5s background ease-in-out;
+  position: relative; }
+
+.agricultural-finance-page .hero .bg-loader {
+  background-image: url("../../pages/sectors/agricultural-finance/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%; }
+
+@media (min-width: 480px) {
+  .agricultural-finance-page .hero {
+    background-image: url("../../thumbnails/pages/sectors/agricultural-finance/hero.small.jpg");
+    height: 500px; }
+  .agricultural-finance-page .hero .bg-loader {
+    background-image: url("../../pages/sectors/agricultural-finance/hero.small.jpg"); } }
+
+@media (min-width: 718px) {
+  .agricultural-finance-page .hero {
+    background-image: url("../../thumbnails/pages/sectors/agricultural-finance/hero.medium.jpg");
+    height: 500px; }
+  .agricultural-finance-page .hero .bg-loader {
+    background-image: url("../../pages/sectors/agricultural-finance/hero.medium.jpg"); } }
+
+@media (min-width: 1024px) {
+  .agricultural-finance-page .hero {
+    background-image: url("../../thumbnails/pages/sectors/agricultural-finance/hero.large.jpg");
+    height: 500px; }
+  .agricultural-finance-page .hero .bg-loader {
+    background-image: url("../../pages/sectors/agricultural-finance/hero.large.jpg"); } }
+
+@media (min-width: 1292px) {
+  .agricultural-finance-page .hero {
+    background-image: url("../../thumbnails/pages/sectors/agricultural-finance/hero.extra-large.jpg");
+    height: 500px; }
+  .agricultural-finance-page .hero .bg-loader {
+    background-image: url("../../pages/sectors/agricultural-finance/hero.extra-large.jpg"); } }
+
+.agricultural-logistics-page .hero {
+  background-image: url("../../thumbnails/pages/sectors/agricultural-logistics/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  height: 500px;
+  transition: .5s background ease-in-out;
+  position: relative; }
+
+.agricultural-logistics-page .hero .bg-loader {
+  background-image: url("../../pages/sectors/agricultural-logistics/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%; }
+
+@media (min-width: 480px) {
+  .agricultural-logistics-page .hero {
+    background-image: url("../../thumbnails/pages/sectors/agricultural-logistics/hero.small.jpg");
+    height: 500px; }
+  .agricultural-logistics-page .hero .bg-loader {
+    background-image: url("../../pages/sectors/agricultural-logistics/hero.small.jpg"); } }
+
+@media (min-width: 718px) {
+  .agricultural-logistics-page .hero {
+    background-image: url("../../thumbnails/pages/sectors/agricultural-logistics/hero.medium.jpg");
+    height: 500px; }
+  .agricultural-logistics-page .hero .bg-loader {
+    background-image: url("../../pages/sectors/agricultural-logistics/hero.medium.jpg"); } }
+
+@media (min-width: 1024px) {
+  .agricultural-logistics-page .hero {
+    background-image: url("../../thumbnails/pages/sectors/agricultural-logistics/hero.large.jpg");
+    height: 500px; }
+  .agricultural-logistics-page .hero .bg-loader {
+    background-image: url("../../pages/sectors/agricultural-logistics/hero.large.jpg"); } }
+
+@media (min-width: 1292px) {
+  .agricultural-logistics-page .hero {
+    background-image: url("../../thumbnails/pages/sectors/agricultural-logistics/hero.extra-large.jpg");
+    height: 500px; }
+  .agricultural-logistics-page .hero .bg-loader {
+    background-image: url("../../pages/sectors/agricultural-logistics/hero.extra-large.jpg"); } }
+
+.agriculture-extension-programs-page .hero {
+  background-image: url("../../thumbnails/pages/sectors/agriculture-extension-programs/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  height: 500px;
+  transition: .5s background ease-in-out;
+  position: relative; }
+
+.agriculture-extension-programs-page .hero .bg-loader {
+  background-image: url("../../pages/sectors/agriculture-extension-programs/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%; }
+
+@media (min-width: 480px) {
+  .agriculture-extension-programs-page .hero {
+    background-image: url("../../thumbnails/pages/sectors/agriculture-extension-programs/hero.small.jpg");
+    height: 500px; }
+  .agriculture-extension-programs-page .hero .bg-loader {
+    background-image: url("../../pages/sectors/agriculture-extension-programs/hero.small.jpg"); } }
+
+@media (min-width: 718px) {
+  .agriculture-extension-programs-page .hero {
+    background-image: url("../../thumbnails/pages/sectors/agriculture-extension-programs/hero.medium.jpg");
+    height: 500px; }
+  .agriculture-extension-programs-page .hero .bg-loader {
+    background-image: url("../../pages/sectors/agriculture-extension-programs/hero.medium.jpg"); } }
+
+@media (min-width: 1024px) {
+  .agriculture-extension-programs-page .hero {
+    background-image: url("../../thumbnails/pages/sectors/agriculture-extension-programs/hero.large.jpg");
+    height: 500px; }
+  .agriculture-extension-programs-page .hero .bg-loader {
+    background-image: url("../../pages/sectors/agriculture-extension-programs/hero.large.jpg"); } }
+
+@media (min-width: 1292px) {
+  .agriculture-extension-programs-page .hero {
+    background-image: url("../../thumbnails/pages/sectors/agriculture-extension-programs/hero.extra-large.jpg");
+    height: 500px; }
+  .agriculture-extension-programs-page .hero .bg-loader {
+    background-image: url("../../pages/sectors/agriculture-extension-programs/hero.extra-large.jpg"); } }
+
+.child-health-page .hero {
+  background-image: url("../../thumbnails/pages/sectors/child-health/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  height: 500px;
+  transition: .5s background ease-in-out;
+  position: relative; }
+
+.child-health-page .hero .bg-loader {
+  background-image: url("../../pages/sectors/child-health/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%; }
+
+@media (min-width: 480px) {
+  .child-health-page .hero {
+    background-image: url("../../thumbnails/pages/sectors/child-health/hero.small.jpg");
+    height: 500px; }
+  .child-health-page .hero .bg-loader {
+    background-image: url("../../pages/sectors/child-health/hero.small.jpg"); } }
+
+@media (min-width: 718px) {
+  .child-health-page .hero {
+    background-image: url("../../thumbnails/pages/sectors/child-health/hero.medium.jpg");
+    height: 500px; }
+  .child-health-page .hero .bg-loader {
+    background-image: url("../../pages/sectors/child-health/hero.medium.jpg"); } }
+
+@media (min-width: 1024px) {
+  .child-health-page .hero {
+    background-image: url("../../thumbnails/pages/sectors/child-health/hero.large.jpg");
+    height: 500px; }
+  .child-health-page .hero .bg-loader {
+    background-image: url("../../pages/sectors/child-health/hero.large.jpg"); } }
+
+@media (min-width: 1292px) {
+  .child-health-page .hero {
+    background-image: url("../../thumbnails/pages/sectors/child-health/hero.extra-large.jpg");
+    height: 500px; }
+  .child-health-page .hero .bg-loader {
+    background-image: url("../../pages/sectors/child-health/hero.extra-large.jpg"); } }
+
+.ebola-response-page .hero {
+  background-image: url("../../thumbnails/pages/sectors/ebola-response/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  height: 500px;
+  transition: .5s background ease-in-out;
+  position: relative; }
+
+.ebola-response-page .hero .bg-loader {
+  background-image: url("../../pages/sectors/ebola-response/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%; }
+
+@media (min-width: 480px) {
+  .ebola-response-page .hero {
+    background-image: url("../../thumbnails/pages/sectors/ebola-response/hero.small.jpg");
+    height: 500px; }
+  .ebola-response-page .hero .bg-loader {
+    background-image: url("../../pages/sectors/ebola-response/hero.small.jpg"); } }
+
+@media (min-width: 718px) {
+  .ebola-response-page .hero {
+    background-image: url("../../thumbnails/pages/sectors/ebola-response/hero.medium.jpg");
+    height: 500px; }
+  .ebola-response-page .hero .bg-loader {
+    background-image: url("../../pages/sectors/ebola-response/hero.medium.jpg"); } }
+
+@media (min-width: 1024px) {
+  .ebola-response-page .hero {
+    background-image: url("../../thumbnails/pages/sectors/ebola-response/hero.large.jpg");
+    height: 500px; }
+  .ebola-response-page .hero .bg-loader {
+    background-image: url("../../pages/sectors/ebola-response/hero.large.jpg"); } }
+
+@media (min-width: 1292px) {
+  .ebola-response-page .hero {
+    background-image: url("../../thumbnails/pages/sectors/ebola-response/hero.extra-large.jpg");
+    height: 500px; }
+  .ebola-response-page .hero .bg-loader {
+    background-image: url("../../pages/sectors/ebola-response/hero.extra-large.jpg"); } }
+
+.education-page .hero {
+  background-image: url("../../thumbnails/pages/sectors/education/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  height: 500px;
+  transition: .5s background ease-in-out;
+  position: relative; }
+
+.education-page .hero .bg-loader {
+  background-image: url("../../pages/sectors/education/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%; }
+
+@media (min-width: 480px) {
+  .education-page .hero {
+    background-image: url("../../thumbnails/pages/sectors/education/hero.small.jpg");
+    height: 500px; }
+  .education-page .hero .bg-loader {
+    background-image: url("../../pages/sectors/education/hero.small.jpg"); } }
+
+@media (min-width: 718px) {
+  .education-page .hero {
+    background-image: url("../../thumbnails/pages/sectors/education/hero.medium.jpg");
+    height: 500px; }
+  .education-page .hero .bg-loader {
+    background-image: url("../../pages/sectors/education/hero.medium.jpg"); } }
+
+@media (min-width: 1024px) {
+  .education-page .hero {
+    background-image: url("../../thumbnails/pages/sectors/education/hero.large.jpg");
+    height: 500px; }
+  .education-page .hero .bg-loader {
+    background-image: url("../../pages/sectors/education/hero.large.jpg"); } }
+
+@media (min-width: 1292px) {
+  .education-page .hero {
+    background-image: url("../../thumbnails/pages/sectors/education/hero.extra-large.jpg");
+    height: 500px; }
+  .education-page .hero .bg-loader {
+    background-image: url("../../pages/sectors/education/hero.extra-large.jpg"); } }
+
+.gender-based-violence-page .hero {
+  background-image: url("../../thumbnails/pages/sectors/gender-based-violence/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  height: 500px;
+  transition: .5s background ease-in-out;
+  position: relative; }
+
+.gender-based-violence-page .hero .bg-loader {
+  background-image: url("../../pages/sectors/gender-based-violence/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%; }
+
+@media (min-width: 480px) {
+  .gender-based-violence-page .hero {
+    background-image: url("../../thumbnails/pages/sectors/gender-based-violence/hero.small.jpg");
+    height: 500px; }
+  .gender-based-violence-page .hero .bg-loader {
+    background-image: url("../../pages/sectors/gender-based-violence/hero.small.jpg"); } }
+
+@media (min-width: 718px) {
+  .gender-based-violence-page .hero {
+    background-image: url("../../thumbnails/pages/sectors/gender-based-violence/hero.medium.jpg");
+    height: 500px; }
+  .gender-based-violence-page .hero .bg-loader {
+    background-image: url("../../pages/sectors/gender-based-violence/hero.medium.jpg"); } }
+
+@media (min-width: 1024px) {
+  .gender-based-violence-page .hero {
+    background-image: url("../../thumbnails/pages/sectors/gender-based-violence/hero.large.jpg");
+    height: 500px; }
+  .gender-based-violence-page .hero .bg-loader {
+    background-image: url("../../pages/sectors/gender-based-violence/hero.large.jpg"); } }
+
+@media (min-width: 1292px) {
+  .gender-based-violence-page .hero {
+    background-image: url("../../thumbnails/pages/sectors/gender-based-violence/hero.extra-large.jpg");
+    height: 500px; }
+  .gender-based-violence-page .hero .bg-loader {
+    background-image: url("../../pages/sectors/gender-based-violence/hero.extra-large.jpg"); } }
+
+.hiv-aids-page .hero {
+  background-image: url("../../thumbnails/pages/sectors/hiv-aids/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  height: 500px;
+  transition: .5s background ease-in-out;
+  position: relative; }
+
+.hiv-aids-page .hero .bg-loader {
+  background-image: url("../../pages/sectors/hiv-aids/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%; }
+
+@media (min-width: 480px) {
+  .hiv-aids-page .hero {
+    background-image: url("../../thumbnails/pages/sectors/hiv-aids/hero.small.jpg");
+    height: 500px; }
+  .hiv-aids-page .hero .bg-loader {
+    background-image: url("../../pages/sectors/hiv-aids/hero.small.jpg"); } }
+
+@media (min-width: 718px) {
+  .hiv-aids-page .hero {
+    background-image: url("../../thumbnails/pages/sectors/hiv-aids/hero.medium.jpg");
+    height: 500px; }
+  .hiv-aids-page .hero .bg-loader {
+    background-image: url("../../pages/sectors/hiv-aids/hero.medium.jpg"); } }
+
+@media (min-width: 1024px) {
+  .hiv-aids-page .hero {
+    background-image: url("../../thumbnails/pages/sectors/hiv-aids/hero.large.jpg");
+    height: 500px; }
+  .hiv-aids-page .hero .bg-loader {
+    background-image: url("../../pages/sectors/hiv-aids/hero.large.jpg"); } }
+
+@media (min-width: 1292px) {
+  .hiv-aids-page .hero {
+    background-image: url("../../thumbnails/pages/sectors/hiv-aids/hero.extra-large.jpg");
+    height: 500px; }
+  .hiv-aids-page .hero .bg-loader {
+    background-image: url("../../pages/sectors/hiv-aids/hero.extra-large.jpg"); } }
+
+.humanitarian-response-page .hero {
+  background-image: url("../../thumbnails/pages/sectors/humanitarian-response/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  height: 500px;
+  transition: .5s background ease-in-out;
+  position: relative; }
+
+.humanitarian-response-page .hero .bg-loader {
+  background-image: url("../../pages/sectors/humanitarian-response/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%; }
+
+@media (min-width: 480px) {
+  .humanitarian-response-page .hero {
+    background-image: url("../../thumbnails/pages/sectors/humanitarian-response/hero.small.jpg");
+    height: 500px; }
+  .humanitarian-response-page .hero .bg-loader {
+    background-image: url("../../pages/sectors/humanitarian-response/hero.small.jpg"); } }
+
+@media (min-width: 718px) {
+  .humanitarian-response-page .hero {
+    background-image: url("../../thumbnails/pages/sectors/humanitarian-response/hero.medium.jpg");
+    height: 500px; }
+  .humanitarian-response-page .hero .bg-loader {
+    background-image: url("../../pages/sectors/humanitarian-response/hero.medium.jpg"); } }
+
+@media (min-width: 1024px) {
+  .humanitarian-response-page .hero {
+    background-image: url("../../thumbnails/pages/sectors/humanitarian-response/hero.large.jpg");
+    height: 500px; }
+  .humanitarian-response-page .hero .bg-loader {
+    background-image: url("../../pages/sectors/humanitarian-response/hero.large.jpg"); } }
+
+@media (min-width: 1292px) {
+  .humanitarian-response-page .hero {
+    background-image: url("../../thumbnails/pages/sectors/humanitarian-response/hero.extra-large.jpg");
+    height: 500px; }
+  .humanitarian-response-page .hero .bg-loader {
+    background-image: url("../../pages/sectors/humanitarian-response/hero.extra-large.jpg"); } }
+
+.maternal-and-newborn-health-page .hero {
+  background-image: url("../../thumbnails/pages/sectors/maternal-and-newborn-health/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  height: 500px;
+  transition: .5s background ease-in-out;
+  position: relative; }
+
+.maternal-and-newborn-health-page .hero .bg-loader {
+  background-image: url("../../pages/sectors/maternal-and-newborn-health/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%; }
+
+@media (min-width: 480px) {
+  .maternal-and-newborn-health-page .hero {
+    background-image: url("../../thumbnails/pages/sectors/maternal-and-newborn-health/hero.small.jpg");
+    height: 500px; }
+  .maternal-and-newborn-health-page .hero .bg-loader {
+    background-image: url("../../pages/sectors/maternal-and-newborn-health/hero.small.jpg"); } }
+
+@media (min-width: 718px) {
+  .maternal-and-newborn-health-page .hero {
+    background-image: url("../../thumbnails/pages/sectors/maternal-and-newborn-health/hero.medium.jpg");
+    height: 500px; }
+  .maternal-and-newborn-health-page .hero .bg-loader {
+    background-image: url("../../pages/sectors/maternal-and-newborn-health/hero.medium.jpg"); } }
+
+@media (min-width: 1024px) {
+  .maternal-and-newborn-health-page .hero {
+    background-image: url("../../thumbnails/pages/sectors/maternal-and-newborn-health/hero.large.jpg");
+    height: 500px; }
+  .maternal-and-newborn-health-page .hero .bg-loader {
+    background-image: url("../../pages/sectors/maternal-and-newborn-health/hero.large.jpg"); } }
+
+@media (min-width: 1292px) {
+  .maternal-and-newborn-health-page .hero {
+    background-image: url("../../thumbnails/pages/sectors/maternal-and-newborn-health/hero.extra-large.jpg");
+    height: 500px; }
+  .maternal-and-newborn-health-page .hero .bg-loader {
+    background-image: url("../../pages/sectors/maternal-and-newborn-health/hero.extra-large.jpg"); } }
+
+.intrapartum-care-page .hero {
+  background-image: url("../../thumbnails/pages/sectors/intrapartum-care/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  height: 500px;
+  transition: .5s background ease-in-out;
+  position: relative; }
+
+.intrapartum-care-page .hero .bg-loader {
+  background-image: url("../../pages/sectors/intrapartum-care/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%; }
+
+@media (min-width: 480px) {
+  .intrapartum-care-page .hero {
+    background-image: url("../../thumbnails/pages/sectors/intrapartum-care/hero.small.jpg");
+    height: 500px; }
+  .intrapartum-care-page .hero .bg-loader {
+    background-image: url("../../pages/sectors/intrapartum-care/hero.small.jpg"); } }
+
+@media (min-width: 718px) {
+  .intrapartum-care-page .hero {
+    background-image: url("../../thumbnails/pages/sectors/intrapartum-care/hero.medium.jpg");
+    height: 500px; }
+  .intrapartum-care-page .hero .bg-loader {
+    background-image: url("../../pages/sectors/intrapartum-care/hero.medium.jpg"); } }
+
+@media (min-width: 1024px) {
+  .intrapartum-care-page .hero {
+    background-image: url("../../thumbnails/pages/sectors/intrapartum-care/hero.large.jpg");
+    height: 500px; }
+  .intrapartum-care-page .hero .bg-loader {
+    background-image: url("../../pages/sectors/intrapartum-care/hero.large.jpg"); } }
+
+@media (min-width: 1292px) {
+  .intrapartum-care-page .hero {
+    background-image: url("../../thumbnails/pages/sectors/intrapartum-care/hero.extra-large.jpg");
+    height: 500px; }
+  .intrapartum-care-page .hero .bg-loader {
+    background-image: url("../../pages/sectors/intrapartum-care/hero.extra-large.jpg"); } }
+
+.nutrition-page .hero {
+  background-image: url("../../thumbnails/pages/sectors/nutrition/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  height: 500px;
+  transition: .5s background ease-in-out;
+  position: relative; }
+
+.nutrition-page .hero .bg-loader {
+  background-image: url("../../pages/sectors/nutrition/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%; }
+
+@media (min-width: 480px) {
+  .nutrition-page .hero {
+    background-image: url("../../thumbnails/pages/sectors/nutrition/hero.small.jpg");
+    height: 500px; }
+  .nutrition-page .hero .bg-loader {
+    background-image: url("../../pages/sectors/nutrition/hero.small.jpg"); } }
+
+@media (min-width: 718px) {
+  .nutrition-page .hero {
+    background-image: url("../../thumbnails/pages/sectors/nutrition/hero.medium.jpg");
+    height: 500px; }
+  .nutrition-page .hero .bg-loader {
+    background-image: url("../../pages/sectors/nutrition/hero.medium.jpg"); } }
+
+@media (min-width: 1024px) {
+  .nutrition-page .hero {
+    background-image: url("../../thumbnails/pages/sectors/nutrition/hero.large.jpg");
+    height: 500px; }
+  .nutrition-page .hero .bg-loader {
+    background-image: url("../../pages/sectors/nutrition/hero.large.jpg"); } }
+
+@media (min-width: 1292px) {
+  .nutrition-page .hero {
+    background-image: url("../../thumbnails/pages/sectors/nutrition/hero.extra-large.jpg");
+    height: 500px; }
+  .nutrition-page .hero .bg-loader {
+    background-image: url("../../pages/sectors/nutrition/hero.extra-large.jpg"); } }
+
+.programmatic-research-page .hero {
+  background-image: url("../../thumbnails/pages/sectors/programmatic-research/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  height: 500px;
+  transition: .5s background ease-in-out;
+  position: relative; }
+
+.programmatic-research-page .hero .bg-loader {
+  background-image: url("../../pages/sectors/programmatic-research/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%; }
+
+@media (min-width: 480px) {
+  .programmatic-research-page .hero {
+    background-image: url("../../thumbnails/pages/sectors/programmatic-research/hero.small.jpg");
+    height: 500px; }
+  .programmatic-research-page .hero .bg-loader {
+    background-image: url("../../pages/sectors/programmatic-research/hero.small.jpg"); } }
+
+@media (min-width: 718px) {
+  .programmatic-research-page .hero {
+    background-image: url("../../thumbnails/pages/sectors/programmatic-research/hero.medium.jpg");
+    height: 500px; }
+  .programmatic-research-page .hero .bg-loader {
+    background-image: url("../../pages/sectors/programmatic-research/hero.medium.jpg"); } }
+
+@media (min-width: 1024px) {
+  .programmatic-research-page .hero {
+    background-image: url("../../thumbnails/pages/sectors/programmatic-research/hero.large.jpg");
+    height: 500px; }
+  .programmatic-research-page .hero .bg-loader {
+    background-image: url("../../pages/sectors/programmatic-research/hero.large.jpg"); } }
+
+@media (min-width: 1292px) {
+  .programmatic-research-page .hero {
+    background-image: url("../../thumbnails/pages/sectors/programmatic-research/hero.extra-large.jpg");
+    height: 500px; }
+  .programmatic-research-page .hero .bg-loader {
+    background-image: url("../../pages/sectors/programmatic-research/hero.extra-large.jpg"); } }
+
+.reproductive-health-page .hero {
+  background-image: url("../../thumbnails/pages/sectors/reproductive-health/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  height: 500px;
+  transition: .5s background ease-in-out;
+  position: relative; }
+
+.reproductive-health-page .hero .bg-loader {
+  background-image: url("../../pages/sectors/reproductive-health/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%; }
+
+@media (min-width: 480px) {
+  .reproductive-health-page .hero {
+    background-image: url("../../thumbnails/pages/sectors/reproductive-health/hero.small.jpg");
+    height: 500px; }
+  .reproductive-health-page .hero .bg-loader {
+    background-image: url("../../pages/sectors/reproductive-health/hero.small.jpg"); } }
+
+@media (min-width: 718px) {
+  .reproductive-health-page .hero {
+    background-image: url("../../thumbnails/pages/sectors/reproductive-health/hero.medium.jpg");
+    height: 500px; }
+  .reproductive-health-page .hero .bg-loader {
+    background-image: url("../../pages/sectors/reproductive-health/hero.medium.jpg"); } }
+
+@media (min-width: 1024px) {
+  .reproductive-health-page .hero {
+    background-image: url("../../thumbnails/pages/sectors/reproductive-health/hero.large.jpg");
+    height: 500px; }
+  .reproductive-health-page .hero .bg-loader {
+    background-image: url("../../pages/sectors/reproductive-health/hero.large.jpg"); } }
+
+@media (min-width: 1292px) {
+  .reproductive-health-page .hero {
+    background-image: url("../../thumbnails/pages/sectors/reproductive-health/hero.extra-large.jpg");
+    height: 500px; }
+  .reproductive-health-page .hero .bg-loader {
+    background-image: url("../../pages/sectors/reproductive-health/hero.extra-large.jpg"); } }
+
+.small-businesses-page .hero {
+  background-image: url("../../thumbnails/pages/sectors/small-businesses/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  height: 500px;
+  transition: .5s background ease-in-out;
+  position: relative; }
+
+.small-businesses-page .hero .bg-loader {
+  background-image: url("../../pages/sectors/small-businesses/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%; }
+
+@media (min-width: 480px) {
+  .small-businesses-page .hero {
+    background-image: url("../../thumbnails/pages/sectors/small-businesses/hero.small.jpg");
+    height: 500px; }
+  .small-businesses-page .hero .bg-loader {
+    background-image: url("../../pages/sectors/small-businesses/hero.small.jpg"); } }
+
+@media (min-width: 718px) {
+  .small-businesses-page .hero {
+    background-image: url("../../thumbnails/pages/sectors/small-businesses/hero.medium.jpg");
+    height: 500px; }
+  .small-businesses-page .hero .bg-loader {
+    background-image: url("../../pages/sectors/small-businesses/hero.medium.jpg"); } }
+
+@media (min-width: 1024px) {
+  .small-businesses-page .hero {
+    background-image: url("../../thumbnails/pages/sectors/small-businesses/hero.large.jpg");
+    height: 500px; }
+  .small-businesses-page .hero .bg-loader {
+    background-image: url("../../pages/sectors/small-businesses/hero.large.jpg"); } }
+
+@media (min-width: 1292px) {
+  .small-businesses-page .hero {
+    background-image: url("../../thumbnails/pages/sectors/small-businesses/hero.extra-large.jpg");
+    height: 500px; }
+  .small-businesses-page .hero .bg-loader {
+    background-image: url("../../pages/sectors/small-businesses/hero.extra-large.jpg"); } }
+
+.tuberculosis-page .hero {
+  background-image: url("../../thumbnails/pages/sectors/tuberculosis/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  height: 500px;
+  transition: .5s background ease-in-out;
+  position: relative; }
+
+.tuberculosis-page .hero .bg-loader {
+  background-image: url("../../pages/sectors/tuberculosis/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%; }
+
+@media (min-width: 480px) {
+  .tuberculosis-page .hero {
+    background-image: url("../../thumbnails/pages/sectors/tuberculosis/hero.small.jpg");
+    height: 500px; }
+  .tuberculosis-page .hero .bg-loader {
+    background-image: url("../../pages/sectors/tuberculosis/hero.small.jpg"); } }
+
+@media (min-width: 718px) {
+  .tuberculosis-page .hero {
+    background-image: url("../../thumbnails/pages/sectors/tuberculosis/hero.medium.jpg");
+    height: 500px; }
+  .tuberculosis-page .hero .bg-loader {
+    background-image: url("../../pages/sectors/tuberculosis/hero.medium.jpg"); } }
+
+@media (min-width: 1024px) {
+  .tuberculosis-page .hero {
+    background-image: url("../../thumbnails/pages/sectors/tuberculosis/hero.large.jpg");
+    height: 500px; }
+  .tuberculosis-page .hero .bg-loader {
+    background-image: url("../../pages/sectors/tuberculosis/hero.large.jpg"); } }
+
+@media (min-width: 1292px) {
+  .tuberculosis-page .hero {
+    background-image: url("../../thumbnails/pages/sectors/tuberculosis/hero.extra-large.jpg");
+    height: 500px; }
+  .tuberculosis-page .hero .bg-loader {
+    background-image: url("../../pages/sectors/tuberculosis/hero.extra-large.jpg"); } }
+
+.logistics-page .hero {
+  background-image: url("../../thumbnails/pages/sectors/logistics/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  height: 500px;
+  transition: .5s background ease-in-out;
+  position: relative; }
+
+.logistics-page .hero .bg-loader {
+  background-image: url("../../pages/sectors/logistics/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%; }
+
+@media (min-width: 480px) {
+  .logistics-page .hero {
+    background-image: url("../../thumbnails/pages/sectors/logistics/hero.small.jpg");
+    height: 500px; }
+  .logistics-page .hero .bg-loader {
+    background-image: url("../../pages/sectors/logistics/hero.small.jpg"); } }
+
+@media (min-width: 718px) {
+  .logistics-page .hero {
+    background-image: url("../../thumbnails/pages/sectors/logistics/hero.medium.jpg");
+    height: 500px; }
+  .logistics-page .hero .bg-loader {
+    background-image: url("../../pages/sectors/logistics/hero.medium.jpg"); } }
+
+@media (min-width: 1024px) {
+  .logistics-page .hero {
+    background-image: url("../../thumbnails/pages/sectors/logistics/hero.large.jpg");
+    height: 500px; }
+  .logistics-page .hero .bg-loader {
+    background-image: url("../../pages/sectors/logistics/hero.large.jpg"); } }
+
+@media (min-width: 1292px) {
+  .logistics-page .hero {
+    background-image: url("../../thumbnails/pages/sectors/logistics/hero.extra-large.jpg");
+    height: 500px; }
+  .logistics-page .hero .bg-loader {
+    background-image: url("../../pages/sectors/logistics/hero.extra-large.jpg"); } }
+
+.study-thumbnail {
+  background-position: "center";
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: "top center";
+  transition: .5s background ease-in-out;
+  padding-top: 126%; }
+  .study-thumbnail::after {
+    background-color: "top center"; }
+  .study-thumbnail:after {
+    background-color: #ff8400;
+    content: ' ';
+    display: block;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    transition: opacity .5s;
+    width: 100%; }
+
+a.study {
+  color: #5f6a7d !important;
+  font-weight: 400; }
+  a.study:hover .study-thumbnail:after {
+    opacity: .5; }
+
+.blog_build .blog_image {
+  background-image: url("../../thumbnails/pages/blog/mobiledata_blog_page/blog_build/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  height: 290px;
+  transition: .5s background ease-in-out;
+  position: relative; }
+
+.blog_build .blog_image .bg-loader {
+  background-image: url("../../pages/blog/mobiledata_blog_page/blog_build/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%; }
+
+@media (min-width: 480px) {
+  .blog_build .blog_image {
+    background-image: url("../../thumbnails/pages/blog/mobiledata_blog_page/blog_build/hero.small.jpg");
+    height: 390px; }
+  .blog_build .blog_image .bg-loader {
+    background-image: url("../../pages/blog/mobiledata_blog_page/blog_build/hero.small.jpg"); } }
+
+@media (min-width: 718px) {
+  .blog_build .blog_image {
+    background-image: url("../../thumbnails/pages/blog/mobiledata_blog_page/blog_build/hero.medium.jpg");
+    height: 390px; }
+  .blog_build .blog_image .bg-loader {
+    background-image: url("../../pages/blog/mobiledata_blog_page/blog_build/hero.medium.jpg"); } }
+
+@media (min-width: 1024px) {
+  .blog_build .blog_image {
+    background-image: url("../../thumbnails/pages/blog/mobiledata_blog_page/blog_build/hero.large.jpg");
+    height: 390px; }
+  .blog_build .blog_image .bg-loader {
+    background-image: url("../../pages/blog/mobiledata_blog_page/blog_build/hero.large.jpg"); } }
+
+@media (min-width: 1292px) {
+  .blog_build .blog_image {
+    background-image: url("../../thumbnails/pages/blog/mobiledata_blog_page/blog_build/hero.extra-large.jpg");
+    height: 392px; }
+  .blog_build .blog_image .bg-loader {
+    background-image: url("../../pages/blog/mobiledata_blog_page/blog_build/hero.extra-large.jpg"); } }
+
+@media (min-width: 718px) {
+  .blog_build .off-grid {
+    bottom: 20px;
+    left: -337px;
+    position: absolute;
+    right: 0;
+    width: 100%;
+    z-index: 1; }
+  .blog_build .content {
+    position: relative;
+    z-index: 2; } }
+
+@media (min-width: 1024px) {
+  .blog_build .off-grid {
+    left: -180px; } }
+
+.sector-home-inactive {
+  opacity: 0.4; }
+  @media (max-width: 480px) {
+    .sector-home-inactive {
+      opacity: 0.4; } }
+
+.sub-sector-selector {
+  z-index: 999 !important; }
+
+.selected {
+  border: 2px solid white;
+  background-color: #fafafa;
+  border-radius: 5px;
+  margin: 0 auto; }
+  .selected .words {
+    display: inline-block;
+    padding-right: 5px;
+    font-size: 15px; }
+  .selected .caret {
+    display: inline-block; }
+
+.selector,
+.selected {
+  cursor: pointer;
+  position: relative; }
+
+.selected-container {
+  width: 300px;
+  position: relative;
+  margin: 0 auto; }
+
+.selector {
+  border-radius: 5px;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+  left: 0;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  transform: translate3d(0, 20px, 0);
+  visibility: hidden;
+  box-sizing: border-box;
+  width: 100%;
+  z-index: 2; }
+
+.show-time .selector {
+  transition: visibility 0s .35s, opacity .35s 0s ease, transform .35s 0s ease; }
+
+.selector.show {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  transition: visibility 0s, opacity .25s 0s ease, transform .25s 0s ease;
+  visibility: visible; }

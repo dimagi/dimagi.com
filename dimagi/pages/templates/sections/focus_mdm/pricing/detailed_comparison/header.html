@@ -1,0 +1,107 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<div class="plan-row border-horz">
+  <div class="grid-6-at-large grid-5 grid-valign-middle">
+
+    <div class="column column-width-2-at-large align-left">
+      <a href="{% url 'annual_commcare_pricing_pdf' %}"
+         data-bind="visible: !showMonthly()"
+         class="button button-slate hide-until-large {% click_body 'details-download' %}">
+        {% blocktrans %}
+          Download Full<br /> Comparison Chart
+        {% endblocktrans %}
+      </a>
+      <a href="{% url 'monthly_commcare_pricing_pdf' %}"
+         data-bind="visible: showMonthly"
+         style="display: none;"
+         class="button button-slate hide-until-large {% click_body 'details-download' %}">
+        {% blocktrans %}
+          Download Full<br /> Comparison Chart
+        {% endblocktrans %}
+      </a>
+    </div>{# .column #}
+
+    <div class="column">
+      <div class="plan-column plan-standard">
+        <h3 class="green">
+          {% blocktrans %}
+            Standard
+          {% endblocktrans %}
+        </h3>
+        <div class="pricing-type pricing-type-green pricing-type-table gap-bottom-base"
+             data-bind="text: paymentType, css: { monthly: showMonthly }">
+          Paying Annually
+        </div>
+        <p>
+          {% blocktrans %}
+            $<span data-bind="text: standard.displayPrice">250</span> monthly
+          {% endblocktrans %}
+        </p>
+      </div>{# .plan-column #}
+    </div>{# .column #}
+
+    <div class="column">
+      <div class="plan-column plan-pro">
+        <h3 class="turquoise">
+          {% blocktrans %}
+            Pro
+          {% endblocktrans %}
+        </h3>
+        <div class="pricing-type pricing-type-turquoise pricing-type-table gap-bottom-base"
+             data-bind="text: paymentType, css: { monthly: showMonthly }">
+          Paying Annually
+        </div>
+        <p>
+          {% blocktrans %}
+            $<span data-bind="text: pro.displayPrice">500</span> monthly
+          {% endblocktrans %}
+        </p>
+      </div>{# .plan-column #}
+    </div>{# .column #}
+
+    <div class="column">
+      <div class="plan-column plan-advanced">
+        <h3 class="purple">
+          {% blocktrans %}
+            Advanced
+          {% endblocktrans %}
+        </h3>
+        <div class="pricing-type pricing-type-purple pricing-type-table gap-bottom-base"
+             data-bind="text: paymentType, css: { monthly: showMonthly }">
+          Paying Annually
+        </div>
+        <p>
+          {% blocktrans %}
+            $<span data-bind="text: advanced.displayPrice">1000</span> monthly
+          {% endblocktrans %}
+        </p>
+      </div>{# .plan-column #}
+    </div>{# .column #}
+
+    <div class="column">
+      <div class="plan-column plan-enterprise">
+        <h3 class="blue hide-until-medium">
+          {% blocktrans %}
+            Enterprise
+          {% endblocktrans %}
+        </h3>
+        <h3 class="blue hide-at-medium">
+          {% blocktrans %}
+            Enter-prise
+          {% endblocktrans %}
+        </h3>
+        <div class="pricing-type pricing-type-blue pricing-type-table gap-bottom-base"
+             data-bind="text: paymentType, css: { monthly: showMonthly }">
+          Paying Annually
+        </div>
+        <p class="gap-bottom-line gap-bottom-none-at-medium">
+          {% blocktrans %}
+            Custom
+          {% endblocktrans %}
+        </p>
+      </div>{# .plan-column #}
+    </div>{# .column #}
+
+  </div>{# .grid-6 #}
+</div>{# .plan-row #}

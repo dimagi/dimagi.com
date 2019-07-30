@@ -1,0 +1,199 @@
+@import 'app/mixins/background';
+@import 'app/variables/colors';
+@import 'app/variables/sizes';
+@import 'app/variables/type';
+
+
+.pricing-commcare-page {
+  @include make-bg(hero, '../../../pages/focus_mdm/pricing/hero');
+}
+
+@media (min-width: $width-desktop) {
+  .pricing-commcare-page .hero h1 {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 55%;
+  }
+}
+
+.plan-highlight {
+  &:before { // scss-lint:disable PropertyCount
+    border: 4px solid $color-turquoise;
+  }
+  &:hover {
+    &:before {
+      border-width: 2px;
+    }
+  }
+}
+
+.show-time .plan-highlight:before {
+  transition: all .5s;
+}
+
+.plans-popular {
+  display: none;
+}
+
+.plan-highlight .plans-popular { // scss-lint:disable PropertyCount
+  background-color: $color-turquoise;
+  border-radius: 50px;
+  color: $color-white;
+  display: block;
+  font-size: 11px;
+  font-weight: $font-weight-bold;
+  height: 100px;
+  left: -10px;
+  position: absolute;
+  text-align: center;
+  text-transform: uppercase;
+  top: -50px;
+  width: 100px;
+  z-index: 200;
+
+  span {
+    display: block;
+    line-height: 15px;
+    padding: 30px 10px;
+  }
+}
+
+.no-touch .plans .flip-card {
+  height: 150px;
+}
+
+$_no-touch-heights: (
+    small: auto,
+    medium: 160px,
+    large: 240px,
+    extra-large: 180px,
+);
+
+$_touch-front-heights: (
+    small: auto,
+    medium: 100px,
+    large: 155px,
+    extra-large: 150px,
+);
+
+@each $_size, $_width in $widths-by-size {
+  @media (min-width: $_width) {
+    .no-touch .plans .flip-card {
+      height: map-get($_no-touch-heights, $_size);
+    }
+
+    .touch .plans .flip-card .front { // scss-lint:disable SelectorDepth
+      height: map-get($_touch-front-heights, $_size);
+    }
+  }
+}
+
+.features-list li {
+  padding-left: 25px !important; // scss-lint:disable ImportantRule
+}
+
+.accordion-content .feature-row {
+  border-bottom: 1px solid $color-border;
+  padding: $space-small $space-small $space-small + 20px;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.feature-row {
+  cursor: pointer;
+  transition: background-color .5s ease-in-out;
+
+  &:hover {
+    background-color: $color-accent-gray;
+  }
+
+  .feature-standard,
+  .feature-advanced,
+  .feature-pro,
+  .feature-enterprise {
+    font-size: $font-size-small;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  @media (max-width: $width-desktop - 1px) {
+    h5 {
+      font-size: 12px;
+      line-height: 14px;
+    }
+  }
+}
+
+.feature-group-description {
+  background-color: $color-text;
+  border-bottom: 1px solid $color-border;
+  color: $color-white;
+  padding: $space-base $space-small;
+
+  a {
+    color: $color-blue-light;
+
+    &:hover {
+      color: $color-white;
+    }
+  }
+
+  p {
+    margin-bottom: 0;
+
+    @media (max-width: $width-desktop - 1px) {
+      text-align: center;
+    }
+  }
+}
+
+.feature-legend {
+  background-color: $color-accent-gray;
+  border: 1px solid $color-border;
+  font-size: $font-size-small;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: $space-base $space-small $space-small;
+  text-transform: uppercase;
+}
+
+.feature-key {
+  display: inline-block;
+  margin-left: $space-small;
+
+  svg {
+    margin-right: $space-base;
+  }
+}
+
+.plan-row {
+  padding: $space-line $space-small;
+
+  h3 {
+    font-size: $font-size-extra-large;
+    font-weight: 600;
+    letter-spacing: 1px;
+    line-height: 20px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+
+  .plan-column {
+    text-align: center;
+  }
+
+  @media (max-width: $width-desktop - 1px) {
+    h3,
+    p {
+      font-size: 10px;
+      line-height: 12px;
+    }
+
+    .plan-column {
+      height: 55px;
+    }
+  }
+}

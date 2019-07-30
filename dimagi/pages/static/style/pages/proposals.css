@@ -1,0 +1,150 @@
+.proposals-page .hero {
+  background-image: url("../../thumbnails/pages/proposals/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  height: 500px;
+  transition: .5s background ease-in-out;
+  position: relative; }
+
+.proposals-page .hero .bg-loader {
+  background-image: url("../../pages/proposals/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%; }
+
+@media (min-width: 480px) {
+  .proposals-page .hero {
+    background-image: url("../../thumbnails/pages/proposals/hero.small.jpg");
+    height: 500px; }
+  .proposals-page .hero .bg-loader {
+    background-image: url("../../pages/proposals/hero.small.jpg"); } }
+
+@media (min-width: 718px) {
+  .proposals-page .hero {
+    background-image: url("../../thumbnails/pages/proposals/hero.medium.jpg");
+    height: 500px; }
+  .proposals-page .hero .bg-loader {
+    background-image: url("../../pages/proposals/hero.medium.jpg"); } }
+
+@media (min-width: 1024px) {
+  .proposals-page .hero {
+    background-image: url("../../thumbnails/pages/proposals/hero.large.jpg");
+    height: 500px; }
+  .proposals-page .hero .bg-loader {
+    background-image: url("../../pages/proposals/hero.large.jpg"); } }
+
+@media (min-width: 1292px) {
+  .proposals-page .hero {
+    background-image: url("../../thumbnails/pages/proposals/hero.extra-large.jpg");
+    height: 500px; }
+  .proposals-page .hero .bg-loader {
+    background-image: url("../../pages/proposals/hero.extra-large.jpg"); } }
+
+@media (min-width: 718px) {
+  .proposals-page .hero h1 {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 55%; } }
+
+.ict4d-wrapper {
+  position: relative; }
+  .ict4d-wrapper .image {
+    background-image: url("../../thumbnails/pages/proposals/ict4d_experts.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    height: 285px;
+    transition: .5s background ease-in-out;
+    position: relative; }
+  .ict4d-wrapper .image .bg-loader {
+    background-image: url("../../pages/proposals/ict4d_experts.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 100%; }
+  @media (min-width: 480px) {
+    .ict4d-wrapper .image {
+      background-image: url("../../thumbnails/pages/proposals/ict4d_experts.small.jpg");
+      height: 362px; }
+    .ict4d-wrapper .image .bg-loader {
+      background-image: url("../../pages/proposals/ict4d_experts.small.jpg"); } }
+  @media (min-width: 718px) {
+    .ict4d-wrapper .image {
+      background-image: url("../../thumbnails/pages/proposals/ict4d_experts.medium.jpg");
+      height: 480px; }
+    .ict4d-wrapper .image .bg-loader {
+      background-image: url("../../pages/proposals/ict4d_experts.medium.jpg"); } }
+  @media (min-width: 1024px) {
+    .ict4d-wrapper .image {
+      background-image: url("../../thumbnails/pages/proposals/ict4d_experts.large.jpg");
+      height: 400px; }
+    .ict4d-wrapper .image .bg-loader {
+      background-image: url("../../pages/proposals/ict4d_experts.large.jpg"); } }
+  @media (min-width: 1292px) {
+    .ict4d-wrapper .image {
+      background-image: url("../../thumbnails/pages/proposals/ict4d_experts.extra-large.jpg");
+      height: 340px; }
+    .ict4d-wrapper .image .bg-loader {
+      background-image: url("../../pages/proposals/ict4d_experts.extra-large.jpg"); } }
+  @media (min-width: 718px) {
+    .ict4d-wrapper .content {
+      position: relative;
+      z-index: 2; }
+    .ict4d-wrapper .off-grid {
+      bottom: 60px;
+      left: 0;
+      position: absolute;
+      right: auto;
+      width: 100%;
+      z-index: 1; } }
+
+.partners-wrapper {
+  position: relative; }
+  .partners-wrapper .image {
+    background-image: url("../../thumbnails/pages/proposals/partners.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    height: 285px;
+    transition: .5s background ease-in-out;
+    position: relative; }
+  .partners-wrapper .image .bg-loader {
+    background-image: url("../../pages/proposals/partners.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 100%; }
+  @media (min-width: 480px) {
+    .partners-wrapper .image {
+      background-image: url("../../thumbnails/pages/proposals/partners.small.jpg");
+      height: 362px; }
+    .partners-wrapper .image .bg-loader {
+      background-image: url("../../pages/proposals/partners.small.jpg"); } }
+  @media (min-width: 718px) {
+    .partners-wrapper .image {
+      background-image: url("../../thumbnails/pages/proposals/partners.medium.jpg");
+      height: 510px; }
+    .partners-wrapper .image .bg-loader {
+      background-image: url("../../pages/proposals/partners.medium.jpg"); } }
+  @media (min-width: 1024px) {
+    .partners-wrapper .image {
+      background-image: url("../../thumbnails/pages/proposals/partners.large.jpg");
+      height: 450px; }
+    .partners-wrapper .image .bg-loader {
+      background-image: url("../../pages/proposals/partners.large.jpg"); } }
+  @media (min-width: 1292px) {
+    .partners-wrapper .image {
+      background-image: url("../../thumbnails/pages/proposals/partners.extra-large.jpg");
+      height: 410px; }
+    .partners-wrapper .image .bg-loader {
+      background-image: url("../../pages/proposals/partners.extra-large.jpg"); } }
+  @media (min-width: 718px) {
+    .partners-wrapper .content {
+      position: relative;
+      z-index: 4; }
+    .partners-wrapper .off-grid {
+      bottom: 80px;
+      right: 0;
+      position: absolute;
+      left: auto;
+      width: 100%;
+      z-index: 3; } }

@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block title %}{% blocktrans %}
+  FocusMDM by Dimagi | Mobile Device Management app
+{% endblocktrans %}{% endblock %}
+
+{% block description %}{% blocktrans %}
+  Improve your frontline productivity with mobile device management.
+{% endblocktrans %}{% endblock %}
+
+{% block body_class %}products-focusmdm-page tucked-hero{% endblock %}
+
+{% block stylesheets %}
+  {% compress css %}
+    <link href="{% sass_src 'style/pages/focus_mdm/product.scss' %}" rel="stylesheet" media="screen" type="text/css" />
+    <link href="{% sass_src 'style/pages/focus_mdm/pricing_rates.scss' %}" rel="stylesheet" media="screen" type="text/css" />
+  {% endcompress %}
+{% endblock %}
+
+{% block js %}
+  {% compress js %}
+  <script src="{% static 'js/pricing.js' %}"></script>
+  {% endcompress %}
+{% endblock %}
+
+{% block meta %}
+  <meta property="wistia:videoId" content="jzm3ggrinr" />
+  <meta property="wistia:videoTrigger" content="demo-video" />
+{% endblock %}
+
+{% block hero %}
+  <div id="top"></div>
+  <section class="hero hero-products-commcare"
+           data-lazybg="true"
+           id="hero">
+    <div class="content offset-top-small-at-medium align-left-at-medium align-center pad-top-large">
+      <h2 class="gap-top-small gap-top-medium-at-medium">
+        {% include "svg/focus_mdm/logo.html" %}
+      </h2>
+      <h1>
+        {% blocktrans %}
+            Improve your frontline productivity with <br class="hide-until-medium" />
+          mobile device management.
+        {% endblocktrans %}
+      </h1>
+      <a class="button button-accent-gray ab-hero-toolkits--overview" href="#overview">
+          {% blocktrans %}
+            Learn More
+          {% endblocktrans %}
+      </a>
+    </div> {# .content #}
+  </section>
+{% endblock %}
+
+{% block content %}
+  <section id="ko-pricing-control" class="products-commcare-container orange-theme">
+    {% include "sections/focus_mdm/product/sub_nav.html" %}
+    {% include "sections/focus_mdm/product/brief_overview.html" %}
+    {% include "sections/focus_mdm/product/overview.html" %}
+    {% include "sections/focus_mdm/product/pricing_cta.html" %}
+    {% include "sections/focus_mdm/product/testimonials.html" %}
+  </section>
+{% endblock %}

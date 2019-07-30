@@ -1,0 +1,828 @@
+.toolkits-page .hero {
+  background-image: url("../../thumbnails/pages/toolkits/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  height: 500px;
+  transition: .5s background ease-in-out;
+  position: relative; }
+
+.toolkits-page .hero .bg-loader {
+  background-image: url("../../pages/toolkits/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%; }
+
+@media (min-width: 480px) {
+  .toolkits-page .hero {
+    background-image: url("../../thumbnails/pages/toolkits/hero.small.jpg");
+    height: 500px; }
+  .toolkits-page .hero .bg-loader {
+    background-image: url("../../pages/toolkits/hero.small.jpg"); } }
+
+@media (min-width: 718px) {
+  .toolkits-page .hero {
+    background-image: url("../../thumbnails/pages/toolkits/hero.medium.jpg");
+    height: 500px; }
+  .toolkits-page .hero .bg-loader {
+    background-image: url("../../pages/toolkits/hero.medium.jpg"); } }
+
+@media (min-width: 1024px) {
+  .toolkits-page .hero {
+    background-image: url("../../thumbnails/pages/toolkits/hero.large.jpg");
+    height: 500px; }
+  .toolkits-page .hero .bg-loader {
+    background-image: url("../../pages/toolkits/hero.large.jpg"); } }
+
+@media (min-width: 1292px) {
+  .toolkits-page .hero {
+    background-image: url("../../thumbnails/pages/toolkits/hero.extra-large.jpg");
+    height: 500px; }
+  .toolkits-page .hero .bg-loader {
+    background-image: url("../../pages/toolkits/hero.extra-large.jpg"); } }
+
+.business-development .hero {
+  background-image: url("../../thumbnails/pages/toolkits/business-development/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  height: 500px;
+  transition: .5s background ease-in-out;
+  position: relative; }
+
+.business-development .hero .bg-loader {
+  background-image: url("../../pages/toolkits/business-development/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%; }
+
+@media (min-width: 480px) {
+  .business-development .hero {
+    background-image: url("../../thumbnails/pages/toolkits/business-development/hero.small.jpg");
+    height: 500px; }
+  .business-development .hero .bg-loader {
+    background-image: url("../../pages/toolkits/business-development/hero.small.jpg"); } }
+
+@media (min-width: 718px) {
+  .business-development .hero {
+    background-image: url("../../thumbnails/pages/toolkits/business-development/hero.medium.jpg");
+    height: 500px; }
+  .business-development .hero .bg-loader {
+    background-image: url("../../pages/toolkits/business-development/hero.medium.jpg"); } }
+
+@media (min-width: 1024px) {
+  .business-development .hero {
+    background-image: url("../../thumbnails/pages/toolkits/business-development/hero.large.jpg");
+    height: 500px; }
+  .business-development .hero .bg-loader {
+    background-image: url("../../pages/toolkits/business-development/hero.large.jpg"); } }
+
+@media (min-width: 1292px) {
+  .business-development .hero {
+    background-image: url("../../thumbnails/pages/toolkits/business-development/hero.extra-large.jpg");
+    height: 500px; }
+  .business-development .hero .bg-loader {
+    background-image: url("../../pages/toolkits/business-development/hero.extra-large.jpg"); } }
+
+.commcare-evidence-base .hero {
+  background-image: url("../../thumbnails/pages/toolkits/commcare-evidence-base/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  height: 500px;
+  transition: .5s background ease-in-out;
+  position: relative; }
+
+.commcare-evidence-base .hero .bg-loader {
+  background-image: url("../../pages/toolkits/commcare-evidence-base/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%; }
+
+@media (min-width: 480px) {
+  .commcare-evidence-base .hero {
+    background-image: url("../../thumbnails/pages/toolkits/commcare-evidence-base/hero.small.jpg");
+    height: 500px; }
+  .commcare-evidence-base .hero .bg-loader {
+    background-image: url("../../pages/toolkits/commcare-evidence-base/hero.small.jpg"); } }
+
+@media (min-width: 718px) {
+  .commcare-evidence-base .hero {
+    background-image: url("../../thumbnails/pages/toolkits/commcare-evidence-base/hero.medium.jpg");
+    height: 500px; }
+  .commcare-evidence-base .hero .bg-loader {
+    background-image: url("../../pages/toolkits/commcare-evidence-base/hero.medium.jpg"); } }
+
+@media (min-width: 1024px) {
+  .commcare-evidence-base .hero {
+    background-image: url("../../thumbnails/pages/toolkits/commcare-evidence-base/hero.large.jpg");
+    height: 500px; }
+  .commcare-evidence-base .hero .bg-loader {
+    background-image: url("../../pages/toolkits/commcare-evidence-base/hero.large.jpg"); } }
+
+@media (min-width: 1292px) {
+  .commcare-evidence-base .hero {
+    background-image: url("../../thumbnails/pages/toolkits/commcare-evidence-base/hero.extra-large.jpg");
+    height: 500px; }
+  .commcare-evidence-base .hero .bg-loader {
+    background-image: url("../../pages/toolkits/commcare-evidence-base/hero.extra-large.jpg"); } }
+
+.commcare-managing-data .hero {
+  background-image: url("../../thumbnails/pages/toolkits/commcare-managing-data/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  height: 500px;
+  transition: .5s background ease-in-out;
+  position: relative; }
+
+.commcare-managing-data .hero .bg-loader {
+  background-image: url("../../pages/toolkits/commcare-managing-data/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%; }
+
+@media (min-width: 480px) {
+  .commcare-managing-data .hero {
+    background-image: url("../../thumbnails/pages/toolkits/commcare-managing-data/hero.small.jpg");
+    height: 500px; }
+  .commcare-managing-data .hero .bg-loader {
+    background-image: url("../../pages/toolkits/commcare-managing-data/hero.small.jpg"); } }
+
+@media (min-width: 718px) {
+  .commcare-managing-data .hero {
+    background-image: url("../../thumbnails/pages/toolkits/commcare-managing-data/hero.medium.jpg");
+    height: 500px; }
+  .commcare-managing-data .hero .bg-loader {
+    background-image: url("../../pages/toolkits/commcare-managing-data/hero.medium.jpg"); } }
+
+@media (min-width: 1024px) {
+  .commcare-managing-data .hero {
+    background-image: url("../../thumbnails/pages/toolkits/commcare-managing-data/hero.large.jpg");
+    height: 500px; }
+  .commcare-managing-data .hero .bg-loader {
+    background-image: url("../../pages/toolkits/commcare-managing-data/hero.large.jpg"); } }
+
+@media (min-width: 1292px) {
+  .commcare-managing-data .hero {
+    background-image: url("../../thumbnails/pages/toolkits/commcare-managing-data/hero.extra-large.jpg");
+    height: 500px; }
+  .commcare-managing-data .hero .bg-loader {
+    background-image: url("../../pages/toolkits/commcare-managing-data/hero.extra-large.jpg"); } }
+
+.managing-devices-ebook .hero {
+  background-image: url("../../thumbnails/pages/toolkits/managing-devices-ebook/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  height: 500px;
+  transition: .5s background ease-in-out;
+  position: relative; }
+
+.managing-devices-ebook .hero .bg-loader {
+  background-image: url("../../pages/toolkits/managing-devices-ebook/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%; }
+
+@media (min-width: 480px) {
+  .managing-devices-ebook .hero {
+    background-image: url("../../thumbnails/pages/toolkits/managing-devices-ebook/hero.small.jpg");
+    height: 500px; }
+  .managing-devices-ebook .hero .bg-loader {
+    background-image: url("../../pages/toolkits/managing-devices-ebook/hero.small.jpg"); } }
+
+@media (min-width: 718px) {
+  .managing-devices-ebook .hero {
+    background-image: url("../../thumbnails/pages/toolkits/managing-devices-ebook/hero.medium.jpg");
+    height: 500px; }
+  .managing-devices-ebook .hero .bg-loader {
+    background-image: url("../../pages/toolkits/managing-devices-ebook/hero.medium.jpg"); } }
+
+@media (min-width: 1024px) {
+  .managing-devices-ebook .hero {
+    background-image: url("../../thumbnails/pages/toolkits/managing-devices-ebook/hero.large.jpg");
+    height: 500px; }
+  .managing-devices-ebook .hero .bg-loader {
+    background-image: url("../../pages/toolkits/managing-devices-ebook/hero.large.jpg"); } }
+
+@media (min-width: 1292px) {
+  .managing-devices-ebook .hero {
+    background-image: url("../../thumbnails/pages/toolkits/managing-devices-ebook/hero.extra-large.jpg");
+    height: 500px; }
+  .managing-devices-ebook .hero .bg-loader {
+    background-image: url("../../pages/toolkits/managing-devices-ebook/hero.extra-large.jpg"); } }
+
+.maturity-model .hero {
+  background-image: url("../../thumbnails/pages/toolkits/maturity-model/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  height: 500px;
+  transition: .5s background ease-in-out;
+  position: relative; }
+
+.maturity-model .hero .bg-loader {
+  background-image: url("../../pages/toolkits/maturity-model/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%; }
+
+@media (min-width: 480px) {
+  .maturity-model .hero {
+    background-image: url("../../thumbnails/pages/toolkits/maturity-model/hero.small.jpg");
+    height: 500px; }
+  .maturity-model .hero .bg-loader {
+    background-image: url("../../pages/toolkits/maturity-model/hero.small.jpg"); } }
+
+@media (min-width: 718px) {
+  .maturity-model .hero {
+    background-image: url("../../thumbnails/pages/toolkits/maturity-model/hero.medium.jpg");
+    height: 500px; }
+  .maturity-model .hero .bg-loader {
+    background-image: url("../../pages/toolkits/maturity-model/hero.medium.jpg"); } }
+
+@media (min-width: 1024px) {
+  .maturity-model .hero {
+    background-image: url("../../thumbnails/pages/toolkits/maturity-model/hero.large.jpg");
+    height: 500px; }
+  .maturity-model .hero .bg-loader {
+    background-image: url("../../pages/toolkits/maturity-model/hero.large.jpg"); } }
+
+@media (min-width: 1292px) {
+  .maturity-model .hero {
+    background-image: url("../../thumbnails/pages/toolkits/maturity-model/hero.extra-large.jpg");
+    height: 500px; }
+  .maturity-model .hero .bg-loader {
+    background-image: url("../../pages/toolkits/maturity-model/hero.extra-large.jpg"); } }
+
+.total-cost-ownership .hero {
+  background-image: url("../../thumbnails/pages/toolkits/total-cost-ownership/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  height: 500px;
+  transition: .5s background ease-in-out;
+  position: relative; }
+
+.total-cost-ownership .hero .bg-loader {
+  background-image: url("../../pages/toolkits/total-cost-ownership/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%; }
+
+@media (min-width: 480px) {
+  .total-cost-ownership .hero {
+    background-image: url("../../thumbnails/pages/toolkits/total-cost-ownership/hero.small.jpg");
+    height: 500px; }
+  .total-cost-ownership .hero .bg-loader {
+    background-image: url("../../pages/toolkits/total-cost-ownership/hero.small.jpg"); } }
+
+@media (min-width: 718px) {
+  .total-cost-ownership .hero {
+    background-image: url("../../thumbnails/pages/toolkits/total-cost-ownership/hero.medium.jpg");
+    height: 500px; }
+  .total-cost-ownership .hero .bg-loader {
+    background-image: url("../../pages/toolkits/total-cost-ownership/hero.medium.jpg"); } }
+
+@media (min-width: 1024px) {
+  .total-cost-ownership .hero {
+    background-image: url("../../thumbnails/pages/toolkits/total-cost-ownership/hero.large.jpg");
+    height: 500px; }
+  .total-cost-ownership .hero .bg-loader {
+    background-image: url("../../pages/toolkits/total-cost-ownership/hero.large.jpg"); } }
+
+@media (min-width: 1292px) {
+  .total-cost-ownership .hero {
+    background-image: url("../../thumbnails/pages/toolkits/total-cost-ownership/hero.extra-large.jpg");
+    height: 500px; }
+  .total-cost-ownership .hero .bg-loader {
+    background-image: url("../../pages/toolkits/total-cost-ownership/hero.extra-large.jpg"); } }
+
+.overview .image.highlights {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../../thumbnails/pages/toolkits/highlights/highlights.jpg");
+  transition: .5s background ease-in-out;
+  position: relative; }
+  .overview .image.highlights.loaded,
+  .overview .image.highlights .bg-preload {
+    background-image: url("../../pages/toolkits/highlights/highlights.jpg"); }
+
+.digital-health-interventions .hero {
+  background-image: url("../../thumbnails/pages/toolkits/digital-health-interventions/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  height: 500px;
+  transition: .5s background ease-in-out;
+  position: relative; }
+
+.digital-health-interventions .hero .bg-loader {
+  background-image: url("../../pages/toolkits/digital-health-interventions/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%; }
+
+@media (min-width: 480px) {
+  .digital-health-interventions .hero {
+    background-image: url("../../thumbnails/pages/toolkits/digital-health-interventions/hero.small.jpg");
+    height: 500px; }
+  .digital-health-interventions .hero .bg-loader {
+    background-image: url("../../pages/toolkits/digital-health-interventions/hero.small.jpg"); } }
+
+@media (min-width: 718px) {
+  .digital-health-interventions .hero {
+    background-image: url("../../thumbnails/pages/toolkits/digital-health-interventions/hero.medium.jpg");
+    height: 500px; }
+  .digital-health-interventions .hero .bg-loader {
+    background-image: url("../../pages/toolkits/digital-health-interventions/hero.medium.jpg"); } }
+
+@media (min-width: 1024px) {
+  .digital-health-interventions .hero {
+    background-image: url("../../thumbnails/pages/toolkits/digital-health-interventions/hero.large.jpg");
+    height: 500px; }
+  .digital-health-interventions .hero .bg-loader {
+    background-image: url("../../pages/toolkits/digital-health-interventions/hero.large.jpg"); } }
+
+@media (min-width: 1292px) {
+  .digital-health-interventions .hero {
+    background-image: url("../../thumbnails/pages/toolkits/digital-health-interventions/hero.extra-large.jpg");
+    height: 500px; }
+  .digital-health-interventions .hero .bg-loader {
+    background-image: url("../../pages/toolkits/digital-health-interventions/hero.extra-large.jpg"); } }
+
+.data-collection .hero {
+  background-image: url("../../thumbnails/pages/toolkits/data-collection/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  height: 500px;
+  transition: .5s background ease-in-out;
+  position: relative; }
+
+.data-collection .hero .bg-loader {
+  background-image: url("../../pages/toolkits/data-collection/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%; }
+
+@media (min-width: 480px) {
+  .data-collection .hero {
+    background-image: url("../../thumbnails/pages/toolkits/data-collection/hero.small.jpg");
+    height: 500px; }
+  .data-collection .hero .bg-loader {
+    background-image: url("../../pages/toolkits/data-collection/hero.small.jpg"); } }
+
+@media (min-width: 718px) {
+  .data-collection .hero {
+    background-image: url("../../thumbnails/pages/toolkits/data-collection/hero.medium.jpg");
+    height: 500px; }
+  .data-collection .hero .bg-loader {
+    background-image: url("../../pages/toolkits/data-collection/hero.medium.jpg"); } }
+
+@media (min-width: 1024px) {
+  .data-collection .hero {
+    background-image: url("../../thumbnails/pages/toolkits/data-collection/hero.large.jpg");
+    height: 500px; }
+  .data-collection .hero .bg-loader {
+    background-image: url("../../pages/toolkits/data-collection/hero.large.jpg"); } }
+
+@media (min-width: 1292px) {
+  .data-collection .hero {
+    background-image: url("../../thumbnails/pages/toolkits/data-collection/hero.extra-large.jpg");
+    height: 500px; }
+  .data-collection .hero .bg-loader {
+    background-image: url("../../pages/toolkits/data-collection/hero.extra-large.jpg"); } }
+
+.mobile-data-collection .hero {
+  background-image: url("../../thumbnails/pages/toolkits/mobile-data-collection/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  height: 500px;
+  transition: .5s background ease-in-out;
+  position: relative; }
+
+.mobile-data-collection .hero .bg-loader {
+  background-image: url("../../pages/toolkits/mobile-data-collection/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%; }
+
+@media (min-width: 480px) {
+  .mobile-data-collection .hero {
+    background-image: url("../../thumbnails/pages/toolkits/mobile-data-collection/hero.small.jpg");
+    height: 500px; }
+  .mobile-data-collection .hero .bg-loader {
+    background-image: url("../../pages/toolkits/mobile-data-collection/hero.small.jpg"); } }
+
+@media (min-width: 718px) {
+  .mobile-data-collection .hero {
+    background-image: url("../../thumbnails/pages/toolkits/mobile-data-collection/hero.medium.jpg");
+    height: 500px; }
+  .mobile-data-collection .hero .bg-loader {
+    background-image: url("../../pages/toolkits/mobile-data-collection/hero.medium.jpg"); } }
+
+@media (min-width: 1024px) {
+  .mobile-data-collection .hero {
+    background-image: url("../../thumbnails/pages/toolkits/mobile-data-collection/hero.large.jpg");
+    height: 500px; }
+  .mobile-data-collection .hero .bg-loader {
+    background-image: url("../../pages/toolkits/mobile-data-collection/hero.large.jpg"); } }
+
+@media (min-width: 1292px) {
+  .mobile-data-collection .hero {
+    background-image: url("../../thumbnails/pages/toolkits/mobile-data-collection/hero.extra-large.jpg");
+    height: 500px; }
+  .mobile-data-collection .hero .bg-loader {
+    background-image: url("../../pages/toolkits/mobile-data-collection/hero.extra-large.jpg"); } }
+
+.business-development-highlights-one {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../../thumbnails/pages/toolkits/highlights/business-development/business-development-highlights-one.jpg");
+  transition: .5s background ease-in-out;
+  position: relative; }
+  .business-development-highlights-one.loaded,
+  .business-development-highlights-one .bg-preload {
+    background-image: url("../../pages/toolkits/highlights/business-development/business-development-highlights-one.jpg"); }
+
+.business-development-highlights-two {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../../thumbnails/pages/toolkits/highlights/business-development/business-development-highlights-two.jpg");
+  transition: .5s background ease-in-out;
+  position: relative; }
+  .business-development-highlights-two.loaded,
+  .business-development-highlights-two .bg-preload {
+    background-image: url("../../pages/toolkits/highlights/business-development/business-development-highlights-two.jpg"); }
+
+.business-development-highlights-three {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../../thumbnails/pages/toolkits/highlights/business-development/business-development-highlights-three.jpg");
+  transition: .5s background ease-in-out;
+  position: relative; }
+  .business-development-highlights-three.loaded,
+  .business-development-highlights-three .bg-preload {
+    background-image: url("../../pages/toolkits/highlights/business-development/business-development-highlights-three.jpg"); }
+
+.commcare-evidence-base-highlights-one {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../../thumbnails/pages/toolkits/highlights/commcare-evidence-base/commcare-evidence-base-highlights-one.jpg");
+  transition: .5s background ease-in-out;
+  position: relative; }
+  .commcare-evidence-base-highlights-one.loaded,
+  .commcare-evidence-base-highlights-one .bg-preload {
+    background-image: url("../../pages/toolkits/highlights/commcare-evidence-base/commcare-evidence-base-highlights-one.jpg"); }
+
+.commcare-evidence-base-highlights-two {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../../thumbnails/pages/toolkits/highlights/commcare-evidence-base/commcare-evidence-base-highlights-two.jpg");
+  transition: .5s background ease-in-out;
+  position: relative; }
+  .commcare-evidence-base-highlights-two.loaded,
+  .commcare-evidence-base-highlights-two .bg-preload {
+    background-image: url("../../pages/toolkits/highlights/commcare-evidence-base/commcare-evidence-base-highlights-two.jpg"); }
+
+.commcare-evidence-base-highlights-three {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../../thumbnails/pages/toolkits/highlights/commcare-evidence-base/commcare-evidence-base-highlights-three.jpg");
+  transition: .5s background ease-in-out;
+  position: relative; }
+  .commcare-evidence-base-highlights-three.loaded,
+  .commcare-evidence-base-highlights-three .bg-preload {
+    background-image: url("../../pages/toolkits/highlights/commcare-evidence-base/commcare-evidence-base-highlights-three.jpg"); }
+
+.commcare-managing-data-highlights-one {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../../thumbnails/pages/toolkits/highlights/commcare-evidence-base/commcare-evidence-base-highlights-one.jpg");
+  transition: .5s background ease-in-out;
+  position: relative; }
+  .commcare-managing-data-highlights-one.loaded,
+  .commcare-managing-data-highlights-one .bg-preload {
+    background-image: url("../../pages/toolkits/highlights/commcare-evidence-base/commcare-evidence-base-highlights-one.jpg"); }
+
+.commcare-managing-data-highlights-two {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../../thumbnails/pages/toolkits/highlights/commcare-evidence-base/commcare-evidence-base-highlights-two.jpg");
+  transition: .5s background ease-in-out;
+  position: relative; }
+  .commcare-managing-data-highlights-two.loaded,
+  .commcare-managing-data-highlights-two .bg-preload {
+    background-image: url("../../pages/toolkits/highlights/commcare-evidence-base/commcare-evidence-base-highlights-two.jpg"); }
+
+.commcare-managing-data-highlights-three {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../../thumbnails/pages/toolkits/highlights/commcare-evidence-base/commcare-evidence-base-highlights-three.jpg");
+  transition: .5s background ease-in-out;
+  position: relative; }
+  .commcare-managing-data-highlights-three.loaded,
+  .commcare-managing-data-highlights-three .bg-preload {
+    background-image: url("../../pages/toolkits/highlights/commcare-evidence-base/commcare-evidence-base-highlights-three.jpg"); }
+
+.managing-devices-ebook-highlights-one {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../../thumbnails/pages/toolkits/highlights/managing-devices-ebook/managing-devices-ebook-highlights-one.jpg");
+  transition: .5s background ease-in-out;
+  position: relative; }
+  .managing-devices-ebook-highlights-one.loaded,
+  .managing-devices-ebook-highlights-one .bg-preload {
+    background-image: url("../../pages/toolkits/highlights/managing-devices-ebook/managing-devices-ebook-highlights-one.jpg"); }
+
+.managing-devices-ebook-highlights-two {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../../thumbnails/pages/toolkits/highlights/managing-devices-ebook/managing-devices-ebook-highlights-two.jpg");
+  transition: .5s background ease-in-out;
+  position: relative; }
+  .managing-devices-ebook-highlights-two.loaded,
+  .managing-devices-ebook-highlights-two .bg-preload {
+    background-image: url("../../pages/toolkits/highlights/managing-devices-ebook/managing-devices-ebook-highlights-two.jpg"); }
+
+.managing-devices-ebook-highlights-three {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../../thumbnails/pages/toolkits/highlights/managing-devices-ebook/managing-devices-ebook-highlights-three.jpg");
+  transition: .5s background ease-in-out;
+  position: relative; }
+  .managing-devices-ebook-highlights-three.loaded,
+  .managing-devices-ebook-highlights-three .bg-preload {
+    background-image: url("../../pages/toolkits/highlights/managing-devices-ebook/managing-devices-ebook-highlights-three.jpg"); }
+
+.maturity-model-highlights-one {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../../thumbnails/pages/toolkits/highlights/maturity-model/maturity-model-highlights-one.jpg");
+  transition: .5s background ease-in-out;
+  position: relative; }
+  .maturity-model-highlights-one.loaded,
+  .maturity-model-highlights-one .bg-preload {
+    background-image: url("../../pages/toolkits/highlights/maturity-model/maturity-model-highlights-one.jpg"); }
+
+.maturity-model-highlights-two {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../../thumbnails/pages/toolkits/highlights/maturity-model/maturity-model-highlights-two.jpg");
+  transition: .5s background ease-in-out;
+  position: relative; }
+  .maturity-model-highlights-two.loaded,
+  .maturity-model-highlights-two .bg-preload {
+    background-image: url("../../pages/toolkits/highlights/maturity-model/maturity-model-highlights-two.jpg"); }
+
+.maturity-model-highlights-three {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../../thumbnails/pages/toolkits/highlights/maturity-model/maturity-model-highlights-three.jpg");
+  transition: .5s background ease-in-out;
+  position: relative; }
+  .maturity-model-highlights-three.loaded,
+  .maturity-model-highlights-three .bg-preload {
+    background-image: url("../../pages/toolkits/highlights/maturity-model/maturity-model-highlights-three.jpg"); }
+
+.total-cost-ownership-highlights-one {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../../thumbnails/pages/toolkits/highlights/total-cost-ownership/total-cost-ownership-highlights-one.jpg");
+  transition: .5s background ease-in-out;
+  position: relative; }
+  .total-cost-ownership-highlights-one.loaded,
+  .total-cost-ownership-highlights-one .bg-preload {
+    background-image: url("../../pages/toolkits/highlights/total-cost-ownership/total-cost-ownership-highlights-one.jpg"); }
+
+.total-cost-ownership-highlights-two {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../../thumbnails/pages/toolkits/highlights/total-cost-ownership/total-cost-ownership-highlights-two.jpg");
+  transition: .5s background ease-in-out;
+  position: relative; }
+  .total-cost-ownership-highlights-two.loaded,
+  .total-cost-ownership-highlights-two .bg-preload {
+    background-image: url("../../pages/toolkits/highlights/total-cost-ownership/total-cost-ownership-highlights-two.jpg"); }
+
+.total-cost-ownership-highlights-three {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../../thumbnails/pages/toolkits/highlights/total-cost-ownership/total-cost-ownership-highlights-three.jpg");
+  transition: .5s background ease-in-out;
+  position: relative; }
+  .total-cost-ownership-highlights-three.loaded,
+  .total-cost-ownership-highlights-three .bg-preload {
+    background-image: url("../../pages/toolkits/highlights/total-cost-ownership/total-cost-ownership-highlights-three.jpg"); }
+
+.digital-health-interventions-highlight-one {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../../thumbnails/pages/toolkits/highlights/digital-health-interventions/digital-health-interventions-highlight-one.jpg");
+  transition: .5s background ease-in-out;
+  position: relative; }
+  .digital-health-interventions-highlight-one.loaded,
+  .digital-health-interventions-highlight-one .bg-preload {
+    background-image: url("../../pages/toolkits/highlights/digital-health-interventions/digital-health-interventions-highlight-one.jpg"); }
+
+.digital-health-interventions-highlight-two {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../../thumbnails/pages/toolkits/highlights/digital-health-interventions/digital-health-interventions-highlight-two.jpg");
+  transition: .5s background ease-in-out;
+  position: relative; }
+  .digital-health-interventions-highlight-two.loaded,
+  .digital-health-interventions-highlight-two .bg-preload {
+    background-image: url("../../pages/toolkits/highlights/digital-health-interventions/digital-health-interventions-highlight-two.jpg"); }
+
+.digital-health-interventions-highlight-three {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../../thumbnails/pages/toolkits/highlights/digital-health-interventions/digital-health-interventions-highlight-three.jpg");
+  transition: .5s background ease-in-out;
+  position: relative; }
+  .digital-health-interventions-highlight-three.loaded,
+  .digital-health-interventions-highlight-three .bg-preload {
+    background-image: url("../../pages/toolkits/highlights/digital-health-interventions/digital-health-interventions-highlight-three.jpg"); }
+
+.data-collection-highlight-one {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../../thumbnails/pages/toolkits/highlights/data-collection/data-collection-highlight-one.jpg");
+  transition: .5s background ease-in-out;
+  position: relative; }
+  .data-collection-highlight-one.loaded,
+  .data-collection-highlight-one .bg-preload {
+    background-image: url("../../pages/toolkits/highlights/data-collection/data-collection-highlight-one.jpg"); }
+
+.data-collection-highlight-two {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../../thumbnails/pages/toolkits/highlights/data-collection/data-collection-highlight-two.jpg");
+  transition: .5s background ease-in-out;
+  position: relative; }
+  .data-collection-highlight-two.loaded,
+  .data-collection-highlight-two .bg-preload {
+    background-image: url("../../pages/toolkits/highlights/data-collection/data-collection-highlight-two.jpg"); }
+
+.data-collection-highlight-three {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../../thumbnails/pages/toolkits/highlights/data-collection/data-collection-highlight-three.jpg");
+  transition: .5s background ease-in-out;
+  position: relative; }
+  .data-collection-highlight-three.loaded,
+  .data-collection-highlight-three .bg-preload {
+    background-image: url("../../pages/toolkits/highlights/data-collection/data-collection-highlight-three.jpg"); }
+
+.mobile-data-collection-highlight-one {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../../thumbnails/pages/toolkits/highlights/mobile-data-collection/mobile-data-collection-highlight-one.jpg");
+  transition: .5s background ease-in-out;
+  position: relative; }
+  .mobile-data-collection-highlight-one.loaded,
+  .mobile-data-collection-highlight-one .bg-preload {
+    background-image: url("../../pages/toolkits/highlights/mobile-data-collection/mobile-data-collection-highlight-one.jpg"); }
+
+.mobile-data-collection-highlight-two {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../../thumbnails/pages/toolkits/highlights/mobile-data-collection/mobile-data-collection-highlight-two.jpg");
+  transition: .5s background ease-in-out;
+  position: relative; }
+  .mobile-data-collection-highlight-two.loaded,
+  .mobile-data-collection-highlight-two .bg-preload {
+    background-image: url("../../pages/toolkits/highlights/mobile-data-collection/mobile-data-collection-highlight-two.jpg"); }
+
+.mobile-data-collection-highlight-three {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../../thumbnails/pages/toolkits/highlights/mobile-data-collection/mobile-data-collection-highlight-three.jpg");
+  transition: .5s background ease-in-out;
+  position: relative; }
+  .mobile-data-collection-highlight-three.loaded,
+  .mobile-data-collection-highlight-three .bg-preload {
+    background-image: url("../../pages/toolkits/highlights/mobile-data-collection/mobile-data-collection-highlight-three.jpg"); }
+
+.max-width-initial {
+  max-width: initial; }
+
+.toolkit-tile, .toolkit-tile-ip {
+  position: relative; }
+  .toolkit-tile .cta, .toolkit-tile-ip .cta {
+    bottom: 30px;
+    left: 30px;
+    position: absolute;
+    width: calc(100% - 60px); }
+
+.hubspot-summary-download .hs-form-field {
+  display: inline-block;
+  vertical-align: top;
+  width: calc(100% + 20px) !important; }
+  .hubspot-summary-download .hs-form-field label,
+  .hubspot-summary-download .hs-form-field legend {
+    display: none; }
+
+.hubspot-summary-download .hs-submit {
+  display: inline-block;
+  vertical-align: top; }
+
+.request-demo-form-lp label {
+  text-align: left; }
+
+.request-demo-form-ip label {
+  text-align: left;
+  color: #ffffff; }
+
+.request-demo-form-ip input[type="submit"] {
+  box-shadow: inset 0 0 0 1px #fafafa;
+  background-color: transparent; }
+
+.request-demo-form-ip input[type="submit"]:hover {
+  box-shadow: inset 0 0 0 1px #c7c7c7;
+  background-color: rgba(255, 255, 255, 0.3); }
+
+.request-demo-form-ip .hs-richtext {
+  color: #ffffff; }
+  .request-demo-form-ip .hs-richtext a {
+    color: #ffffff !important; }
+    .request-demo-form-ip .hs-richtext a:hover {
+      color: #ffffff;
+      text-decoration: underline; }
+
+@media (min-width: 718px) {
+  .toolkits-page .hero h1 {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 60%; }
+    .toolkits-page .hero h1.toolkit-tagline {
+      max-width: 80%; }
+  .toolkit-pad-left-small {
+    padding-left: 30px; }
+  .toolkit-pad-right-small {
+    padding-right: 30px; }
+  .toolkit-pad-left-large {
+    padding-left: 80px; } }
+
+@media (min-width: 480px) {
+  .toolkit-tile {
+    height: auto; }
+  .toolkit-tile-ip {
+    height: 340px; } }
+
+@media (min-width: 718px) {
+  .toolkit-tile {
+    height: auto; }
+  .toolkit-tile-ip {
+    height: 300px; } }
+
+@media (min-width: 1024px) {
+  .toolkit-tile {
+    height: auto; }
+  .toolkit-tile-ip {
+    height: 340px; } }
+
+@media (min-width: 1292px) {
+  .toolkit-tile {
+    height: 320px; }
+  .toolkit-tile-ip {
+    height: 340px; } }
+
+@media (max-width: 717px) {
+  .toolkit-tile {
+    padding-bottom: 30px; }
+    .toolkit-tile .cta {
+      position: static;
+      width: 100%; } }

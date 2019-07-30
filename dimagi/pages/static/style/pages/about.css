@@ -1,0 +1,253 @@
+.about-page .hero {
+  background-image: url("../../thumbnails/pages/about/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  height: 500px;
+  transition: .5s background ease-in-out;
+  position: relative; }
+
+.about-page .hero .bg-loader {
+  background-image: url("../../pages/about/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%; }
+
+@media (min-width: 480px) {
+  .about-page .hero {
+    background-image: url("../../thumbnails/pages/about/hero.small.jpg");
+    height: 500px; }
+  .about-page .hero .bg-loader {
+    background-image: url("../../pages/about/hero.small.jpg"); } }
+
+@media (min-width: 718px) {
+  .about-page .hero {
+    background-image: url("../../thumbnails/pages/about/hero.medium.jpg");
+    height: 500px; }
+  .about-page .hero .bg-loader {
+    background-image: url("../../pages/about/hero.medium.jpg"); } }
+
+@media (min-width: 1024px) {
+  .about-page .hero {
+    background-image: url("../../thumbnails/pages/about/hero.large.jpg");
+    height: 500px; }
+  .about-page .hero .bg-loader {
+    background-image: url("../../pages/about/hero.large.jpg"); } }
+
+@media (min-width: 1292px) {
+  .about-page .hero {
+    background-image: url("../../thumbnails/pages/about/hero.extra-large.jpg");
+    height: 500px; }
+  .about-page .hero .bg-loader {
+    background-image: url("../../pages/about/hero.extra-large.jpg"); } }
+
+.team-page .hero {
+  background-image: url("../../thumbnails/pages/team/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  height: 500px;
+  transition: .5s background ease-in-out;
+  position: relative; }
+
+.team-page .hero .bg-loader {
+  background-image: url("../../pages/team/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%; }
+
+@media (min-width: 480px) {
+  .team-page .hero {
+    background-image: url("../../thumbnails/pages/team/hero.small.jpg");
+    height: 500px; }
+  .team-page .hero .bg-loader {
+    background-image: url("../../pages/team/hero.small.jpg"); } }
+
+@media (min-width: 718px) {
+  .team-page .hero {
+    background-image: url("../../thumbnails/pages/team/hero.medium.jpg");
+    height: 500px; }
+  .team-page .hero .bg-loader {
+    background-image: url("../../pages/team/hero.medium.jpg"); } }
+
+@media (min-width: 1024px) {
+  .team-page .hero {
+    background-image: url("../../thumbnails/pages/team/hero.large.jpg");
+    height: 500px; }
+  .team-page .hero .bg-loader {
+    background-image: url("../../pages/team/hero.large.jpg"); } }
+
+@media (min-width: 1292px) {
+  .team-page .hero {
+    background-image: url("../../thumbnails/pages/team/hero.extra-large.jpg");
+    height: 500px; }
+  .team-page .hero .bg-loader {
+    background-image: url("../../pages/team/hero.extra-large.jpg"); } }
+
+.mission .image {
+  background-image: url("../../thumbnails/pages/about/datalines.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  height: 400px;
+  transition: .5s background ease-in-out;
+  position: relative; }
+
+.mission .image .bg-loader {
+  background-image: url("../../pages/about/datalines.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%; }
+
+@media (min-width: 718px) {
+  .mission .image {
+    background-image: url("../../thumbnails/pages/about/datalines.medium.jpg");
+    height: 720px; }
+  .mission .image .bg-loader {
+    background-image: url("../../pages/about/datalines.medium.jpg"); } }
+
+@media (min-width: 1024px) {
+  .mission .image {
+    background-image: url("../../thumbnails/pages/about/datalines.large.jpg");
+    height: 500px; }
+  .mission .image .bg-loader {
+    background-image: url("../../pages/about/datalines.large.jpg"); } }
+
+@media (min-width: 1292px) {
+  .mission .image {
+    background-image: url("../../thumbnails/pages/about/datalines.extra-large.jpg");
+    height: 500px; }
+  .mission .image .bg-loader {
+    background-image: url("../../pages/about/datalines.extra-large.jpg"); } }
+
+.mission .off-grid {
+  display: none; }
+
+@media (min-width: 718px) {
+  .mission .off-grid {
+    display: block;
+    left: 0;
+    position: absolute;
+    right: auto;
+    top: 0;
+    width: 100%;
+    z-index: 1; }
+  .mission .content {
+    position: relative;
+    z-index: 2; } }
+
+@media (min-width: 718px) {
+  .about-page .hero h1,
+  .team-page .hero h1 {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 55%; } }
+
+.team .image.teampic1 {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../../thumbnails/pages/about/teampic1.jpg");
+  transition: .5s background ease-in-out;
+  position: relative; }
+  .team .image.teampic1.loaded,
+  .team .image.teampic1 .bg-preload {
+    background-image: url("../../pages/about/teampic1.jpg"); }
+
+.team .image.teampic2 {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../../thumbnails/pages/about/teampic2.jpg");
+  transition: .5s background ease-in-out;
+  position: relative; }
+  .team .image.teampic2.loaded,
+  .team .image.teampic2 .bg-preload {
+    background-image: url("../../pages/about/teampic2.jpg"); }
+
+.team .image.teampic3 {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../../thumbnails/pages/about/teampic3.jpg");
+  transition: .5s background ease-in-out;
+  position: relative; }
+  .team .image.teampic3.loaded,
+  .team .image.teampic3 .bg-preload {
+    background-image: url("../../pages/about/teampic3.jpg"); }
+
+.team .image.teampic4 {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../../thumbnails/pages/about/teampic4.jpg");
+  transition: .5s background ease-in-out;
+  position: relative; }
+  .team .image.teampic4.loaded,
+  .team .image.teampic4 .bg-preload {
+    background-image: url("../../pages/about/teampic4.jpg"); }
+
+.employee-image {
+  background-position: "center";
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #5f6a7d;
+  transition: .5s background ease-in-out; }
+  .employee-image::after {
+    background-color: #5f6a7d; }
+
+.modal .employee-image,
+.bio .employee-image {
+  width: 300px; }
+
+@media (max-width: 717px) {
+  .modal .employee-image,
+  .bio .employee-image {
+    width: 100%; } }
+
+@media (max-width: 1023px) {
+  .modal .employee-image,
+  .bio .employee-image {
+    height: 300px;
+    margin: 0 auto;
+    padding: 0;
+    width: 300px; } }
+
+.company-info .image.infopic1 {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../../thumbnails/pages/about/infopic1.jpg");
+  transition: .5s background ease-in-out;
+  position: relative; }
+  .company-info .image.infopic1.loaded,
+  .company-info .image.infopic1 .bg-preload {
+    background-image: url("../../pages/about/infopic1.jpg"); }
+
+.company-info .image.infopic2 {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../../thumbnails/pages/about/infopic2.jpg");
+  transition: .5s background ease-in-out;
+  position: relative; }
+  .company-info .image.infopic2.loaded,
+  .company-info .image.infopic2 .bg-preload {
+    background-image: url("../../pages/about/infopic2.jpg"); }
+
+.company-info .image.infopic3 {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../../thumbnails/pages/about/infopic3.jpg");
+  transition: .5s background ease-in-out;
+  position: relative; }
+  .company-info .image.infopic3.loaded,
+  .company-info .image.infopic3 .bg-preload {
+    background-image: url("../../pages/about/infopic3.jpg"); }
+
+.office-country-icon svg {
+  height: 80px;
+  width: 80px; }
+  .office-country-icon svg * {
+    stroke-width: 3; }

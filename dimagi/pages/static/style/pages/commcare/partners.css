@@ -1,0 +1,296 @@
+.partners-commcare-page .hero {
+  background-image: url("../../../thumbnails/pages/commcare/partners/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  height: 500px;
+  transition: .5s background ease-in-out;
+  position: relative; }
+
+.partners-commcare-page .hero .bg-loader {
+  background-image: url("../../../pages/commcare/partners/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%; }
+
+@media (min-width: 480px) {
+  .partners-commcare-page .hero {
+    background-image: url("../../../thumbnails/pages/commcare/partners/hero.small.jpg");
+    height: 500px; }
+  .partners-commcare-page .hero .bg-loader {
+    background-image: url("../../../pages/commcare/partners/hero.small.jpg"); } }
+
+@media (min-width: 718px) {
+  .partners-commcare-page .hero {
+    background-image: url("../../../thumbnails/pages/commcare/partners/hero.medium.jpg");
+    height: 500px; }
+  .partners-commcare-page .hero .bg-loader {
+    background-image: url("../../../pages/commcare/partners/hero.medium.jpg"); } }
+
+@media (min-width: 1024px) {
+  .partners-commcare-page .hero {
+    background-image: url("../../../thumbnails/pages/commcare/partners/hero.large.jpg");
+    height: 500px; }
+  .partners-commcare-page .hero .bg-loader {
+    background-image: url("../../../pages/commcare/partners/hero.large.jpg"); } }
+
+@media (min-width: 1292px) {
+  .partners-commcare-page .hero {
+    background-image: url("../../../thumbnails/pages/commcare/partners/hero.extra-large.jpg");
+    height: 500px; }
+  .partners-commcare-page .hero .bg-loader {
+    background-image: url("../../../pages/commcare/partners/hero.extra-large.jpg"); } }
+
+@media (min-width: 718px) {
+  .partners-commcare-page .hero h1 {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 55%; } }
+
+.partners-commcare-page .oikoi-image {
+  background-image: url("../../../thumbnails/pages/commcare/partners/oikoi.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  height: 175px;
+  transition: .5s background ease-in-out;
+  position: relative; }
+
+.partners-commcare-page .oikoi-image .bg-loader {
+  background-image: url("../../../pages/commcare/partners/oikoi.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%; }
+
+@media (min-width: 374px) {
+  .partners-commcare-page .oikoi-image {
+    background-image: url("../../../thumbnails/pages/commcare/partners/oikoi.extra-small.jpg");
+    height: 205px; }
+  .partners-commcare-page .oikoi-image .bg-loader {
+    background-image: url("../../../pages/commcare/partners/oikoi.extra-small.jpg"); } }
+
+@media (min-width: 480px) {
+  .partners-commcare-page .oikoi-image {
+    background-image: url("../../../thumbnails/pages/commcare/partners/oikoi.small.jpg");
+    height: 270px; }
+  .partners-commcare-page .oikoi-image .bg-loader {
+    background-image: url("../../../pages/commcare/partners/oikoi.small.jpg"); } }
+
+@media (min-width: 718px) {
+  .partners-commcare-page .oikoi-image {
+    background-image: url("../../../thumbnails/pages/commcare/partners/oikoi.medium.jpg");
+    height: 210px; }
+  .partners-commcare-page .oikoi-image .bg-loader {
+    background-image: url("../../../pages/commcare/partners/oikoi.medium.jpg"); } }
+
+@media (min-width: 1024px) {
+  .partners-commcare-page .oikoi-image {
+    background-image: url("../../../thumbnails/pages/commcare/partners/oikoi.large.jpg");
+    height: 265px; }
+  .partners-commcare-page .oikoi-image .bg-loader {
+    background-image: url("../../../pages/commcare/partners/oikoi.large.jpg"); } }
+
+@media (min-width: 1292px) {
+  .partners-commcare-page .oikoi-image {
+    background-image: url("../../../thumbnails/pages/commcare/partners/oikoi.extra-large.jpg");
+    height: 320px; }
+  .partners-commcare-page .oikoi-image .bg-loader {
+    background-image: url("../../../pages/commcare/partners/oikoi.extra-large.jpg"); } }
+
+.partners-commcare-page .noukod-image {
+  background-image: url("../../../thumbnails/pages/commcare/partners/noukod.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  height: 175px;
+  transition: .5s background ease-in-out;
+  position: relative; }
+
+.partners-commcare-page .noukod-image .bg-loader {
+  background-image: url("../../../pages/commcare/partners/noukod.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%; }
+
+@media (min-width: 374px) {
+  .partners-commcare-page .noukod-image {
+    background-image: url("../../../thumbnails/pages/commcare/partners/noukod.extra-small.jpg");
+    height: 205px; }
+  .partners-commcare-page .noukod-image .bg-loader {
+    background-image: url("../../../pages/commcare/partners/noukod.extra-small.jpg"); } }
+
+@media (min-width: 480px) {
+  .partners-commcare-page .noukod-image {
+    background-image: url("../../../thumbnails/pages/commcare/partners/noukod.small.jpg");
+    height: 270px; }
+  .partners-commcare-page .noukod-image .bg-loader {
+    background-image: url("../../../pages/commcare/partners/noukod.small.jpg"); } }
+
+@media (min-width: 718px) {
+  .partners-commcare-page .noukod-image {
+    background-image: url("../../../thumbnails/pages/commcare/partners/noukod.medium.jpg");
+    height: 210px; }
+  .partners-commcare-page .noukod-image .bg-loader {
+    background-image: url("../../../pages/commcare/partners/noukod.medium.jpg"); } }
+
+@media (min-width: 1024px) {
+  .partners-commcare-page .noukod-image {
+    background-image: url("../../../thumbnails/pages/commcare/partners/noukod.large.jpg");
+    height: 265px; }
+  .partners-commcare-page .noukod-image .bg-loader {
+    background-image: url("../../../pages/commcare/partners/noukod.large.jpg"); } }
+
+@media (min-width: 1292px) {
+  .partners-commcare-page .noukod-image {
+    background-image: url("../../../thumbnails/pages/commcare/partners/noukod.extra-large.jpg");
+    height: 320px; }
+  .partners-commcare-page .noukod-image .bg-loader {
+    background-image: url("../../../pages/commcare/partners/noukod.extra-large.jpg"); } }
+
+.testimonials .carousel .carousel-slide .image-oikoi {
+  background-image: url("../../../thumbnails/pages/commcare/product/testimonial1.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 135px;
+  transition: .5s background ease-in-out;
+  width: 276px; }
+
+.testimonials .carousel .carousel-slide .image-oikoi .bg-preload,
+.testimonials .carousel .carousel-slide .image-oikoi.loaded {
+  background-image: url("../../../pages/commcare/product/testimonial1.jpg"); }
+
+@media (min-width: 374px) {
+  .testimonials .carousel .carousel-slide .image-oikoi {
+    height: 135px;
+    width: 276px; } }
+
+@media (min-width: 480px) {
+  .testimonials .carousel .carousel-slide .image-oikoi {
+    height: 158px;
+    width: 424px; } }
+
+@media (min-width: 718px) {
+  .testimonials .carousel .carousel-slide .image-oikoi {
+    height: 277px;
+    width: 680px; } }
+
+@media (min-width: 1024px) {
+  .testimonials .carousel .carousel-slide .image-oikoi {
+    height: 333px;
+    width: 868px; } }
+
+@media (min-width: 1292px) {
+  .testimonials .carousel .carousel-slide .image-oikoi {
+    height: 408px;
+    width: 1016px; } }
+
+.testimonials .carousel .carousel-slide .image-nou-kod {
+  background-image: url("../../../thumbnails/pages/commcare/product/testimonial2.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 135px;
+  transition: .5s background ease-in-out;
+  width: 276px; }
+
+.testimonials .carousel .carousel-slide .image-nou-kod .bg-preload,
+.testimonials .carousel .carousel-slide .image-nou-kod.loaded {
+  background-image: url("../../../pages/commcare/product/testimonial2.jpg"); }
+
+@media (min-width: 374px) {
+  .testimonials .carousel .carousel-slide .image-nou-kod {
+    height: 135px;
+    width: 276px; } }
+
+@media (min-width: 480px) {
+  .testimonials .carousel .carousel-slide .image-nou-kod {
+    height: 158px;
+    width: 424px; } }
+
+@media (min-width: 718px) {
+  .testimonials .carousel .carousel-slide .image-nou-kod {
+    height: 277px;
+    width: 680px; } }
+
+@media (min-width: 1024px) {
+  .testimonials .carousel .carousel-slide .image-nou-kod {
+    height: 333px;
+    width: 868px; } }
+
+@media (min-width: 1292px) {
+  .testimonials .carousel .carousel-slide .image-nou-kod {
+    height: 408px;
+    width: 1016px; } }
+
+.testimonials .carousel .carousel-slide .image-delivery-services {
+  background-image: url("../../../thumbnails/pages/commcare/product/testimonial3.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 135px;
+  transition: .5s background ease-in-out;
+  width: 276px; }
+
+.testimonials .carousel .carousel-slide .image-delivery-services .bg-preload,
+.testimonials .carousel .carousel-slide .image-delivery-services.loaded {
+  background-image: url("../../../pages/commcare/product/testimonial3.jpg"); }
+
+@media (min-width: 374px) {
+  .testimonials .carousel .carousel-slide .image-delivery-services {
+    height: 135px;
+    width: 276px; } }
+
+@media (min-width: 480px) {
+  .testimonials .carousel .carousel-slide .image-delivery-services {
+    height: 158px;
+    width: 424px; } }
+
+@media (min-width: 718px) {
+  .testimonials .carousel .carousel-slide .image-delivery-services {
+    height: 277px;
+    width: 680px; } }
+
+@media (min-width: 1024px) {
+  .testimonials .carousel .carousel-slide .image-delivery-services {
+    height: 333px;
+    width: 868px; } }
+
+@media (min-width: 1292px) {
+  .testimonials .carousel .carousel-slide .image-delivery-services {
+    height: 408px;
+    width: 1016px; } }
+
+.testimonials .carousel .carousel-slide .image-cleaning-data {
+  background-image: url("../../../thumbnails/pages/commcare/product/testimonial4.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 135px;
+  transition: .5s background ease-in-out;
+  width: 276px; }
+
+.testimonials .carousel .carousel-slide .image-cleaning-data .bg-preload,
+.testimonials .carousel .carousel-slide .image-cleaning-data.loaded {
+  background-image: url("../../../pages/commcare/product/testimonial4.jpg"); }
+
+@media (min-width: 374px) {
+  .testimonials .carousel .carousel-slide .image-cleaning-data {
+    height: 135px;
+    width: 276px; } }
+
+@media (min-width: 480px) {
+  .testimonials .carousel .carousel-slide .image-cleaning-data {
+    height: 158px;
+    width: 424px; } }
+
+@media (min-width: 718px) {
+  .testimonials .carousel .carousel-slide .image-cleaning-data {
+    height: 277px;
+    width: 680px; } }
+
+@media (min-width: 1024px) {
+  .testimonials .carousel .carousel-slide .image-cleaning-data {
+    height: 333px;
+    width: 868px; } }
+
+@media (min-width: 1292px) {
+  .testimonials .carousel .carousel-slide .image-cleaning-data {
+    height: 408px;
+    width: 1016px; } }

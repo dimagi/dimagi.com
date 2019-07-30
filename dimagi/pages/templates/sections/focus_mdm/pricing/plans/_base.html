@@ -1,0 +1,79 @@
+{% load i18n %}
+
+<div class="column" id="{{ css_id }}">
+  <a class="tile {{ theme }}-border plans-tile{% if highlight %} plan-highlight{% endif %} {{ theme }}-theme {{ click_class }}"
+     href="#details">
+
+    <div class="pad-top-small pad-bottom-line">
+      <h3 class="{{ theme }} gap-bottom-base">
+        {% block name %}{% endblock %}
+      </h3>
+      <div class="pricing-type pricing-type-{{ theme }}"
+           data-bind="text: paymentType, css: { monthly: showMonthly }">
+        Paying Annually
+      </div>
+    </div>{# .intro #}
+
+    <div class="plans-price-monthly">
+      <p class="h3
+                font-weight-medium
+                body-color
+                gap-bottom-none">
+        {% block price_monthly %}{% endblock %}
+      </p>
+      <p class="body-color">
+        {% block text_monthly %}
+          {% blocktrans %}
+            monthly
+          {% endblocktrans %}
+        {% endblock %}
+      </p>
+    </div>{# .plans-price-monthly #}
+
+    <div class="flip-card gap-top-line">
+      <div class="flipper">
+        <div class="front">
+          <p class="body-color align-left">
+            {% block description %}{% endblock %}
+          </p>
+        </div>{# .front #}
+        <div class="back">
+          <p class="body-color
+                    gap-top-line
+                    gap-top-none-at-medium
+                    gap-bottom-base
+                    font-weight-bold">
+            {% trans "Core Features" %}
+          </p>
+          <ul class="check-list
+                    {{ theme }}-check
+                    features-list
+                    grid-space-none
+                    body-color
+                    align-left">
+            {% block features %}{% endblock %}
+          </ul>
+        </div>{# .back #}
+      </div>{# .flipper #}
+    </div>{# .flip-card #}
+
+    <p class="button-container gap-top-none">
+      <div class="button button-{{ theme }} cta-pricing-plans-{{ css_id }}"
+           data-kmq="true"
+           data-kmq-name="{% block kissmetrics_cta %}{% endblock %}">
+        {% blocktrans %}
+          Read More
+        {% endblocktrans %}
+      </div>{# .button #}
+    </p>
+
+    <div class="plans-popular">
+      <span>
+        {% blocktrans %}
+          Most Popular Plan
+        {% endblocktrans %}
+      </span>
+    </div>
+
+  </a>
+</div>{# .column #}

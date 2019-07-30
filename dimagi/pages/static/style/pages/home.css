@@ -1,0 +1,241 @@
+.home-page .hero {
+  background-image: url("../../thumbnails/pages/home/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  height: 500px;
+  transition: .5s background ease-in-out;
+  position: relative; }
+
+.home-page .hero .bg-loader {
+  background-image: url("../../pages/home/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%; }
+
+@media (min-width: 480px) {
+  .home-page .hero {
+    background-image: url("../../thumbnails/pages/home/hero.small.jpg");
+    height: 500px; }
+  .home-page .hero .bg-loader {
+    background-image: url("../../pages/home/hero.small.jpg"); } }
+
+@media (min-width: 718px) {
+  .home-page .hero {
+    background-image: url("../../thumbnails/pages/home/hero.medium.jpg");
+    height: 500px; }
+  .home-page .hero .bg-loader {
+    background-image: url("../../pages/home/hero.medium.jpg"); } }
+
+@media (min-width: 1024px) {
+  .home-page .hero {
+    background-image: url("../../thumbnails/pages/home/hero.large.jpg");
+    height: 500px; }
+  .home-page .hero .bg-loader {
+    background-image: url("../../pages/home/hero.large.jpg"); } }
+
+@media (min-width: 1292px) {
+  .home-page .hero {
+    background-image: url("../../thumbnails/pages/home/hero.extra-large.jpg");
+    height: 500px; }
+  .home-page .hero .bg-loader {
+    background-image: url("../../pages/home/hero.extra-large.jpg"); } }
+
+.build {
+  width: 100%; }
+  .build .image {
+    background-image: url("../../thumbnails/pages/home/build.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    height: 122px;
+    transition: .5s background ease-in-out;
+    position: relative; }
+  .build .image .bg-loader {
+    background-image: url("../../pages/home/build.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 100%; }
+  @media (min-width: 480px) {
+    .build .image {
+      background-image: url("../../thumbnails/pages/home/build.small.jpg");
+      height: 186px; }
+    .build .image .bg-loader {
+      background-image: url("../../pages/home/build.small.jpg"); } }
+  @media (min-width: 718px) {
+    .build .image {
+      background-image: url("../../thumbnails/pages/home/build.medium.jpg");
+      height: 298px; }
+    .build .image .bg-loader {
+      background-image: url("../../pages/home/build.medium.jpg"); } }
+  @media (min-width: 1024px) {
+    .build .image {
+      background-image: url("../../thumbnails/pages/home/build.large.jpg");
+      height: 362px; }
+    .build .image .bg-loader {
+      background-image: url("../../pages/home/build.large.jpg"); } }
+  @media (min-width: 1292px) {
+    .build .image {
+      background-image: url("../../thumbnails/pages/home/build.extra-large.jpg");
+      height: 442px; }
+    .build .image .bg-loader {
+      background-image: url("../../pages/home/build.extra-large.jpg"); } }
+
+.video-intro .image {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../../thumbnails/pages/home/video-intro-banner.jpg");
+  transition: .5s background ease-in-out;
+  position: relative;
+  height: 160px;
+  width: 250px; }
+  .video-intro .image.loaded,
+  .video-intro .image .bg-preload {
+    background-image: url("../../pages/home/video-intro-banner.jpg"); }
+
+.workforce .image.testimonial1 {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../../thumbnails/pages/home/workforce-1.jpg");
+  transition: .5s background ease-in-out;
+  position: relative; }
+  .workforce .image.testimonial1.loaded,
+  .workforce .image.testimonial1 .bg-preload {
+    background-image: url("../../pages/home/workforce-1.jpg"); }
+
+.workforce .image.testimonial2 {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../../thumbnails/pages/home/workforce-2.jpg");
+  transition: .5s background ease-in-out;
+  position: relative; }
+  .workforce .image.testimonial2.loaded,
+  .workforce .image.testimonial2 .bg-preload {
+    background-image: url("../../pages/home/workforce-2.jpg"); }
+
+.workforce .image.testimonial3 {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../../thumbnails/pages/home/workforce-3.jpg");
+  transition: .5s background ease-in-out;
+  position: relative; }
+  .workforce .image.testimonial3.loaded,
+  .workforce .image.testimonial3 .bg-preload {
+    background-image: url("../../pages/home/workforce-3.jpg"); }
+
+.awards .image {
+  background-image: url("../../thumbnails/pages/home/awards.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  height: 315px;
+  transition: .5s background ease-in-out;
+  position: relative; }
+
+.awards .image .bg-loader {
+  background-image: url("../../pages/home/awards.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%; }
+
+@media (min-width: 480px) {
+  .awards .image {
+    background-image: url("../../thumbnails/pages/home/awards.small.jpg");
+    height: 360px; }
+  .awards .image .bg-loader {
+    background-image: url("../../pages/home/awards.small.jpg"); } }
+
+@media (min-width: 718px) {
+  .awards .image {
+    background-image: url("../../thumbnails/pages/home/awards.medium.jpg");
+    height: 750px; }
+  .awards .image .bg-loader {
+    background-image: url("../../pages/home/awards.medium.jpg"); } }
+
+@media (min-width: 1024px) {
+  .awards .image {
+    background-image: url("../../thumbnails/pages/home/awards.large.jpg");
+    height: 655px; }
+  .awards .image .bg-loader {
+    background-image: url("../../pages/home/awards.large.jpg"); } }
+
+@media (min-width: 1292px) {
+  .awards .image {
+    background-image: url("../../thumbnails/pages/home/awards.extra-large.jpg");
+    height: 610px; }
+  .awards .image .bg-loader {
+    background-image: url("../../pages/home/awards.extra-large.jpg"); } }
+
+@media (min-width: 718px) {
+  .awards .off-grid {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: auto;
+    width: 100%;
+    z-index: 1; }
+  .awards .content {
+    position: relative;
+    z-index: 2; } }
+
+.case-management .image {
+  background-image: url("../../thumbnails/pages/case_management/cm-cta.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  height: 290px;
+  transition: .5s background ease-in-out;
+  position: relative; }
+
+.case-management .image .bg-loader {
+  background-image: url("../../pages/case_management/cm-cta.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%; }
+
+@media (min-width: 480px) {
+  .case-management .image {
+    background-image: url("../../thumbnails/pages/case_management/cm-cta.small.png");
+    height: 290px; }
+  .case-management .image .bg-loader {
+    background-image: url("../../pages/case_management/cm-cta.small.png"); } }
+
+@media (min-width: 718px) {
+  .case-management .image {
+    background-image: url("../../thumbnails/pages/case_management/cm-cta.medium.png");
+    height: 290px; }
+  .case-management .image .bg-loader {
+    background-image: url("../../pages/case_management/cm-cta.medium.png"); } }
+
+@media (min-width: 1024px) {
+  .case-management .image {
+    background-image: url("../../thumbnails/pages/case_management/cm-cta.large.png");
+    height: 290px; }
+  .case-management .image .bg-loader {
+    background-image: url("../../pages/case_management/cm-cta.large.png"); } }
+
+@media (min-width: 1292px) {
+  .case-management .image {
+    background-image: url("../../thumbnails/pages/case_management/cm-cta.extra-large.png");
+    height: 292px; }
+  .case-management .image .bg-loader {
+    background-image: url("../../pages/case_management/cm-cta.extra-large.png"); } }
+
+@media (min-width: 718px) {
+  .case-management .off-grid {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: auto;
+    width: 100%;
+    z-index: 1; }
+  .case-management .content {
+    position: relative;
+    z-index: 2; } }
+
+.case-management .bg-loader {
+  background-color: #fafafa; }

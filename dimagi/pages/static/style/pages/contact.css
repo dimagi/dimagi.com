@@ -1,0 +1,54 @@
+.contact-page .hero {
+  background-image: url("../../thumbnails/pages/contact/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  height: 500px;
+  transition: .5s background ease-in-out;
+  position: relative; }
+
+.contact-page .hero .bg-loader {
+  background-image: url("../../pages/contact/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%; }
+
+@media (min-width: 480px) {
+  .contact-page .hero {
+    background-image: url("../../thumbnails/pages/contact/hero.small.jpg");
+    height: 500px; }
+  .contact-page .hero .bg-loader {
+    background-image: url("../../pages/contact/hero.small.jpg"); } }
+
+@media (min-width: 718px) {
+  .contact-page .hero {
+    background-image: url("../../thumbnails/pages/contact/hero.medium.jpg");
+    height: 500px; }
+  .contact-page .hero .bg-loader {
+    background-image: url("../../pages/contact/hero.medium.jpg"); } }
+
+@media (min-width: 1024px) {
+  .contact-page .hero {
+    background-image: url("../../thumbnails/pages/contact/hero.large.jpg");
+    height: 500px; }
+  .contact-page .hero .bg-loader {
+    background-image: url("../../pages/contact/hero.large.jpg"); } }
+
+@media (min-width: 1292px) {
+  .contact-page .hero {
+    background-image: url("../../thumbnails/pages/contact/hero.extra-large.jpg");
+    height: 500px; }
+  .contact-page .hero .bg-loader {
+    background-image: url("../../pages/contact/hero.extra-large.jpg"); } }
+
+@media (min-width: 718px) {
+  .contact-page .hero h1 {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 55%; } }
+
+.office-country-icon svg {
+  height: 80px;
+  width: 80px; }
+  .office-country-icon svg * {
+    stroke-width: 3; }

@@ -1,0 +1,69 @@
+.case-studies-page .hero {
+  background-image: url("../../../thumbnails/pages/case_studies/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  height: 500px;
+  transition: .5s background ease-in-out;
+  position: relative; }
+
+.case-studies-page .hero .bg-loader {
+  background-image: url("../../../pages/case_studies/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%; }
+
+@media (min-width: 480px) {
+  .case-studies-page .hero {
+    background-image: url("../../../thumbnails/pages/case_studies/hero.small.jpg");
+    height: 500px; }
+  .case-studies-page .hero .bg-loader {
+    background-image: url("../../../pages/case_studies/hero.small.jpg"); } }
+
+@media (min-width: 718px) {
+  .case-studies-page .hero {
+    background-image: url("../../../thumbnails/pages/case_studies/hero.medium.jpg");
+    height: 500px; }
+  .case-studies-page .hero .bg-loader {
+    background-image: url("../../../pages/case_studies/hero.medium.jpg"); } }
+
+@media (min-width: 1024px) {
+  .case-studies-page .hero {
+    background-image: url("../../../thumbnails/pages/case_studies/hero.large.jpg");
+    height: 500px; }
+  .case-studies-page .hero .bg-loader {
+    background-image: url("../../../pages/case_studies/hero.large.jpg"); } }
+
+@media (min-width: 1292px) {
+  .case-studies-page .hero {
+    background-image: url("../../../thumbnails/pages/case_studies/hero.extra-large.jpg");
+    height: 500px; }
+  .case-studies-page .hero .bg-loader {
+    background-image: url("../../../pages/case_studies/hero.extra-large.jpg"); } }
+
+.study-thumbnail {
+  background-position: "center";
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: "top center";
+  transition: .5s background ease-in-out;
+  padding-top: 126%; }
+  .study-thumbnail::after {
+    background-color: "top center"; }
+  .study-thumbnail:after {
+    background-color: #ff8400;
+    content: ' ';
+    display: block;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    transition: opacity .5s;
+    width: 100%; }
+
+a.study {
+  color: #5f6a7d !important;
+  font-weight: 400; }
+  a.study:hover .study-thumbnail:after {
+    opacity: .5; }

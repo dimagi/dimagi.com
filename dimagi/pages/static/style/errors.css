@@ -1,0 +1,92 @@
+.error-404-page .hero {
+  background-image: url("../thumbnails/pages/error404/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  height: 500px;
+  transition: .5s background ease-in-out;
+  position: relative; }
+
+.error-404-page .hero .bg-loader {
+  background-image: url("../pages/error404/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%; }
+
+@media (min-width: 480px) {
+  .error-404-page .hero {
+    background-image: url("../thumbnails/pages/error404/hero.small.jpg");
+    height: 500px; }
+  .error-404-page .hero .bg-loader {
+    background-image: url("../pages/error404/hero.small.jpg"); } }
+
+@media (min-width: 718px) {
+  .error-404-page .hero {
+    background-image: url("../thumbnails/pages/error404/hero.medium.jpg");
+    height: 500px; }
+  .error-404-page .hero .bg-loader {
+    background-image: url("../pages/error404/hero.medium.jpg"); } }
+
+@media (min-width: 1024px) {
+  .error-404-page .hero {
+    background-image: url("../thumbnails/pages/error404/hero.large.jpg");
+    height: 500px; }
+  .error-404-page .hero .bg-loader {
+    background-image: url("../pages/error404/hero.large.jpg"); } }
+
+@media (min-width: 1292px) {
+  .error-404-page .hero {
+    background-image: url("../thumbnails/pages/error404/hero.extra-large.jpg");
+    height: 500px; }
+  .error-404-page .hero .bg-loader {
+    background-image: url("../pages/error404/hero.extra-large.jpg"); } }
+
+.error-500-page .hero {
+  background-image: url("../thumbnails/pages/error500/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  height: 500px;
+  transition: .5s background ease-in-out;
+  position: relative; }
+
+.error-500-page .hero .bg-loader {
+  background-image: url("../pages/error500/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%; }
+
+@media (min-width: 480px) {
+  .error-500-page .hero {
+    background-image: url("../thumbnails/pages/error500/hero.small.jpg");
+    height: 500px; }
+  .error-500-page .hero .bg-loader {
+    background-image: url("../pages/error500/hero.small.jpg"); } }
+
+@media (min-width: 718px) {
+  .error-500-page .hero {
+    background-image: url("../thumbnails/pages/error500/hero.medium.jpg");
+    height: 500px; }
+  .error-500-page .hero .bg-loader {
+    background-image: url("../pages/error500/hero.medium.jpg"); } }
+
+@media (min-width: 1024px) {
+  .error-500-page .hero {
+    background-image: url("../thumbnails/pages/error500/hero.large.jpg");
+    height: 500px; }
+  .error-500-page .hero .bg-loader {
+    background-image: url("../pages/error500/hero.large.jpg"); } }
+
+@media (min-width: 1292px) {
+  .error-500-page .hero {
+    background-image: url("../thumbnails/pages/error500/hero.extra-large.jpg");
+    height: 500px; }
+  .error-500-page .hero .bg-loader {
+    background-image: url("../pages/error500/hero.extra-large.jpg"); } }
+
+@media (min-width: 718px) {
+  .error-404-page .hero h1,
+  .error-500-page .hero h1 {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 55%; } }
