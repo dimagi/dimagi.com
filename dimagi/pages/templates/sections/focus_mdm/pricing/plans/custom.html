@@ -3,46 +3,53 @@
 {% load dimagidotcom %}
 
 {% block kissmetrics_cta %}
-Clicked Read More - Pricing (Advanced)
+Clicked Read More - Pricing (Custom)
 {% endblock %}
 
 {% block name %}{% blocktrans %}
-  Advanced
+  Custom
 {% endblocktrans %}{% endblock %}
 
-{% block price_monthly %}
-  $<span>2</span>/<span>device</span>/<span>month</span>
-{% endblock %}
+{% block price_monthly %}{% blocktrans %}
+  Custom
+{% endblocktrans %}{% endblock %}
+
+{% block text_monthly %}&nbsp;{% endblock %}
 
 {% block description %}{% blocktrans %}
-  For working on projects at scale that require advanced
-  levels of data presentation, security and support.
+  A tailor-made plan for management of company owned devices. For organizations that need complete control over enrolled devices and its data.
 {% endblocktrans %}{% endblock %}
 
 {% block features %}
   <li>
     {% blocktrans %}
-      All Standard Features
+      All Advanced Features
     {% endblocktrans %}
   </li>
   <li>
     {% blocktrans %}
-      Remote wipe
+      Managed Play Store
     {% endblocktrans %}
   </li>
   <li>
     {% blocktrans %}
-      Remote Lock - Set Passcode
+      Enforce Passcode Rules, Encryption, Lost Mode
     {% endblocktrans %}
   </li>
   <li>
     {% blocktrans %}
-      2FA
+      Web Content Filtering
     {% endblocktrans %}
   </li>
   <li>
     {% blocktrans %}
-      Heat Map of Area Coverage
+      Device config (Email, WiFi, VPN, Wallpaper)
     {% endblocktrans %}
   </li>
+  <li>
+    {% blocktrans %}
+      API Integrations
+    {% endblocktrans %}
+  </li>
+
 {% endblock %}

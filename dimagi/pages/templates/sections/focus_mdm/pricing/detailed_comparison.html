@@ -12,31 +12,10 @@
       </h2>
     </div>{# .intro #}
 
-    <p class="align-center hide-at-large pad-bottom-line-at-small offset-top-base">
-      <a href="{% url 'annual_commcare_pricing_pdf' %}"
-         data-bind="visible: !showMonthly()"
-         class="button button-slate hide-until-large {% click_body 'details-download' %}">
-        {% blocktrans %}
-          Download Full<br class="hide-at-small" />
-          Comparison Chart
-        {% endblocktrans %}
-      </a>
-
-      <a href="{% url 'monthly_commcare_pricing_pdf' %}"
-         data-bind="visible: showMonthly"
-         style="display: none;"
-         class="button button-slate {% click_body 'details-download-mobile' %}">
-        {% blocktrans %}
-          Download Full<br class="hide-at-small" />
-          Comparison Chart
-        {% endblocktrans %}
-      </a>
-    </p>
-
     <div class="hide-until-small">
-      {% include "sections/commcare/pricing/detailed_comparison/legend.html" %}
-      {% include "sections/commcare/pricing/detailed_comparison/header.html" %}
-      {% include "sections/commcare/pricing/detailed_comparison/accordion.html" %}
+      {% include "sections/focus_mdm/pricing/detailed_comparison/legend.html" %}
+      {% include "sections/focus_mdm/pricing/detailed_comparison/header.html" %}
+      {% include "sections/focus_mdm/pricing/detailed_comparison/accordion.html" %}
     </div>
 
     <p class="align-center pad-top-small-at-small">

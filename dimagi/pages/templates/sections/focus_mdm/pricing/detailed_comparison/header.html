@@ -2,31 +2,13 @@
 {% load dimagidotcom %}
 
 <div class="plan-row border-horz">
-  <div class="grid-6-at-large grid-5 grid-valign-middle">
-
-    <div class="column column-width-2-at-large align-left">
-      <a href="{% url 'annual_commcare_pricing_pdf' %}"
-         data-bind="visible: !showMonthly()"
-         class="button button-slate hide-until-large {% click_body 'details-download' %}">
-        {% blocktrans %}
-          Download Full<br /> Comparison Chart
-        {% endblocktrans %}
-      </a>
-      <a href="{% url 'monthly_commcare_pricing_pdf' %}"
-         data-bind="visible: showMonthly"
-         style="display: none;"
-         class="button button-slate hide-until-large {% click_body 'details-download' %}">
-        {% blocktrans %}
-          Download Full<br /> Comparison Chart
-        {% endblocktrans %}
-      </a>
-    </div>{# .column #}
+  <div class="grid-4-at-large grid-5 grid-valign-middle">
 
     <div class="column">
       <div class="plan-column plan-standard">
         <h3 class="green">
           {% blocktrans %}
-            Standard
+            Basic
           {% endblocktrans %}
         </h3>
         <div class="pricing-type pricing-type-green pricing-type-table gap-bottom-base"
@@ -35,7 +17,7 @@
         </div>
         <p>
           {% blocktrans %}
-            $<span data-bind="text: standard.displayPrice">250</span> monthly
+            $<span>1</span>/<span>device</span>/<span>month</span>
           {% endblocktrans %}
         </p>
       </div>{# .plan-column #}
@@ -45,7 +27,7 @@
       <div class="plan-column plan-pro">
         <h3 class="turquoise">
           {% blocktrans %}
-            Pro
+            Standard
           {% endblocktrans %}
         </h3>
         <div class="pricing-type pricing-type-turquoise pricing-type-table gap-bottom-base"
@@ -54,7 +36,7 @@
         </div>
         <p>
           {% blocktrans %}
-            $<span data-bind="text: pro.displayPrice">500</span> monthly
+            $<span>1.50</span>/<span>device</span>/<span>month</span>
           {% endblocktrans %}
         </p>
       </div>{# .plan-column #}
@@ -73,7 +55,7 @@
         </div>
         <p>
           {% blocktrans %}
-            $<span data-bind="text: advanced.displayPrice">1000</span> monthly
+            $<span>2</span>/<span>device</span>/<span>month</span>
           {% endblocktrans %}
         </p>
       </div>{# .plan-column #}
@@ -83,12 +65,12 @@
       <div class="plan-column plan-enterprise">
         <h3 class="blue hide-until-medium">
           {% blocktrans %}
-            Enterprise
+            Custom
           {% endblocktrans %}
         </h3>
         <h3 class="blue hide-at-medium">
           {% blocktrans %}
-            Enter-prise
+            Custom
           {% endblocktrans %}
         </h3>
         <div class="pricing-type pricing-type-blue pricing-type-table gap-bottom-base"

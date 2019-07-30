@@ -1,4 +1,4 @@
-{% extends "sections/commcare/pricing/plans/_base.html" %}
+{% extends "sections/focus_mdm/pricing/plans/_base.html" %}
 {% load i18n %}
 {% load dimagidotcom %}
 
@@ -11,39 +11,33 @@ Clicked Read More - Pricing (Standard)
 {% endblocktrans %}{% endblock %}
 
 {% block price_monthly %}
-  $<span data-bind="text: standard.displayPrice">250</span>
+  $<span>1.50</span>/<span>device</span>/<span>month</span>
 {% endblock %}
 
 {% block description %}{% blocktrans %}
-  Perfect to prove the value of
-  CommCare in the pilot phase. Access case
-  imports, API integrations, and better support.
+  Ideal for projects that need ability to restrict data usage, access to advanced device management options.
 {% endblocktrans %}{% endblock %}
 
 {% block features %}
   <li>
     {% blocktrans %}
-      Guaranteed email support within 3 business days
+      All Basic Features
     {% endblocktrans %}
   </li>
   <li>
     {% blocktrans %}
-      Lookup tables
+      App Lock (Blacklist)
     {% endblocktrans %}
   </li>
   <li>
     {% blocktrans %}
-      Case importer
+      Advanced App Blocking (Time & Data Usage Constraints)
     {% endblocktrans %}
   </li>
   <li>
     {% blocktrans %}
-      API access
+      Group Devices - Policies Per Group, Enroll Directly into Group
     {% endblocktrans %}
   </li>
-  <li>
-    {% blocktrans %}
-      One-way SMS
-    {% endblocktrans %}
-  </li>
+
 {% endblock %}

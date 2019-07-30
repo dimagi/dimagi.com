@@ -4,12 +4,12 @@
 @import 'app/variables/type';
 
 
-.pricing-commcare-page {
+.pricing-focusmdm-page {
   @include make-bg(hero, '../../../pages/focus_mdm/pricing/hero');
 }
 
 @media (min-width: $width-desktop) {
-  .pricing-commcare-page .hero h1 {
+  .pricing-focusmdm-page .hero h1 {
     margin-left: 0;
     margin-right: 0;
     max-width: 55%;
