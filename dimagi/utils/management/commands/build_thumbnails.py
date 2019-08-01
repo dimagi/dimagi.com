@@ -32,7 +32,7 @@ class Command(BaseCommand):
         im = Image.open(source)
         im.thumbnail((200, 200), Image.ANTIALIAS)
 
-        dest_dir = "/".join(dest.split('/')[:-1])
+        dest_dir = "\\".join(dest.split('\\')[:-1])
         if not os.path.exists(dest_dir):
             os.makedirs(dest_dir)
 

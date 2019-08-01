@@ -8,7 +8,7 @@
 
       <span class="hide-until-medium">
         {% click_subnav 'demo' as click_class %}
-        {% include "partials/schedule_demo_button.html" with click_class=click_class %}
+        {% include "partials/focus_schedule_demo_button.html" with click_class=click_class %}
       </span>
       <a class="primary cta-pricing-subnav-trial {% click_subnav 'trial' %}"
          data-kmq-external="true"
@@ -31,7 +31,7 @@
       <div class="content">
         <span class="hide-at-medium">
           {% click_subnav 'demo-mobile' as click_class %}
-          {% include "partials/schedule_demo_button.html" with click_class=click_class %}
+          {% include "partials/focus_schedule_demo_button.html" with click_class=click_class %}
         </span>
         <a href="#plans"
            class="{% click_subnav 'plans' %}">
