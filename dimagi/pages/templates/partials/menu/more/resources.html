@@ -21,6 +21,15 @@
   </div>{# .column #}
 
   <div class="column">
+    <a href="{% url 'focus_mdm_pricing' %}"
+       class="orange-swatch {% click_nav 'focusmdm-pricing' %}">
+      {% blocktrans %}
+        FocusMDM Pricing
+      {% endblocktrans %}
+    </a>
+  </div>{# .column #}
+
+  <div class="column">
     <a href="{% url 'about' %}"
        class="orange-swatch {% click_nav 'about' %}">
       {% blocktrans %}

@@ -3,86 +3,95 @@
 
 <section id="overview">
     <div class="content pad-vert-medium">
-    <div class="grid-2-at-medium">
-      <div class="column">
-        <h1>
-          Mobile App
-        </h1>
-        <h4>
-          This is a mobile app that ....
-        </h4>
+        <div class="grid-2-at-medium">
+            <div class="column">
+                <h1>
+                    {% blocktrans %}
+                    Mobile App
+                    {% endblocktrans %}
+                </h1>
+                <h4>
+                    {% blocktrans %}
+                    For Android OS 4.4+, can be used for free.
+                    {% endblocktrans %}
+                </h4>
 
-        <p></p>
-    <h5>
+                <p></p>
+                <p>
+                    {% blocktrans %}
+                    Free version gives user ability to keep track of time and data usage.
+                    That way user is able to spot apps that are high consumers and manage the time he is spending on apps.
+                    {% endblocktrans %}
+                </p>
+                <p>
+                    {% blocktrans %}
+                    Coupled with the webapp FocusMDM becomes powerful device policy manager.
+                    This can be achieved by enrolling a device in enterprise.
+                    Depending on organization needs two deployment modes are available, BYOD and DO mode.
+                    {% endblocktrans %}
+                </p>
 
-    Features
-
-    </h5>
-
-    <p>
-
-    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-
-    </p>
-
-    <p>
-
-
-        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-        It has survived not only five <a href="/#">centuries</a>, but also the leap into electronic typesetting, remaining essentially unchanged.
-
-    </p>
-
-      </div>
-      <div class="column">
-        <a class="tile align-center height-100">
-            <div id="overview-mobile" class="overview-mobile">
-                <div class="image off-grid white-lazy-bg" data-lazybg="true"></div>
-            </div>
-        </a>
-      </div>
-    </div>
-</div>
-    <div class="content pad-vert-large">
-    <div class="grid-2-at-medium">
-        <div class="column">
-            <a class="tile align-center height-100">
-                <div id="overview-web" class="overview-web">
-                    <div class="image off-grid white-lazy-bg" data-lazybg="true"></div>
+                <div style="width: 150px;">
+                      <a href='https://play.google.com/store/apps/details?id=org.commcare.devicepolicycontroller&hl=en&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png'/></a>
                 </div>
-            </a>
+            </div>
+            <div class="column">
+                <a class="tile align-center height-100">
+                    <div id="overview-mobile" class="overview-mobile">
+                        <div class="image off-grid white-lazy-bg" data-lazybg="true"></div>
+                    </div>
+                </a>
+            </div>
         </div>
-      <div class="column">
-        <h1>
-          Web App
-        </h1>
-        <h4>
-          This is a web app that ....
-        </h4>
-
-        <p></p>
-    <h5>
-
-    Features
-
-    </h5>
-
-    <p>
-
-    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-
-    </p>
-
-    <p>
-
-
-        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-        It has survived not only five <a href="/#">centuries</a>, but also the leap into electronic typesetting, remaining essentially unchanged.
-
-    </p>
-
-      </div>
-
     </div>
-</div>
+    <div class="content pad-vert-large">
+        <div class="grid-2-at-medium">
+            <div class="column">
+                <a class="tile align-center height-100">
+                    <div id="overview-web" class="overview-web">
+                        <div class="image off-grid white-lazy-bg" data-lazybg="true"></div>
+                    </div>
+                </a>
+            </div>
+            <div class="column">
+                <h1>
+                    {% blocktrans %}
+                    Web App
+                    {% endblocktrans %}
+                </h1>
+                <h4>
+                    {% blocktrans %}
+                    Keep track of your devices and manage them from afar.
+                    {% endblocktrans %}
+                </h4>
+
+                <p></p>
+
+                <p>
+                    {% blocktrans %}
+                        Provides access to device list enrolled in your enterprise and set of tools that enables you to manage them with ease.
+                        Organize devices into groups, enforce policies, keep track of device locations, usage, reports, notifications and much more..
+                    {% endblocktrans %}
+                </p>
+                <p>
+                    {% blocktrans %}
+                        Depending on selected plan you can have access to a lot of powerful features.
+                        Check out our full list of features and available plans with
+                    {% endblocktrans %}
+                    <a href="{% url 'focus_mdm_pricing' %}#details">
+                        {% blocktrans %}
+                        detailed pricing comparison.
+                        {% endblocktrans %}
+                    </a>
+                </p>
+                <div>
+                    <a class="button button-accent-gray ab-hero-toolkits--overview" href="{{ FOCUS_MDM_URL_TRIAL }}"  target="_blank">
+                        {% blocktrans %}
+                        Start Free Trial
+                        {% endblocktrans %}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
