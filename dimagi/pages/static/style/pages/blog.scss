@@ -51,13 +51,7 @@ a.post {
 
 .post-content-text {
   img {
-    margin-bottom: $space-small;
-  }
-
-  h2,
-  h3,
-  h4 {
-    font-size: $font-size-extra-large;
+    margin: $space-small auto;
   }
 }
 
