@@ -69,4 +69,32 @@ GROUP.add_features([
         ),
         support=Support(False, False, True, True),
     ),
+    Feature(
+        title=ugettext_lazy(
+            "Customized GDPR Data Processing Agreement"
+        ),
+        description=ugettext_lazy(
+            "We are fully GPDR Complaint, and offer Data Processing "
+            "Agreements on all plans. We offer customizations to our "
+            "standardized DPA only on your Advanced plan. This is primarily "
+            "because customizations creates additional and permanent overhead "
+            "on our multiple teams."
+        ),
+        support=Support(False, False, True, True),
+    ),
+    Feature(
+        title=ugettext_lazy(
+            "Customized Terms"
+        ),
+        description=mark_safe(ugettext_lazy("""Check here for our 
+        <a href="https://www.dimagi.com/terms/latest/tos/"
+           target="_blank">Terms</a>. 
+        Our Terms consist of our Terms of Service, Privacy Policy, Business 
+        Agreement, and Acceptable Usage Policy. We offer reasonable customizations 
+        to our Terms only on our Advanced plan. This is primarily because 
+        customizations creates additional and permanent 
+        overhead on our multiple teams. 
+        """)),
+        support=Support(False, False, True, True),
+    ),
 ])
