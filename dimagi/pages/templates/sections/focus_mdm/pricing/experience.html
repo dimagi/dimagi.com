@@ -1,0 +1,32 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="experience align-center border-top"
+         id="experience">
+  <div class="content pad-vert-medium">
+
+    <h3>
+      {% blocktrans %}
+        Experience the World's Most Powerful<br />
+        Mobile Device Management Platform
+      {% endblocktrans %}
+    </h3>
+
+    <div class="gap-bottom-small">
+      {% include "partials/partners.html" with partners=partners %}
+    </div>{# .grid-4 #}
+
+    <p>
+      {% blocktrans %}
+        Request a free demo and find out why more than 500 projects<br />
+        across 60+ countries rely on FocusMDM for their device management
+        and reporting needs.
+      {% endblocktrans %}
+    </p>
+
+    <p>
+      {% click_body 'experience-demo' as click_class %}
+      {% include "partials/focus_schedule_demo_button.html" with click_class=click_class button_class="button" %}
+    </p>
+  </div>{# .content #}
+</section>

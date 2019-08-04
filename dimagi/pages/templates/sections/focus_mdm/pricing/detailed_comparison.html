@@ -1,0 +1,22 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="details"
+         id="details">
+  <div class="content pad-vert-medium">
+    <div class="intro">
+      <h2 class="blue-dark">
+        {% blocktrans %}
+          Detailed Pricing Comparison
+        {% endblocktrans %}
+      </h2>
+    </div>{# .intro #}
+
+    <div class="hide-until-small">
+      {% include "sections/focus_mdm/pricing/detailed_comparison/legend.html" %}
+      {% include "sections/focus_mdm/pricing/detailed_comparison/header.html" %}
+      {% include "sections/focus_mdm/pricing/detailed_comparison/accordion.html" %}
+    </div>
+
+  </div>{# .content #}
+</section>

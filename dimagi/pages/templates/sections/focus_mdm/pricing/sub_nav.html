@@ -1,0 +1,51 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="sub-nav"
+         id="sub-nav">
+  <div class="content">
+    <div class="actions">
+
+      <span class="hide-until-medium">
+        {% click_subnav 'demo' as click_class %}
+        {% include "partials/focus_schedule_demo_button.html" with click_class=click_class %}
+      </span>
+      <a class="primary cta-pricing-subnav-trial {% click_subnav 'trial' %}"
+         data-kmq-external="true"
+         data-kmq-name="Clicked Start Trial - Pricing Sticky"
+         href="{{ FOCUS_MDM_URL_TRIAL }}">
+        <span>
+          {% blocktrans %}
+            Start Free Trial
+          {% endblocktrans %}
+        </span>
+      </a>
+    </div>{# .actions #}
+    <a class="prompt-link {% click_subnav 'browse' %}"
+       href="#">
+      {% blocktrans %}
+        Browse
+      {% endblocktrans %}
+    </a>
+    <div class="destinations">
+      <div class="content">
+        <span class="hide-at-medium">
+          {% click_subnav 'demo-mobile' as click_class %}
+          {% include "partials/focus_schedule_demo_button.html" with click_class=click_class %}
+        </span>
+        <a href="#plans"
+           class="{% click_subnav 'plans' %}">
+          {% blocktrans %}
+            FocusMDM Plans
+          {% endblocktrans %}
+        </a>
+        <a href="#details"
+           class="{% click_subnav 'details' %}">
+          {% blocktrans %}
+            Detailed Comparison
+          {% endblocktrans %}
+        </a>
+      </div>{# .content #}
+    </div>{# .destinations #}
+  </div>{# .content #}
+</section>
