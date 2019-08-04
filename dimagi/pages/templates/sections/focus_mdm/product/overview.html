@@ -1,0 +1,97 @@
+{% load dimagidotcom %}
+{% load i18n %}
+
+<section id="overview">
+    <div class="content pad-vert-medium">
+        <div class="grid-2-at-medium">
+            <div class="column">
+                <h1>
+                    {% blocktrans %}
+                    Mobile App
+                    {% endblocktrans %}
+                </h1>
+                <h4>
+                    {% blocktrans %}
+                    For Android OS 4.4+, can be used for free.
+                    {% endblocktrans %}
+                </h4>
+
+                <p></p>
+                <p>
+                    {% blocktrans %}
+                    Free version gives a user the ability to keep track of time and data usage.
+                    That way, the user is able to spot the apps that are high consumers and manage the time he is spending on apps.
+                    {% endblocktrans %}
+                </p>
+                <p>
+                    {% blocktrans %}
+                    Coupled with the webapp, FocusMDM becomes a powerful device policy manager.
+                    This can be achieved by enrolling a device in enterprise.
+                    Depending on the organization needs, two deployment modes are available, BYOD and DO.
+                    {% endblocktrans %}
+                </p>
+
+                <div style="width: 150px;">
+                      <a href='https://play.google.com/store/apps/details?id=org.commcare.devicepolicycontroller&hl=en&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png'/></a>
+                </div>
+            </div>
+            <div class="column">
+                <a class="tile align-center height-100">
+                    <div id="overview-mobile" class="overview-mobile">
+                        <div class="image off-grid white-lazy-bg" data-lazybg="true"></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="content pad-vert-large">
+        <div class="grid-2-at-medium">
+            <div class="column">
+                <a class="tile align-center height-100">
+                    <div id="overview-web" class="overview-web">
+                        <div class="image off-grid white-lazy-bg" data-lazybg="true"></div>
+                    </div>
+                </a>
+            </div>
+            <div class="column">
+                <h1>
+                    {% blocktrans %}
+                    Web App
+                    {% endblocktrans %}
+                </h1>
+                <h4>
+                    {% blocktrans %}
+                    Keep track of your devices and manage them from afar.
+                    {% endblocktrans %}
+                </h4>
+
+                <p></p>
+
+                <p>
+                    {% blocktrans %}
+                        The app provides access to device list enrolled in your enterprise and the set of tools that enables you to manage them with ease.
+                        Organize devices into groups, enforce policies, keep track of device locations, usage, reports, notifications and much more..
+                    {% endblocktrans %}
+                </p>
+                <p>
+                    {% blocktrans %}
+                        Depending on the selected plan, you can have access to a lot of powerful features.
+                        Check out our full list of features and available plans with
+                    {% endblocktrans %}
+                    <a href="{% url 'focus_mdm_pricing' %}#details">
+                        {% blocktrans %}
+                        detailed pricing comparison.
+                        {% endblocktrans %}
+                    </a>
+                </p>
+                <div>
+                    <a class="button button-accent-gray ab-hero-toolkits--overview" href="{{ FOCUS_MDM_URL_TRIAL }}"  target="_blank">
+                        {% blocktrans %}
+                        Start Free Trial
+                        {% endblocktrans %}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

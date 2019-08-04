@@ -1,0 +1,20 @@
+{% extends "sections/commcare/product/brief_overview/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block icon %}
+  {% include "svg/focus_mdm/icon/no_wifi.html" %}
+{% endblock %}
+
+{% block header %}
+  {% blocktrans %}
+    Work offline
+  {% endblocktrans %}
+{% endblock %}
+
+{% block content %}
+  {% blocktrans %}
+    Focus works offline, stores GPS and usage data locally, and then syncs the data when a device is back online.
+  {% endblocktrans %}
+{% endblock %}
+
