@@ -9,6 +9,9 @@ TOOLKIT = Toolkit(
     title=ugettext_lazy(
         "The CommCare Evidence Base & Overview"
     ),
+    download_title=ugettext_lazy(
+        "The CommCare Evidence Base Overview"
+    ),
     tagline=ugettext_lazy(
         "Over 60 studies have assessed CommCare's impact, making it the most "
         "evidence-based mobile platform for frontline workers in low-resource "

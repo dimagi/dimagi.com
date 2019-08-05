@@ -21,7 +21,7 @@ COMMCARE_EVIDENCE_BASE = OtherToolkit(
     ),
     icon="svg/tookits/icons/commcare_evidence_base.html",
     description=ugettext_lazy("""
-Over 50 studies have assessed CommCare's impact, making it the most
+Over 60 studies have assessed CommCare's impact, making it the most
 evidence-based mobile platform for frontline workers in low-resource
 settings.
     """),
