@@ -22,7 +22,7 @@ class Sector(object):
 
     def __init__(self, name=None, summary=None, template=None, slides=None,
                  slug=None, icon=None, theme=None, download_url=None,
-                 is_v2=False):
+                 is_v2=False, hubspot_form=None):
         self.name = name
         self.summary = summary
         self.template = template
@@ -36,6 +36,7 @@ class Sector(object):
         self.additional_resources = []
         self.download_url = download_url
         self.is_v2 = is_v2
+        self.hubspot_form = hubspot_form
         
     def add_sub_sectors(self, sub_sectors):
         self.sub_sectors.extend(sub_sectors)

@@ -5,13 +5,25 @@
          id="sub-nav">
   <div class="content">
     <div class="actions">
-      <a href="{{ sector.download_url }}" class="hide-until-medium {% click_subnav 'download' %}">
-        <span>
-          {% blocktrans %}
-            Download Overview
-          {% endblocktrans %}
-        </span>
-      </a>
+      {% if sector.hubspot_form %}
+        <a class="primary"
+           href="#hubspot-download-form-pdf-summary">
+          <span>
+            {% blocktrans %}
+              Download Overview
+            {% endblocktrans %}
+          </span>
+        </a>
+      {% else %}
+        <a href="{{ sector.download_url }}"
+           class="hide-until-medium {% click_subnav 'download' %}">
+          <span>
+            {% blocktrans %}
+              Download Overview
+            {% endblocktrans %}
+          </span>
+        </a>
+      {% endif %}
       <a class="primary cta-subnav-sector-{{ sector.slug }}-trial {% click_subnav 'trial' %}"
          data-kmq-external="true"
          data-kmq-name="Clicked Start Trial - {{ sector.slug }} sticky"
