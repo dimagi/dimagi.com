@@ -22,7 +22,11 @@
             {% include toolkit.icon %}
           </div>
           <h4>
-            Download {{ toolkit.title }}
+            {% if toolkit.download_title %}
+              Download {{ toolkit.download_title }}
+            {% else %}
+              Download {{ toolkit.title }}
+            {% endif %}
           </h4>
           <div class="body-color">
             <div id="hubspot-download-form-summary" class="hubspot-summary-download"></div>

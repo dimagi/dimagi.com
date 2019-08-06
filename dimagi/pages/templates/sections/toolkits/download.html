@@ -2,12 +2,14 @@
 {% load dimagidotcom %}
 
 <section class="border-vert slate-bg download pad-top-line"
-          id="download">
+         id="download">
   <div class="content white pad-vert-medium align-center">
     <h3 class="white">
-      {% blocktrans with title=toolkit.title %}
-        Download {{ title }}
-      {% endblocktrans %}
+      {% if toolkit.download_title %}
+        Download {{ toolkit.download_title }}
+      {% else %}
+        Download {{ toolkit.title }}
+      {% endif %}
     </h3>
     <div id="hubspot-download-form" class="hubspot-download request-demo-form-ip"></div>
   </div>

@@ -7,10 +7,13 @@ from dimagi.pages.models.toolkits import Toolkit, Highlight
 
 TOOLKIT = Toolkit(
     title=ugettext_lazy(
-        "The CommCare Evidence Base"
+        "The CommCare Evidence Base & Overview"
+    ),
+    download_title=ugettext_lazy(
+        "The CommCare Evidence Base Overview"
     ),
     tagline=ugettext_lazy(
-        "Over 50 studies have assessed CommCare's impact, making it the most "
+        "Over 60 studies have assessed CommCare's impact, making it the most "
         "evidence-based mobile platform for frontline workers in low-resource "
         "settings."
     ),
@@ -18,7 +21,7 @@ TOOLKIT = Toolkit(
     template="data/toolkits/summaries/commcare_evidence_base.html",
     slug="commcare-evidence-base",
     icon="svg/tookits/icons/commcare_evidence_base.html",
-    download_url="https://www.dropbox.com/s/chn7t7dsubhe9qb/CommCare-Evidence-Base-July-2016.pdf?dl=1",
+    download_url="https://cdn2.hubspot.net/hubfs/503070/Dimagi_CommCare%20Evidence%20Base%20Overview_Aug%202019.pdf",
     hubspot_form="f9b416b1-eb8b-430b-a2b6-644481b64a69",
 )
 
@@ -33,7 +36,7 @@ TOOLKIT.add_highlights([
 An RCT in South Africa found that
 FLWs using CommCare for
 cardiovascular disease (CVD) screenings
-took 75% less time...
+took 75% less time.
         """),
     ),
     Highlight(
@@ -56,7 +59,7 @@ tests from 67.5% to 82.2%.
         description=ugettext_lazy("""
 After incorprating performance feedback,
 frontline workers in one study made
-21.5% more visits than control group over
+24% more visits than control group over
 a 12-month period.
         """),
     ),  
