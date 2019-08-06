@@ -6,11 +6,11 @@ from dimagi.pages.models.sectors import Sector
 
 SECTOR = Sector(
     name=ugettext_lazy(
-        "Agricultural Extension Programs"
+        "Agricultural Programs"
     ),
     summary=ugettext_lazy(
-        "Mobile technology can support farmer trainings, ensuring "
-        "consistency in curriculum."
+        "Mobile data collection helps organize and improve the efficiency of "
+        "agriculture programs around the world."
     ),
     icon="svg/sectors/agriculture/agriculture_programs.html",
     theme="green",
