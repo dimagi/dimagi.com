@@ -36,7 +36,7 @@ TOOLKIT.add_highlights([
 An RCT in South Africa found that
 FLWs using CommCare for
 cardiovascular disease (CVD) screenings
-took 75% less time period.
+took 75% less time.
         """),
     ),
     Highlight(
