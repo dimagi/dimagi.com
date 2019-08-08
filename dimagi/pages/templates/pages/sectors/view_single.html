@@ -10,6 +10,12 @@
   {{ sector.summary }}
 {% endblock %}
 
+{% block social_card_image_url %}{% static sector.thumbnail %}{% endblock %}
+
+{% block twitter_image_url %}{% static sector.thumbnail %}{% endblock %}
+
+{% block facebook_image_url %}{% static sector.thumbnail %}{% endblock %}
+
 {% block stylesheets %}
   {% compress css %}
     <link href="{% sass_src 'style/pages/sectors.scss' %}" rel="stylesheet" media="screen" type="text/css" />

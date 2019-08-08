@@ -20,4 +20,5 @@ SECTOR = Sector(
         "data/sectors/content/programmatic_research/data_security.html",
     ],
     download_url="https://cdn2.hubspot.net/hubfs/503070/International%20research.pdf",
+    thumbnail = "pages/sectors/programmatic-research/hero.jpg",
 )

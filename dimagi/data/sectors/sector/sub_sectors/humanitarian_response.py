@@ -24,5 +24,6 @@ SECTOR = Sector(
         "beneficiaries_affected_by_crisis.html",
     ],
     download_url="https://cdn2.hubspot.net/hubfs/503070/Humanitarian%20Response.pdf",
+    thumbnail = "pages/sectors/humanitarian-response/hero.jpg",
 )
 
