@@ -1,10 +1,15 @@
 {% extends "base.html" %}
 {% load i18n %}
 {% load dimagidotcom %}
+{% load capture_tags %}
 
 {% block title %}{% blocktrans %}
   Maternal & Child Healthcare
 {% endblocktrans %}{% endblock %}
+
+{% capture as page_social_card silent %}{% block social_card_image_url %}
+  {% static 'pages/sectors/maternal-and-newborn-health/intro/hero.jpg' %}
+{% endblock %}{% endcapture %}
 
 {% block body_class %}meternal-health-page tucked-hero{% endblock %}
 
