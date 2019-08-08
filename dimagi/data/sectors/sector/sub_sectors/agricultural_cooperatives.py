@@ -18,7 +18,7 @@ SECTOR = Sector(
     slides=[
         "data/sectors/content/agricultural_cooperatives/cooperative_farming.html",
     ],
-    download_url="https://cdn2.hubspot.net/hubfs/503070/Agricultural%20Cooperatives.pdf",
+    download_url="https://cdn2.hubspot.net/hubfs/503070/Sector%20PDFs/CommCare_Agriculture.pdf",
     hubspot_form="4b3540e2-c7af-40df-8298-8bb543c766e6",
     thumbnail = "pages/sectors/agricultural-cooperatives/hero.jpg",
 )
