@@ -10,7 +10,7 @@ from dimagi.pages.models.commcare import (
 
 GROUP = FeatureGroup(
     title=ugettext_lazy(
-        "Security"
+        "Security, Compliance, and Policies"
     ),
     slug='security',
 )
