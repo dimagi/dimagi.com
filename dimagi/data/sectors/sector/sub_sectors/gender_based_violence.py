@@ -19,6 +19,7 @@ SECTOR = Sector(
         "data/sectors/content/gender_based_violence/beneficiaries.html",
     ],
     download_url="https://cdn2.hubspot.net/hubfs/503070/GBV.pdf",
+    thumbnail = "pages/sectors/gender-based-violence/hero.jpg",
 )
 
 

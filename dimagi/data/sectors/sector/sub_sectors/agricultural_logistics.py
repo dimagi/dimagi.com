@@ -20,6 +20,7 @@ SECTOR = Sector(
     ],
     download_url="https://cdn2.hubspot.net/hubfs/503070/Sector%20PDFs/CommCare_Agriculture.pdf",
     hubspot_form="72f11789-5d29-4ff2-943c-c05057436426",
+    thumbnail = "pages/sectors/agricultural-logistics/hero.jpg",
 )
 
 
