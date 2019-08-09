@@ -1,7 +1,22 @@
 {% load dimagidotcom %}
 {% load i18n %}
 
-<section id="overview">
+<section id="overview accent-gray-bg border-top">
+  <div class="content pad-vert-medium align-center">
+    <div class="intro">
+      <h2 class="purple">
+        {% blocktrans %}
+          How FocusMDM Works
+        {% endblocktrans %}
+      </h2>
+      <p class="cta">
+        {% trans 'Watch a demo' as video_text %}
+        {% click_hero 'video' as video_click_class %}
+        {% include "partials/wistia_popover.html" with wistia_id='nmzscaaxgs' show_play=True text=video_text click_class=video_click_class %}
+      </p>
+    </div>
+  </div>
+
     <div class="content pad-vert-medium">
         <div class="grid-2-at-medium">
             <div class="column">

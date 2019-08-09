@@ -26,6 +26,11 @@
   {% endcompress %}
 {% endblock %}
 
+{% block meta %}
+  <meta property="wistia:videoId" content="nmzscaaxgs" />
+  <meta property="wistia:videoTrigger" content="demo-video" />
+{% endblock %}
+
 {% block hero %}
   <div id="top"></div>
   <section class="hero hero-products-focusmdm"
@@ -60,7 +65,6 @@
     {% include "sections/focus_mdm/pricing/sub_nav.html" %}
     {% include "sections/focus_mdm/pricing/plans.html" %}
     {% include "sections/focus_mdm/pricing/detailed_comparison.html" %}
-    {% include "sections/focus_mdm/pricing/experience.html" %}
   </section>
 {% endblock %}
 
