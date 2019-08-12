@@ -15,12 +15,7 @@ require([
 
     if ($('.home-child-health')) {
         $(document).ready(function (e) {
-            $('.child-green-theme').addClass('hide');
-            $('.child-purple-theme').addClass('hide');
-            $('.child-red-theme').addClass('hide');
-            $('.home-agricultural-programs').addClass('sector-home-inactive');
-            $('.home-community-development').addClass('sector-home-inactive');
-            $('.home-urgent-response').addClass('sector-home-inactive');
+            $('.sector-sub-intro').addClass('hide');
         });
     }
 
@@ -33,6 +28,8 @@ require([
         $('.home-agricultural-programs').addClass('sector-home-inactive');
         $('.home-community-development').addClass('sector-home-inactive');
         $('.home-urgent-response').addClass('sector-home-inactive');
+        $('.sector-sub-intro').removeClass('hide');
+        $('.sectors-intro-main').addClass('hide');
     });
 
     $('.home-agricultural-programs').click(function (e) {
@@ -44,6 +41,8 @@ require([
         $('.home-child-health').addClass('sector-home-inactive');
         $('.home-community-development').addClass('sector-home-inactive');
         $('.home-urgent-response').addClass('sector-home-inactive');
+        $('.sector-sub-intro').removeClass('hide');
+        $('.sectors-intro-main').addClass('hide');
     });
 
     $('.home-community-development').click(function (e) {
@@ -55,6 +54,8 @@ require([
         $('.home-agricultural-programs').addClass('sector-home-inactive');
         $('.home-child-health').addClass('sector-home-inactive');
         $('.home-urgent-response').addClass('sector-home-inactive');
+        $('.sector-sub-intro').removeClass('hide');
+        $('.sectors-intro-main').addClass('hide');
     });
 
     $('.home-urgent-response').click(function (e) {
@@ -67,6 +68,8 @@ require([
         $('.home-community-development').addClass('sector-home-inactive');
         $('.home-child-health').addClass('sector-home-inactive');
         $('.home-urgent-response').removeClass('sector-home-inactive');
+        $('.sector-sub-intro').removeClass('hide');
+        $('.sectors-intro-main').addClass('hide');
     });
 
 });
