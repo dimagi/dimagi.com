@@ -27,7 +27,7 @@
 <section class="sector-home-page hero"
          data-lazybg="true"
          id="hero">
-  <div class="content align-left-at-medium gap-top-large gap-top-small-at-medium gap-top-line-at-large">
+  <div class="content align-left-at-medium gap-top-small gap-top-line-at-large">
     <h2 class="gap-vert-line">
       {% blocktrans %}
         Sectors we work in
@@ -39,6 +39,25 @@
         collection tool that is making an impact across sectors
       {% endblocktrans %}
     </h1>
+    <div class="selected-container align-center">
+      <h5 class="tile selected selected-card gap-bottom-line pad-base">
+        <div class="words">
+          SECTORS WE WORK IN
+        </div>
+        <div class="caret">
+          {% include "svg/caret_down.html" %}
+        </div>
+      </h5>
+      <ul class="tile pad-none reset selector card-selector pad-vert-base charcoal-muted sub-sector-selector">
+        {% for sector in sectors %}
+          <li class="pad-horz-small pad-vert-base home-{{ sector.slug }} {{ sector.theme }}-item">
+            <h4 class="h4 font-weight-medium gap-bottom-none">
+              {{ sector.name }}
+            </h4>
+          </li>
+        {% endfor %}
+     </ul>
+   </div>{# .selected-container#}
   </div> {# .content #}
 </section>
 {% endblock %}
