@@ -43,6 +43,6 @@ STUDY = CaseStudy(
         ugettext_lazy("Referral Follow-up"),
     ],
     slug="tulasalud-mnch",
-    download_url="https://www.dropbox.com/s/gehewi5z55xkaw3/mhealth-guatemala-childhealth.pdf?dl=1",
+    download_url="https://cdn2.hubspot.net/hubfs/503070/Case%20Studies/CommCare%20-%20TulaSalud%20Case%20Study.pdf",
     hubspot_form="6735a7d4-2701-4b7f-9bf7-46183a8bba53",
 )
