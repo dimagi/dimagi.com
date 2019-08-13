@@ -75,11 +75,11 @@ a.post {
 .powerful-data {
   $_base-height: 175px;
   $_height-by-size: (
-      extra-small: 205px,
-      small: 270px,
-      medium: 210px,
-      large: 265px,
-      extra-large: 320px,
-    );
+    extra-small: 205px,
+    small: 270px,
+    medium: 210px,
+    large: 265px,
+    extra-large: 320px,
+  );
   @include make-bg(powerful-data-image, '../../pages/blog/cta', $_base-height, $_height-by-size, '.png');
 }
