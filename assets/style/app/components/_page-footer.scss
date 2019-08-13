@@ -14,10 +14,6 @@
       fill: $color-white;
     }
 
-    [stroke]:not([stroke="transparent"]) {
-      stroke: $color-white;
-    }
-
     a:not(.button) {
       color: $color-white;
       font-weight: 300;
@@ -51,7 +47,8 @@
         color: $color-footer-text;
         font-weight: $font-weight-light;
 
-        &:hover, // scss-lint:disable NestingDepth
+        &:hover,
+        // scss-lint:disable NestingDepth
         &:focus {
           color: $color-text;
         }
@@ -82,12 +79,12 @@
     }
 
     .b-corp-logo {
-      svg > * {
+      svg>* {
         fill: $color-accent-gray;
       }
     }
 
-    .footer-icon-left-bottom > svg {
+    .footer-icon-left-bottom>svg {
       padding-bottom: $space-base;
     }
 

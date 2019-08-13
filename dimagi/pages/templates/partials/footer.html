@@ -57,16 +57,21 @@
         </p>
       </div>{# .column #}
       <div class="column align-center align-right-at-extra-large pad-right-none">
-        <div class="grid-2-at-extra-large">
-          <div class="column">
+        <div class="grid-2 pad-vert-base">
+          <div class="column align-right pad-horz-line">
             <a href="https://bcorporation.net/"
                target="_blank"
                class="b-corp-logo">
               {% include "svg/b_corp_logo.html" %}
             </a>
           </div> {# .column #}
+          <div class="column align-left">
+            {% include "svg/gdpr_logo.html" %}
+          </div> {# .column #}
+        </div>
+        <div class="grid-1-at-extra-large">    
           <div class="column">
-            <ul class="reset links-social">
+            <ul class="reset links-social align-center">
               <li>
                 <a href="//facebook.com/dimagi.inc"
                    class="{% click_footer 'facebook' %}"
@@ -96,7 +101,7 @@
                 </a>
               </li>
             </ul>
-            <p class="copyright align-center align-left-at-extra-large">
+            <p class="copyright align-center">
               &copy; {% now "Y" %} Dimagi, Inc.
             </p>
           </div> {# .column #}
