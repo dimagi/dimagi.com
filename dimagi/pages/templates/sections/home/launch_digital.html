@@ -1,0 +1,36 @@
+{% load dimagidotcom %}
+{% load i18n %}
+
+ <section class="launch-digital-intervention border-top accent-gray-bg"
+         id="launch">
+  <div class="content pad-vert-medium">
+
+     <div class="intro content-width-medium">
+      <h2 class="normalcase">
+        {% blocktrans %}
+          Launch a Frontline Digital Intervention
+        {% endblocktrans %}
+      </h2>
+      <p class="gap-bottom-base">
+        {% blocktrans %}
+          Dimagi drives full-scale digital interventions for frontline programs with the world’s most powerful mobile data 
+          collection platform, coupled with an experienced Global Services team. 
+        {% endblocktrans %}
+      </p>
+    </div>{# .intro #}
+
+     <div class="content-width-large pad-horz-small-at-small pad-horz-none-at-extra-large gap-top-small">
+      <div class="image"
+           data-lazybg="true"></div>
+    </div>{# .content-width-large #}
+
+     <p class="align-center pad-top-small">
+      <a class="arrow {% click_body 'launch-learn' %}"
+         href="{% url 'services' %}">
+        {% blocktrans %}
+          Learn more about Global Services
+        {% endblocktrans %}
+      </a>
+    </p>
+  </div>{# .content #}
+</section>
