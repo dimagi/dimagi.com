@@ -6,7 +6,7 @@ from dimagi.pages.models.sectors import Sector
 
 SECTOR = Sector(
     name=ugettext_lazy(
-        "Health Care Delivery"
+        "Healthcare Delivery"
     ),
     summary=ugettext_lazy(
         "mHealth apps can help with women and child healthcare, nutrition programs, and disease treatment."
