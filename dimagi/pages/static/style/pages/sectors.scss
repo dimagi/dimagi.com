@@ -107,9 +107,6 @@ a.study {
   z-index: 999 !important;
 }
 
-.child-red-theme {
-  padding-bottom: $space-small;
-}
 
 .selected {
   border: 2px solid white;
@@ -169,6 +166,10 @@ a.study {
   .h3,
   .h4 {
     color: $color-text;
+  }
+
+  .turquoise-item:hover {
+    background: $color-turquoise;
   }
 
   .blue-item:hover {

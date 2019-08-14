@@ -1,4 +1,5 @@
 from dimagi.data.sectors.sector import (
+    all_sectors,
     healthcare_delivery,
     agricultural_programs,
     community_development,
@@ -25,6 +26,7 @@ from dimagi.data.sectors.sector.sub_sectors import (
 
 
 all_sectors = (
+    all_sectors,
     healthcare_delivery,
     agricultural_programs,
     community_development,
