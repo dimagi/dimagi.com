@@ -51,13 +51,24 @@ a.post {
 
 .post-content-text {
   img {
-    margin-bottom: $space-small;
+    margin: $space-base;
   }
 
-  h2,
-  h3,
-  h4 {
-    font-size: $font-size-extra-large;
+  .aligncenter {
+    margin: 0 auto;
+  }
+
+  .alignleft {
+    float: left;
+  }
+
+  .alignright {
+    float: right;
+  }
+
+  .wp-caption-text {
+    text-align: center;
+    font-style: italic;;
   }
 }
 
