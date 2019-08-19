@@ -64,7 +64,7 @@ GROUP.add_features([
     ),
     Feature(
         title=ugettext_lazy(
-            "Support on FOCUSMDM Bugs"
+            "Support on FocusMDM Bugs"
         ),
         description=ugettext_lazy(
             "You can report a bug anytime by chatting with support staff "

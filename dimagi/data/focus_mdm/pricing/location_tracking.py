@@ -54,6 +54,6 @@ GROUP.add_features([
             "You can specify some parameter values like point radius, "
             "choose radius measuring units. "
         ),
-        support=Support(False, False, False, True),
+        support=Support(False, False, True, True),
     )
 ])

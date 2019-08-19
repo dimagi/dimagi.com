@@ -31,7 +31,7 @@ GROUP.add_features([
             "Notification center"
         ),
         description=ugettext_lazy(
-            "Log into FOCUSMDM webapp and personalize your notification settings, i.e.  "
+            "Log into FocusMDM webapp and personalize your notification settings, i.e.  "
             "specify which issues/events are important to you. You will get "
             "notifications by email for all selected issues/events.  "
         ),
