@@ -61,3 +61,5 @@ assets/thumbnails/*
 #css files
 dimagi/pages/static/style/pages/*.css
 dimagi/pages/static/style/pages/*/*.css
+dimagi/pages/static/style/*.css
+dimagi/styleguide/static/style/*.css

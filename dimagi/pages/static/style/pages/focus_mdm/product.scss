@@ -66,12 +66,12 @@
 }
 
 .overview-mobile {
-  $_base-height: 290px;
+  $_base-height: 330px;
   $_height-by-size: (
-    small: 290px,
-    medium: 290px,
-    large: 290px,
-    extra-large: 292px,
+    small: 330px,
+    medium: 330px,
+    large: 330px,
+    extra-large: 332px,
   );
   @include make-bg(image, '../../../pages/focus_mdm/product/mobile-app', $_base-height, $_height-by-size, '.png');
 
