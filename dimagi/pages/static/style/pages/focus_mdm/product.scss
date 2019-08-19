@@ -38,12 +38,12 @@
 }
 
 .overview-web {
-  $_base-height: 290px;
+  $_base-height: 320px;
   $_height-by-size: (
-    small: 290px,
-    medium: 290px,
-    large: 290px,
-    extra-large: 292px,
+    small: 320px,
+    medium: 320px,
+    large: 320px,
+    extra-large: 322px,
   );
   @include make-bg(image, '../../../pages/focus_mdm/product/web-app', $_base-height, $_height-by-size, '.png');
 
@@ -66,12 +66,12 @@
 }
 
 .overview-mobile {
-  $_base-height: 330px;
+  $_base-height: 350px;
   $_height-by-size: (
-    small: 330px,
-    medium: 330px,
-    large: 330px,
-    extra-large: 332px,
+    small: 350px,
+    medium: 350px,
+    large: 350px,
+    extra-large: 352px,
   );
   @include make-bg(image, '../../../pages/focus_mdm/product/mobile-app', $_base-height, $_height-by-size, '.png');
 
