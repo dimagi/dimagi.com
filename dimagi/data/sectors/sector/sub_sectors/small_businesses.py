@@ -13,12 +13,14 @@ SECTOR = Sector(
     ),
     template="data/sectors/content/small_businesses.html",
     slug="small-businesses",
+    theme="purple-theme",
     slides=[
         "data/sectors/content/small_businesses/small_businesses.html",
         "data/sectors/content/small_businesses/vendors.html",
         "data/sectors/content/small_businesses/customers.html",
     ],
     download_url="https://cdn2.hubspot.net/hubfs/503070/Small%20Business.pdf",
+    hubspot_form="b0e76822-a232-4eb9-ac59-5554c10f4348",
     thumbnail = "pages/sectors/small-businesses/hero.jpg",
 )
 
