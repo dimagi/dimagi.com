@@ -58,7 +58,6 @@ TOOLKIT.add_other_toolkits([
     summary.COMMCARE_EVIDENCE_BASE,
     summary.MANAGING_DEVICES_EBOOK,
     summary.MATURITY_MODEL,
-    summary.DIGITAL_HEALTH_INTERVENTIONS,
     summary.DATA_COLLECTION,
     summary.MOBILE_DATA_COLLECTION,
     summary.TOTAL_COST_OWNERSHIP,
