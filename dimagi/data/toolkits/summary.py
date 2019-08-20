@@ -54,18 +54,6 @@ Use this introductory guide to data collection to organize your data collection 
 )
 
 
-DIGITAL_HEALTH_INTERVENTIONS = OtherToolkit(
-    name=ugettext_lazy(
-        "Digital Health Interventions Checklist"
-    ),
-    icon="svg/tookits/icons/digital_health_interventions.html",
-    description=ugettext_lazy("""
-Learn how to describe your digital health technology across stakeholders .
-    """),
-    view_url="digital-health-interventions",
-)
-
-
 MANAGING_DEVICES_EBOOK = OtherToolkit(
     name=ugettext_lazy(
         "Managing Devices at Scale"
