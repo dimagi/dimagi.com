@@ -207,3 +207,7 @@ a.study {
   transition: visibility 0s, opacity .25s 0s ease, transform .25s 0s ease;
   visibility: visible;
 }
+
+.sub-red {
+  padding-bottom: $space-line;
+}
