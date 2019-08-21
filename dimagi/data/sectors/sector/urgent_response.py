@@ -25,7 +25,7 @@ SECTOR.add_sub_sectors([
         ),
         summary=ugettext_lazy(
             "Quickly organize and share data during humanitarian crises with "
-            "help of mobile data collection."
+            "the help of mobile data collection."
         ),
         template="data/sectors/content/child_health.html",
         icon="svg/sectors/urgent_response/humanitarian_response.html",

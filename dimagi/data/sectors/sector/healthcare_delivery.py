@@ -24,7 +24,7 @@ SECTOR.add_sub_sectors([
             "Maternal and Child Health"
         ),
         summary=ugettext_lazy(
-        "Mobile tools can monitor and improve maternal, antenatal, natal, and postnatal care."
+        "Mobile tools help monitor and improve maternal, antenatal, natal, and postnatal care."
         ),
         template="data/sectors/content/child_health.html",
         icon="svg/sectors/healthcare/maternal_and_childhealth.html",
@@ -43,7 +43,7 @@ SECTOR.add_sub_sectors([
             "Nutrition"
         ),
         summary=ugettext_lazy(
-        "Support and track nutrition program performance with mobile data collection.."
+        "Support and track nutrition program performance with mobile data collection."
         ),
         template="data/sectors/content/child_health.html",
         icon="svg/sectors/healthcare/nutrition.html",
@@ -56,7 +56,7 @@ SECTOR.add_sub_sectors([
             "Disease Treatment"
         ),
         summary=ugettext_lazy(
-        "Treat widespread disease such as TB, Ebola, and HIV/AIDS with mobile tools."
+        "Treat widespread disease such as Tuberculosis, Ebola, and HIV/AIDS with mobile tools."
         ),
         template="data/sectors/content/child_health.html",
         icon="svg/sectors/healthcare/disease_treatment.html",
