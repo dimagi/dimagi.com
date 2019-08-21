@@ -2,57 +2,33 @@
 {% load dimagidotcom %}
 
 <section class="overview" id="overview">
-  <div class="content pad-vert-medium">
-
-    <div class="sector-group hide-until-small grid-4-at-extra-large grid-2-at-medium grid-2-at-small grid-row-space-small grid-row-equal-heights gap-bottom-small">
-      {% for sector in sectors %}
-        <div class="sector-content column {{ sector.theme }}-theme" >
-         {% include "partials/sectors_brief.html" with sector=sector %}
-        </div>
-      {% endfor %}
-      {% for sector in sectors %}
-        {% for sector in sector.sub_sectors %}
-          <div class="sector-content child-{{ sector.theme }} child-{{ sector.slug }} {{ sector.theme }}">
-            {% include "partials/secors_breif_child.html" %}
-          </div>
-        {% endfor %}
-      {% endfor %}
-    </div>{# .sector-group hide-until-small #}
-
-    <div class="sector-group hide-at-small">
-      <div class="selected-container">
-        <h5 class="tile selected selected-card gap-bottom-line pad-base">
-          <div class="words pad-vert-none">
-            SECTORS WE WORK IN
-            <div class="caret pad-left-medium">
-            {% include "svg/sectors/caret_down.html" %}
-          </div>
-          </div>
-          <ul class="tile pad-none reset selector card-selector pad-vert-base charcoal-muted sub-sector-selector">
-          {% for sector in sectors %}
-            <li class="pad-horz-small pad-vert-base {{ sector.theme }}-theme home-{{ sector.slug }} {{ sector.theme }}-theme">
-              <div class="grid-2">
-                <div>
-                  {% include sector.icon %}
-                </div>
-                <h5 class="{{ sector.theme }}">
-                  {{ sector.name }}
-                </h5>
-              </div>
-            </li>
-          {% endfor %}
-        </ul>
-        </h5>
-      </div>{# .selected-container#}
+  <div class="content pad-top-medium pad-bottom-small">
+    <div class="intro sectors-intro-main">
+      <h3 class="body-color">
+        {% blocktrans %}
+          Sectors we work in
+        {% endblocktrans %}
+      </h3>
+      <p>
+        {% blocktrans %}
+          Select a sector in the drop-down above to see the relevant
+          sectors.
+        {% endblocktrans %}
+      </p>
+    </div>
+    <div class="sector-sub-intro">
       {% for sector in sectors %}
         {% include "sections/sectors/sector_header.html" %}
+      {% endfor %}
+    </div>
+    <div class="sector-group grid-4-at-extra-large grid-2-at-medium grid-2-at-small grid-row-space-small grid-row-equal-heights gap-bottom-small">
+      {% for sector in sectors %}
         {% for sector in sector.sub_sectors %}
           <div class="sector-content child-{{ sector.theme }} child-{{ sector.slug }} {{ sector.theme }} gap-bottom-small">
             {% include "partials/secors_breif_child.html" %}
           </div>
         {% endfor %}
       {% endfor %}
-    </div>{# .sector-group hide-at-small #}
-
+    </div>{# .sector-group #}
   </div>{# .content #}
 </section>

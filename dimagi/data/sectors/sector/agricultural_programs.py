@@ -48,7 +48,7 @@ SECTOR.add_sub_sectors([
         ),
         summary=ugettext_lazy(
             "Manage input distribution, cold chain of perishable goods, and "
-            "warehouse receipt systems at lower cost with mobile tools."
+            "warehouse receipt systems at a lower cost with mobile tools."
         ),
         icon="svg/sectors/agriculture/agricultural_logistics.html",
         theme="green-theme",
@@ -59,7 +59,7 @@ SECTOR.add_sub_sectors([
             "Agricultural Cooperatives"
         ),
         summary=ugettext_lazy(
-            "Mobile data collection's agricultural management apps provide "
+            "Agricultural management apps provide "
             "real-time insight into key data."
         ),
         icon="svg/sectors/agriculture/agricultural_cooperatives.html",

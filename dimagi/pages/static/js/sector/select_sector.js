@@ -17,7 +17,7 @@ define([
       }
     });
 
-    $('.words').click(function (e) {
+    $('.selected-container').click(function (e) {
       e.preventDefault();
       $('.card-selector').addClass('show');
     });

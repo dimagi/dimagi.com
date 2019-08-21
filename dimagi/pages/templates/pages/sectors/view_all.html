@@ -3,7 +3,7 @@
 {% load dimagidotcom %}
 
 {% block title %}{% blocktrans %}
-  Sectors we work in
+  Sectors Using CommCare
 {% endblocktrans %}{% endblock %}
 
 {% block description %}{% blocktrans %}
@@ -27,18 +27,31 @@
 <section class="sector-home-page hero"
          data-lazybg="true"
          id="hero">
-  <div class="content align-left-at-medium gap-top-large gap-top-small-at-medium gap-top-line-at-large">
-    <h2 class="gap-vert-line">
+  <div class="content gap-top-large gap-top-line-at-large">
+    <h1 class="gap-vert-line">
       {% blocktrans %}
-        Sectors we work in
-      {% endblocktrans %}
-    </h2>
-    <h1>
-      {% blocktrans %}
-        CommCare is an industry-leading mobile data<br class="hide-until-medium" />
-        collection tool that is making an impact across sectors
+        Sectors Using CommCare
       {% endblocktrans %}
     </h1>
+    <div class="selected-container align-center">
+      <h5 class="tile selected selected-card gap-bottom-line pad-base">
+        <div class="words">
+          Explore <strong>sectors</strong>
+        </div>
+        <div class="caret">
+          {% include "svg/caret_down.html" %}
+        </div>
+      </h5>
+      <ul class="tile pad-none reset selector card-selector pad-vert-base charcoal-muted sub-sector-selector">
+        {% for sector in sectors %}
+          <li class="pad-horz-small pad-vert-base home-{{ sector.slug }} {{ sector.theme }}-item">
+            <h4 class="h4 font-weight-medium gap-bottom-none">
+              {{ sector.name }}
+            </h4>
+          </li>
+        {% endfor %}
+     </ul>
+   </div>{# .selected-container#}
   </div> {# .content #}
 </section>
 {% endblock %}

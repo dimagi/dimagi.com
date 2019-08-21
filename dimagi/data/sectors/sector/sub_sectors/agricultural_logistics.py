@@ -10,7 +10,7 @@ SECTOR = Sector(
     ),
     summary=ugettext_lazy(
         "Manage input distribution, cold chain of perishable goods, "
-        "and warehouse receipt systems at lower cost with the support of CommCare."
+        "and warehouse receipt systems at a lower cost with the support of CommCare."
     ),
     template="data/sectors/content/agricultural_logistics.html",
     icon="svg/commcare/icon/agriculture.html",
