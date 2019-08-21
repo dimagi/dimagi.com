@@ -13,12 +13,14 @@ SECTOR = Sector(
     ),
     template="data/sectors/content/gender_based_violence.html",
     slug="gender-based-violence",
+    theme="red-theme",
     slides=[
         "data/sectors/content/gender_based_violence/gender_based_violence.html",
         "data/sectors/content/gender_based_violence/frontline_workforce.html",
         "data/sectors/content/gender_based_violence/beneficiaries.html",
     ],
     download_url="https://cdn2.hubspot.net/hubfs/503070/GBV.pdf",
+    hubspot_form="82ab6788-f111-4226-af0e-d79bcc9f8995",
     thumbnail = "pages/sectors/gender-based-violence/hero.jpg",
 )
 

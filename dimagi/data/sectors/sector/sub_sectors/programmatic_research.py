@@ -13,6 +13,7 @@ SECTOR = Sector(
     ),
     template="data/sectors/content/programmatic_research.html",
     slug="programmatic-research",
+    theme="purple-theme",
     slides=[
         "data/sectors/content/programmatic_research/core_functionalities.html",
         "data/sectors/content/programmatic_research/research_features.html",
@@ -20,5 +21,6 @@ SECTOR = Sector(
         "data/sectors/content/programmatic_research/data_security.html",
     ],
     download_url="https://cdn2.hubspot.net/hubfs/503070/International%20research.pdf",
+    hubspot_form="0b2cd457-c95a-492f-8048-edc0a68a9e36",
     thumbnail = "pages/sectors/programmatic-research/hero.jpg",
 )
