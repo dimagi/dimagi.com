@@ -5,10 +5,16 @@
   {% if request.is_amp %}
     [class]="nav_hide1"
   {% endif %}>
-  <a class="menu-open-sibling {% click_nav 'products' %}"
+  <a class="menu-open-sibling {% click_nav 'commcare' %}"
      href="{% url 'commcare' %}">
     {% blocktrans %}
-      Products
+      CommCare
+    {% endblocktrans %}
+  </a>
+  <a class="menu-open-sibling {% click_nav 'focusmdm' %}"
+     href="{% url 'focus_mdm' %}">
+    {% blocktrans %}
+      Focus MDM
     {% endblocktrans %}
   </a>
 
