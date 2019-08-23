@@ -1,0 +1,96 @@
+{% load dimagidotcom %}
+{% load i18n %}
+
+<section id="overview" class="border-top">
+    <div class="content pad-vert-medium">
+        <div class="grid-2-at-medium">
+            <div class="column">
+                <h1>
+                    {% blocktrans %}
+                        Mobile App
+                    {% endblocktrans %}
+                </h1>
+                <h4>
+                    {% blocktrans %}
+                        FocusMDM is built for low-connectivity workforces.
+                    {% endblocktrans %}
+                </h4>
+
+                <p></p>
+                <p>
+                    {% blocktrans %}
+                        The free version gives a user the ability to keep track of time and data usage on a device.
+                        The user is able to spot the apps that are high consumers and manage the time they are spending on apps.
+                    {% endblocktrans %}
+                </p>
+                <p>
+                    {% blocktrans %}
+                        Coupled with the web app, FocusMDM becomes a powerful workforce insight tool.
+                        Depending on an organization’s needs, various features are available that increase security and actionable insights across a large workforce of frontline devices.
+                    {% endblocktrans %}
+                </p>
+
+                <div style="width: 150px;">
+                      <a href='https://play.google.com/store/apps/details?id=org.commcare.devicepolicycontroller&hl=en&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png'/></a>
+                </div>
+            </div>
+            <div class="column">
+                <div class="position-relative align-center height-100">
+                    <div id="overview-mobile" class="overview-mobile">
+                        <div class="image white-lazy-bg" data-lazybg="true"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content pad-vert-large">
+        <div class="grid-2-at-medium">
+            <div class="column">
+                <div class="position-relative align-center height-100">
+                    <div id="overview-web" class="overview-web">
+                        <div class="image white-lazy-bg" data-lazybg="true"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <h1>
+                    {% blocktrans %}
+                        Web App
+                    {% endblocktrans %}
+                </h1>
+                <h4>
+                    {% blocktrans %}
+                        Gather insights on your devices and manage them from afar.
+                    {% endblocktrans %}
+                </h4>
+
+                <p></p>
+
+                <p>
+                    {% blocktrans %}
+                        The web dashboard provides administrative access to your devices and offers a set of tools that enables you to manage them with ease.
+                        Organize devices into groups, enforce policies, keep track of device locations, usage, reports, notifications and much more.
+                    {% endblocktrans %}
+                </p>
+                <p>
+                    {% blocktrans %}
+                        Depending on the selected plan, you can have access to an array of powerful features.
+                        Check out our full list of features and available plans with our
+                    {% endblocktrans %}
+                    <a href="{% url 'focus_mdm_pricing' %}#details">
+                        {% blocktrans %}
+                        detailed pricing comparison.
+                        {% endblocktrans %}
+                    </a>
+                </p>
+                <div>
+                    <a class="button button-accent-purple ab-hero-toolkits--overview" href="{{ FOCUS_MDM_URL_TRIAL }}"  target="_blank">
+                        {% blocktrans %}
+                        Start Free Trial
+                        {% endblocktrans %}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

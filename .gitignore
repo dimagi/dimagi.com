@@ -57,3 +57,9 @@ greenhouse.css
 dimagi/data/static/thumbnails/*
 dimagi/pages/static/thumbnails/*
 assets/thumbnails/*
+
+#css files
+dimagi/pages/static/style/pages/*.css
+dimagi/pages/static/style/pages/*/*.css
+dimagi/pages/static/style/*.css
+dimagi/styleguide/static/style/*.css

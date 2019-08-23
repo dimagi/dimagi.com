@@ -20,6 +20,18 @@
     </a>
     {% include 'partials/footer/nav_section/commcare_menu.html' with slug="commcare" %}
   </li>
+
+  <li>
+    <a class="arrow ab-footer-head-focusmdm"
+       data-transition-state="on"
+       data-transition-target="footer-focusmdm"
+       href="#">
+      {% blocktrans %}
+        FocusMDM
+      {% endblocktrans %}
+    </a>
+    {% include 'partials/footer/nav_section/focus_mdm_menu.html' with slug="focusmdm" %}
+  </li>
   
   <li>
     <a class="arrow ab-footer-head-global_service"

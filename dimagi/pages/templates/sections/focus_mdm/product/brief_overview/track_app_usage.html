@@ -1,0 +1,20 @@
+{% extends "sections/commcare/product/brief_overview/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block icon %}
+  {% include "svg/focus_mdm/icon/data_over_time.html" %}
+{% endblock %}
+
+{% block header %}
+  {% blocktrans %}
+    Track app usage over time
+  {% endblocktrans %}
+{% endblock %}
+
+{% block content %}
+  {% blocktrans %}
+    Monitor what apps your workforce uses and how much data is used.
+  {% endblocktrans %}
+{% endblock %}
+
