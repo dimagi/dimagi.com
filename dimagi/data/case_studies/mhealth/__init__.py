@@ -10,6 +10,7 @@ from dimagi.data.case_studies.mhealth import (
     tdh_burkinafaso,
     world_vision_motech,
     care_motech,
+    lwala_community_alliance,
 )
 
 
@@ -25,4 +26,5 @@ studies = (
     tdh_burkinafaso,
     world_vision_motech,
     care_motech,
+    lwala_community_alliance,
 )
