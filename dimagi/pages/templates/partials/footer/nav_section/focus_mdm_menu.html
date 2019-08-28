@@ -1,0 +1,22 @@
+{% extends 'partials/footer/nav_section/_base_sub_menu.html' %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block links %}
+  <li>
+    <a href="{% url 'focus_mdm' %}"
+       class="{% click_footer 'focus_mdm' %}">
+      {% blocktrans %}
+        About FocusMDM
+      {% endblocktrans %}
+    </a>
+  </li>
+  <li>
+    <a href="{% url 'focus_mdm_pricing' %}"
+       class="{% click_footer 'focus-pricing' %}">
+      {% blocktrans %}
+        Pricing
+      {% endblocktrans %}
+    </a>
+  </li>
+{% endblock %}

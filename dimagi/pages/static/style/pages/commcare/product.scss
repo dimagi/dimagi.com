@@ -129,5 +129,5 @@
     large: 316px,
     extra-large: 290px,
   );
-  @include make-bg(epic-cover, '../../../pages/commcare/product/prcining/hero', $_base-height, $_height-by-size);
+  @include make-bg(epic-cover, '../../../pages/commcare/product/pricing/hero', $_base-height, $_height-by-size);
 }

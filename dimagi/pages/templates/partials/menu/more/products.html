@@ -20,6 +20,15 @@
   </div>{# .column #}
 
   <div class="column">
+    <a class="purple-swatch {% click_nav 'focus_mdm' %}"
+       href="{% url 'focus_mdm' %}">
+      {% blocktrans %}
+        FocusMDM
+      {% endblocktrans %}
+    </a>
+  </div>{# .column #}
+
+  <div class="column">
     <a class="turquoise-swatch {% click_nav 'global-services' %}"
        href="{% url 'services' %}">
       {% blocktrans %}

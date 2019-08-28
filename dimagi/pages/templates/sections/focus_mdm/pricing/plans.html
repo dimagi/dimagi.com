@@ -1,0 +1,52 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="plans accent-gray-bg border-bottom"
+         id="plans">
+  <div class="content pad-bottom-medium pad-top-medium align-center">
+
+    <div class=" gap-bottom-line">
+      <h2>
+        {% blocktrans %}
+          FocusMDM Pricing
+        {% endblocktrans %}
+      </h2>
+      <p class="content-width-small">
+        {% blocktrans %}
+          Affordable mobile device management pricing plans.
+        {% endblocktrans %}
+      </p>
+    </div>
+
+    <div class="grid-2-at-medium grid-4-at-large grid-row-equal-heights gap-bottom-small gap-top-medium">
+
+      {% click_body 'plans-standard' as click_standard %}
+      {% include "sections/focus_mdm/pricing/plans/basic.html" with theme="green" css_id="plans-standard" click_class=click_standard %}
+
+      {% click_body 'plans-pro' as click_pro %}
+      {% include "sections/focus_mdm/pricing/plans/standard.html" with theme="turquoise" highlight=True css_id="plans-pro" click_class=click_pro %}
+
+      {% click_body 'plans-advanced' as click_advanced %}
+      {% include "sections/focus_mdm/pricing/plans/advanced.html" with theme="purple" css_id="plans-advanced" click_class=click_advanced %}
+
+      {% click_body 'plans-enterprise' as click_enterprise %}
+      {% include "sections/focus_mdm/pricing/plans/custom.html" with theme="blue" css_id="plans-enterprise" click_class=click_enterprise %}
+
+    </div>{# .grid-2-at-medium #}
+
+    <p>
+      {% click_body 'plans-community' as click_community %}
+      {% blocktrans %}
+        Just looking to test FocusMDM? Check out our free
+        <a href="{{ FOCUS_MDM_URL_TRIAL }}"
+           class="{{ click_community }}"
+           data-kmq-external="true"
+           data-kmq-name="Clicked Start Trial - Pricing (Community)">Community</a> plan.
+      {% endblocktrans %}<br />
+      {% url 'proposals' as proposal_url %}
+      {% click_body 'plans-proposals' as click_proposals %}
+
+    </p>
+
+  </div>{# .content #}
+</section>

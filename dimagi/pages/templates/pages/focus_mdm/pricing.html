@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block title %}{% blocktrans %}
+  FocusMDM Pricing | Affordable Mobile Device Management
+{% endblocktrans %}{% endblock %}
+
+{% block description %}{% blocktrans %}
+  FocusMDM is an affordable mobile device management platform that will fit your
+  budget and needs. Start your FREE FocusMDM trial today.
+{% endblocktrans %}{% endblock %}
+
+{% block body_class %}pricing-focusmdm-page tucked-hero{% endblock %}
+
+{% block stylesheets %}
+  {% compress css %}
+    <link href="{% sass_src 'style/pages/focus_mdm/pricing.scss' %}" rel="stylesheet" media="screen" type="text/css" />
+    <link href="{% sass_src 'style/pages/focus_mdm/pricing_rates.scss' %}" rel="stylesheet" media="screen" type="text/css" />
+  {% endcompress %}
+{% endblock %}
+
+{% block js %}
+  {% compress js %}
+  <script src="{% static 'js/pricing.js' %}"></script>
+  {% endcompress %}
+{% endblock %}
+
+{% block meta %}
+  <meta property="wistia:videoId" content="nmzscaaxgs" />
+  <meta property="wistia:videoTrigger" content="demo-video" />
+{% endblock %}
+
+{% block hero %}
+  <div id="top"></div>
+  <section class="hero hero-products-focusmdm"
+           data-lazybg="true"
+           id="hero">
+    <div class="content offset-top-extra-large align-left-at-medium align-center">
+      <h2>
+        {% include "svg/focus_mdm/logo.html" %}
+      </h2>
+      <h1>
+        {% blocktrans %}
+          Affordable Mobile Device Management Pricing Plans to Fit Any Budget
+        {% endblocktrans %}
+      </h1>
+      <a class="button alt inverted {% click_hero 'trial' %}"
+         href="{{ FOCUS_MDM_URL_TRIAL }}">
+        {% blocktrans %}
+          Start Free Trial
+        {% endblocktrans %}
+      </a>
+      <a class="button button-accent-gray ab-hero-toolkits--overview" href="#plans">
+          {% blocktrans %}
+            Learn More
+          {% endblocktrans %}
+      </a>
+    </div> {# .content #}
+  </section>
+{% endblock %}
+
+{% block content %}
+  <section id="ko-pricing-control" class="pricing-focusmdm-container purple-theme">
+    {% include "sections/focus_mdm/pricing/sub_nav.html" %}
+    {% include "sections/focus_mdm/pricing/plans.html" %}
+    {% include "sections/focus_mdm/pricing/detailed_comparison.html" %}
+    {% include "sections/focus_mdm/pricing/demo.html" %}
+  </section>
+{% endblock %}
+
+{% block modals %}
+    {% include "sections/focus_mdm/pricing/detailed_comparison/modal.html" %}
+{% endblock %}

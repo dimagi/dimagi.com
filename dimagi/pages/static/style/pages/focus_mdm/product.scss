@@ -1,0 +1,155 @@
+@import 'app/mixins/background';
+@import 'app/variables/colors';
+@import 'app/variables/sizes';
+@import 'app/variables/type';
+
+.products-focusmdm-page {
+  @include make-bg(hero, '../../../pages/focus_mdm/product/hero');
+}
+
+.height-100{
+  height: 100%;
+}
+
+@media (min-width: $width-desktop) {
+  .products-focusmdm-page .hero {
+    h1 {
+      margin-left: 0;
+      margin-right: 0;
+      max-width: 66%;
+    }
+  }
+}
+
+.testimonials {
+  $_sizes: (
+    extra-small: (w: 276px, h: 135px),
+    small: (w: 424px, h: 158px),
+    medium: (w: 680px, h: 277px),
+    large: (w: 868px, h: 333px),
+    extra-large: (w: 1016px, h: 408px),
+  );
+
+  @include make-carousel-slide(image-oikoi, $_sizes, '../../../pages/focus_mdm/product/testimonial1.jpg');
+  @include make-carousel-slide(image-nou-kod, $_sizes, '../../../pages/focus_mdm/product/testimonial2.jpg');
+  @include make-carousel-slide(image-delivery-services, $_sizes, '../../../pages/focus_mdm/product/testimonial3.jpg');
+  @include make-carousel-slide(image-cleaning-data, $_sizes, '../../../pages/focus_mdm/product/testimonial4.jpg');
+  @include make-carousel-slide(image-sarah-baird, $_sizes, '../../../pages/focus_mdm/product/testimonial5.jpg');
+}
+
+.overview-web {
+  $_base-height: 320px;
+  $_height-by-size: (
+    small: 320px,
+    medium: 320px,
+    large: 320px,
+    extra-large: 322px,
+  );
+  @include make-bg(image, '../../../pages/focus_mdm/product/web-app', $_base-height, $_height-by-size, '.png');
+
+  @media (min-width: $width-desktop) {
+    .off-grid {
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      right: auto;
+      width: 100%;
+      z-index: 1;
+    }
+
+    .content {
+      position: relative;
+      z-index: 2;
+      padding-bottom: 100px;
+    }
+  }
+}
+
+.overview-mobile {
+  $_base-height: 350px;
+  $_height-by-size: (
+    small: 350px,
+    medium: 350px,
+    large: 350px,
+    extra-large: 352px,
+  );
+  @include make-bg(image, '../../../pages/focus_mdm/product/mobile-app', $_base-height, $_height-by-size, '.png');
+
+  @media (min-width: $width-desktop) {
+    .off-grid {
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      right: auto;
+      width: 100%;
+      z-index: 1;
+    }
+
+    .content {
+      position: relative;
+      z-index: 2;
+    }
+  }
+}
+
+.overview {
+  $_base-height: 175px;
+  $_height-by-size: (
+    extra-small: 190px,
+    small: 270px,
+    medium: 180px,
+    large: 235px,
+    extra-large: 290px,
+  );
+  @include make-bg(analyze-data-image, '../../../pages/focus_mdm/product/analyze', $_base-height, $_height-by-size);
+  @include make-bg(collect-data-image, '../../../pages/focus_mdm/product/collect', $_base-height, $_height-by-size);
+
+  .device-container,
+  .screen {
+    width: 100%;
+  }
+
+  .carousel-slide {
+    background-color: $color-white;
+
+    @media (min-width: $width-mobile) {
+      height: 890px;
+    }
+
+    @media (min-width: $width-desktop) {
+      height: 824px;
+    }
+
+    @media (min-width: $width-desktop-lg) {
+      height: 650px;
+    }
+
+    @media (min-width: $width-desktop-xl) {
+      height: 600px;
+    }
+  }
+}
+
+.overview a:not(.button)[class*="play-icon-"]:after {
+  border-left-color: $color-blue;
+}
+
+.overview a:not(.button)[class*="play-icon-"].alt:before {
+  border: 1px solid $color-blue;
+}
+
+.overview [class*="play-icon-"]:not(.button):before {
+  background-color: $color-white;
+}
+
+.pricing-image {
+  $_base-height: 275px;
+  $_height-by-size: (
+    extra-small: 290px,
+    small: 270px,
+    medium: 270px,
+    large: 316px,
+    extra-large: 290px,
+  );
+  @include make-bg(epic-cover, '../../../pages/focus_mdm/product/pricing/hero', $_base-height, $_height-by-size);
+}
