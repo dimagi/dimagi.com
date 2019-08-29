@@ -11,6 +11,7 @@ from dimagi.data.case_studies.mhealth import (
     world_vision_motech,
     care_motech,
     lwala_community_alliance,
+    mhp_salud,
 )
 
 
@@ -27,4 +28,5 @@ studies = (
     world_vision_motech,
     care_motech,
     lwala_community_alliance,
+    mhp_salud,
 )
