@@ -1,6 +1,6 @@
 from dimagi.data.case_studies.mhealth import (
     crs_india,
-    guatemala_childhealth,
+    tulasalud,
     hiv_zimbabwe,
     lmrf_india,
     malaria_mozambique,
@@ -16,7 +16,7 @@ from dimagi.data.case_studies.mhealth import (
 
 studies = (
     crs_india,
-    guatemala_childhealth,
+    tulasalud,
     hiv_zimbabwe,
     lmrf_india,
     malaria_mozambique,
