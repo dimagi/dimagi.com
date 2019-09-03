@@ -98,5 +98,19 @@
          href="https://cdn2.hubspot.net/hubfs/503070/Dimagi_Recruitment%20FAQ.pdf"
          target="_blank"> FAQ </a>.
     </p>
+    <p class="align-center content-width-large">
+      {% blocktrans %}
+        Don't see the job you're looking for? Share your resume with 
+        us and we'll keep your contact details on file.
+      {% endblocktrans %}
+    </p>
+    <p class="align-center">
+      <a class="button {% click_body 'view-positions' %}"
+         href="{% url 'careers_job' 1807759 %}">
+        {% blocktrans %}
+          Share Resume
+        {% endblocktrans %}
+      </a>{# .button #}
+    </p>
   </div> {# .content #}
 </section>
