@@ -5,40 +5,33 @@ from dimagi.pages.models.case_studies import CaseStudy
 
 STUDY = CaseStudy(
     title=ugettext_lazy(
-        "Using mHealth to Improve Antenatal, Natal, & Post-Natal Care in India"
+        "Mobile SAKHI Project: CommCare for Improving Maternal & Child Health"
     ),
     summary=ugettext_lazy(
-        "Lata Medical Research Foundation (LMRF) partnered with Dimagi "
-        "to assess CommCare’s feasibility for monitoring antenatal, "
-        "natal and postnatal care and infant nutrition in rural India. "
-        "After an initial successful study, LMRF adopted CommCare in "
-        "2013 to help frontline workers track pregnant women, and "
-        "familiarize them, as well as their families, with public health "
-        "programs to improve their health seeking behavior, and "
-        "consequently, maternal and child health outcomes."
+        "In 2013, Lata Medical Research Foundation (LMRF) partnered with "
+        "Dimagi to assess CommCare’s feasibility for monitoring antenatal, "
+        "natal, and post-natal care, as well as infant nutrition, in rural "
+        "India. LMRF adopted CommCare to help accredited social health "
+        "activists (ASHAs) track pregnant women and improve their "
+        "health-seeking behavior and maternal & child health outcomes by "
+        "familiarizing them and their families with available public "
+        "health programs."
     ),
     partners=[
-        "India Lata Medical Research Foundation",
-        "Dimagi",
+        "Lata Medical Research Foundation (LMRF)",
+        "Government of India",
+        "National Health and Medical Research Council (NHMRC) through "
+        "the University of Sydney, & Nutrition Embedding Evaluation Program (NEEP) through PATH",
     ],
     countries=[
         ugettext_lazy("India"),
     ],
     sectors=[
-        ugettext_lazy("Maternal health"),
-        ugettext_lazy("Child health"),
-        ugettext_lazy("Nutrition"),
+        ugettext_lazy("Maternal & Child Health"),
     ],
     features=[
-        ugettext_lazy("data collection"),
-        ugettext_lazy("case management"),
-        ugettext_lazy("multimedia & counseling"),
-        ugettext_lazy("auto calculation of EDD, gestational age, "
-                      "age of the infant, date of next scheduled visit"),
-        ugettext_lazy("skip logic"),
-        ugettext_lazy("data editing feature"),
     ],
     slug="mhealth-lmrf-india",
     download_url="https://www.dropbox.com/s/kc43w1s2yb2mau0/mhealth-lmrf-india.pdf?dl=1",
-    hubspot_form="f4a19ce1-d388-4f4a-b185-ec2d7036abf8",
+    hubspot_form="0480314e-ca07-4a8d-857c-15c3f94f86c7",
 )
