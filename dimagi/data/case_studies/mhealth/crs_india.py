@@ -39,6 +39,6 @@ STUDY = CaseStudy(
         ugettext_lazy("SMS Reminders"),
     ],
     slug="mhealth-crs-india",
-    download_url="https://www.dropbox.com/s/lg8fd0x2z7x7py5/mhealth-crs-india.pdf?dl=1",
+    download_url="https://cdn2.hubspot.net/hubfs/503070/Case%20Studies/CommCare%20-%20CRS%20ReMiND%20Case%20Study.pdf",
     hubspot_form="d5f0286b-6605-4a22-a105-aedd2bbdd42e",
 )
