@@ -36,6 +36,6 @@ STUDY = CaseStudy(
         ugettext_lazy("Custom Reports"),
     ],
     slug="smash-mobil",
-    download_url="https://cdn2.hubspot.net/hubfs/503070/Case%20Studies/CommCare%20-%20Lwala%20Community%20Alliance%20Case%20Study.pdf",
+    download_url="https://cdn2.hubspot.net/hubfs/503070/Case%20Studies/CommCare%20-%20SMASH%20Mobil%20Case%20Study.pdf",
     hubspot_form="1ce176e9-038d-468c-bb89-7cc5895ff4c5",
 )
