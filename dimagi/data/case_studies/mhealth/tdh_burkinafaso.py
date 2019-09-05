@@ -42,6 +42,6 @@ STUDY = CaseStudy(
         ugettext_lazy("Data Validation"),
     ],
     slug="mhealth-tdh-burkinafaso",
-    download_url="https://www.dropbox.com/s/oakh337uexf4zgj/mhealth-tdh-burkinafaso.pdf?dl=1",
+    download_url="https://cdn2.hubspot.net/hubfs/503070/Case%20Studies/CommCare%20-%20Terre%20des%20hommes%20Case%20Study.pdf",
     hubspot_form="0cb7b31e-d335-437d-80a8-61f3bea7600b",
 )
