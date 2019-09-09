@@ -4,26 +4,21 @@
 <section class="accent-gray-bg border-top overview"
          id="overview">
   <div class="content pad-vert-medium align-center">
-    <div class="intro">
+    <div class="pad-bottom-medium">
       <h2 class="blue">
         {% blocktrans %}
-          How CommCare Works
+          A 360 Platform for Data Collection & Management
         {% endblocktrans %}
       </h2>
-      <p class="cta">
-        {% trans 'Watch a demo' as video_text %}
-        {% click_hero 'video' as video_click_class %}
-        {% include "partials/wistia_popover.html" with wistia_id='jzm3ggrinr' show_play=True text=video_text click_class=video_click_class %}
-      </p>
     </div>
 
     <div class="carousel carousel-fade-inactive carousel-numbered carousel-arrows hide-dots carousel-features">
       <div class="carousel-container">
         <div class="spinner spinner-large"></div>
         <div class="carousel-slider">
-          {% include "sections/commcare/product/overview/app_builder.html" %}
-          {% include "sections/commcare/product/overview/collect_data.html" %}
-          {% include "sections/commcare/product/overview/analyze_data.html" %}
+          {% include "sections/commcare/product_features/overview/app_builder.html" %}
+          {% include "sections/commcare/product_features/overview/collect_data.html" %}
+          {% include "sections/commcare/product_features/overview/analyze_data.html" %}
         </div>{# .carousel-slider #}
       </div>{# .carousel-container #}
     </div>{# .carousel #}
@@ -31,7 +26,7 @@
     <div class="cta pad-vert-small">
       <p>
         <a class="arrow {% click_body 'features-view' %}" 
-           href="{% url 'commcare_features' %}">
+           href="{% url 'commcare_pricing' %}#details">
           {% blocktrans %}
             View All Features
           {% endblocktrans %}
