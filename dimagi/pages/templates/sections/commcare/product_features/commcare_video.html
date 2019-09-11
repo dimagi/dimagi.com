@@ -1,9 +1,26 @@
 {% load dimagidotcom %}
 {% load i18n %}
 
-<section  class="video-intro pad-vert-small"
+<section  class="content pad-vert-small pad-horz-large"
           id="video">
-  <div class="content-width-large pad-horz-small-at-small pad-horz-none-at-extra-large gap-top-small">
-    {% include "partials/wistia_popover.html" with wistia_id='9uvnpbecdy' show_play=True show_image=True %}
-  </div>{# .content #}
+  <div class="intro content-width-large gap-bottom-line">
+    <h2 class="normalcase">
+      {% blocktrans %}
+        See how it all comes together
+      {% endblocktrans %}
+    </h2>
+    <p>
+      {% blocktrans %}
+        This can be like a short prologue to whats actually happening in the video below
+      {% endblocktrans %}
+    </p>
+  </div>{# .intro #}
+  <div class="column">
+    <div class="position-relative align-center height-100">
+      <div id="case-management" class="case-management">
+        <div class="image white-lazy-bg" data-lazybg="true">
+          {% include "partials/wistia_popover.html" with wistia_id='9uvnpbecdy' show_play=True show_image=True %}</div>
+      </div>
+    </div>
+  </div>{# .column #}
 </section>

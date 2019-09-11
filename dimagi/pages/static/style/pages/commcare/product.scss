@@ -41,7 +41,7 @@
     large: 290px,
     extra-large: 292px,
   );
-  @include make-bg(image, '../../../pages/case_management/cm-cta', $_base-height, $_height-by-size, '.png');
+  @include make-bg(image, '../../../pages/focus_mdm/product/web-app', $_base-height, $_height-by-size, '.png');
 
   @media (min-width: $width-desktop) {
     .off-grid {
