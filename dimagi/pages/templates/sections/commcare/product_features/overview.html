@@ -12,25 +12,26 @@
       </h2>
     </div>
 
-    <div class="carousel carousel-fade-inactive carousel-numbered carousel-arrows hide-dots carousel-features">
+    <div class="carousel carousel-fade-inactive carousel-numbered carousel-arrows carousel-features">
       <div class="carousel-container">
         <div class="spinner spinner-large"></div>
         <div class="carousel-slider">
-          {% include "sections/commcare/product_features/overview/app_builder.html" %}
-          {% include "sections/commcare/product_features/overview/collect_data.html" %}
-          {% include "sections/commcare/product_features/overview/analyze_data.html" %}
+          {% include "sections/commcare/product_features/overview/quality.html" %}
+          {% include "sections/commcare/product_features/overview/manual.html" %}
+          {% include "sections/commcare/product_features/overview/clean.html" %}
+          {% include "sections/commcare/product_features/overview/report.html" %}
         </div>{# .carousel-slider #}
       </div>{# .carousel-container #}
     </div>{# .carousel #}
 
     <div class="cta pad-vert-small">
       <p>
-        <a class="arrow {% click_body 'features-view' %}" 
-           href="{% url 'commcare_pricing' %}#details">
-          {% blocktrans %}
-            View All Features
-          {% endblocktrans %}
-        </a>
+        <a class="button {% click_body 'case-management' %} uppercase"
+         href="{% url 'case_management' %}">
+        {% blocktrans %}
+          Try it now
+        {% endblocktrans %}
+      </a>
       </p>
     </div>{# .cta #}
 
