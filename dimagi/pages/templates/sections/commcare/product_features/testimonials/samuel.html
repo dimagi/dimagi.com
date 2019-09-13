@@ -1,0 +1,37 @@
+{% extends "sections/commcare/product_features/testimonials/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block report_selected %}selected{% endblock %}
+
+{% block content %}
+  <div class="content-width-medium align-left">
+    <div class="grid-2-at-medium gap-bottom-line pad-vert-small uppercase">
+      <div class="column pad-left-small">
+        <h4 class="blue">
+          {% blocktrans %}
+            Samuel Wasereka
+          {% endblocktrans %}
+        </h4>
+        <strong>
+          Monitoring and Evaluation Coordinator
+        </strong>
+      </div>{# .column #}
+      <div class="column">
+        <h4 class="blue">
+          {% blocktrans %}
+            HealthRight International
+          {% endblocktrans %}
+        </h4>
+      </div>{# .column #}
+    </div>{# .grid-2-at-medium #}
+    <p class="body-color">
+      {% blocktrans %}
+        Working in a rural set up, clean data collection was really a 
+        challenge and we used to spend a lot of time cleaning and trying to 
+        have realistic data, Commcare automated our data collection by having 
+        real time checks in the data.
+      {% endblocktrans %}  
+    </p>
+  </div>
+{% endblock %}

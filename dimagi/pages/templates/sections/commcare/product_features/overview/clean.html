@@ -5,47 +5,76 @@
 {% block clean_selected %}selected{% endblock %}
 
 {% block content %}
-  <h3>
-    {% blocktrans %}
-      clean_selected
-    {% endblocktrans %}
-  </h3>
-  <div class="grid-2-at-large blue-theme grid-valign-middle">
+  <div class="grid-2-at-large blue-theme grid-reverse grid-valign-middle">
     <div class="column pad-right-medium-at-base align-left">
-
-      <p>
-        {% url 'case_management' as cm_url %}
+      <h3 class="blue pad-bottom-base">
         {% blocktrans %}
-          The key to securing cleaner data is offering your workforce a data collection app
-          that guides them to do their best work. Make magic happen
-          behind-the-scenes with features like <a href="{{ cm_url }}">case management</a> that simplify their work.
+          Clean and manage data
         {% endblocktrans %}
-      </p>
-      <ul class="check-list grid-2-at-extra-large">
+      </h3>
+      <ul class="check-list grid-1-at-extra-large">
         <li>
-          {% blocktrans %}
-            Build-in decision support and notifications to guide your team
-          {% endblocktrans %}
+          <p class="blue gap-bottom-none">
+            {% blocktrans %}
+              Inspect form submissions
+            {% endblocktrans %}
+          </p>
+          <ol class="gap-top-base">
+            {% blocktrans %}
+              Say goodbye to error-prone surveys. With CommCare, field staff 
+              register a subject once, then easily view and update 
+              the case over time
+            {% endblocktrans %}
+          </ol>
         </li>
+        
         <li>
-          {% blocktrans %}
-            Link data from multiple forms to avoid duplicate
-            data entry and errors
-          {% endblocktrans %}
+          <p class="blue gap-bottom-none">
+            {% blocktrans %}
+              Easily edit data
+            {% endblocktrans %}
+          </p>
+          <ol class="gap-top-base">
+            {% blocktrans %}
+              Quickly edit erroneous submissions, without ever leaving CommCare, 
+              using built-in data cleaning tools for both forms and cases.
+            {% endblocktrans %}
+          </ol>
         </li>
+
         <li>
-          {% blocktrans %}
-            Incorporate performance feedback for regular progress updates
-          {% endblocktrans %}
+          <p class="blue gap-bottom-none">
+            {% blocktrans %}
+              Automate your data cleaning
+            {% endblocktrans %}
+          </p>
+          <ol class="gap-top-base">
+            {% blocktrans %}
+              Clean and safeguard data by setting parameters that 
+              automatically close and archive cases—like when health 
+              indicators show a patient is healthy.  
+            {% endblocktrans %}
+          </ol>
         </li>
+
         <li>
-          {% blocktrans %}
-            Enhance how your team communicates in the field with multimedia
-          {% endblocktrans %}
+          <p class="blue gap-bottom-none">
+            {% blocktrans %}
+              Upload external data sets
+            {% endblocktrans %}
+          </p>
+          <ol class="gap-top-base">
+            {% blocktrans %}
+              Register a case outside your app? No problem; easily import 
+              external data like new cases or third-party datasets into 
+              CommCare.
+            {% endblocktrans %}
+          </ol>
         </li>
       </ul>
     </div>{# .column #}
-    <div class="column collect-data-image white-lazy-bg"
-         data-lazybg="true"></div>
+    <div class="column analyze-data-image white-lazy-bg"
+         data-lazybg="true">
+    </div>{# .column #}
   </div>{# .grid-2-at-medium #}
 {% endblock %}

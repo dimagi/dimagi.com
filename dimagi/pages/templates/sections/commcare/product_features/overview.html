@@ -1,7 +1,7 @@
 {% load i18n %}
 {% load dimagidotcom %}
 
-<section class="accent-gray-bg border-top overview"
+<section class="overview-features accent-gray-bg border-top"
          id="overview">
   <div class="content pad-vert-medium align-center">
     <div class="pad-bottom-medium">
@@ -12,7 +12,7 @@
       </h2>
     </div>
 
-    <div class="carousel carousel-fade-inactive carousel-numbered carousel-arrows carousel-features">
+    <div class="carousel carousel-fade-inactive carousel-numbered carousel-arrows hide-dots carousel-features">
       <div class="carousel-container">
         <div class="spinner spinner-large"></div>
         <div class="carousel-slider">
@@ -27,13 +27,13 @@
     <div class="cta pad-vert-small">
       <p>
         <a class="button {% click_body 'case-management' %} uppercase"
-         href="{% url 'case_management' %}">
-        {% blocktrans %}
-          Try it now
-        {% endblocktrans %}
-      </a>
+           href="{% url 'case_management' %}">
+          {% blocktrans %}
+            Try it now
+          {% endblocktrans %}
+        </a>
       </p>
     </div>{# .cta #}
 
-  </div>
+  </div>{# .overview-features #}
 </section>

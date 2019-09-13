@@ -5,35 +5,71 @@
 {% block quality_selected %}selected{% endblock %}
 
 {% block content %}
-  <h3>
-    {% blocktrans %}
-      Collect high quality data
-    {% endblocktrans %}
-  </h3>
-  <div class="grid-2-at-large blue-theme grid-valign-middle">
+  <div class="grid-2-at-large blue-theme grid-reverse grid-valign-middle">
     <div class="column pad-right-medium-at-base align-left">
-      <p>
+      <h3 class="blue pad-bottom-base">
         {% blocktrans %}
-          Our easy-to-use reporting tools allow you to aggregate data
-          and identify trends, so you can make informed decisions.
+          Collect high quality data
         {% endblocktrans %}
-      </p>
-      <ul class="check-list grid-2-at-extra-large">
+      </h3>
+      <ul class="check-list grid-1-at-extra-large">
         <li>
-          {% blocktrans %}
-            Visualize trends with CommCare’s built-in reporting tool
-          {% endblocktrans %}
+          <p class="blue gap-bottom-none">
+            {% blocktrans %}
+              Flexible question formats
+            {% endblocktrans %}
+          </p>
+          <ol class="gap-top-base">
+            {% blocktrans %}
+              Collect accurate data on everything, in any language–from basics 
+              like text and dates to advanced formats for GPS coordinates, 
+              barcodes, audio captures, and more
+            {% endblocktrans %}
+          </ol>
         </li>
+        
         <li>
-          {% blocktrans %}
-            Create daily reports to track workforce performance
-          {% endblocktrans %}
+          <p class="blue gap-bottom-none">
+            {% blocktrans %}
+              Case-based data collection
+            {% endblocktrans %}
+          </p>
+          <ol class="gap-top-base">
+            {% blocktrans %}
+              Say goodbye to error-prone surveys. With CommCare, field staff 
+              register a subject once, then easily view and update the case over time
+            {% endblocktrans %}
+          </ol>
         </li>
+
         <li>
-          {% blocktrans %}
-            Export your CommCare data to use in your favorite 3rd party
-            data analysis tool
-          {% endblocktrans %}
+          <p class="blue gap-bottom-none">
+            {% blocktrans %}
+              Powerful form logic
+            {% endblocktrans %}
+          </p>
+          <ol class="gap-top-base">
+            {% blocktrans %}
+              Stop entry errors before they happen with custom validation 
+              conditions. Enforce data collection protocols with intelligent 
+              display and skip logic
+            {% endblocktrans %}
+          </ol>
+        </li>
+
+        <li>
+          <p class="blue gap-bottom-none">
+            {% blocktrans %}
+              Unlimited submissions and data storage
+            {% endblocktrans %}
+          </p>
+          <ol class="gap-top-base">
+            {% blocktrans %}
+              Deploy the data collection workflow your program deserves with zero 
+              limits on form submissions and unlimited, HIPAA-compliant 
+              data storage
+            {% endblocktrans %}
+          </ol>
         </li>
       </ul>
     </div>{# .column #}

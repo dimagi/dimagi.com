@@ -1,0 +1,37 @@
+{% extends "sections/commcare/product_features/testimonials/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block clean_selected %}selected{% endblock %}
+
+{% block content %}
+  <div class="content-width-medium align-left">
+    <div class="grid-2-at-medium gap-bottom-line pad-vert-small uppercase">
+      <div class="column pad-left-small">
+        <h4 class="blue">
+          {% blocktrans %}
+            Kevin Zeigler
+          {% endblocktrans %}
+        </h4>
+        <strong>
+          Global Technology Manager
+        </strong>
+      </div>{# .column #}
+      <div class="column">
+        <h4 class="blue">
+          {% blocktrans %}
+            TechnoServe
+          {% endblocktrans %}
+        </h4>
+      </div>{# .column #}
+    </div>{# .grid-2-at-medium #}
+    <p class="body-color">
+      {% blocktrans %}
+        Before, it would take up to three months to have paper-based 
+        attendance data from our field regions brought to our central office 
+        in the capital and encoded. Now our program managers have data 
+        instantly available in real-time during each training module.
+      {% endblocktrans %}  
+    </p>
+  </div>
+{% endblock %}

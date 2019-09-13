@@ -1,0 +1,26 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="partners accent-gray-bg"
+         id="partners">
+	<div class="pad-top-medium pad-bottom-small align-center">
+  	<h2 class="body-color">
+    	{% blocktrans %}
+      	Trusted by hundreds of organisations
+      {% endblocktrans %}
+    </h2>
+  </div>
+  <div class="content pad-vert-small align-center">
+    {% include "partials/partners.html" with partners=partners %}
+  </div>{# .content #}
+	<div class="cta pad-top-small pad-bottom-medium align-center">
+  	<p>
+    	<a class="button {% click_body 'case-studies' %} uppercase"
+      	 href="{% url 'case_studies' %}">
+     	 {% blocktrans %}
+      	 See case studies
+       {% endblocktrans %}
+      </a>
+    </p>
+  </div>{# .cta #}
+</section>

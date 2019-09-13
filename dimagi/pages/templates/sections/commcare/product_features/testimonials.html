@@ -1,39 +1,37 @@
 {% load i18n %}
 {% load dimagidotcom %}
 
-<section class="testimonials border-top blue-theme"
+<section class="testimonials border-top"
          id="testimonials">
-  <div class="content pad-top-medium pad-bottom-small">
-    <div class="intro">
-      <h2>
+  <div class="content pad-vert-medium">
+    <div class="pad-bottom-medium align-center">
+      <h2 class="blue">
         {% blocktrans %}
-          Testimonials
+          Proven in over 2,000 programs across 80+ countries
         {% endblocktrans %}
       </h2>
-      <p>
-        {% blocktrans %}
-          Customer love for CommCare.
-        {% endblocktrans %}
-      </p>
-    </div>{# .intro #}
+    </div>
+
+    <div class="carousel carousel-fade-inactive carousel-numbered carousel-arrows carousel-features">
+      <div class="carousel-container">
+        <div class="spinner spinner-large"></div>
+        <div class="carousel-slider">
+          {% include "sections/commcare/product_features/testimonials/bhawna.html" %}
+          {% include "sections/commcare/product_features/testimonials/eyram.html" %}
+          {% include "sections/commcare/product_features/testimonials/kevin.html" %}
+          {% include "sections/commcare/product_features/testimonials/samuel.html" %}
+        </div>{# .carousel-slider #}
+      </div>{# .carousel-container #}
+    </div>{# .carousel #}
+
+    <div class="cta pad-vert-small align-center">
+      <a class="button alt gap-right-small-at-medium gap-right-base-at-small {% click_body 'commcare-evidence-base' %}"
+         href="{% url 'toolkit' 'commcare-evidence-base' %}">
+       {% blocktrans %}
+         See evidence base
+       {% endblocktrans %}
+      </a>
+    </div>{# .cta #}
+
   </div>{# .content #}
-
-  <div class="content pad-bottom-small align-center">
-    {% include "partials/partners.html" with partners=partners %}
-  </div>{# .content #}
-
-  <div class="carousel carousel-fade-inactive pad-bottom-medium">
-    <div class="carousel-container">
-      <div class="spinner spinner-large"></div>
-      <div class="carousel-slider">
-
-        {% include "sections/commcare/product_features/testimonials/oikoi.html" %}
-        {% include "sections/commcare/product_features/testimonials/nou_kod.html" %}
-        {% include "sections/commcare/product_features/testimonials/delivery_services.html" %}
-        {% include "sections/commcare/product_features/testimonials/cleaning_data.html" %}
-        {% include "sections/commcare/product_features/testimonials/sarah_baird.html" %}
-
-      </div>{# .carousel-slider #}
-    </div>{# .carousel-container #}
-  </div>{# .carousel #}
 </section>

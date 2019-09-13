@@ -1,14 +1,12 @@
-<div class="carousel-slide">
-  <div class="{% block class_image %}image{% endblock %}"
-       data-lazybg="true"></div>
-  <div class="desc">
-    <blockquote class="gap-top-small">
-      <p>
-        {% block quote %}{% endblock %}
-      </p>
-      <cite>
-        {% block cite %}{% endblock %}
-      </cite>
-    </blockquote>
+{% load i18n %}
+{% load dimagidotcom %}
+
+<div class="carousel-slide pad-horz-base pad-vert-small pad-horz-small-at-medium pad-top-medium-at-medium pad-bottom-large-at-medium accent-gray-bg">
+
+  <div class="pad-horz-line">
+    {% block content %}{% endblock %}
   </div>
-</div>{# .carousel-slide #}
+
+{#  <div class="carousel-arrow previous"></div>#}
+{#  <div class="carousel-arrow next"></div>#}
+</div>

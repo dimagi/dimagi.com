@@ -73,19 +73,6 @@
       color: $color-white;
     }
   }
-
-  .carousel-icon {
-    display: table-caption;
-    cursor: pointer;
-    display: inline-block;
-    text-align: center;
-    fill: $color-text;
-
-    &.selected {
-      fill: $color-blue;
-      color: $color-blue;
-    }
-  }
 }
 
 
@@ -150,6 +137,7 @@
   }
 
   .carousel-arrow {
+    cursor: pointer;
     height: $space-medium * 2;
     margin-top: - $space-medium;
     position: absolute;

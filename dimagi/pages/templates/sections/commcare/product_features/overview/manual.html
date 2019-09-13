@@ -5,50 +5,75 @@
 {% block manual_selected %}selected{% endblock %}
 
 {% block content %}
-  <h3>
-    {% blocktrans %}
-      Eliminate manual tasks
-    {% endblocktrans %}
-  </h3>
-  <div class="grid-2-at-large blue-theme grid-valign-middle">
+  <div class="grid-2-at-large blue-theme grid-reverse grid-valign-middle">
     <div class="column pad-right-medium-at-base align-left">
-
-      <p>
+      <h3 class="blue pad-bottom-base">
         {% blocktrans %}
-          Our drag-and-drop app builder makes it easy for you to get started.
+          Improve program efficiency
         {% endblocktrans %}
-      </p>
-      <ul class="check-list grid-2-at-extra-large">
+      </h3>
+      <ul class="check-list grid-1-at-extra-large">
         <li>
-          {% blocktrans %}
-            Test app changes live with our app preview feature
-          {% endblocktrans %}
+          <p class="blue gap-bottom-none">
+            {% blocktrans %}
+              Field staff performance indicators
+            {% endblocktrans %}
+          </p>
+          <ol class="gap-top-base">
+            {% blocktrans %}
+              Monitor field work in real time with pre-built reports that 
+              highlight problem areas and help you address inefficiencies.
+            {% endblocktrans %}
+          </ol>
         </li>
+        
         <li>
-          {% blocktrans %}
-            No coding necessary, just drag-and-drop
-          {% endblocktrans %}
+          <p class="blue gap-bottom-none">
+            {% blocktrans %}
+              Auto alerts and reminders
+            {% endblocktrans %}
+          </p>
+          <ol class="gap-top-base">
+            {% blocktrans %}
+              Send alerts to field staff when tasks are overdue, and conduct 
+              more efficient beneficiary outreach with 2-way SMS messaging.
+            {% endblocktrans %}
+          </ol>
         </li>
+
         <li>
-          {% blocktrans %}
-            Start small with simple surveys and add complexity as you go
-          {% endblocktrans %}
+          <p class="blue gap-bottom-none">
+            {% blocktrans %}
+              One-click app updates
+            {% endblocktrans %}
+          </p>
+          <ol class="gap-top-base">
+            {% blocktrans %}
+              Easily update forms and publish changes to your field teams with an 
+              app manager that gives you control over versioning and deployment, 
+              even when field staff are offline.
+            {% endblocktrans %}
+          </ol>
         </li>
+
         <li>
-          {% blocktrans %}
-            Easily deploy your data collection app to Android devices in the field
-          {% endblocktrans %}
+          <p class="blue gap-bottom-none">
+            {% blocktrans %}
+              Collaborative data collection
+            {% endblocktrans %}
+          </p>
+          <ol class="gap-top-base">
+            {% blocktrans %}
+              Empower teams to distribute data collection responsibilities themselves, 
+              even when offline or geographically distributed, so you don’t need to 
+              manually manage field tasks.
+            {% endblocktrans %}
+          </ol>
         </li>
       </ul>
     </div>{# .column #}
-    <div class="column">
-      <div class="flex-valign-middle-at-medium">
-        <div class="device-container browser-ui">
-          <div class="screen">
-            {% include "partials/wistia_embed_autoplay.html" with wistia_id='3p3get3okj' %}
-          </div>{# .screen #}
-        </div>{# .device-container.browser-ui #}
-      </div>{# .flex-valign-middle-at-medium #}
+    <div class="column analyze-data-image white-lazy-bg"
+         data-lazybg="true">
     </div>{# .column #}
   </div>{# .grid-2-at-medium #}
 {% endblock %}
