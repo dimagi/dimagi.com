@@ -1,5 +1,5 @@
 from django.http import Http404
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 from dimagi.data.toolkits import (
     get_tookits_page,
@@ -23,3 +23,9 @@ def view_single(request, slug):
         'toolkit': toolkit,
     }
     return render(request, 'pages/toolkits/view_single.html', context)
+
+
+def temporary_redirect_toolkits(request):
+   response = redirect('toolkits')
+   response.status_code = 307
+   return response

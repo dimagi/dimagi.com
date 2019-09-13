@@ -17,7 +17,7 @@ from dimagi.pages.sitemaps import (
     QuickStartSitemap,
 )
 from dimagi.pages.urls.redirect import redirect_urlpatterns
-from dimagi.pages.views import commcare, redirect
+from dimagi.pages.views import commcare, redirect, toolkits
 from dimagi.pages.views import pillar
 from dimagi.pages.urls import blog
 from dimagi.pages.urls import team
@@ -61,12 +61,12 @@ urlpatterns = [
     url(r'^case-management/$', pages.case_management,  name='case_management'),
     url(r'^test_500/$', pages.test_500),
     url(r'^test_404/$', pages.test_404),
-    # url(r'^referral-commcare/$', pages.referral_commcare, name='referral_commcare'), for future pull back
+    url(r'^referral-commcare/$', pages.commcare.temporary_redirect_commcare, name='referral-commcare'),
+    url(r'^toolkits/digital-health-interventions/$', pages.toolkits.temporary_redirect_toolkits, name='digital-health-interventions'),
     url(r'^referral/update/$', pages.update_referral_status,
         name='update_referral_status'),
     url(r'^certified-partners/$', commcare.partners, name='partner_program'),
 
-    url(r'^toolkits/digital-health-interventions/$', redirect.page('toolkits')),
 
     url(r'^mobile-data-collection/$',
         pillar.mobile_data_collection, name="mobile_data_collection"),

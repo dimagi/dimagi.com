@@ -1,7 +1,7 @@
 from __future__ import absolute_import
 
 from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 from dimagi.utils.ab_tests import DEMO_WORKFLOW_V2
 from dimagi.utils.decorators.enable_ab_test import enable_ab_test
@@ -51,3 +51,9 @@ def handle_pricing_pdf(is_monthly):
 
 def partners(request):
     return render(request, 'pages/commcare/partners.html')
+
+
+def temporary_redirect_commcare(request):
+   response = redirect('commcare')
+   response.status_code = 307
+   return response

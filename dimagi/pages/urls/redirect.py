@@ -24,7 +24,6 @@ redirect_urlpatterns = [
     url(r'^confidant.shtml$', redirect.page('commcare')),
     url(r'^commtrack/$', redirect.page('commcare')),
     url(r'^collaborate/openrosa/$', redirect.page('commcare')),
-    url(r'^referral-commcare/$', redirect.page('commcare')),
 
     url(r'^learn/$', redirect.page('contact')),
     url(r'^support/$', redirect.page('contact')),
