@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+{% load capture_tags %}
+
+{% block title %}{% blocktrans %}
+  Education Programs
+{% endblocktrans %}{% endblock %}
+
+{% capture as page_social_card silent %}{% block social_card_image_url %}
+  {% static 'pages/sectors/education/intro/hero.jpg' %}
+{% endblock %}{% endcapture %}
+
+{% block body_class %}education-page tucked-hero{% endblock %}
+
+{% block stylesheets %}
+  {% compress css %}
+    <link href="{% sass_src 'style/pages/sectors/education.scss' %}" rel="stylesheet" media="screen" type="text/css" />
+  {% endcompress %}
+{% endblock %}
+
+{% block hero %}
+<div class="purple-theme">
+  <section class="hero hero-blog" id="hero"></section>
+</div>
+{% endblock %}
+
+{% block content %}
+  {% include "sections/sectors/education/sub_nav.html" %}
+  {% include "sections/sectors/education/overview.html" %}
+  {% include "sections/sectors/education/help_demo.html" %}
+  {% include "sections/sectors/education/benefit.html" %}
+  {% include "sections/sectors/education/commcare_action.html" %}
+  {% include "sections/sectors/education/programs.html" %}
+  {% include "sections/sectors/education/learn_commcare.html" %}
+  {% include "sections/sectors/education/testimonial.html" %}
+{% endblock %}
+
+{% block modals %}
+<div class="modal"
+     data-dismissible="true"
+     data-size="medium"
+     id="schedule-demo-form">
+  <div class="modal-scroll">
+    <div class="modal-wrapper">
+      <a href="#" class="modal-close-button"></a>
+      <div class="content pad-horz-medium-at-medium pad-horz-line pad-vert-none blue-theme">
+        <h3>
+          {% blocktrans %}
+            Schedule A Demo
+          {% endblocktrans %}
+        </h3>
+        <section id="schedule-demo-form-content"></section>
+      </div>{# .content #}
+    </div>{# .modal-wrapper #}
+  </div>{# .modal-scroll #}
+</div>{# .modal #}
+
+<div class="modal"
+     data-dismissible="true"
+     data-size="medium"
+     id="hubspot-download-form-pdf-summary">
+  <div class="modal-scroll">
+    <div class="modal-wrapper">
+      <a href="#" class="modal-close-button"></a>
+      <div class="content pad-horz-medium-at-medium pad-horz-line pad-vert-none purple-theme">
+        <section id="download-pdf-summary-form-content"></section>
+      </div>{# .content #}
+    </div>{# .modal-wrapper #}
+  </div>{# .modal-scroll #}
+</div>{# .modal #}
+{% endblock %}
+
+{% block js %}
+  <!--[if lte IE 8]>
+    <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+  <![endif]-->
+  <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+  <script>
+    hbspt.forms.create({
+      portalId: "503070",
+      formId: "949e4151-51c6-496a-a924-a2237c85f8a6",
+      target: "#download-pdf-summary-form-content",
+      css: "",
+      onFormSubmit: function () {
+        window.open('https://cdn2.hubspot.net/hubfs/503070/Sector%20PDFs/CommCare_MaternalChildHealth.pdf', "_blank");
+      },
+    });
+  </script>
+{% endblock %}
