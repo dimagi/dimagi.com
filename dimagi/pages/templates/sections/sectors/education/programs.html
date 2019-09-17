@@ -1,0 +1,255 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="testimonial programs purple-theme" 
+         data-lazybg="true" 
+         id="programs">
+  <div class="accent-gray-bg">
+    <div class="content pad-vert-small">
+      <div class="mdc-sector-program">
+        <h2 class="align-center">
+          {% blocktrans %}
+            Featured CommCare-Based 
+            <br class="hide-until-medium">Education Projects
+          {% endblocktrans %}
+        </h2>
+      </div>
+      <div class="grid grid-3-at-large grid-1-at-medium grid-row-equal-heights grid-col-space-small pad-top-medium">
+        <div class="column  pad-bottom-small ">
+          <div class="pad-bottom-base white-bg">
+            <div class="image testimonial1"
+                 data-lazybg="true"></div>
+            <div class="pad-line pad-top-none-at-large pad-top-line-at-extra-large">
+              <h5><strong class="body-color">
+                {% blocktrans %}
+                  Save the Children  <br>
+                  Thailand
+                {% endblocktrans %}
+              </strong></h5>
+              <p class="body-color">
+                {% blocktrans %}
+                  Save the Children Thailand uses CommCare to enroll students 
+                  and track attendance in schools along the Thai-Myanmar border.
+                {% endblocktrans %}
+              </p>
+              <p><a href="#agri-ep-feature-card-1" class="arrow link-gray">
+                {% blocktrans %}
+                  Read More 
+                {% endblocktrans %}
+              </a></p>
+            </div>
+          </div>
+        </div>{# .column #}
+
+        <div class="column pad-bottom-small">
+          <div class="pad-bottom-base white-bg">
+            <div class="image testimonial2"
+                 data-lazybg="true"></div>
+          <div class="pad-line pad-top-none-at-large pad-top-line-at-extra-large">
+            <h5>
+              <strong class="body-color">
+               {% blocktrans %}
+                  Anseye Pou Ayiti <br>
+                  Haiti
+               {% endblocktrans %}
+              </strong>
+            </h5>
+            <p class="body-color">
+              {% blocktrans %}
+                Teach for Haiti uses CommCare to help recruit, train, and 
+                equip teachers, while also tracking their performance 
+                against personalized growth plans.
+              {% endblocktrans %}
+            </p>
+            <p class="pad-top-line-at-extra-large">
+              <a href="#agri-ep-feature-card-2" class="arrow link-gray">
+                {% blocktrans %}
+                  Read More
+                {% endblocktrans %}
+              </a>
+            </p>
+          </div>
+          </div>
+        </div>{# .column #}
+
+        <div class="column pad-bottom-small">
+          <div class="pad-bottom-base white-bg">
+              <div class="image testimonial3"
+                   data-lazybg="true"></div>
+          <div class="pad-line pad-top-none-at-large pad-top-line-at-extra-large">
+            <h5>
+              <strong class="body-color">
+                {% blocktrans %}
+                  UNICEF <br>
+                  Ghana
+                {% endblocktrans %}
+              </strong>
+            </h5>
+            <p class="body-color">
+              {% blocktrans %}
+                UNICEF Ghana uses CommCare to track and assess attendence, 
+                security, and lesson plan adherence in schools across the country.
+              {% endblocktrans %}
+            </p>
+            <p>
+              <a href="#agri-ep-feature-card-3" class="arrow link-gray">
+                {% blocktrans %}
+                  Read More
+                {% endblocktrans %}
+              </a>
+            </p>
+          </div>
+          </div>
+        </div>{# .column #}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% block modals %}
+  <div class="modal testimonial programs"
+       data-dismissible="true"
+       data-size="medium"
+       id="agri-ep-feature-card-1">
+    <div class="modal-scroll">
+      <div class="modal-wrapper">
+        <a href="#" class="modal-close-button"></a>
+        <div class="content pad-horz-medium-at-medium pad-horz-small pad-bottom-none turquoise-theme">
+          <h4>
+            <strong class="body-color">
+              {% blocktrans %}
+                Save the Children  <br>
+                Thailand
+              {% endblocktrans %}
+            </strong>
+          </h4>
+          <div class="grid-flex-at-large">
+            <div class="column">
+              <p class="body-color">
+                {% blocktrans %}
+                  Save the Children Thailand uses CommCare to enroll students 
+                  and track attendance in schools along the Thai-Myanmar border.
+                {% endblocktrans %}  
+              </p>
+              <p class="body-color">
+                {% blocktrans %}
+                  Save the Children Thailand created a CommCare application 
+                  for School Monitoring that enrolls students in schools along 
+                  the Thai-Myanmar border. The app keeps official enrollment 
+                  records and tracks attendance and reasons for absenteeism. 
+                  Students are visited at the beginning of the school year, at 
+                  mid-year, and at the end of the year to assess progress. 
+                  Information from the app can also be used to create student 
+                  ID cards, complete with photos of each individual student. 
+                  The app was translated into multiple languages so it could be 
+                  deployed in other regions. Dimagi trained the first 23 users 
+                  and Save the Children is now scaling up to 100 users.
+                {% endblocktrans %}
+              </p>
+            </div>
+            <div class="column pad-top-none-until-large">
+              <div class="image testimonial1 crs"
+                   data-lazybg="true"></div>
+            </div>
+          </div>
+        </div>{# .content #}
+      </div>{# .modal-wrapper #}
+    </div>{# .modal-scroll #}
+  </div>{# .modal #}
+
+  <div class="modal testimonial programs"
+       data-dismissible="true"
+       data-size="medium"
+       id="agri-ep-feature-card-2">
+    <div class="modal-scroll">
+      <div class="modal-wrapper">
+        <a href="#" class="modal-close-button"></a>
+        <div class="content pad-horz-medium-at-medium pad-horz-line pad-vert-none turquoise-theme">
+          <h4>
+            <strong class="body-color">
+              {% blocktrans %}
+                Anseye Pou Ayiti <br>
+                Haiti
+              {% endblocktrans %}
+            </strong>
+          </h4>
+          <div class="grid-flex-at-large">
+            <div class="column">
+              <p class="body-color">
+                {% blocktrans %}
+                  Teach for Haiti uses CommCare to help recruit, train, and 
+                  equip teachers, while also tracking their performance against 
+                  personalized growth plans.
+                {% endblocktrans %}  
+              </p>
+              <p class="body-color">
+                {% blocktrans %}
+                  Anseye Pou Ayiti (Teach for Haiti) seeks to raise education 
+                  outcomes in rural Haiti by recruiting, training, and 
+                  equipping teacher-leaders to promote teacher excellence and 
+                  student success. Their CommCare application enables 
+                  pedagogical coaches to track teachers’ growth according to 
+                  their individual professional growth plans and the 
+                  organization’s competencies framework and assists 
+                  pedagogical coaches in conducting classroom observations 
+                  and coaching sessions with teachers.
+                {% endblocktrans %}
+              </p>
+            </div>
+            <div class="column">
+              <div class="image testimonial2 crs"
+                   data-lazybg="true"></div>
+            </div>
+          </div>
+        </div>{# .content #}
+      </div>{# .modal-wrapper #}
+    </div>{# .modal-scroll #}
+  </div>{# .modal #}
+
+  <div class="modal testimonial programs"
+       data-dismissible="true"
+       data-size="medium"
+       id="agri-ep-feature-card-3">
+    <div class="modal-scroll">
+      <div class="modal-wrapper">
+        <a href="#" class="modal-close-button"></a>
+        <div class="content pad-horz-medium-at-medium pad-horz-line pad-vert-none turquoise-theme">
+          <h4>
+            <strong class="body-color">
+              {% blocktrans %}
+                UNICEF <br>
+                Ghana
+              {% endblocktrans %}
+            </strong>
+          </h4>
+          <div class="grid-flex-at-large">
+            <div class="column">
+              <p class="body-color">
+                {% blocktrans %}
+                  UNICEF Ghana uses CommCare to track and assess attendence, 
+                  security, and lesson plan adherence in schools across the country.
+                {% endblocktrans %}  
+              </p>
+              <p class="body-color">
+                {% blocktrans %}
+                  UNICEF Ghana is using CommCare as an e-checklist to track 
+                  and assess child-friendliness of schools across the country. 
+                  The checklists monitor teacher and student attendance, 
+                  assess facilities for safety and sanitation, track lesson 
+                  plan adherence and classroom behavior, and compare results to 
+                  a school’s past performance and community involvement. Field 
+                  workers have the ability to enter data in real time for 
+                  supervisors to assess schools’ performance on relevant indicators.
+                {% endblocktrans %}
+              </p>
+            </div>
+            <div class="column">
+              <div class="image testimonial3 crs"
+                   data-lazybg="true"></div>
+          </div>
+          </div>
+        </div>{# .content #}
+      </div>{# .modal-wrapper #}
+    </div>{# .modal-scroll #}
+  </div>{# .modal #}
+{% endblock %}

@@ -65,3 +65,10 @@ def maternal_and_child_health(request):
         'sector': 'maternal_and_child_health',
     }
     return render(request, 'pages/sectors/maternal_and_child_health.html', context)
+
+@enable_ab_test(DEMO_WORKFLOW_V2)
+def education(request):
+    context = {
+        'sector': 'education',
+    }
+    return render(request, 'pages/sectors/education.html', context)
