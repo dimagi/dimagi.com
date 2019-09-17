@@ -10,19 +10,19 @@
     medium: 280px,
     large: 280px,
     extra-large: 320px,
-  );
-  @include make-bg(hero-data-image, '../../../pages/sectors/education/intro/hero', $_base-height, $_height-by-size);
+	);
+	@include make-bg(hero-data-image, '../../../pages/sectors/education/intro/hero', $_base-height, $_height-by-size);
 }
 
 .part3 {
   $_base-height: 600px;
-    $_height-by-size: (
-      small: 620px,
-      medium: 385px,
-      large: 360px,
-      extra-large: 360px,
-    );
-    @include make-bg(epic-cover, '../../../pages/sectors/programmatic-research/commcare/hero', $_base-height, $_height-by-size);
+  $_height-by-size: (
+    small: 620px,
+    medium: 385px,
+    large: 360px,
+    extra-large: 360px,
+  );
+	@include make-bg(epic-cover, '../../../pages/sectors/maternal-and-newborn-health/part3/hero', $_base-height, $_height-by-size);
 }
 
 .center {
@@ -77,13 +77,13 @@
 }
 
 .programs .image.testimonial2 {
-    @include background-cover('../../../pages/sectors/education/programs/anseye.png');
+  @include background-cover('../../../pages/sectors/education/programs/anseye.png');
   height: 200px;
   background-size: contain;
 }
 
 .programs .image.testimonial3 {
-    @include background-cover('../../../pages/sectors/education/programs/unicef.png');
+  @include background-cover('../../../pages/sectors/education/programs/unicef.png');
   height: 200px;
   background-size: contain;
 }
