@@ -40,6 +40,6 @@ STUDY = CaseStudy(
         ugettext_lazy("Custom Reporting"),
     ],
     slug="mhealth-malaria-mozambique",
-    download_url="https://www.dropbox.com/s/trffquc2e3ra0gw/mhealth-malaria-mozambique.pdf?dl=1",
+    download_url="https://cdn2.hubspot.net/hubfs/503070/Case%20Studies/CommCare%20-%20Malaria%20Consortium%20Case%20Study.pdf",
     hubspot_form="e39f88d8-e985-44bd-92ff-48a382bed12b",
 )
