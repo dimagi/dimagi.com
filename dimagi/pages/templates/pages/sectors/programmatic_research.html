@@ -26,32 +26,34 @@
 {% endblock %}
 
 {% block content %}
-  {% include "sections/sectors/programmatic_research/sub_nav.html" %}
-  {% include "sections/sectors/programmatic_research/overview.html" %}
-  {% include "sections/sectors/programmatic_research/help_demo.html" %}
-  {% include "sections/sectors/programmatic_research/benefit.html" %}
-  {% include "sections/sectors/programmatic_research/programs.html" %}
-  {% include "sections/sectors/programmatic_research/commcare_action.html" %}
-  {% include "sections/sectors/programmatic_research/news.html" %}
-  {% include "sections/sectors/programmatic_research/learn_commcare.html" %}
-  {% include "sections/sectors/programmatic_research/testimonial.html" %}
+  <section class="services-container purple-theme">
+    {% include "sections/sectors/programmatic_research/sub_nav.html" %}
+    {% include "sections/sectors/programmatic_research/overview.html" %}
+    {% include "sections/sectors/programmatic_research/help_demo.html" %}
+    {% include "sections/sectors/programmatic_research/benefit.html" %}
+    {% include "sections/sectors/programmatic_research/programs.html" %}
+    {% include "sections/sectors/programmatic_research/commcare_action.html" %}
+    {% include "sections/sectors/programmatic_research/news.html" %}
+    {% include "sections/sectors/programmatic_research/learn_commcare.html" %}
+    {% include "sections/sectors/programmatic_research/testimonial.html" %}
+  </section>
 {% endblock %}
 
 {% block modals %}
 <div class="modal"
      data-dismissible="true"
      data-size="medium"
-     id="schedule-demo-form">
+     id="demo-sector">
   <div class="modal-scroll">
     <div class="modal-wrapper">
       <a href="#" class="modal-close-button"></a>
-      <div class="content pad-horz-medium-at-medium pad-horz-line pad-vert-none blue-theme">
+      <div class="content pad-horz-medium-at-medium pad-horz-line pad-vert-none purple-theme">
         <h3>
           {% blocktrans %}
             Schedule A Demo
           {% endblocktrans %}
         </h3>
-        <section id="schedule-demo-form-content"></section>
+        <section id="demo-sector-content"></section>
       </div>{# .content #}
     </div>{# .modal-wrapper #}
   </div>{# .modal-scroll #}
@@ -64,7 +66,7 @@
   <div class="modal-scroll">
     <div class="modal-wrapper">
       <a href="#" class="modal-close-button"></a>
-      <div class="content pad-horz-medium-at-medium pad-horz-line pad-vert-none blue-theme">
+      <div class="content pad-horz-medium-at-medium pad-horz-line pad-vert-none purple-theme">
         <section id="download-pdf-summary-form-content"></section>
       </div>{# .content #}
     </div>{# .modal-wrapper #}
@@ -84,8 +86,14 @@
       target: "#download-pdf-summary-form-content",
       css: "",
       onFormSubmit: function () {
-        window.open('https://cdn2.hubspot.net/hubfs/503070/Sector%20PDFs/CommCare_MaternalChildHealth.pdf', "_blank");
+        window.open('https://cdn2.hubspot.net/hubfs/503070/International%20research.pdf', "_blank");
       },
+    });
+    hbspt.forms.create({
+      portalId: "503070",
+      formId: "afb4d5a0-826f-4a56-8c21-552d4b6dafa3",
+      target: "#demo-sector-content",
+      css: "",
     });
   </script>
 {% endblock %}

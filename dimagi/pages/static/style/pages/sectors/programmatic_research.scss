@@ -22,7 +22,7 @@
       large: 360px,
       extra-large: 360px,
     );
-	  @include make-bg(epic-cover, '../../../pages/sectors/maternal-and-newborn-health/part3/hero', $_base-height, $_height-by-size);
+	  @include make-bg(epic-cover, '../../../pages/sectors/programmatic-research/commcare/hero', $_base-height, $_height-by-size);
 }
 
 .center {
