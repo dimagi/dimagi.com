@@ -61,48 +61,48 @@
   }
 }
 
-.commcare-text .phone-image{
+.commcare-text .phone-image {
   background-size: auto 0%;
 }
 
-.ac-part3 .phone-image .bg-loader{
+.ac-part3 .phone-image .bg-loader {
   background-color: transparent;
 }
 
-.news .image.testimonial1{
+.news .image.testimonial1 {
   @include background-cover('../../../pages/sectors/programmatic-research/news/research_blog_one.jpg');
   height: 200px;
   background-size: contain;
   background-position: left;
 }
 
-.news .image.testimonial2{
+.news .image.testimonial2 {
   @include background-cover('../../../pages/sectors/programmatic-research/news/research_blog_two.jpg');
   height: 200px;
   background-size: contain;
   background-position: left;
 }
 
-.news .image.testimonial3{
+.news .image.testimonial3 {
   @include background-cover('../../../pages/sectors/programmatic-research/news/research_blog_three.jpg');
   height: 200px;
   background-size: contain;
   background-position: left;
 }
 
-.programs .image.testimonial1{
+.programs .image.testimonial1 {
   @include background-cover('../../../pages/sectors/programmatic-research/programs/research_project_one.jpg');
   height: 200px;
   background-size: contain;
 }
 
-.programs .image.testimonial2{
+.programs .image.testimonial2 {
   @include background-cover('../../../pages/sectors/programmatic-research/programs/research_project_two.jpg');
   height: 200px;
   background-size: contain;
 }
 
-.programs .image.testimonial3{
+.programs .image.testimonial3 {
   @include background-cover('../../../pages/sectors/programmatic-research/programs/research_project_three.jpg');
   height: 200px;
   background-size: contain;
@@ -114,7 +114,7 @@
  background-position: initial;
 }
 
-.programs .image.crs{
+.programs .image.crs {
   width: 309px;
 }
 
