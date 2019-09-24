@@ -153,6 +153,18 @@
   @include make-bg(epic-cover, '../../../pages/commcare/product/pricing/hero', $_base-height, $_height-by-size);
 }
 
+.commcare-video-demo {
+  $_base-height: 275px;
+  $_height-by-size: (
+    extra-small: 290px,
+    small: 270px,
+    medium: 270px,
+    large: 316px,
+    extra-large: 290px,
+  );
+  @include make-bg(image, '../../../pages/commcare/product/pricing/hero', $_base-height, $_height-by-size);
+}
+
 .overview-features {
   $_base-height: 175px;
   $_height-by-size: (
