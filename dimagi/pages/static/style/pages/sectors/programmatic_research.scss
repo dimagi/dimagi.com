@@ -6,10 +6,10 @@
 #programmatic-research-intro {
   $_base-height: 190px;
   $_height-by-size: (
-	  small: 280px,
-	  medium: 280px,
-	  large: 280px,
-	  extra-large: 320px,
+    small: 280px,
+    medium: 280px,
+    large: 280px,
+    extra-large: 320px,
   );
   @include make-bg(hero-data-image, '../../../pages/sectors/programmatic-research/intro/hero', $_base-height, $_height-by-size);
 }
