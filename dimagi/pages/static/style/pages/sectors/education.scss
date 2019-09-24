@@ -10,8 +10,8 @@
     medium: 280px,
     large: 280px,
     extra-large: 320px,
-	);
-	@include make-bg(hero-data-image, '../../../pages/sectors/education/intro/hero', $_base-height, $_height-by-size);
+  );
+  @include make-bg(hero-data-image, '../../../pages/sectors/education/intro/hero', $_base-height, $_height-by-size);
 }
 
 .part3 {
