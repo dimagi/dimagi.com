@@ -36,6 +36,6 @@ STUDY = CaseStudy(
         ugettext_lazy("Process Adherence"),
     ],
     slug="mhealth-hiv-zimbabwe",
-    download_url="https://www.dropbox.com/s/2f8y8khz8amuios/mhealth-hiv-zimbabwe.pdf?dl=1",
+    download_url="https://cdn2.hubspot.net/hubfs/503070/Case%20Studies/CommCare%20-%20GSID%20RDT%20Case%20Study.pdf",
     hubspot_form="e769deaf-7aca-4d72-9b31-7207dbb2eab3",
 )
