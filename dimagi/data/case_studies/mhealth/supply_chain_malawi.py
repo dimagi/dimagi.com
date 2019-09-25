@@ -37,6 +37,6 @@ STUDY = CaseStudy(
         ugettext_lazy("SMS-based Form Input"),
     ],
     slug="mhealth-supply-chain-malawi",
-    download_url="https://www.dropbox.com/s/s67h8pbnogbo1vq/mhealth-supply-chain-malawi.pdf?dl=1",
+    download_url="https://cdn2.hubspot.net/hubfs/503070/Case%20Studies/CommCare%20-%20cStock%20Case%20Study.pdf",
     hubspot_form="6c75de96-f702-43f4-9a54-ba7667a4af30",
 )
