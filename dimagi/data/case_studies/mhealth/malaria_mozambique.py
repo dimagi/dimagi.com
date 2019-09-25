@@ -14,7 +14,7 @@ STUDY = CaseStudy(
         "healthcare coverage. The project adopted CommCare to strengthen "
         "communication between community health workers (CHWs) and health "
         "facility supervisors. With Ministry of Health staff now responsible "
-        "for content design, training, roll-out, and platform hosting, upSCALE "
+        "for content design, training, rollout, and platform hosting, upSCALE "
         "has the potential to expand into other areas of the health system, "
         "with the goal of improved diagnosis, treatment, and monitoring of "
         "disease throughout Mozambique."
