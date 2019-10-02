@@ -1,0 +1,259 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="testimonial programs purple-theme" 
+         data-lazybg="true" 
+         id="programs">
+  <div class="accent-gray-bg">
+    <div class="content pad-vert-small">
+      <div class="mdc-sector-program">
+        <h2 class="align-center">
+          {% blocktrans %}
+            Featured CommCare-Supported <br class="hide-until-medium">
+            Programmatic Research
+          {% endblocktrans %}
+        </h2>
+      </div>
+      <div class="grid grid-3-at-large grid-1-at-medium grid-row-equal-heights grid-col-space-small pad-top-medium">
+        <div class="column  pad-bottom-small ">
+          <div class="pad-bottom-base white-bg">
+            <div class="image testimonial1"
+                 data-lazybg="true"></div>
+            <div class="pad-line pad-top-none-at-large pad-top-line-at-extra-large">
+              <h5><strong class="body-color">
+                {% blocktrans %}
+                  m-Palliative Care Link  <br>
+                  Tanzania
+                {% endblocktrans %}
+              </strong></h5>
+              <p class="body-color">
+                {% blocktrans %}
+                  Tanzania’s Ocean Road Cancer Institute uses CommCare to 
+                  improve symptom control and information exchange in 
+                  late-stage cancer treatment.
+                {% endblocktrans %}
+              </p>
+              <p><a href="#agri-ep-feature-card-1" class="arrow link-gray">
+                {% blocktrans %}
+                  Read More 
+                {% endblocktrans %}
+              </a></p>
+            </div>
+          </div>
+        </div>{# .column #}
+
+        <div class="column pad-bottom-small">
+          <div class="pad-bottom-base white-bg">
+            <div class="image testimonial2"
+                 data-lazybg="true"></div>
+          <div class="pad-line pad-top-none-at-large pad-top-line-at-extra-large">
+            <h5>
+              <strong class="body-color">
+               {% blocktrans %}
+                  The INDDEX Project <br>
+                  Burkina Faso, Vietnam
+               {% endblocktrans %}
+              </strong>
+            </h5>
+            <p class="body-color">
+              {% blocktrans %}
+                INDDEX uses CommCare to assess community dietary needs to 
+                improve agriculture, food, and nutrition policies in 
+                Burkina Faso and Vietnam.
+              {% endblocktrans %}
+            </p>
+            <p class="pad-top-line-at-extra-large">
+              <a href="#agri-ep-feature-card-2" class="arrow link-gray">
+                {% blocktrans %}
+                  Read More
+                {% endblocktrans %}
+              </a>
+            </p>
+          </div>
+          </div>
+        </div>{# .column #}
+
+        <div class="column pad-bottom-small">
+          <div class="pad-bottom-base white-bg">
+              <div class="image testimonial3"
+                   data-lazybg="true"></div>
+          <div class="pad-line pad-top-none-at-large pad-top-line-at-extra-large">
+            <h5>
+              <strong class="body-color">
+                {% blocktrans %}
+                  Ghana Information for Improved Healthcare Performance (GIIHP) <br>
+                  Ghana
+                {% endblocktrans %}
+              </strong>
+            </h5>
+            <p class="body-color">
+              {% blocktrans %}
+                Boston University uses CommCare to improve performance in 
+                five hospitals across Ghana.
+              {% endblocktrans %}
+            </p>
+            <p>
+              <a href="#agri-ep-feature-card-3" class="arrow link-gray">
+                {% blocktrans %}
+                  Read More
+                {% endblocktrans %}
+              </a>
+            </p>
+          </div>
+          </div>
+        </div>{# .column #}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% block modals %}
+  <div class="modal testimonial programs"
+       data-dismissible="true"
+       data-size="medium"
+       id="agri-ep-feature-card-1">
+    <div class="modal-scroll">
+      <div class="modal-wrapper">
+        <a href="#" class="modal-close-button"></a>
+        <div class="content pad-horz-medium-at-medium pad-horz-small pad-bottom-none turquoise-theme">
+          <h4>
+            <strong class="body-color">
+              {% blocktrans %}
+                m-Palliative Care Link  <br>
+                Tanzania
+              {% endblocktrans %}
+            </strong>
+          </h4>
+          <div class="grid-flex-at-large">
+            <div class="column">
+              <p class="body-color">
+                {% blocktrans %}
+                  The m-Palliative Care Link (mPCL) project’s objective is to 
+                  improve symptom control and information exchange among 
+                  specialists and local health workers treating late-stage 
+                  Tanzanian cancer patients. Dimagi’s role in the project is 
+                  to collaborate with the US-based team at Maine Medical Center 
+                  (MMC) and the Tanzania-based Ocean Road Cancer Institute 
+                  (ORCI) study team to adapt the African Palliative Care 
+                  Association Palliative Care Outcome Scale (APCA POS) for 
+                  mobile delivery and symptom control action by specialists and 
+                  local health workers using a user-centered design framework. 
+                  Their between-groups comparison pilot study is an assessment 
+                  of the effect of a mobile intervention on field test 
+                  outcomes to better understand the impact that the mPCL 
+                  system can have on improving the treatment for late-stage 
+                  cancer patients. The scope of this initial contract includes 
+                  a pilot study with 45 late-stage cancer patients using the mobile 
+                  app (intervention group) and 45 patients in usual care (control group).
+                {% endblocktrans %}
+              </p>
+              <p class="body-color">
+                {% blocktrans %}
+                  mPCL includes registration and follow-up menus to record and 
+                  track symptom control, based on patient POS responses, 
+                  supervisor menus for the specialist to review information 
+                  entered by the local health worker via Web Apps, adaptation of 
+                  the POS framework for the patients and caregivers to complete 
+                  directly via CommCare mobile, as well as SMS sent to study 
+                  participants and nurses as a reminder to fill out the POS.
+                {% endblocktrans %}
+              </p>
+            </div>
+            <div class="column pad-top-none-until-large">
+              <div class="image testimonial1 crs"
+                   data-lazybg="true"></div>
+            </div>
+          </div>
+        </div>{# .content #}
+      </div>{# .modal-wrapper #}
+    </div>{# .modal-scroll #}
+  </div>{# .modal #}
+
+  <div class="modal testimonial programs"
+       data-dismissible="true"
+       data-size="medium"
+       id="agri-ep-feature-card-2">
+    <div class="modal-scroll">
+      <div class="modal-wrapper">
+        <a href="#" class="modal-close-button"></a>
+        <div class="content pad-horz-medium-at-medium pad-horz-line pad-vert-none turquoise-theme">
+          <h4>
+            <strong class="body-color">
+              {% blocktrans %}
+                The INDDEX Project <br>
+                Burkina Faso, Vietnam
+              {% endblocktrans %}
+            </strong>
+          </h4>
+          <div class="grid-flex-at-large">
+            <div class="column">
+              <p class="body-color">
+                {% blocktrans %}
+                  The INDDEX Project is a joint project with Gerald J. and 
+                  Dorothy R. Friedman School of Nutrition Science and Policy, 
+                  the Food and Agricultural Organization of the United Nations 
+                  (FAO), the International Food Policy Research Institute 
+                  (IFPRI), and other international experts. The objective of 
+                  the research is to help countries to increase food and nutrient 
+                  consumption data collection and use in order to create more 
+                  evidence-based decisions about agriculture, food, and nutrition 
+                  policies and programs. INDDEX24 is a mobile dietary assessment 
+                  platform that utilizes environment-specific input databases to 
+                  conduct 24-hour dietary recalls. To date, the mobile 
+                  platform has been tested in Burkina Faso and Vietnam.
+                {% endblocktrans %}
+              </p>
+            </div>
+            <div class="column">
+              <div class="image testimonial2 crs"
+                   data-lazybg="true"></div>
+            </div>
+          </div>
+        </div>{# .content #}
+      </div>{# .modal-wrapper #}
+    </div>{# .modal-scroll #}
+  </div>{# .modal #}
+
+  <div class="modal testimonial programs"
+       data-dismissible="true"
+       data-size="medium"
+       id="agri-ep-feature-card-3">
+    <div class="modal-scroll">
+      <div class="modal-wrapper">
+        <a href="#" class="modal-close-button"></a>
+        <div class="content pad-horz-medium-at-medium pad-horz-line pad-vert-none turquoise-theme">
+          <h4>
+            <strong class="body-color">
+              {% blocktrans %}
+                Ghana Information for Improved Healthcare Performance (GIIHP) <br>
+                Ghana
+              {% endblocktrans %}
+            </strong>
+          </h4>
+          <div class="grid-flex-at-large">
+            <div class="column">
+              <p class="body-color">
+                {% blocktrans %}
+                  Boston University launched a study to assess the effectiveness 
+                  of a hospital performance measurement intervention implemented 
+                  in five hospitals in Ghana. The intervention’s goal is to 
+                  “improve quality of care and increase patient satisfaction, 
+                  thereby contributing to increased utilization of services and 
+                  impact on maternal and neonatal outcomes.” The study used a 
+                  tablet-based CommCare app to record key outcomes, clients’ 
+                  satisfaction, and perception of affordability. Results from 
+                  the study are being used to improve hospital performance and 
+                  enable evidence-based policy decision making.
+                {% endblocktrans %}
+              </p>
+            </div>
+            <div class="column">
+              <div class="image testimonial3 crs"
+                   data-lazybg="true"></div>
+          </div>
+          </div>
+        </div>{# .content #}
+      </div>{# .modal-wrapper #}
+    </div>{# .modal-scroll #}
+  </div>{# .modal #}
+{% endblock %}

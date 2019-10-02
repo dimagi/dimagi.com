@@ -5,37 +5,38 @@ from dimagi.pages.models.case_studies import CaseStudy
 
 STUDY = CaseStudy(
     title=ugettext_lazy(
-        "Adopting SMS to Improve Essential Medicines Stock in Malawi"
+        "cStock: Supply Chains for Community Case Management"
     ),
     summary=ugettext_lazy(
-        "In Malawi, community health workers, also known as Health "
-        "Surveillance Assistants (HSAs), provide Community Case "
-        "Management (CCM). These HSAs carry and prescribe a defined "
-        "list of essential medicines such as ORS, anti-malarials, "
-        "antibiotics, and family planning commodities. The Improving "
-        "Supply Chains for Community Case Management of Pneumonia and "
-        "Other Common Diseases of Childhood project (SC4CCM), implemented "
-        "by the JSI Research & Training Institute, Inc. (JSI R&T) funded "
-        "by the Bill & Melinda Gates Foundation, has worked with the "
-        "Malawi Ministry of Health in developing approaches to address "
-        "the lack of data visibility in the health supply chain for "
-        "HSAs, which contributes to poor product availability in hard "
-        "to reach areas."
+        "In Malawi, the Ministry of Health and Population (MoHP) is "
+        "championing the strengthening of community health systems. As part "
+        "of this effort, the MoHP enlists the support of Health Surveillance "
+        "Assistants (HSAs), who assess and treat minor conditions for "
+        "children under five, which requires them to be well stocked on "
+        "essential, life-saving medicines. To help them with this, the MoHP "
+        "introduced the “cStock” tool that allowed greater visibility into "
+        "community level data continues to be implemented under the Ministry "
+        "of Health and Population leadership todate, with funding from Global "
+        "Fund that is being managed by the World Vision Malawi."
     ),
     partners=[
-        "John Snow International",
-        "USAID | DELIVER Project",
+        "JSI Research & Training Institute, Inc.,",
+        "Bill & Melinda Gates Foundation",
         "Malawi Ministry of Health",
-        "Dimagi",
+        "Global Fund",
+        "World Vision International (Malawi)",
     ],
     countries=[
         ugettext_lazy("Malawi"),
     ],
     sectors=[
-        ugettext_lazy("Supply Chain Management"),
+        ugettext_lazy("Disease Treatment and Prevention"),
+        ugettext_lazy("Maternal & Child Health"),
     ],
-    features=[],
+    features=[
+        ugettext_lazy("SMS-based Form Input"),
+    ],
     slug="mhealth-supply-chain-malawi",
-    download_url="https://www.dropbox.com/s/s67h8pbnogbo1vq/mhealth-supply-chain-malawi.pdf?dl=1",
+    download_url="https://cdn2.hubspot.net/hubfs/503070/Case%20Studies/CommCare%20-%20cStock%20Case%20Study.pdf",
     hubspot_form="6c75de96-f702-43f4-9a54-ba7667a4af30",
 )
