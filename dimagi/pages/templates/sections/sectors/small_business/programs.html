@@ -1,0 +1,267 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="testimonial programs purple-theme" 
+         data-lazybg="true" 
+         id="programs">
+  <div class="accent-gray-bg">
+    <div class="content pad-vert-small">
+      <div class="mdc-sector-program">
+        <h2 class="align-center">
+          {% blocktrans %}
+            Featured CommCare-Based 
+            <br class="hide-until-medium">Education Projects
+          {% endblocktrans %}
+        </h2>
+      </div>
+      <div class="grid grid-3-at-large grid-1-at-medium grid-row-equal-heights grid-col-space-small pad-top-medium">
+        <div class="column  pad-bottom-small ">
+          <div class="pad-bottom-base white-bg">
+            <div class="image testimonial1"
+                 data-lazybg="true"></div>
+            <div class="pad-line pad-top-none-at-large pad-top-line-at-extra-large">
+              <h5><strong class="body-color">
+                {% blocktrans %}
+                  Pollinate Energy  <br>
+                  India
+                {% endblocktrans %}
+              </strong></h5>
+              <p class="body-color">
+                {% blocktrans %}
+                  Pollinate Energy uses CommCare to manage the stock of their 
+                  energy solutions, complete surveys, and track payments.
+                {% endblocktrans %}
+              </p>
+              <p><a href="#agri-ep-feature-card-1" class="arrow link-gray">
+                {% blocktrans %}
+                  Read More 
+                {% endblocktrans %}
+              </a></p>
+            </div>
+          </div>
+        </div>{# .column #}
+
+        <div class="column pad-bottom-small">
+          <div class="pad-bottom-base white-bg">
+            <div class="image testimonial2"
+                 data-lazybg="true"></div>
+          <div class="pad-line pad-top-none-at-large pad-top-line-at-extra-large">
+            <h5>
+              <strong class="body-color">
+               {% blocktrans %}
+                  UN WFP Case Transfer <br>
+                  Zambia
+               {% endblocktrans %}
+              </strong>
+            </h5>
+            <p class="body-color">
+              {% blocktrans %}
+                The Republic of Zambia is using CommCare to implement a more 
+                accurate social cash transfer system to reduce poverty 
+                and vulnerability.
+              {% endblocktrans %}
+            </p>
+            <p class="pad-top-line-at-extra-large">
+              <a href="#agri-ep-feature-card-2" class="arrow link-gray">
+                {% blocktrans %}
+                  Read More
+                {% endblocktrans %}
+              </a>
+            </p>
+          </div>
+          </div>
+        </div>{# .column #}
+
+        <div class="column pad-bottom-small">
+          <div class="pad-bottom-base white-bg">
+              <div class="image testimonial3"
+                   data-lazybg="true"></div>
+          <div class="pad-line pad-top-none-at-large pad-top-line-at-extra-large">
+            <h5>
+              <strong class="body-color">
+                {% blocktrans %}
+                  HOPE Mobile Money System <br>
+                  India
+                {% endblocktrans %}
+              </strong>
+            </h5>
+            <p class="body-color">
+              {% blocktrans %}
+                HOPE is a mobile payment system that integrates with CommCare 
+                to submit payments based on the data collected in the program.
+              {% endblocktrans %}
+            </p>
+            <p>
+              <a href="#agri-ep-feature-card-3" class="arrow link-gray">
+                {% blocktrans %}
+                  Read More
+                {% endblocktrans %}
+              </a>
+            </p>
+          </div>
+          </div>
+        </div>{# .column #}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% block modals %}
+  <div class="modal testimonial programs"
+       data-dismissible="true"
+       data-size="medium"
+       id="agri-ep-feature-card-1">
+    <div class="modal-scroll">
+      <div class="modal-wrapper">
+        <a href="#" class="modal-close-button"></a>
+        <div class="content pad-horz-medium-at-medium pad-horz-small pad-bottom-none turquoise-theme">
+          <h4>
+            <strong class="body-color">
+              {% blocktrans %}
+                Pollinate Energy  <br>
+                India
+              {% endblocktrans %}
+            </strong>
+          </h4>
+          <div class="grid-flex-at-large">
+            <div class="column">
+              <p class="body-color">
+                {% blocktrans %}
+                  Pollinate Energy uses CommCare to manage the stock of their 
+                  energy solutions, complete surveys, and track payments.
+                {% endblocktrans %}  
+              </p>
+              <p class="body-color">
+                {% blocktrans %}
+                  Pollinate Energy is an Indian-based NGO whose mission is to 
+                  eradicate energy poverty through clean energy solutions, including 
+                  solar-powered lights. Pollinate Energy’s CommCare application is 
+                  used by the NGO’s “pollinators” to manage their energy solutions 
+                  stock, complete community profile surveys, and ensure that 
+                  communities provide accurate and timely repayments for 
+                  solar-powered lights. In addition to supporting Pollinators, 
+                  the application also provides a solar-powered light 
+                  installation guide for beneficiaries.
+                {% endblocktrans %}
+              </p>
+            </div>
+            <div class="column pad-top-none-until-large">
+              <div class="image testimonial1 crs"
+                   data-lazybg="true"></div>
+            </div>
+          </div>
+        </div>{# .content #}
+      </div>{# .modal-wrapper #}
+    </div>{# .modal-scroll #}
+  </div>{# .modal #}
+
+  <div class="modal testimonial programs"
+       data-dismissible="true"
+       data-size="medium"
+       id="agri-ep-feature-card-2">
+    <div class="modal-scroll">
+      <div class="modal-wrapper">
+        <a href="#" class="modal-close-button"></a>
+        <div class="content pad-horz-medium-at-medium pad-horz-line pad-vert-none turquoise-theme">
+          <h4>
+            <strong class="body-color">
+              {% blocktrans %}
+                UN WFP Case Transfer <br>
+                Zambia
+              {% endblocktrans %}
+            </strong>
+          </h4>
+          <div class="grid-flex-at-large">
+            <div class="column">
+              <p class="body-color">
+                {% blocktrans %}
+                  The Republic of Zambia is using CommCare to implement a more 
+                  accurate social cash transfer system to reduce poverty and 
+                  vulnerability.
+                {% endblocktrans %}  
+              </p>
+              <p class="body-color">
+                {% blocktrans %}
+                  The Government of the Republic of Zambia (GRZ), with support 
+                  from DFID, UNICEF, and Irish Aid, is currently implementing 
+                  social cash transfers (SCTs) in 13 districts with the 
+                  objective of reducing extreme poverty and vulnerability. The 
+                  program is transitioning from a paper-based system used 
+                  since 2004 to CommCare, with the aim of addressing problems 
+                  of data accuracy and completeness during registration and 
+                  follow-up activities. Enumerators, CWAC leads, and District 
+                  officers are equipped with a CommCare application to manage 
+                  the enrollment, support, and tracking of all beneficiaries 
+                  in the system. Case management enables field staff to review 
+                  and update details to existing beneficiary data within the 
+                  mobile application. Follow-up visit forms take into account 
+                  beneficiary details and are customized according to the 
+                  history of a given case. SMS reminders enable communication 
+                  with beneficiaries and field staff without direct access to 
+                  the application. Reminders are automated based on the 
+                  information stored in each beneficiary's case record. This 
+                  solution goes beyond accurate data collection and closes the 
+                  loop in the approval, payment distribution, and follow-up 
+                  processes.
+                {% endblocktrans %}
+              </p>
+            </div>
+            <div class="column">
+              <div class="image testimonial2 crs"
+                   data-lazybg="true"></div>
+            </div>
+          </div>
+        </div>{# .content #}
+      </div>{# .modal-wrapper #}
+    </div>{# .modal-scroll #}
+  </div>{# .modal #}
+
+  <div class="modal testimonial programs"
+       data-dismissible="true"
+       data-size="medium"
+       id="agri-ep-feature-card-3">
+    <div class="modal-scroll">
+      <div class="modal-wrapper">
+        <a href="#" class="modal-close-button"></a>
+        <div class="content pad-horz-medium-at-medium pad-horz-line pad-vert-none turquoise-theme">
+          <h4>
+            <strong class="body-color">
+              {% blocktrans %}
+                HOPE Mobile Money System <br>
+                India
+              {% endblocktrans %}
+            </strong>
+          </h4>
+          <div class="grid-flex-at-large">
+            <div class="column">
+              <p class="body-color">
+                {% blocktrans %}
+                  HOPE is a mobile payment system that integrates with CommCare 
+                  to submit payments based on the data collected in the program.
+                {% endblocktrans %}  
+              </p>
+              <p class="body-color">
+                {% blocktrans %}
+                  HOPE is a system to pay existing incentives directly to 
+                  mothers/ASHAs in their bank accounts. HOPE currently allows 
+                  computer-based input of events for mothers. These are 
+                  approved by the block accountant, which triggers payment to 
+                  the bank account. An API has been developed to integrate 
+                  data captured through another CommCare app with HOPE. The API 
+                  exposes a list of all mothers and the “HOPE” events that 
+                  have occurred for those mothers, which will eventually lead to 
+                  payment. The API matches mothers with those in HOPE using 
+                  the bank account number.
+                {% endblocktrans %}
+              </p>
+            </div>
+            <div class="column">
+              <div class="image testimonial3 crs"
+                   data-lazybg="true"></div>
+          </div>
+          </div>
+        </div>{# .content #}
+      </div>{# .modal-wrapper #}
+    </div>{# .modal-scroll #}
+  </div>{# .modal #}
+{% endblock %}

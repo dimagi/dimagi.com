@@ -9,6 +9,7 @@ from dimagi.pages.views.sectors import (
     nutrition_programs,
     maternal_and_child_health,
     disease_treatment,
+    small_businesses,
     programmatic_research,
 )
 
@@ -28,6 +29,8 @@ urlpatterns = [
         name='programmatic_research'),
     url(r'^disease-treatment/$', disease_treatment,
         name='sector_disease_treatment'),
+    url(r'^small-businesses/$', small_businesses,
+        name='sector_small_businesses'),
     url(r'^(?P<slug>[\w-]+)/$', view_single,
         name='sector'),
 ]
