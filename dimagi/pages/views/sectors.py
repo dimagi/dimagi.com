@@ -68,6 +68,14 @@ def maternal_and_child_health(request):
 
 
 @enable_ab_test(DEMO_WORKFLOW_V2)
+def education(request):
+    context = {
+        'sector': 'education',
+    }
+    return render(request, 'pages/sectors/education.html', context)
+
+
+@enable_ab_test(DEMO_WORKFLOW_V2)
 def small_businesses(request):
     context = {
         'sector': 'small_businesses',
