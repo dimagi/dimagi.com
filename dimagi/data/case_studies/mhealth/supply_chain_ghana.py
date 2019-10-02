@@ -13,8 +13,8 @@ STUDY = CaseStudy(
         "to provide real-time stock status information on reproductive health "
         "commodities to provide early warning of a dip in supplies. Its "
         "automated, data-focused approach fosters effective supervision of "
-        "ordering and delivery to ensure that essential health commodities is "
-        "always be available by facilitating consistent, planned ordering and "
+        "ordering and delivery to ensure that essential health commodities are "
+        "always available by facilitating consistent, planned orders and "
         "avoiding widespread emergency orders."
     ),
     partners=[
