@@ -73,3 +73,11 @@ def small_businesses(request):
         'sector': 'small_businesses',
     }
     return render(request, 'pages/sectors/small_businesses.html', context)
+
+  
+@enable_ab_test(DEMO_WORKFLOW_V2)
+def programmatic_research(request):
+    context = {
+        'sector': 'programmatic_research',
+    }
+    return render(request, 'pages/sectors/programmatic_research.html', context)
