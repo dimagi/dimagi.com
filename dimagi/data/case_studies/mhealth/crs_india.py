@@ -17,7 +17,7 @@ STUDY = CaseStudy(
         "application for the government’s frontline health workers. Since its "
         "pilot deployment of 10 users, the ReMiND project has successfully "
         "matured from an initial proof of concept to a scaled mobile tool for "
-        "more than community health workers covering a population of "
+        "community health workers covering a population of "
         "over 300,000."
     ),
     partners=[
@@ -35,7 +35,7 @@ STUDY = CaseStudy(
         ugettext_lazy("Data Collection"),
         ugettext_lazy("Supervision apps"),
         ugettext_lazy("Referrals"),
-        ugettext_lazy("Multimedia Counselling"),
+        ugettext_lazy("Multimedia Counseling"),
         ugettext_lazy("SMS Reminders"),
     ],
     slug="mhealth-crs-india",
