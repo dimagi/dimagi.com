@@ -1,0 +1,117 @@
+{% load dimagidotcom %}
+{% load i18n %}
+{% block meta %}
+  <meta property="wistia:videoId" content="jzm3ggrinr" />
+  <meta property="wistia:videoTrigger" content="demo-video" />
+{% endblock %}
+
+<section class="testimonial pad-bottom-small news"
+         id="news">
+  <div class="content pad-top-medium pap-bottom-small">
+    <h2 class="align-center">
+      {% blocktrans %}
+        The Latest on Mobile Data Collection <br class="hide-until-medium"> for Small Businesses <br>
+      {% endblocktrans %}
+    </h2>
+    <p class="align-center">
+      {% blocktrans %}
+        Updates and advice from our world-class partners and Global Services team:
+      {% endblocktrans %}
+    </p>
+  </div>{# .content #}
+  <div class="content">
+    <div class="grid grid-3-at-large grid-1-at-medium grid-row-equal-heights">
+      <div class="column pad-top-line">
+        <div class="news-image-testimonial">
+          <div class="image testimonial1"
+               data-lazybg="true"></div>
+          <div class="pad-line">
+            <h5>
+              <strong class="body-color">
+                {% blocktrans %}
+                  Using Mobile Data Collection to Improve 
+                  Life for Farmers in Haiti
+                {% endblocktrans %}
+              </strong>
+            </h5>
+            <p class="body-color">
+              {% blocktrans %}
+                BRANA, a Heineken subsidiary in Haïti uses CommCare to improve 
+                the sorghum supply-chain for their “Brewing a Better Future” 
+                strategy.
+              {% endblocktrans %}
+            </p>
+            <p>
+              <a href="{% url 'blog_post' 'mobile-data-collection-haiti-farmers' %}" target="_blank" class="arrow link-gray">
+                {% blocktrans %}
+                  Read More
+                {% endblocktrans %}
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>{# .column #}
+
+      <div class="column pad-top-line">
+        <div class="news-image-testimonial">
+          <div class="image testimonial2"
+               data-lazybg="true"></div>
+          <div class="pad-line">
+            <h5>
+              <strong class="body-color">
+                {% blocktrans %}
+                  Casa Flor Ixcaco: Using CommCare to Support 
+                  Guatemalan Artisans
+                {% endblocktrans %}
+              </strong>
+            </h5>
+            <p class="body-color">
+              {% blocktrans %}
+                This Q&A explains how USAID uses CommCare to help female 
+                artisans in Guatemala develop a greater understanding of 
+                what their customers are looking for.
+              {% endblocktrans %}
+            </p>
+            <p class="pad-top-line-at-extra-large">
+              <a href="{% url 'blog_post' 'casa-flor-ixcaco-commcare-guatemala-artisans' %}"  target="_blank" class="arrow link-gray">
+                {% blocktrans %}
+                  Read More
+                {% endblocktrans %}
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>{# .column #}
+
+      <div class="column pad-top-line">
+        <div class="news-image-testimonial">
+          <div class="image testimonial3"
+               data-lazybg="true"></div>
+          <div class="pad-line">
+            <h5>
+              <strong class="body-color">
+                {% blocktrans %}
+                  How CommCare is Improving the Work of a Salesman in Senegal
+                {% endblocktrans %}
+              </strong>
+            </h5>
+            <p class="body-color">
+              {% blocktrans %}
+                A dairy salesman in Senegal uses CommCare to track deliveries, 
+                expired products, and number of sales to avoid stock outs and 
+                spoiled milk on the shelves.
+              {% endblocktrans %}
+            </p>
+            <p class="pad-top-line-at-extra-large">
+              <a href="{% url 'blog_post' 'how-commcare-is-improving-the-work-of-a-salesman-in-senegal' %}" target="_blank" class="arrow link-gray">
+                {% blocktrans %}
+                  Read More
+                {% endblocktrans %}
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>{# .column #}
+    </div>{# .grid #}
+  </div>{# .content #}
+</section>

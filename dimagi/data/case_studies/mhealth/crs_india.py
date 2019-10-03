@@ -5,39 +5,40 @@ from dimagi.pages.models.case_studies import CaseStudy
 
 STUDY = CaseStudy(
     title=ugettext_lazy(
-        "Using mHealth to reduce maternal & newborn deaths in India"
+        "Catholic Relief Services: Reducing Maternal and Newborn Deaths (ReMiND)"
     ),
     summary=ugettext_lazy(
         "In 2011, Catholic Relief Services (CRS) collaborated with the "
-        "National Heath Mission (NHM) in Uttar Pradesh, India to establish "
-        "the Reducing Maternal and Newborn Deaths (ReMiND) project to improve "
-        "the delivery of community-level prenatal and postnatal care and "
-        "support services. CRS worked with Dimagi to develop a customized, "
-        "mobile health (mHealth) application for the government’s frontline "
-        "health workers using Dimagi’s open source mobile platform, CommCare. "
-        "Since its pilot deployment, the ReMiND project has successfully "
-        "matured from an initial proof of concept to a scaled mobile tool "
-        "for community health workers."
+        "National Health Mission (NHM) in Uttar Pradesh, India to establish "
+        "the Reducing Maternal and Newborn Deaths (ReMiND) project. Its goal "
+        "was to improve the delivery of community-level prenatal and postnatal "
+        "care and support services to local mothers and families. CRS worked "
+        "with Dimagi to develop a customized, mobile health (mHealth) CommCare "
+        "application for the government’s frontline health workers. Since its "
+        "pilot deployment of 10 users, the ReMiND project has successfully "
+        "matured from an initial proof of concept to a scaled mobile tool for "
+        "community health workers covering a population of "
+        "over 300,000."
     ),
     partners=[
         "Catholic Relief Services",
-        "Dimagi",
+        "Department of Health and Family Welfare, Uttar Pradesh",
     ],
     countries=[
         ugettext_lazy("India"),
     ],
     sectors=[
-        ugettext_lazy("Maternal, Neonatal, and Child Health (MNCH)"),
+        ugettext_lazy("Maternal & Newborn Health"),
     ],
     features=[
         ugettext_lazy("Case management"),
         ugettext_lazy("Data Collection"),
         ugettext_lazy("Supervision apps"),
         ugettext_lazy("Referrals"),
-        ugettext_lazy("Multimedia Counselling"),
+        ugettext_lazy("Multimedia Counseling"),
         ugettext_lazy("SMS Reminders"),
     ],
     slug="mhealth-crs-india",
-    download_url="https://www.dropbox.com/s/lg8fd0x2z7x7py5/mhealth-crs-india.pdf?dl=1",
+    download_url="https://cdn2.hubspot.net/hubfs/503070/Case%20Studies/CommCare%20-%20CRS%20ReMiND%20Case%20Study.pdf",
     hubspot_form="d5f0286b-6605-4a22-a105-aedd2bbdd42e",
 )

@@ -1,6 +1,6 @@
 from dimagi.data.case_studies.mhealth import (
     crs_india,
-    guatemala_childhealth,
+    tulasalud,
     hiv_zimbabwe,
     lmrf_india,
     malaria_mozambique,
@@ -11,12 +11,14 @@ from dimagi.data.case_studies.mhealth import (
     world_vision_motech,
     care_motech,
     lwala_community_alliance,
+    mhp_salud,
+    smash_mobil,
 )
 
 
 studies = (
     crs_india,
-    guatemala_childhealth,
+    tulasalud,
     hiv_zimbabwe,
     lmrf_india,
     malaria_mozambique,
@@ -27,4 +29,6 @@ studies = (
     world_vision_motech,
     care_motech,
     lwala_community_alliance,
+    mhp_salud,
+    smash_mobil,
 )
