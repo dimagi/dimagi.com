@@ -11,18 +11,11 @@
   over time with CommCare, the world's most poweful mobile data collection platform. 
 {% endblocktrans %}{% endblock %}
 
-{% block body_class %}products-commcare-page tucked-hero{% endblock %}
+{% block body_class %}products-commcare-features tucked-hero{% endblock %}
 
 {% block stylesheets %}
   {% compress css %}
-    <link href="{% sass_src 'style/pages/commcare/product.scss' %}" rel="stylesheet" media="screen" type="text/css" />
-    <link href="{% sass_src 'style/pages/commcare/pricing_rates.scss' %}" rel="stylesheet" media="screen" type="text/css" />
-  {% endcompress %}
-{% endblock %}
-
-{% block js %}
-  {% compress js %}
-  <script src="{% static 'js/pricing.js' %}"></script>
+    <link href="{% sass_src 'style/pages/commcare/product_features.scss' %}" rel="stylesheet" media="screen" type="text/css" />
   {% endcompress %}
 {% endblock %}
 
@@ -55,7 +48,7 @@
 {% endblock %}
 
 {% block content %}
-  <section id="ko-pricing-control" class="products-commcare-container blue-theme">
+  <section class="products-commcare-container blue-theme">
     {% include "sections/commcare/product_features/sub_nav.html" %}
     {% include "sections/commcare/product_features/overview.html" %}
     {% include "sections/commcare/product_features/commcare_video.html" %}

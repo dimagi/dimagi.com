@@ -1,0 +1,71 @@
+@import 'app/mixins/background';
+@import 'app/variables/colors';
+@import 'app/variables/sizes';
+@import 'app/variables/type';
+
+
+.products-commcare-features {
+  @include make-bg(hero, '../../../pages/commcare/product_features/intro/hero');
+}
+
+.commcare-features-video-demo {
+  $_base-height: 275px;
+  $_height-by-size: (
+    extra-small: 290px,
+    small: 270px,
+    medium: 270px,
+    large: 316px,
+    extra-large: 290px,
+  );
+  @include make-bg(image, '../../../pages/commcare/product_features/commcare_video/video', $_base-height, $_height-by-size);
+}
+
+@media (min-width: $width-desktop) {
+  .products-commcare-features .hero {
+    h1 {
+      margin-left: 0;
+      margin-right: 0;
+      max-width: 100%;
+    }
+  }
+}
+
+.overview-features {
+  $_base-height: 175px;
+  $_height-by-size: (
+    extra-small: 190px,
+    small: 270px,
+    medium: 180px,
+    large: 235px,
+    extra-large: 290px,
+  );
+  @include make-bg(collect-data-image, '../../../pages/commcare/product_features/carousel/quality/collect', $_base-height, $_height-by-size);
+  @include make-bg(improve-efficiency-image, '../../../pages/commcare/product_features/carousel/efficiency/improve', $_base-height, $_height-by-size);
+  @include make-bg(clean-manage-image, '../../../pages/commcare/product_features/carousel/manage/clean', $_base-height, $_height-by-size);
+  @include make-bg(report-insight-image, '../../../pages/commcare/product_features/carousel/insights/report', $_base-height, $_height-by-size);
+
+  .device-container,
+  .screen {
+    width: 100%;
+  }
+
+  .carousel-slide {
+    background-color: $color-white;
+
+    @media (min-width: $width-mobile) {
+      height: 950px;
+    }
+
+    @media (min-width: $width-desktop) {
+      height: 840px;
+    }
+
+    @media (min-width: $width-desktop-lg) {
+      height: 730px;
+    }
+
+    @media (min-width: $width-desktop-xl) {
+      height: 680px;
+    }
+  }
+}
