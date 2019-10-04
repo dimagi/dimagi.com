@@ -3,7 +3,12 @@
 @import 'app/variables/sizes';
 @import 'app/variables/type';
 
-#ag-intro {
+@mixin image {
+  height: 200px;
+  background-size: contain;
+}
+
+#small-business-intro {
   $_base-height: 190px;
   $_height-by-size: (
     small: 280px,
@@ -22,7 +27,7 @@
       large: 360px,
       extra-large: 360px,
     );
-    @include make-bg(epic-cover, '../../../pages/sectors/small-businesses/part3/hero', $_base-height, $_height-by-size);
+    @include make-bg(epic-cover, '../../../pages/sectors/programmatic-research/commcare/hero', $_base-height, $_height-by-size);
 }
 
 .center {
@@ -71,41 +76,35 @@
 
 .news .image.testimonial1 {
   @include background-cover('../../../pages/sectors/small-businesses/news/SmallBusiness_Blog_1.jpg');
-  height: 200px;
-  background-size: contain;
+  @include image;
   background-position: left;
 }
 
 .news .image.testimonial2 {
   @include background-cover('../../../pages/sectors/small-businesses/news/SmallBusiness_Blog_2.jpg');
-  height: 200px;
-  background-size: contain;
+  @include image;
   background-position: left;
 }
 
 .news .image.testimonial3 {
   @include background-cover('../../../pages/sectors/small-businesses/news/SmallBusiness_Blog_3.jpg');
-  height: 200px;
-  background-size: contain;
+  @include image;
   background-position: left;
 }
 
 .programs .image.testimonial1 {
   @include background-cover('../../../pages/sectors/small-businesses/programs/SmallBusiness_FeaturedProject_1.jpg');
-  height: 200px;
-  background-size: contain;
+  @include image;
 }
 
 .programs .image.testimonial2 {
   @include background-cover('../../../pages/sectors/small-businesses/programs/SmallBusiness_FeaturedProject_2.jpg');
-  height: 200px;
-  background-size: contain;
+  @include image;
 }
 
 .programs .image.testimonial3 {
   @include background-cover('../../../pages/sectors/small-businesses/programs/SmallBusiness_FeaturedProject_3.jpg');
-  height: 200px;
-  background-size: contain;
+  @include image;
 }
 
 .programs .image.testimonial1,
@@ -120,5 +119,5 @@
 
 .link-gray:hover,
 .link-gray:focus {
-  color: $color-blue !important;
+  color: $color-purple !important; // scss-lint:disable ImportantRule
 }
