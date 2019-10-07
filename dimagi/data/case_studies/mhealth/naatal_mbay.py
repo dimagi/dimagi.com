@@ -11,12 +11,10 @@ STUDY = CaseStudy(
         "Naatal Mbay, which means “making agriculture prosperous,” is a Feed "
         "the Future project that uses digital tools to empower farmer-serving "
         "organizations active in the rice, maize, and millet value chains in "
-        "Senegal. The program uses CommCare to support locally-owned and "
-        "sustainable data collection by tracking inputs and productivity, "
-        "managing loans, and collecting rainfall data monitoring – while "
-        "increasing transparency along the chain and attracting investment. "
-        "CommAgri, Naatal Mbay’s digital tool, is used by 55 cooperatives and "
-        "500 extension agents, who have registered 68,000 farmers."
+        "Senegal. The program uses CommCare to track inputs and productivity, "
+        "manage loans, and collect rainfall data. CommAgri, Naatal Mbay’s digital "
+        "tool, is used by 55 cooperatives and 500 extension agents, who have "
+        "registered 68,000 farmers."
     ),
     partners=[
         "RTI",
@@ -36,6 +34,6 @@ STUDY = CaseStudy(
         ugettext_lazy("Area Mapper"),
     ],
     slug="naatal-mbay",
-    download_url="https://www.dropbox.com/s/oakh337uexf4zgj/mhealth-tdh-burkinafaso.pdf?dl=1",
+    download_url="https://cdn2.hubspot.net/hubfs/503070/Case%20Studies/CommCare%20-%20Naatal%20Mbay%20Case%20Study.pdf",
     hubspot_form="2f9b7c9b-1723-4273-87ff-487d6b5d0564",
 )
