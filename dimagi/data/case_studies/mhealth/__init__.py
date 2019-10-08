@@ -13,6 +13,8 @@ from dimagi.data.case_studies.mhealth import (
     supply_chain_tanzania,
     world_vision_motech,
     care_motech,
+    lwala_community_alliance,
+    naatal_mbay,
 )
 
 
@@ -31,4 +33,6 @@ studies = (
     supply_chain_tanzania,
     world_vision_motech,
     care_motech,
+    lwala_community_alliance,
+    naatal_mbay,
 )
