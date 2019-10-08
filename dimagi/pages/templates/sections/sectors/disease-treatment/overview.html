@@ -36,6 +36,49 @@
             providing further care and reaching more patients.
           {% endblocktrans %}
         </p>
+        <div class="content pad-top-base">
+          <strong>
+            {% blocktrans %}
+              Resources to Explore:
+            {% endblocktrans %}
+          </strong>
+          <p>
+            <div class="gap-left-base">
+              <div class="gap-bottom-base">
+                <a href="{% url 'sector' 'hiv-aids' %}"
+                  target="_blank">
+                  {% blocktrans %}
+                    HIV/AIDS Treatment with CommCare
+                  {% endblocktrans %}
+                </a>
+              </div>
+              <div class="gap-bottom-base">
+                <a href="{% url 'blog_post' 'mobile-data-collection-malaria' %}"
+                  target="_blank">
+                  {% blocktrans %}
+                    Malaria Treatment with CommCare
+                  {% endblocktrans %}
+                </a>
+              </div>
+              <div class="gap-bottom-base">
+                <a href="{% url 'sector' 'tuberculosis' %}"
+                  target="_blank">
+                  {% blocktrans %}
+                    Tuberculosis Treatment with CommCare
+                  {% endblocktrans %}
+                </a>
+              </div>
+              <div class="gap-bottom-base">
+                <a href="{% url 'sector' 'ebola-response' %}"
+                  target="_blank">
+                  {% blocktrans %}
+                    Ebola Response with CommCare
+                  {% endblocktrans %}
+                </a>
+              </div>
+            </div> {# .gap-left-base #}
+          </p>
+        </div> {# .content #}
       </div>{# .column #}
       <div class="column"
            id="page-intro">
