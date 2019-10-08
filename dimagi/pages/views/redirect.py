@@ -1,11 +1,20 @@
 from django.http import HttpResponsePermanentRedirect
 from django.urls import reverse
 from dimagi.data.blog import categories
+from django.shortcuts import redirect
 
 
 def page(page_slug):
     def _redirect(request):
         return HttpResponsePermanentRedirect(reverse(page_slug))
+    return _redirect
+
+
+def temp_redirect(page_slug):
+    def _redirect(request):
+        response = redirect(page_slug)
+        response.status_code = 307
+        return response
     return _redirect
 
 

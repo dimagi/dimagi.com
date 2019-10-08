@@ -1,0 +1,119 @@
+{% load dimagidotcom %}
+{% load i18n %}
+{% block meta %}
+  <meta property="wistia:videoId" content="jzm3ggrinr" />
+  <meta property="wistia:videoTrigger" content="demo-video" />
+{% endblock %}
+
+<section class="testimonial pad-bottom-small news"
+         id="news">
+  <div class="content pad-top-medium pap-bottom-small">
+    <h2 class="align-center">
+      {% blocktrans %}
+        The Latest on Mobile Data Collection <br class="hide-until-medium"> 
+        for Programmatic Research<br>
+      {% endblocktrans %}
+    </h2>
+    <p class="align-center">
+      {% blocktrans %}
+        Updates and advice from our world-class partners 
+        and Global Services team:
+      {% endblocktrans %}
+    </p>
+  </div>{# .content #}
+  <div class="content">
+    <div class="grid grid-3-at-large grid-1-at-medium grid-row-equal-heights">
+      <div class="column pad-top-line">
+        <div class="news-image-testimonial">
+          <div class="image testimonial1"
+               data-lazybg="true"></div>
+          <div class="pad-line">
+            <h5>
+              <strong class="body-color">
+                {% blocktrans %}
+                  From Biometrac: The Power of Working Together
+                {% endblocktrans %}
+              </strong>
+            </h5>
+            <p class="body-color">
+              {% blocktrans %}
+                Biometrac is partnering with CommCare to conduct community-based 
+                research and implementation for a tuberculosis program in Uganda.
+              {% endblocktrans %}
+            </p>
+            <p>
+              <a href="{% url 'blog_post' 'with-a-little-help-from-our-friends-biometrac-talks-about-the-power-of-working-together' %}" 
+                 target="_blank" class="arrow link-gray">
+                {% blocktrans %}
+                  Read More
+                {% endblocktrans %}
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>{# .column #}
+
+      <div class="column pad-top-line">
+        <div class="news-image-testimonial">
+          <div class="image testimonial2"
+               data-lazybg="true"></div>
+          <div class="pad-line">
+            <h5>
+              <strong class="body-color">
+                {% blocktrans %}
+                  From BRAC: How smartphones are revolutionizing data collection
+                {% endblocktrans %}
+              </strong>
+            </h5>
+            <p class="body-color">
+              {% blocktrans %}
+                BRAC offers advice on why mobile data collection can save projects 
+                both time and money while expanding possibilities for research.
+              {% endblocktrans %}
+            </p>
+            <p class="pad-top-line-at-extra-large">
+              <a href="{% url 'blog_post' 'how-smartphones-are-revolutionizing-data-collection' %}"  
+                 target="_blank" class="arrow link-gray">
+                {% blocktrans %}
+                  Read More
+                {% endblocktrans %}
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>{# .column #}
+
+      <div class="column pad-top-line">
+        <div class="news-image-testimonial">
+          <div class="image testimonial3"
+               data-lazybg="true"></div>
+          <div class="pad-line">
+            <h5>
+              <strong class="body-color">
+                {% blocktrans %}
+                  From Aquaya: Collecting water quality data in 
+                  Senegal with CommCare
+                {% endblocktrans %}
+              </strong>
+            </h5>
+            <p class="body-color">
+              {% blocktrans %}
+                The Aquaya Institute is a non-profit research and consulting 
+                organization using CommCare to understand the challenges of 
+                testing water quality in sub-Saharan Africa.
+              {% endblocktrans %}
+            </p>
+            <p class="pad-top-line-at-extra-large">
+              <a href="{% url 'blog_post' 'self-starter-blog-aquaya-on-implementing-commcare-for-water-projects-in-senegal' %}" 
+                 target="_blank" class="arrow link-gray">
+                {% blocktrans %}
+                  Read More
+                {% endblocktrans %}
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>{# .column #}
+    </div>{# .grid #}
+  </div>{# .content #}
+</section>

@@ -5,37 +5,37 @@ from dimagi.pages.models.case_studies import CaseStudy
 
 STUDY = CaseStudy(
     title=ugettext_lazy(
-        "Improving Reproductive Health Commodities Stock Tracking in Ghana"
+        "Focus Region Health Project: Reducing Stock Outs for Reproductive "
+        "Health Products"
     ),
     summary=ugettext_lazy(
-        "In 2009, the Focus Region Health Project (FRHP), implemented by "
-        "JSI Research & Training Institute Inc., in collaboration with "
-        "Ghana Health Services (GHS) and the USAID | DELIVER PROJECT, "
-        "engaged with Dimagi to design and implement the Early Warning "
-        "System. This system was designed to provide real-time stock "
-        "status information on reproductive health commodities to decision-"
-        "makers at all levels and to provide early warning of a dip in "
-        "supplies. Its goal was also to foster effective supervision of "
-        "ordering and delivery, reinforce the availability of all essential "
-        "health commodities by improving the timeliness and accuracy of "
-        "paper-based ordering and reporting from the SDPs, prevent widespread "
-        "emergency ordering by aiding districts and facilities in planned "
-        "ordering through effective, automated data analysis tools."
+        "The Focus Region Health Project’s Early Warning System was designed "
+        "to provide real-time stock status information on reproductive health "
+        "commodities to provide early warning of a dip in supplies. Its "
+        "automated, data-focused approach fosters effective supervision of "
+        "ordering and delivery to ensure that essential health commodities are "
+        "always available by facilitating consistent, planned orders and "
+        "avoiding widespread emergency orders."
     ),
     partners=[
-        "JSI Research & Training Institute",
+        "JSI Research & Training Institute, Inc.",
         "Ghana Health Services",
-        "USAID",
-        "Dimagi",
+        "USAID Deliver Project",
     ],
     countries=[
         ugettext_lazy("Ghana"),
     ],
     sectors=[
-        ugettext_lazy("Supply Chain Management"),
+        ugettext_lazy("Maternal & Child Health"),
+        ugettext_lazy("Disease Treatment"),
     ],
-    features=[],
+    features=[
+        ugettext_lazy("Custom Reports"),
+        ugettext_lazy("SMS Notifications"),
+        ugettext_lazy("Location-based Messaging and Report Access"),
+        ugettext_lazy("Web and SMS-based Form Input"),
+    ],
     slug="mhealth-supply-chain-ghana",
-    download_url="https://www.dropbox.com/s/5zvsxd2jb38p3t4/mhealth-supply-chain-ghana.pdf?dl=1",
+    download_url="https://cdn2.hubspot.net/hubfs/503070/Case%20Studies/CommCare%20-%20FRHP%20EWS%20Case%20Study.pdf",
     hubspot_form="9b30bfc9-2b46-414b-b551-8a25038a1073",
 )
