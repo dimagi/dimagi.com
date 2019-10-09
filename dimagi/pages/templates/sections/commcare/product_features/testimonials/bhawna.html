@@ -5,31 +5,33 @@
 {% block quality_selected %}selected{% endblock %}
 
 {% block content %}
-  <div class="content-width-medium align-left">
-    <div class="grid-2-at-medium gap-bottom-line pad-vert-small uppercase">
-      <div class="column pad-left-small">
-        <h4 class="blue">
+  <div class="content-width-medium align-left pad-horz-medium">
+    <blockquote>
+      <p class="body-color">
+        {% blocktrans %}
+          CommCare gave us the ability to control the experience of our 
+          field-based data collectors, which drastically reduced human error. 
+          With paper-based forms, you can't really make your field staff 
+          follow a strict protocol.
+        {% endblocktrans %}  
+      </p>
+    </blockquote>
+    <div class="grid-2-at-medium gap-bottom-line pad-top-base uppercase pad-left-base">
+      <div class="column">
+        <h5 class="blue">
           {% blocktrans %}
             Bhawna Mangla
           {% endblocktrans %}
-        </h4>
-        <h4>
+        </h5>
+        <h5>
           {% blocktrans %}
             Sehgal Foundation
           {% endblocktrans %}
-        </h4>
+        </h5>
         <strong>
           Senior Research Associate, Monitoring & Evaluation
         </strong>
       </div>{# .column #}
     </div>{# .grid-2-at-medium #}
-    <p class="body-color">
-      {% blocktrans %}
-        CommCare gave us the ability to control the experience of our 
-        field-based data collectors, which drastically reduced human error. 
-        With paper-based forms, you can't really make your field staff 
-        follow a strict protocol.
-      {% endblocktrans %}  
-    </p>
   </div>
 {% endblock %}

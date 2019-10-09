@@ -1,7 +1,7 @@
 {% load i18n %}
 {% load dimagidotcom %}
 
-<section class="accent-gray-bg border-top overview"
+<section class="accent-gray-bg border-top overview pad-bottom-small"
          id="overview">
   <div class="content pad-vert-medium align-center">
     <div class="intro">
@@ -27,17 +27,6 @@
         </div>{# .carousel-slider #}
       </div>{# .carousel-container #}
     </div>{# .carousel #}
-
-    <div class="cta pad-vert-small">
-      <p>
-        <a class="arrow {% click_body 'features-view' %}" 
-           href="{% url 'commcare_features' %}">
-          {% blocktrans %}
-            View All Features
-          {% endblocktrans %}
-        </a>
-      </p>
-    </div>{# .cta #}
 
   </div>
 </section>

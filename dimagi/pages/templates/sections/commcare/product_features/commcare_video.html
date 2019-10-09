@@ -1,8 +1,8 @@
 {% load dimagidotcom %}
 {% load i18n %}
 
-<section  class="content pad-vert-small pad-horz-large"
-          id="video">
+<section  class="content pad-top-medium pad-horz-large pad-bottom-small"
+          id="watchdemo">
   <div class="intro content-width-large gap-bottom-line">
     <h2 class="normalcase">
       {% blocktrans %}
@@ -11,7 +11,8 @@
     </h2>
     <p>
       {% blocktrans %}
-        This can be like a short prologue to whats actually happening in the video below
+        Get a feel for CommCare’s features and see how 
+        they’re used by teams around the world.
       {% endblocktrans %}
     </p>
   </div>{# .intro #}
@@ -19,7 +20,7 @@
     <div class="position-relative align-center height-100">
       <div id="commcare-features-video-demo" class="commcare-features-video-demo pad-vert-small">
         <div class="image white-lazy-bg" data-lazybg="true">
-          {% include "partials/wistia_popover.html" with wistia_id='9uvnpbecdy' show_play=True show_image=True %}</div>
+          {% include "partials/wistia_popover.html" with wistia_id='9uvnpbecdy' play_icon_medium=True show_image=True %}</div>
       </div>
     </div>
   </div>{# .column #}

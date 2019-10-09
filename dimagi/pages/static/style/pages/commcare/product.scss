@@ -112,19 +112,19 @@
     background-color: $color-white;
 
     @media (min-width: $width-mobile) {
-      height: 890px;
+      height: 910px;
     }
 
     @media (min-width: $width-desktop) {
-      height: 824px;
+      height: 880px;
     }
 
     @media (min-width: $width-desktop-lg) {
-      height: 650px;
+      height: 690px;
     }
 
     @media (min-width: $width-desktop-xl) {
-      height: 600px;
+      height: 660px;
     }
   }
 }
