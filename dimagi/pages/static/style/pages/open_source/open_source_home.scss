@@ -1,0 +1,47 @@
+@import 'app/mixins/background';
+
+
+.about-image {
+  $_base-height: 150px;
+  $_height-by-size: (
+    small: $_base-height,
+    medium: $_base-height,
+    large: $_base-height,
+    extra-large: $_base-height,
+  );
+  @include make-bg(image, '../../../pages/home/build', $_base-height, $_height-by-size, '.jpg');
+}
+
+#oss-logos {
+  display: flex;
+  align-items: center;
+}
+
+.bsd-image {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url('../../../pages/open_source/open_source_home/bsd-logo.png');
+  position: relative;
+  height: 75px;
+  width: 100%;
+  background-size: contain;
+}
+
+.asf-image {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url('../../../pages/open_source/open_source_home/apache-software-foundation-logo.png');
+  position: relative;
+  height: 100px;
+  width: 100%;
+  background-size: contain;
+}
+
+
+.open-source-about-text {
+  .column {
+    p {
+      font-size: 1rem;
+    }
+  }
+}
