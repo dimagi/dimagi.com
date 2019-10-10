@@ -36,6 +36,14 @@ def agriculture_extension_programs(request):
         'sector': 'agriculture_extension_programs',
     }
     return render(request, 'pages/sectors/agriculture_extension_programs.html', context)
+
+
+@enable_ab_test(DEMO_WORKFLOW_V2)
+def agricultural_cooperatives(request):
+    context = {
+        'sector': 'agricultural_cooperatives',
+    }
+    return render(request, 'pages/sectors/agricultural_cooperatives.html', context)
   
   
 @enable_ab_test(DEMO_WORKFLOW_V2)
