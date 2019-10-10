@@ -1,8 +1,6 @@
 {% load i18n %}
 {% load dimagidotcom %}
-
-<section class="advisory border-top"
-         id="software">
+<section class="advisory border-top" id="software">
   <div class="content pad-vert-medium">
     <div class="align-center gap-bottom-small">
       <h2 class="blue">
@@ -12,9 +10,38 @@
       </h2>
       <h3>
         {% blocktrans %}
-          All of CommCare’s open source code is freely accessible on Github.
+          All of CommCare’s open source code is freely accessible on Github
         {% endblocktrans %}
       </h3>
-    </div>{# .intro #}
-  </div>{# .content #}
+    </div> {# .intro #}
+  </div> {# .content #}
+</section>
+<section class="advisory">
+  <div class="content">
+    <div class="align-center pad-vert-small">
+      <h4>
+        {% blocktrans %}
+          CommCare’s two main components are CommCareHQ (Web) and CommCare Mobile.
+        {% endblocktrans %}
+      </h4>
+    </div>
+    <div class="grid-2-at-medium open-source-about-text pad-vert-small">
+      <div class="column align-center">
+        <h4>CommCareHQ (Web)</h4>
+        <ul class="open-source-software-links">
+          <li><a>Source Code ></a></li>
+          <li><a>Documentation ></a></li>
+          <li><a>Developer Set up ></a></li>
+        </ul>
+      </div>
+      <div class="column align-center">
+        <h4>CommCare Mobile</h4>
+        <ul class="open-source-software-links">
+          <li><a>Source Code ></a></li>
+          <li><a>Documentation ></a></li>
+          <li><a>Developer Set up ></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </section>
