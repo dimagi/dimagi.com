@@ -1,0 +1,56 @@
+{% load i18n %}
+{% load dimagidotcom %}
+<section id="about" class="border-top">
+    <div class="content pad-vert-medium">
+        <div class="align-center gap-bottom-small">
+          <h2 class="blue">
+            {% blocktrans %}
+              About CommCare
+            {% endblocktrans %}
+          </h2>
+    </div>
+    <div class="content pad-vert-large">
+        <div class="grid-2-at-medium">
+            <div class="column">
+                <div class="position-relative align-center height-100">
+                    <div id="overview-web" class="overview-web">
+                        <div class="image white-lazy-bg" data-lazybg="true"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <p>
+                    {% blocktrans %}
+                        CommCare is an award-winning open source platform that enables users to build sophisticated mobile data collection applications.
+                    {% endblocktrans %}
+                </p>
+                <p>
+                    {% blocktrans %}
+                        Originally developed in 2007, today over half a million people in 80 countries regularly use CommCare apps.
+                    {% endblocktrans %}
+                </p>
+                <p>
+                    <a href="{% url 'commcare' %}">
+                        {% blocktrans %}
+                        Learn more about CommCare
+                        {% endblocktrans %}
+                    </a>
+                </p>
+            </div>
+        </div>
+        <div class="grid-2-at-medium">
+            <div class="column">
+                <p>
+                    {% blocktrans %}
+                        CommCare is an ecosystem of open source components, fronted by CommCareHQ (Web) and CommCare Mobile.
+                    {% endblocktrans %}
+                </p>
+                <p>
+                    {% blocktrans %}
+                        CommCare Web is sourced under the open source BSD license while CommCare Mobile is sourced under the Apache License.
+                    {% endblocktrans %}
+                </p>
+            </div>
+        </div>
+    </div>
+</section>

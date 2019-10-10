@@ -1,0 +1,26 @@
+{% load i18n %}
+{% load dimagidotcom %}
+<section class="community border-top"
+         id="community">
+  <div class="content pad-top-medium">
+    <div class="align-center gap-bottom-small">
+      <h2 class="blue">
+        {% blocktrans %}
+          Community
+        {% endblocktrans %}
+      </h2>
+      <p>
+        {% blocktrans %}
+          More than 2000 projects across 80 countries trust CommCare for
+          mobile data collection and reporting needs.
+        {% endblocktrans %}
+      </p>
+    </div>{# .intro #}
+
+    <div class="grid-1-at-small grid-3-at-large grid-row-space-small">
+      {% include "sections/open_source/open_source_home/community/user_forum.html" %}
+      {% include "sections/open_source/open_source_home/community/developer_forum.html" %}
+      {% include "sections/open_source/open_source_home/community/documentation_wiki.html" %}
+    </div>{# .grid-2-at-small #}
+  </div>{# .content #}
+</section>

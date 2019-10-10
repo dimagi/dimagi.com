@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block title %}{% blocktrans %}
+  CommCare by Dimagi | Open Source Home
+{% endblocktrans %}{% endblock %}
+
+{% block description %}{% blocktrans %}
+  CommCare is a leading open source mobile data collection platform that is supported by a global community of contributors.
+{% endblocktrans %}{% endblock %}
+
+{% block body_class %}products-commcare-page tucked-hero{% endblock %}
+
+{% block stylesheets %}
+  {% compress css %}
+  {% endcompress %}
+{% endblock %}
+
+{% block js %}
+  {% compress js %}
+  {% endcompress %}
+{% endblock %}
+
+{% block meta %}
+{% endblock %}
+
+{% block hero %}
+<section class="hero"
+         data-lazybg="true"
+         id="hero">
+  <div class="content content-width-large inverted align-center display-flex flex-valign-middle expand-vertical offset-top-small flex-align-center">
+    <div class="copy expand position-relative">
+
+      <h2 class="pad-bottom-line">
+        {% include "svg/commcare/logo.html" %}
+      </h2>
+      <h1>
+        {% blocktrans %}
+          Open Source Home
+        {% endblocktrans %}
+      </h1>
+
+      <div class="headline content-width-small">
+        {% blocktrans %}
+          CommCare is a leading open source mobile data collection platform that is supported by a global community of contributors.
+        {% endblocktrans %}
+      </div>{# .headline #}
+    </div>{# .copy #}
+  </div>{# .content #}
+</section>
+{% endblock %}
+{% block content %}
+  <section id="ko-pricing-control" class="products-commcare-container blue-theme">
+    {% include "sections/open_source/open_source_home/sub_nav.html" %}
+    {% include "sections/open_source/open_source_home/about.html" %}
+    {% include "sections/open_source/open_source_home/software.html" %}
+    {% include "sections/open_source/open_source_home/blog_cta.html" %}
+    {% include "sections/open_source/open_source_home/community.html" %}
+  </section>
+{% endblock %}

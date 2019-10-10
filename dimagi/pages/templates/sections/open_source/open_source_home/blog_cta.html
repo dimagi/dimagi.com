@@ -1,0 +1,23 @@
+{% load i18n %}
+{% load dimagidotcom %}
+<section class="blue-bg">
+    <div class="content pad-vert-medium">
+      <h2 class="white align-center pad-top-base-at-medium">
+        {% blocktrans %}
+          Tech Blog
+        {% endblocktrans %}
+      </h2>
+      <h4 class="white align-center">
+        {% blocktrans %}
+          Check out the CommCare Tech Blog, "From the (Open) Source"
+        {% endblocktrans %}
+      </h4>
+      <p class="align-center">
+        <a class="button button-accent-gray" href="{% url 'archive_category' 'tech' %}">
+          {% blocktrans %}
+            Read the Blog
+          {% endblocktrans %}
+        </a>
+      </p>
+    </div>{# .content #}
+</section>
