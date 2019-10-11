@@ -5,78 +5,79 @@
 {% block quality_selected %}selected{% endblock %}
 
 {% block content %}
-  <div class="pad-bottom-line">
-    <h3 class="blue pad-bottom-base align-center">
+  <section class="quality">
+    <h3 class="blue pad-bottom-base center-align">
       {% blocktrans %}
         Collect high quality data
       {% endblocktrans %}
     </h3>
-  </div>
-  <div class="column collect-data-image white-lazy-bg"
-       data-lazybg="true">
-  </div>{# .column #}
-  <div class="grid-1-at-large blue-theme grid-reverse grid-valign-middle pad-top-small">
-    <div class="column pad-right-medium-at-base align-left">
-      <ul class="check-list grid-4-at-extra-large">
-        <li>
-          <p class="blue gap-bottom-none">
-            {% blocktrans %}
-              Flexible question formats
-            {% endblocktrans %}
-          </p>
-          <ol class="gap-top-base">
-            {% blocktrans %}
-              Collect accurate data on everything, in any language–from basics 
-              like text and dates to advanced formats for GPS coordinates, 
-              barcodes, audio captures, and more
-            {% endblocktrans %}
-          </ol>
-        </li>
-        
-        <li>
-          <p class="blue gap-bottom-none">
-            {% blocktrans %}
-              Case-based data collection
-            {% endblocktrans %}
-          </p>
-          <ol class="gap-top-base">
-            {% blocktrans %}
-              Say goodbye to error-prone surveys. With CommCare, field staff 
-              register a subject once, then easily view and update the case over time
-            {% endblocktrans %}
-          </ol>
-        </li>
+    <div class="grid-2-at-large blue-theme grid-valign-middle">
+      <div class="column pad-right-medium-at-base align-left">
+        <ul class="check-list grid-2-at-extra-large">
+          <li>
+            <p class="blue gap-bottom-none">
+              {% blocktrans %}
+                Flexible question formats
+              {% endblocktrans %}
+            </p>
+            <ol class="gap-top-base">
+              {% blocktrans %}
+                Collect accurate data on everything, in any language–from basics 
+                like text and dates to advanced formats for GPS coordinates, 
+                barcodes, audio captures, and more
+              {% endblocktrans %}
+            </ol>
+          </li>
+          
+          <li>
+            <p class="blue gap-bottom-none">
+              {% blocktrans %}
+                Case-based data collection
+              {% endblocktrans %}
+            </p>
+            <ol class="gap-top-base">
+              {% blocktrans %}
+                Say goodbye to error-prone surveys. With CommCare, field 
+                staff register a subject once, then easily view and 
+                update the case over time
+              {% endblocktrans %}
+            </ol>
+          </li>
 
-        <li>
-          <p class="blue gap-bottom-none">
-            {% blocktrans %}
-              Powerful form logic
-            {% endblocktrans %}
-          </p>
-          <ol class="gap-top-base">
-            {% blocktrans %}
-              Stop entry errors before they happen with custom validation 
-              conditions. Enforce data collection protocols with intelligent 
-              display and skip logic
-            {% endblocktrans %}
-          </ol>
-        </li>
+          <li>
+            <p class="blue gap-bottom-none">
+              {% blocktrans %}
+                Powerful form logic
+              {% endblocktrans %}
+            </p>
+            <ol class="gap-top-base">
+              {% blocktrans %}
+                Stop entry errors before they happen with custom validation 
+                conditions. Enforce data collection protocols with intelligent 
+                display and skip logic
+              {% endblocktrans %}
+            </ol>
+          </li>
 
-        <li>
-          <p class="blue gap-bottom-none">
-            {% blocktrans %}
-              Unlimited submissions and data storage
-            {% endblocktrans %}
-          </p>
-          <ol class="gap-top-base">
-            {% blocktrans %}
-              Deploy the data collection workflow your program deserves with zero 
-              limits on form submissions and unlimited, HIPAA-compliant 
-              data storage
-            {% endblocktrans %}
-          </ol>
-        </li>
-      </ul>
-    </div>{# .column #}
-  </div>{# .grid-1-at-medium #}
+          <li>
+            <p class="blue gap-bottom-none">
+              {% blocktrans %}
+                Unlimited submissions and data storage
+              {% endblocktrans %}
+            </p>
+            <ol class="gap-top-base">
+              {% blocktrans %}
+                Deploy the data collection workflow your program deserves with 
+                zero limits on form submissions and unlimited, HIPAA-compliant 
+                data storage
+              {% endblocktrans %}
+            </ol>
+          </li>
+        </ul>
+      </div>{# .column #}
+      <div class="column collect-data-image white-lazy-bg"
+           data-lazybg="true">
+      </div>{# .column #}
+    </div>{# .grid-2-at-medium #}
+  </section>
 {% endblock %}

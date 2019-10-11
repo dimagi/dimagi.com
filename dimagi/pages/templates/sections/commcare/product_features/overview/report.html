@@ -5,77 +5,79 @@
 {% block report_selected %}selected{% endblock %}
 
 {% block content %}
-  <div class="grid-2-at-large blue-theme grid-reverse grid-valign-middle">
-    <div class="column pad-right-medium-at-base align-left">
-      <h3 class="blue pad-bottom-base">
-        {% blocktrans %}
-          Report on insights
-        {% endblocktrans %}
-      </h3>
-      <ul class="check-list grid-2-at-extra-large">
-        <li>
-          <p class="blue gap-bottom-none">
-            {% blocktrans %}
-              Custom reports and data exports
-            {% endblocktrans %}
-          </p>
-          <ol class="gap-top-base">
-            {% blocktrans %}
-              See and understand your data in customizable tables, charts, and 
-              maps, or export data for review in Excel, Tableau, and other 
-              analytical software.
-            {% endblocktrans %}
-          </ol>
-        </li>
-        
-        <li>
-          <p class="blue gap-bottom-none">
-            {% blocktrans %}
-              Formulas to transform your data
-            {% endblocktrans %}
-          </p>
-          <ol class="gap-top-base">
-            {% blocktrans %}
-              Build formulas into your app to aggregate individual data points 
-              into high-level metrics that reveal insights about your 
-              program’s impact.
-            {% endblocktrans %}
-          </ol>
-        </li>
+  <section class="report">
+    <h3 class="blue pad-bottom-base center-align">
+      {% blocktrans %}
+        Report on insights
+      {% endblocktrans %}
+    </h3>
+    <div class="grid-2-at-large blue-theme grid-valign-middle">
+      <div class="column pad-right-medium-at-base align-left">
+        <ul class="check-list grid-2-at-extra-large">
+          <li>
+            <p class="blue gap-bottom-none">
+              {% blocktrans %}
+                Custom reports and data exports
+              {% endblocktrans %}
+            </p>
+            <ol class="gap-top-base">
+              {% blocktrans %}
+                See and understand your data in customizable tables, charts, and 
+                maps, or export data for review in Excel, Tableau, and other 
+                analytical software.
+              {% endblocktrans %}
+            </ol>
+          </li>
+          
+          <li>
+            <p class="blue gap-bottom-none">
+              {% blocktrans %}
+                Formulas to transform your data
+              {% endblocktrans %}
+            </p>
+            <ol class="gap-top-base">
+              {% blocktrans %}
+                Build formulas into your app to aggregate individual data points 
+                into high-level metrics that reveal insights about your 
+                program’s impact.
+              {% endblocktrans %}
+            </ol>
+          </li>
 
-        <li>
-          <p class="blue gap-bottom-none">
-            {% blocktrans %}
-              Project performance dashboards
-            {% endblocktrans %}
-          </p>
-          <ol class="gap-top-base">
-            {% blocktrans %}
-              Monitor activities in real time with pre-built reports for 
-              efficiency and impact metrics like app performance and 
-              field staff activity.
-            {% endblocktrans %}
-          </ol>
-        </li>
+          <li>
+            <p class="blue gap-bottom-none">
+              {% blocktrans %}
+                Project performance dashboards
+              {% endblocktrans %}
+            </p>
+            <ol class="gap-top-base">
+              {% blocktrans %}
+                Monitor activities in real time with pre-built reports for 
+                efficiency and impact metrics like app performance and 
+                field staff activity.
+              {% endblocktrans %}
+            </ol>
+          </li>
 
-        <li>
-          <p class="blue gap-bottom-none">
-            {% blocktrans %}
-              Third-party integrations
-            {% endblocktrans %}
-          </p>
-          <ol class="gap-top-base">
-            {% blocktrans %}
-              Connect your CommCare data to Excel dashboards and dozens of 
-              third-party tools, from Salesforce to PowerBI and 
-              SQL databases.
-            {% endblocktrans %}
-          </ol>
-        </li>
-      </ul>
-    </div>{# .column #}
-    <div class="column report-insight-image white-lazy-bg"
-         data-lazybg="true">
-    </div>{# .column #}
-  </div>{# .grid-2-at-medium #}
+          <li>
+            <p class="blue gap-bottom-none">
+              {% blocktrans %}
+                Third-party integrations
+              {% endblocktrans %}
+            </p>
+            <ol class="gap-top-base">
+              {% blocktrans %}
+                Connect your CommCare data to Excel dashboards and dozens of 
+                third-party tools, from Salesforce to PowerBI and 
+                SQL databases.
+              {% endblocktrans %}
+            </ol>
+          </li>
+        </ul>
+      </div>{# .column #}
+      <div class="column report-insight-image white-lazy-bg"
+           data-lazybg="true">
+      </div>{# .column #}
+    </div>{# .grid-2-at-medium #}
+  </section>
 {% endblock %}

@@ -3,6 +3,7 @@
 @import 'app/variables/sizes';
 @import 'app/variables/type';
 
+$width-extra-small-screen : 374px;
 
 .products-commcare-features {
   @include make-bg(hero, '../../../pages/commcare/product_features/intro/hero');
@@ -33,9 +34,9 @@
 .overview-features {
   $_base-height: 175px;
   $_height-by-size: (
-    extra-small: 160px,
+    extra-small: 170px,
     small: 240px,
-    medium: 150px,
+    medium: 300px,
     large: 205px,
     extra-large: 260px,
   );
@@ -49,23 +50,56 @@
     width: 100%;
   }
 
+  .improve-efficiency-image,
+  .collect-data-image,
+  .clean-manage-image,
+  .report-insight-image {
+    box-shadow: 2px 10px 22px $color-neutral-light;
+  }
+
   .carousel-slide {
     background-color: $color-white;
 
     @media (min-width: $width-mobile) {
-      height: 970px;
+      height: 1030px;
+    }
+
+    @media (min-width: $width-extra-small-screen) {
+      height: 960px;
     }
 
     @media (min-width: $width-desktop) {
-      height: 860px;
+      height: 1020px;
     }
 
     @media (min-width: $width-desktop-lg) {
-      height: 750px;
+      height: 755px;
     }
 
     @media (min-width: $width-desktop-xl) {
-      height: 710px;
+      height: 690px;
     }
   }
+}
+
+.features-carousel-dots {
+
+  .carousel-dots {
+    margin-top: -$space-small * 1.5 !important;
+  }
+}
+
+blockquote {
+  p {
+    font-size: $font-size-medium + 3px;
+    line-height: $space-line + 3px;
+
+    &::before{
+      font-size: $font-size-large * 2;
+    }
+  }
+}
+
+.testimonial-org {
+  font-style: italic;
 }
