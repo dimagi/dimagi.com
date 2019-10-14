@@ -2,7 +2,7 @@
 {% load dimagidotcom %}
 <section class="advisory border-top" id="software">
   <div class="content pad-vert-medium">
-    <div class="align-center gap-bottom-small">
+    <div class="align-center">
       <h2 class="blue">
         {% blocktrans %}
           Software
@@ -13,20 +13,30 @@
           All of CommCare’s open source code is freely accessible on Github
         {% endblocktrans %}
       </h3>
+      <div class="software-section-commcare-logo gap-bottom-line">
+        <img src="{% static 'pages/open_source/open_source_home/commcare-logo-black-rgb.svg'%}" alt="CommCare">
+      </div>
+      <ul class="open-source-software-links">
+          <li><a>Github Home ></a></li>
+          <li><a>Running a Production Instance of CommCare ></a></li>
+      </ul>
     </div> {# .intro #}
   </div> {# .content #}
 </section>
 <section class="advisory">
   <div class="content">
-    <div class="align-center pad-vert-small">
+    <div class="align-center">
       <h4>
         {% blocktrans %}
           CommCare’s two main components are CommCareHQ (Web) and CommCare Mobile.
         {% endblocktrans %}
       </h4>
     </div>
-    <div class="grid-2-at-medium open-source-about-text pad-vert-small">
+    <div class="grid-4-at-medium grid-align-center open-source-about-text pad-vert-small">
       <div class="column align-center">
+        <div class="software-section-icon gap-bottom-line">
+          <img src="{% static 'pages/open_source/open_source_home/commcare-laptop.png'%}">
+        </div>
         <h4>CommCareHQ (Web)</h4>
         <ul class="open-source-software-links">
           <li><a>Source Code ></a></li>
@@ -35,6 +45,9 @@
         </ul>
       </div>
       <div class="column align-center">
+        <div class="software-section-icon gap-bottom-line">
+          <img src="{% static 'pages/open_source/open_source_home/commcare-mobile.png'%}">
+        </div>
         <h4>CommCare Mobile</h4>
         <ul class="open-source-software-links">
           <li><a>Source Code ></a></li>

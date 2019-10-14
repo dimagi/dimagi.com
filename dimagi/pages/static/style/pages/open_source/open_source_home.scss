@@ -50,11 +50,13 @@
 ul.open-source-software-links {
   list-style: none;
   li {
-     margin-bottom: 0;
-     &:before {
-       // clear bullets which are added
-       content: ' ';
-     }
+    font-size: 1rem;
+    margin-bottom: .2rem;
+    padding-left: 0;
+    &:before {
+      // clear bullets which are added
+      content: ' ';
+    }
   }
 }
 
@@ -63,6 +65,25 @@ ul.open-source-software-links {
   img {
     height: auto;
     width: 68px;
+    vertical-align: middle;
+    display: inline-block;
+  }
+}
+
+.software-section-commcare-logo {
+  img {
+    margin-top: 1em;
+    width: auto;
+    height: 70px;
+    vertical-align: middle;
+    display: inline-block;
+  }
+}
+
+.software-section-icon {
+  img {
+    height: auto;
+    width: 100px;
     vertical-align: middle;
     display: inline-block;
   }
