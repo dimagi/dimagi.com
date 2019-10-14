@@ -5,6 +5,16 @@
 
 $width-extra-small-screen : 374px;
 
+$_font-size-first-letter: 70px;
+$_line-height-first-letter: 50px;
+$_font-size-first-letter-lg: 80px;
+$_line-height-first-letter-lg: 65px;
+
+$_font-size-copy: 14px;
+$_line-height-copy: 18px;
+$_font-size-copy-lg: 16px;
+$_line-height-copy-lg: 22px;
+
 .products-commcare-features {
   @include make-bg(hero, '../../../pages/commcare/product_features/intro/hero');
 }
@@ -61,23 +71,23 @@ $width-extra-small-screen : 374px;
     background-color: $color-white;
 
     @media (min-width: $width-mobile) {
-      height: 1030px;
+      height:930px;
     }
 
     @media (min-width: $width-extra-small-screen) {
-      height: 960px;
+      height: 860px;
     }
 
     @media (min-width: $width-desktop) {
-      height: 1020px;
+      height: 920px;
     }
 
     @media (min-width: $width-desktop-lg) {
-      height: 755px;
+      height: 655px;
     }
 
     @media (min-width: $width-desktop-xl) {
-      height: 690px;
+      height: 590px;
     }
   }
 }
@@ -89,17 +99,90 @@ $width-extra-small-screen : 374px;
   }
 }
 
-blockquote {
-  p {
-    font-size: $font-size-medium + 3px;
-    line-height: $space-line + 3px;
+.testimonial-org {
+  font-style: italic;
+  white-space: nowrap;
+}
 
-    &::before{
-      font-size: $font-size-large * 2;
+.carousel-arrow {
+  cursor: pointer;
+  height: $space-medium * 2;
+  margin-top: - $space-medium;
+  position: absolute;
+  top: 50%;
+  width: $space-small;
+
+  @media (min-width: $width-desktop) {
+    width: $space-medium;
+  }
+
+  .arrow-nav {
+    display: inline-block;
+    border: $color-blue solid;
+    border-width: 0 3px 3px 0;
+    position: absolute;
+    top: 50%;
+    margin-top: - $space-base / 4;
+    padding: $space-base / 2;
+
+    @media (min-width: $width-desktop) {
+      margin-top: - $space-base / 2;
+      padding: $space-base;
+    }
+  }
+
+  &.previous {
+    left: 4px;
+
+    @media (min-width: $width-desktop) {
+      left: $space-base;
+    }
+
+    .arrow-nav {
+      left: 6px;
+      transform: rotate(135deg);
+    }
+  }
+
+  &.next {
+    right: 4px;
+
+    @media (min-width: $width-desktop) {
+      right: $space-base;
+    }
+
+    .arrow-nav {
+      right: 6px;
+      transform: rotate(-45deg);
     }
   }
 }
 
-.testimonial-org {
-  font-style: italic;
+.testimonial-content p{
+  font-size: $_font-size-copy;
+  line-height: $_line-height-copy;
+  font-weight: $font-weight-light;
+
+  @media (min-width: $width-desktop) {
+    font-size: $_font-size-copy-lg;
+    line-height: $_line-height-copy-lg;
+  }
+
+  &.first-letter::first-letter {
+    padding-right: 4px;
+    padding-top: 4px;
+    margin-bottom: -1px;
+    font-size: $_font-size-first-letter;
+    line-height: $_line-height-first-letter;
+    font-weight: $font-weight-medium;
+    float: left;
+
+    @media (min-width: $width-desktop) {
+      font-size: $_font-size-first-letter-lg;
+      line-height: $_line-height-first-letter-lg;
+      padding-right: 4px;
+      padding-top: 2px;
+      margin-bottom: -2px;
+    }
+  }
 }

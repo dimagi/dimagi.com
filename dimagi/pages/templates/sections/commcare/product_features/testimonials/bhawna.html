@@ -2,32 +2,28 @@
 {% load i18n %}
 {% load dimagidotcom %}
 
-{% block quality_selected %}selected{% endblock %}
-
 {% block content %}
-  <div class="content-width-medium align-left pad-horz-medium">
-    <blockquote>
-      <p class="body-color">
-        {% blocktrans %}
-          CommCare gave us the ability to control the experience of our 
-          field-based data collectors, which drastically reduced human error. 
-          With paper-based forms, you can't really make your field staff 
-          follow a strict protocol.
-        {% endblocktrans %}  
-      </p>
-    </blockquote>
+  <div class="testimonial-content content-width-medium align-left pad-horz-medium">
+    <p class="first-letter">
+      {% blocktrans %}
+        CommCare gave us the ability to control the experience of our 
+        field-based data collectors, which drastically reduced human error. 
+        With paper-based forms, you can't really make your field staff 
+        follow a strict protocol.
+      {% endblocktrans %}  
+    </p>
     <div class="grid-2-at-medium gap-bottom-line pad-top-base uppercase pad-left-base">
       <div class="column">
-        <h6 class="blue">
+        <h6 class="blue testimonial-org">
           {% blocktrans %}
             Bhawna Mangla
           {% endblocktrans %}
         </h6>
-        <h6 class="body-color testimonial-org">
+        <strong class="body-color testimonial-org">
           {% blocktrans %}
             Sehgal Foundation
           {% endblocktrans %}
-        </h6>
+        </strong>
         <h6 class="body-color testimonial-org">
           Senior Research Associate, Monitoring & Evaluation
         </h6>
