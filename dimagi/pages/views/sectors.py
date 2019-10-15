@@ -89,3 +89,11 @@ def programmatic_research(request):
         'sector': 'programmatic_research',
     }
     return render(request, 'pages/sectors/programmatic_research.html', context)
+
+@enable_ab_test(DEMO_WORKFLOW_V2)
+def gb_violence(request):
+    context = {
+        'sector': 'gb_violence',
+    }
+    return render(request, 'pages/sectors/gb_violence.html', context)
+
