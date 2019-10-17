@@ -5,7 +5,6 @@ from dimagi.pages.views.open_source import (
 )
 
 
-
 urlpatterns = [
     url(r'^$', open_source_home,
         name='open-source'),
