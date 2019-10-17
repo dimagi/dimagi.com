@@ -55,6 +55,7 @@ def get_robots():
 urlpatterns = [
     url(r'^$', pages.home, name='home'),
     url(r'^services/$', pages.services, name='services'),
+    url(r'^partners/$', pages.partners, name='partners'),
     url(r'^contact/$', pages.contact,  name='contact'),
     url(r'^focus/$', pages.focus_placeholder,  name='focus'),
     url(r'^proposals/$', pages.proposals,  name='proposals'),
@@ -67,7 +68,7 @@ urlpatterns = [
         name='digital-health-interventions'),
     url(r'^referral/update/$', pages.update_referral_status,
         name='update_referral_status'),
-    url(r'^certified-partners/$', commcare.partners, name='partner_program'),
+    url(r'^certified-partners/$', pages.partners, name='partner_program'),
 
     url(r'^mobile-data-collection/$',
         pillar.mobile_data_collection, name="mobile_data_collection"),

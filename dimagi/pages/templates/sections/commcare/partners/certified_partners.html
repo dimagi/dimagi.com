@@ -1,0 +1,46 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="certified_partners border-top pad-bottom-small accent-gray-bg"
+         id="certified_partners">
+  <div class="content">
+    <div class="pad-vert-medium">
+      <div class="intro ">
+        <h2>
+          {% blocktrans %}
+            Certified Partners
+          {% endblocktrans %}
+        </h2>
+        <p>
+          {% blocktrans %}
+            Dimagi Certified Partners are organizations in a global network of 
+            CommCare implementers. Certified partner organizations are 
+            recommended by Dimagi because they meet the following criteria:
+          {% endblocktrans %}
+        </p>
+      </div>{# .intro #}
+      <ul class="check-list grid-3-at-medium white-bg pad-top-small pad-left-small">
+        <li>
+          {% blocktrans %}
+            Demonstrate a proven history of successful 
+            CommCare project deployments
+          {% endblocktrans %}
+        </li>
+        <li>
+          {% blocktrans %}
+            Employ at least three CommCare-certified staff
+          {% endblocktrans %}
+        </li>
+        <li>
+          {% blocktrans %}
+            Show a commitment to continued learning about CommCare
+          {% endblocktrans %}
+        </li>
+      </ul>
+    </div>
+    <div class="grid-1-at-small grid-2-at-large grid-row-space-small grid-row-equal-heights grid-col-space-line">
+      {% include "sections/commcare/partners/certified_partners/oikoi.html" %}
+      {% include "sections/commcare/partners/certified_partners/noukod.html" %}
+    </div>{# .grid-2-at-small #}
+  </div>
+</section>

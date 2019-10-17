@@ -19,7 +19,7 @@
         </span>
       </a>
     </div>{# .actions #}
-    <a class="prompt-link {% click_subnav 'browse' %}"
+    <a class="prompt-link {% click_subnav 'browse-mobile' %}"
        href="#">
       {% blocktrans %}
         Browse
@@ -27,22 +27,28 @@
     </a>
     <div class="destinations">
       <div class="content">
-        <a href="#overview"
-           class="{% click_subnav 'overview' %}">
+        <a href="#brief_overview"
+           class="{% click_subnav 'brief_overview' %}">
           {% blocktrans %}
             Overview
           {% endblocktrans %}
         </a>
-        <a href="#oikoi"
-           class="{% click_subnav 'oikoi' %}">
+        <a href="#feature_partners"
+           class="{% click_subnav 'feature_partners' %}">
           {% blocktrans %}
-            Oikoi
+            Featured Partners
           {% endblocktrans %}
         </a>
-        <a href="#noukod"
-           class="{% click_subnav 'noukod' %}">
+        <a href="#advisory"
+           class="{% click_subnav 'advisory' %}">
           {% blocktrans %}
-            Noukod
+            New Projects
+          {% endblocktrans %}
+        </a>
+        <a href="#certified_partners"
+           class="{% click_subnav 'certified_partners' %}">
+          {% blocktrans %}
+            Certified Partners
           {% endblocktrans %}
         </a>
       </div>{# .content #}

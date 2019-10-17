@@ -28,6 +28,12 @@ def services(request):
     }
     return render(request, 'pages/services.html', context)
 
+def partners(request):
+    context = {
+        'partners': get_logos(),
+    }
+    return render(request, 'pages/partners.html', context)
+
 
 def contact(request):
     return render(request, 'pages/contact.html')

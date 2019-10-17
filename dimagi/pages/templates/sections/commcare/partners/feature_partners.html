@@ -1,0 +1,28 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="align-center blue-theme" id="feature_partners">
+  <div class="content pad-vert-medium">
+    <h2 class="normalcase pad-bottom-small theme-color">
+        {% blocktrans %}
+          Featured Partners
+        {% endblocktrans %}
+    </h2>
+
+    <div class="grid-1-at-small grid-2-at-large grid-row-space-small grid-row-equal-heights grid-col-space-line">
+      {% include "sections/commcare/partners/brief_overview/crs.html" %}
+      {% include "sections/commcare/partners/brief_overview/mwcd.html" %}
+      {% include "sections/commcare/partners/brief_overview/tdh.html" %}
+      {% include "sections/commcare/partners/brief_overview/oikoi.html" %}
+    </div>{# .grid-2-at-small #}
+
+    <p class="align-center">
+      <a class="button uppercase {% click_body 'case-management' %}"
+         href="{% url 'case_management' %}">
+        {% blocktrans %}
+          All Case Studies
+        {% endblocktrans %}
+      </a>
+    </p>
+  </div>{# .content #}
+</section>

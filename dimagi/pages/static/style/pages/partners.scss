@@ -1,0 +1,74 @@
+@import 'app/mixins/background';
+@import 'app/variables/colors';
+@import 'app/variables/sizes';
+@import 'app/variables/type';
+
+.partners-page {
+  @include make-bg(hero, '../../pages/services/hero');
+}
+
+@media (min-width: $width-desktop) {
+  .partners-page .hero h1 {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 100%;
+  }
+}
+
+#partners-intro {
+  $_base-height: 190px;
+  $_height-by-size: (
+    small: 280px,
+    medium: 280px,
+    large: 280px,
+    extra-large: 320px,
+  );
+  @include make-bg(hero-data-image, '../../../static/pages/sectors/small-businesses/intro/hero', $_base-height, $_height-by-size);
+}
+
+.feature-projects {
+  border: 1px solid $color-border;
+  cursor: pointer;
+  border-radius: $border-radius;
+
+  &:hover {
+    border: 2px solid $color-turquoise;
+  }
+}
+
+.feature-projects-image {
+  width: 100%;
+}
+
+.news-images .image.blog1 {
+  @include background-cover('../../../static/pages/sectors/reproductive-health/news/blog1.jpg');
+  height: 200px;
+  background-size: contain;
+  background-position: left;
+}
+
+.news-images .image.blog2 {
+  @include background-cover('../../../static/pages/sectors/reproductive-health/news/blog2.jpg');
+  height: 200px;
+  background-size: contain;
+  background-position: left;
+}
+
+.news-images .image.blog3 {
+  @include background-cover('../../../static/pages/sectors/reproductive-health/news/blog3.jpg');
+  height: 200px;
+  background-size: contain;
+  background-position: left;
+}
+
+.link-gray:hover,
+.link-gray:focus {
+  color: $color-turquoise !important; // scss-lint:disable ImportantRule
+}
+
+.video-intro .image {
+  @include background-cover('../../../static/pages/home/video-intro-banner.jpg');
+  height: 250px;
+  width: auto;
+}
+

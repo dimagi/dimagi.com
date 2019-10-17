@@ -1,0 +1,24 @@
+{% extends "sections/commcare/partners/brief_overview/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block icon %}
+  {% include "svg/commcare/icon/data_over_time.html" %}
+{% endblock %}
+
+{% block header %}
+  {% blocktrans %}
+    Catholic Relief Services
+  {% endblocktrans %}
+{% endblock %}
+
+{% block content %}
+  {% blocktrans %}
+    CRS uses CommCare as part of their Reducing Maternal and Newborn Deaths 
+    (ReMiND) project to improve the delivery of community-level prenatal and 
+    postnatal care and support services to local mothers and families. The 
+    application serves the Indian government’s frontline health 
+    workers, reaching more than 300,000 people.
+  {% endblocktrans %}
+{% endblock %}
+
