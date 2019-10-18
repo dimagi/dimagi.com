@@ -1,0 +1,26 @@
+{% load i18n %}
+{% load staticfiles %}
+{% load dimagidotcom %}
+
+<div class="item align-center border-right">
+  <div class="theme-icon gap-bottom-line">
+    <img src="{% static 'pages/open_source/open_source_home/icon-forum.png'%}">
+  </div>
+  <h3>
+    {% blocktrans %}
+      User Form
+    {% endblocktrans %}
+  </h3>
+  <p>
+    {% blocktrans %}
+      The go-to forum for CommCare’s thousands of users to share information.
+    {% endblocktrans %}
+  </p>
+  <p>
+    <a class="arrow" href="https://forum.dimagi.com">
+      {% blocktrans %}
+        Join the Conversation
+      {% endblocktrans %}
+    </a>
+  </p>
+</div>{# .item #}
