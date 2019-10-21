@@ -186,3 +186,14 @@ $_line-height-copy-lg: 22px;
     }
   }
 }
+
+blockquote {
+  p {
+    font-size: $font-size-medium + 3px;
+    line-height: $space-line + 3px;
+
+    &::before{
+      font-size: $font-size-large * 2;
+    }
+  }
+}
