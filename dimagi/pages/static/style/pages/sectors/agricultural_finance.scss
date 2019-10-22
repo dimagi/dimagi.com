@@ -11,38 +11,38 @@
     large: 280px,
     extra-large: 340px,
   );
-  @include make-bg(hero-data-image, '../../../pages/sectors/agriculture-extension-programs/intro/hero', $_base-height, $_height-by-size);
+  @include make-bg(hero-data-image, '../../../pages/sectors/agricultural-finance/intro/hero', $_base-height, $_height-by-size);
 }
 
 .news-images .image.blog1 {
-  @include background-cover('../../../pages/sectors/agriculture-extension-programs/news/blog1.jpg');
+  @include background-cover('../../../pages/sectors/agricultural-finance/news/blog1.jpg');
   height: 200px;
   background-size: contain;
   background-position: left;
 }
 
 .news-images .image.blog2 {
-  @include background-cover('../../../pages/sectors/agriculture-extension-programs/news/blog2.jpg');
+  @include background-cover('../../../pages/sectors/agricultural-finance/news/blog2.jpg');
   height: 200px;
   background-size: contain;
   background-position: left;
 }
 
 .news-images .image.blog3 {
-  @include background-cover('../../../pages/sectors/agriculture-extension-programs/news/blog3.jpg');
+  @include background-cover('../../../pages/sectors/agricultural-finance/news/blog3.jpg');
   height: 200px;
   background-size: contain;
   background-position: left;
 }
 
 .programs-images .image.featured-project1 {
-  @include background-cover('../../../pages/sectors/agriculture-extension-programs/programs/featured-project1.jpg');
-  height: 230px;
+  @include background-cover('../../../pages/sectors/agricultural-finance/programs/featured-project1.jpg');
+  height: 240px;
 }
 
 .programs-images .image.featured-project2 {
-  @include background-cover('../../../pages/sectors/agriculture-extension-programs/programs/featured-project2.jpg');
-  height: 230px;
+  @include background-cover('../../../pages/sectors/agricultural-finance/programs/featured-project2.jpg');
+  height: 240px;
 }
 
 .programs-images .image.featured-project1,
@@ -63,7 +63,7 @@
     large: 360px,
     extra-large: 360px,
   );
-  @include make-bg(epic-cover, '../../../pages/sectors/agriculture-extension-programs/part3/hero', $_base-height, $_height-by-size);
+  @include make-bg(epic-cover, '../../../pages/sectors/agricultural-finance/part3/hero', $_base-height, $_height-by-size);
 }
 
 .commcare-text {
@@ -74,7 +74,7 @@
     large: 290px,
     extra-large: 290px,
   );
-  @include make-bg(phone-image, '../../../pages/sectors/agriculture-extension-programs/part3/phone', $_base-height, $_height-by-size, '.png');
+  @include make-bg(phone-image, '../../../pages/sectors/agricultural-finance/part3/phone', $_base-height, $_height-by-size, '.png');
 
   @media (min-width: $width-desktop) {
     .off-grid {
