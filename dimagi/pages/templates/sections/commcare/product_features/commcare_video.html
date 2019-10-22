@@ -1,7 +1,7 @@
 {% load dimagidotcom %}
 {% load i18n %}
 
-<section  class="content pad-top-medium pad-horz-large pad-bottom-small"
+<section  class="content pad-top-medium pad-horz-large-at-medium pad-bottom-small"
           id="watchdemo">
   <div class="intro content-width-large gap-bottom-line">
     <h2 class="normalcase">
@@ -18,9 +18,8 @@
   </div>{# .intro #}
   <div class="column">
     <div class="position-relative align-center height-100">
-      <div id="commcare-features-video-demo" class="commcare-features-video-demo pad-vert-small">
-        <div class="image white-lazy-bg" data-lazybg="true">
-          {% include "partials/wistia_popover.html" with wistia_id='9uvnpbecdy' play_icon_medium=True show_image=True %}</div>
+      <div id="commcare-features-video-demo" class="image commcare-features-video-demo pad-vert-small white-lazy-bg" data-lazybg="true">
+        {% include "partials/wistia_popover.html" with wistia_id='9uvnpbecdy' play_icon_medium=True show_image=True %}
       </div>
     </div>
   </div>{# .column #}
