@@ -66,7 +66,7 @@ GROUP.add_features([
             "CommCare application. Publish reports or schedule emails to share "
             "reports with other users."
         ),
-        support=Support(False, True, True, True),
+        support=Support(False, "up to 5 reports", "up to 5 reports", "up to 5 reports"),
     ),
     Feature(
         title=ugettext_lazy(
