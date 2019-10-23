@@ -1,0 +1,37 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="testimonials accent-gray-bg border-top"
+         id="testimonials">
+  <div class="content pad-vert-medium">
+    <div class="pad-bottom-medium align-center">
+      <h2 class="blue">
+        {% blocktrans %}
+          Proven in over 2,000 programs across 80+ countries
+        {% endblocktrans %}
+      </h2>
+    </div>
+
+    <div class="carousel carousel-fade-inactive carousel-numbered carousel-features">
+      <div class="carousel-container">
+        <div class="spinner spinner-large"></div>
+        <div class="carousel-slider">
+          {% include "sections/commcare/product_features/testimonials/bhawna.html" %}
+          {% include "sections/commcare/product_features/testimonials/eyram.html" %}
+          {% include "sections/commcare/product_features/testimonials/kevin.html" %}
+          {% include "sections/commcare/product_features/testimonials/samuel.html" %}
+        </div>{# .carousel-slider #}
+      </div>{# .carousel-container #}
+    </div>{# .carousel #}
+
+    <div class="cta pad-vert-small align-center">
+      <a class="button alt gap-right-small-at-medium gap-right-base-at-small {% click_body 'commcare-evidence-base' %}"
+         href="{% url 'toolkit' 'commcare-evidence-base' %}">
+       {% blocktrans %}
+         See evidence base
+       {% endblocktrans %}
+      </a>
+    </div>{# .cta #}
+
+  </div>{# .content #}
+</section>

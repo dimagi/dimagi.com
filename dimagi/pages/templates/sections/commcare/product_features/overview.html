@@ -1,0 +1,39 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="overview-features accent-gray-bg border-vert"
+         id="overview">
+  <div class="content pad-vert-medium align-center">
+    <div class="pad-bottom-medium">
+      <h2 class="blue">
+        {% blocktrans %}
+          A 360° Data Collection Platform
+        {% endblocktrans %}
+      </h2>
+    </div>
+
+    <div class="carousel carousel-fade-inactive carousel-numbered carousel-arrows carousel-features features-carousel-dots">
+      <div class="carousel-container">
+        <div class="spinner spinner-large"></div>
+        <div class="carousel-slider">
+          {% include "sections/commcare/product_features/overview/quality.html" %}
+          {% include "sections/commcare/product_features/overview/manual.html" %}
+          {% include "sections/commcare/product_features/overview/clean.html" %}
+          {% include "sections/commcare/product_features/overview/report.html" %}
+        </div>{# .carousel-slider #}
+      </div>{# .carousel-container #}
+    </div>{# .carousel #}
+    <div class="cta pad-top-medium">
+      <p>
+        <a class="button {% click_body 'commcare-features' %} uppercase"
+           href="{{ URL_TRIAL }}"
+           target="_blank">
+          {% blocktrans %}
+            Try CommCare
+          {% endblocktrans %}
+        </a>
+      </p>
+    </div>{# .cta #}
+
+  </div>{# .overview-features #}
+</section>

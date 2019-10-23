@@ -1,0 +1,35 @@
+{% extends "sections/commcare/product_features/testimonials/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block content %}
+  <div class="testimonial-content content-width-medium align-left pad-horz-medium">
+    <blockquote>
+      <p>
+        {% blocktrans %}
+          At all stages of our program – from the farmer's enrollment to input 
+          delivery, money collection, inventory, and tracking – CommCare helps us 
+          collect and manipulate highly-structured and quality data using case management 
+          and structuring our organization with ease.
+        {% endblocktrans %}  
+      </p>
+    </blockquote>
+    <div class="grid-2-at-medium gap-bottom-line pad-top-base uppercase pad-left-base">
+      <div class="column">
+        <h6 class="blue testimonial-org">
+          {% blocktrans %}
+            Eyram Adzra
+          {% endblocktrans %}
+        </h6>
+        <strong class="body-color testimonial-org">
+          {% blocktrans %}
+            MyAgro
+          {% endblocktrans %}
+        </strong>
+        <h6 class="body-color testimonial-org">
+          Technical Product Manager
+        </h6>
+      </div>{# .column #}
+    </div>{# .grid-2-at-medium #}
+  </div>
+{% endblock %}
