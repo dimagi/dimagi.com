@@ -155,6 +155,8 @@
     {% endif %}
     {% block progress_bar %}{% endblock %}
     <main class="main-content position-relative" id="main-content" role="main">
+      {% block banner_home %}
+      {% endblock %}
       <div id="top"></div>
       {% include 'partials/header.html' %}
       {% block article %}
