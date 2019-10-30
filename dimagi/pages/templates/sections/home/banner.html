@@ -1,36 +1,22 @@
 {% load i18n %}
 {% load dimagidotcom %}
 
-<section class="sub-nav"
-         id="sub-nav">
-  <div class="content pad-vert-none">
-    <div class="actions">
-      {% click_subnav 'demo' as click_class %}
-      <a class="primary cta-schedule-demo"
-         data-clickclass="{{ click_class }}"
-         href="{{ URL_TRIAL }}">
-        <span>
-          {% blocktrans %}
-            Learn More
-          {% endblocktrans %}
-        </span>
-      </a>
-    </div>{# .actions #}
-    <a class="prompt-link {% click_subnav 'browse' %}"
-       href="#">
+<div class="top-banner-ad">
+  <a href="#"
+     class="top-banner-ad-close">
+    {% include 'svg/close.html' %}
+  </a>
+  <div class="content pad-vert-large">
+    <h3>
       {% blocktrans %}
-        Update
+        Just Launched: New Tableau and Power BI Data Integration!
       {% endblocktrans %}
-    </a>
-    <div class="destinations">
-      <div class="content pad-vert-none">
-        <p href="#overview">
-          {% blocktrans %}
-            Just Launched: New Tableau and Power BI Data Integration!
-          {% endblocktrans %}
-        </p>
-      </div>{# .content #}
-    </div>{# .destinations #}
-  </div>{# .content #}
-</section>
-
+    </h3>
+    <p class="gap-bottom-none">
+      <a href="https://www.dimagi.com/blog/commcare-tableau-power-bi/"
+         class="button inverted alt gap-bottom-none">
+        {% trans "Learn More" %}
+      </a>
+    </p>
+  </div>
+</div>

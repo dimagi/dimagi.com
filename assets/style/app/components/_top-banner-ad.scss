@@ -1,0 +1,32 @@
+@import 'app/lib/jacket';
+@import 'app/variables/colors';
+@import 'app/variables/sizes';
+@import 'app/variables/type';
+
+@include jacket($jacket-critical) {
+  .top-banner-ad {
+    background-color: $color-blue;
+    background-image: linear-gradient($color-blue, $color-blue-dark);
+    color: $color-white;
+    display: none;
+    left: 0;
+    overflow: hidden;
+    text-align: center;
+    top: 0;
+    width: 100%;
+
+    h3 {
+      color: $color-white;
+    }
+  }
+
+  .top-banner-ad-close {
+    display: block;
+    height: 60px;
+    position: absolute;
+    right: 0;
+    stroke: $color-white;
+    top: 20px;
+    width: 60px;
+  }
+}
