@@ -80,4 +80,14 @@ GROUP.add_features([
         ),
         support=Support(False, True, True, True),
     ),
+    Feature(
+        title=ugettext_lazy(
+            "Power BI & Tableau integration"
+        ),
+        description=ugettext_lazy(
+            "Integrate CommCare with Tableau and Power BI to "
+            "visualize and report on your data."
+        ),
+        support=Support(False, "Add-on", True, True),
+    ),
 ])
