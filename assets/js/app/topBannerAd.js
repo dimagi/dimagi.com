@@ -15,7 +15,8 @@ define([
   };
 
   self.enableBindings = function () {
-    $('.top-banner-ad-close').click(function () {
+    $('.top-banner-ad-close').click(function (e) {
+      e.preventDefault();
       self.deactivate();
     });
   };
