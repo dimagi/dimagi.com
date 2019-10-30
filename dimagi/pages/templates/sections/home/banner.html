@@ -1,25 +1,36 @@
 {% load i18n %}
 {% load dimagidotcom %}
 
-<section class="sub-nav sub-nav-banner"
+<section class="sub-nav"
          id="sub-nav">
-  <div>
-    <div class="content banner-main">
-      <p class="align-center">
-          {% blocktrans %}
-            Just Launched: New Tableau and Power BI Data Integration!
-          {% endblocktrans %}
-      </p>
-    </div>
-    <div class="column flex-align-center">
-      <a class="primary banner-btn cta-schedule-demo white"
-         href="{% url 'blog_post' 'commcare-tableau-power-bi' %}" target="_blank">
+  <div class="content pad-vert-none">
+    <div class="actions">
+      {% click_subnav 'demo' as click_class %}
+      <a class="primary cta-schedule-demo"
+         data-clickclass="{{ click_class }}"
+         href="{{ URL_TRIAL }}">
         <span>
           {% blocktrans %}
             Learn More
           {% endblocktrans %}
         </span>
       </a>
-    </div>{# .column #}
+    </div>{# .actions #}
+    <a class="prompt-link {% click_subnav 'browse' %}"
+       href="#">
+      {% blocktrans %}
+        Update
+      {% endblocktrans %}
+    </a>
+    <div class="destinations">
+      <div class="content pad-vert-none">
+        <p href="#overview">
+          {% blocktrans %}
+            Just Launched: New Tableau and Power BI Data Integration!
+          {% endblocktrans %}
+        </p>
+      </div>{# .content #}
+    </div>{# .destinations #}
   </div>{# .content #}
 </section>
+
