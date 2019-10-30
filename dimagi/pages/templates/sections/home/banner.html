@@ -1,0 +1,22 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<div class="top-banner-ad">
+  <a href="#"
+     class="top-banner-ad-close">
+    {% include 'svg/close.html' %}
+  </a>
+  <div class="content pad-vert-large">
+    <h3>
+      {% blocktrans %}
+        Just Launched: New Tableau and Power BI Data Integration!
+      {% endblocktrans %}
+    </h3>
+    <p class="gap-bottom-none">
+      <a href="https://www.dimagi.com/blog/commcare-tableau-power-bi/"
+         class="button inverted alt gap-bottom-none">
+        {% trans "Learn More" %}
+      </a>
+    </p>
+  </div>
+</div>
