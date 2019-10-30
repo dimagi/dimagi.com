@@ -4,7 +4,7 @@
 @import 'app/variables/type';
 
 .partners-page {
-  @include make-bg(hero, '../../pages/services/hero');
+  @include make-bg(hero, '../../pages/commcare/partners/main/hero');
 }
 
 @media (min-width: $width-desktop) {
@@ -23,7 +23,7 @@
     large: 280px,
     extra-large: 320px,
   );
-  @include make-bg(hero-data-image, '../../../static/pages/sectors/small-businesses/intro/hero', $_base-height, $_height-by-size);
+  @include make-bg(hero-data-image, '../../pages/commcare/partners/intro/intro', $_base-height, $_height-by-size);
 }
 
 .feature-projects {
@@ -66,9 +66,58 @@
   color: $color-turquoise !important; // scss-lint:disable ImportantRule
 }
 
-.video-intro .image {
-  @include background-cover('../../../static/pages/home/video-intro-banner.jpg');
+.partners-action-crs .image {
+  @include background-cover('../../../static/pages/commcare/partners/video/crs.jpg');
   height: 250px;
   width: auto;
 }
 
+.partners-action-mwcd .image {
+  @include background-cover('../../../static/pages/commcare/partners/video/oikoi.jpg');
+  height: 250px;
+  width: auto;
+}
+
+.partners-action-oikoi .image {
+  @include background-cover('../../../static/pages/commcare/partners/video/mwcd.jpg');
+  height: 250px;
+  width: auto;
+}
+
+.partners-action-tds .image {
+  @include background-cover('../../../static/pages/commcare/partners/video/tdh.jpg');
+  height: 250px;
+  width: auto;
+}
+
+.feature-partner-crs .image {
+  @include background-cover('../../../static/pages/commcare/partners/featured_partners/crs.jpg');
+  height: 100px;
+  width: 111px;
+}
+
+.feature-partner-mwcd .image {
+  @include background-cover('../../../static/pages/commcare/partners/featured_partners/mwcd.jpg');
+  height: 100px;
+  width: 111px;
+}
+.feature-partner-oikoi .image {
+  @include background-cover('../../../static/pages/commcare/partners/featured_partners/oikoi.jpg');
+  height: 100px;
+  width: 111px;
+}
+.feature-partner-tdh .image {
+  @include background-cover('../../../static/pages/commcare/partners/featured_partners/tdh.jpg');
+  height: 100px;
+  width: 111px;
+}
+
+.feature-partner-noukod .image {
+  @include background-cover('../../../static/pages/commcare/partners/featured_partners/noukod.png');
+  height: 100px;
+  width: 111px;
+}
+
+.feature-project-logo {
+  margin: 0 auto;
+}

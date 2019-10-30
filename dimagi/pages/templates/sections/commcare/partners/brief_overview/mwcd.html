@@ -1,23 +1,24 @@
-{% extends "sections/commcare/partners/brief_overview/_base.html" %}
 {% load i18n %}
 {% load dimagidotcom %}
 
-{% block icon %}
-  {% include "svg/commcare/icon/no_wifi.html" %}
-{% endblock %}
-
-{% block header %}
-  {% blocktrans %}
-    Ministry of Women and Child Development, Government of India
-  {% endblocktrans %}
-{% endblock %}
-
-{% block content %}
-  {% blocktrans %}
-    India’s Ministry of Women and Child Development uses CommCare to support 
-    the largest mHealth program in the world. Their platform, the Integrated 
-    Child Development Services-Common Application Software (ICDS-CAS), reaches 
-    1 in 50 malnourished children and 1 in 110 new pregnancies in the world.
-  {% endblocktrans %}
-{% endblock %}
-
+<div class="feature-partners">
+  <div class="feature-projects pad-vert-line pad-horz-line">
+    <div class="grid-flex-at-medium">
+      <div class="feature-partner-mwcd column gap-top-medium flex-align-left">
+        <div class="image"
+             data-lazybg="true"></div>
+        </div>
+      <div class="column">
+        <h6 class="uppercase theme-color align-left pad-bottom-base">
+          Ministry of Women and Child Development, Government of India
+        </h6>
+        <p class="align-left">
+          India’s Ministry of Women and Child Development uses CommCare to support 
+          the largest mHealth program in the world. Their platform, the Integrated 
+          Child Development Services-Common Application Software (ICDS-CAS), reaches 
+          1 in 50 malnourished children and 1 in 110 new pregnancies in the world.
+        </p>
+      </div>
+    </div>
+  </div>{# .feature-projects #}
+</div>{# .feature-partners #}
