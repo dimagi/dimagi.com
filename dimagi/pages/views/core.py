@@ -13,6 +13,9 @@ from dimagi.utils.hubspot_api import update_contact
 from dimagi.utils.partners import get_logos
 from dimagi.data.case_management import longitudinal_data
 
+from dimagi.utils.wordpress_api import get_json
+from dimagi.pages.models.partners import latestPartners
+
 
 @enable_ab_test(DEMO_WORKFLOW_V2)
 def home(request):
@@ -29,8 +32,13 @@ def services(request):
     return render(request, 'pages/services.html', context)
 
 def partners(request):
+    _latest = get_json("blog/latest-partners")
+    _partners_count= _latest["total"]
+    _latest = latestPartners(_latest["posts"][:2])
     context = {
         'partners': get_logos(),
+        'latest_partners': _latest,
+        'partners_count': _partners_count
     }
     return render(request, 'pages/partners.html', context)
 

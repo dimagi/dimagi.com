@@ -1,0 +1,18 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% for latest in latest_partners %}
+  <div class="column">
+    <h6>{{ latest.title }}</h6>
+    <p>{{ latest.excerpt }}</p>
+    <p>
+      <a href="{% url 'blog_post' latest.slug %}"
+         class="arrow turquoise read-more"
+         target="_blank">
+        {% blocktrans %}
+          Read More
+        {% endblocktrans %}
+      </a>
+    </p>
+  </div>{# .column #}
+{% endfor %}
