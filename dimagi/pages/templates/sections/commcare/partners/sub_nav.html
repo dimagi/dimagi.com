@@ -5,16 +5,11 @@
          id="sub-nav">
   <div class="content">
     <div class="actions">
-      {% trans "Watch Demo" as demo_text %}
-      {% click_subnav 'demo' as click_demo %}
-      {% include "partials/wistia_popover.html" with wistia_id='9uvnpbecdy' text=demo_text click_class=click_demo %}
-      <a class="primary cta-pricing-subnav-trial {% click_subnav 'trial' %}"
-         data-kmq-external="true"
-         data-kmq-name="Clicked Start Trial - Partner (sticky bar)"
-         href="{{ URL_TRIAL }}">
+      <a class="primary {% click_subnav 'contact' %}"
+         href="#contact-form-modal">
         <span>
           {% blocktrans %}
-            Start Trial
+            Contact Us
           {% endblocktrans %}
         </span>
       </a>
