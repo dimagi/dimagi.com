@@ -53,3 +53,13 @@ ARCHIVE = Category(
     icon=None,
     slug="archive",
 )
+
+PARTNERS_LATEST = Category(
+    name=ugettext_lazy("Dimagi Latest Partners Blog"),
+    description=ugettext_lazy(
+        "Read for the latest news and stories<br />"
+        " from our Partners around the world."
+    ),
+    icon="svg/blog/icon/technology.html",
+    slug="latest-partners",
+)

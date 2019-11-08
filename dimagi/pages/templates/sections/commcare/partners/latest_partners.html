@@ -20,5 +20,13 @@
         {% include 'partials/latest_partners_summary.html' %}
       </div>{# .grid-2-at-medium #}
     {% endif %}
+    <p class="align-center pad-top-line">
+      <a class="button uppercase {% click_body 'latest_partners' %}"
+         href="{% url 'archive_category' 'latest-partners' %}">
+        {% blocktrans %}
+          View All
+        {% endblocktrans %}
+      </a>
+    </p>
   </div>
 </section>

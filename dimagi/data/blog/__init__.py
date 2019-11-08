@@ -4,6 +4,7 @@ from dimagi.data.blog.categories import (
     STAFF,
     ARCHIVE,
     TECH,
+    PARTNERS_LATEST,
 )
 
 
@@ -13,6 +14,7 @@ available_categories = (
     STAFF,
     ARCHIVE,
     TECH,
+    PARTNERS_LATEST,
 )
 
 
@@ -21,6 +23,7 @@ nav_categories = (
     PARTNERS,
     STAFF,
     TECH,
+    PARTNERS_LATEST,
 )
 
 
