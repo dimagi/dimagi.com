@@ -11,7 +11,7 @@
     large: 280px,
     extra-large: 340px,
   );
-  @include make-bg(hero-data-image, '../../../pages/sectors/agriculture-extension-programs/intro/hero', $_base-height, $_height-by-size);
+  @include make-bg(hero-data-image, '../../../pages/sectors/agricultural-cooperatives/intro/hero', $_base-height, $_height-by-size);
 }
 
 .news-images .image.blog1 {
@@ -36,19 +36,13 @@
 }
 
 .programs-images .image.featured-project1 {
-  @include background-cover('../../../pages/sectors/agriculture-extension-programs/programs/featured-project1.jpg');
+  @include background-cover('../../../pages/sectors/agricultural-cooperatives/programs/UGPCL_senegal.jpg');
   height: 270px;
 }
 
 .programs-images .image.featured-project2 {
-  @include background-cover('../../../pages/sectors/agriculture-extension-programs/programs/featured-project2.jpg');
+  @include background-cover('../../../pages/sectors/agricultural-cooperatives/programs/care_india.jpg');
   height: 270px;
-}
-
-.programs-images .image.featured-project1,
-.programs-images .image.featured-project2,
-.programs-images .image.featured-project3 {
- background-position: initial;
 }
 
 .modal-popup {
