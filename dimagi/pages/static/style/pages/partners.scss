@@ -73,13 +73,13 @@
 }
 
 .partners-action-mwcd .image {
-  @include background-cover('../../../static/pages/commcare/partners/video/oikoi.jpg');
+  @include background-cover('../../../static/pages/commcare/partners/video/mwcd.jpg');
   height: 250px;
   width: auto;
 }
 
 .partners-action-oikoi .image {
-  @include background-cover('../../../static/pages/commcare/partners/video/mwcd.jpg');
+  @include background-cover('../../../static/pages/commcare/partners/video/oikoi.jpg');
   height: 250px;
   width: auto;
 }

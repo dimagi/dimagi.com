@@ -1,6 +1,10 @@
 {% load i18n %}
 {% load dimagidotcom %}
 
+{% url 'services' as services %}
+{% url 'commcare' as commcare %}
+{% url 'focus_mdm' as focus_mdm %}
+
 <section id="brief_overview"
          data-lazybg="true">
   <div class="content pad-top-medium pad-bottom-medium">
@@ -20,16 +24,18 @@
             platform and a device management system to match, Dimagi’s 
             partnerships cover a wide range of needs. With experience in 80+ 
             countries working on more than 2,000 programs, our partners range 
-            from small businesses and non-profits to ministries of health and 
+            from small businesses and nonprofits to ministries of health and 
             multinational non-governmental organizations.
           {% endblocktrans %}
         </p>
         <p>
           {% blocktrans %}
-            Our world-class Global Services team has spent more than a decade 
-            developing mobile solutions for projects as small as 10-person 
-            pilots and as large as multi-country initiatives. And our 
-            software platforms, CommCare and FocusMDM, help improve the 
+            Our world-class <a href="{{ services }}">Global Services</a> team 
+            has spent more than a decade developing mobile solutions for 
+            projects as small as 10-person pilots and as large as multi-country 
+            initiatives. And our software platforms, 
+            <a href="{{ commcare }}">CommCare</a> and 
+            <a href="{{ focus_mdm }}">FocusMDM</a>, help improve the 
             efficiency, sustainability, and impact of their programs.
           {% endblocktrans %}
         </p>             
