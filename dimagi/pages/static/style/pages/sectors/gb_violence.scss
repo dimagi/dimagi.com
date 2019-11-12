@@ -5,6 +5,7 @@
 
 @mixin image {
   height: 200px;
+  background-position: left;
 }
 
 #small-business-intro {
@@ -15,7 +16,7 @@
     large: 280px,
     extra-large: 320px,
   );
-  @include make-bg(hero-data-image, '../../../pages/sectors/small-businesses/intro/hero', $_base-height, $_height-by-size);
+  @include make-bg(hero-data-image, '../../../pages/sectors/gb_violence/intro/hero', $_base-height, $_height-by-size);
 }
 
 .part3 {
@@ -26,7 +27,7 @@
       large: 360px,
       extra-large: 360px,
     );
-    @include make-bg(epic-cover, '../../../pages/sectors/programmatic-research/commcare/hero', $_base-height, $_height-by-size);
+    @include make-bg(epic-cover, '../../../pages/sectors/gb_violence/hero', $_base-height, $_height-by-size);
 }
 
 .center {
@@ -74,36 +75,28 @@
 }
 
 .news .image.testimonial1 {
-  @include background-cover('../../../pages/sectors/small-businesses/news/SmallBusiness_Blog_1.jpg');
+  @include background-cover('../../../pages/sectors/gb_violence/news/blog_one.jpg');
   @include image;
-  background-position: left;
 }
 
 .news .image.testimonial2 {
-  @include background-cover('../../../pages/sectors/small-businesses/news/SmallBusiness_Blog_2.jpg');
+  @include background-cover('../../../pages/sectors/gb_violence/news/blog_two.jpg');
   @include image;
-  background-position: left;
 }
 
 .news .image.testimonial3 {
-  @include background-cover('../../../pages/sectors/small-businesses/news/SmallBusiness_Blog_3.jpg');
+  @include background-cover('../../../pages/sectors/gb_violence/news/blog_three.jpg');
   @include image;
-  background-position: left;
 }
 
 .programs .image.testimonial1 {
-  @include background-cover('../../../pages/sectors/small-businesses/programs/SmallBusiness_FeaturedProject_1.jpg');
-  @include image;
+  @include background-cover('../../../pages/sectors/gb_violence/programs/usaid_india.jpg');
+  height: 270px;
 }
 
 .programs .image.testimonial2 {
-  @include background-cover('../../../pages/sectors/small-businesses/programs/SmallBusiness_FeaturedProject_2.jpg');
-  @include image;
-}
-
-.programs .image.testimonial3 {
-  @include background-cover('../../../pages/sectors/small-businesses/programs/SmallBusiness_FeaturedProject_3.jpg');
-  @include image;
+  @include background-cover('../../../pages/sectors/gb_violence/programs/unicef_malawi.jpg');
+  height: 270px;
 }
 
 .programs .image.testimonial1,
