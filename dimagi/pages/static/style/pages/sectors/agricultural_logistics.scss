@@ -11,7 +11,7 @@
     large: 280px,
     extra-large: 340px,
   );
-  @include make-bg(hero-data-image, '../../../pages/sectors/agriculture-extension-programs/intro/hero', $_base-height, $_height-by-size);
+  @include make-bg(hero-data-image, '../../../pages/sectors/agricultural-logistics/intro/hero', $_base-height, $_height-by-size);
 }
 
 .news-images .image.blog1 {
@@ -36,21 +36,13 @@
 }
 
 .programs-images .image.featured-project1 {
-  @include background-cover('../../../pages/sectors/agriculture-extension-programs/programs/featured-project1.jpg');
-  height: 200px;
-  background-size: contain;
+  @include background-cover('../../../pages/sectors/agricultural-logistics/programs/papyrus_sorghum_alliance.jpg');
+  height: 270px;
 }
 
 .programs-images .image.featured-project2 {
-  @include background-cover('../../../pages/sectors/agriculture-extension-programs/programs/featured-project2.jpg');
-  height: 200px;
-  background-size: contain;
-}
-
-.programs-images .image.featured-project3 {
-  @include background-cover('../../../pages/sectors/agriculture-extension-programs/programs/featured-project3.jpg');
-  height: 200px;
-  background-size: contain;
+  @include background-cover('../../../pages/sectors/agricultural-logistics/programs/world_food_program.jpg');
+  height: 270px;
 }
 
 .programs-images .image.featured-project1,
