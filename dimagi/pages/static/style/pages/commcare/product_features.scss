@@ -1,0 +1,160 @@
+@import 'app/mixins/background';
+@import 'app/variables/colors';
+@import 'app/variables/sizes';
+@import 'app/variables/type';
+
+$width-extra-small-screen : 374px;
+
+.products-commcare-features {
+  @include make-bg(hero, '../../../pages/commcare/product_features/intro/hero');
+}
+
+.commcare-features-video-demo {
+  $_base-height: 275px;
+  $_height-by-size: (
+    extra-small: 170px,
+    small: 240px,
+    medium: 300px,
+    large: 205px,
+    extra-large: 260px,
+  );
+  @include make-bg(image, '../../../pages/commcare/product_features/commcare_video/video', $_base-height, $_height-by-size);
+}
+
+@media (min-width: $width-desktop) {
+  .products-commcare-features .hero {
+    h1 {
+      margin-left: 0;
+      margin-right: 0;
+      max-width: 100%;
+    }
+  }
+}
+
+.overview-features {
+  $_base-height: 175px;
+  $_height-by-size: (
+    extra-small: 170px,
+    small: 240px,
+    medium: 300px,
+    large: 205px,
+    extra-large: 260px,
+  );
+  @include make-bg(collect-data-image, '../../../pages/commcare/product_features/carousel/quality/collect', $_base-height, $_height-by-size);
+  @include make-bg(improve-efficiency-image, '../../../pages/commcare/product_features/carousel/efficiency/improve', $_base-height, $_height-by-size);
+  @include make-bg(clean-manage-image, '../../../pages/commcare/product_features/carousel/manage/clean', $_base-height, $_height-by-size);
+  @include make-bg(report-insight-image, '../../../pages/commcare/product_features/carousel/insights/report', $_base-height, $_height-by-size);
+
+  .device-container,
+  .screen {
+    width: 100%;
+  }
+
+  .improve-efficiency-image,
+  .collect-data-image,
+  .clean-manage-image,
+  .report-insight-image {
+    box-shadow: 2px 10px 22px $color-neutral-light;
+  }
+
+  .carousel-slide {
+    background-color: $color-white;
+
+    @media (min-width: $width-mobile) {
+      height:930px;
+    }
+
+    @media (min-width: $width-extra-small-screen) {
+      height: 860px;
+    }
+
+    @media (min-width: $width-desktop) {
+      height: 920px;
+    }
+
+    @media (min-width: $width-desktop-lg) {
+      height: 655px;
+    }
+
+    @media (min-width: $width-desktop-xl) {
+      height: 590px;
+    }
+  }
+}
+
+.features-carousel-dots {
+
+  .carousel-dots {
+    margin-top: -$space-small * 1.5 !important;
+  }
+}
+
+.testimonial-org {
+  font-style: italic;
+  white-space: nowrap;
+}
+
+.carousel-arrow {
+  cursor: pointer;
+  height: $space-medium * 2;
+  margin-top: - $space-medium;
+  position: absolute;
+  top: 50%;
+  width: $space-small;
+
+  @media (min-width: $width-desktop) {
+    width: $space-medium;
+  }
+
+  .arrow-nav {
+    display: inline-block;
+    border: $color-blue solid;
+    border-width: 0 3px 3px 0;
+    position: absolute;
+    top: 50%;
+    margin-top: - $space-base / 4;
+    padding: $space-base / 2;
+
+    @media (min-width: $width-desktop) {
+      margin-top: - $space-base / 2;
+      padding: $space-base;
+    }
+  }
+
+  &.previous {
+    left: 4px;
+
+    @media (min-width: $width-desktop) {
+      left: $space-base;
+    }
+
+    .arrow-nav {
+      left: 6px;
+      transform: rotate(135deg);
+    }
+  }
+
+  &.next {
+    right: 4px;
+
+    @media (min-width: $width-desktop) {
+      right: $space-base;
+    }
+
+    .arrow-nav {
+      right: 6px;
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+blockquote {
+  p {
+    font-size: $font-size-medium + 3px;
+    line-height: $space-line + 3px;
+
+    &::before{
+      font-size: $font-size-large * 2;
+    }
+  }
+}

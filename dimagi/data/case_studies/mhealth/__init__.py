@@ -1,6 +1,7 @@
 from dimagi.data.case_studies.mhealth import (
     crs_india,
     tulasalud,
+    naatal_mbay,
     lmrf_india,
     lwala_community_alliance,
     tdh_burkinafaso,
@@ -13,14 +14,13 @@ from dimagi.data.case_studies.mhealth import (
     supply_chain_tanzania,
     world_vision_motech,
     care_motech,
-    lwala_community_alliance,
-    naatal_mbay,
 )
 
 
 studies = (
     crs_india,
     tulasalud,
+    naatal_mbay,
     lmrf_india,
     lwala_community_alliance,
     tdh_burkinafaso,
@@ -33,6 +33,4 @@ studies = (
     supply_chain_tanzania,
     world_vision_motech,
     care_motech,
-    lwala_community_alliance,
-    naatal_mbay,
 )

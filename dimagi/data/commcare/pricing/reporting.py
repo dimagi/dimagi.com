@@ -66,7 +66,7 @@ GROUP.add_features([
             "CommCare application. Publish reports or schedule emails to share "
             "reports with other users."
         ),
-        support=Support(False, True, True, True),
+        support=Support(False, "up to 5 reports", "up to 5 reports", "up to 5 reports"),
     ),
     Feature(
         title=ugettext_lazy(
@@ -79,5 +79,15 @@ GROUP.add_features([
             "leaving a virtual paper trail of your changes."
         ),
         support=Support(False, True, True, True),
+    ),
+    Feature(
+        title=ugettext_lazy(
+            "Power BI & Tableau integration"
+        ),
+        description=ugettext_lazy(
+            "Integrate CommCare with Tableau and Power BI to "
+            "visualize and report on your data."
+        ),
+        support=Support(False, "Add-on", True, True),
     ),
 ])

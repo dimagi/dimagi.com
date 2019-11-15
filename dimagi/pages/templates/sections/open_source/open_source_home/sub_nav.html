@@ -1,0 +1,30 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="sub-nav"
+         id="sub-nav">
+  <div class="content">
+    <div class="destinations">
+      <div class="content">
+        <a href="#about"
+           class="{% click_subnav 'about' %}">
+          {% blocktrans %}
+            About
+          {% endblocktrans %}
+        </a>
+        <a href="#software"
+           class="{% click_subnav 'software' %}">
+          {% blocktrans %}
+            Software
+          {% endblocktrans %}
+        </a>
+        <a href="#community"
+           class="{% click_subnav 'community' %}">
+          {% blocktrans %}
+            Community
+          {% endblocktrans %}
+        </a>
+      </div>{# .content #}
+    </div>{# .destinations #}
+  </div>{# .content #}
+</section>

@@ -44,6 +44,22 @@ def agricultural_logistics(request):
         'sector': 'agricultural_logistics',
     }
     return render(request, 'pages/sectors/agricultural_logistics.html', context)
+
+
+@enable_ab_test(DEMO_WORKFLOW_V2)
+def agricultural_cooperatives(request):
+    context = {
+        'sector': 'agricultural_cooperatives',
+    }
+    return render(request, 'pages/sectors/agricultural_cooperatives.html', context)
+
+
+@enable_ab_test(DEMO_WORKFLOW_V2)
+def agriculture_finance(request):
+    context = {
+        'sector': 'agriculture_finance',
+    }
+    return render(request, 'pages/sectors/agriculture_finance.html', context)
   
   
 @enable_ab_test(DEMO_WORKFLOW_V2)

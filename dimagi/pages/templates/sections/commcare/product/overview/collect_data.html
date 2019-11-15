@@ -48,4 +48,14 @@
     <div class="column collect-data-image white-lazy-bg"
          data-lazybg="true"></div>
   </div>{# .grid-2-at-medium #}
+  <div class="cta pad-vert-medium">
+    <p>
+      <a class="button {% click_body 'features-view' %}" 
+         href="{% url 'commcare_features' %}">
+        {% blocktrans %}
+          View All Features
+        {% endblocktrans %}
+      </a>
+    </p>
+  </div>{# .cta #}
 {% endblock %}

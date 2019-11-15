@@ -26,7 +26,7 @@
 {% endblock %}
 
 {% block content %}
-  <section>
+  <section class="services-container green-theme">
     {% include "sections/sectors/agriculture_extension_programs/sub_nav.html" %}
     {% include "sections/sectors/agriculture_extension_programs/overview.html" %}
     {% include "sections/sectors/agriculture_extension_programs/part1.html" %}
@@ -43,7 +43,7 @@
   <div class="modal"
        data-dismissible="true"
        data-size="medium"
-       id="schedule-demo-form">
+       id="demo-sector">
     <div class="modal-scroll">
       <div class="modal-wrapper">
         <a href="#" class="modal-close-button"></a>
@@ -53,7 +53,7 @@
               Schedule A Demo
             {% endblocktrans %}
           </h3>
-          <section id="schedule-demo-form-content"></section>
+          <section id="demo-sector-content"></section>
         </div>{# .content #}
       </div>{# .modal-wrapper #}
     </div>{# .modal-scroll #}
@@ -89,6 +89,12 @@
       onFormSubmit: function () {
         window.open('https://cdn2.hubspot.net/hubfs/503070/Sector%20PDFs/CommCare_Agriculture.pdf', "_blank");
       },
+    });
+    hbspt.forms.create({
+      portalId: "503070",
+      formId: "afb4d5a0-826f-4a56-8c21-552d4b6dafa3",
+      target: "#demo-sector-content",
+      css: "",
     });
   </script>
 {% endblock %}

@@ -1,0 +1,81 @@
+{% extends "sections/commcare/product_features/overview/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block manual_selected %}selected{% endblock %}
+
+{% block content %}
+  <section class="manual">
+    <h3 class="blue pad-vert-base center-align">
+      {% blocktrans %}
+        Improve program efficiency
+      {% endblocktrans %}
+    </h3>
+    <div class="grid-2-at-large blue-theme grid-valign-middle grid-col-space-medium grid-reverse">
+      <div class="column pad-right-medium-at-base align-left">
+        <ul class="check-list grid-2-at-extra-large">
+          <li>
+            <p class="blue gap-bottom-none">
+              {% blocktrans %}
+                Field staff performance indicators
+              {% endblocktrans %}
+            </p>
+            <ol class="gap-top-base">
+              {% blocktrans %}
+                Monitor field work in real time with pre-built reports that 
+                highlight problem areas and help you address inefficiencies.
+              {% endblocktrans %}
+            </ol>
+          </li>
+          
+          <li>
+            <p class="blue gap-bottom-none">
+              {% blocktrans %}
+                Auto alerts and reminders
+              {% endblocktrans %}
+            </p>
+            <ol class="gap-top-base">
+              {% blocktrans %}
+                Send alerts to field staff when tasks are overdue, and conduct 
+                more efficient beneficiary outreach with 2-way SMS messaging.
+              {% endblocktrans %}
+            </ol>
+          </li>
+
+          <li>
+            <p class="blue gap-bottom-none">
+              {% blocktrans %}
+                One-click app updates
+              {% endblocktrans %}
+            </p>
+            <ol class="gap-top-base">
+              {% blocktrans %}
+                Easily update forms and publish changes to your field teams with an 
+                app manager that gives you control over versioning and deployment, 
+                even when field staff are offline.
+              {% endblocktrans %}
+            </ol>
+          </li>
+
+          <li>
+            <p class="blue gap-bottom-none">
+              {% blocktrans %}
+                Collaborative data collection
+              {% endblocktrans %}
+            </p>
+            <ol class="gap-top-base">
+              {% blocktrans %}
+                Empower teams to distribute data collection responsibilities themselves, 
+                even when offline or geographically distributed, so you don’t need to 
+                manually manage field tasks.
+              {% endblocktrans %}
+            </ol>
+          </li>
+        </ul>
+      </div>{# .column #}
+      <div class="column improve-efficiency-image white-lazy-bg"
+           data-lazybg="true">
+      </div>{# .column #}
+    </div>{# .grid-2-at-medium #}
+  </section>
+{% endblock %}

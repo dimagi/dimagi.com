@@ -1,0 +1,164 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section data-lazybg="true"
+         id="programs">
+  <div class="accent-gray-bg" >
+    <div class="content pad-top-medium pad-bottom-medium programs-images">
+      <h2 class="align-center pad-bottom-small">
+        {% blocktrans %}
+          Featured CommCare-Based Agricultural <br class="hide-until-medium">
+          Finance Projects
+        {% endblocktrans %}
+      </h2>
+      <div class="grid grid-2-at-large grid-1-at-medium grid-row-equal-heights grid-col-space-small">
+        <div class="column">
+          <div class="pad-bottom-base white-bg">
+            <div class="image featured-project1" data-lazybg="true"></div>
+            <div class="pad-line pad-top-none-at-large pad-top-line-at-extra-large">
+              <h5 >
+                <strong class="body-color">
+                  {% blocktrans %}
+                    Micro Insurance Academy <br>
+                    India
+                  {% endblocktrans %}
+                </strong>
+              </h5>
+              <p class="body-color">
+                {% blocktrans %}
+                  MIA uses CommCare to register members and asset values to 
+                  help with premiums calculations and claims management.
+                {% endblocktrans %}
+              </p>
+              <p class="pad-top-line-at-extra-large">
+                <a href="#modal-feature-card-1"
+                   class="arrow link-gray read-more">
+                  {% blocktrans %}
+                    Read More
+                  {% endblocktrans %}
+                </a>
+              </p>
+            </div> {# .pad-line #}
+          </div> {# .white-bg #}
+        </div> {# .column #}
+        <div class="column">
+          <div class="pad-bottom-base white-bg">
+            <div class="image featured-project2" data-lazybg="true"></div>
+            <div class="pad-line pad-top-none-at-large pad-top-line-at-extra-large">
+              <h5>
+                <strong class="body-color">
+                {% blocktrans %}
+                  myAgro <br>
+                  Senegal
+                {% endblocktrans %}
+                </strong>
+              </h5>
+              <p class="body-color">
+                {% blocktrans %}
+                  myAgro uses CommCare to decrease enrollment times and 
+                  improves efficiency and data quality for their 
+                  microfinance in Senegal.
+                {% endblocktrans %}
+              </p>
+              <p class="pad-top-line-at-extra-large">
+                <a href="#modal-feature-card-2"
+                   class="arrow link-gray read-more">
+                  {% blocktrans %}
+                    Read More
+                  {% endblocktrans %}
+                </a>
+              </p>
+            </div> {# .pad-line #}
+          </div> {# .white-bg #}
+        </div> {# .column #}
+      </div> {# .grid #}
+    </div> {# .content #}
+  </div> {# .accent-gray-bg #}
+</section>
+
+{% block modals %}
+  <div class="modal"
+       data-dismissible="true"
+       data-size="medium"
+       id="modal-feature-card-1">
+    <div class="modal-scroll">
+      <div class="modal-wrapper">
+        <a href="#" class="modal-close-button"></a>
+        <div class="content pad-horz-medium-at-medium pad-horz-line pad-vert-none programs-images">
+          <h4>
+            <strong>
+            {% blocktrans %}
+              Micro Insurance Academy <br>
+              India
+            {% endblocktrans %}
+            </strong>
+          </h4>
+          <div class="grid-flex-at-large">
+            <div class="column">
+              <p>
+                {% blocktrans %}
+                  Dimagi is launching a pilot with MIA to help with premiums 
+                  calculations. Household members are registered and asset 
+                  values are calculated programmatically, allowing for 
+                  frontline workers to focus on providing counseling videos 
+                  on claims coverage. Data collected are stored on CommCareHQ 
+                  to allow for swift payouts in the event of a claim. This 
+                  system is designed to expand into extremely low-resource 
+                  settings while shifting claims management to an off-site, 
+                  remote setting to reduce overhead expenditures.
+                {% endblocktrans %}
+              </p>
+            </div> {# .column #}
+            <div class="column">
+              <div class="image featured-project1 modal-popup" data-lazybg="true"></div>
+            </div> {# .column #}
+          </div> {# .grid #}
+        </div> {# .content #}
+      </div> {# .modal-wrapper #}
+    </div> {# .modal-scroll #}
+  </div> {# .modal #}
+
+  <div class="modal"
+       data-dismissible="true"
+       data-size="medium"
+       id="modal-feature-card-2">
+    <div class="modal-scroll">
+      <div class="modal-wrapper">
+        <a href="#" class="modal-close-button"></a>
+        <div class="content pad-horz-medium-at-medium pad-horz-line pad-vert-none turquoise-theme programs-images">
+          <h4>
+            <strong>
+            {% blocktrans %}
+              myAgro <br>
+              Senegal
+            {% endblocktrans %}
+            </strong>
+          </h4>
+          <div class="grid-flex-at-large">
+            <div class="column">
+              <p>
+                {% blocktrans %}
+                  The current microfinance system in Senegal assumes that 
+                  farmers are too poor to save. myAgro disagrees with this 
+                  assumption. Instead, they are helping farms save 
+                  little-by-little. Through their bank-less savings scheme, 
+                  average harvests for myAgro farmers increase by 50% – 100% 
+                  over traditional farms and net farming income increases 
+                  $150-$300 per farmer. MyAgro uses CommCare to decrease the 
+                  amount of time to enroll each farmer, increase real-time data 
+                  processing for faster data-driven decision making, improve 
+                  data quality, and reduce human resources and enrollment 
+                  materials costs associated with staff time, pen & paper, etc.
+                {% endblocktrans %}
+              </p>
+            </div> {# .column #}
+            <div class="column">
+              <div class="image featured-project2 modal-popup" data-lazybg="true"></div>
+            </div> {# .column #}
+          </div> {# .grid #}
+        </div> {# .content #}
+      </div> {# .modal-wrapper #}
+    </div> {# .modal-scroll #}
+  </div>{# .modal #}
+
+{% endblock %}

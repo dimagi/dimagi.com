@@ -24,6 +24,13 @@ def product(request):
 
 
 @enable_ab_test(DEMO_WORKFLOW_V2)
+def product_features(request):
+    context = _get_global_context()
+    context['kmq_track_pricing_nav'] = "Clicked Start Trial - CommCare (top fold)"
+    return render(request, 'pages/commcare/product_features.html', context)
+
+
+@enable_ab_test(DEMO_WORKFLOW_V2)
 def pricing(request):
     context = _get_global_context()
     context['feature_groups'] = [g.GROUP for g in feature_groups]
