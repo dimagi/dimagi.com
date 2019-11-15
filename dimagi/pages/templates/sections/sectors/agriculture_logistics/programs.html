@@ -1,0 +1,162 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section data-lazybg="true"
+         id="programs">
+  <div class="accent-gray-bg" >
+    <div class="content pad-top-medium pad-bottom-medium programs-images">
+      <h2 class="align-center pad-bottom-small">
+        {% blocktrans %}
+          Featured CommCare-Based Agricultural <br class="hide-until-medium">
+          Logistics Projects
+        {% endblocktrans %}
+      </h2>
+      <div class="grid grid-2-at-large grid-1-at-medium grid-row-equal-heights grid-col-space-small">
+        <div class="column">
+          <div class="pad-bottom-base white-bg">
+            <div class="image featured-project1" data-lazybg="true"></div>
+            <div class="pad-line pad-top-none-at-large pad-top-line-at-extra-large">
+              <h5 >
+                <strong class="body-color">
+                  {% blocktrans %}
+                    Smallholder Alliance for Sorghum <br>
+                    Haiti
+                  {% endblocktrans %}
+                </strong>
+              </h5>
+              <p class="body-color">
+                {% blocktrans %}
+                  SMASH Mobile is a mobile-based reporting system designed to 
+                  strengthen the sorghum supply chain in Haiti.
+                {% endblocktrans %}
+              </p>
+              <p class="pad-top-line-at-extra-large">
+                <a href="#modal-feature-card-1"
+                   class="arrow link-gray read-more">
+                  {% blocktrans %}
+                    Read More
+                  {% endblocktrans %}
+                </a>
+              </p>
+            </div> {# .pad-line #}
+          </div> {# .white-bg #}
+        </div> {# .column #}
+        <div class="column">
+          <div class="pad-bottom-base white-bg">
+            <div class="image featured-project2" data-lazybg="true"></div>
+            <div class="pad-line pad-top-none-at-large pad-top-line-at-extra-large">
+              <h5>
+                <strong class="body-color">
+                {% blocktrans %}
+                  World Food Program <br>
+                  Zambia
+                {% endblocktrans %}
+                </strong>
+              </h5>
+              <p class="body-color">
+                {% blocktrans %}
+                  The World Food Program uses CommCare to track the usage of 
+                  oil and grain at schools to determine their resupply needs.
+                {% endblocktrans %}
+              </p>
+              <p class="pad-top-line-at-extra-large">
+                <a href="#modal-feature-card-2"
+                   class="arrow link-gray read-more">
+                  {% blocktrans %}
+                    Read More
+                  {% endblocktrans %}
+                </a>
+              </p>
+            </div> {# .pad-line #}
+          </div> {# .white-bg #}
+        </div> {# .column #}
+      </div> {# .grid #}
+    </div> {# .content #}
+  </div> {# .accent-gray-bg #}
+</section>
+
+{% block modals %}
+  <div class="modal"
+       data-dismissible="true"
+       data-size="medium"
+       id="modal-feature-card-1">
+    <div class="modal-scroll">
+      <div class="modal-wrapper">
+        <a href="#" class="modal-close-button"></a>
+        <div class="content pad-horz-medium-at-medium pad-horz-line pad-vert-none programs-images">
+          <h4>
+            <strong>
+            {% blocktrans %}
+              Smallholder Alliance for Sorghum <br>
+              Haiti
+            {% endblocktrans %}
+            </strong>
+          </h4>
+          <div class="grid-flex-at-large">
+            <div class="column">
+              <p>
+                {% blocktrans %}
+                  In 2016, Dimagi helped launch SMASH Mobil, an integrated 
+                  mobile technology and reporting system designed to 
+                  strengthen the sorghum supply chain in Haiti. The SMASH 
+                  Mobil system helps actors across the value chain use data 
+                  capture and analytics to effectively manage agricultural 
+                  extension and logistics activities, including crop 
+                  monitoring, yield projections, purchasing, transport, 
+                  conditioning, and inventory management.
+                {% endblocktrans %}
+              </p>
+            </div> {# .column #}
+            <div class="column">
+              <div class="image featured-project1 modal-popup" data-lazybg="true"></div>
+            </div> {# .column #}
+          </div> {# .grid #}
+        </div> {# .content #}
+      </div> {# .modal-wrapper #}
+    </div> {# .modal-scroll #}
+  </div> {# .modal #}
+
+  <div class="modal"
+       data-dismissible="true"
+       data-size="medium"
+       id="modal-feature-card-2">
+    <div class="modal-scroll">
+      <div class="modal-wrapper">
+        <a href="#" class="modal-close-button"></a>
+        <div class="content pad-horz-medium-at-medium pad-horz-line pad-vert-none turquoise-theme programs-images">
+          <h4>
+            <strong>
+            {% blocktrans %}
+              World Food Program <br>
+              Zambia
+            {% endblocktrans %}
+            </strong>
+          </h4>
+          <div class="grid-flex-at-large">
+            <div class="column">
+              <p>
+                {% blocktrans %}
+                  Dimagi has been running several trials of food distribution 
+                  programs for rural schools in Zambia. CommCare has been 
+                  deployed to link schools to grain and cooking oil silos. 
+                  Teachers send an SMS stating their attendance levels over 
+                  a period, as well as on-hand levels of cooking oils and 
+                  grain. CommCare is able to calculate consumption rates based 
+                  on this data, alerting silo managers to when particular 
+                  schools will require a resupply and at what levels. The 
+                  instantaneous nature of data processing ensures neither 
+                  wastage nor under-supply of commodities for nearly 5,000 
+                  children in 88 schools that rely on this program for food.
+                {% endblocktrans %}
+              </p>
+            </div> {# .column #}
+            <div class="column">
+              <div class="image featured-project2 modal-popup" data-lazybg="true"></div>
+            </div> {# .column #}
+          </div> {# .grid #}
+        </div> {# .content #}
+      </div> {# .modal-wrapper #}
+    </div> {# .modal-scroll #}
+  </div>{# .modal #}
+
+{% endblock %}
