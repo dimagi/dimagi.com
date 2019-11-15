@@ -12,7 +12,7 @@
     h1 {
       margin-left: 0;
       margin-right: 0;
-      max-width: 66%;
+      max-width: 100%;
     }
   }
 }
@@ -25,6 +25,27 @@
     large: (w: 868px, h: 333px),
     extra-large: (w: 1016px, h: 408px),
   );
+
+  .carousel-slide {
+    background-color: $color-white;
+    border: 1px solid $color-border;
+
+    @media (min-width: $width-mobile) {
+      height: 890px;
+    }
+
+    @media (min-width: $width-desktop) {
+      height: 624px;
+    }
+
+    @media (min-width: $width-desktop-lg) {
+      height: 450px;
+    }
+
+    @media (min-width: $width-desktop-xl) {
+      height: 400px;
+    }
+  }
 
   @include make-carousel-slide(image-oikoi, $_sizes, '../../../pages/commcare/product/testimonial1.jpg');
   @include make-carousel-slide(image-nou-kod, $_sizes, '../../../pages/commcare/product/testimonial2.jpg');
@@ -91,19 +112,19 @@
     background-color: $color-white;
 
     @media (min-width: $width-mobile) {
-      height: 890px;
+      height: 910px;
     }
 
     @media (min-width: $width-desktop) {
-      height: 824px;
+      height: 880px;
     }
 
     @media (min-width: $width-desktop-lg) {
-      height: 650px;
+      height: 690px;
     }
 
     @media (min-width: $width-desktop-xl) {
-      height: 600px;
+      height: 660px;
     }
   }
 }

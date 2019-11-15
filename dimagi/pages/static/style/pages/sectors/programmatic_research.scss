@@ -3,6 +3,11 @@
 @import 'app/variables/sizes';
 @import 'app/variables/type';
 
+@mixin image {
+  height: 200px;
+  background-size: contain;
+}
+
 #programmatic-research-intro {
   $_base-height: 190px;
   $_height-by-size: (
@@ -71,41 +76,35 @@
 
 .news .image.testimonial1 {
   @include background-cover('../../../pages/sectors/programmatic-research/news/research_blog_one.jpg');
-  height: 200px;
-  background-size: contain;
+  @include image;
   background-position: left;
 }
 
 .news .image.testimonial2 {
   @include background-cover('../../../pages/sectors/programmatic-research/news/research_blog_two.jpg');
-  height: 200px;
-  background-size: contain;
+  @include image;
   background-position: left;
 }
 
 .news .image.testimonial3 {
   @include background-cover('../../../pages/sectors/programmatic-research/news/research_blog_three.jpg');
-  height: 200px;
-  background-size: contain;
+  @include image;
   background-position: left;
 }
 
 .programs .image.testimonial1 {
   @include background-cover('../../../pages/sectors/programmatic-research/programs/research_project_one.jpg');
-  height: 200px;
-  background-size: contain;
+  @include image;
 }
 
 .programs .image.testimonial2 {
   @include background-cover('../../../pages/sectors/programmatic-research/programs/research_project_two.jpg');
-  height: 200px;
-  background-size: contain;
+  @include image;
 }
 
 .programs .image.testimonial3 {
   @include background-cover('../../../pages/sectors/programmatic-research/programs/research_project_three.jpg');
-  height: 200px;
-  background-size: contain;
+  @include image;
 }
 
 .programs .image.testimonial1,
@@ -120,5 +119,5 @@
 
 .link-gray:hover,
 .link-gray:focus {
-  color: $color-blue !important;
+  color: $color-purple !important; // scss-lint:disable ImportantRule
 }

@@ -1,0 +1,25 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<div class="item align-center border-right">
+  <div class="theme-icon gap-bottom-line">
+    <img src="{% static 'pages/open_source/open_source_home/icon-developer-forum.png'%}">
+  </div>
+  <h3>
+    {% blocktrans %}
+      Developer Forum
+    {% endblocktrans %}
+  </h3>
+  <p>
+    {% blocktrans %}
+      Are you a developer? Check out developer-specific topics.
+    {% endblocktrans %}
+  </p>
+  <p>
+    <a class="arrow" href="https://forum.dimagi.com/c/developers">
+      {% blocktrans %}
+        Join the Developer Forum
+      {% endblocktrans %}
+    </a>
+  </p>
+</div>{# .item #}

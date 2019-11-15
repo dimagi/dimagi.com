@@ -1,0 +1,66 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="sub-nav"
+         id="sub-nav">
+  <div class="content">
+    <div class="actions">
+      <a href="{{ URL_TRIAL }}"
+         class="hide-until-large {% click_subnav 'trial' %}"
+         data-kmq-external="true"
+         data-kmq-name="Clicked Start Trial - CommCare (sticky bar)"
+         target="_blank">
+        {% blocktrans %}
+          Start Trial
+        {% endblocktrans %}
+      </a>
+
+      {% click_subnav 'demo' as click_class %}
+      {% include "partials/schedule_demo_button.html" with click_class=click_class button_class="primary" %}
+
+    </div>{# .actions #}
+    <a class="prompt-link {% click_subnav 'browse' %}"
+       href="#">
+      {% blocktrans %}
+        Browse
+      {% endblocktrans %}
+    </a>
+    <div class="destinations">
+      <div class="content">
+        <a href="{{ URL_TRIAL }}"
+           data-kmq-external="true"
+           data-kmq-name="Clicked Start Trial - CommCare (sticky bar mobile)"
+           class="hide-at-medium {% click_subnav 'trial-mobile' %}"
+           target="_blank">
+          {% blocktrans %}
+            Start Trial
+          {% endblocktrans %}
+        </a>
+        <a href="#overview"
+           class="{% click_subnav 'overview' %}">
+          {% blocktrans %}
+            Features
+          {% endblocktrans %}
+        </a>
+        <a href="#watchdemo"
+           class="{% click_subnav 'watchdemo' %}">
+          {% blocktrans %}
+            Watch Demo
+          {% endblocktrans %}
+        </a>
+        <a href="#testimonials"
+           class="{% click_subnav 'testimonials' %}">
+          {% blocktrans %}
+            Testimonials
+          {% endblocktrans %}
+        </a>
+        <a href="#partners"
+           class="{% click_subnav 'partners' %}">
+          {% blocktrans %}
+            Partners
+          {% endblocktrans %}
+        </a>
+      </div>{# .content #}
+    </div>{# .destinations #}
+  </div>{# .content #}
+</section>

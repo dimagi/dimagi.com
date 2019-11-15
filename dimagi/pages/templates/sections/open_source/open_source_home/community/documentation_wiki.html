@@ -1,0 +1,25 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<div class="item align-center border-right">
+  <div class="theme-icon gap-bottom-line">
+    {% include "svg/commcare/icon/support.html" %}
+  </div>
+  <h3>
+    {% blocktrans %}
+      Documentation Wiki
+    {% endblocktrans %}
+  </h3>
+  <p>
+    {% blocktrans %}
+      Useful CommCare documentation, organized by various topics.
+    {% endblocktrans %}
+  </p>
+  <p>
+    <a class="arrow" href="https://confluence.dimagi.com/display/commcarepublic/Home">
+      {% blocktrans %}
+        Visit the Wiki
+      {% endblocktrans %}
+    </a>
+  </p>
+</div>{# .item #}

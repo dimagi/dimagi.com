@@ -31,8 +31,14 @@
         </li>
         <li>
           {% blocktrans %}
-            Export your CommCare data to use in your favorite 3rd party
-            data analysis tool
+            Export data collected in CommCare for use in any 3rd 
+            party tool, from Excel to SPSS
+          {% endblocktrans %}
+        </li>
+        <li>
+          {% blocktrans %}
+            Seamlessly integrate CommCare with Tableau and Power BI for 
+            beautiful reports and visualizations
           {% endblocktrans %}
         </li>
       </ul>
@@ -41,4 +47,14 @@
          data-lazybg="true">
     </div>{# .column #}
   </div>{# .grid-2-at-medium #}
+  <div class="cta pad-vert-medium">
+    <p>
+      <a class="button {% click_body 'features-view' %}" 
+         href="{% url 'commcare_features' %}">
+        {% blocktrans %}
+          View All Features
+        {% endblocktrans %}
+      </a>
+    </p>
+  </div>{# .cta #}
 {% endblock %}

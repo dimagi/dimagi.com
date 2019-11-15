@@ -26,6 +26,7 @@ require([
   'app/contactForm',
   'app/demoForm',
   'app/subscriptionForm',
+  'app/topBannerAd',
   'app/abAudit',
   'app/progressBar',
   'modernizr',
@@ -50,6 +51,7 @@ require([
     ContactForm,
     DemoForm,
     SubscriptionForm,
+    TopBannerAd,
     ABAudit,
     ProgressBar
 ) {
@@ -73,6 +75,7 @@ require([
       ContactForm,
       DemoForm,
       SubscriptionForm,
+      TopBannerAd,
       ABAudit,
       ProgressBar,
     ], function (m) {
