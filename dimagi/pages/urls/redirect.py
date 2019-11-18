@@ -10,7 +10,6 @@ from dimagi.pages.views import redirect
 
 redirect_urlpatterns = [
     url(r'^products/$', redirect.page('commcare')),
-    url(r'^partners/$', redirect.page('commcare')),
     url(r'^smartcare/$', redirect.page('commcare')),
     url(r'^open-data-kit/$', redirect.page('commcare')),
     url(r'^mobile-health/$', redirect.page('commcare')),
@@ -24,6 +23,8 @@ redirect_urlpatterns = [
     url(r'^confidant.shtml$', redirect.page('commcare')),
     url(r'^commtrack/$', redirect.page('commcare')),
     url(r'^collaborate/openrosa/$', redirect.page('commcare')),
+
+    url(r'^certified-partners/$', redirect.page('partners')),
 
     url(r'^learn/$', redirect.page('contact')),
     url(r'^support/$', redirect.page('contact')),

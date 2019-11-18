@@ -1,0 +1,32 @@
+{% load dimagidotcom %}
+{% load i18n %}
+
+<section class="pad-bottom-medium border-top white-bg"
+         id="latest_partners">
+  <div class="content pad-top-medium align-center">
+    <h2 class="theme-color pad-bottom-line">
+      {% blocktrans %}
+        Our Latest Partners
+      {% endblocktrans %}
+    </h2>
+  </div>{# .content #}
+  <div class="content">
+    {% if partners_count == 1 %}
+      <div class="content-width-medium grid-1-at-medium grid-row-space-line gap-top-small">
+        {% include 'partials/latest_partners_summary.html' %}
+      </div>{# .grid-2-at-medium #}
+    {% else %}
+      <div class="grid-2-at-medium grid-row-space-line gap-top-small">
+        {% include 'partials/latest_partners_summary.html' %}
+      </div>{# .grid-2-at-medium #}
+    {% endif %}
+    <p class="align-center pad-top-line">
+      <a class="button uppercase {% click_body 'latest_partners' %}"
+         href="{% url 'archive_category' 'latest-partners' %}">
+        {% blocktrans %}
+          View All
+        {% endblocktrans %}
+      </a>
+    </p>
+  </div>
+</section>

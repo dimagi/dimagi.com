@@ -14,27 +14,29 @@
 
     <div class="grid-4-at-medium grid-2-at-small grid-row-equal-heights gap-bottom-small">
       {% for cat in categories %}
-        <div class="column">
-          <a class="tile category-tile"
-             href="{% url 'archive_category' cat.slug %}">
-            <div class="gap-bottom-base">
-              {% include cat.icon %}
-            </div>
-            <h6>
-              {{ cat.name }}
-            </h6>
-            <p class="body-color category-desc">
-              {{ cat.description|safe }}
-            </p>
-            <p class="cta">
-              <span class="link arrow orange">
-                {% blocktrans %}
-                  Browse Articles
-                {% endblocktrans %}
-              </span>
-            </p>
-          </a>
-        </div>{# .column #}
+        {% if cat.slug != "latest-partners" %}
+          <div class="column">
+            <a class="tile category-tile"
+               href="{% url 'archive_category' cat.slug %}">
+              <div class="gap-bottom-base">
+                {% include cat.icon %}
+              </div>
+              <h6>
+                {{ cat.name }}
+              </h6>
+              <p class="body-color category-desc">
+                {{ cat.description|safe }}
+              </p>
+              <p class="cta">
+                <span class="link arrow orange">
+                  {% blocktrans %}
+                    Browse Articles
+                  {% endblocktrans %}
+                </span>
+              </p>
+            </a>
+          </div>{# .column #}
+        {% endif %}
       {% endfor %}
     </div>{# .grid-4-at-medium #}
   </div>

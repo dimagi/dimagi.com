@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block body_class %}partners-page tucked-hero{% endblock %}
+
+{% block title %}{% blocktrans %}
+  Our Partners
+{% endblocktrans %}{% endblock %}
+
+{% block description %}{% blocktrans %}
+  More than 2000 projects across 80 countries trust CommCare
+{% endblocktrans %}{% endblock %}
+
+{% block stylesheets %}
+  {% compress css %}
+    <link href="{% sass_src 'style/pages/partners.scss' %}" rel="stylesheet" media="screen" type="text/css" />
+  {% endcompress %}
+{% endblock %}
+
+{% block hero %}
+  <div id="top"></div>
+  <section class="hero partners-page"
+           data-lazybg="true"
+           id="hero">
+    <div class="content content-width-large inverted align-center">
+      <h1 class="gap-vert-line align-center pad-top-medium">
+        {% blocktrans %}
+          Our Partners
+        {% endblocktrans %}
+      </h1>
+      <h4 class="gap-vert-line align-center">
+        {% blocktrans %}
+          More than 2000 projects across 80 countries trust CommCare
+        {% endblocktrans %}
+      </h4>
+    </div> {# .content #}
+  </section>
+{% endblock %}
+
+{% block content %}
+  <section class="services-container turquoise-theme">
+    {% include "sections/commcare/partners/sub_nav.html" %}
+    {% include "sections/commcare/partners/brief_overview.html" %}
+    {% include "sections/commcare/partners/partners_list.html" %}
+    {% include "sections/commcare/partners/feature_partners.html" %}
+    {% include "sections/commcare/partners/advice_partners.html" %}
+    {% include "sections/commcare/partners/latest_partners.html" %}
+    {% include "sections/commcare/partners/action_partners.html" %}
+    {% include "sections/commcare/partners/certified_partners.html" %}
+  </section>
+{% endblock %}
+
+{% block modals %}
+  <div class="modal"
+     data-dismissible="true"
+     data-size="medium"
+     id="global-services-form">
+    <div class="modal-scroll">
+      <div class="modal-wrapper">
+        <a href="#" class="modal-close-button"></a>
+        <div class="content pad-horz-medium-at-medium pad-horz-line pad-vert-none turquoise-theme">
+          <h3>
+            {% blocktrans %}
+              Contact Our Global Services Team
+            {% endblocktrans %}
+          </h3>
+          <section id="global-services-form-content"></section>
+        </div>{# .content #}
+      </div>{# .modal-wrapper #}
+    </div>{# .modal-scroll #}
+  </div>{# .modal #}
+{% endblock %}
+
+{% block js %}
+  <!--[if lte IE 8]>
+    <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+  <![endif]-->
+  <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+  <script>
+    hbspt.forms.create({
+      portalId: "503070",
+      formId: "4ea47909-e62e-4d34-8d75-47e08fb9711b",
+      target: "#global-services-form-content",
+      css: ""
+    });
+  </script>
+{% endblock %}

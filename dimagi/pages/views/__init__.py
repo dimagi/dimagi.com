@@ -1,6 +1,7 @@
 from dimagi.pages.views.core import (
     home,
     services,
+    partners,
     contact,
     proposals,
     case_management,
