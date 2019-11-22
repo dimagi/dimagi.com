@@ -3,8 +3,6 @@
 @import 'app/variables/sizes';
 @import 'app/variables/type';
 
-$font-size-banner: 13px;
-
 @include jacket ($jacket-critical) {
   .sub-nav-fixed-bottom body {
     padding-bottom: $space-medium;
@@ -18,7 +16,7 @@ $font-size-banner: 13px;
     min-height: $space-medium;
     position: fixed;
     width: 100%;
-    z-index: 6;
+    z-index: 2;
   }
 
   .sub-nav .wistia_click_to_play {
@@ -347,24 +345,5 @@ $font-size-banner: 13px;
     .content {
       transition: opacity 300ms 0s;
     }
-  }
-}
-
-@include jacket ($jacket-critical) {
-  .sub-nav p:not(.button) {
-    color: $color-body-text;
-    display: block;
-    font-size: $font-size-banner;
-    font-weight: $font-weight-medium;
-    letter-spacing: 1px;
-    line-height: $space-medium;
-    margin-right: 20px;
-    text-transform: uppercase;
-  }
-}
-
-@include jacket ($jacket-standard) {
-  .sub-nav p:not(.button) {
-    color: $color-body-text;
   }
 }
