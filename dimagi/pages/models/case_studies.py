@@ -1,9 +1,24 @@
 from __future__ import absolute_import
-from collections import namedtuple
 
 
-CaseStudy = namedtuple(
-    'CaseStudy',
-    'title summary partners countries sectors features slug '
-    'download_url hubspot_form'
-)
+class CaseStudy(object):
+    """
+    Using a class instead of named tuple to handle object changes over time
+    as requirements change for project information to avoid errors and merge
+    issues.
+    """
+
+    def __init__(self, title=None, summary=None, partners=None, countries=None,
+                 sectors=None, features=None, slug=None, download_url=None, hubspot_form=None,
+                 download_url_language=None, hubspot_form_language=None):
+        self.title = title
+        self.summary = summary
+        self.partners = partners
+        self.countries = countries
+        self.sectors = sectors
+        self.features = features
+        self.slug = slug
+        self.download_url = download_url
+        self.hubspot_form = hubspot_form
+        self.download_url_language = download_url_language
+        self.hubspot_form_language = hubspot_form_language
