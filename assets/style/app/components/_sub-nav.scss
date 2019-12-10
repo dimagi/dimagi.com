@@ -121,6 +121,17 @@ $font-size-banner: 13px;
       padding: 0 14px;
     }
   }
+
+  .sub-nav a:not(.button).download-language {
+    margin-right: 0;
+
+    span {
+      border-radius: 3px;
+      display: inline-block;
+      line-height: $space-line;
+      padding: 0 14px;
+    }
+  }
 }
 
 @include jacket ($jacket-standard) {
@@ -143,6 +154,15 @@ $font-size-banner: 13px;
     background-color: $color-link;
     border-color: $color-link;
     color: color-invert($color-link);
+  }
+
+  .no-touch .sub-nav a:not(.button).download-language span { // scss-lint:disable SelectorDepth
+    border: 1px solid $color-border;
+  }
+
+  .touch .sub-nav a:not(.button).primary span, // scss-lint:disable SelectorDepth
+  .no-touch.sub-nav-fixed-top .sub-nav a.download-language span { // scss-lint:disable SelectorDepth
+    border-color: $color-orange;
   }
 }
 
