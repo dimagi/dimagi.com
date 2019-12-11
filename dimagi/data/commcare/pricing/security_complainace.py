@@ -10,45 +10,45 @@ from dimagi.pages.models.commcare import (
 
 GROUP = FeatureGroup(
     title=ugettext_lazy(
-        "Messaging "
+        "Security and Complainace"
     ),
-    slug='messaging',
+    slug='security-complainace',
 )
 
 GROUP.add_features([
     Feature(
         title=ugettext_lazy(
-            "One-way messaging "
+            "Two-factor authentication"
         ),
         support=Support(True, True, True, True),
     ),
     Feature(
         title=ugettext_lazy(
-            "Live SMS chat"
-        ),
-        support=Support(True, True, True, True),
-    ),
-    Feature(
-        title=ugettext_lazy(
-            "Access to our in-country gateways"
-        ),
-        support=Support(True, True, True, True),
-    ),
-    Feature(
-        title=ugettext_lazy(
-            "Android gateway setup"
-        ),
-        support=Support(True, True, True, True),
-    ),
-    Feature(
-        title=ugettext_lazy(
-            "Two-way messaging"
+            "Data de-identification"
         ),
         support=Support(False, False, True, True),
     ),
     Feature(
         title=ugettext_lazy(
-            "Support to connect new in-country gateways"
+            "Security policy control and enforcement"
+        ),
+        support=Support(False, False, True, True),
+    ),
+    Feature(
+        title=ugettext_lazy(
+            "HIPAA compliance assurance"
+        ),
+        support=Support(False, False, True, True),
+    ),
+    Feature(
+        title=ugettext_lazy(
+            "Customized GDPR Data Processing Agreement"
+        ),
+        support=Support(False, False, True, True),
+    ),
+    Feature(
+        title=ugettext_lazy(
+            "Customized product terms"
         ),
         support=Support(False, False, True, True),
     ),

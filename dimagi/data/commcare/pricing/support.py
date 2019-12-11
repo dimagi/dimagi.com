@@ -17,49 +17,25 @@ GROUP = FeatureGroup(
 GROUP.add_features([
     Feature(
         title=ugettext_lazy(
-            "Online Learning Resources"
-        ),
-        description=ugettext_lazy(
-            "Everyone has access to the CommCare Help Site and the "
-            "CommCare Users forum. The CommCare Help Site has helpful "
-            "documentation and tutorials. CommCare Users is a "
-            "community-supported forum, for questions related to using "
-            "CommCare. CommCare users from all over the world ask "
-            "questions and share information."
+            "Online learning resources"
         ),
         support=Support(True, True, True, True),
     ),
     Feature(
         title=ugettext_lazy(
-            "Direct Email Support"
-        ),
-        description=ugettext_lazy(
-            "With direct email support, organizations have access to a "
-            "direct email address to reach Dimagi staff for CommCare "
-            "support."
+            "Direct email support"
         ),
         support=Support(True, True, True, True),
     ),
     Feature(
         title=ugettext_lazy(
-            "Phone Support"
-        ),
-        description=ugettext_lazy(
-            "In addition to reporting issues through our direct email "
-            "support, you can call the Dimagi support line to report "
-            "issues. Dimagi support staff will respond by email or over "
-            "the phone within the guaranteed response time."
+            "Phone support"
         ),
         support=Support(False, False, True, True),
     ),
     Feature(
         title=ugettext_lazy(
-            "Guaranteed First Response Time"
-        ),
-        description=ugettext_lazy(
-            "Dimagi support staff will triage  "
-            "and provide the first response to your inquiry "
-            "within the specified first response time."
+            "Guaranteed first response time"
         ),
         support=Support(
             standard=ugettext_lazy(
@@ -78,11 +54,7 @@ GROUP.add_features([
     ),
     Feature(
         title=ugettext_lazy(
-            "Guaranteed Follow-up Time"
-        ),
-        description=ugettext_lazy(
-            "Dimagi support staff will follow-up with each of your replies "
-            "within the specified response time"
+            "Guaranteed follow-up time"
         ),
         support=Support(
             False,
@@ -97,20 +69,24 @@ GROUP.add_features([
     ),
     Feature(
         title=ugettext_lazy(
-            "Support on CommCare Bugs"
+            "Paid on-boarding"
         ),
         description=ugettext_lazy(
-            ""
+            "Dimagi's Customer Success team offers several onboarding "
+            "options that provide hands-on assistance for designing, "
+            "building, and implementing CommCare."
         ),
         support=Support(True, True, True, True),
     ),
     Feature(
         title=ugettext_lazy(
-            'Response to "App-specific Questions"'
+            'Access to our customer success team'
         ),
         description=ugettext_lazy(
-            ""
+            "Get regular, expert guidance from a dedicated Custom Success "
+            "Manager for any issue—from debuggining to feature "
+            "usage to application design."
         ),
-        support=Support(False, True, True, True),
+        support=Support(False, False, False, True),
     ),
 ])

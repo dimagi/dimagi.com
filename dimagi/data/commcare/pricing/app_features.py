@@ -10,7 +10,7 @@ from dimagi.pages.models.commcare import (
 
 GROUP = FeatureGroup(
     title=ugettext_lazy(
-        "App features"
+        "Application features"
     ),
     slug='app-features',
 )
@@ -18,120 +18,62 @@ GROUP = FeatureGroup(
 GROUP.add_features([
     Feature(
         title=ugettext_lazy(
-            "Data collection"
+            "Surveys"
         ),
         description=ugettext_lazy(
-            "CommCare supports data collection via mobile applications. "
-            "This includes answers to different question types, including "
-            "text, multiple choice, numeric, media capture (image, audio, "
-            "video, signature), and advanced questions (GPS, barcodes, "
-            "android app callouts)."
+            "Collect data via mobile surveys. CommCare supports dozens "
+            "of question types, including text, multiple choice, numeric, "
+            "media capture (image, audio, video, signature), and advanced "
+            "questions (GPS, barcodes, android app callouts)."
         ),
         support=Support(True, True, True, True),
     ),
     Feature(
         title=ugettext_lazy(
-            "Case management"
-        ),
-        description=mark_safe(ugettext_lazy("""CommCare supports 
-    <a href="https://wiki.commcarehq.org/display/commcarepublic/Case+Management"
-    target="_blank">case management</a>, which enables the users of 
-    the mobile app to register people or items of interest and track 
-    associated data over time.
-        """)),
-        support=Support(True, True, True, True),
-    ),
-    Feature(
-        title=ugettext_lazy(
-            "Multilingual support"
-        ),
-        description=ugettext_lazy(
-            "Switch between multiple languages in your application, "
-            "including non-roman character languages. For faster "
-            "translations, use the “bulk upload” feature."
+            "Flexible decision support"
         ),
         support=Support(True, True, True, True),
     ),
     Feature(
         title=ugettext_lazy(
-            "Multimedia"
-        ),
-        description=mark_safe(ugettext_lazy("""CommCare applications can include 
-    <a href="https://wiki.commcarehq.org/display/commcarepublic/Multimedia+in+CommCare"
-    target="_blank">multimedia</a> such as images, audio, and video, 
-    which can be used for counseling or to aid low-literate users.
-        """)),
-        support=Support(True, True, True, True),
-    ),
-    Feature(
-        title=ugettext_lazy(
-            "Complex decision support"
-        ),
-        description=ugettext_lazy(
-            "Complex workflows have the ability to track people and other "
-            "entities over time and can include complex branching logic "
-            "and rules for parsing and responding to messages. "
-            "Organizations that support frontline workers or "
-            "stock tracking often need complex workflows as opposed to "
-            "simple workflows (which normally just support data "
-            "collection)."
+            "Multi language support"
         ),
         support=Support(True, True, True, True),
     ),
     Feature(
         title=ugettext_lazy(
-            "Lookup Tables"
-        ),
-        description=mark_safe(ugettext_lazy("""Allow your mobile 
-    applications to “look up” information from an external data set. 
-    <a href="https://wiki.commcarehq.org/display/commcarepublic/Lookup+Tables"
-    target="_blank">Lookup tables</a> are useful for when you want to 
-    reference large amounts of information, such as Weight-for-Age Z Score 
-    tables for nutrition projects or extensive geographical locations.
-        """)),
-        support=Support(True, True, True, True),
-    ),
-    Feature(
-        title=ugettext_lazy(
-            "User Case Management"
-        ),
-        description=ugettext_lazy(
-            "Track data about your mobile workers over time. You can use "
-            "this data to drive workflows in your application, just like "
-            "regular case data."
+            "Multmedia"
         ),
         support=Support(True, True, True, True),
     ),
     Feature(
         title=ugettext_lazy(
-            "Web-based Applications"
+            "User case management"
         ),
-        description=ugettext_lazy(
-            "Deploy your application to the mobile phone or the web. Log "
-            "in and use the application via your web browser."
+        support=Support(True, True, True, True),
+    ),
+    Feature(
+        title=ugettext_lazy(
+            "Lookup tables"
         ),
-        support=Support(False, True, True, True),
+        support=Support(True, True, True, True),
+    ),
+    Feature(
+        title=ugettext_lazy(
+            "Web-based applications"
+        ),
+        support=Support(False, False, True, True),
     ),
     Feature(
         title=ugettext_lazy(
             "Custom branding"
         ),
-        description=ugettext_lazy(
-            "Display your logo instead of the CommCareHQ logo both on your "
-            "web project space and Android mobile applications. "
-        ),
         support=Support(False, False, True, True),
     ),
     Feature(
         title=ugettext_lazy(
-            "Profiles"
+            "Application profiles"
         ),
-        description=mark_safe(ugettext_lazy("""Create region-specific 
-    <a href="https://wiki.commcarehq.org/display/commcarepublic/Application+Profiles"
-    target="_blank">application profiles</a> that only install specific 
-    languages and multimedia to a phone.  These reduce the installation size for 
-    applications that support a large number of languages or regions.  
-        """)),
-        support=Support(False, False, True, True),
+        support=Support(False, False, False, False),
     ),
 ])
