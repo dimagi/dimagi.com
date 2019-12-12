@@ -36,13 +36,13 @@ GROUP.add_features([
     ),
     Feature(
         title=ugettext_lazy(
-            "Multi language support"
+            "Multi-language support"
         ),
         support=Support(True, True, True, True),
     ),
     Feature(
         title=ugettext_lazy(
-            "Multmedia"
+            "Multimedia"
         ),
         support=Support(True, True, True, True),
     ),
