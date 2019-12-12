@@ -42,11 +42,19 @@ GROUP.add_features([
         title=ugettext_lazy(
             "Pre-built project performance reports"
         ),
+        description=ugettext_lazy(
+            "View pre-built reports to get a high-level overview of key "
+            "indicators and drill down into your data."
+        ),
         support=Support(True, True, True, True),
     ),
     Feature(
         title=ugettext_lazy(
             "Scheduled email reports"
+        ),
+        description=ugettext_lazy(
+            "Schedule regular emails of key reports to specific email "
+            "addresses."
         ),
         support=Support(True, True, True, True),
     ),
@@ -54,17 +62,31 @@ GROUP.add_features([
         title=ugettext_lazy(
             "Excel dashboards"
         ),
+        description=ugettext_lazy(
+            "Set up a real-time link between a form or case export on HQ and "
+            "a preconfigured Excel report. Excel calculations and graphs will "
+            "update automatically on a regular basis as new data comes in."
+        ),
         support=Support(True, True, True, True),
     ),
     Feature(
         title=ugettext_lazy(
             "Case importer"
         ),
+        description=ugettext_lazy(
+            "Create or update cases in bulk using Excel. With this feature, "
+            "you can make changes or create new cases quickly and effectively. "
+        ),
         support=Support(True, True, True, True),
     ),
     Feature(
         title=ugettext_lazy(
             "Report builder"
+        ),
+        description=ugettext_lazy(
+            "Design and build your own reports based on data from your "
+            "CommCare application. Publish reports or schedule emails to share "
+            "reports with other users."
         ),
         support=Support(False, True, True, True),
     ),

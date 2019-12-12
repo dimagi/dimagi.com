@@ -21,9 +21,9 @@ GROUP.add_features([
             "Basic case management"
         ),
         description=mark_safe(ugettext_lazy("""Basic 
-    <a href="https://wiki.commcarehq.org/display/commcarepublic/Case+Management"
+    <a href="https://www.dimagi.com/case-management/"
     target="_blank">case management</a> enables users of the CommCare Mobile app 
-    to register an entity (people, items of interest, etc) then collect additional 
+    to register an entity (people, items of interest, etc.), then collect additional 
     data on that entity over time.
         """)),
         support=Support(True, True, True, True),

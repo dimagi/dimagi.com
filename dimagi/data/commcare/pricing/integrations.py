@@ -20,6 +20,11 @@ GROUP.add_features([
         title=ugettext_lazy(
             "Zapier integration"
         ),
+        description=ugettext_lazy(
+            "Automate workflows by sending CommCare data to other systems like "
+            "Google Sheets, SQL Databases, and any of the other 750+ apps "
+            "supported out-of-the box by Zapier."
+        ),
         support=Support(True, True, True, True),
     ),
     Feature(
@@ -28,7 +33,7 @@ GROUP.add_features([
         ),
         description=ugettext_lazy(
             "The Data Export Tool is a command-line function that enables "
-            "you to programatically pull form and case data from CommCare "
+            "you to programmatically pull form and case data from CommCare "
             "and save it locally (typically to either an Excel spreadsheet "
             "or a local database like MySQL). You can also run the Data "
             "Export Tool on a schedule to keep data fresh."
@@ -50,6 +55,12 @@ GROUP.add_features([
     Feature(
         title=ugettext_lazy(
             "API Access"
+        ),
+        description=ugettext_lazy(
+            "CommCare supports access to Application Programming Interfaces "
+            "(APIs). This allows organizations to configure CommCare so that "
+            "all collected CommCare data can be integrated into external "
+            "software programs."
         ),
         support=Support(False, True, True, True),
     ),
