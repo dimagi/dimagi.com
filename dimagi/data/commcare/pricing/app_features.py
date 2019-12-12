@@ -103,9 +103,8 @@ GROUP.add_features([
             "Custom branding"
         ),
         description=ugettext_lazy(
-            "Switch between multiple languages in your application, "
-            "including non-roman character languages. For faster "
-            "translations, use the “bulk upload” feature."
+            "Display your logo instead of the CommCareHQ logo both on your "
+            "web project space and Android mobile applications."
         ),
         support=Support(False, False, True, True),
     ),
