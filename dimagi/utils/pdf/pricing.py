@@ -375,7 +375,7 @@ def get_pricing_pdf(groups, is_monthly=False):
     story.extend(_get_plan(
         style,
         "advanced",
-        "For programs with facility-based workflows, distributed field staff, and "
+        "For programs with distributed field staff, facility-based workflows, and "
         "advanced security needs. Also for M&E teams integrating "
         "data with 3rd party analytics.",
         _fmt_price("$1200", "$1000"),

@@ -118,6 +118,6 @@ GROUP.add_features([
     languages and multimedia to a phone.  These reduce the installation size for 
     applications that support a large number of languages or regions.  
         """)),
-        support=Support(False, False, False, False),
+        support=Support(False, False, True, True),
     ),
 ])

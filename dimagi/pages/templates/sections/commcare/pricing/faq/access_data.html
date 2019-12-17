@@ -1,0 +1,14 @@
+{% extends "sections/commcare/pricing/faq/_base.html" %}
+{% load i18n %}
+
+{% block question %}{% blocktrans %}
+  Can I access data I’ve collected in CommCare after pausing my subscription?
+{% endblocktrans %}{% endblock %}
+
+{% block answer %}{% blocktrans %}
+  After pausing your subscription, you will not have access to the data in 
+  your CommCare project space. Your data, however, is securely saved and 
+  immediately available anytime you re-upgrade to a paid subscription. If you 
+  need to work with data during the time you’ve paused your subscription, we 
+  recommend exporting your data and saving it externally before pausing your plan.
+{% endblocktrans %}{% endblock %}

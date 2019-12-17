@@ -111,6 +111,6 @@ GROUP.add_features([
             "integration employs OData feeds, enabling you to automatically "
             "refresh your data directly from Power BI and Tableau."
         ),
-        support=Support(False, "Add On", True, False),
+        support=Support(False, "Add On", True, True),
     ),
 ])

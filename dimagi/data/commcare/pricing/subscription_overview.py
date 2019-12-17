@@ -27,7 +27,7 @@ GROUP.add_features([
             "invite to your project space will be able to see your "
             "application or your data."
         ),
-        support=Support("1", "1", "1", "1"),
+        support=Support("1", "1", "1", "Custom"),
     ),
     Feature(
         title=ugettext_lazy(
