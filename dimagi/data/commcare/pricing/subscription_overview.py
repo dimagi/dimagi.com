@@ -18,7 +18,7 @@ GROUP = FeatureGroup(
 GROUP.add_features([
     Feature(
         title=ugettext_lazy(
-            "# of Project Spaces"
+            "Project Spaces"
         ),
         description=ugettext_lazy(
             "A CommCare project space is the web-based portal where you "
@@ -31,7 +31,7 @@ GROUP.add_features([
     ),
     Feature(
         title=ugettext_lazy(
-            "# of Form Submissions"
+            "Form Submissions"
         ),
         description=ugettext_lazy(
             "All CommCare subscription plans include unlimited form submissions."
