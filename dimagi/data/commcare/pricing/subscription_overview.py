@@ -31,29 +31,6 @@ GROUP.add_features([
     ),
     Feature(
         title=ugettext_lazy(
-            "# of Web Users"
-        ),
-        description=mark_safe(ugettext_lazy("""All CommCare subscription plans include unlimited 
-    <a href="https://confluence.dimagi.com/display/commcarepublic/CommCare+Fundamentals+-+Web+and+Mobile+Users#"
-    target="_blank">web users</a>.
-        """)),
-        support=Support(
-            standard=ugettext_lazy(
-                "Unlimited"
-            ),
-            pro=ugettext_lazy(
-                "Unlimited"
-            ),
-            advanced=ugettext_lazy(
-                "Unlimited"
-            ),
-            enterprise=ugettext_lazy(
-                "Unlimited"
-            ),
-        ),
-    ),
-    Feature(
-        title=ugettext_lazy(
             "# of Form Submissions"
         ),
         description=ugettext_lazy(
