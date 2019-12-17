@@ -125,6 +125,10 @@ $_touch-front-heights: (
       line-height: 14px;
     }
   }
+
+  .not-included [stroke]:not([stroke="transparent"]) {
+    stroke: $color-border !important;
+  }
 }
 
 .feature-group-description {
