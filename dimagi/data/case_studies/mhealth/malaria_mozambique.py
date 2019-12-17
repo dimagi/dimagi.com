@@ -43,4 +43,6 @@ STUDY = CaseStudy(
     slug="mhealth-malaria-mozambique",
     download_url="https://cdn2.hubspot.net/hubfs/503070/Case%20Studies/CommCare%20-%20Malaria%20Consortium%20Case%20Study.pdf",
     hubspot_form="e39f88d8-e985-44bd-92ff-48a382bed12b",
+    download_url_language="https://cdn2.hubspot.net/hubfs/503070/Case%20Studies/CommCare%20-%20Malaria%20Consortium%20Case%20Study_French.pdf",
+    hubspot_form_language="8281faf9-4e54-49a9-9090-fe2fa57cf4a8",
 )
