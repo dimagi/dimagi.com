@@ -5,6 +5,16 @@
          id="sub-nav">
   <div class="content">
     <div class="actions">
+      {% if study.hubspot_form_language %}
+        <a class="download-language"
+           href="#hubspot-download-form-pdf-summary">
+          <span>
+            {% blocktrans %}
+              TÉLÉCHARGER LE RESUMÉ
+            {% endblocktrans %}
+          </span>
+        </a>
+      {% endif %}
       <a class="primary"
          href="#hubspot-download-form-pdf-summary">
         <span>

@@ -58,6 +58,20 @@
       </div>{# .modal-wrapper #}
     </div>{# .modal-scroll #}
   </div>{# .modal #}
+
+  <div class="modal"
+       data-dismissible="true"
+       data-size="medium"
+       id="hubspot-download-form-pdf-summary">
+    <div class="modal-scroll">
+      <div class="modal-wrapper">
+        <a href="#" class="modal-close-button"></a>
+        <div class="content pad-horz-medium-at-medium pad-horz-line pad-vert-none {{ sector.theme }}">
+          <section class="orange-theme" id="download-pdf-summary-form-content-french"></section>
+        </div>{# .content #}
+      </div>{# .modal-wrapper #}
+    </div>{# .modal-scroll #}
+  </div>{# .modal #}
 {% endblock %}
 
 {% block js %}
@@ -82,6 +96,15 @@
       css: "",
       onFormSubmit: function () {
         window.open('{{ study.download_url }}', "_blank");
+      },
+    });
+    hbspt.forms.create({
+      portalId: "503070",
+      formId: "{{ study.hubspot_form_language }}",
+      target: "#download-pdf-summary-form-content-french",
+      css: "",
+      onFormSubmit: function () {
+        window.open('{{ study.download_url_language }}', "_blank");
       },
     });
   </script>
