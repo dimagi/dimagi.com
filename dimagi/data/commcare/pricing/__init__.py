@@ -1,24 +1,25 @@
 from dimagi.data.commcare.pricing import (
-    support,
-    app_creation,
+    subscription_overview,
+    case_management,
     app_features,
-    messaging,
-    reporting,
-    security,
+    data_tools,
     user_management,
-    integration,
-    mobile_users,
+    messaging,
+    integrations,
+    security_compliance,
+    support
+
 )
 
 
 feature_groups = (
-    support,
-    app_creation,
+    subscription_overview,
+    case_management,
     app_features,
-    messaging,
-    reporting,
-    security,
+    data_tools,
     user_management,
-    integration,
-    mobile_users,
+    messaging,
+    integrations,
+    security_compliance,
+    support
 )

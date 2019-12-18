@@ -10,9 +10,9 @@ from dimagi.pages.models.commcare import (
 
 GROUP = FeatureGroup(
     title=ugettext_lazy(
-        "Security, Compliance, and Policies"
+        "Security and Compliance"
     ),
-    slug='security',
+    slug='security-compliance',
 )
 
 GROUP.add_features([
@@ -30,7 +30,7 @@ GROUP.add_features([
     ),
     Feature(
         title=ugettext_lazy(
-            "De-identified data"
+            "Data de-identification"
         ),
         description=ugettext_lazy(
             "Mark a data point as 'identifying' and the export tool will "
@@ -38,7 +38,7 @@ GROUP.add_features([
             "projects collecting health data that need to de-identify a "
             "dataset to meet privacy requirements."
         ),
-        support=Support(False, True, True, True),
+        support=Support(False, False, True, True),
     ),
     Feature(
         title=ugettext_lazy(
@@ -84,7 +84,7 @@ GROUP.add_features([
     ),
     Feature(
         title=ugettext_lazy(
-            "Customized Terms"
+            "Customized product terms"
         ),
         description=mark_safe(ugettext_lazy("""Check here for our 
         <a href="https://www.dimagi.com/terms/latest/tos/"

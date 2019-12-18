@@ -336,7 +336,7 @@ def _get_plan(style, name, description, price, pay_type):
             "paying {}".format(pay_type),
             style.pay_type(pay_type, name)
         ),
-        Spacer(1, 16),
+        Spacer(1, 10),
         Paragraph(price[pay_type], style.price),
         Paragraph("monthly", style.normal_center),
         Spacer(1, 12),
@@ -356,8 +356,8 @@ def get_pricing_pdf(groups, is_monthly=False):
     story.extend(_get_plan(
         style,
         "standard",
-        "Perfect to prove the value of CommCare in the pilot phase. Access "
-        "case imports, API integrations, and better support.",
+        "For programs with one-time data collection needs, simple "
+        "case management workflows, and basic M&E requirements.",
         _fmt_price("$300", "$250"),
         pay_type
     ))
@@ -365,8 +365,9 @@ def get_pricing_pdf(groups, is_monthly=False):
     story.extend(_get_plan(
         style,
         "pro",
-        "Ideal for projects that need a complete mobile solution with data "
-        "management tools, and access to priority email support.",
+        "For programs with complex case management needs, field "
+        "staff collaborating on tasks, and M&E teams that "
+        "need to clean and report on data.",
         _fmt_price("$600", "$500"),
         pay_type
     ))
@@ -374,8 +375,9 @@ def get_pricing_pdf(groups, is_monthly=False):
     story.extend(_get_plan(
         style,
         "advanced",
-        "For our savviest users, working on projects at scale that require "
-        "advanced levels of data, security, and support.",
+        "For programs with distributed field staff, facility-based workflows, "
+        "and advanced security needs. Also for M&E teams integrating data with "
+        "3rd party analytics.",
         _fmt_price("$1200", "$1000"),
         pay_type
     ))
@@ -383,8 +385,9 @@ def get_pricing_pdf(groups, is_monthly=False):
     story.extend(_get_plan(
         style,
         "enterprise",
-        "A tailor-made plan for organizations with multiple projects. All "
-        "paid features included in this plan.",
+        "For organizations that need a sustainable path to scale "
+        "mobile data collection and service delivery across "
+        "multiple teams, programs, or countries.",
         _fmt_price("Contact Us", "Contact Us"),
         pay_type
     ))

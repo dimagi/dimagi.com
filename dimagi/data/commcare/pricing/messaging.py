@@ -10,22 +10,15 @@ from dimagi.pages.models.commcare import (
 
 GROUP = FeatureGroup(
     title=ugettext_lazy(
-        "Messaging (SMS / voice / email)"
+        "Messaging "
     ),
     slug='messaging',
-    description=mark_safe(ugettext_lazy("""
-    Dimagi charges incoming and outgoing messages on a per-message fee. 
-    <a href="https://www.commcarehq.org/messaging-pricing"
-       target="_blank">View message rates</a>. 
-    <a href="https://wiki.commcarehq.org/display/commcarepublic/CommCare+Messaging"
-       target="_blank">Learn more about Messaging</a>.
-    """)),
 )
 
 GROUP.add_features([
     Feature(
         title=ugettext_lazy(
-            "One-way messaging (SMS, email)"
+            "One-way messaging "
         ),
         description=ugettext_lazy(
             "Configure outbound SMS systems that can be sent to both mobile "
@@ -46,7 +39,7 @@ GROUP.add_features([
     ),
     Feature(
         title=ugettext_lazy(
-            "Access Dimagi's in-country gateways"
+            "Access to our in-country gateways"
         ),
         description=ugettext_lazy(
             "Sending and receiving automated SMS messages requires "
@@ -74,14 +67,14 @@ GROUP.add_features([
     ),
     Feature(
         title=ugettext_lazy(
-            "Two-way messaging (SMS, voice)"
+            "Two-way messaging"
         ),
         description=ugettext_lazy(
             "CommCare can be configured to support two-way messaging, which "
             "enables data collection over SMS or scheduling surveys to "
             "recipients using a rules engine."
         ),
-        support=Support(False, True, True, True),
+        support=Support(False, False, True, True),
     ),
     Feature(
         title=ugettext_lazy(

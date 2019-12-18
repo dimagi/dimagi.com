@@ -10,15 +10,37 @@ from dimagi.pages.models.commcare import (
 
 GROUP = FeatureGroup(
     title=ugettext_lazy(
-        "Reporting and analytics"
+        "Data Tools"
     ),
-    slug='reporting',
+    slug='data-tools',
 )
 
 GROUP.add_features([
     Feature(
         title=ugettext_lazy(
-            "Pre-built reports"
+            "Data exports"
+        ),
+        description=ugettext_lazy(
+            "Export your CommCare data—including form submissions and "
+            "case data—for use in 3rd party tools. Leverage built-in tools "
+            "to customize your exports by date, user group, and more."
+        ),
+        support=Support(True, True, True, True),
+    ),
+    Feature(
+        title=ugettext_lazy(
+            "Data exploration"
+        ),
+        description=ugettext_lazy(
+            "View data submitted by your field staff with built-in "
+            "reports showing case information and form submissions, "
+            "complete with current and historical values."
+        ),
+        support=Support(True, True, True, True),
+    ),
+    Feature(
+        title=ugettext_lazy(
+            "Pre-built project performance reports"
         ),
         description=ugettext_lazy(
             "View pre-built reports to get a high-level overview of key "
@@ -38,7 +60,7 @@ GROUP.add_features([
     ),
     Feature(
         title=ugettext_lazy(
-            "Excel dashboard linking"
+            "Excel dashboards"
         ),
         description=ugettext_lazy(
             "Set up a real-time link between a form or case export on HQ and "
@@ -49,7 +71,7 @@ GROUP.add_features([
     ),
     Feature(
         title=ugettext_lazy(
-            "Case Importer"
+            "Case importer"
         ),
         description=ugettext_lazy(
             "Create or update cases in bulk using Excel. With this feature, "
@@ -59,35 +81,36 @@ GROUP.add_features([
     ),
     Feature(
         title=ugettext_lazy(
-            "Report Builder"
+            "Report builder"
         ),
         description=ugettext_lazy(
             "Design and build your own reports based on data from your "
             "CommCare application. Publish reports or schedule emails to share "
             "reports with other users."
         ),
-        support=Support(False, "up to 5 reports", "up to 5 reports", "up to 5 reports"),
+        support=Support(False, True, True, True),
     ),
     Feature(
         title=ugettext_lazy(
-            "Data management"
+            "Data cleaning"
         ),
         description=ugettext_lazy(
-            "Use the features in our data management toolkit to ensure all "
-            "data on CommCareHQ is clean and accurate. With these features you "
-            "can edit erroneous form submissions and archive test data, "
-            "leaving a virtual paper trail of your changes."
+            "Ensure your CommCare data is clean and accurate using data "
+            "cleaning features to edit erroneous or incorrect form "
+            "submissions and archive test data."
         ),
         support=Support(False, True, True, True),
     ),
     Feature(
         title=ugettext_lazy(
-            "Power BI & Tableau integration"
+            "Power BI and Tableau integration"
         ),
         description=ugettext_lazy(
-            "Integrate CommCare with Tableau and Power BI to "
-            "visualize and report on your data."
+            "Send your CommCare data directly to Microsoft Power BI or "
+            "Tableau for beautiful reporting and deep analytics. CommCare's "
+            "integration employs OData feeds, enabling you to automatically "
+            "refresh your data directly from Power BI and Tableau."
         ),
-        support=Support(False, "Add-on", True, True),
+        support=Support(False, "Add On", True, True),
     ),
 ])

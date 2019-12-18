@@ -17,7 +17,7 @@ GROUP = FeatureGroup(
 GROUP.add_features([
     Feature(
         title=ugettext_lazy(
-            "Online Learning Resources"
+            "Online learning resources"
         ),
         description=ugettext_lazy(
             "Everyone has access to the CommCare Help Site and the "
@@ -31,7 +31,7 @@ GROUP.add_features([
     ),
     Feature(
         title=ugettext_lazy(
-            "Direct Email Support"
+            "Direct email support"
         ),
         description=ugettext_lazy(
             "With direct email support, organizations have access to a "
@@ -42,7 +42,7 @@ GROUP.add_features([
     ),
     Feature(
         title=ugettext_lazy(
-            "Phone Support"
+            "Phone support"
         ),
         description=ugettext_lazy(
             "In addition to reporting issues through our direct email "
@@ -54,7 +54,7 @@ GROUP.add_features([
     ),
     Feature(
         title=ugettext_lazy(
-            "Guaranteed First Response Time"
+            "Guaranteed first response time"
         ),
         description=ugettext_lazy(
             "Dimagi support staff will triage  "
@@ -78,7 +78,7 @@ GROUP.add_features([
     ),
     Feature(
         title=ugettext_lazy(
-            "Guaranteed Follow-up Time"
+            "Guaranteed follow-up time"
         ),
         description=ugettext_lazy(
             "Dimagi support staff will follow-up with each of your replies "
@@ -97,20 +97,24 @@ GROUP.add_features([
     ),
     Feature(
         title=ugettext_lazy(
-            "Support on CommCare Bugs"
+            "Paid on-boarding"
         ),
         description=ugettext_lazy(
-            ""
+            "Dimagi's Customer Success team offers several onboarding "
+            "options that provide hands-on assistance for designing, "
+            "building, and implementing CommCare."
         ),
         support=Support(True, True, True, True),
     ),
     Feature(
         title=ugettext_lazy(
-            'Response to "App-specific Questions"'
+            'Access to our customer success team'
         ),
         description=ugettext_lazy(
-            ""
+            "Get regular, expert guidance from a dedicated Custom Success "
+            "Manager for any issue—from debuggining to feature "
+            "usage to application design."
         ),
-        support=Support(False, True, True, True),
+        support=Support(False, False, False, True),
     ),
 ])
