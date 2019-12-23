@@ -224,6 +224,8 @@ class FeatureLine(Flowable):
                 inches(.33)
             )
         else:
+            self.canv.setFillColor(CommCareStyle.COLOR_BORDER)
+            self.canv.setStrokeColor(CommCareStyle.COLOR_BORDER)
             self.canv.line(
                 x - inches(.06),
                 inches(.25),
