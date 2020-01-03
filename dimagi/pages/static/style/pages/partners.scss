@@ -28,12 +28,7 @@
 
 .feature-projects {
   border: 1px solid $color-border;
-  cursor: pointer;
   border-radius: $border-radius;
-
-  &:hover {
-    border: 2px solid $color-turquoise;
-  }
 }
 
 .feature-projects-image {
