@@ -38,17 +38,22 @@
 .programs-images .image.featured-project1 {
   @include background-cover('../../../pages/sectors/agricultural-finance/programs/featured-project1.jpg');
   height: 240px;
+  background-size: contain;
+  background-position: left;
 }
 
 .programs-images .image.featured-project2 {
   @include background-cover('../../../pages/sectors/agricultural-finance/programs/featured-project2.jpg');
   height: 240px;
+  background-size: contain;
+  background-position: left;
 }
 
-.programs-images .image.featured-project1,
-.programs-images .image.featured-project2,
 .programs-images .image.featured-project3 {
- background-position: initial;
+  @include background-cover('../../../pages/sectors/agricultural-finance/programs/featured-project3.jpg');
+  height: 240px;
+  background-size: contain;
+  background-position: left;
 }
 
 .modal-popup {

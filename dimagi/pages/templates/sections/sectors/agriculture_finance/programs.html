@@ -11,7 +11,7 @@
           Finance Projects
         {% endblocktrans %}
       </h2>
-      <div class="grid grid-2-at-large grid-1-at-medium grid-row-equal-heights grid-col-space-small">
+      <div class="grid grid-3-at-large grid-1-at-medium grid-row-equal-heights grid-col-space-small">
         <div class="column">
           <div class="pad-bottom-base white-bg">
             <div class="image featured-project1" data-lazybg="true"></div>
@@ -62,6 +62,35 @@
               </p>
               <p class="pad-top-line-at-extra-large">
                 <a href="#modal-feature-card-2"
+                   class="arrow link-gray read-more">
+                  {% blocktrans %}
+                    Read More
+                  {% endblocktrans %}
+                </a>
+              </p>
+            </div> {# .pad-line #}
+          </div> {# .white-bg #}
+        </div> {# .column #}
+        <div class="column">
+          <div class="pad-bottom-base white-bg">
+            <div class="image featured-project3" data-lazybg="true"></div>
+            <div class="pad-line pad-top-none-at-large pad-top-line-at-extra-large">
+              <h5>
+                <strong class="body-color">
+                {% blocktrans %}
+                  A Glimmer of Hope <br>
+                  Ethiopia
+                {% endblocktrans %}
+                </strong>
+              </h5>
+              <p class="body-color">
+                {% blocktrans %}
+                  Glimmer's locally-based community facilitators use CommCare 
+                  to monitor and track the progress of loan recipients.
+                {% endblocktrans %}
+              </p>
+              <p class="pad-top-line-at-extra-large">
+                <a href="#modal-feature-card-3"
                    class="arrow link-gray read-more">
                   {% blocktrans %}
                     Read More
@@ -154,6 +183,53 @@
             </div> {# .column #}
             <div class="column">
               <div class="image featured-project2 modal-popup" data-lazybg="true"></div>
+            </div> {# .column #}
+          </div> {# .grid #}
+        </div> {# .content #}
+      </div> {# .modal-wrapper #}
+    </div> {# .modal-scroll #}
+  </div>{# .modal #}
+
+  <div class="modal"
+       data-dismissible="true"
+       data-size="medium"
+       id="modal-feature-card-3">
+    <div class="modal-scroll">
+      <div class="modal-wrapper">
+        <a href="#" class="modal-close-button"></a>
+        <div class="content pad-horz-medium-at-medium pad-horz-line pad-vert-none turquoise-theme programs-images">
+          <h4>
+            <strong>
+            {% blocktrans %}
+              A Glimmer of Hope <br>
+              Ethiopia
+            {% endblocktrans %}
+            </strong>
+          </h4>
+          <div class="grid-flex-at-large">
+            <div class="column">
+              <p>
+                {% blocktrans %}
+                  A Glimmer of Hope invests in community-led, integrated 
+                  solutions that transform the lives of rural Ethiopian 
+                  families. To support agriculture growth, income and 
+                  savings, Glimmer provides financial and business training 
+                  with small loans. In 2019, Glimmer deployed CommCare to 
+                  support and improve the organization’s monitoring and 
+                  evaluation activities. Locally-based community facilitators 
+                  use the CommCare application on mobile tablets to monitor 
+                  and track the progress of loan recipients. Through the 
+                  hidden-values feature, Glimmer is able to quickly identify 
+                  issues with on-time loan repayments and other challenges and 
+                  provide additional support to borrowers. CommCare’s off-line 
+                  capabilities, case management features, and easy access to 
+                  real-time data have enhanced Glimmer’s service provision 
+                  and program tracking.
+                {% endblocktrans %}
+              </p>
+            </div> {# .column #}
+            <div class="column">
+              <div class="image featured-project3 modal-popup" data-lazybg="true"></div>
             </div> {# .column #}
           </div> {# .grid #}
         </div> {# .content #}
