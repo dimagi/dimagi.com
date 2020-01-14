@@ -12,7 +12,7 @@ SECTOR = Sector(
         "the help of mobile data collection apps."
     ),
     template="data/sectors/content/humanitarian_response.html",
-    icon="svg/commcare/icon/agriculture.html",
+    icon="svg/commcare/icon/agricultur.html",
     theme="red-theme",
     slug="humanitarian-response",
     slides=[
