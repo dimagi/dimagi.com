@@ -7,6 +7,7 @@ from dimagi.data.toolkits import (
     managing_devices_ebook,
     data_collection,
     mobile_data_collection,
+    digital_health_systems,
 )
 
 toolkits = (
@@ -18,6 +19,7 @@ toolkits = (
     managing_devices_ebook,
     data_collection,  
     mobile_data_collection,
+    digital_health_systems,
 )
 
 

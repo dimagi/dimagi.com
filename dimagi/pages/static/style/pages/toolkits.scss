@@ -145,6 +145,19 @@
   @include background-cover('../../pages/toolkits/highlights/mobile-data-collection/mobile-data-collection-highlight-three.jpg')
 }
 
+// images of highlights for digital health systems-highlights
+.digital-health-systems-highlights-one {
+  @include background-cover('../../pages/toolkits/highlights/digital-health-systems/highlights-one.jpg');
+}
+
+.digital-health-systems-highlights-two {
+  @include background-cover('../../pages/toolkits/highlights/digital-health-systems/highlights-two.jpg');
+}
+
+.digital-health-systems-highlights-three {
+  @include background-cover('../../pages/toolkits/highlights/digital-health-systems/highlights-three.jpg');
+}
+
 .max-width-initial {
   max-width: initial;
 }
