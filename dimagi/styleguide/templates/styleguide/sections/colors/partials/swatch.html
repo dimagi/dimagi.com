@@ -1,6 +1,8 @@
 <div class="column">
-  <div class="tile {{ theme }}-bg">
-    <p><code>{{ theme }}</code></p>
-    <p><code>#{{ hex }}</code></p>
-  </div>
+  {%  if theme %}
+    <div class="{{ theme }}-bg swatch">
+      <p><code>{{ theme }}</code></p>
+      <p><code>#{{ hex }}</code></p>
+    </div>
+  {% endif %}
 </div>{# .column #}
