@@ -5,37 +5,41 @@ $color-text:            #5f6a7d;
 $color-white:           #ffffff;
 $color-black:           #000000;
 
-$color-slate:           $color-text;
-$color-slate-light:     lighten($color-slate, 20);
+$color-slate:               $color-text;
+$color-slate-light:         lighten($color-slate, 20);
 
-$color-neutral-dark:    #373534;
-$color-neutral:         #685c53;
-$color-neutral-light:   #d6d6d4;
+$color-neutral-dark:        #373534;
+$color-neutral:             #685c53;
+$color-neutral-light:       #d6d6d4;
+$color-neutral-lightest:    #f7f7f6;
 
-$color-blue-dark:       #002c5f;
-$color-blue:            #004ebc;
-$color-blue-light:      #bcdeff;
+$color-blue-dark:           #002c5f;
+$color-blue:                #004ebc;
+$color-blue-light:          #bcdeff;
+$color-blue-lightest:       #edf3fa;
 
-$color-purple-dark:     #5d3f82;
-$color-purple:          #9060c8;
-$color-purple-light:    #d6c5ea;
+$color-purple-dark:         #5d3f82;
+$color-purple:              #9060c8;
+$color-purple-light:        #d6c5ea;
+$color-purple-lightest:     #faf6ff;
 
-$color-turquoise-dark:  #00799a;
-$color-turquoise:       #00bdc5;
-$color-turquoise-light: #ccf3f4;
-$color-turquoise-muted: $color-turquoise-light; // for color-utils only
+$color-turquoise-dark:      #00799a;
+$color-turquoise:           #00bdc5;
+$color-turquoise-light:     #e5f8f9;
+$color-turquoise-lightest:  #f2fcfc;
 
-$color-orange-dark:     #994f00;
-$color-orange:          #ff8400;
-$color-orange-light:    #ffe3c2;
+$color-orange-dark:         #994f00;
+$color-orange:              #ff8400;
+$color-orange-light:        #ffe3c2;
+$color-orange-lightest:     #f8f3ed;
 
-$color-green-dark:      #216f00;
-$color-green:           #47b700;
-$color-green-light:     #d5eaca;
+$color-green-dark:          #216f00;
+$color-green:               #47b700;
+$color-green-light:         #d5eaca;
 
-$color-red-dark:        #812627;
-$color-red:             #e53e30;
-$color-red-light:       #efcfcb;
+$color-red-dark:            #812627;
+$color-red:                 #e53e30;
+$color-red-light:           #efcfcb;
 
 $color-code-text:       $color-blue-dark;
 $color-code-bg:         #f0f0f0;
@@ -59,22 +63,27 @@ $colors-by-theme: (
   blue-dark: $color-blue-dark,
   blue: $color-blue,
   blue-light: $color-blue-light,
+  blue-lightest: $color-blue-lightest,
   green-dark: $color-green-dark,
   green: $color-green,
   green-light: $color-green-light,
   turquoise-dark: $color-turquoise-dark,
   turquoise: $color-turquoise,
   turquoise-light: $color-turquoise-light,
+  turquoise-lightest: $color-turquoise-lightest,
   purple-dark: $color-purple-dark,
   purple: $color-purple,
   purple-light: $color-purple-light,
+  purple-lightest: $color-purple-lightest,
   neutral-dark: $color-neutral-dark,
   neutral: $color-neutral,
   neutral-light: $color-neutral-light,
+  neutral-lightest: $color-neutral-lightest,
   accent-gray: $color-accent-gray,
   orange-dark: $color-orange-dark,
   orange: $color-orange,
   orange-light: $color-orange-light,
+  orange-lightest: $color-orange-lightest,
   slate: $color-slate,
   slate-light: $color-slate-light,
   red-dark: $color-red-dark,
