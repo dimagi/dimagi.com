@@ -117,4 +117,26 @@ GROUP.add_features([
         ),
         support=Support(False, False, False, True),
     ),
+    Feature(
+        title=ugettext_lazy(
+            'Support on CommCare bugs'
+        ),
+        description=ugettext_lazy(
+            "Dimagi's support team ensures any bug caused by our "
+            "software (not specific to a particular CommCare app or project) "
+            "is resolved as quickly as possible."
+        ),
+        support=Support(True, True, True, True),
+    ),
+    Feature(
+        title=ugettext_lazy(
+            'Support on app-specific questions'
+        ),
+        description=ugettext_lazy(
+            "Dimagi's support team guides you through any question or issue "
+            "that is specific to your CommCare app or project space's "
+            "configuration and workflows."
+        ),
+        support=Support(False, True, True, True),
+    ),
 ])
