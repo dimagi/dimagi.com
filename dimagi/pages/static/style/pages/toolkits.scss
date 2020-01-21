@@ -43,6 +43,10 @@
   @include make-bg(hero, '../../pages/toolkits/mobile-data-collection/hero')
 }
 
+.digital-health-systems {
+  @include make-bg(hero, '../../pages/toolkits/digital-health-systems/hero')
+}
+
 //images of highlights for business-development-highlights 
 .business-development-highlights-one {
   @include background-cover('../../pages/toolkits/highlights/business-development/business-development-highlights-one.jpg');
