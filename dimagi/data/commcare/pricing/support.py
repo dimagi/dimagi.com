@@ -97,28 +97,6 @@ GROUP.add_features([
     ),
     Feature(
         title=ugettext_lazy(
-            "Paid on-boarding"
-        ),
-        description=ugettext_lazy(
-            "Dimagi's Customer Success team offers several onboarding "
-            "options that provide hands-on assistance for designing, "
-            "building, and implementing CommCare."
-        ),
-        support=Support(True, True, True, True),
-    ),
-    Feature(
-        title=ugettext_lazy(
-            'Access to our customer success team'
-        ),
-        description=ugettext_lazy(
-            "Get regular, expert guidance from a dedicated Custom Success "
-            "Manager for any issue—from debuggining to feature "
-            "usage to application design."
-        ),
-        support=Support(False, False, False, True),
-    ),
-    Feature(
-        title=ugettext_lazy(
             'Support on CommCare bugs'
         ),
         description=ugettext_lazy(
@@ -138,5 +116,27 @@ GROUP.add_features([
             "configuration and workflows."
         ),
         support=Support(False, True, True, True),
+    ),
+    Feature(
+        title=ugettext_lazy(
+            "Paid on-boarding"
+        ),
+        description=ugettext_lazy(
+            "Dimagi's Customer Success team offers several onboarding "
+            "options that provide hands-on assistance for designing, "
+            "building, and implementing CommCare."
+        ),
+        support=Support(True, True, True, True),
+    ),
+    Feature(
+        title=ugettext_lazy(
+            'Access to our customer success team'
+        ),
+        description=ugettext_lazy(
+            "Get regular, expert guidance from a dedicated Custom Success "
+            "Manager for any issue—from debuggining to feature "
+            "usage to application design."
+        ),
+        support=Support(False, False, False, True),
     ),
 ])
