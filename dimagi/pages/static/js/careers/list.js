@@ -44,7 +44,12 @@ define([
 
             _.forEach(department.jobs, function (job) {
               fields.role = job.title;
-              fields.type = "Full-time";  // not supported by greenhouse right now
+              fields.type = "Full-time"; // default value if no metadata found
+              _.forEach(job.metadata, function (meta) {
+                if (meta.name === 'Employment Type') {
+                  fields.type = meta.value;
+                }
+              });
 
               _.forEach(fields, function (value, key) {
                 _addJob(key, value, Models.createJob(
