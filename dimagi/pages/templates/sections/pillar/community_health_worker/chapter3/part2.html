@@ -1,0 +1,49 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="trial border-top green-bg"
+         id="trial">
+  <div class="pad-vert-small pad-horz-large">
+    <div class="grid-flex-at-medium">
+      <div class="feature-partner-crs column gap-top-medium flex-align-left">
+        <div class="chw-ethiopia-program align-center pad-top-small">
+          {% include "svg/countries/india.html" %}
+        </div>
+        
+        <div class="column content-width-large pad-right-large">
+          <h4 class="white uppercase align-left pad-bottom-base">
+            {% blocktrans %}
+              Ethiopia's CHW Program
+            {% endblocktrans %}
+          </h4>
+          <p class="white align-left">
+            {% blocktrans %}
+              Ethiopia, one of the countries analyzed by USAID, is an unlikely
+              success story. In one of the poorest countries in the world, the
+              Ministry of Health has hired and trained 40,000 community health
+              workers to provide essential health services around the country,
+              combating child mortality, HIV, malaria, and TB. Since 1990, child
+              mortality has decreased by 70%, HIV infections by 90%, malaria deaths
+              by 75% and TB deaths by 64%.
+            {% endblocktrans %}
+          </p>
+          <p class="white align-left">
+            {% blocktrans %}
+            While smaller, non-governmental organizations have been implementing the
+            community health worker model on a local level with documented success,
+            Ethiopia stands as an example of how even the most underfunded ministries
+            of health can help improve health outcomes at a national level.
+            {% endblocktrans %}
+          </p>
+          <div class="align-center pad-top-small">
+          <a class="button button-accent-gray" href="#">
+            {% blocktrans %}
+              Learn More
+            {% endblocktrans %}
+          </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>{# .content #}
+</section>
