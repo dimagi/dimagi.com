@@ -255,3 +255,17 @@ blockquote.rowena p {
 .chw-ethiopia-program {
   width: 350px;
 }
+
+.chw-community ol {
+  li {
+    &:before {
+      background-color: $color-neutral;
+      color: $color-white;
+      width: 34px;;
+      height: -webkit-fill-available;
+      font-size: 25px;
+      padding-left: 6px;
+      padding-top: 28px;
+    }
+  }
+}

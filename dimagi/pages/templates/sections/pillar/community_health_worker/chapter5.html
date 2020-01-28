@@ -1,0 +1,34 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<article class="epic neutral-theme" id="chapter-5">
+
+  <section class="parallax-ch3-1 epic-cover"
+           data-lazybg="true">
+    <div class="content">
+      <h1 class="white section-header" {% if request.is_amp %} amp-fx="fade-in" data-duration="1000ms" {% endif %}>
+        {% blocktrans %}
+          <span class="section-number gap-top-none">5</span>
+          <span class="pad-left-medium-at-medium">
+            Community Health Workers with <br class="hide-until-large" />
+            Mobile Data Collection
+          </span>
+        {% endblocktrans %}
+      </h1>
+    </div> {# .content #}
+  </section>  
+
+  {% include "sections/pillar/community_health_worker/chapter5/part1.html" %}
+  {% include "sections/pillar/community_health_worker/chapter5/part2.html" %}
+
+  <p class="align-center pad-vert-small">
+    <a href="https://dimagi.com/blog/mobile-data-collection-how-to-choose-the-right-tool/"
+       target="_blank"
+       class="button">
+      {% blocktrans %}
+        more studies on the effect of mobile tools for CHWs 
+      {% endblocktrans %}
+    </a>
+  </p>
+
+</article>
