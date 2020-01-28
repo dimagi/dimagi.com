@@ -238,3 +238,16 @@ blockquote.rowena p {
   border-radius: 5px;
   color: $color-text;
 }
+
+.chw-challenges {
+  background-color: $color-red;
+  height: 110px;
+  width: 110px;
+  border-radius: 100px;
+
+    svg {
+      margin-left: 20px;
+      margin-top: 22px;
+    }
+    
+}
