@@ -1,0 +1,24 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<article class="epic turquoise-theme" id="chapter-1">
+
+  <section class="parallax-ch1-1 epic-cover"
+           data-lazybg="true">
+    <div class="content">
+      <h1 class="white section-header" {% if request.is_amp %} amp-fx="fade-in" data-duration="1000ms" {% endif %}>
+        {% blocktrans %}
+          <span class="section-number gap-top-none">1</span>
+          <span class="pad-left-medium-at-medium">
+            Roles and Responsibilities for <br class="hide-until-large" />
+            Community Health Workers
+          </span>
+        {% endblocktrans %}
+      </h1>
+    </div> {# .content #}
+  </section>  
+
+  {% include "sections/pillar/community_health_worker/chapter1/part1.html" %}
+  {% include "sections/pillar/community_health_worker/chapter1/part2.html" %}
+
+</article>

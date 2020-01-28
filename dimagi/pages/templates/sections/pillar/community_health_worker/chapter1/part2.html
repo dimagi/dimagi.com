@@ -1,0 +1,42 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="epic-content pad-top-none pad-bottom-large turquoise-theme">
+  <div class="content content-width-large">
+
+    <h2 class="turquoise pad-top-small">
+      {% blocktrans %}
+        Definition of Community Health Worker Tasks (ISCO-08)
+      {% endblocktrans %}
+    </h2>
+
+    <p>
+      {% blocktrans %}
+        Organizations, such as the International Labor Organization, have also 
+        suggested a common understanding of the tasks that CHWs are responsible for:
+      {% endblocktrans %}
+    </p>
+
+    <div class="chw-tasks">
+      {% include "sections/pillar/community_health_worker/chapter1/tasks/task1.html" %}
+      {% include "sections/pillar/community_health_worker/chapter1/tasks/task2.html" %}
+      {% include "sections/pillar/community_health_worker/chapter1/tasks/task3.html" %}
+      {% include "sections/pillar/community_health_worker/chapter1/tasks/task4.html" %}
+      {% include "sections/pillar/community_health_worker/chapter1/tasks/task5.html" %}
+      {% include "sections/pillar/community_health_worker/chapter1/tasks/task6.html" %}
+      {% include "sections/pillar/community_health_worker/chapter1/tasks/note.html" %}
+    </div>{# .chw-tasks #}
+
+    <p>
+      {% blocktrans %}
+        The World Health Organization also recently shared a career ladder for a 
+        community health worker to show how their role can change within the health 
+        system over time – from volunteer responsible for offering health information 
+        and capturing data to trained (and paid) community health workers able to 
+        provide care and diagnose patients. Larger programs may also employ supervisory 
+        roles that are often filled by former community health workers.
+      {% endblocktrans %}
+    </p>
+
+  </div>{# .content #}
+</section>
