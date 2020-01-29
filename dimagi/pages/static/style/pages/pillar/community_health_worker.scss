@@ -269,3 +269,7 @@ blockquote.rowena p {
     }
   }
 }
+
+.mhp-case-study .image.testimonial2 {
+  @include background-cover('../../../pages/home/workforce-2.jpg');
+}
