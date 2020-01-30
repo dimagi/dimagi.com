@@ -9,7 +9,10 @@ class Toolkit(object):
     issues.
     """
 
-    def __init__(self, title=None, tagline=None, template=None, slug=None, download_url=None, icon=None, hubspot_form=None, hubspot_formId=None, image=None, download_title=None):
+    def __init__(self, title=None, tagline=None, template=None, slug=None,
+                 download_url=None, icon=None, hubspot_form=None,
+                 hubspot_formId=None, image=None, download_title=None,
+                 french_download_url=None, french_hubspot_form=None):
         self.other_toolkits = []
         self.highlights = []
         self.title = title
@@ -22,6 +25,8 @@ class Toolkit(object):
         self.icon = icon
         self.hubspot_form = hubspot_form
         self.hubspot_formId = hubspot_formId
+        self.french_download_url = french_download_url
+        self.french_hubspot_form = french_hubspot_form
 
     def add_other_toolkits(self, other_toolkits):
         self.other_toolkits.extend(other_toolkits)

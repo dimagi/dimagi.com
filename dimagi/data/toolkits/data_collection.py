@@ -62,4 +62,5 @@ TOOLKIT.add_other_toolkits([
     summary.MATURITY_MODEL,
     summary.MOBILE_DATA_COLLECTION,
     summary.TOTAL_COST_OWNERSHIP,
+    summary.DIGITAL_HEALTH_STSTEMS,
 ])
