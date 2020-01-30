@@ -1,0 +1,32 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="">
+  <div class="content content-width-large pad-vert-small">
+    <div class="pad-bottom-small align-left">
+      <h2 class="orange">
+        {% blocktrans %}
+          Many CHWs are volunteers
+        {% endblocktrans %}
+      </h2>
+      <p>
+        {% blocktrans %}
+          Despite certain recommendations from the World Health Organization
+          addressing remuneration for community health workers, many of them are
+          volunteers, holding jobs and responsibilities outside of their role as a CHW:
+        {% endblocktrans %}
+      </p>
+    </div>
+
+    <div class="carousel carousel-fade-inactive carousel-numbered carousel-features">
+      <div class="carousel-container">
+        <div class="spinner spinner-large"></div>
+        <div class="carousel-slider">
+          {% include "sections/pillar/community_health_worker/chapter7/testimonials/volunteer1.html" %}
+          {% include "sections/pillar/community_health_worker/chapter7/testimonials/volunteer2.html" %}
+        </div>{# .carousel-slider #}
+      </div>{# .carousel-container #}
+    </div>{# .carousel #}
+
+  </div>{# .content #}
+</section>

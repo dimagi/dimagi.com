@@ -1,0 +1,34 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="">
+  <div class="content content-width-large pad-vert-small">
+    <div class="pad-bottom-small align-left">
+      <h2 class="orange">
+        {% blocktrans %}
+          Mobile tools can make CHWs’ jobs much easier
+        {% endblocktrans %}
+      </h2>
+      <p>
+        {% blocktrans %}
+          Mobile tools can help community health workers improve their protocol
+          adherence, the speed of their data collection, and the quality of their care:
+        {% endblocktrans %}
+      </p>
+    </div>
+
+    <div class="carousel carousel-fade-inactive carousel-numbered carousel-features">
+      <div class="carousel-container">
+        <div class="spinner spinner-large"></div>
+        <div class="carousel-slider">
+          {% include "sections/pillar/community_health_worker/chapter7/testimonials/mobile_tools1.html" %}
+          {% include "sections/pillar/community_health_worker/chapter7/testimonials/mobile_tools1.html" %}
+          {% include "sections/pillar/community_health_worker/chapter7/testimonials/mobile_tools1.html" %}
+          {% include "sections/pillar/community_health_worker/chapter7/testimonials/mobile_tools1.html" %}
+          {% include "sections/pillar/community_health_worker/chapter7/testimonials/mobile_tools1.html" %}
+        </div>{# .carousel-slider #}
+      </div>{# .carousel-container #}
+    </div>{# .carousel #}
+
+  </div>{# .content #}
+</section>

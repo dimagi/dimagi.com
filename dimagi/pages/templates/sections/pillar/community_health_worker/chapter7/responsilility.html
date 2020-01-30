@@ -1,0 +1,34 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="">
+  <div class="content content-width-large pad-vert-medium">
+    <div class="pad-bottom-small align-left">
+      <h2 class="orange">
+        {% blocktrans %}
+          The responsibilities of a CHW vary by program
+        {% endblocktrans %}
+      </h2>
+      <p>
+        {% blocktrans %}
+          A recent study of CHWs in Kenya included interviews with
+          the workers themselves, where they had an opportunity
+          to discuss their responsibilities:
+        {% endblocktrans %}
+      </p>
+    </div>
+
+    <div class="carousel carousel-fade-inactive carousel-numbered carousel-features">
+      <div class="carousel-container">
+        <div class="spinner spinner-large"></div>
+        <div class="carousel-slider">
+          {% include "sections/pillar/community_health_worker/chapter7/testimonials/testimonial1.html" %}
+          {% include "sections/pillar/community_health_worker/chapter7/testimonials/testimonial2.html" %}
+          {% include "sections/pillar/community_health_worker/chapter7/testimonials/testimonial3.html" %}
+          {% include "sections/pillar/community_health_worker/chapter7/testimonials/testimonial4.html" %}
+        </div>{# .carousel-slider #}
+      </div>{# .carousel-container #}
+    </div>{# .carousel #}
+
+  </div>{# .content #}
+</section>

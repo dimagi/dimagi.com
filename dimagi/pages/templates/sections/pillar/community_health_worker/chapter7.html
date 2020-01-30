@@ -1,0 +1,27 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<article class="epic orange-theme" id="chapter-7">
+
+  <section class="parallax-ch3-1 epic-cover"
+           data-lazybg="true">
+    <div class="content content-width-large">
+      <h1 class="white section-header" {% if request.is_amp %} amp-fx="fade-in" data-duration="1000ms" {% endif %}>
+        {% blocktrans %}
+          <span class="section-number gap-top-none">7</span>
+          <span class="pad-left-medium-at-medium">
+            What Community Health <br class="hide-until-large" />
+            Workers Have to Say
+          </span>
+        {% endblocktrans %}
+      </h1>
+    </div> {# .content #}
+  </section>  
+
+  {% include "sections/pillar/community_health_worker/chapter7/part1.html" %}
+  {% include "sections/pillar/community_health_worker/chapter7/video.html" %}
+  {% include "sections/pillar/community_health_worker/chapter7/responsilility.html" %}
+  {% include "sections/pillar/community_health_worker/chapter7/volunteer.html" %}
+  {% include "sections/pillar/community_health_worker/chapter7/mobile_tools.html" %}
+
+</article>

@@ -273,3 +273,9 @@ blockquote.rowena p {
 .mhp-case-study .image.testimonial2 {
   @include background-cover('../../../pages/home/workforce-2.jpg');
 }
+
+.video-intro .image {
+  @include background-cover('../../../pages/home/video-intro-banner.jpg');
+  height: 200px;
+  width: 270px;
+}
