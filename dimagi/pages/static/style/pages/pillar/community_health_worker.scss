@@ -279,3 +279,15 @@ blockquote.rowena p {
   height: 200px;
   width: 270px;
 }
+
+.news-images .image.blog3 {
+  @include background-cover('../../../pages/sectors/reproductive-health/news/blog3.jpg');
+  height: 200px;
+  background-size: contain;
+  background-position: left;
+}
+
+.news-images .image.blog2 {
+  @include background-cover('../../../pages/sectors/reproductive-health/news/blog3.jpg');
+  height: 250px;
+}

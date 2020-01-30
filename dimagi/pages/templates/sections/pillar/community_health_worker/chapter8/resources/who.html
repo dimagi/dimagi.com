@@ -1,0 +1,38 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="mhp-case-study orange-lightest-bg pad-vert-small pad-horz-line gap-bottom-line">
+    <div class="grid-1">
+      <h4 class="orange-dark">
+        {% blocktrans %}
+          WHO Guideline on Health Policy and System Support to
+          Optimize Community Health Worker Programmes
+        {% endblocktrans %}
+      </h4>
+      <p>
+        {% blocktrans %}
+          These guidelines offer 15 recommendations on health policy for
+          community health worker programs. Covering training, support and
+          supervision, and resources, these recommendations can go a long way
+          toward improving the performance of your community health
+          workers and your program overall.
+        {% endblocktrans %}
+      </p>
+    </div>{# .grid-1 #}
+    <div class="grid-2 pad-top-line">
+      <div class="column">
+        <p>
+          <a href="#"
+             class="button button-accent-gray arrow orange-dark read-more"
+             target="_blank">
+            {% blocktrans %}
+              Learn More
+            {% endblocktrans %}
+          </a>
+        </p>
+      </div>
+      <div class="column align-right">
+        {% include "svg/partner/gates.html" %}
+      </div>
+    </div>
+</section>

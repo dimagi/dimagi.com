@@ -1,0 +1,41 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="mhp-case-study orange-lightest-bg pad-vert-small pad-horz-line gap-bottom-line">
+    <div class="grid-1">
+      <h4 class="orange-dark">
+        {% blocktrans %}
+          Johns Hopkins University’s Global Health Initiative: Mobile
+          Technology in Support of Frontline Health Workers
+        {% endblocktrans %}
+      </h4>
+      <p>
+        {% blocktrans %}
+          A study from a group of researchers at Johns Hopkins reviewed the
+          use of mHealth tools to support frontline health workers on more than
+          140 projects around the world. We are particularly fond of this
+          report, as it points out that CommCare is the application of choice
+          for the majority of these projects, most of which were based in Africa
+          (91 in total). Review this report to learn about how the mHealth tools
+          were organized under 12 different functions, including data collection,
+          electronic decision support, and client education and behavior change communication.
+        {% endblocktrans %}
+      </p>
+    </div>{# .grid-1 #}
+    <div class="grid-2 pad-top-line">
+      <div class="column">
+        <p>
+          <a href="#"
+             class="button button-accent-gray arrow orange-dark read-more"
+             target="_blank">
+            {% blocktrans %}
+              Learn More
+            {% endblocktrans %}
+          </a>
+        </p>
+      </div>
+      <div class="column align-right">
+        {% include "svg/partner/gates.html" %}
+      </div>
+    </div>
+</section>
