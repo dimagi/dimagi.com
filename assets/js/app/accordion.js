@@ -21,6 +21,15 @@ define([
            $accordion.find('.accordion-content').slideUp();
         }
      });
+     $accordion.find('.accordion-custom-header').click(function () {
+      if ($accordion.hasClass('collapsed')) {
+         $accordion.removeClass('collapsed');
+         $accordion.find('.accordion-custom-content').slideDown();
+      } else {
+         $accordion.addClass('collapsed');
+         $accordion.find('.accordion-custom-content').slideUp();
+      }
+   });
     });
 
     _.each($(".accordion-group"), function (elem) {

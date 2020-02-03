@@ -133,6 +133,20 @@ a:not(.button).tile-more {
   @include make-bg(community-image, '../../../pages/home/launch', $_base-height, $_height-by-size);
 }
 
+#chapter-accordion {
+  $_base-height: auto;
+  $_height-by-size: (
+    small: 324px,
+    medium: 400px,
+  );
+  @include make-bg(community-image-accordion, '../../../pages/home/launch', $_base-height, $_height-by-size);
+}
+
+.community-image-accordion {
+  width: 200px;
+  margin-top: 0px !important;
+}
+
 #chapter-2 {
   $_base-height: 190px;
   $_height-by-size: (
@@ -264,14 +278,16 @@ blockquote.rowena p {
       width: 34px;;
       height: -webkit-fill-available;
       font-size: 25px;
-      padding-left: 6px;
+      padding-left: 10px;
       padding-top: 28px;
+      content: counter(item) " ";
+      font-weight: bolder;
     }
   }
 }
 
 .mhp-case-study .image.testimonial2 {
-  @include background-cover('../../../pages/home/workforce-2.jpg');
+  @include background-cover('../../../pages/home/video-intro-banner.jpg');
 }
 
 .video-intro .image {
