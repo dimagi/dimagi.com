@@ -2,25 +2,20 @@
 {% load i18n %}
 {% load dimagidotcom %}
 
-{% block content %}
-  <div class="testimonial-content content-width-medium align-left">
-    <blockquote>
-      <p>
-        {% blocktrans %}
-          The relationship between me and the facility is that I bring patients
-          from the households to the facility. If there is an expectant mother
-          or a mother who has had a home delivery I send them to the facility
-          as quickly as possible and if it is a sick person I refer. We have a
-          very good relationship which must be there. I am a link between
-          the community and facility.
-        {% endblocktrans %}  
-      </p>
-    </blockquote>
-    <p class="orange uppercase">
-      {% blocktrans %}
-        Community health worker from a rural county in Eastern Kenya discussing
-        their role as a liaison between communities and the health system
-      {% endblocktrans %}  
-    </p>
-  </div>
+{% block quote %}
+  {% blocktrans %}
+    The relationship between me and the facility is that I bring patients
+    from the households to the facility. If there is an expectant mother
+    or a mother who has had a home delivery I send them to the facility
+    as quickly as possible and if it is a sick person I refer. We have a
+    very good relationship which must be there. I am a link between
+    the community and facility.
+  {% endblocktrans %}
+{% endblock %}
+
+{% block author %}
+  {% blocktrans %}
+    Community health worker from a rural county in Eastern Kenya discussing
+    their role as a liaison between communities and the health system
+  {% endblocktrans %}
 {% endblock %}

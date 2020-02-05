@@ -2,26 +2,21 @@
 {% load i18n %}
 {% load dimagidotcom %}
 
-{% block content %}
-  <div class="testimonial-content content-width-medium align-left">
-    <blockquote>
-      <p>
-        {% blocktrans %}
-          On a daily basis as a CHW I go to my households which [I] am allocated
-          and I pass not only on health matters. For those mothers who have school
-          going children I also advise them to take their children to school. Also
-          as a CHW I see to it that my structures are clean so that the environment
-          is comfortable for everyone. Sometimes maybe once or twice in a month I
-          organise a cleanup, so we clean the area surrounding my structures with
-          the community not alone.
-        {% endblocktrans %}  
-      </p>
-    </blockquote>
-    <p class="orange uppercase">
-      {% blocktrans %}
-        Community health worker in Nairobi, Kenya discussing
-        the scope of their educational role
-      {% endblocktrans %}  
-    </p>
-  </div>
+{% block quote %}
+  {% blocktrans %}
+    On a daily basis as a CHW I go to my households which [I] am allocated
+    and I pass not only on health matters. For those mothers who have school
+    going children I also advise them to take their children to school. Also
+    as a CHW I see to it that my structures are clean so that the environment
+    is comfortable for everyone. Sometimes maybe once or twice in a month I
+    organise a cleanup, so we clean the area surrounding my structures with
+    the community not alone.
+  {% endblocktrans %}
+{% endblock %}
+
+{% block author %}
+  {% blocktrans %}
+    Community health worker in Nairobi, Kenya discussing
+    the scope of their educational role
+  {% endblocktrans %}
 {% endblock %}

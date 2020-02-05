@@ -2,20 +2,15 @@
 {% load i18n %}
 {% load dimagidotcom %}
 
-{% block content %}
-  <div class="testimonial-content content-width-medium align-left">
-    <blockquote>
-      <p>
-        {% blocktrans %}
-          Introduction to CommCare has improved our work efficiency and self-confidence
-        {% endblocktrans %}  
-      </p>
-    </blockquote>
-    <p class="orange uppercase">
-      {% blocktrans %}
-        An Accredited Social Health Activist (ASHA) – a kind of CHW employed by
-        India’s Ministry of Health
-      {% endblocktrans %}  
-    </p>
-  </div>
+{% block quote %}
+  {% blocktrans %}
+    Introduction to CommCare has improved our work efficiency and self-confidence
+  {% endblocktrans %}
+{% endblock %}
+
+{% block author %}
+  {% blocktrans %}
+    An Accredited Social Health Activist (ASHA) – a kind of CHW employed by
+    India’s Ministry of Health
+  {% endblocktrans %}
 {% endblock %}

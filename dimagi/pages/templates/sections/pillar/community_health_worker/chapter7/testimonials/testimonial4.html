@@ -2,26 +2,21 @@
 {% load i18n %}
 {% load dimagidotcom %}
 
-{% block content %}
-  <div class="testimonial-content content-width-medium align-left">
-    <blockquote>
-      <p>
-        {% blocktrans %}
-          I inquire from the household member available. There is a section
-          for pregnant women, children under five years, for referrals I have
-          made, check up for the elderly, whether the household has Information
-          Education and Communication materials, whether the CHEW/CHC has visited
-          the household, whether the household gets heath education through
-          me, TB, and immunisation and vitamin A supplementation for the under
-          fives, MUAC for assessing nutritional status of children.
-        {% endblocktrans %}  
-      </p>
-    </blockquote>
-    <p class="orange uppercase">
-      {% blocktrans %}
-        Community health worker from a rural county in Eastern
-        Kenya discussing her data collection responsibilities
-      {% endblocktrans %}  
-    </p>
-  </div>
+{% block quote %}
+  {% blocktrans %}
+    I inquire from the household member available. There is a section
+    for pregnant women, children under five years, for referrals I have
+    made, check up for the elderly, whether the household has Information
+    Education and Communication materials, whether the CHEW/CHC has visited
+    the household, whether the household gets heath education through
+    me, TB, and immunisation and vitamin A supplementation for the under
+    fives, MUAC for assessing nutritional status of children.
+  {% endblocktrans %}
+{% endblock %}
+
+{% block author %}
+  {% blocktrans %}
+    Community health worker from a rural county in Eastern
+    Kenya discussing her data collection responsibilities
+  {% endblocktrans %}
 {% endblock %}

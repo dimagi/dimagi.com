@@ -303,3 +303,13 @@ blockquote.rowena p {
   color: $color-text !important;
   font-size: $font-size-small !important;
 }
+
+.carousel-chapter-7 {
+  .carousel-slider {
+    transform: none;
+  }
+
+  .carousel-arrow .arrow-nav {
+    padding: 6px;
+  }
+}

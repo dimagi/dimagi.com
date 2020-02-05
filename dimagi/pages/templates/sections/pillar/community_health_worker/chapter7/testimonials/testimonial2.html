@@ -2,25 +2,20 @@
 {% load i18n %}
 {% load dimagidotcom %}
 
-{% block content %}
-  <div class="testimonial-content content-width-medium align-left">
-    <blockquote>
-      <p>
-        {% blocktrans %}
-          I teach and help them construct dish racks and leaky tins, I show them
-          the importance of mosquito nets so that they don't fall sick as they
-          spend a lot of money in the hospitals. I also emphasis on hygiene and
-          sanitation in the household and we make refuse pits and specific ones
-          for disposal of sharps… Now I am happy that I have taught them and
-          they are uplifting their health status.
-        {% endblocktrans %}  
-      </p>
-    </blockquote>
-    <p class="orange uppercase">
-      {% blocktrans %}
-        Community health worker from a rural county in Eastern
-        Kenya discussing their role as a health educator
-      {% endblocktrans %}  
-    </p>
-  </div>
+{% block quote %}
+  {% blocktrans %}
+    I teach and help them construct dish racks and leaky tins, I show them
+    the importance of mosquito nets so that they don't fall sick as they
+    spend a lot of money in the hospitals. I also emphasis on hygiene and
+    sanitation in the household and we make refuse pits and specific ones
+    for disposal of sharps… Now I am happy that I have taught them and
+    they are uplifting their health status.
+  {% endblocktrans %}
+{% endblock %}
+
+{% block author %}
+  {% blocktrans %}
+    Community health worker from a rural county in Eastern
+    Kenya discussing their role as a health educator
+  {% endblocktrans %}
 {% endblock %}

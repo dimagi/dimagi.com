@@ -2,22 +2,17 @@
 {% load i18n %}
 {% load dimagidotcom %}
 
-{% block content %}
-  <div class="testimonial-content content-width-medium align-left">
-    <blockquote>
-      <p>
-        {% blocktrans %}
-          A simple data collection application from CommCare revolutionized my
-          project. It made it quicker, more confidential, and more accurate. Such
-          technology has the potential to revamp the entire HIV testing &
-          counseling strategy in Cameroon.
-        {% endblocktrans %}  
-      </p>
-    </blockquote>
-    <p class="orange uppercase">
-      {% blocktrans %}
-        Community Health Volunteer, Peace Corps Cameroon
-      {% endblocktrans %}  
-    </p>
-  </div>
+{% block quote %}
+  {% blocktrans %}
+    A simple data collection application from CommCare revolutionized my
+    project. It made it quicker, more confidential, and more accurate. Such
+    technology has the potential to revamp the entire HIV testing &
+    counseling strategy in Cameroon.
+  {% endblocktrans %}
+{% endblock %}
+
+{% block author %}
+  {% blocktrans %}
+    Community Health Volunteer, Peace Corps Cameroon
+  {% endblocktrans %}
 {% endblock %}

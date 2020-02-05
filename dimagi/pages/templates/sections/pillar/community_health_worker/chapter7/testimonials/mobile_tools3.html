@@ -2,21 +2,16 @@
 {% load i18n %}
 {% load dimagidotcom %}
 
-{% block content %}
-  <div class="testimonial-content content-width-medium align-left">
-    <blockquote>
-      <p>
-        {% blocktrans %}
-          There has been a dramatic improvement in ASHA and Sangini (CHWs)
-          knowledge and skills. Without the app, we could do very little.
-        {% endblocktrans %}  
-      </p>
-    </blockquote>
-    <p class="orange uppercase">
-      {% blocktrans %}
-        A Ministry of Health official discussing the ReMiND project
-        with Catholic Relief Services
-      {% endblocktrans %}  
-    </p>
-  </div>
+{% block quote %}
+  {% blocktrans %}
+    There has been a dramatic improvement in ASHA and Sangini (CHWs)
+    knowledge and skills. Without the app, we could do very little.
+  {% endblocktrans %}
+{% endblock %}
+
+{% block author %}
+  {% blocktrans %}
+    A Ministry of Health official discussing the ReMiND project
+    with Catholic Relief Services
+  {% endblocktrans %}
 {% endblock %}
