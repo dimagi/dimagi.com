@@ -1,0 +1,60 @@
+{% extends "sections/pillar/community_health_worker/chapter4/accordion/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block accordion_collapsed %}collapsed{% endblock %}
+
+{% block accordion_header %}
+  {% blocktrans %}
+    The community health worker model can be a cost-effective approach
+  {% endblocktrans %}
+{% endblock %}
+
+{% block accordion_image_class%}community-image-accordion{% endblock %}
+
+{% block accordion_content %}
+  <h4 class="purple">
+    {% blocktrans %}
+      The community health worker model can be a cost-effective approach
+    {% endblocktrans %}
+  </h4>
+  <b>
+    {% blocktrans %}
+      Effects of Community-Based Health Worker Interventions to Improve
+      Chronic Disease Management and Care Among Vulnerable
+      Populations: A Systematic Review
+    {% endblocktrans %}
+  </b>
+  <blockquote>
+    <p class="purple">
+      {% blocktrans %}
+        Interventions by CHWs appear to be effective when compared with
+        alternatives and also cost-effective for certain health
+        conditions, particularly when partnering with low-income,
+        underserved, and racial and ethnic minority communities.
+      {% endblocktrans %}
+    </p>
+  </blockquote>
+  <p>
+    {% blocktrans %}
+      A review supported by the National Institute of Health covered
+      hundreds of individual studies, finding CHWs were most often
+      responsible for health education, counseling, health system
+      navigation assistance, and other social support. Interestingly,
+      training times ranged widely, from as little as four hours to as
+      much as 240, averaging just over 40 hours, while supervision was
+      typically either weekly or monthly. According to eight articles
+      on cost analysis, integrating community health workers into the
+      health system “was associated with cost-effective and sustainable care.”
+    {% endblocktrans %}
+  </p>
+  <p>
+    <a href="#"
+       class="button button-accent-gray arrow purple read-more"
+       target="_blank">
+      {% blocktrans %}
+        Learn More
+      {% endblocktrans %}
+    </a>
+  </p>
+{% endblock %}
