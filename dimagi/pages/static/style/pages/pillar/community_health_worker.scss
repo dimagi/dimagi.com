@@ -298,3 +298,8 @@ blockquote.rowena p {
 .accordion-custom-heading-text {
   font-size: $font-size-extra-large !important; //scss-lint:disable ImportantRule
 }
+
+.chw-links {
+  color: $color-text !important;
+  font-size: $font-size-small !important;
+}
