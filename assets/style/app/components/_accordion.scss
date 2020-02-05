@@ -51,6 +51,8 @@
         margin-top: -3px;
         width: 25px + $space-base;
         padding-top: 5px;
+        transform: rotate(180deg);
+        padding-left: 15px;
       }
     }
   }
@@ -70,8 +72,6 @@
       }
       .accordion-custom-header > *:before {
         content: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCIgd2lkdGg9IjIwIiBoZWlnaHQ9IjIwIj4KICA8cG9seWxpbmUgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRkZGRkZGIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBwb2ludHM9IgoJMTguNSw1LjggMTAsMTQuMiAxLjUsNS44ICI+PC9wb2x5bGluZT4KPC9zdmc+Cg==');
-        transform: rotate(180deg);
-        padding-left: 15px;
       }
 
       .accordion-content {

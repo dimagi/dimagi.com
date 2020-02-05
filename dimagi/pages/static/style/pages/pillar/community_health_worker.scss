@@ -69,7 +69,7 @@ a:not(.button).tile-more {
 .tile-chapter {
   position: relative;
   &:after {
-    border-width: 10px !important;
+    border-width: 10px !important; //scss-lint:disable ImportantRule
   }
   h2 {
     color: $color-white;
@@ -85,20 +85,9 @@ a:not(.button).tile-more {
   }
 }
 
-.dark-gray-bg {
-  background-color: #E6E6E5 !important;
-}
-
-.dc-icon svg {
-  width: 60px !important;
-  height: 70px;
-  margin-left: 30px;
-  margin-right: 0px;
-}
-
 .parallax-ch1-1 {
   @include make-parallax-bg(epic-cover, '../../../pages/pillar/dc/chapter1/hero');
-  height: auto !important;
+  height: auto !important; 
 }
 
 .parallax-ch2-1 {
@@ -244,7 +233,7 @@ blockquote.rowena p {
 .chw-border-left {
   border-left: 5px solid turquoise;
   padding-left: 10px;
-  line-height: 30px !important;
+  line-height: 30px !important; //scss-lint:disable ImportantRule
   margin-left: 8px;
 }
 
@@ -298,12 +287,14 @@ blockquote.rowena p {
 
 .news-images .image.blog3 {
   @include background-cover('../../../pages/sectors/reproductive-health/news/blog3.jpg');
-  height: 200px;
-  background-size: contain;
-  background-position: left;
+  height: 140px;
 }
 
 .news-images .image.blog2 {
   @include background-cover('../../../pages/sectors/reproductive-health/news/blog3.jpg');
   height: 250px;
+}
+
+.accordion-custom-heading-text {
+  font-size: $font-size-extra-large !important; //scss-lint:disable ImportantRule
 }
