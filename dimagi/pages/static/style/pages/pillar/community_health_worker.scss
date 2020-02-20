@@ -4,7 +4,7 @@
 @import 'app/variables/type';
 
 #intro {
-  @include make-bg(epic-cover, '../../../pages/pillar/dc/intro/hero');
+  @include make-bg(epic-cover, '../../../pages/pillar/chw/intro/hero');
 }
 
 .sub-nav-menu-active .sub-nav .dropdown {
@@ -119,7 +119,7 @@ a:not(.button).tile-more {
     small: 324px,
     medium: 390px,
   );
-  @include make-bg(community-image, '../../../pages/home/launch', $_base-height, $_height-by-size);
+  @include make-bg(community-image, '../../../pages/pillar/chw/numbers/chwbythenumber', $_base-height, $_height-by-size);
 }
 
 #chapter-4-accordion {
