@@ -36,8 +36,8 @@ STUDY = CaseStudy(
         ugettext_lazy("Mental Health"),
     ],
     features=[
-        ugettext_lazy("55 Users"),
-        ugettext_lazy("2 Administrators"),
+        ugettext_lazy("Device Usage Analytics"),
+        ugettext_lazy("Device Rules"),
     ],
     slug="focus_mdm",
     download_url="https://cdn2.hubspot.net/hubfs/503070/Case%20Studies/FocusMDM%20-%20SHM%20Foundation%20Case%20Study.pdf",
