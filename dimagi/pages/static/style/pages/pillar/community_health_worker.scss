@@ -86,22 +86,42 @@ a:not(.button).tile-more {
 }
 
 .parallax-ch1-1 {
-  @include make-parallax-bg(epic-cover, '../../../pages/pillar/dc/chapter1/hero');
+  @include make-parallax-bg(epic-cover, '../../../pages/pillar/chw/chapter1/hero');
   height: auto !important; 
 }
 
 .parallax-ch2-1 {
-  @include make-parallax-bg(hero, '../../../pages/pillar/dc/chapter2/hero');
+  @include make-parallax-bg(hero, '../../../pages/pillar/chw/chapter2/hero');
   height: auto !important;
 }
 
 .parallax-ch3-1 {
-  @include make-parallax-bg(hero, '../../../pages/pillar/dc/chapter3/hero');
+  @include make-parallax-bg(hero, '../../../pages/pillar/chw/chapter3/hero');
   height: auto !important;
 }
 
 .parallax-ch4-1 {
-  @include make-parallax-bg(hero, '../../../pages/pillar/dc/chapter4/hero');
+  @include make-parallax-bg(hero, '../../../pages/pillar/chw/chapter4/hero');
+  height: auto !important;
+}
+
+.parallax-ch5-1 {
+  @include make-parallax-bg(hero, '../../../pages/pillar/chw/chapter5/hero');
+  height: auto !important;
+}
+
+.parallax-ch6-1 {
+  @include make-parallax-bg(hero, '../../../pages/pillar/chw/chapter6/hero');
+  height: auto !important;
+}
+
+.parallax-ch7-1 {
+  @include make-parallax-bg(hero, '../../../pages/pillar/chw/chapter7/hero');
+  height: auto !important;
+}
+
+.parallax-ch8-1 {
+  @include make-parallax-bg(hero, '../../../pages/pillar/chw/chapter8/hero');
   height: auto !important;
 }
 
@@ -128,12 +148,48 @@ a:not(.button).tile-more {
     small: 324px,
     medium: 400px,
   );
-  @include make-bg(community-image-accordion, '../../../pages/home/launch', $_base-height, $_height-by-size);
+  @include make-bg(health-outcomes, '../../../pages/pillar/chw/chapter4/evidence/health', $_base-height, $_height-by-size);
+  @include make-bg(cost-effective, '../../../pages/pillar/chw/chapter4/evidence/cost-effective', $_base-height, $_height-by-size);
+  @include make-bg(behaviour, '../../../pages/pillar/chw/chapter4/evidence/behaviour', $_base-height, $_height-by-size);
+  @include make-bg(costs, '../../../pages/pillar/chw/chapter4/evidence/costs', $_base-height, $_height-by-size);
 }
 
-.community-image-accordion {
+// #chapter-4-accordion {
+//   $_base-height: auto;
+//   $_height-by-size: (
+//     small: 324px,
+//     medium: 400px,
+//   );
+//   @include make-bg(cost-effective, '../../../pages/pillar/chw/chapter4/evidence/health', $_base-height, $_height-by-size);
+// }
+
+.health-outcomes {
   width: 200px;
   margin-top: 0px !important;
+}
+
+.costs {
+  width: 200px;
+  margin-top: 0px !important;
+}
+
+.behaviour {
+  width: 200px;
+  margin-top: 0px !important;
+}
+
+.cost-effective {
+  width: 200px;
+  margin-top: 0px !important;
+}
+
+#chapter-1 {
+  $_base-height: auto;
+  $_height-by-size: (
+    small: 324px,
+    medium: 390px,
+  );
+  @include make-bg(community-image, '../../../pages/pillar/chw/chapter1/roles/health-worker', $_base-height, $_height-by-size);
 }
 
 #chapter-2 {
@@ -275,23 +331,82 @@ blockquote.rowena p {
   }
 }
 
-.mhp-case-study .image.testimonial2 {
-  @include background-cover('../../../pages/home/video-intro-banner.jpg');
+.mhp-case-study .image.mhp {
+  @include background-cover('../../../pages/pillar/chw/chapter6/mhp/mhp.jpg');
+}
+
+.mhp-case-study .image.mhp-map {
+  @include background-cover('../../../pages/pillar/chw/chapter6/mhp/mhp-map.jpg');
+}
+
+.tulasalud-case-study .image.tulasalud {
+  @include background-cover('../../../pages/pillar/chw/chapter6/tulasalud/tulasalud.jpg');
+}
+
+.tulasalud-case-study .image.tulasalud-map {
+  @include background-cover('../../../pages/pillar/chw/chapter6/tulasalud/tulasalud-map.jpg');
+}
+
+.lmrf-case-study .image.lmrf {
+  @include background-cover('../../../pages/pillar/chw/chapter6/lmrf/lmrf.jpg');
+}
+
+.lmrf-case-study .image.lmrf-map {
+  @include background-cover('../../../pages/pillar/chw/chapter6/lmrf/lmrf-map.jpg');
+}
+
+.gsid-case-study .image.gsid {
+  @include background-cover('../../../pages/pillar/chw/chapter6/gsid/gsid.jpg');
+}
+
+.gsid-case-study .image.gsid-map {
+  @include background-cover('../../../pages/pillar/chw/chapter6/gsid/gsid-map.jpg');
 }
 
 .video-intro .image {
-  @include background-cover('../../../pages/home/video-intro-banner.jpg');
+  @include background-cover('../../../pages/pillar/chw/chapter7/video.jpg');
+  height: 250px;
+  width: 270px;
+}
+
+.evideo-intro .image {
+  @include background-cover('../../../pages/pillar/chw/chapter7/evideo.jpg');
   height: 200px;
   width: 270px;
 }
 
-.news-images .image.blog3 {
-  @include background-cover('../../../pages/sectors/reproductive-health/news/blog3.jpg');
-  height: 140px;
+.helpful-sites .image.fhwc {
+  @include background-cover('../../../pages/pillar/chw/chapter8/helpful-sites/fhwc.jpg');
+  height: 250px;
 }
 
-.news-images .image.blog2 {
-  @include background-cover('../../../pages/sectors/reproductive-health/news/blog3.jpg');
+.helpful-sites .image.chw {
+  @include background-cover('../../../pages/pillar/chw/chapter8/helpful-sites/chw.jpg');
+  height: 250px;
+}
+
+.helpful-sites .image.chr {
+  @include background-cover('../../../pages/pillar/chw/chapter8/helpful-sites/chr.jpg');
+  height: 250px;
+}
+
+.helpful-sites .image.ict {
+  @include background-cover('../../../pages/pillar/chw/chapter8/helpful-sites/ict.jpg');
+  height: 250px;
+}
+
+.stay-know .image.gdhn {
+  @include background-cover('../../../pages/pillar/chw/chapter8/stay-in-the-know/gdhn.jpg');
+  height: 250px;
+}
+
+.stay-know .image.hifa {
+  @include background-cover('../../../pages/pillar/chw/chapter8/stay-in-the-know/hifa.jpg');
+  height: 250px;
+}
+
+.stay-know .image.core {
+  @include background-cover('../../../pages/pillar/chw/chapter8/stay-in-the-know/core.jpg');
   height: 250px;
 }
 
