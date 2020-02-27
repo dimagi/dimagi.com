@@ -354,24 +354,19 @@ define([
     };
 
     model.buildArrows = function () {
-      console.log('build arrows');
-      console.log(model.$slides);
 
       $(model.$slides).each(function (ind, slide) {
         var $prev, $next;
         if (ind > 0) {
-          console.log('add prev');
           $prev = $('<div class="carousel-arrow previous"><div class="arrow-nav"></div></div>');
           $prev.attr('data-dot', ind);
           $(slide).append($prev);
         }
         if (ind < model.count - 1) {
-          console.log('add next');
           $next = $('<div class="carousel-arrow next"><div class="arrow-nav"></div></div>');
           $next.attr('data-dot', ind + 2);
           $(slide).append($next);
         }
-        console.log(ind);
       });
     };
 
