@@ -1,0 +1,23 @@
+{% extends "sections/about/resources/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block icon %}
+  {% include "svg/about/icons/awards.html" %}
+{% endblock %}
+
+{% block header %}{% blocktrans %}
+  Awards
+{% endblocktrans %}{% endblock %}
+
+{% block content %}{% blocktrans %}
+  We have earned recognition from organizations around the world.
+{% endblocktrans %}{% endblock %}
+
+{% block link %}
+  {% url 'awards' %}
+{% endblock %}
+
+{% block link_text %}{% blocktrans %}
+  See Awards
+{% endblocktrans %}{% endblock %}
