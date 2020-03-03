@@ -20,6 +20,10 @@
   @include make-bg(image, '../../pages/home/build', $_base-height, $_height-by-size);
 }
 
+.commcare-stats {
+  border-radius: $border-radius;
+}
+
 .launch-digital-intervention {
   $_base-height: 122px;
   $_height-by-size: (
