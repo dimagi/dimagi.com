@@ -1,0 +1,141 @@
+@import 'app/mixins/background';
+@import 'app/variables/colors';
+@import 'app/variables/sizes';
+@import 'app/variables/type';
+
+#page-intro {
+  $_base-height: 190px;
+  $_height-by-size: (
+    small: 280px,
+    medium: 280px,
+    large: 280px,
+    extra-large: 320px,
+  );
+  @include make-bg(hero-data-image, '../../../pages/sectors/disease-treatment/intro/hero', $_base-height, $_height-by-size);
+}
+
+.news-images .image.blog1 {
+  @include background-cover('../../../pages/sectors/disease-treatment/news/blog1.jpg');
+  height: 200px;
+  background-size: contain;
+  background-position: left;
+}
+
+.news-images .image.blog2 {
+  @include background-cover('../../../pages/sectors/disease-treatment/news/blog_two.jpg');
+  height: 200px;
+  background-size: contain;
+  background-position: left;
+}
+
+.news-images .image.blog3 {
+  @include background-cover('../../../pages/sectors/disease-treatment/news/blog3.jpg');
+  height: 200px;
+  background-size: contain;
+  background-position: left;
+}
+
+.programs-images .image.featured-project1 {
+  @include background-cover('../../../pages/sectors/disease-treatment/programs/featured-project1.jpg');
+  height: 200px;
+  background-size: contain;
+  background-position: left;
+}
+
+.programs-images .image.featured-project2 {
+  @include background-cover('../../../pages/sectors/disease-treatment/programs/featured-project2.jpg');
+  height: 200px;
+  background-size: contain;
+  background-position: left;
+}
+
+.programs-images .image.featured-project3 {
+  @include background-cover('../../../pages/sectors/disease-treatment/programs/featured-project3.jpg');
+  height: 200px;
+  background-size: contain;
+  background-position: left;
+}
+
+.programs-images .image.featured-project1,
+.programs-images .image.featured-project2,
+.programs-images .image.featured-project3 {
+  background-position: initial;
+}
+
+.modal-popup {
+  width: 309px !important;
+}
+
+.part3 {
+  $_base-height: 550px;
+  $_height-by-size: (
+    small: 620px,
+    medium: 385px,
+    large: 360px,
+    extra-large: 360px,
+  );
+  @include make-bg(epic-cover, '../../../pages/sectors/disease-treatment/part3/hero', $_base-height, $_height-by-size);
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.commcare-text {
+  $_base-height: 290px;
+  $_height-by-size: (
+    small: 290px,
+    medium: 290px,
+    large: 290px,
+    extra-large: 290px,
+  );
+  @include make-bg(phone-image, '../../../pages/sectors/disease-treatment/part3/phone', $_base-height, $_height-by-size, '.png');
+
+  @media (min-width: $width-desktop) {
+    .off-grid {
+      top: 10%;
+      left: 0;
+      position: absolute;
+      background-size: auto 0%;
+      background-position: center;
+      background-repeat: no-repeat;
+      right: auto;
+      width: 120%;
+      z-index: 1;
+    }
+
+    .content {
+      position: relative;
+      z-index: 2;
+    }
+  }
+}
+
+.commcare-text .phone-image {
+  background-size: auto 0%;
+}
+
+.part3 .image .bg-loader { 
+  background-color: transparent;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+.read-more:hover,
+.read-more:focus {
+  color: $color-blue !important;
+}
+
+.integration .image {
+  @include background-cover('../../../../static/pages/commcare/product-integration/excel.jpg');
+  height: 50px;
+  width: 50px;
+}
+
+.integration {
+  display: flex;
+}

@@ -58,3 +58,7 @@ def handle_pricing_pdf(is_monthly):
 
 def partners(request):
     return render(request, 'pages/commcare/partners.html')
+
+
+def product_integration(request):
+    return render(request, 'pages/commcare/product_integration.html')

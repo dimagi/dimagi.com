@@ -1,0 +1,41 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section  data-lazybg="true">
+  <div id="benefits">
+    <div class="content pad-top-medium pad-bottom-small">
+      <h2 class="align-center">
+        {% blocktrans %}
+          CommCare’s data integration ecosystem
+        {% endblocktrans %}
+      </h2>
+    </div> {# .content #}
+  </div>
+  <div class="content pad-bottom-medium">
+    <div class="grid grid-2-at-large grid-1-at-medium grid-row-equal-heights ">
+      <div class="column pad-top-small">
+        <div class="grid-flex-at-medium">
+          <div class="integration column">
+            <div class="image"
+                 data-lazybg="true"></div>
+            <div class="image gap-left-base"
+                 data-lazybg="true"></div>
+          </div>
+          <div class="column">
+            <h6 class="uppercase theme-color align-left pad-bottom-base">
+              {% blocktrans %}
+                Excel dashboards and workbooks
+              {% endblocktrans %}
+            </h6>
+            <p class="align-left">
+              {% blocktrans %}
+                Link your CommCare data with Excel dashboards and refresh it
+                automatically on a custom schedule.
+              {% endblocktrans %}
+            </p>
+          </div>
+        </div>
+      </div> {# .column .pad-top-small #}
+    </div> {# .grid #}
+  </div> {# .content .blue-theme #}
+</section>

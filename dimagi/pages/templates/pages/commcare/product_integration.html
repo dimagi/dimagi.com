@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+{% load capture_tags %}
+
+{% block title %}{% blocktrans %}
+  COMMCARE Data Integrations
+{% endblocktrans %}{% endblock %}
+
+{% capture as page_social_card silent %}{% block social_card_image_url %}
+  {% static 'pages/sectors/disease-treatment/intro/hero.jpg' %}
+{% endblock %}{% endcapture %}
+
+{% block body_class %}disease-treatment-page tucked-hero{% endblock %}
+
+{% block stylesheets %}
+  {% compress css %}
+    <link href="{% sass_src 'style/pages/commcare/product_integration.scss' %}" rel="stylesheet" media="screen" type="text/css" />
+  {% endcompress %}
+{% endblock %}
+
+{% block hero %}
+  <div class="blue-theme">
+    <section class="hero hero-blog" id="hero"></section>
+  </div>
+{% endblock %}
+
+{% block content %}
+  {% include "sections/commcare/product-integration/sub_nav.html" %}
+  {% include "sections/commcare/product-integration/overview.html" %}
+  {% include "sections/commcare/product-integration/demo.html" %}
+  {% include "sections/commcare/product-integration/benefit.html" %}
+  {% include "sections/commcare/product-integration/programs.html" %}
+  {% include "sections/commcare/product-integration/part3.html" %}
+  {% include "sections/commcare/product-integration/news.html" %}
+  {% include "sections/commcare/product-integration/part4.html" %}
+  {% include "sections/commcare/product-integration/testimonial.html" %}
+{% endblock %}
+
+{% block modals %}
+  <div class="modal"
+       data-dismissible="true"
+       data-size="medium"
+       id="schedule-demo-form">
+    <div class="modal-scroll">
+      <div class="modal-wrapper">
+        <a href="#" class="modal-close-button"></a>
+        <div class="content pad-horz-medium-at-medium pad-horz-line pad-vert-none blue-theme">
+          <h3>
+            {% blocktrans %}
+              Schedule A Demo
+            {% endblocktrans %}
+          </h3>
+          <section id="schedule-demo-form-content"></section>
+        </div>{# .content #}
+      </div>{# .modal-wrapper #}
+    </div>{# .modal-scroll #}
+  </div>{# .modal #}
+
+  <div class="modal"
+       data-dismissible="true"
+       data-size="medium"
+       id="hubspot-download-form-pdf-summary">
+    <div class="modal-scroll">
+      <div class="modal-wrapper">
+        <a href="#" class="modal-close-button"></a>
+        <div class="content pad-horz-medium-at-medium pad-horz-line pad-vert-none blue-theme">
+          <section id="download-pdf-summary-form-content"></section>
+        </div>{# .content #}
+      </div>{# .modal-wrapper #}
+    </div>{# .modal-scroll #}
+  </div>{# .modal #}
+{% endblock %}
+
+{% block js %}
+  <!--[if lte IE 8]>
+    <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+  <![endif]-->
+  <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+  <script>
+    //  Download pdf summary form
+    hbspt.forms.create({
+      portalId: "503070",
+      formId: "f0a1a767-82f9-48d1-a4ba-4a3a4b21107c",
+      target: "#download-pdf-summary-form-content",
+      css: "",
+      onFormSubmit: function () {
+        window.open('https://cdn2.hubspot.net/hubfs/503070/Sector%20PDFs/CommCare_DiseaseTreatment.pdf', "_blank");
+      },
+    });
+  </script>
+{% endblock %}

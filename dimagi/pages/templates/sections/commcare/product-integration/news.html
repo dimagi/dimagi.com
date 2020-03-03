@@ -1,0 +1,155 @@
+{% load dimagidotcom %}
+{% load i18n %}
+
+<section class="pad-bottom-medium"
+         id="news">
+  <div class="content pad-top-medium align-center">
+    <h2>
+      {% blocktrans %}
+        The Latest on Mobile Data Collection in <br class="hide-until-medium"> Disease Treatment Programs
+      {% endblocktrans %}
+    </h2>
+    <p>
+      {% blocktrans %}
+        Updates and advice from our world-class partners and Global Services team
+      {% endblocktrans %}
+    </p>
+  </div>{# .content #}
+  <div class="content pad-top-line news-images">
+    <div class="grid grid-3-at-large grid-1-at-medium grid-row-equal-heights ">
+      <div class="column">
+        <div class="pad-bottom-base white-bg">
+          <div class="image blog1" data-lazybg="true"></div>
+          <div class="pad-line">
+            <h5>
+              <strong>
+                {% blocktrans %}
+                  Leveraging Mobile Data Collection in the Fight Against HIV/AIDS
+                {% endblocktrans %}
+              </strong>
+            </h5>
+            <p class="pad-top-line-at-large">
+              {% blocktrans %}
+                A Peace Corps volunteer explains how CommCare aided in a patient data collection
+                program in Cameroon focused on HIV treatment around World AIDS Day.
+              {% endblocktrans %}
+            </p>
+            <p class="pad-top-line-at-large">
+              <a href="{% url 'blog_post' 'why-peace-corps-cameroon-is-leveraging-mobile-data-collection-in-the-fight-against-hiv-aids' %}"
+                 class="arrow link-gray read-more"
+                 target="_blank">
+                {% blocktrans %}
+                  Read More
+                {% endblocktrans %}
+              </a>
+            </p>
+          </div> {# .pad-line #}
+        </div> {# .white-bg #}
+      </div> {# .column #}
+      <div class="column">
+        <div class="pad-bottom-base white-bg">
+          <div class="image blog2" data-lazybg="true"></div>
+          <div class="pad-line">
+            <h5>
+              <strong>
+                {% blocktrans %}
+                  How Dimagi is Helping to Eliminate Malaria.
+                {% endblocktrans %}
+              </strong>
+            </h5>
+            <p>
+              {% blocktrans %}
+                At Dimagi, we are proudly using our expertise and resources 
+                to work alongside many organizations in the fight against 
+                malaria, taking a number of different approaches to 
+                tackle the disease.
+              {% endblocktrans %}
+            </p>
+            <p>
+              <a href="{% url 'blog_post' 'mobile-data-collection-malaria' %}"
+                 class="arrow link-gray read-more"
+                 target="_blank">
+                {% blocktrans %}
+                  Read More
+                {% endblocktrans %}
+              </a>
+            </p>
+          </div> {# .pad-line #}
+        </div> {# .white-bg #}
+      </div> {# .column #}
+      <div class="column">
+        <div class="pad-bottom-base white-bg">
+          <div class="image blog3" data-lazybg="true"></div>
+          <div class="pad-line">
+            <h5 class="pad-bottom-base-at-large pad-bottom-none-at-extra-large ">
+              <strong>
+                {% blocktrans %}
+                  Lessons from Contact Tracing During the Ebola Outbreak
+                {% endblocktrans %}
+              </strong>
+            </h5>
+            <p class="pad-top-small-at-large pad-top-line-at-extra-large">
+              {% blocktrans %}
+                Three pieces of advice in project and app design from a member of our Global Services
+                 team who spent a year working in Liberia, Sierra Leone, and Guinea on mobile tech to
+                 combat Ebola.
+              {% endblocktrans %}
+            </p>
+            <p>
+              <a href="{% url 'blog_post' 'contact-tracing-during-the-ebola-outbreak-notes-from-the-field' %}"
+                 class="arrow link-gray read-more"
+                 target="_blank">
+                {% blocktrans %}
+                  Read More
+                {% endblocktrans %}
+              </a>
+            </p>
+          </div> {# .pad-line #}
+        </div> {# .white-bg #}
+      </div> {# .column #}
+    </div>{# .grid #}
+  </div>{# .content #}
+  <div class="content pad-top-small">
+    <h2>
+      {% blocktrans %}
+        Additional Resources to Explore
+      {% endblocktrans %}
+    </h2>
+    <p>
+      <div class="gap-left-base blue-theme">
+        <div class="gap-bottom-base">
+          <a href="{% url 'sector' 'hiv-aids' %}"
+             target="_blank">
+            {% blocktrans %}
+              HIV/AIDS Treatment with CommCare
+            {% endblocktrans %}
+          </a>
+        </div>
+        <div class="gap-bottom-base">
+          <a href="{% url 'blog_post' 'mobile-data-collection-malaria' %}"
+             target="_blank">
+            {% blocktrans %}
+              Malaria Treatment with CommCare
+            {% endblocktrans %}
+          </a>
+        </div>
+        <div class="gap-bottom-base">
+          <a href="{% url 'sector' 'tuberculosis' %}"
+             target="_blank">
+            {% blocktrans %}
+              Tuberculosis Treatment with CommCare
+            {% endblocktrans %}
+          </a>
+        </div>
+        <div class="gap-bottom-base">
+          <a href="{% url 'sector' 'ebola-response' %}"
+             target="_blank">
+            {% blocktrans %}
+              Ebola Response with CommCare
+            {% endblocktrans %}
+          </a>
+        </div>
+      </div> {# .gap-left-base #}
+    </p>
+  </div> {# .content #}
+</section>

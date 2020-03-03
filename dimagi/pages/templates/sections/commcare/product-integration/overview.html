@@ -1,0 +1,76 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section data-lazybg="true"
+         id="overview">
+  <div class="content pad-top-medium pad-bottom-medium">
+    <div class="pad-bottom-line pad-bottom-small-at-medium pad-bottom-small-at-large pad-bottom-small-at-extra-large">
+      <strong>
+        {% blocktrans %}
+          COMMCARE
+        {% endblocktrans %}
+      </strong>
+      <h2 class="pad-top-base">
+        {% blocktrans %}
+          Data Integrations
+        {% endblocktrans %}
+      </h2>
+    </div>
+    <div class="grid grid-2-at-medium grid-1-at-small">
+      <div class="column">
+        <p>
+          {% blocktrans %}
+            Dimagi’s partners leverage their CommCare data in many ways. That
+            often means integrating with third-party tools for data analysis,
+            reporting, and management. 
+          {% endblocktrans %}
+        </p>
+        <p>
+          {% blocktrans %}
+            With this in mind, we’ve designed CommCare to easily fit into your
+            data ecosystem. Our flexible integrations ensure you get the most
+            value out of data your teams capture in CommCare. 
+          {% endblocktrans %}
+        </p>
+        <ul class="check-list grid-2-at-medium white-bg pad-top-small pad-left-small">
+          <li>
+            {% blocktrans %}
+              Excel dashboards
+            {% endblocktrans %}
+          </li>
+          <li>
+            {% blocktrans %}
+              Tableau and Power BI
+            {% endblocktrans %}
+          </li>
+          <li>
+            {% blocktrans %}
+              DHIS2 and OpenMRS
+            {% endblocktrans %}
+          </li>
+          <li>
+            {% blocktrans %}
+              Zapier integrations
+            {% endblocktrans %}
+          </li>
+          <li>
+            {% blocktrans %}
+              SQL databases
+            {% endblocktrans %}
+          </li>
+          <li>
+            {% blocktrans %}
+              APIs & Webhooks
+            {% endblocktrans %}
+          </li>
+        </ul>
+      </div>{# .column #}
+      <div class="column"
+           id="page-intro">
+        <div class="hero-data-image white-lazy-bg"
+             data-lazybg="true">
+        </div>
+      </div> {# .column #}
+    </div> {# .grid #}
+  </div> {# .content #}
+</section>
