@@ -53,4 +53,18 @@ SECTOR.add_sub_sectors([
         theme="purple-theme",
         slug="programmatic-research",
     ),
+    Sector(
+        name=ugettext_lazy(
+            "Financial Inclusion"
+        ),
+        summary=ugettext_lazy(
+            "Financial inclusion programs provide access to and delivery of "
+            "basic banking services, including savings, lending, insurance "
+            "and other financial services, to everyone in the population — especially "
+            "those who live under the poverty line."
+        ),
+        icon="svg/sectors/community_dev/research.html",
+        theme="purple-theme",
+        slug="financial-inclusion",
+    ),
 ])

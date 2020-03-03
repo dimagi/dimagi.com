@@ -1,0 +1,52 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="sub-nav"
+         id="sub-nav">
+  <div class="content">
+    <div class="actions">
+      <a class="primary purple-theme {% click_subnav 'download' %}"
+         href="#hubspot-download-form-pdf-summary">
+        <span>
+          {% blocktrans %}
+            Download Overview
+          {% endblocktrans %}
+        </span>
+      </a>
+    </div>{# .actions #}
+    <a class="prompt-link {% click_subnav 'browse' %}"
+       href="#">
+      {% blocktrans %}
+        Browse
+      {% endblocktrans %}
+    </a>
+    <div class="destinations">
+      <div class="content">
+        <a href="{% url 'sectors' %}"
+           class="{% click_subnav 'all' %}">
+          {% blocktrans %}
+            All Sectors
+          {% endblocktrans %}
+        </a>
+        <a href="#overview"
+           class="{% click_subnav 'overview' %}">
+          {% blocktrans %}
+            Overview
+          {% endblocktrans %}
+        </a>
+        <a href="#benefits"
+           class="{% click_subnav 'benefits' %}">
+          {% blocktrans %}
+            Benefits
+          {% endblocktrans %}
+        </a>
+        <a href="#programs"
+           class="{% click_subnav 'programs' %}">
+          {% blocktrans %}
+            Programs
+          {% endblocktrans %}
+        </a>
+      </div>{# .content #}
+    </div>{# .destinations #}
+  </div>{# .content #}
+</section>

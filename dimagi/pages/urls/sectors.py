@@ -15,6 +15,7 @@ from dimagi.pages.views.sectors import (
     education,
     small_businesses,
     programmatic_research,
+    financial_inclusion,
     gb_violence,
 )
 
@@ -40,6 +41,8 @@ urlpatterns = [
         name='sector_maternal_and_child_health'),
     url(r'^programmatic-research/$', programmatic_research,
         name='programmatic_research'),
+    url(r'^financial-inclusion/$', financial_inclusion,
+        name='financial_inclusion'),
     url(r'^disease-treatment/$', disease_treatment,
         name='sector_disease_treatment'),
     url(r'^small-businesses/$', small_businesses,
