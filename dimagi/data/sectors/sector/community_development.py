@@ -62,7 +62,7 @@ SECTOR.add_sub_sectors([
             "basic banking services to everyone in the population — especially "
             "those below the poverty line."
         ),
-        icon="svg/sectors/community_dev/research.html",
+        icon="svg/sectors/community_dev/financial_inclusion.html",
         theme="purple-theme",
         slug="financial-inclusion",
     ),
