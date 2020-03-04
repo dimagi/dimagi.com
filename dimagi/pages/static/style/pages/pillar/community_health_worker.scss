@@ -143,25 +143,16 @@ a:not(.button).tile-more {
 }
 
 #chapter-4-accordion {
-  $_base-height: auto;
+  $_base-height: 200px;
   $_height-by-size: (
-    small: 324px,
+    small: 250px,
     medium: 400px,
   );
-  @include make-bg(health-outcomes, '../../../pages/pillar/chw/chapter4/evidence/health', $_base-height, $_height-by-size);
+  @include make-bg(health-outcomes, '../../../pages/pillar/chw/chapter4/evidence/health/hero', $_base-height, $_height-by-size);
   @include make-bg(cost-effective, '../../../pages/pillar/chw/chapter4/evidence/cost-effective', $_base-height, $_height-by-size);
   @include make-bg(behaviour, '../../../pages/pillar/chw/chapter4/evidence/behaviour', $_base-height, $_height-by-size);
   @include make-bg(costs, '../../../pages/pillar/chw/chapter4/evidence/costs', $_base-height, $_height-by-size);
 }
-
-// #chapter-4-accordion {
-//   $_base-height: auto;
-//   $_height-by-size: (
-//     small: 324px,
-//     medium: 400px,
-//   );
-//   @include make-bg(cost-effective, '../../../pages/pillar/chw/chapter4/evidence/health', $_base-height, $_height-by-size);
-// }
 
 .health-outcomes {
   width: 200px;
@@ -267,6 +258,15 @@ a:not(.button).tile-more {
     .content {
       position: relative;
       z-index: 2;
+    }
+
+    .health-outcomes {
+      width: 420px !important;
+    }
+  }
+  @media (min-width: $width-mobile) {
+    .health-outcomes {
+      width: 320px !important;
     }
   }
   @media (min-width: $width-desktop-lg) {
