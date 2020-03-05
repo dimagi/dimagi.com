@@ -19,9 +19,12 @@
         {% endblocktrans %}
       </p>
     </div>{# .grid-1 #}
-    <div class="grid-2 pad-top-line">
+    <div class="grid-2-at-medium grid-1-at-small pad-top-line grid-reverse">
+      <div class="column align-center">
+        {% include "svg/pillar/chw/chapter8/who.html" %}
+      </div>
       <div class="column">
-        <p>
+        <p class="pad-top-line">
           <a href="https://apps.who.int/iris/bitstream/handle/10665/275474/9789241550369-eng.pdf?ua=1&ua=1"
              class="button button-accent-gray arrow orange-dark read-more"
              target="_blank">
@@ -30,9 +33,6 @@
             {% endblocktrans %}
           </a>
         </p>
-      </div>
-      <div class="column align-right">
-        {% include "svg/partner/gates.html" %}
       </div>
     </div>
 </section>

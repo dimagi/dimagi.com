@@ -33,6 +33,20 @@ $_max-mobile: $width-desktop - 1px;
   .sub-nav-menu-active .sub-nav .dropdown {
     height: auto;
   }
+
+  .health-outcomes, .costs, .behaviour, .cost-effective {
+    width: auto !important;
+    margin-top: 0px !important;
+  }
+
+  .chw-challenges {
+    margin: auto;
+  
+      svg {
+        margin-left: 0px !important;
+      }
+      
+  }
 }
 
 .dropdown .social-links {
@@ -149,9 +163,9 @@ a:not(.button).tile-more {
     medium: 400px,
   );
   @include make-bg(health-outcomes, '../../../pages/pillar/chw/chapter4/evidence/health/hero', $_base-height, $_height-by-size);
-  @include make-bg(cost-effective, '../../../pages/pillar/chw/chapter4/evidence/cost-effective', $_base-height, $_height-by-size);
-  @include make-bg(behaviour, '../../../pages/pillar/chw/chapter4/evidence/behaviour', $_base-height, $_height-by-size);
-  @include make-bg(costs, '../../../pages/pillar/chw/chapter4/evidence/costs', $_base-height, $_height-by-size);
+  @include make-bg(cost-effective, '../../../pages/pillar/chw/chapter4/evidence/cost-effective/hero', $_base-height, $_height-by-size);
+  @include make-bg(behaviour, '../../../pages/pillar/chw/chapter4/evidence/behaviour/hero', $_base-height, $_height-by-size);
+  @include make-bg(costs, '../../../pages/pillar/chw/chapter4/evidence/costs/hero', $_base-height, $_height-by-size);
 }
 
 .health-outcomes {
@@ -258,15 +272,6 @@ a:not(.button).tile-more {
     .content {
       position: relative;
       z-index: 2;
-    }
-
-    .health-outcomes {
-      width: 420px !important;
-    }
-  }
-  @media (min-width: $width-mobile) {
-    .health-outcomes {
-      width: 320px !important;
     }
   }
   @media (min-width: $width-desktop-lg) {
