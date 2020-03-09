@@ -1,0 +1,88 @@
+{% load i18n %}
+{% load dimagidotcom %}
+<section data-lazybg="true" class="purple-theme">
+  <div id="benefits">
+    <div class="content pad-top-medium">
+      <h2 class="align-center pad-bottom-small" >
+        {% blocktrans %}
+          Benefits of Mobile Data Collection in Financial Inclusion
+        {% endblocktrans %}
+      </h2>
+    </div> {# .content #}
+    <div class="content pad-bottom-medium">
+      <div class="grid grid-2-at-large grid-1-at-medium grid-row-equal-heights ">
+        <div class="column pad-top-small">
+          <div class="grid-flex">
+            <div class="column no-shrink">
+              <div class="theme-icon">
+                {% include "svg/sectors/small_businesses/analytics.html" %}
+              </div>{# .theme-icon #}
+            </div>{# .column .no-shrink #}
+            <div class="column">
+              <p>
+                {% blocktrans %}
+                  Mobile tools can help beneficiaries formalize and track their
+                  business information in real time, including sales,
+                  inventory, and invoices.
+                {% endblocktrans %}
+              </p>
+            </div>{# .column #}
+          </div>{# .grid-flex #}
+        </div>{# .column #}
+        <div class="column pad-top-small ">
+          <div class="grid-flex">
+            <div class="column no-shrink">
+              <div class="theme-icon">
+                {% include "svg/sectors/financial-inclusion/link.html" %}
+              </div>{# .theme-icon #}
+            </div>{# .column.no-shrink #}
+            <div class="column">
+              <p>
+                {% blocktrans %}
+                  CommCare can integrate with Mobile Network Operators payment
+                  systems, ensuring access to mobile money systems that
+                  accelerate financial inclusion.
+                {% endblocktrans %}
+              </p>
+            </div>{# .column #}
+          </div>{# .grid-flex #}
+        </div>
+        <div class="column pad-top-small ">
+          <div class="grid-flex">
+            <div class="column no-shrink">
+              <div class="theme-icon">
+                {% include "svg/sectors/gb_violence/multimedia.html" %}
+              </div>{# .theme-icon #}
+            </div>{# .column. no-shrink #}
+            <div class="column">
+              <p>
+                {% blocktrans %}
+                  Multimedia capabilities (available in multiple languages) can
+                  support beneficiaries with educational financial planning content.
+                {% endblocktrans %}
+              </p>
+            </div>{# .column #}
+          </div>{# .grid-flex #}
+        </div>
+        <div class="column pad-top-small ">
+          <div class="grid-flex">
+            <div class="column no-shrink">
+              <div class="theme-icon">
+                {% include "svg/sectors/gb_violence/sms_cape.html" %}
+              </div>{# .theme-icon #}
+            </div>{# .column.no-shrink #}
+            <div class="column">
+              <p>
+                {% blocktrans %}
+                  CommCare supports sophisticated messaging integrations that
+                  can deliver customized and targeted messaging to financial
+                  inclusion program beneficiaries.
+                {% endblocktrans %}
+              </p>
+            </div>{# .column #}
+          </div>{# .grid-flex #}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,267 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="testimonial programs purple-theme" 
+         data-lazybg="true" 
+         id="programs">
+  <div class="accent-gray-bg">
+    <div class="content pad-vert-small">
+      <div class="mdc-sector-program">
+        <h2 class="align-center">
+          {% blocktrans %}
+            Featured CommCare-Based Financial Inclusion Projects
+          {% endblocktrans %}
+        </h2>
+      </div>
+      <div class="grid grid-3-at-large grid-1-at-medium grid-row-equal-heights grid-col-space-small pad-top-medium">
+        <div class="column  pad-bottom-small ">
+          <div class="pad-bottom-base white-bg">
+            <div class="image testimonial1"
+                 data-lazybg="true"></div>
+            <div class="pad-line pad-top-none-at-large pad-top-line-at-extra-large">
+              <h5><strong class="body-color">
+                {% blocktrans %}
+                  UNCDF – Financial Education Platform  <br>
+                  West Africa
+                {% endblocktrans %}
+              </strong></h5>
+              <p class="body-color">
+                {% blocktrans %}
+                  UNCDF is using CommCare to help financially educate more than
+                  23,000 youth in The Gambia, Guinea, Niger, and Senegal.
+                {% endblocktrans %}
+              </p>
+              <p><a href="#agri-ep-feature-card-1" class="arrow link-gray">
+                {% blocktrans %}
+                  Read More 
+                {% endblocktrans %}
+              </a></p>
+            </div>
+          </div>
+        </div>{# .column #}
+
+        <div class="column pad-bottom-small">
+          <div class="pad-bottom-base white-bg">
+            <div class="image testimonial2"
+                 data-lazybg="true"></div>
+          <div class="pad-line pad-top-none-at-large pad-top-line-at-extra-large">
+            <h5>
+              <strong class="body-color">
+               {% blocktrans %}
+                  USAID – Mobilise! Project <br>
+                  India
+               {% endblocktrans %}
+              </strong>
+            </h5>
+            <p class="body-color">
+              {% blocktrans %}
+                Saving Money is a mobile application available in Hindi and
+                English, built to empower Indian women financially.
+              {% endblocktrans %}
+            </p>
+            <p class="pad-top-line-at-extra-large">
+              <a href="#agri-ep-feature-card-2" class="arrow link-gray">
+                {% blocktrans %}
+                  Read More
+                {% endblocktrans %}
+              </a>
+            </p>
+          </div>
+          </div>
+        </div>{# .column #}
+
+        <div class="column pad-bottom-small">
+          <div class="pad-bottom-base white-bg">
+              <div class="image testimonial3"
+                   data-lazybg="true"></div>
+          <div class="pad-line pad-top-none-at-large pad-top-line-at-extra-large">
+            <h5>
+              <strong class="body-color">
+                {% blocktrans %}
+                  UNCDF – CommAgri Project <br>
+                  Senegal
+                {% endblocktrans %}
+              </strong>
+            </h5>
+            <p class="body-color">
+              {% blocktrans %}
+                UNCDF is using CommCare to help smallholder farmers to track their
+                business data while derisking them when they access finance.
+              {% endblocktrans %}
+            </p>
+            <p>
+              <a href="#agri-ep-feature-card-3" class="arrow link-gray">
+                {% blocktrans %}
+                  Read More
+                {% endblocktrans %}
+              </a>
+            </p>
+          </div>
+          </div>
+        </div>{# .column #}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% block modals %}
+  <div class="modal testimonial programs"
+       data-dismissible="true"
+       data-size="medium"
+       id="agri-ep-feature-card-1">
+    <div class="modal-scroll">
+      <div class="modal-wrapper">
+        <a href="#" class="modal-close-button"></a>
+        <div class="content pad-horz-medium-at-medium pad-horz-small pad-bottom-none turquoise-theme">
+          <h4>
+            <strong class="body-color">
+              {% blocktrans %}
+                UNCDF – Financial Education platform  <br>
+                West Africa
+              {% endblocktrans %}
+            </strong>
+          </h4>
+          <div class="grid-flex-at-large">
+            <div class="column">
+              <p class="body-color">
+                {% blocktrans %}
+                  United Nations Capital Development Funds (UNCDF) is actively
+                  working to leave no one behind, especially youth and young
+                  girls. Through a market system development approach, UNCDF
+                  help financial sector of least developed countries to be
+                  more inclusive:  among other activities, in The Gambia,
+                  Guinea, Niger, and Senegal, UNCDF supports Financial Service
+                  Providers (FSPs) to design, develop and test financial and
+                  non-financial services (e.g. financial education) to finally
+                  increase financial inclusion and facilitate job creation,
+                  especially for youth. Financial education is particularly
+                  important in building youth competencies and helping them
+                  through their financial decision making.
+                {% endblocktrans %}
+              </p>
+              <p class="body-color">
+                {% blocktrans %}
+                  Together with the FSPs partners and Dimagi, UNCDF has supported
+                  CommCare-based application to provide financial education to
+                  the last mile: trainers and youth ambassadors use the platform
+                  to animate sessions targeting the most vulnerable (e.g. potential
+                  migrants, young women, youth living in rural areas, and the
+                  poorest youth). Young leaders are even able to log into the
+                  application on their own devices to review lessons and replicate
+                  learnings within their communities. The program has kicked off
+                  in 2019 with 500 peer leaders and trainers and is at scale expected
+                  to support more than 23,000 beneficiaries in the four countries
+                  of UNCDF’s youth finance portfolio.
+                {% endblocktrans %}
+              </p>
+            </div>
+            <div class="column pad-top-none-until-large">
+              <div class="image testimonial1 crs"
+                   data-lazybg="true"></div>
+            </div>
+          </div>
+        </div>{# .content #}
+      </div>{# .modal-wrapper #}
+    </div>{# .modal-scroll #}
+  </div>{# .modal #}
+
+  <div class="modal testimonial programs"
+       data-dismissible="true"
+       data-size="medium"
+       id="agri-ep-feature-card-2">
+    <div class="modal-scroll">
+      <div class="modal-wrapper">
+        <a href="#" class="modal-close-button"></a>
+        <div class="content pad-horz-medium-at-medium pad-horz-line pad-vert-none turquoise-theme">
+          <h4>
+            <strong class="body-color">
+              {% blocktrans %}
+                USAID – Mobilise! Project <br>
+                India
+              {% endblocktrans %}
+            </strong>
+          </h4>
+          <div class="grid-flex-at-large">
+            <div class="column">
+              <p class="body-color">
+                {% blocktrans %}
+                  Dimagi is the recipient of a direct award from USAID in
+                  India. The Mobilise! Project aims to design a primary health
+                  care system-led response to domestic violence and to develop
+                  recommendations for how such a response can be supported
+                  through mobile technology. Female users of the application can
+                  access modules built to support them in improving their knowledge
+                  on empowerment related topics, specifically financial
+                  empowerment. Saving Money, the mobile application we developed
+                  in Hindi and English, contains different media-based modules to
+                  help them with specific financial planning advice, including
+                  Financial Empowerment and Setting saving goals.
+                {% endblocktrans %}
+              </p>
+            </div>
+            <div class="column">
+              <div class="image testimonial2 crs"
+                   data-lazybg="true"></div>
+            </div>
+          </div>
+        </div>{# .content #}
+      </div>{# .modal-wrapper #}
+    </div>{# .modal-scroll #}
+  </div>{# .modal #}
+
+  <div class="modal testimonial programs"
+       data-dismissible="true"
+       data-size="medium"
+       id="agri-ep-feature-card-3">
+    <div class="modal-scroll">
+      <div class="modal-wrapper">
+        <a href="#" class="modal-close-button"></a>
+        <div class="content pad-horz-medium-at-medium pad-horz-line pad-vert-none turquoise-theme">
+          <h4>
+            <strong class="body-color">
+              {% blocktrans %}
+                UNCDF – CommAgri Project <br>
+                Senegal
+              {% endblocktrans %}
+            </strong>
+          </h4>
+          <div class="grid-flex-at-large">
+            <div class="column">
+              <p class="body-color">
+                {% blocktrans %}
+                  In 2019, Dimagi was granted funding by United Nations Capital
+                  Development Funds (UNCDF) to build a business case for Financial
+                  Services Providers (FSPs) like Baobab in Senegal to further
+                  develop, test, and validate our service offerings and data
+                  products targeting smallholders farmers, specifically on banana crops.
+                {% endblocktrans %}
+              </p>
+              <p class="body-color">
+                {% blocktrans %}
+                  UNCDF wanted to explore how data-driven decision making and
+                  new dimensions of information could reduce the risk of lending
+                  to the youth segment, in particular those working in agriculture,
+                  by providing alternatives for those who do not have traditional
+                  credit records. UNCDF has partnered with Dimagi and
+                  Baobab Sénégal (BS) to pilot the CommAgri application in the
+                  banana value chain to reduce the information asymmetry between
+                  agro cooperatives and FSPs when it comes to lending decisions. CommBanane
+                  has reached up to 500 smallholders farmers active in the banana value
+                  chain in rural Senegal. The cooperatives have been able to track their
+                  business records and accessed specific credit services adapted to their
+                  needs. Baobab Senegal has been able to assess the loan requests through
+                  our web platform, allowing better visibility on their lending decision
+                  making while reducing operational costs.
+                {% endblocktrans %}
+              </p>
+            </div>
+            <div class="column">
+              <div class="image testimonial3 crs"
+                   data-lazybg="true"></div>
+          </div>
+          </div>
+        </div>{# .content #}
+      </div>{# .modal-wrapper #}
+    </div>{# .modal-scroll #}
+  </div>{# .modal #}
+{% endblock %}
