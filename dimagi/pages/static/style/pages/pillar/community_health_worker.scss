@@ -148,12 +148,12 @@ a:not(.button).tile-more {
 }
 
 #chapter-intro {
-  $_base-height: auto;
+  $_base-height: 150px;
   $_height-by-size: (
     small: 324px,
     medium: 390px,
   );
-  @include make-bg(community-image, '../../../pages/pillar/chw/numbers/chwbythenumber', $_base-height, $_height-by-size);
+  @include make-bg(community-image, '../../../pages/pillar/chw/numbers/numbers', $_base-height, $_height-by-size);
 }
 
 #chapter-4-accordion {
@@ -439,4 +439,8 @@ blockquote.rowena p {
 .chw-footnotes {
   font-size: 11px;
   font-weight: 700;
+}
+
+.chw-accordion-sub {
+  font-weight: 700 !important;
 }
