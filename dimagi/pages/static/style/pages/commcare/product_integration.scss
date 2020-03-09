@@ -3,6 +3,11 @@
 @import 'app/variables/sizes';
 @import 'app/variables/type';
 
+@mixin integration-logo-resolution {
+  height: 50px;
+  width: 50px;
+}
+
 #page-intro {
   $_base-height: 190px;
   $_height-by-size: (
@@ -11,25 +16,25 @@
     large: 280px,
     extra-large: 320px,
   );
-  @include make-bg(hero-data-image, '../../../pages/sectors/disease-treatment/intro/hero', $_base-height, $_height-by-size);
+  @include make-bg(hero-data-image, '../../../pages/commcare/product-integration/intro/hero', $_base-height, $_height-by-size);
 }
 
 .news-images .image.blog1 {
-  @include background-cover('../../../pages/sectors/disease-treatment/news/blog1.jpg');
+  @include background-cover('../../../pages/commcare/product-integration/news/powerbi.jpg');
   height: 200px;
   background-size: contain;
   background-position: left;
 }
 
 .news-images .image.blog2 {
-  @include background-cover('../../../pages/sectors/disease-treatment/news/blog_two.jpg');
+  @include background-cover('../../../pages/commcare/product-integration/news/dhis2.jpg');
   height: 200px;
   background-size: contain;
   background-position: left;
 }
 
 .news-images .image.blog3 {
-  @include background-cover('../../../pages/sectors/disease-treatment/news/blog3.jpg');
+  @include background-cover('../../../pages/commcare/product-integration/news/report.jpg');
   height: 200px;
   background-size: contain;
   background-position: left;
@@ -130,10 +135,52 @@
   color: $color-blue !important;
 }
 
-.integration .image {
-  @include background-cover('../../../../static/pages/commcare/product-integration/excel.jpg');
-  height: 50px;
-  width: 50px;
+.integration {
+  
+  .excel {
+    @include background-cover('../../../../static/pages/commcare/product-integration/excel.jpg');
+    @include integration-logo-resolution;
+  }
+
+  .third-party-one {
+    @include background-cover('../../../../static/pages/commcare/product-integration/third-party-one.jpg');
+    @include integration-logo-resolution;
+  }
+
+  .third-party-two {
+    @include background-cover('../../../../static/pages/commcare/product-integration/third-party-two.jpg');
+    @include integration-logo-resolution;
+  }
+
+  .tableau {
+    @include background-cover('../../../../static/pages/commcare/product-integration/tableau.jpg');
+    @include integration-logo-resolution;
+  }
+
+  .powerbi {
+    @include background-cover('../../../../static/pages/commcare/product-integration/powerbi.jpg');
+    @include integration-logo-resolution;
+  }
+
+  .export {
+    @include background-cover('../../../../static/pages/commcare/product-integration/export.jpg');
+    @include integration-logo-resolution;
+  }
+
+  .dhis2 {
+    @include background-cover('../../../../static/pages/commcare/product-integration/dhis2.jpg');
+    @include integration-logo-resolution;
+  }
+
+  .mrs {
+    @include background-cover('../../../../static/pages/commcare/product-integration/mrs.jpg');
+    @include integration-logo-resolution;
+  }
+
+  .webhooks {
+    @include background-cover('../../../../static/pages/commcare/product-integration/webhooks.jpg');
+    @include integration-logo-resolution;
+  }
 }
 
 .integration {
