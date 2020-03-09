@@ -40,37 +40,6 @@
   background-position: left;
 }
 
-.programs-images .image.featured-project1 {
-  @include background-cover('../../../pages/sectors/disease-treatment/programs/featured-project1.jpg');
-  height: 200px;
-  background-size: contain;
-  background-position: left;
-}
-
-.programs-images .image.featured-project2 {
-  @include background-cover('../../../pages/sectors/disease-treatment/programs/featured-project2.jpg');
-  height: 200px;
-  background-size: contain;
-  background-position: left;
-}
-
-.programs-images .image.featured-project3 {
-  @include background-cover('../../../pages/sectors/disease-treatment/programs/featured-project3.jpg');
-  height: 200px;
-  background-size: contain;
-  background-position: left;
-}
-
-.programs-images .image.featured-project1,
-.programs-images .image.featured-project2,
-.programs-images .image.featured-project3 {
-  background-position: initial;
-}
-
-.modal-popup {
-  width: 309px !important;
-}
-
 .part3 {
   $_base-height: 550px;
   $_height-by-size: (

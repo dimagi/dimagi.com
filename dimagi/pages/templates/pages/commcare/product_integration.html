@@ -8,10 +8,10 @@
 {% endblocktrans %}{% endblock %}
 
 {% capture as page_social_card silent %}{% block social_card_image_url %}
-  {% static 'pages/sectors/disease-treatment/intro/hero.jpg' %}
+  {% static 'pages/commcare/product-integration/intro/hero.jpg' %}
 {% endblock %}{% endcapture %}
 
-{% block body_class %}disease-treatment-page tucked-hero{% endblock %}
+{% block body_class %}product-integration-page tucked-hero{% endblock %}
 
 {% block stylesheets %}
   {% compress css %}
@@ -31,6 +31,7 @@
   {% include "sections/commcare/product-integration/benefit.html" %}
   {% include "sections/commcare/product-integration/part3.html" %}
   {% include "sections/commcare/product-integration/news.html" %}
+  {% include "sections/commcare/product-integration/partners.html" %}
 {% endblock %}
 
 {% block modals %}
@@ -52,7 +53,7 @@
       </div>{# .modal-wrapper #}
     </div>{# .modal-scroll #}
   </div>{# .modal #}
-
+  
   <div class="modal"
        data-dismissible="true"
        data-size="medium"
