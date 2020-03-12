@@ -1,0 +1,27 @@
+{% load dimagidotcom %}
+{% load i18n %}
+
+<section class="pad-bottom-base"
+         id="export">
+  <div class="column pad-top-small">
+    <div class="grid-flex-at-medium">
+      <div class="integration column pad-left-medium-at-medium">
+        <div class="export gap-left-base-at-medium"
+             data-lazybg="true"></div>
+      </div>
+      <div class="column">
+        <h6 class="uppercase theme-color align-left pad-bottom-base">
+          {% blocktrans %}
+            Programmatic data export
+          {% endblocktrans %}
+        </h6>
+        <p class="align-left">
+          {% blocktrans %}
+            Automatically export data from CommCare to your in-house SQL
+            database or Excel workbooks using CommCare’s Data Export Tool.
+          {% endblocktrans %}
+        </p>
+      </div>
+    </div>
+  </div> {# .column .pad-top-small #}
+</section>

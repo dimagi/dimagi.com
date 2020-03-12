@@ -1,0 +1,16 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="partners border-top"
+         id="partners">
+	<div class="pad-vert-small align-center">
+  	<h2 class="body-color">
+    	{% blocktrans %}
+        Trusted by hundreds of organisations
+      {% endblocktrans %}
+    </h2>
+  </div>
+  <div class="content pad-top-small pad-bottom-medium align-center">
+    {% include "partials/partners.html" with partners=partners %}
+  </div>{# .content #}
+</section>
