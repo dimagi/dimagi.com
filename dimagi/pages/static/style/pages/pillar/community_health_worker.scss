@@ -191,7 +191,7 @@ a:not(.button).tile-more {
 #chapter-1 {
   $_base-height: auto;
   $_height-by-size: (
-    small: 324px,
+    small: 210px,
     medium: 390px,
   );
   @include make-bg(community-image, '../../../pages/pillar/chw/chapter1/roles/health-worker', $_base-height, $_height-by-size);
@@ -232,10 +232,6 @@ a:not(.button).tile-more {
 
 .section-number {
   position: absolute;
-}
-
-#chapter-1 .community-image .bg-loader {
-  background-size: 100% auto;
 }
 
 #chapter-2 .child-growth-image .bg-loader {
