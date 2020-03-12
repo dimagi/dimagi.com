@@ -36,10 +36,13 @@
           {% endblocktrans %}
         </li>
         <li>
-          {% blocktrans %}
-            Seamlessly integrate CommCare with Tableau and Power BI for 
-            beautiful reports and visualizations
-          {% endblocktrans %}
+          <a class="slate"
+             href="{% url 'commcare_integration' %}">
+            {% blocktrans %}
+              Seamlessly integrate CommCare with Tableau and Power BI for 
+              beautiful reports and visualizations
+            {% endblocktrans %}
+          </a>
         </li>
       </ul>
     </div>{# .column #}

@@ -59,6 +59,7 @@ def handle_pricing_pdf(is_monthly):
 def partners(request):
     return render(request, 'pages/commcare/partners.html')
 
-
-def product_integration(request):
-    return render(request, 'pages/commcare/product_integration.html')
+@enable_ab_test(DEMO_WORKFLOW_V2)
+def commcare_integration(request):
+    context = _get_global_context()
+    return render(request, 'pages/commcare/commcare_integration.html', context)
