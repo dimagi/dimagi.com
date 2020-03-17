@@ -1,0 +1,43 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="oikoi">
+  <div class="feature-projects pad-vert-line pad-horz-line border-all">
+    <div class="align-center turquoise-icon pad-bottom-base">
+      {% include "svg/commcare/onboarding/dive.html" %}
+    </div>
+    <h5 class="align-center uppercase turquoise font-weight-medium">
+      {% blocktrans %}
+        Deep Dive
+      {% endblocktrans %}
+    </h5>
+    <h5 class="align-center pad-bottom-base">
+      {% blocktrans %}
+        $5000
+      {% endblocktrans %}
+    </h5>
+    <div class="pad-horz-small">
+      <p class="content-width-small">
+        {% blocktrans %}
+          Perfect for organizations looking for a quick but thorough onboarding
+          to CommCare, that need regular access to the Customer Success team.
+        {% endblocktrans %}
+      </p>
+      <b>
+        {% blocktrans %}
+          Includes:
+        {% endblocktrans %}
+      </b>
+      <p class="pad-top-base">
+        {% blocktrans %}
+          20 hours of Q & A or feature-based training sessions
+        {% endblocktrans %}
+      </p>
+      <p>
+        {% blocktrans %}
+          Direct access to Customer Success Support in between sessions
+        {% endblocktrans %}
+      </p>
+    </div>
+  </div>{# .feature-projects #}
+</section>

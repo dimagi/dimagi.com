@@ -1,0 +1,82 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="certified_partners border-top pad-bottom-small"
+         id="certified_partners">
+  <div class="content">
+    <div class="pad-vert-small">
+      <div class="pad-bottom-small">
+        <h2 class="blue">
+          {% blocktrans %}
+            Let our Customer Success guide your organization as you begin using CommCare
+          {% endblocktrans %}
+        </h2>
+        <p>
+          {% blocktrans %}
+            We know that learning to use a new platform can be difficult, so our
+            CustomerSuccess team is here to help with three remote training
+            packages designed to build internal capacity for designing,
+            building, and implementing CommCare independently. Onboarding
+            packages are completely tailored to your specific needs, covering
+            topics like application design, feature usage, user management, and deployment.
+          {% endblocktrans %}
+        </p>
+      </div>{# .pad-bottom-small #}
+    </div>
+    <div class="grid-1-at-small grid-3-at-large grid-row-space-small grid-row-equal-heights grid-col-space-line">
+      {% include "sections/commcare/product_onboarding/onboard/quick_start.html" %}
+      {% include "sections/commcare/product_onboarding/onboard/dive.html" %}
+      {% include "sections/commcare/product_onboarding/onboard/dive_plus.html" %}
+    </div>{# .grid-1-at-small #}
+    <div class="onboarding-features">
+      <h4 class="blue align-center pad-bottom-line content-width-medium">
+        {% blocktrans %}
+          Our onboarding packages can include training sessions on over
+          25 topics, custom-tailored to your project’s needs:
+        {% endblocktrans %}
+      </h4>
+      <ul class="check-list grid-4-at-medium white-bg pad-left-small">
+        <li>
+          {% blocktrans %}
+            App Design
+          {% endblocktrans %}
+        </li>
+        <li>
+          {% blocktrans %}
+            App Building
+          {% endblocktrans %}
+        </li>
+        <li>
+          {% blocktrans %}
+            User Management
+          {% endblocktrans %}
+        </li>
+        <li>
+          {% blocktrans %}
+            Deployment
+          {% endblocktrans %}
+        </li>
+        <li>
+          {% blocktrans %}
+            Data Exports/ Reports
+          {% endblocktrans %}
+        </li>
+        <li>
+          {% blocktrans %}
+            Data Sharing
+          {% endblocktrans %}
+        </li>
+        <li>
+          {% blocktrans %}
+            Designing for Scale
+          {% endblocktrans %}
+        </li>
+        <li>
+          {% blocktrans %}
+            Workforce Monitoring
+          {% endblocktrans %}
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>

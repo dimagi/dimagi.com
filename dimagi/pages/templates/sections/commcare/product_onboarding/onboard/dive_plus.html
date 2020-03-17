@@ -1,0 +1,51 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="oikoi">
+  <div class="feature-projects pad-vert-line pad-horz-line border-all">
+    <div class="align-center purple-icon pad-bottom-base">
+      {% include "svg/commcare/onboarding/dive_plus.html" %}
+    </div>
+    <h5 class="align-center uppercase purple font-weight-medium">
+      {% blocktrans %}
+        Deep Dive Plus
+      {% endblocktrans %}
+    </h5>
+    <h5 class="align-center pad-bottom-base">
+      {% blocktrans %}
+        $7500
+      {% endblocktrans %}
+    </h5>
+    <div>
+      <p class="content-width-small">
+        {% blocktrans %}
+          Perfect for organizations looking to deploy multiple applications or
+          involve multiple country leads in their onboarding of CommCare. Onboarding
+          covers several training topics allowing organizations to harness the
+          power of CommCare’s most advanced self-service features.
+        {% endblocktrans %}
+      </p>
+      <b>
+        {% blocktrans %}
+          Includes:
+        {% endblocktrans %}
+      </b>
+      <p class="pad-top-base">
+        {% blocktrans %}
+          20 hours of Q & A or feature-based training sessions
+        {% endblocktrans %}
+      </p>
+      <p>
+        {% blocktrans %}
+          Direct access to Customer Success Support in between sessions
+        {% endblocktrans %}
+      </p>
+      <p>
+        {% blocktrans %}
+          Advanced support for deploying multiple applications or the
+          same app across multiple geographies
+        {% endblocktrans %}
+      </p>
+    </div>
+  </div>{# .feature-projects #}
+</section>

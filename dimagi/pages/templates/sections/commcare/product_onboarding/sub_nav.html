@@ -1,0 +1,46 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="sub-nav"
+         id="sub-nav">
+  <div class="content">
+    <div class="actions">
+      <a class="primary cta cta-schedule-demo"
+         href="#demo-form-modal">
+        <span>
+          {% blocktrans %}
+            Interested? Click here.
+          {% endblocktrans %}
+        </span>
+      </a>
+    </div>{# .actions #}
+    <a class="prompt-link {% click_subnav 'browse' %}"
+       href="#">
+      {% blocktrans %}
+        Browse
+      {% endblocktrans %}
+    </a>
+    <div class="destinations">
+      <div class="content">
+        <a href="#overview"
+           class="{% click_subnav 'overview' %}">
+          {% blocktrans %}
+            Overview
+          {% endblocktrans %}
+        </a>
+        <a href="#watchdemo"
+           class="{% click_subnav 'watchdemo' %}">
+          {% blocktrans %}
+            Curriculum
+          {% endblocktrans %}
+        </a>
+        <a href="#testimonials"
+           class="{% click_subnav 'testimonials' %}">
+          {% blocktrans %}
+            Detailed Pricing
+          {% endblocktrans %}
+        </a>
+      </div>{# .content #}
+    </div>{# .destinations #}
+  </div>{# .content #}
+</section>
