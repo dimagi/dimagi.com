@@ -14,6 +14,45 @@
   @include make-bg(hero-data-image, '../../../pages/sectors/disease-treatment/intro/hero', $_base-height, $_height-by-size);
 }
 
+.mobile-apps {
+  $_base-height: 175px;
+  $_height-by-size: (
+    extra-small: 190px,
+    small: 270px,
+    medium: 180px,
+    large: 235px,
+    extra-large: 290px,
+  );
+  @include make-bg(accurate-diagnose-image, '../../../pages/sectors/disease-treatment/mobile-tools/diagnose/accurate', $_base-height, $_height-by-size);
+  @include make-bg(secure-image, '../../../pages/sectors/disease-treatment/mobile-tools/secure_share/secure', $_base-height, $_height-by-size);
+  @include make-bg(sync-image, '../../../pages/sectors/disease-treatment/mobile-tools/sync_data/sync', $_base-height, $_height-by-size);
+
+  .device-container,
+  .screen {
+    width: 100%;
+  }
+
+  .carousel-slide {
+    background-color: $color-white;
+
+    @media (min-width: $width-mobile) {
+      height: 810px;
+    }
+
+    @media (min-width: $width-desktop) {
+      height: 600px;
+    }
+
+    @media (min-width: $width-desktop-lg) {
+      height: 530px;
+    }
+
+    @media (min-width: $width-desktop-xl) {
+      height: 500px;
+    }
+  }
+}
+
 .news-images .image.blog1 {
   @include background-cover('../../../pages/sectors/disease-treatment/news/blog1.jpg');
   height: 200px;
