@@ -53,7 +53,7 @@ SECTOR.add_sub_sectors([
     ),
     Sector(
         name=ugettext_lazy(
-            "Disease Treatment"
+            "Infectious Disease"
         ),
         summary=ugettext_lazy(
         "Treat widespread disease such as Tuberculosis, Ebola, and HIV/AIDS with mobile tools."
