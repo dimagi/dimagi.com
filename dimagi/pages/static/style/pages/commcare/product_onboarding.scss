@@ -24,7 +24,7 @@
     large: 290px,
     extra-large: 292px,
   );
-  @include make-bg(image, '../../../pages/case_management/cm-cta', $_base-height, $_height-by-size, '.png');
+  @include make-bg(image, '../../../pages/commcare/product_onboarding/cta/curriculum-cta', $_base-height, $_height-by-size, '.png');
 
   @media (min-width: $width-desktop) {
     .off-grid {
