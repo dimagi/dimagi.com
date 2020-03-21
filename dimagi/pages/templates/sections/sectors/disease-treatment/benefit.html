@@ -6,112 +6,21 @@
     <div class="content pad-top-medium pad-bottom-small">
       <h2 class="align-center">
         {% blocktrans %}
-          Benefits of Mobile Data Collection in <br class="hide-until-medium"> Disease Treatment
+          Benefits of Community-Based Service Delivery Solutions
         {% endblocktrans %}
       </h2>
     </div> {# .content #}
   </div>
   <div class="content pad-bottom-medium">
-    <div class="grid grid-2-at-large grid-1-at-medium grid-row-equal-heights ">
-      <div class="column pad-top-small">
-        <div class="grid-flex">
-          <div class="column no-shrink">
-            <div class="theme-icon">
-              {% include "svg/sectors/benefit/share_icon.html" %}
-            </div> {# .theme-icon #}
-          </div> {# .column .no-shrink #}
-          <div class="column">
-            <p>
-              {% blocktrans %}
-                Integrated systems allow lab results and patient information to be easily and
-                securely shared between clinics in different communities.
-              {% endblocktrans %}
-            </p>
-          </div> {# .column #}
-        </div> {# .grid-flex #}
-      </div> {# .column .pad-top-small #}
-      <div class="column pad-top-small ">
-        <div class="grid-flex">
-          <div class="column no-shrink">
-            <div class="theme-icon">
-              {% include "svg/sectors/benefit/mobile_icon.html" %}
-            </div> {# .theme-icon #}
-          </div> {# .column. no-shrink #}
-          <div class="column">
-            <p>
-              {% blocktrans %}
-                Enable your workers to work offline, syncing data as soon as the device regains a signal.
-              {% endblocktrans %}
-            </p>
-          </div> {# .column #}
-        </div> {# .grid-flex #}
-      </div> {# .column .pad-top-small #}
-      <div class="column pad-top-small ">
-        <div class="grid-flex">
-          <div class="column no-shrink">
-            <div class="theme-icon">
-              {% include "svg/sectors/benefit/multimedia_icon.html" %}
-            </div> {# .theme-icon #}
-          </div> {# .column.no-shrink #}
-          <div class="column">
-            <p>
-              {% blocktrans %}
-                Workers can use multimedia to improve how they share treatment recommendations and to enhance behavior change communication.
-              {% endblocktrans %}
-            </p>
-          </div> {# .column #}
-        </div> {# .grid-flex #}
-      </div> {# .column .pad-top-small #}
-      <div class="column pad-top-small ">
-        <div class="grid-flex">
-          <div class="column no-shrink">
-            <div class="theme-icon">
-              {% include "svg/sectors/benefit/icon3.html" %}
-            </div> {# .theme-icon #}
-          </div> {# .column.no-shrink #}
-          <div class="column">
-            <p>
-              {% blocktrans %}
-                Reference patient history, training materials, and more all from the device, so more
-                time can be spent with the patient and less searching through paper guides and forms.
-              {% endblocktrans %}
-            </p>
-          </div> {# .column #}
-        </div> {# .grid-flex #}
-      </div> {# .column .pad-top-small #}
-      <div class="column pad-top-small ">
-        <div class="grid-flex">
-          <div class="column no-shrink">
-            <div class="theme-icon">
-              {% include "svg/sectors/benefit/icon4.html" %}
-            </div> {# .theme-icon #}
-          </div> {# .column.no-shrink #}
-          <div class="column">
-            <p>
-              {% blocktrans %}
-                Identify patients, collect their information, and create profiles for each to support diagnostic results and follow-up visits.
-              {% endblocktrans %}
-            </p>
-          </div> {# .column #}
-        </div> {# .grid-flex #}
-      </div> {# .column .pad-top-small #}
-      <div class="column pad-top-small">
-        <div class="grid-flex">
-          <div class="column no-shrink">
-            <div class="theme-icon">
-              {% include "svg/sectors/benefit/icon1.html" %}
-            </div> {# .theme-icon #}
-          </div> {# .column.no-shrink #}
-          <div class="column">
-            <p>
-              {% blocktrans %}
-                Supervisors can detect data irregularities and oversee health workers’ activities,
-                ensuring they adhere to strict protocols.
-              {% endblocktrans %}
-            </p>
-          </div> {# .column #}
-        </div> {# .grid-flex #}
-      </div> {# .column .pad-top-small #}
+    <div class="grid grid-2-at-large grid-1-at-medium grid-row-equal-heights blue-theme">
+      {% include "sections/sectors/disease-treatment/benefits/manage.html" %}
+      {% include "sections/sectors/disease-treatment/benefits/history.html" %}
+      {% include "sections/sectors/disease-treatment/benefits/identify.html" %}
+      {% include "sections/sectors/disease-treatment/benefits/dashboard.html" %}
+      {% include "sections/sectors/disease-treatment/benefits/results.html" %}
+      {% include "sections/sectors/disease-treatment/benefits/real_time.html" %}
+      {% include "sections/sectors/disease-treatment/benefits/treatment.html" %}
+      {% include "sections/sectors/disease-treatment/benefits/sms.html" %}
     </div> {# .grid #}
   </div> {# .content .blue-theme #}
 </section>

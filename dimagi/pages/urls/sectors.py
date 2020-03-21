@@ -43,7 +43,7 @@ urlpatterns = [
         name='programmatic_research'),
     url(r'^financial-inclusion/$', financial_inclusion,
         name='financial_inclusion'),
-    url(r'^disease-treatment/$', disease_treatment,
+    url(r'^infectious-disease/$', disease_treatment,
         name='sector_disease_treatment'),
     url(r'^small-businesses/$', small_businesses,
         name='sector_small_businesses'),

@@ -1,0 +1,26 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="accent-gray-bg border-vert mobile-apps pad-bottom-small"
+         id="overview">
+  <div class="content pad-vert-medium align-center">
+
+    <h2 class="blue pad-bottom-base">
+      {% blocktrans %}
+        Mobile Apps Can Help Fight Infectious Disease
+      {% endblocktrans %}
+    </h2>
+
+    <div class="carousel carousel-fade-inactive carousel-numbered carousel-arrows hide-dots carousel-features white-bg">
+      <div class="carousel-container">
+        <div class="spinner spinner-large"></div>
+        <div class="carousel-slider">
+          {% include "sections/sectors/disease-treatment/mobile-apps/accurate.html" %}
+          {% include "sections/sectors/disease-treatment/mobile-apps/secure.html" %}
+          {% include "sections/sectors/disease-treatment/mobile-apps/sync.html" %}
+        </div>{# .carousel-slider #}
+      </div>{# .carousel-container #}
+    </div>{# .carousel #}
+
+  </div>
+</section>
