@@ -6,6 +6,7 @@ from django.shortcuts import render
 from django.urls import reverse
 
 from dimagi.data.blog import (
+    available_categories,
     nav_categories,
     get_category_by_slug,
     ARCHIVE,
@@ -20,7 +21,7 @@ from dimagi.utils.decorators.enable_ab_test import enable_ab_test
 def validate_category(fn):
     @wraps(fn)
     def _validate_category(request, category=None, *args, **kwargs):
-        available_cat = [c.slug for c in nav_categories]
+        available_cat = [c.slug for c in available_categories]
         if category not in available_cat and category is not None:
             raise Http404()
         return fn(request, category, *args, **kwargs)
@@ -105,6 +106,7 @@ def post(request, slug):
     context = _get_global_context()
     context['post'] = _post
     return render(request, 'pages/blog/post.html', context)
+
 
 @enable_ab_test(DEMO_WORKFLOW_V2)
 def mobile_data_collection_blog_post(request):
