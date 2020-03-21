@@ -5,6 +5,7 @@ from dimagi.data.blog.categories import (
     ARCHIVE,
     TECH,
     PARTNERS_LATEST,
+    COVID_19,
 )
 
 
@@ -15,6 +16,7 @@ available_categories = (
     ARCHIVE,
     TECH,
     PARTNERS_LATEST,
+    COVID_19,
 )
 
 
