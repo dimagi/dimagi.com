@@ -107,6 +107,7 @@ def post(request, slug):
     context['post'] = _post
     return render(request, 'pages/blog/post.html', context)
 
+
 @enable_ab_test(DEMO_WORKFLOW_V2)
 def mobile_data_collection_blog_post(request):
     template= "pages/blog/mobile_blog.html"
