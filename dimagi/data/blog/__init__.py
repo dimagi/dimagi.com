@@ -23,7 +23,6 @@ nav_categories = (
     PARTNERS,
     STAFF,
     TECH,
-    PARTNERS_LATEST,
 )
 
 
