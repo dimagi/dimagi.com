@@ -20,7 +20,7 @@ define([
            $accordion.addClass('collapsed');
            $accordion.find('.accordion-content').slideUp();
         }
-   });
+      });
     });
 
     _.each($(".accordion-group"), function (elem) {
