@@ -23,60 +23,8 @@
         </p>
       </div>{# .pad-bottom-small #}
     </div>
-    <div class="grid-1-at-small grid-3-at-large grid-row-space-small grid-row-equal-heights grid-col-space-line">
-      {% include "sections/commcare/product_onboarding/onboard/quick_start.html" %}
-      {% include "sections/commcare/product_onboarding/onboard/dive.html" %}
-      {% include "sections/commcare/product_onboarding/onboard/dive_plus.html" %}
-    </div>{# .grid-1-at-small #}
-    <div class="onboarding-features">
-      <h4 class="blue align-center pad-bottom-line content-width-medium">
-        {% blocktrans %}
-          Our onboarding packages can include training sessions on over
-          25 topics, custom-tailored to your project’s needs:
-        {% endblocktrans %}
-      </h4>
-      <ul class="check-list grid-4-at-medium white-bg pad-left-small">
-        <li>
-          {% blocktrans %}
-            App Design
-          {% endblocktrans %}
-        </li>
-        <li>
-          {% blocktrans %}
-            App Building
-          {% endblocktrans %}
-        </li>
-        <li>
-          {% blocktrans %}
-            User Management
-          {% endblocktrans %}
-        </li>
-        <li>
-          {% blocktrans %}
-            Deployment
-          {% endblocktrans %}
-        </li>
-        <li>
-          {% blocktrans %}
-            Data Exports/ Reports
-          {% endblocktrans %}
-        </li>
-        <li>
-          {% blocktrans %}
-            Data Sharing
-          {% endblocktrans %}
-        </li>
-        <li>
-          {% blocktrans %}
-            Designing for Scale
-          {% endblocktrans %}
-        </li>
-        <li>
-          {% blocktrans %}
-            Workforce Monitoring
-          {% endblocktrans %}
-        </li>
-      </ul>
+    <div class="onboarding-packages">
+      {% include "sections/commcare/product_onboarding/package.html" %}
     </div>
   </div>
 </section>
