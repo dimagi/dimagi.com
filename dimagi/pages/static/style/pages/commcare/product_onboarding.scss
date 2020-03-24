@@ -16,6 +16,12 @@
   }
 }
 
+@media (min-width: $width-desktop-xl) {
+  .feature-projects {
+    height: 440px !important;
+  }
+}
+
 .curriculum {
   $_base-height: 290px;
   $_height-by-size: (
@@ -51,4 +57,8 @@
   .bg-loader {
     background-color: $color-white;
   }
+}
+
+.feature-projects {
+  height: auto;
 }

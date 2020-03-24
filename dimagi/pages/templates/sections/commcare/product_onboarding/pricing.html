@@ -1,0 +1,39 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<div class="onboarding-pricing content accordion-group"
+     id="pricing">
+  <div class="pad-bottom-line">
+    <div class="intro">
+      <h2 class="blue-dark pad-top-medium">
+        {% blocktrans %}
+          Detailed Pricing Comparison
+        {% endblocktrans %}
+      </h2>
+    </div>{# .intro #}
+    <div class="accordion-content">
+      {% include 'sections/commcare/product_onboarding/pricing/heading.html' %}
+      {% include 'sections/commcare/product_onboarding/pricing/duration.html' %}
+      {% include 'sections/commcare/product_onboarding/pricing/support.html' %}
+      {% include 'sections/commcare/product_onboarding/pricing/sessions.html' %}
+      {% include 'sections/commcare/product_onboarding/pricing/feature_training.html' %}
+      {% include 'sections/commcare/product_onboarding/pricing/participation.html' %}
+      {% include 'sections/commcare/product_onboarding/pricing/multi_app.html' %}
+    </div>
+    <div class="content-width-small pad-top-medium pad-bottom-line align-center">
+      <p>
+        {% blocktrans %}
+          Contact our sales team to discuss your specific needs, and to
+          purchase an onboarding package for your team.
+        {% endblocktrans %}
+      </p>
+      <p class="align-center gap-bottom-base">
+        <a class="arrow" href="#contact-form-modal">
+          {% blocktrans %}
+            Contact our sales team
+          {% endblocktrans %}
+        </a>
+      </p>
+  </div> {# .content #}
+  </div>
+</div>

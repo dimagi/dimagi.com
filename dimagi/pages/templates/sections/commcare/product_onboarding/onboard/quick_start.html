@@ -1,7 +1,7 @@
 {% load i18n %}
 {% load dimagidotcom %}
 
-<section class="oikoi">
+<section class="quick-start">
   <div class="feature-projects pad-vert-line pad-horz-line border-all">
     <div class="align-center green-icon pad-bottom-base">
       {% include "svg/commcare/onboarding/start.html" %}
@@ -17,27 +17,37 @@
       {% endblocktrans %}
     </h5>
     <div class="pad-horz-small">
-      <p class="content-width-small">
-        {% blocktrans %}
-          Perfect for organizations looking for a quick but thorough onboarding
-          to CommCare, that need regular access to the Customer Success team.
-        {% endblocktrans %}
-      </p>
-      <b>
-        {% blocktrans %}
-          Includes:
-        {% endblocktrans %}
-      </b>
-      <p class="pad-top-base">
-        {% blocktrans %}
-          6 hours of Q & A or feature-based training sessions
-        {% endblocktrans %}
-      </p>
-      <p>
-        {% blocktrans %}
-          Direct access to Customer Success Support in between sessions
-        {% endblocktrans %}
-      </p>
+      <div class="flip-card gap-top-base">
+        <div class="flipper">
+          <div class="front">
+            <p class="content-width-small">
+              {% blocktrans %}
+                Perfect for organizations looking for a quick but thorough onboarding
+                to CommCare, that need regular access to the Customer Success team.
+              {% endblocktrans %}
+            </p>
+          </div>{# .front #}
+          <div class="back">
+            <b>
+              {% blocktrans %}
+                Includes:
+              {% endblocktrans %}
+            </b>
+            <ul class="check-list green-check features-list grid-space-none body-color pad-top-line">
+              <li>
+                {% blocktrans %}
+                  6 hours of Q & A or feature-based training sessions
+                {% endblocktrans %}
+              </li>
+              <li>
+                {% blocktrans %}
+                  Direct access to Customer Success Support in between sessions
+                {% endblocktrans %}
+              </li>
+            </ul>
+          </div>{# .back #}
+        </div>{# .flipper #}
+      </div>{# .flip-card #}
     </div>
   </div>{# .feature-projects #}
 </section>
