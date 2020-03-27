@@ -1,0 +1,23 @@
+{% extends "sections/covid_19/applications/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block icon %}
+    <div class="image ogun" data-lazybg="true"></div>
+{% endblock %}
+
+{% block content %}
+        <div class="align-left font-weight-bold">
+  {% blocktrans %}
+    Nigeria's Ogun government launched a CommCare mobile app to enhance information dissemination among health workers as a key part of their COVID-19 response strategy.
+  {% endblocktrans %}
+    </div>
+    <div class="align-left padding-top-10">
+        <a class="arrow {% click_body 'video-learn' %}" href="{% url 'commcare' %}">
+            {% blocktrans %}
+              Learn more
+            {% endblocktrans %}
+        </a>
+    </div>
+{% endblock %}
+

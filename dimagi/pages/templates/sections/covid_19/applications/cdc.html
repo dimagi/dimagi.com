@@ -1,0 +1,24 @@
+{% extends "sections/covid_19/applications/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block icon %}
+     <div class="image cdc" data-lazybg="true"></div>
+{% endblock %}
+
+{% block content %}
+
+    <div class="align-left font-weight-bold">
+  {% blocktrans %}
+    The Centers for Disease Control is using a CommCare web application with integrated SMS to support contact tracing and monitoring of Persons Under Investigation.
+  {% endblocktrans %}
+    </div>
+    <div class="align-left padding-top-10">
+        <a class="arrow {% click_body 'video-learn' %}" href="{% url 'commcare' %}">
+            {% blocktrans %}
+              Watch demo
+            {% endblocktrans %}
+        </a>
+    </div>
+{% endblock %}
+
