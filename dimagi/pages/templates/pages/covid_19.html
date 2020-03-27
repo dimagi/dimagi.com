@@ -49,27 +49,6 @@
   </section>
 {% endblock %}
 
-{% block modals %}
-  <div class="modal"
-     data-dismissible="true"
-     data-size="medium"
-     id="global-services-form">
-    <div class="modal-scroll">
-      <div class="modal-wrapper">
-        <a href="#" class="modal-close-button"></a>
-        <div class="content pad-horz-medium-at-medium pad-horz-line pad-vert-none turquoise-theme">
-          <h3>
-            {% blocktrans %}
-              Contact Our Global Services Team
-            {% endblocktrans %}
-          </h3>
-          <section id="global-services-form-content"></section>
-        </div>{# .content #}
-      </div>{# .modal-wrapper #}
-    </div>{# .modal-scroll #}
-  </div>{# .modal #}
-{% endblock %}
-
 {% block js %}
   <!--[if lte IE 8]>
     <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
@@ -78,8 +57,8 @@
   <script>
     hbspt.forms.create({
       portalId: "503070",
-      formId: "4ea47909-e62e-4d34-8d75-47e08fb9711b",
-      target: "#global-services-form-content",
+      formId: "ecfdfa26-766a-41b5-8da6-8cd0902bed0c",
+      target: "#contact-form-content",
       css: ""
     });
   </script>
