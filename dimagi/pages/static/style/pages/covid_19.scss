@@ -16,7 +16,7 @@
 }
 
 .video-intro .image {
-  @include background-cover('../../pages/covid_19/video-intro-banner.jpg');
+  @include background-cover('../../pages/covid_19/covid_19_video_banner.png');
   height: 160px;
   width: 250px;
 }
@@ -90,34 +90,6 @@
 
 }
 
-.news-images .image.blog1 {
-  @include background-cover('../../../static/pages/sectors/reproductive-health/news/blog1.jpg');
-  height: 200px;
-  background-size: contain;
-  background-position: left;
-}
-
-.news-images .image.blog2 {
-  @include background-cover('../../../static/pages/sectors/reproductive-health/news/blog2.jpg');
-  height: 200px;
-  background-size: contain;
-  background-position: left;
-}
-
-.news-images .image.blog3 {
-  @include background-cover('../../../static/pages/sectors/reproductive-health/news/blog3.jpg');
-  height: 200px;
-  background-size: contain;
-  background-position: left;
-}
-
-.news-images .image.blog4 {
-  @include background-cover('../../../static/pages/sectors/reproductive-health/news/blog3.jpg');
-  height: 200px;
-  background-size: contain;
-  background-position: left;
-}
-
 .post-thumbnail {
   @include background-placeholder();
   background-position: center;
@@ -163,8 +135,9 @@ a.post {
 }
 
 .light-gray-bg {
-    background-color: #ebebeb !important;
+  background-color: #ebebeb !important;
 }
-.font-size-24{
+
+.font-size-24 {
   font-size: 24px;
 }
