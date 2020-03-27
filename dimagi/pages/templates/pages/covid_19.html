@@ -9,7 +9,7 @@
 {% endblocktrans %}{% endblock %}
 
 {% block description %}{% blocktrans %}
-  More than 2000 projects across 80 countries trust CommCare
+  Dimagi's digital solutions and CommCare resources for COVID-19 response
 {% endblocktrans %}{% endblock %}
 
 {% block stylesheets %}
@@ -24,9 +24,12 @@
            data-lazybg="true"
            id="hero">
     <div class="content content-width-large inverted align-center">
-      <h1 class="gap-vert-line align-center pad-top-medium">
+      <h2>
+        {% include "svg/commcare/logo.html" %}
+      </h2>
+      <h1>
         {% blocktrans %}
-          Commcare for COVID-19 Response
+          Digital Solutions for COVID-19 Response
         {% endblocktrans %}
       </h1>
     </div> {# .content #}
