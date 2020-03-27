@@ -1,0 +1,31 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="advisory border-top blue-bg blue-theme"
+         id="advisory">
+  <div class="content pad-vert-medium">
+    <div class="align-center gap-bottom-small">
+      <h3 class="white capitalize font-weight-bold">
+        {% blocktrans %}
+          Sponsor Dimagi's COVID-19 work on GitHub
+        {% endblocktrans %}
+      </h3>
+      <h4 class="white font-weight-bold">
+        {% blocktrans %}
+          Your support helps ensure that CommCare is available to organizations responding to COVID-19.
+        {% endblocktrans %}
+      </h4>
+    </div>{# .intro #}
+
+
+    <p class="align-center">
+      <a class="button button-accent-gray normalcase theme-color {% click_body 'commcare' %}"
+         href="{% url 'commcare' %}">
+        {% blocktrans %}
+            Sponsor Dimagi on GitHub
+        {% endblocktrans %}
+      </a>
+    </p>
+
+  </div>{# .content #}
+</section>

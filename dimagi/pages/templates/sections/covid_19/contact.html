@@ -1,0 +1,24 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="advisory border-top blue-bg blue-theme"
+         id="advisory">
+  <div class="content pad-vert-medium">
+    <div class="align-center gap-bottom-small">
+      <h4 class="white font-weight-bold">
+        {% blocktrans %}
+           Are you responding to the COVID-19 pandemic? Let us know how we can help.
+        {% endblocktrans %}
+      </h4>
+    </div>{# .intro #}
+
+  <p class="align-center">
+      <a class="button button-accent-gray normalcase theme-color {% click_subnav 'contact' %}"
+         href="#contact-form-modal">
+        {% blocktrans %}
+            Get in Touch
+        {% endblocktrans %}
+      </a>
+    </p>
+
+  </div>{# .content #}
