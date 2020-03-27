@@ -112,3 +112,48 @@
   background-size: contain;
   background-position: left;
 }
+
+.post-thumbnail {
+  @include background-placeholder();
+  background-position: center;
+}
+
+a.post {
+  color: $color-text !important; // scss-lint:disable ImportantRule
+  font-weight: $font-weight-regular;
+
+  &:hover {
+    .post-thumbnail::after {
+      opacity: .5;
+    }
+  }
+}
+
+.post-author-image {
+  width: 80px;
+  @include background-placeholder();
+}
+
+.post-content-text {
+  img {
+    margin: $space-base;
+  }
+
+  .aligncenter {
+    margin: 0 auto;
+  }
+
+  .alignleft {
+    float: left;
+  }
+
+  .alignright {
+    float: right;
+  }
+
+  .wp-caption-text {
+    text-align: center;
+    font-style: italic;;
+  }
+}
+
