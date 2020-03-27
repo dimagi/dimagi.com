@@ -3,11 +3,10 @@
 
 <section class="solutions align-center blue-theme"
          id="solutions">
-
   <h3 class="normalcase font-weight-bold">
-      {% blocktrans %}
+    {% blocktrans %}
       How is CommCare used for COVID-19 response?
-      {% endblocktrans %}
+    {% endblocktrans %}
   </h3>
   <div class="content pad-top-medium">
     <div class="grid-2-at-small grid-4-at-large grid-col-space-medium grid-row-space-small">
@@ -15,15 +14,15 @@
       {% include "sections/covid_19/solutions/surveillance_and_contact_tracing.html" %}
       {% include "sections/covid_19/solutions/information_dissemination.html" %}
       {% include "sections/covid_19/solutions/lab_tracking_and_logistics.html" %}
-    </div>{# .grid-2-at-small #}
-  </div>{# .content #}
+    </div>
+  </div>
 
-    <p class="align-center">
-      <a class="button uppercase {% click_body 'commcare' %}"
-         href="{% url 'commcare' %}">
-        {% blocktrans %}
-          Learn about CommCare
-        {% endblocktrans %}
-      </a>
-    </p>
+  <p class="align-center">
+    <a class="button uppercase {% click_body 'commcare' %}"
+       href="{% url 'commcare' %}">
+      {% blocktrans %}
+        Learn about CommCare
+      {% endblocktrans %}
+    </a>
+  </p>
 </section>
