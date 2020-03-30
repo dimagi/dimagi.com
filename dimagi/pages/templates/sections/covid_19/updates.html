@@ -1,7 +1,7 @@
 {% load i18n %}
 {% load dimagidotcom %}
 
-<section class="blog-latest light-gray-bg" id="updates">
+<section class="blog-latest accent-gray-bg" id="updates">
   <div class="content pad-vert-medium">
     <div class="align-center gap-bottom-medium">
       <h2 class="blue normalcase">
@@ -12,7 +12,7 @@
     </div>
     <div class="grid-4-at-medium grid-2-at-small grid-row-space-small ">
       {% for post in posts %}
-        <div class="column padding-top-10">
+        <div class="column pad-top-base">
           {% include "partials/blog_summary.html" with post=post ratio='square' hide_cat=True %}
         </div>
       {% endfor %}
