@@ -1,0 +1,56 @@
+@import 'app/mixins/background';
+@import 'app/variables/colors';
+@import 'app/variables/sizes';
+@import 'app/variables/type';
+
+
+.covid-19-page {
+  @include make-bg(hero, '../../pages/covid_19/hero');
+
+  .hero h1 {
+    max-width: 90%;
+  }
+}
+
+.application-image .image.ogun {
+  @include background-cover('../../pages/covid_19/ogun_state_flag.png');
+  height: 200px;
+  background-size: contain;
+  background-position: left;
+  filter: grayscale(100%);
+}
+
+.application-image .image.dsti {
+  @include background-cover('../../pages/covid_19/dsti_logo.jpg');
+  height: 200px;
+  background-size: contain;
+  background-position: left;
+  filter: grayscale(100%);
+}
+
+.video-intro .image {
+  @include background-cover('../../pages/covid_19/covid_19_video_banner.png');
+  height: 160px;
+  width: 250px;
+}
+
+.resource-image .image.commcare-phone {
+  @include background-cover('../../pages/covid_19/commcare_phone.png');
+  height: 300px;
+  width: 300px;
+  background-size: auto 100%;
+}
+
+.resource-image .image.covid-cases {
+  @include background-cover('../../pages/covid_19/covid_cases.png');
+  height: 300px;
+  width: 300px;
+  background-size: auto 100%;
+}
+
+.resource-image .image.covid-support {
+  @include background-cover('../../pages/covid_19/covid_support.jpg');
+  height: 300px;
+  width: 300px;
+  background-size: auto 100%;
+}

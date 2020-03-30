@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block body_class %}covid-19-page tucked-hero{% endblock %}
+
+{% block title %}{% blocktrans %}
+  Commcare for COVID-19 Response
+{% endblocktrans %}{% endblock %}
+
+{% block description %}{% blocktrans %}
+  Dimagi's digital solutions and CommCare resources for COVID-19 response
+{% endblocktrans %}{% endblock %}
+
+{% block stylesheets %}
+  {% compress css %}
+    <link href="{% sass_src 'style/pages/blog.scss' %}" rel="stylesheet" media="screen" type="text/css" />
+    <link href="{% sass_src 'style/pages/covid_19.scss' %}" rel="stylesheet" media="screen" type="text/css" />
+  {% endcompress %}
+{% endblock %}
+
+{% block hero %}
+  <div id="top"></div>
+  <section class="hero hero-covid19"
+           data-lazybg="true"
+           id="hero">
+    <div class="content align-center">
+      <h2 class="gap-top-small">
+        {% include "svg/commcare/logo.html" %}
+      </h2>
+      <h1>
+        {% blocktrans %}
+          Digital Solutions for COVID-19 Response
+        {% endblocktrans %}
+      </h1>
+      <a class="button inverted alt {% click_hero 'contact' %}"
+         href="#contact-form-modal">
+        {% blocktrans %}
+          Get in Touch
+        {% endblocktrans %}
+      </a>
+    </div> {# .content #}
+  </section>
+{% endblock %}
+
+{% block content %}
+  <section class="services-container blue-theme">
+    {% include "sections/covid_19/sub_nav.html" %}
+    {% include "sections/covid_19/intro.html" %}
+    {% include "sections/covid_19/solutions.html" %}
+    {% include "sections/covid_19/applications.html" %}
+    {% include "sections/covid_19/support_us.html" %}
+    {% include "sections/covid_19/resources.html" %}
+    {% include "sections/covid_19/updates.html" %}
+    {% include "sections/covid_19/contact.html" %}
+  </section>
+{% endblock %}
+
+{% block contact_form_id %}ecfdfa26-766a-41b5-8da6-8cd0902bed0c{% endblock %}

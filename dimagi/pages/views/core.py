@@ -15,7 +15,25 @@ from dimagi.data.case_management import longitudinal_data
 
 from dimagi.utils.wordpress_api import get_json
 from dimagi.pages.models.partners import latestPartners
+from dimagi.pages.models.blog import BlogPost
 
+from dimagi.data.blog import (
+    get_category_by_slug,
+    nav_categories
+)
+
+def _get_posts(category, page=None, num_posts=None):
+    post_data = get_json(
+        'blog/{}'.format(category.slug), page=page, num_posts=num_posts)
+    return {
+        'posts': [BlogPost(data) for data in post_data['posts']],
+        'total': post_data['total'],
+    }
+
+def _get_global_context():
+    return {
+        'categories': nav_categories,
+    }
 
 @enable_ab_test(DEMO_WORKFLOW_V2)
 def home(request):
@@ -31,6 +49,7 @@ def services(request):
     }
     return render(request, 'pages/services.html', context)
 
+
 def partners(request):
     _latest = get_json("blog/latest-partners")
     _partners_count= _latest["total"]
@@ -43,8 +62,19 @@ def partners(request):
     return render(request, 'pages/partners.html', context)
 
 
+def covid_19(request):
+    category = get_category_by_slug('covid-19')
+    posts = _get_posts(category, None, 20)
+    context = _get_global_context()
+    context.update({
+        'posts': posts['posts'],
+    })
+    return render(request, 'pages/covid_19.html', context)
+
+
 def contact(request):
     return render(request, 'pages/contact.html')
+
 
 def awards(request):
     _post = get_json('blog/post/dimagi-awards/')
@@ -52,6 +82,7 @@ def awards(request):
         'content': _post['content']
     }
     return render(request, 'pages/awards.html', context)
+
 
 def proposals(request):
     return render(request, 'pages/proposals.html')
