@@ -4,15 +4,15 @@
 <section class="blog-latest light-gray-bg" id="updates">
   <div class="content pad-vert-medium">
     <div class="align-center gap-bottom-medium">
-      <h3 class="normalcase font-weight-bold theme-color">
+      <h2 class="blue normalcase">
         {% blocktrans %}
           Read the latest about Dimagi's COVID-19 response
         {% endblocktrans %}
-      </h3>
+      </h2>
     </div>
     <div class="grid-4-at-medium grid-2-at-small grid-row-space-small ">
       {% for post in posts %}
-        <div class="column white-bg padding-top-10">
+        <div class="column padding-top-10">
           {% include "partials/blog_summary.html" with post=post ratio='square' hide_cat=True %}
         </div>
       {% endfor %}

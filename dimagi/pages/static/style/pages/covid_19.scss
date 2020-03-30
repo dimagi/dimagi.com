@@ -3,6 +3,7 @@
 @import 'app/variables/sizes';
 @import 'app/variables/type';
 
+
 .covid-19-page {
   @include make-bg(hero, '../../pages/covid_19/hero');
 }
@@ -140,4 +141,10 @@ a.post {
 
 .font-size-24 {
   font-size: 24px;
+}
+
+@media (min-width: $width-desktop) {
+  .reverse-flex-grid-at-medium{
+    flex-direction: row-reverse;
+  }
 }
