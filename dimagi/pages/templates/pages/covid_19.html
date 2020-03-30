@@ -14,6 +14,7 @@
 
 {% block stylesheets %}
   {% compress css %}
+    <link href="{% sass_src 'style/pages/blog.scss' %}" rel="stylesheet" media="screen" type="text/css" />
     <link href="{% sass_src 'style/pages/covid_19.scss' %}" rel="stylesheet" media="screen" type="text/css" />
   {% endcompress %}
 {% endblock %}
