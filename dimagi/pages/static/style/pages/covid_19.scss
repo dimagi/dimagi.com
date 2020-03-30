@@ -22,10 +22,6 @@
   width: 250px;
 }
 
-.padding-top-10 {
-  padding-top: 10px
-}
-
 .covid-19-intro {
   margin-bottom: 30px;
   margin-left: auto;
@@ -80,10 +76,6 @@
   @include background-cover('../../../static/pages/covid_19/covid_support.jpg');
   height: 300px;
   background-size: contain;
-}
-
-.font-size-24 {
-  font-size: 24px;
 }
 
 @media (min-width: $width-desktop) {
