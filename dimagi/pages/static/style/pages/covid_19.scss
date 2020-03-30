@@ -6,14 +6,26 @@
 
 .covid-19-page {
   @include make-bg(hero, '../../pages/covid_19/hero');
+
+  .hero h1 {
+    max-width: 90%;
+  }
 }
 
-@media (min-width: $width-desktop) {
-  .covid-19-page .hero h1 {
-    margin-left: 0;
-    margin-right: 0;
-    max-width: 100%;
-  }
+.application-image .image.ogun {
+  @include background-cover('../../pages/covid_19/ogun_state_flag.png');
+  height: 200px;
+  background-size: contain;
+  background-position: left;
+  filter: grayscale(100%);
+}
+
+.application-image .image.dsti {
+  @include background-cover('../../pages/covid_19/dsti_logo.jpg');
+  height: 200px;
+  background-size: contain;
+  background-position: left;
+  filter: grayscale(100%);
 }
 
 .video-intro .image {
@@ -22,64 +34,23 @@
   width: 250px;
 }
 
-.covid-19-intro {
-  margin-bottom: 30px;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 60em;
-  text-align: center;
-
-  h1 {
-    text-transform: none;
-    font-size: 28px;
-  }
-
-  p {
-    font-size: 18px;
-  }
-}
-
-.application-images .image.cdc {
-  @include background-cover('../../../static/pages/covid_19/cdc_logo.svg');
-  height: 200px;
-  background-size: contain;
-  background-position: left;
-}
-
-.application-images .image.dsti {
-  @include background-cover('../../../static/pages/covid_19/dsti_logo.jpg');
-  height: 200px;
-  background-size: contain;
-  background-position: left;
-}
-
-.application-images .image.ogun {
-  @include background-cover('../../../static/pages/covid_19/ogun_state_flag.png');
-  height: 200px;
-  background-size: contain;
-  background-position: left;
-}
-
-.resources-images .image.commcare-phone {
-  @include background-cover('../../../static/pages/covid_19/commcare_phone.png');
+.resource-image .image.commcare-phone {
+  @include background-cover('../../pages/covid_19/commcare_phone.png');
   height: 300px;
-  background-size: contain;
+  width: 300px;
+  background-size: auto 100%;
 }
 
-.resources-images .image.covid-cases {
-  @include background-cover('../../../static/pages/covid_19/covid_cases.png');
+.resource-image .image.covid-cases {
+  @include background-cover('../../pages/covid_19/covid_cases.png');
   height: 300px;
-  background-size: contain;
+  width: 300px;
+  background-size: auto 100%;
 }
 
-.resources-images .image.covid-support {
-  @include background-cover('../../../static/pages/covid_19/covid_support.jpg');
+.resource-image .image.covid-support {
+  @include background-cover('../../pages/covid_19/covid_support.jpg');
   height: 300px;
-  background-size: contain;
-}
-
-@media (min-width: $width-desktop) {
-  .reverse-flex-grid-at-medium{
-    flex-direction: row-reverse;
-  }
+  width: 300px;
+  background-size: auto 100%;
 }

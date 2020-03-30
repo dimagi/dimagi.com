@@ -2,17 +2,30 @@
 {% load i18n %}
 
 <section id="resources" class="border-top overview">
-  <div class="align-center gap-top-large gap-bottom-small">
-    <h2 class="blue normalcase">
-      {% blocktrans %}
-        Resources for your organization's COVID-19 response
-      {% endblocktrans %}
-    </h2>
+  <div class="content">
+    <div class="align-center gap-top-large gap-bottom-small">
+      <h2 class="blue">
+        {% blocktrans %}
+          Resources for your organization's COVID-19 response
+        {% endblocktrans %}
+      </h2>
+    </div>
   </div>
-  <div class="content pad-horz-medium-at-extra-large pad-horz-medium-at-large">
-    <div class="grid-2-at-medium">
+
+  <div class="content pad-bottom-large">
+
+    <div class="grid-flex-at-medium grid-valign-middle grid-reverse">
+
       <div class="column">
-        <h3 class="pad-top-large">
+        <div class="position-relative align-center">
+          <div class="resource-image">
+            <div class="image commcare-phone" data-lazybg="true"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="column">
+        <h3>
           {% blocktrans %}
             Pro bono CommCare subscriptions
           {% endblocktrans %}
@@ -31,19 +44,21 @@
           </a>
         </div>
       </div>
+
+    </div>
+
+    <div class="grid-flex-at-medium grid-valign-middle">
+
       <div class="column">
-        <div class="position-relative align-center height-100">
-          <div class="resources-images">
-            <div class="image commcare-phone" data-lazybg="true"></div>
+        <div class="position-relative align-center">
+          <div class="resource-image">
+            <div class="image covid-cases" data-lazybg="true"></div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-  <div class="content pad-vert-small pad-horz-medium-at-extra-large pad-horz-medium-at-large">
-    <div class="grid-2-at-medium reverse-flex-grid-at-medium">
+
       <div class="column">
-        <h3 class="pad-top-medium">
+        <h3>
           {% blocktrans %}
             Template COVID-19 apps + resources
           {% endblocktrans %}
@@ -63,19 +78,21 @@
           </a>
         </div>
       </div>
+
+    </div>
+
+    <div class="grid-flex-at-medium grid-valign-middle grid-reverse">
+
       <div class="column">
-        <div class="position-relative align-center height-100">
-          <div class="resources-images">
-            <div class="image covid-cases" data-lazybg="true"></div>
+        <div class="position-relative align-center">
+          <div class="resource-image">
+            <div class="image covid-support" data-lazybg="true"></div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-  <div class="content pad-vert-small pad-bottom-large-at-extra-large pad-bottom-large-at-large pad-horz-medium-at-extra-large pad-horz-medium-at-large">
-    <div class="grid-2-at-medium">
+
       <div class="column">
-        <h3 class="pad-top-medium-at-large pad-top-medium-at-extra-large">
+        <h3>
           {% blocktrans %}
             COVID-19 app implementation support
           {% endblocktrans %}
@@ -94,13 +111,8 @@
           </a>
         </div>
       </div>
-      <div class="column">
-        <div class="position-relative align-center height-100">
-          <div class="resources-images">
-            <div class="image covid-support" data-lazybg="true"></div>
-          </div>
-        </div>
-      </div>
+
     </div>
+
   </div>
 </section>

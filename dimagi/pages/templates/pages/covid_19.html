@@ -21,10 +21,10 @@
 
 {% block hero %}
   <div id="top"></div>
-  <section class="hero covid-19-page"
+  <section class="hero hero-covid19"
            data-lazybg="true"
            id="hero">
-    <div class="content content-width-large inverted align-center">
+    <div class="content align-center">
       <h2 class="gap-top-small">
         {% include "svg/commcare/logo.html" %}
       </h2>
@@ -39,7 +39,6 @@
           Get in Touch
         {% endblocktrans %}
       </a>
-
     </div> {# .content #}
   </section>
 {% endblock %}
@@ -57,17 +56,4 @@
   </section>
 {% endblock %}
 
-{% block js %}
-  <!--[if lte IE 8]>
-    <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
-  <![endif]-->
-  <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
-  <script>
-    hbspt.forms.create({
-      portalId: "503070",
-      formId: "ecfdfa26-766a-41b5-8da6-8cd0902bed0c",
-      target: "#contact-form-content",
-      css: ""
-    });
-  </script>
-{% endblock %}
+{% block contact_form_id %}ecfdfa26-766a-41b5-8da6-8cd0902bed0c{% endblock %}
