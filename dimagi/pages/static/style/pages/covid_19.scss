@@ -48,8 +48,6 @@
   height: 200px;
   background-size: contain;
   background-position: left;
-  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-  filter: grayscale(100%);
 }
 
 .application-images .image.dsti {
@@ -57,8 +55,6 @@
   height: 200px;
   background-size: contain;
   background-position: left;
-  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-  filter: grayscale(100%);
 }
 
 .application-images .image.ogun {
@@ -66,22 +62,18 @@
   height: 200px;
   background-size: contain;
   background-position: left;
-  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-  filter: grayscale(100%);
 }
 
 .resources-images .image.commcare-phone {
   @include background-cover('../../../static/pages/covid_19/commcare_phone.png');
   height: 300px;
   background-size: contain;
-
 }
 
 .resources-images .image.covid-cases {
   @include background-cover('../../../static/pages/covid_19/covid_cases.png');
   height: 300px;
   background-size: contain;
-
 }
 
 .resources-images .image.covid-support {
