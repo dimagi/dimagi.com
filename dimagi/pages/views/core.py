@@ -49,6 +49,7 @@ def services(request):
     }
     return render(request, 'pages/services.html', context)
 
+
 def partners(request):
     _latest = get_json("blog/latest-partners")
     _partners_count= _latest["total"]
@@ -74,12 +75,14 @@ def covid_19(request):
 def contact(request):
     return render(request, 'pages/contact.html')
 
+
 def awards(request):
     _post = get_json('blog/post/dimagi-awards/')
     context = {
         'content': _post['content']
     }
     return render(request, 'pages/awards.html', context)
+
 
 def proposals(request):
     return render(request, 'pages/proposals.html')
