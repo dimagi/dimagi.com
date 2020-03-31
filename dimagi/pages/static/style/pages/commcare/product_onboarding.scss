@@ -16,14 +16,10 @@
   }
 }
 
-@media (min-width: $width-desktop-xl) {
+@media (min-width: $width-desktop) {
   .feature-projects {
     height: 500px;
   }
-}
-
-.feature-projects {
-  height: auto;
 }
 
 .curriculum {
