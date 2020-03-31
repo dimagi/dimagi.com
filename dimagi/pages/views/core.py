@@ -15,25 +15,7 @@ from dimagi.data.case_management import longitudinal_data
 
 from dimagi.utils.wordpress_api import get_json
 from dimagi.pages.models.partners import latestPartners
-from dimagi.pages.models.blog import BlogPost
 
-from dimagi.data.blog import (
-    get_category_by_slug,
-    nav_categories
-)
-
-def _get_posts(category, page=None, num_posts=None):
-    post_data = get_json(
-        'blog/{}'.format(category.slug), page=page, num_posts=num_posts)
-    return {
-        'posts': [BlogPost(data) for data in post_data['posts']],
-        'total': post_data['total'],
-    }
-
-def _get_global_context():
-    return {
-        'categories': nav_categories,
-    }
 
 @enable_ab_test(DEMO_WORKFLOW_V2)
 def home(request):
@@ -63,12 +45,9 @@ def partners(request):
 
 
 def covid_19(request):
-    category = get_category_by_slug('covid-19')
-    posts = _get_posts(category, None, 20)
-    context = _get_global_context()
-    context.update({
-        'posts': posts['posts'],
-    })
+    context = {
+        'posts': get_json("blog/covid-19")['posts'][:4],
+    }
     return render(request, 'pages/covid_19.html', context)
 
 
