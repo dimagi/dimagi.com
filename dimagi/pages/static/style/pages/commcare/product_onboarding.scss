@@ -16,17 +16,6 @@
   }
 }
 
-@media (min-width: $width-desktop-xl) {
-  .feature-projects {
-    height: 500px;
-  }
-}
-
-.feature-projects {
-  height: auto;
-}
-
-
 .curriculum {
   $_base-height: 290px;
   $_height-by-size: (
