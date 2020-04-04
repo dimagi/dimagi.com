@@ -1,0 +1,35 @@
+{% extends "sections/sectors/disease-treatment/mobile-apps/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block content %}
+  <h3 class="pad-top-line pad-bottom-small">
+    {% blocktrans %}
+      Sync data with patient registries and send referrals to health providers
+    {% endblocktrans %}
+  </h3>
+  <div class="grid-2-at-large blue-theme grid-valign-middle grid-reverse">
+    <div class="column pad-right-medium-at-base align-left">
+      <ul class="check-list">
+        <li>
+          {% blocktrans %}
+            Decision based support tools for identifying disease symptoms
+          {% endblocktrans %}
+        </li>
+        <li>
+          {% blocktrans %}
+            Multimedia enabled prompts for better counselling
+          {% endblocktrans %}
+        </li>
+        <li>
+          {% blocktrans %}
+            Treatment advice automatically provided based on algorithms
+          {% endblocktrans %}
+        </li>
+      </ul>
+    </div>{# .column #}
+    <div class="column sync-image white-lazy-bg"
+         data-lazybg="true">
+    </div>{# .column #}
+  </div>{# .grid-2-at-medium #}
+{% endblock %}

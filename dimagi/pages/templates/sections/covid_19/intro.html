@@ -1,0 +1,37 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="video-intro certified_partners border-bottom pad-bottom-small accent-gray-bg"
+         id="certified_partners">
+  <div class="content content-width-medium pad-vert-medium">
+
+    <div class="align-center gap-bottom-small">
+      <h2 class="blue">
+        {% blocktrans %}
+          CommCare is a proven digital solution<br class="hide-until-medium" />for outbreak response
+        {% endblocktrans %}
+      </h2>
+    </div>
+
+    <div class="grid-flex-at-medium">
+
+      <div class="column flex-align-center">
+        {% include "partials/wistia_popover.html" with wistia_id='x3bm3540yr' show_play=True play_icon_medium=True show_image=True %}
+      </div>
+
+      <div class="column flex-valign-middle-at-medium align-left-at-medium">
+        <div class="copy">
+          <p class="gap-bottom-base">
+            {% blocktrans %}
+              Dimagi’s CommCare platform enables you to quickly build and deploy custom mobile applications for every
+              phase of an effective COVID-19 response - from screening and contact tracing to patient monitoring and
+              post-care support.
+            {% endblocktrans %}
+          </p>
+        </div>{# .copy #}
+      </div>{# .column #}
+
+    </div>{# .grid-flex-at-medium #}
+
+  </div>
+</section>

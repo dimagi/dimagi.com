@@ -26,7 +26,7 @@ STUDY = CaseStudy(
         ugettext_lazy("Zimbabwe"),
     ],
     sectors=[
-        ugettext_lazy("Disease Treatment"),
+        ugettext_lazy("Infectious Disease"),
     ],
     features=[
         ugettext_lazy("Data Collection"),

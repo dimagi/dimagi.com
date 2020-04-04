@@ -8,11 +8,10 @@
 </a>
 <p class="pad-top-base">
   {% if not hide_cat %}
-  <a class="font-weight-regular"
-     href="{% url 'archive_category' post.category.slug %}">
-    {{ post.category.name }}
-  </a><br />
+    <a class="font-weight-regular"
+       href="{% url 'archive_category' post.category.slug %}">
+      {{ post.category.name }}
+    </a><br/>
   {% endif %}
   {{ post.date_human }}
 </p>
-

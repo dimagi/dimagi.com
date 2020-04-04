@@ -1,0 +1,31 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="solutions align-center blue-theme gap-bottom-small"
+         id="solutions">
+  <div class="content pad-vert-medium pad">
+    <h2 class="blue gap-top-line">
+      {% blocktrans %}
+        How is CommCare used for COVID-19 response?
+      {% endblocktrans %}
+    </h2>
+
+    <div class="content pad-top-small pad-horz-medium-at-large pad-horz-medium-at-extra-large">
+      <div class="grid-2-at-small grid-4-at-large grid-col-space-medium grid-row-space-small">
+        {% include "sections/covid_19/solutions/screening_and_triage_protocols.html" %}
+        {% include "sections/covid_19/solutions/surveillance_and_contact_tracing.html" %}
+        {% include "sections/covid_19/solutions/information_dissemination.html" %}
+        {% include "sections/covid_19/solutions/lab_tracking_and_logistics.html" %}
+      </div>
+    </div>
+
+    <p class="align-center">
+      <a class="button uppercase {% click_body 'commcare' %}"
+         href="{% url 'commcare' %}">
+        {% blocktrans %}
+          Learn more about CommCare
+        {% endblocktrans %}
+      </a>
+    </p>
+  </div>
+</section>

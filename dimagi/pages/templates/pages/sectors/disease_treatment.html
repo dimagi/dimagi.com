@@ -4,14 +4,14 @@
 {% load capture_tags %}
 
 {% block title %}{% blocktrans %}
-  Disease Treatment
+  Infectious Disease
 {% endblocktrans %}{% endblock %}
 
 {% capture as page_social_card silent %}{% block social_card_image_url %}
   {% static 'pages/sectors/disease-treatment/intro/hero.jpg' %}
 {% endblock %}{% endcapture %}
 
-{% block body_class %}disease-treatment-page tucked-hero{% endblock %}
+{% block body_class %}infectious-disease-page tucked-hero{% endblock %}
 
 {% block stylesheets %}
   {% compress css %}
@@ -30,6 +30,7 @@
   {% include "sections/sectors/disease-treatment/overview.html" %}
   {% include "sections/sectors/disease-treatment/part1.html" %}
   {% include "sections/sectors/disease-treatment/benefit.html" %}
+  {% include "sections/sectors/disease-treatment/mobile_apps.html" %}
   {% include "sections/sectors/disease-treatment/programs.html" %}
   {% include "sections/sectors/disease-treatment/part3.html" %}
   {% include "sections/sectors/disease-treatment/news.html" %}

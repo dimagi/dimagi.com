@@ -1,0 +1,24 @@
+{% extends "sections/covid_19/applications/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block icon %}
+  {% include "svg/covid_19/orgs/cdc.html" %}
+{% endblock %}
+
+{% block content %}
+  <div class="align-left">
+    {% blocktrans %}
+      Through support from the Centers for Disease Control, a county health system in California is using CommCare with
+      integrated SMS to support contact tracing and remote monitoring.
+    {% endblocktrans %}
+  </div>
+  <div class="align-left pad-top-base">
+    <a class="arrow {% click_body 'video-learn' %}"
+       href="https://www.youtube.com/watch?v=t2vCro5VPXQ&list=PLVmwIEfrcKqm8_ujYNM39mU-i5kuyGZ0n&index=2&t=2s">
+      {% blocktrans %}
+        Watch demo
+      {% endblocktrans %}
+    </a>
+  </div>
+{% endblock %}

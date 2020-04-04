@@ -27,7 +27,7 @@ STUDY = CaseStudy(
     ],
     sectors=[
         ugettext_lazy("Maternal & Child Health"),
-        ugettext_lazy("Disease Treatment"),
+        ugettext_lazy("Infectious Disease"),
     ],
     features=[
         ugettext_lazy("Case Management"),

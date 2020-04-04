@@ -63,3 +63,12 @@ PARTNERS_LATEST = Category(
     icon="svg/blog/icon/technology.html",
     slug="latest-partners",
 )
+
+COVID_19 = Category(
+    name=ugettext_lazy("COVID-19"),
+    description=ugettext_lazy(
+        "Updates for Dimagi's COVID-19 initiatives."
+    ),
+    icon="svg/blog/icon/technology.html",
+    slug="covid-19",
+)

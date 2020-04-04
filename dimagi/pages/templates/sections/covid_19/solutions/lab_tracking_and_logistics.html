@@ -1,0 +1,20 @@
+{% extends "sections/covid_19/solutions/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block icon %}
+  {% include "svg/covid_19/icon/lab.html" %}
+{% endblock %}
+
+{% block header %}
+  {% blocktrans %}
+    Lab tracking and logistics
+  {% endblocktrans %}
+{% endblock %}
+
+{% block content %}
+  {% blocktrans %}
+    Track the status of COVID-19 tests and enable field-based responders to manage logistics for critical medical
+    supplies on their mobile phone.
+  {% endblocktrans %}
+{% endblock %}
