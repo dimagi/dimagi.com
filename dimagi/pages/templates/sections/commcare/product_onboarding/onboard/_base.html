@@ -1,0 +1,39 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<div class="column">
+  <a class="tile feature-projects pad-vert-line pad-horz-line border-rounded-large {% block feature_class %}{% endblock %}">
+    <div class="align-center pad-vert-small {% block icon_class %}{% endblock %}">
+      {% block icon %}{% endblock %}
+    </div>
+
+    <h5 class="align-center uppercase font-weight-medium {% block title_class %}{% endblock %}">
+      {% block feature_title %}{% endblock %}
+    </h5>
+    <h5 class="align-center pad-bottom-base">
+      {% block feature_price %}{% endblock %}
+    </h5>
+
+    <div class="pad-horz-small">
+      <div class="flip-card gap-top-base">
+        <div class="flipper">
+          <div class="front">
+            <p class="description pad-bottom-small">
+              {% block feature_description %}{% endblock %}
+            </p>
+          </div>
+          <div class="back">
+            <b>
+              {% blocktrans %}
+                Includes:
+              {% endblocktrans %}
+            </b>
+            <ul class="check-list features-list grid-space-none body-color pad-top-line pad-bottom-small {% block list_class %}{% endblock %}">
+              {% block features_list %}{% endblock %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>

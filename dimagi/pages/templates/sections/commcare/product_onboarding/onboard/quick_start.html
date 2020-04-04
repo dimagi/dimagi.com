@@ -1,53 +1,44 @@
+{% extends 'sections/commcare/product_onboarding/onboard/_base.html' %}
 {% load i18n %}
 {% load dimagidotcom %}
 
-<section class="quick-start">
-  <a class="tile feature-projects pad-vert-line pad-horz-line border-rounded-large green-border">
-    <div class="align-center green-icon pad-vert-small">
-      {% include "svg/commcare/onboarding/start.html" %}
-    </div>
-    <h5 class="align-center uppercase green font-weight-medium">
-      {% blocktrans %}
-        Quick Start
-      {% endblocktrans %}
-    </h5>
-    <h5 class="align-center pad-bottom-base">
-      {% blocktrans %}
-        $1500
-      {% endblocktrans %}
-    </h5>
-    <div class="pad-horz-small">
-      <div class="flip-card gap-top-base">
-        <div class="flipper">
-          <div class="front">
-            <p class="content-width-small">
-              {% blocktrans %}
-                Perfect for organizations looking for a quick but thorough onboarding
-                to CommCare, that need regular access to the Customer Success team.
-              {% endblocktrans %}
-            </p>
-          </div>{# .front #}
-          <div class="back">
-            <b>
-              {% blocktrans %}
-                Includes:
-              {% endblocktrans %}
-            </b>
-            <ul class="check-list green-check features-list grid-space-none body-color pad-top-line">
-              <li>
-                {% blocktrans %}
-                  6 hours of Q & A or feature-based training sessions
-                {% endblocktrans %}
-              </li>
-              <li>
-                {% blocktrans %}
-                  Direct access to Customer Success Support in between sessions
-                {% endblocktrans %}
-              </li>
-            </ul>
-          </div>{# .back #}
-        </div>{# .flipper #}
-      </div>{# .flip-card #}
-    </div>
-  </a>{# .feature-projects #}
-</section>
+{% block feature_class %}quick-start green-border{% endblock %}
+{% block icon_class %}green-icon{% endblock %}
+{% block title_class %}green{% endblock %}
+{% block list_class %}green-check {% endblock %}
+
+{% block icon %}
+  {% include "svg/commcare/onboarding/start.html" %}
+{% endblock %}
+
+{% block feature_title %}
+  {% blocktrans %}
+    Quick Start
+  {% endblocktrans %}
+{% endblock %}
+
+{% block feature_price %}
+  {% blocktrans %}
+    $1500
+  {% endblocktrans %}
+{% endblock %}
+
+{% block feature_description %}
+  {% blocktrans %}
+    Perfect for organizations looking for a quick but thorough onboarding
+    to CommCare, that need regular access to the Customer Success team.
+  {% endblocktrans %}
+{% endblock %}
+
+{% block features_list %}
+  <li>
+    {% blocktrans %}
+      6 hours of Q &amp; A or feature-based training sessions
+    {% endblocktrans %}
+  </li>
+  <li>
+    {% blocktrans %}
+      Direct access to Customer Success Support in between sessions
+    {% endblocktrans %}
+  </li>
+{% endblock %}

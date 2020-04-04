@@ -16,9 +16,31 @@
   }
 }
 
-@media (min-width: $width-desktop) {
-  .feature-projects {
-    height: 500px;
+
+
+$_no-touch-heights: (
+    small: auto,
+    medium: 140px,
+    large: 300px,
+    extra-large: 250px,
+);
+
+$_touch-front-heights: (
+    small: auto,
+    medium: auto,
+    large: 280px,
+    extra-large: 185px,
+);
+
+@each $_size, $_width in $widths-by-size {
+  @media (min-width: $_width) {
+    .no-touch .feature-projects .flip-card {
+      height: map-get($_no-touch-heights, $_size);
+    }
+
+    .touch .feature-projects .flip-card .front { // scss-lint:disable SelectorDepth
+      height: map-get($_touch-front-heights, $_size);
+    }
   }
 }
 
