@@ -24,26 +24,24 @@
 
       <h1>
         {% blocktrans %}
-          Technology for Social Impact
+          Accelerate Your COVID-19 Response
         {% endblocktrans %}
       </h1>
 
       <div class="headline content-width-small">
         {% blocktrans %}
-          Dimagi is on a mission to build technology that improves
-          the efficiency and quality of impact-driven work globally.
+          Digital tools and resources to improve the speed and accuracy of
+          your COVID-19 outbreak response.
         {% endblocktrans %}
       </div>{# .headline #}
 
       <div class="cta gap-vert-line">
-        <a class="button inverted alt gap-right-small-at-medium gap-right-base-at-small {% click_hero 'contact' %}"
-           href="#contact-form-modal">
+        <a class="button button-accent-gray gap-right-small-at-medium gap-right-base-at-small {% click_hero 'covid_19' %}"
+           href="{% url 'covid_19' %}">
           {% blocktrans %}
-            Contact Us
+            Learn More
           {% endblocktrans %}
         </a>
-        {% click_hero 'demo' as click_class %}
-        {% include "partials/schedule_demo_button.html" with click_class=click_class button_class="button button-accent-gray" %}
       </div>{# .home-cta #}
 
     </div>{# .copy #}
