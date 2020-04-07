@@ -2,10 +2,6 @@
 {% load i18n %}
 {% load dimagidotcom %}
 
-{% block top_banner %}	
-  {% include "sections/home/covid-banner.html" %}	
-{% endblock %}
-
 {% block body_class %}home-page tucked-hero{% endblock %}
 
 {% block stylesheets %}
@@ -23,40 +19,29 @@
 <section class="hero hero-home"
          data-lazybg="true"
          id="hero">
-  <div class="hero-video">
-    <script src="https://fast.wistia.com/embed/medias/nfnuo0iocx.jsonp" async></script>
-    <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
-    <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;">
-      <div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
-        <div class="wistia_embed wistia_async_nfnuo0iocx videoFoam=true" style="height:100%;width:100%">&nbsp;</div>
-      </div>
-    </div>
-  </div>
   <div class="content content-width-large inverted align-center display-flex flex-valign-middle expand-vertical offset-top-line flex-align-center">
     <div class="copy expand position-relative">
 
       <h1>
         {% blocktrans %}
-          Technology for Social Impact
+          Accelerate Your COVID-19 Response
         {% endblocktrans %}
       </h1>
 
       <div class="headline content-width-small">
         {% blocktrans %}
-          Dimagi is on a mission to build technology that improves
-          the efficiency and quality of impact-driven work globally.
+          Digital tools and resources to improve the speed and accuracy of
+          your COVID-19 outbreak response.
         {% endblocktrans %}
       </div>{# .headline #}
 
       <div class="cta gap-vert-line">
-        <a class="button inverted alt gap-right-small-at-medium gap-right-base-at-small {% click_hero 'contact' %}"
-           href="#contact-form-modal">
+        <a class="button button-accent-gray gap-right-small-at-medium gap-right-base-at-small {% click_hero 'covid_19' %}"
+           href="{% url 'covid_19' %}">
           {% blocktrans %}
-            Contact Us
+            Learn More
           {% endblocktrans %}
         </a>
-        {% click_hero 'demo' as click_class %}
-        {% include "partials/schedule_demo_button.html" with click_class=click_class button_class="button button-accent-gray" %}
       </div>{# .home-cta #}
 
     </div>{# .copy #}
@@ -66,8 +51,8 @@
 
 {% block content %}
   <section class="homepage-container">
-    {% include "sections/home/partners.html" %}
     {% include "sections/home/video.html" %}
+    {% include "sections/home/partners.html" %}
     {% include "sections/home/stats/impact_stats.html" %}
     {% include "sections/home/build.html" %}
     {% include "sections/home/launch_digital.html" %}
