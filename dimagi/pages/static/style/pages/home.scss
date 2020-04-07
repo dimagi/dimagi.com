@@ -7,6 +7,10 @@
   @include make-bg(hero, '../../pages/home/hero');
 }
 
+.hero h1 {
+  max-width: 100%;
+}
+
 .build {
   $_base-height: 122px;
   $_height-by-size: (
