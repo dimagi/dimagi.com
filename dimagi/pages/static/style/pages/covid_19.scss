@@ -12,20 +12,25 @@
   }
 }
 
-.application-image .image.ogun {
-  @include background-cover('../../pages/covid_19/ogun_state_flag.png');
+.application-image .image.cdc {
+  @include background-cover('../../pages/covid_19/CDC.png');
   height: 200px;
   background-size: contain;
-  background-position: left;
-  filter: grayscale(100%);
+  background-position: center;
+}
+
+.application-image .image.ogun {
+  @include background-cover('../../pages/covid_19/Nigeria.png');
+  height: 200px;
+  background-size: contain;
+  background-position: center;
 }
 
 .application-image .image.dsti {
-  @include background-cover('../../pages/covid_19/dsti_logo.jpg');
+  @include background-cover('../../pages/covid_19/DSTI.png');
   height: 200px;
   background-size: contain;
-  background-position: left;
-  filter: grayscale(100%);
+  background-position: center;
 }
 
 .video-intro .image {
