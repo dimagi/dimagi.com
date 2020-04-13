@@ -1,0 +1,18 @@
+@import 'app/mixins/background';
+@import 'app/variables/colors';
+@import 'app/variables/sizes';
+@import 'app/variables/type';
+
+
+.commcare-research-page {
+  @include make-bg(hero, '../../../pages/commcare/product/hero');
+}
+
+.efficient-teams {
+  $_base-height: 195px;
+  $_height-by-size: (
+    small: 310px,
+    medium: 286px,
+  );
+  @include make-bg(phone-image, '../../../pages/commcare/research/features/collect', $_base-height, $_height-by-size, '.png');
+}

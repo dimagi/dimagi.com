@@ -1,0 +1,28 @@
+{% extends "sections/commcare/research/projects/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block content %}
+  <div class="testimonial-content content-width-medium align-left pad-horz-medium">
+    <h6 class="blue testimonial-org">
+      {% blocktrans %}
+        Technology as the Intervention
+      {% endblocktrans %}
+    </h6>
+    <p>
+      {% blocktrans %}
+        CommCare can not only support your data collection needs but serve
+        as an effective intervention management tool. The digital health
+        domain has many unanswered questions around messaging, intensity,
+        structure, and medium, all of which researchers are exploring using
+        CommCare. Send behavior change messaging via SMS and record its
+        effects with data collection workflows. Administer services to
+        subjects and record the outcomes at the same time. Messaging tools
+        can reach people where they are regardless of device types and
+        CommCare’s powerful form logic can present intervention and service
+        delivery protocols based on the information the app collects. Systems
+        can even be built to collect digital consent at the point of service.
+      {% endblocktrans %}  
+    </p>
+  </div>
+{% endblock %}

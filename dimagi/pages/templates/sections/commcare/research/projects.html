@@ -1,0 +1,33 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="testimonials border-top"
+         id="projects">
+  <div class="content pad-vert-medium">
+    <div class="pad-bottom-medium">
+      <h2 class="blue">
+        {% blocktrans %}
+          Use CommCare to support all your research needs
+        {% endblocktrans %}
+      </h2>
+      <p>
+        {% blocktrans %}
+          CommCare is a flexible and powerful tool for researchers, supporting
+          virtually any study design with a mobile application tailored to your needs.
+        {% endblocktrans %}
+      </p>
+    </div>
+
+    <div class="carousel carousel-fade-inactive carousel-numbered carousel-features">
+      <div class="carousel-container">
+        <div class="spinner spinner-large"></div>
+        <div class="carousel-slider">
+          {% include "sections/commcare/research/projects/evaluation.html" %}
+          {% include "sections/commcare/research/projects/study.html" %}
+          {% include "sections/commcare/research/projects/tech.html" %}
+        </div>{# .carousel-slider #}
+      </div>{# .carousel-container #}
+    </div>{# .carousel #}
+
+  </div>{# .content #}
+</section>

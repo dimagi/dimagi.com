@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block title %}{% blocktrans %}
+  CommCare for Research
+{% endblocktrans %}{% endblock %}
+
+{% block description %}{% blocktrans %}
+  Increase the efficiency, accuracy, and scalability of your field-based studies
+{% endblocktrans %}{% endblock %}
+
+{% block body_class %}commcare-research-page tucked-hero{% endblock %}
+
+{% block stylesheets %}
+  {% compress css %}
+    <link href="{% sass_src 'style/pages/sectors/maternal-and-child-health.scss' %}" rel="stylesheet" media="screen" type="text/css" />
+    <link href="{% sass_src 'style/pages/commcare/research.scss' %}" rel="stylesheet" media="screen" type="text/css" />
+  {% endcompress %}
+{% endblock %}
+
+{% block hero %}
+  <div id="top"></div>
+  <section class="hero hero-products-commcare"
+           data-lazybg="true"
+           id="hero">
+    <div class="content content-width-large inverted align-center display-flex flex-valign-middle expand-vertical offset-top-small flex-align-center">
+      <div class="copy expand position-relative">
+        <h1>
+          {% blocktrans %}
+            Explore CommCare’s <br class="hide-until-medium" />
+            powerful features.
+          {% endblocktrans %}
+        </h1>
+      </div>{# .copy #}
+    </div>{# .content #}
+  </section>
+{% endblock %}
+
+{% block content %}
+  <section>
+    {% include "sections/commcare/research/sub_nav.html" %}
+    {% include "sections/commcare/research/features.html" %}
+    {% include "sections/sectors/education/commcare_action.html" %}
+    {% include "sections/commcare/research/projects.html" %}
+    {% include "sections/sectors/maternal_and_child_health/part3.html" %}
+    {% include "sections/sectors/maternal_and_child_health/testimonial.html" %}
+  </section>
+{% endblock %}
