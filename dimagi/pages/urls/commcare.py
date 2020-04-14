@@ -3,6 +3,7 @@ from django.conf.urls import url
 from dimagi.pages.views.commcare import (
     product,
     product_features,
+    commcare_onboarding,
     commcare_integration,
     pricing,
     handle_pricing_pdf,
@@ -14,6 +15,8 @@ urlpatterns = [
         name='commcare'),
     url(r'^features/$', product_features,
         name='commcare_features'),
+    url(r'^onboarding/$', commcare_onboarding,
+        name='commcare_onboarding'),
     url(r'^integrations/$', commcare_integration,
         name='commcare_integration'),
     url(r'^pricing/$', pricing,

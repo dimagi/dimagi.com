@@ -1,0 +1,28 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="overview pad-top-medium pad-bottom-large"
+         id="onboarding_overview">
+  <div class="content">
+    <div class="content-width-medium align-center">
+      <h2 class="blue">
+        {% blocktrans %}
+          Let our Customer Success guide your organization as you begin using CommCare
+        {% endblocktrans %}
+      </h2>
+      <p>
+        {% blocktrans %}
+          We know that learning to use a new platform can be difficult, so our
+          CustomerSuccess team is here to help with three remote training
+          packages designed to build internal capacity for designing,
+          building, and implementing CommCare independently. Onboarding
+          packages are completely tailored to your specific needs, covering
+          topics like application design, feature usage, user management, and deployment.
+        {% endblocktrans %}
+      </p>
+    </div>
+    <div class="onboarding-packages gap-top-medium gap-bottom-line">
+      {% include "sections/commcare/product_onboarding/package.html" %}
+    </div>
+  </div>
+</section>

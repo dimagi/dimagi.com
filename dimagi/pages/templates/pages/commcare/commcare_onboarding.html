@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block title %}{% blocktrans %}
+  CommCare Onboarding
+{% endblocktrans %}{% endblock %}
+
+{% block description %}{% blocktrans %}
+  A helping hand for new partners
+{% endblocktrans %}{% endblock %}
+
+{% block body_class %}product-commcare-onboarding tucked-hero{% endblock %}
+
+{% block stylesheets %}
+  {% compress css %}
+    <link href="{% sass_src 'style/pages/commcare/product_onboarding.scss' %}" rel="stylesheet" media="screen" type="text/css" />
+  {% endcompress %}
+{% endblock %}
+
+{% block hero %}
+  <div id="top"></div>
+  <section class="hero"
+           data-lazybg="true"
+           id="hero">
+    <div class="content align-left-at-medium align-center gap-top-large gap-top-small-at-medium gap-top-line-at-large">
+      <h2 class="pad-top-small">
+        {% blocktrans %}
+          Onboarding Packages
+        {% endblocktrans %}
+      </h2>
+      <h1>
+        {% blocktrans %}
+          A helping hand for new partners
+        {% endblocktrans %}
+      </h1>
+    </div>{# .content #}
+  </section>
+{% endblock %}
+
+{% block content %}
+  <section class="products-commcare-container">
+    {% include "sections/commcare/product_onboarding/sub_nav.html" %}
+    {% include "sections/commcare/product_onboarding/overview.html" %}
+    {% include "sections/commcare/product_onboarding/curriculum.html" %}
+    {% include "sections/commcare/product_onboarding/pricing.html" %}
+    {% include "sections/sectors/maternal_and_child_health/part3.html" %}
+    {% include "sections/sectors/maternal_and_child_health/testimonial.html" %}
+  </section>
+{% endblock %}

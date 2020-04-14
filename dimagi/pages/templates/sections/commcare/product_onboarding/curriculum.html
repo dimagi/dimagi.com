@@ -1,0 +1,38 @@
+{% load dimagidotcom %}
+{% load i18n %}
+
+<section class="curriculum border-vert accent-gray-bg"
+         id="curriculum">
+  <div class="content content-width-medium pad-bottom-medium pad-top-medium">
+
+    <div class="intro content-width-large gap-bottom-line">
+      <h2 class="normalcase">
+        {% blocktrans %}
+          Customized Onboarding Curriculums
+        {% endblocktrans %}
+      </h2>
+      <p>
+        {% url 'case_management' as cm_url %}
+        {% blocktrans %}
+          Your onboarding curriculum will be customized to meet the specific
+          needs of your individual project. All onboardings will cover
+          application design, app building, feature training for all necessary
+          features, and data export/report building, while individual sessions
+          will vary based on your project’s workflow and focus area.
+        {% endblocktrans %}
+      </p>
+    </div>{# .intro #}
+
+    <p class="align-center">
+      <a class="button"
+         href="https://cdn2.hubspot.net/hubfs/503070/Sample%20Deep%20Dive%20Onboarding%20Schedule.pdf"
+         target="_blank">
+        {% blocktrans %}
+          Download a sample
+        {% endblocktrans %}
+      </a>
+    </p>
+  </div>{# .content #}
+  <div class="image off-grid white-lazy-bg"
+       data-lazybg="true"></div>
+</section>
