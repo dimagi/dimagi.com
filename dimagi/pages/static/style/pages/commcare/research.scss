@@ -8,13 +8,15 @@
   @include make-bg(hero, '../../../pages/commcare/research/intro/hero');
 }
 
-.efficient-teams {
+.research-features {
   $_base-height: 195px;
   $_height-by-size: (
     small: 410px,
     medium: 430px,
   );
-  @include make-bg(phone-image, '../../../pages/case_management/actionable-data', $_base-height, $_height-by-size, '.png');
+  @include make-bg(clean-data, '../../../pages/commcare/research/features/clean-data', $_base-height, $_height-by-size, '.png');
+  @include make-bg(secure, '../../../pages/commcare/research/features/secure', $_base-height, $_height-by-size, '.png');
+  @include make-bg(protocols, '../../../pages/commcare/research/features/protocols', $_base-height, $_height-by-size, '.png');
 }
 
 
@@ -24,7 +26,9 @@
     small: 250px,
     medium: 300px,
   );
-  @include make-bg(health-outcomes, '../../../pages/commcare/research/projects/hero', $_base-height, $_height-by-size);
+  @include make-bg(evaluations, '../../../pages/commcare/research/projects/evaluations', $_base-height, $_height-by-size);
+  @include make-bg(studies, '../../../pages/commcare/research/projects/studies', $_base-height, $_height-by-size);
+  @include make-bg(intervention, '../../../pages/commcare/research/projects/intervention', $_base-height, $_height-by-size);
 }
 
 #case-study {
@@ -38,14 +42,32 @@
   @include make-bg(case-study-image, '../../../pages/commcare/research/case_study/hero', $_base-height, $_height-by-size);
 }
 
-.health-outcomes {
+.evaluations {
+  width: 200px;
+  margin-top: 0px !important;
+}
+
+.studies {
+  width: 200px;
+  margin-top: 0px !important;
+}
+
+.intervention {
   width: 200px;
   margin-top: 0px !important;
 }
 
 $_max-mobile: $width-desktop - 1px;
 @media (max-width: $_max-mobile) {
-  .health-outcomes {
+  .evaluations {
+    width: auto !important;
+    margin-top: 0px !important;
+  }
+  .studies {
+    width: auto !important;
+    margin-top: 0px !important;
+  }
+  .intervention {
     width: auto !important;
     margin-top: 0px !important;
   }

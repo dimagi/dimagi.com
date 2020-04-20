@@ -7,19 +7,20 @@
   </div>
   <h3>
     {% blocktrans %}
-      Build on your own with onboarding support
+      Jumpstart your project with onboarding support
     {% endblocktrans %}
   </h3>
   <p>
     {% blocktrans %}
-      Jumpstart your project with our customer success team.
+      Select the onboarding package that meets your needs and have Dimagi staff
+      guide you as you design, build, and implement your application.
     {% endblocktrans %}
   </p>
   <p>
-    <a class="arrow {% click_body 'contact' %}"
-       href="#contact-form-modal">
+    <a class="arrow"
+       href="{% url 'commcare_onboarding' %}">
       {% blocktrans %}
-        Contact Us
+        Learn More
       {% endblocktrans %}
     </a>
   </p>
