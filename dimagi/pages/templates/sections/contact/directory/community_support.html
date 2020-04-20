@@ -15,21 +15,16 @@
     {% click_body 'directory-user-group' as click_users %}
     {% click_body 'directory-help' as click_class %}
     {% blocktrans %}
-      Share questions and answers with the
+      Share questions and answers with the CommCare Users Group, or 
+      go directly to our 
       <a class="orange {{ click_users }}"
-         href="https://forum.dimagi.com/"
+         href="https://wiki.commcarehq.org/display/commcarepublic/Home"
          target="_blank">
-        CommCare Users Group</a>,
-      or go directly to our
+        Support Documentation</a>, or visit our 
       <a class="orange {{ click_class }}"
-         href="https://help.commcarehq.org/"
+         href="https://dimagi-dev.atlassian.net/servicedesk/customer/portals"
          target="_blank">Help Site</a>.
     {% endblocktrans %}
-  </p>
-  <p class="gap-bottom-base">View
-    <a class="orange {{ click_class }}"
-       href="https://status.commcarehq.org/"
-       target="_blank">CommCare status </a>updates here.
   </p>
 {% endblock %}
 
