@@ -20,5 +20,15 @@
     <div class="onboarding-packages gap-top-medium gap-bottom-line">
       {% include "sections/commcare/product_onboarding/package.html" %}
     </div>
+    <div class="align-center pad-top-medium">
+      <p>
+        <a class="button blue-bg"
+           href="{% url 'commcare_onboarding' %}">
+          {% blocktrans %}
+            Learn More
+          {% endblocktrans %}
+        </a>
+      </p>
+    </div>
   </div>
 </section>
