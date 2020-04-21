@@ -15,10 +15,17 @@
     medium: 430px,
   );
   @include make-bg(clean-data, '../../../pages/commcare/research/features/clean-data', $_base-height, $_height-by-size, '.png');
-  @include make-bg(secure, '../../../pages/commcare/research/features/secure', $_base-height, $_height-by-size, '.png');
-  @include make-bg(protocols, '../../../pages/commcare/research/features/protocols', $_base-height, $_height-by-size, '.png');
 }
 
+.research-features {
+  $_base-height: 195px;
+  $_height-by-size: (
+    small: 410px,
+    medium: 220px,
+  );
+  @include make-bg(secure, '../../../pages/commcare/research/features/secure/secure', $_base-height, $_height-by-size);
+  @include make-bg(protocols, '../../../pages/commcare/research/features/protocol/protocol', $_base-height, $_height-by-size);
+}
 
 #projects {
   $_base-height: 200px;
