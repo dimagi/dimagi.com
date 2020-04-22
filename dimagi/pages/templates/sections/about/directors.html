@@ -1,20 +1,20 @@
 {% load i18n %}
 {% load dimagidotcom %}
 
-<section class="management"
-         id="management">
+<section class="management accent-gray-bg border-vert"
+         id="executive-committee">
   <div class="content pad-vert-medium">
     <div class="intro">
       <h2>
         {% blocktrans %}
-          Management
+          Managing Directors &amp; Regional Leadership
         {% endblocktrans %}
       </h2>
     </div>{# .intro #}
 
     <div class="grid-4-at-large grid-3-at-medium grid-2-at-small grid-row-equal-heights gap-bottom-none team-grid">
-      {% for employee in management %}
-        {% include "partials/team_card.html" with extra_slug="management" %}
+      {% for employee in directors %}
+        {% include "partials/team_card.html" with extra_slug="director" use_alt_title='yes' %}
       {% endfor %}
     </div>
 

@@ -3,7 +3,7 @@
 
 <div class="column">
   <a class="tile pad-base pad-bottom-line"
-     href="#{{ employee.slug }}">
+     href="#{{ employee.slug }}{% if extra_slug %}-{{ extra_slug }}{% endif %}">
     <div class="aspect-ratio-square employee-image gap-bottom-base"
          data-lazyplaceholder="true"
          data-src="{{ employee.image }}"></div>
@@ -11,7 +11,11 @@
       {{ employee.name }}
     </h5>
     <p class="body-color">
-      {{ employee.role }}
+      {% if use_alt_title %}
+        {{ employee.alt_title }}
+      {% else %}
+        {{ employee.role }}
+      {% endif %}
     </p>
   </a>
 </div>{# .column #}
