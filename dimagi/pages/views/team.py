@@ -27,15 +27,16 @@ def _get_member(slug):
 
 def about(request):
     context = {
-        'executive_committee': _get_special_people('executive-committee', 'order_executive_committee'),
         'management': _get_special_people('management', 'order_management'),
-        'directors': _get_special_people('directors', 'order_director'),
     }
     return render(request, 'pages/about.html', context)
 
 
 def team(request):
     context = {
+        'executive_committee': _get_special_people('executive-committee', 'order_executive_committee'),
+        'management': _get_special_people('management', 'order_management'),
+        'directors': _get_special_people('directors', 'order_director'),
         'offices': _get_offices(),
     }
     return render(request, 'pages/team/team.html', context)

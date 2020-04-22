@@ -3,7 +3,7 @@
 
 <section class="management accent-gray-bg border-vert"
          id="management">
-  <div class="content pad-vert-medium">
+  <div class="content pad-top-medium pad-bottom-large">
     <div class="intro">
       <h2>
         {% blocktrans %}
@@ -17,14 +17,6 @@
         {% include "partials/team_card.html" with extra_slug="management" %}
       {% endfor %}
     </div>
-
-    <p class="align-center gap-top-small gap-bottom-base">
-      <a class="arrow {% click_body 'see-employees' %}" href="{% url 'team' %}">
-        {% blocktrans %}
-          See all Dimagi employees
-        {% endblocktrans %}
-      </a>
-    </p>
 
   </div> {# .content #}
 </section>
