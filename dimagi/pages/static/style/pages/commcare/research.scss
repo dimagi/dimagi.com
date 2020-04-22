@@ -8,6 +8,14 @@
   @include make-bg(hero, '../../../pages/commcare/research/intro/hero');
 }
 
+@media (min-width: $width-desktop) {
+  .commcare-research-page .hero h1 {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 65%;
+  }
+}
+
 .research-features {
   $_base-height: 195px;
   $_height-by-size: (
@@ -21,7 +29,7 @@
   $_base-height: 195px;
   $_height-by-size: (
     small: 410px,
-    medium: 220px,
+    medium: 290px,
   );
   @include make-bg(secure, '../../../pages/commcare/research/features/secure/secure', $_base-height, $_height-by-size);
   @include make-bg(protocols, '../../../pages/commcare/research/features/protocol/protocol', $_base-height, $_height-by-size);
