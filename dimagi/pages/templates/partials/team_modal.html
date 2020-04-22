@@ -4,7 +4,7 @@
 <div class="modal"
      data-dismissible="true"
      data-size="medium"
-     id="{{ employee.slug }}">
+     id="{{ employee.slug }}{% if extra_slug %}-{{ extra_slug }}{% endif %}">
   <div class="modal-scroll">
     <div class="modal-wrapper">
       <a href="#" class="modal-close-button"></a>
@@ -16,7 +16,11 @@
           </h3>
 
           <p>
-            {{ employee.role }}
+            {% if use_alt_title %}
+              {{ employee.alt_title }}
+            {% else %}
+              {{ employee.role }}
+            {% endif %}
           </p>
 
           <div class="grid-flex-at-large">

@@ -45,7 +45,9 @@
     {% include "sections/about/mission.html" %}
     {% include "sections/about/resources.html" %}
     {% include "sections/about/team.html" %}
+    {% include "sections/about/executive_committee.html" %}
     {% include "sections/about/management.html" %}
+    {% include "sections/about/directors.html" %}
     {% include "sections/about/company_info.html" %}
     {% include "sections/contact/offices.html" %}
     {% include "sections/about/contact.html" %}
@@ -53,7 +55,13 @@
 {% endblock %}
 
 {% block modals %}
+  {% for employee in executive_committee %}
+    {% include "partials/team_modal.html" with employee=employee extra_slug='executive-committee' %}
+  {% endfor %}
   {% for employee in management %}
-    {% include "partials/team_modal.html" with employee=employee %}
+    {% include "partials/team_modal.html" with employee=employee extra_slug='management' %}
+  {% endfor %}
+  {% for employee in directors %}
+    {% include "partials/team_modal.html" with employee=employee extra_slug='director' use_alt_title='yes' %}
   {% endfor %}
 {% endblock %}
