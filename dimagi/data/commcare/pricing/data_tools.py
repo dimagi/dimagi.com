@@ -84,9 +84,10 @@ GROUP.add_features([
             "Report builder"
         ),
         description=ugettext_lazy(
-            "Design and build your own reports based on data from your "
-            "CommCare application. Publish reports or schedule emails to share "
-            "reports with other users."
+            "Create custom reports from data collected in your CommCare "
+            "applications, and schedule automated emails to share those "
+            "custom reports on a recurring schedule. Subscription plans "
+            "with Report Builder include up to 5 saved reports. "
         ),
         support=Support(False, True, True, True),
     ),
