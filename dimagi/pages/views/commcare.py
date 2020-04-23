@@ -38,6 +38,10 @@ def pricing(request):
     return render(request, 'pages/commcare/pricing.html', context)
 
 
+def research(request):
+    return render(request, 'pages/commcare/research.html')
+
+
 def handle_pricing_pdf(is_monthly):
 
     def pricing_pdf(request):

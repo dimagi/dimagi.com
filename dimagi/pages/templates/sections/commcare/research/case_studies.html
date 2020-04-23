@@ -1,0 +1,48 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section id="casestudies"
+         data-lazybg="true">
+  <div class="content pad-bottom-medium">
+    <div class="grid grid-2-at-medium grid-1-at-small">
+      <div class="column" id="case-study">
+        <div class="pad-bottom-base pad-bottom-line-at-medium pad-bottom-line-at-large pad-bottom-line-at-extra-large">
+          <h3 class="blue pad-left-line">
+            {% blocktrans %}
+              CommCare Works for Researchers
+            {% endblocktrans %}
+          </h3>
+        </div>
+        <div class="intro-image">
+          <div class="case-study-image white-lazy-bg"
+               data-lazybg="true"></div>
+        </div>
+      </div> {# .column #}
+      <div class="column pad-top-medium">
+        <p>
+          {% blocktrans %}
+            Researchers around the world use CommCare to bring efficiency,
+            visibility, and scalability to their field-based studies. For
+            instance, in 2016, The Harvard T.H. Chan School of Public Health
+            used CommCare to study the causal effect of a FIGO intervention
+            on the uptake and continued use of postpartum IUDs (PPIUDs) by
+            recent mothers and the effect on their subsequent pregnancy
+            status and births.
+          {% endblocktrans %}
+        </p>
+        <p>
+          {% blocktrans %}
+            Learn more about some of our featured research projects along
+            with advice from our research partners.
+          {% endblocktrans %}
+        </p>
+        <a class="arrow {% click_body 'video-learn' %}"
+            href="{% url 'programmatic_research' %}">
+          {% blocktrans %}
+            Learn more
+          {% endblocktrans %}
+        </a>
+      </div>{# .column #}
+    </div>      
+  </div>
+</section>
