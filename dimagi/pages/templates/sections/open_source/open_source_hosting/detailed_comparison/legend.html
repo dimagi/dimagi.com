@@ -1,0 +1,27 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<div class="feature-legend">
+  <div class="grid-2 grid-valign-middle">
+    <div class="column gap-none align-left">
+      <a href="#"
+         class="blue-dark {% click_body 'details-expand-all' %}"
+         data-accordion-group-expand="detailed-feature-accordion">
+        +
+        {% blocktrans %}
+          Expand All
+        {% endblocktrans %}
+      </a>
+      <span class="hide-until-medium">&nbsp;&nbsp;/&nbsp;&nbsp;</span>
+      <br class="hide-at-medium" />
+      <a href="#"
+         class="blue-dark {% click_body 'details-close-all' %}"
+         data-accordion-group-close="detailed-feature-accordion">
+        -
+        {% blocktrans %}
+          Close All
+        {% endblocktrans %}
+      </a>
+    </div>{# .column #}
+  </div>{# .grid-2 #}
+</div>{# .feature-legend #}

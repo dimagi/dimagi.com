@@ -1,0 +1,67 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<div class="accordion-group"
+     id="detailed-feature-accordion">
+
+  {% for group in feature_groups %}
+    <div class="accordion{% ifnotequal forloop.counter0 0 %} collapsed{% endifnotequal %}">
+      <div class="accordion-header">
+        <h4 class="pad-small blue-dark" id="{{ group.slug }}">
+          {{ group.title }}
+        </h4>
+      </div>
+      <div class="accordion-content"{% ifnotequal forloop.counter0 0 %} style="display: none;"{% endifnotequal %}>
+        <div class="feature-group-description">
+          <p>
+            {% if group.description %}{{ group.description }}<br class="hide-until-medium" />{% endif %}
+            <span class="hide-if-touch">
+              {% blocktrans %}
+                Click on a feature below for more information.
+              {% endblocktrans %}
+            </span>
+            <span class="hide-unless-touch">
+              {% blocktrans %}
+                Tap on a feature below for more information.
+              {% endblocktrans %}
+            </span>
+          </p>
+        </div>
+        {% for feature in group.features %}
+          <div class="feature-row"
+               data-modal="{{ group.slug }}-feature{{ forloop.counter }}-description">
+            <div class="grid-5-at-large grid-5 grid-valign-middle">
+              <div class="column gap-none">
+                <h5>
+                  {{ feature.title }}
+                </h5>
+              </div>{# .column #}
+              <div class="column gap-none">
+                <p class="summary-intensity">
+                  {{ feature.intensity }}
+                </p>
+              </div>{# .column #}
+              <div class="column gap-none">
+                <p class="summary-time">
+                  {{ feature.time }}
+                </p>
+              </div>{# .column #}
+              <div class="column gap-none">
+                <p class="feature-security">
+                  {{ feature.security }}
+                </p>
+              </div>{# .column #}
+              <div class="column gap-none">
+                <ul class="check-list">
+                  <li class="feature-support">
+                    {{ feature.support }}
+                  </li>
+                </ul>
+              </div>{# .column #}
+            </div>
+          </div>{# .feature-row #}
+        {% endfor %}
+      </div>
+    </div>
+  {% endfor %}
+</div>

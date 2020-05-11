@@ -1,0 +1,123 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section  data-lazybg="true" id="support">
+  <div id="benefits">
+    <div class="content pad-top-medium pad-bottom-small">
+      <h2 class="align-center">
+        {% blocktrans %}
+          What are my support options?
+        {% endblocktrans %}
+      </h2>
+      <p class="align-center">
+        {% blocktrans %}
+          Dimagi offers a range of support options depending
+          on the method of hosting selected:
+        {% endblocktrans %}
+      </p>
+    </div> {# .content #}
+  </div>
+  <div class="content pad-bottom-medium">
+    <div class="grid grid-2-at-large grid-1-at-medium grid-row-equal-heights ">
+      <div class="column pad-top-small">
+        <div class="grid-flex">
+          <div class="column no-shrink">
+            <div class="theme-icon">
+              {% include "svg/open_source/infra.html" %}
+            </div> {# .theme-icon #}
+          </div> {# .column .no-shrink #}
+          <div class="column">
+            <h6 class="blue">
+              {% blocktrans %}
+                Dimagi DevOps and Infrastructure Management
+              {% endblocktrans %}
+            </h6>
+            <p>
+              {% blocktrans %}
+                Dimagi-managed CommCare servers allow economies of scale, fast
+                access to the product, high platform availability, unlimited
+                data storage, HIPAA compliant cloud and ISO compliant data
+                center, GDPR and SOC3 compliant practices. This support is
+                available for SaaS Hosting, Local Mirrored Data Storage, and
+                Local Production Data Collection.
+              {% endblocktrans %}
+            </p>
+          </div> {# .column #}
+        </div> {# .grid-flex #}
+      </div> {# .column #}
+      <div class="column pad-top-small">
+        <div class="grid-flex">
+          <div class="column no-shrink">
+            <div class="theme-icon">
+              {% include "svg/open_source/tech_support.html" %}
+            </div> {# .theme-icon #}
+          </div> {# .column .no-shrink #}
+          <div class="column">
+            <h6 class="blue">
+              {% blocktrans %}
+                CommCare Product Support
+              {% endblocktrans %}
+            </h6>
+            <p>
+              {% blocktrans %}
+                Access is available to the Dimagi team to report issues related
+                to building, deploying, and syncing CommCare applications. This
+                support is offered for Cloud Hosting, Local Mirrored Data
+                Storage, and Local Production Data Collection.
+              {% endblocktrans %}
+            </p>
+          </div> {# .column #}
+        </div> {# .grid-flex #}
+      </div> {# .column #}
+      <div class="column pad-top-small">
+        <div class="grid-flex">
+          <div class="column no-shrink">
+            <div class="theme-icon">
+              {% include "svg/open_source/dev.html" %}
+            </div> {# .theme-icon #}
+          </div> {# .column .no-shrink #}
+          <div class="column">
+            <h6 class="blue">
+              {% blocktrans %}
+                Self-hosting Toolkit Support
+              {% endblocktrans %}
+            </h6>
+            <p>
+              {% blocktrans %}
+                Access is available to the Dimagi team to report issues related
+                to CommCare Cloud (the open-source product developers use for
+                deploying and maintaining CommCare servers). This support
+                is offered for Local Production Data Collection.
+              {% endblocktrans %}
+            </p>
+          </div> {# .column #}
+        </div> {# .grid-flex #}
+      </div> {# .column #}
+      <div class="column pad-top-small">
+        <div class="grid-flex">
+          <div class="column no-shrink">
+            <div class="theme-icon">
+              {% include "svg/open_source/support.html" %}
+            </div> {# .theme-icon #}
+          </div> {# .column .no-shrink #}
+          <div class="column">
+            <h6 class="blue">
+              {% blocktrans %}
+                CommCare Developer Forum
+              {% endblocktrans %}
+            </h6>
+            <p>
+              {% blocktrans %}
+                Access to the public forum to collaborate with the community
+                of CommCare developers. Dimagi team members may contribute
+                to forum content, but there is no guaranteed response or
+                resolution for individual posts. This forum is open for
+                all hosting options.
+              {% endblocktrans %}
+            </p>
+          </div> {# .column #}
+        </div> {# .grid-flex #}
+      </div> {# .column #}
+    </div>
+  </div>
+</section>

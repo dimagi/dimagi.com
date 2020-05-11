@@ -1,0 +1,34 @@
+{% load dimagidotcom %}
+{% load i18n %}
+
+<article class="epic contact">
+  <section class="epic-cover"
+    data-lazybg="true">
+    <div class="commcare-text pad-top-base pad-top-small-at-medium pad-top-medium-at-large pad-top-medium-at-extra-large pad-top-base-at-small pad-bottom-medium pad-left-large-at-small">
+      <div class="content content-width-medium">
+        <h3 class="white mb-10">
+          {% blocktrans %}
+            Which approach is right for you?
+          {% endblocktrans %}
+        </h3>
+        <p class="white">
+          {% blocktrans %}
+            Our team is available to talk with you about the differences between
+            the approaches, the available support options, and more.
+          {% endblocktrans %}
+        </p>
+        <div class="cta gap-vert-line">
+          <a class="button button-accent-gray blue"
+             href="#demo-sector">
+            {% blocktrans %}
+              Contact us
+            {% endblocktrans %}
+          </a>
+        </div>{# .cta #}
+      </div> {# .content #}
+      <div class="image off-grid white-lazy-bg"
+        data-lazybg="true">
+      </div>
+    </div> {# .commcare-text #}
+  </section>
+</article>
