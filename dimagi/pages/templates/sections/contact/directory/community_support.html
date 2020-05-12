@@ -12,8 +12,6 @@
 
 {% block description %}
   <p class="gap-bottom-base">
-    {% click_body 'directory-user-group' as click_users %}
-    {% click_body 'directory-help' as click_class %}
     {% blocktrans %}
       Search 
       <a class="orange {{ click_users }}"
@@ -25,6 +23,12 @@
          href="https://forum.dimagi.com/"
          target="_blank">
       CommCare Forum</a>. These resources are free and available 
+      to all CommCare users. 
+    {% endblocktrans %}
+  </p>
+  <p>
+    {% blocktrans %}
+      These resources are free and available 
       to all CommCare users. 
     {% endblocktrans %}
   </p>
