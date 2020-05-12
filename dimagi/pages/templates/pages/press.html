@@ -5,7 +5,7 @@
 {% block body_class %}press-page tucked-hero{% endblock %}
 
 {% block title %}{% blocktrans %}
-  Dimagi in the News
+  Pressroom
 {% endblocktrans %}{% endblock %}
 
 {% block description %}{% blocktrans %}
@@ -20,7 +20,7 @@
 {% endblock %}
 
 {% block hero %}
-  <div class="orange-theme">
+  <div class="blue-theme">
     <section class="hero hero-press"
              data-lazybg="true"
              id="hero">
@@ -29,15 +29,25 @@
 
           <h1>
             {% blocktrans %}
-              Dimagi in the News
+              Pressroom
             {% endblocktrans %}
           </h1>
 
           <div class="headline content-width-small">
             {% blocktrans %}
-              For press or awards inquiries, please email info@dimagi.com.
+              Working on a story about CommCare or Dimagi?
+              Members of the press can contact us at:
             {% endblocktrans %}
           </div>{# .headline #}
+
+          <p class="align-center pad-top-small">
+            <a class="button button-accent-gray {% click_body 'case-management' %}"
+              href="{% url 'focus_mdm_pricing' %}">
+              {% blocktrans %}
+                info@dimagi.com
+              {% endblocktrans %}
+            </a>
+          </p>
 
         </div>{# .copy #}
       </div>{# .content #}
@@ -46,7 +56,9 @@
 {% endblock %}
 
 {% block content %}
-  <section class="press-container orange-theme">
+  <section class="press-container blue-theme">
+    {% include "sections/press/sub_nav.html" %}
+    {% include 'sections/press/overview.html' %}
     {% include 'sections/press/as_seen.html' %}
     {% include 'sections/press/list.html' %}
     {% include 'sections/press/resources.html' %}

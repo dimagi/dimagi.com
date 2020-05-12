@@ -1,0 +1,29 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section data-lazybg="true"
+         id="overview">
+  <div class="content pad-top-medium pad-bottom-medium">
+    <div class="grid grid-2-at-medium grid-1-at-small">
+      <div class="column">
+        <p>
+          <a href="{% url 'home' %}">Dimagi</a> is a socially-conscious 
+          technology company and one of the world’s largest providers of 
+          digital solutions for frontline health workers. Our 
+          open-source technology platform, 
+          <a href="{% url 'commcare' %}">CommCare</a>, is the most widely-used 
+          mobile data collection and service delivery platform in the 
+          world. Founded in 2002 out of the Massachusetts Institue of 
+          Technology, Dimagi was among the first registered benefit 
+          corporations in the state of Massachusetts.
+        </p>
+      </div>{# .column #}
+      <div class="column"
+           id="page-intro">
+        <div class="hero-data-image white-lazy-bg"
+             data-lazybg="true">
+        </div>
+      </div> {# .column #}
+    </div> {# .grid #}
+  </div> {# .content #}
+</section>

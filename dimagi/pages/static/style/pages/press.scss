@@ -4,7 +4,18 @@
 @import 'app/variables/type';
 
 .press-page {
-  @include make-bg(hero, '../../pages/blog/hero');
+  @include make-bg(hero, '../../pages/press/hero');
+}
+
+#page-intro {
+  $_base-height: 190px;
+  $_height-by-size: (
+    small: 280px,
+    medium: 280px,
+    large: 280px,
+    extra-large: 340px,
+  );
+  @include make-bg(hero-data-image, '../../pages/press/intro/hero', $_base-height, $_height-by-size);
 }
 
 .post p {
