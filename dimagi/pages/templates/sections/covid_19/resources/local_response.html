@@ -1,0 +1,35 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="content pad-vert-medium content-width-large blue-theme">
+  <div class="grid-2-at-small">
+    <div class="column pad-top-medium align-left">
+      <h3>
+        {% blocktrans %}
+          COVID-19 Local Response System
+        {% endblocktrans %}
+      </h3>
+      <p>
+        {% blocktrans %}
+          This platform was built from CDC protocols to support frontline 
+          worker patient screening and contact tracing. Learn more about 
+          the system being used by cities and states across the US.
+        {% endblocktrans %}
+      </p>
+      <div class="align-left pad-top-base">
+        <a class="arrow"
+           href="https://confluence.dimagi.com/display/commcarepublic/U.S.+COVID-19+Local+Response+System"
+           target="_blank">
+          {% blocktrans %}
+            Learn More
+          {% endblocktrans %}
+        </a>
+      </div>
+    </div>{# .column #}
+
+    <div class="column">
+      <div class="local-response white-lazy-bg"
+           data-lazybg="true"></div>
+    </div>{# .column #}
+  </div>{# .grid-2 #}
+</section>{# .content #}

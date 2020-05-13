@@ -1,0 +1,35 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="content pad-bottom-medium content-width-large blue-theme">
+  <div class="grid-2-at-small grid-reverse">
+    <div class="column pad-top-medium align-left">
+      <h3>
+        {% blocktrans %}
+          COVID-19 Template Applications
+        {% endblocktrans %}
+      </h3>
+      <p>
+        {% blocktrans %}
+          This platform was built from CDC protocols to support frontline 
+          worker patient screening and contact tracing. Learn more about 
+          the system being used by cities and states across the US.
+        {% endblocktrans %}
+      </p>
+      <div class="align-left pad-top-base">
+        <a class="arrow"
+           href="{% url 'blog_post' 'covid-19-response-template-apps' %}"
+           target="_blank">
+          {% blocktrans %}
+            Learn More
+          {% endblocktrans %}
+        </a>
+      </div>
+    </div>{# .column #}
+
+    <div class="column">
+      <div class="template white-lazy-bg"
+           data-lazybg="true"></div>
+    </div>{# .column #}
+  </div>{# .grid-2 #}
+</section>{# .content #}
