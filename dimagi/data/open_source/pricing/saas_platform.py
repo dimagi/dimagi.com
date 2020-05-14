@@ -37,10 +37,10 @@ GROUP.add_summary([
         security=ugettext_lazy(
             "HIPAA, GDPR, ISO, and SOC3 compliance"
         ),
-        support=ugettext_lazy(
-            "DevOps and infrastructure management"
-            "CommCare product support"
-            "CommCare developer forum"
-        ),
+        support=[
+            ugettext_lazy("DevOps and infrastructure management"),
+            ugettext_lazy("CommCare product support"),
+            ugettext_lazy("CommCare developer forum"),
+        ],
     ),
 ])

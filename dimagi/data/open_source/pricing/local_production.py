@@ -43,11 +43,11 @@ GROUP.add_summary([
         security=ugettext_lazy(
             "Variable"
         ),
-        support=ugettext_lazy(
-            "DevOps and infrastructure management (Dimagi-hosted environment only) "
-            "CommCare product support "
-            "Self-hosting Toolkit "
-            "CommCare developer forum "
-        ),
+        support=[
+            ugettext_lazy("DevOps and infrastructure management (Dimagi-hosted environment only) "),
+            ugettext_lazy("CommCare product support "),
+            ugettext_lazy("Self-hosting Toolkit "),
+            ugettext_lazy("CommCare developer forum "),
+        ],
     ),
 ])

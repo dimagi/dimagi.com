@@ -41,8 +41,8 @@ GROUP.add_summary([
         security=ugettext_lazy(
             "Variable"
         ),
-        support=ugettext_lazy(
-            "CommCare developer forum"
-        ),
+        support=[
+            ugettext_lazy("CommCare developer forum"),
+        ],
     ),
 ])

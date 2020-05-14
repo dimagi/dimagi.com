@@ -17,12 +17,12 @@
             {% if group.description %}{{ group.description }}<br class="hide-until-medium" />{% endif %}
             <span class="hide-if-touch">
               {% blocktrans %}
-                Click on a feature below for more information.
+                Click on an option below for more information.
               {% endblocktrans %}
             </span>
             <span class="hide-unless-touch">
               {% blocktrans %}
-                Tap on a feature below for more information.
+                Tap on an option below for more information.
               {% endblocktrans %}
             </span>
           </p>
@@ -53,9 +53,11 @@
               </div>{# .column #}
               <div class="column gap-none">
                 <ul class="check-list">
-                  <li class="feature-support">
-                    {{ feature.support }}
-                  </li>
+                  {% for provided_support in feature.support %}
+                    <li class="feature-support">
+                      {{ provided_support }}
+                    </li>
+                  {% endfor %}
                 </ul>
               </div>{# .column #}
             </div>
