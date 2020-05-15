@@ -1,0 +1,29 @@
+
+{% for group in feature_groups %}
+  {%  for feature in group.features %}
+    <div class="modal"
+         data-dismissible="true"
+         data-size="medium"
+         id="{{ group.slug }}-feature{{ forloop.counter }}-description">
+      <div class="modal-scroll">
+        <div class="modal-wrapper">
+          <a href="#" class="modal-close-button"></a>
+          <div class="content pad-horz-medium-at-medium pad-horz-small pad-bottom-none">
+            <section>
+              <h3 class="gap-bottom-small">
+                {{ feature.title }}
+              </h3>
+            </section>
+            <p>
+              {{ feature.description }}
+            </p>
+            <strong>Data Specifics:</strong>
+            <p>
+              {{ feature.specifics }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+{% endfor %}

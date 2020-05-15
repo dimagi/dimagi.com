@@ -1,0 +1,91 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="epic-content pad-top-small pad-bottom-small accent-gray-bg border-bottom"
+         id="resources">
+  <div class="content">
+    <div class="content pad-vert-small">
+      <h2 class="align-center">
+        {% blocktrans %}
+          Additional Resources
+        {% endblocktrans %}
+      </h2>
+      <p class="align-center">
+        {% blocktrans %}
+          CommCare Cloud is Dimagi’s self-hosting toolkit for deploying and
+          maintaining CommCare servers.<br />
+          Below are helpful resources for utilizing CommCare Cloud:
+        {% endblocktrans %}
+      </p>
+    </div> {# .content #}
+    <div class="content pad-top-line news-images">
+      <div class="grid grid-3-at-large grid-1-at-medium grid-row-equal-heights ">
+        <div class="column">
+          <div class="pad-bottom-base accent-gray-bg">
+            <div class="image documentation" data-lazybg="true"></div>
+            <div class="pad-line blue-bg">
+              <h5>
+                <a href="https://dimagi.github.io/commcare-cloud/"
+                   class="white"
+                   target="_blank">
+                  {% blocktrans %}
+                    CommCare Cloud Documentation
+                  {% endblocktrans %}
+                </a>
+              </h5>
+            </div> {# .pad-line #}
+          </div> {# .white-bg #}
+        </div> {# .column #}
+        <div class="column">
+          <div class="pad-bottom-base accent-gray-bg">
+            <div class="image developer-forum" data-lazybg="true"></div>
+            <div class="pad-line blue-bg">
+              <h5>
+                <a href="https://forum.dimagi.com/c/developers"
+                   class="white"
+                   target="_blank">
+                  {% blocktrans %}
+                    CommCare’s Developer Forum
+                  {% endblocktrans %}
+                </a>
+              </h5>
+            </div> {# .pad-line #}
+          </div> {# .white-bg #}
+        </div> {# .column #}
+        <div class="column">
+          <div class="pad-bottom-base accent-gray-bg">
+            <div class="image github" data-lazybg="true"></div>
+            <div class="pad-line blue-bg">
+              <h5>
+                <a href="https://github.com/dimagi/commcare-cloud"
+                   class="white"
+                   target="_blank">
+                  {% blocktrans %}
+                    CommCare Cloud in Github
+                  {% endblocktrans %}
+                </a>
+              </h5>
+            </div> {# .pad-line #}
+          </div> {# .white-bg #}
+        </div> {# .column #}
+      </div>{# .grid #}
+    </div>{# .content #}
+    <div class="pad-top-medium">
+      <p class="align-center">
+        {% blocktrans %}
+          More questions? Contact our Solutions team to
+          discuss your specific program needs.
+        {% endblocktrans %}
+      </p>
+      <div class="cta gap-vert-line align-center">
+        <a class="button button-blue white"
+           href="#contact-form-modal">
+          {% blocktrans %}
+            Contact us
+          {% endblocktrans %}
+        </a>
+      </div>{# .cta #}
+    </div>
+
+  </div>{# .content #}
+</section>
