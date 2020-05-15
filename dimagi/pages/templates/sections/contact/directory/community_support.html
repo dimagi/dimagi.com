@@ -12,18 +12,24 @@
 
 {% block description %}
   <p class="gap-bottom-base">
-    {% click_body 'directory-user-group' as click_users %}
-    {% click_body 'directory-help' as click_class %}
     {% blocktrans %}
-      Share questions and answers with the CommCare Users Group, or 
-      go directly to our 
+      Search 
       <a class="orange {{ click_users }}"
-         href="https://wiki.commcarehq.org/display/commcarepublic/Home"
+         href="https://wiki.commcarehq.org/display/commcarepublic/Home?__hstc=240960668.541af3f2dae2e2d91780bb490408d87a.1564757662581.1588796955095.1588858766778.466&__hssc=240960668.2.1588858766778&__hsfp=81600919&_ga=2.153557048.1872116163.1588796955-703993439.1564686931"
          target="_blank">
-        Support Documentation</a>, or visit our 
-      <a class="orange {{ click_class }}"
-         href="https://dimagi-dev.atlassian.net/servicedesk/customer/portals"
-         target="_blank">Help Site</a>.
+      CommCare’s Documentation</a> or share your questions on 
+      the 
+      <a class="orange {{ click_users }}"
+         href="https://forum.dimagi.com/"
+         target="_blank">
+      CommCare Forum</a>. These resources are free and available 
+      to all CommCare users. 
+    {% endblocktrans %}
+  </p>
+  <p>
+    {% blocktrans %}
+      These resources are free and available 
+      to all CommCare users. 
     {% endblocktrans %}
   </p>
 {% endblock %}
