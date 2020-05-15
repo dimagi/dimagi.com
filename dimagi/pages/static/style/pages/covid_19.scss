@@ -20,7 +20,7 @@
 }
 
 .application-image .image.ogun {
-  @include background-cover('../../pages/covid_19/Nigeria.png');
+  @include background-cover('../../pages/covid_19/san_francisco.png');
   height: 200px;
   background-size: contain;
   background-position: center;
@@ -39,11 +39,14 @@
   width: 250px;
 }
 
-.resource-image .image.commcare-phone {
-  @include background-cover('../../pages/covid_19/commcare_phone.png');
-  height: 300px;
-  width: 300px;
-  background-size: auto 100%;
+.response {
+  $_base-height: 195px;
+  $_height-by-size: (
+    small: 410px,
+    medium: 290px,
+  );
+  @include make-bg(local-response, '../../pages/covid_19/resources/local_response/response', $_base-height, $_height-by-size);
+  @include make-bg(template, '../../pages/covid_19/resources/template/template', $_base-height, $_height-by-size);
 }
 
 .resource-image .image.covid-cases {
