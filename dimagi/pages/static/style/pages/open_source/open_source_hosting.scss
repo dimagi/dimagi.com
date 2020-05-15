@@ -45,6 +45,7 @@
       right: auto;
       width: 100%;
       z-index: 1;
+      background-size: auto 0%;
     }
 
     .content {
@@ -52,6 +53,10 @@
       z-index: 2;
     }
   }
+}
+
+.contact .image {
+  background-size: auto 0%;
 }
 
 .news-images .image.developer-forum {
