@@ -1,0 +1,54 @@
+{% extends "sections/press/accordion/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block accordion_content_show %}{% endblock %}
+
+{% block accordion_header %}
+  {% blocktrans %}
+    What is Dimagi’s response to COVID-19?
+  {% endblocktrans %}
+{% endblock %}
+
+{% block accordion_content %}
+  <p class="chw-accordion-sub">
+    {% blocktrans %}
+      COVID-19 has emerged as one of the worst global pandemics in the last
+      century. Health systems have quickly shifted resources to mitigate its
+      toll. It is clear that the effective use of digital technology will play
+      a core role in how effective this COVID-19 response will be.
+    {% endblocktrans %}
+  </p>
+  <p class="chw-accordion-sub">
+    {% blocktrans %}
+      We are committed to doing all that we can to support the COVID-19
+      response, and our team brings more than a decade of experience in
+      rapidly deploying digital solutions to complex problems.
+    {% endblocktrans %}
+  </p>
+  <p class="chw-accordion-sub">
+    To support response efforts as governments around the world look to relax
+    social distancing guidelines, Dimagi is developing
+    <a href="{% url 'blog_post' 'covid-19-response-template-apps'%}"
+       target="_blank">configurable applications for COVID-19</a>
+    using CommCare. These applications are built for frontline workers and
+    designed from CDC and WHO protocols to support contact tracing and case
+    investigation. Users are able to register and track suspected cases, confirmed
+    cases, and cases’ contacts, and follow-up for a period of required days.
+    Additional template applications have been developed for port of entry
+    surveillance, facility readiness, and lab test tracking. Currently, these
+    applications are being used by governments around the world, including the city of
+    <a href="{% url 'blog_post' 'sf-ucsf-contact-tracing-announcement'%}"
+       target="_blank">San Francisco</a>,
+    the state of Alaska, and countries such as Togo,
+    <a href="https://www.dsti.gov.sl/dsti-and-dimagi-partner-to-create-cutting-edge-tech-solutions-for-covid-19-response/"
+       target="_blank">Sierra Leone</a>, and Madagascar.
+  </p>
+  <p>
+    {% url 'covid_19' as covid_19 %}
+    {% blocktrans %}
+      For more information on Dimagi’s response to COVID-19,
+      <a href="{{ covid_19 }}">click here</a>.
+    {% endblocktrans %}
+  </p>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends "sections/press/accordion/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block accordion_content_show %}{% endblock %}
+
+{% block accordion_header %}
+  {% blocktrans %}
+    Who are Dimagi’s partners?
+  {% endblocktrans %}
+{% endblock %}
+
+{% block accordion_content %}
+  <p>
+    {% blocktrans %}
+      Our team of exceptional physicians, engineers, and health system
+      architects have performed technical strategy, systems design, software
+      development, and health research for more than 2,000 projects in more
+      than 80 countries, with partners that include the World Health
+      Organization, World Bank, USAID, CDC, World Vision, UNICEF, the
+      Rockefeller Foundation, and the Bill & Melinda Gates Foundation.
+    {% endblocktrans %}
+  </p>
+  <p>
+    {% url 'partners' as partners %}
+    {% blocktrans %}
+      For more information on our partners, please
+      <a href="{{ partners }}">click here</a>.
+    {% endblocktrans %}
+  </p>
+{% endblock %}

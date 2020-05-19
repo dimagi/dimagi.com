@@ -1,0 +1,40 @@
+{% extends "sections/press/accordion/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block accordion_content_show %}{% endblock %}
+
+{% block accordion_header %}
+  {% blocktrans %}
+    Who started Dimagi?
+  {% endblocktrans %}
+{% endblock %}
+
+{% block accordion_content %}
+  <p>
+    <a href="https://www.dimagi.com/team/usa/jonathanjackson/"
+       target="_blank">Jonathan Jackson</a>
+    is the Co-Founder and Chief Executive Officer of Dimagi.
+  </p>
+  <p>
+    {% blocktrans %}
+      An award-winning entrepreneur and software engineer, Jonathan
+      made an uncompromising commitment early in his career to fostering
+      partnerships across academia, philanthropy, and implementation to
+      support underserved populations. He has been the CEO of Dimagi since
+      co-founding the social enterprise and benefit corporation out of the
+      Massachusetts Institute of Technology in 2002 alongside
+      internationally-recognized engineer and physician Dr. Vikram Kumar.
+      Together, they created Dimagi’s flagship open-source software, CommCare,
+      a mobile data collection and service delivery platform that has become
+      the most widely used digital system for frontline health workers in the world.
+    {% endblocktrans %}
+  </p>
+  <p>
+    {% url 'team' as team %}
+    {% blocktrans %}
+      For more information on Dimagi’s team,
+      <a href="{{ team }}">click here</a>.
+    {% endblocktrans %}
+  </p>
+{% endblock %}

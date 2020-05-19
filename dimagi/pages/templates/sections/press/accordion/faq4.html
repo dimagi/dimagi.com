@@ -1,0 +1,40 @@
+{% extends "sections/press/accordion/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block accordion_content_show %}{% endblock %}
+
+{% block accordion_header %}
+  {% blocktrans %}
+    What is CommCare?
+  {% endblocktrans %}
+{% endblock %}
+
+{% block accordion_content %}
+  <p>
+    {% blocktrans %}
+      Our flagship technology platform, CommCare, is an open-source mobile data
+      collection and service delivery platform that is used by more than
+      700,000 frontline workers around the world. CommCare is considered a
+      leading digital health tool that has helped register more than 400 million people.
+    {% endblocktrans %}
+  </p>
+  <p>
+    {% blocktrans %}
+      CommCare is a no-code platform that allows users with minimal background
+      in app development to design and build digital tools for Android, mobile
+      web, and desktop that serve the unique needs of their programs. Built to
+      be offline-first, CommCare’s case management features allow its users
+      collect longitudinal data and offer services to their communities in the
+      most remote corners of the world. The platform also supports SMS, multimedia,
+      GPS, and multiple languages, while ensuring full HIPAA and GDPR compliance.
+    {% endblocktrans %}
+  </p>
+  <p>
+    {% url 'commcare' as commcare %}
+    {% blocktrans %}
+      For more information on CommCare,
+      <a href="{{ commcare }}">click here</a>.
+    {% endblocktrans %}
+  </p>
+{% endblock %}

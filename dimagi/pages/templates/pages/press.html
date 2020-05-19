@@ -42,8 +42,8 @@
           </div>{# .headline #}
 
           <p class="align-center pad-top-small">
-            <a class="button button-accent-gray {% click_body 'case-management' %}"
-              href="{% url 'focus_mdm_pricing' %}">
+            <a class="button button-accent-gray lowercase {% click_body 'case-management' %}"
+              href="mailto:info@dimagi.com" target="_blank">
               {% blocktrans %}
                 info@dimagi.com
               {% endblocktrans %}
@@ -60,6 +60,7 @@
   <section class="press-container blue-theme">
     {% include "sections/press/sub_nav.html" %}
     {% include 'sections/press/overview.html' %}
+    {% include 'sections/press/faq.html' %}
     {% include 'sections/press/brand_assets.html' %}
     {% include 'sections/press/press_kit.html' %}
     {% include 'sections/press/news.html' %}
