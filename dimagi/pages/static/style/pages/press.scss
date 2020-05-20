@@ -31,30 +31,17 @@
 
 .news-images .image.dimagi {
   @include background-cover('../../pages/press/brand/dimagi.jpg');
-  height: 200px;
-  background-size: contain;
-  background-position: left;
+  height: 170px;
 }
 
 .news-images .image.commcare {
   @include background-cover('../../pages/press/brand/commcare.jpg');
-  height: 200px;
-  background-size: contain;
-  background-position: left;
+  height: 170px;
 }
 
 .news-images .image.commcare-action {
   @include background-cover('../../pages/press/brand/commcare_action.jpg');
-  height: 200px;
-  background-size: contain;
-  background-position: left;
-}
-
-.news-images .image.covid {
-  @include background-cover('../../pages/press/brand/covid_19.jpg');
-  height: 200px;
-  background-size: contain;
-  background-position: left;
+  height: 170px;
 }
 
 .part3 {
@@ -72,7 +59,7 @@
   $_base-height: 290px;
   $_height-by-size: (
     small: 290px,
-    medium: 290px,
+    medium: 260px,
     large: 290px,
     extra-large: 290px,
   );

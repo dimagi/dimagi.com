@@ -11,7 +11,7 @@
 {% endblock %}
 
 {% block accordion_content %}
-  <p class="chw-accordion-sub">
+  {% comment %} <p class="chw-accordion-sub">
     {% blocktrans %}
       COVID-19 has emerged as one of the worst global pandemics in the last
       century. Health systems have quickly shifted resources to mitigate its
@@ -43,12 +43,22 @@
     the state of Alaska, and countries such as Togo,
     <a href="https://www.dsti.gov.sl/dsti-and-dimagi-partner-to-create-cutting-edge-tech-solutions-for-covid-19-response/"
        target="_blank">Sierra Leone</a>, and Madagascar.
-  </p>
+  </p> {% endcomment %}
   <p>
     {% url 'covid_19' as covid_19 %}
     {% blocktrans %}
       For more information on Dimagi’s response to COVID-19,
       <a href="{{ covid_19 }}">click here</a>.
+    {% endblocktrans %}
+  </p>
+  <p>
+    {% blocktrans %}
+      For information specific to COVID-19 response in the United States, click here.
+    {% endblocktrans %}
+  </p>
+  <p>
+    {% blocktrans %}
+      For any additional information, please contact us at press@dimagi.com.
     {% endblocktrans %}
   </p>
 {% endblock %}
