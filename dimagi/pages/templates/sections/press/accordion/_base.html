@@ -1,0 +1,16 @@
+{% load dimagidotcom %}
+
+<div class="accordion accordion-faq-color accordion-faq-arrow gap-top-base {% block accordion_collapsed %}{% endblock %}">
+  <div class="accordion-header accordion-color-header accent-gray-bg">
+    <h4 class="pad-small blue">
+      {% block accordion_header %}
+      {% endblock %}
+    </h4>
+  </div>
+  <div class="accordion-content border-none"{% block accordion_content_show %} style="display: none;"{% endblock %}>
+    <div class="pad-left-small pad-right-medium pad-vert-small">
+        {% block accordion_content %}
+        {% endblock %}
+    </div>
+  </div>
+</div>

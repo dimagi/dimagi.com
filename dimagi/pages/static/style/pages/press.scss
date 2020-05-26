@@ -4,7 +4,13 @@
 @import 'app/variables/type';
 
 .press-page {
-  @include make-bg(hero, '../../pages/blog/hero');
+  @include make-bg(hero, '../../pages/press/hero');
+}
+
+.video-intro .image {
+  @include background-cover('../../pages/press/intro/overview.jpg');
+  height: 160px;
+  width: 250px;
 }
 
 .post p {
@@ -20,5 +26,61 @@
 .post:hover {
   .h6 {
     color: $color-orange;
+  }
+}
+
+.news-images .image.dimagi {
+  @include background-cover('../../pages/press/brand/dimagi.jpg');
+  height: 170px;
+}
+
+.news-images .image.commcare {
+  @include background-cover('../../pages/press/brand/commcare.jpg');
+  height: 170px;
+}
+
+.news-images .image.commcare-action {
+  @include background-cover('../../pages/press/brand/commcare_action.jpg');
+  height: 170px;
+}
+
+.part3 {
+  $_base-height: 550px;
+  $_height-by-size: (
+    small: 620px,
+    medium: 385px,
+    large: 360px,
+    extra-large: 360px,
+  );
+  @include make-bg(epic-cover, '../../pages/sectors/nutrition/part3/hero', $_base-height, $_height-by-size);
+}
+
+.commcare-text {
+  $_base-height: 290px;
+  $_height-by-size: (
+    small: 290px,
+    medium: 260px,
+    large: 290px,
+    extra-large: 290px,
+  );
+  @include make-bg(phone-image, '../../pages/press/kit/dimagi', $_base-height, $_height-by-size, '.png');
+
+  @media (min-width: $width-desktop) {
+    .off-grid {
+      top: 10%;
+      left: 0;
+      position: absolute;
+      background-size: auto 0%;
+      background-position: center;
+      background-repeat: no-repeat;
+      right: auto;
+      width: 120%;
+      z-index: 1;
+    }
+
+    .content {
+      position: relative;
+      z-index: 2;
+    }
   }
 }
