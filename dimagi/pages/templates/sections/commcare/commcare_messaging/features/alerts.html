@@ -1,0 +1,36 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="content pad-bottom-medium content-width-large blue-theme">
+  <div class="grid-2-at-small">
+    <div class="column pad-top-medium align-left">
+      <h3>
+        {% blocktrans %}
+          Alerts and Reminders
+        {% endblocktrans %}
+      </h3>
+      <p>
+        {% blocktrans %}
+          Amplify your existing workflows and improve adherence amongst
+          target users with conditional alerts and reminders that trigger
+          based on criteria you've set, allowing you to target specific
+          audiences with relevant messaging.
+        {% endblocktrans %}
+      </p>
+      <div class="align-left pad-top-base">
+        <a class="arrow"
+           href="https://confluence.dimagi.com/display/commcarepublic/U.S.+COVID-19+Local+Response+System"
+           target="_blank">
+          {% blocktrans %}
+            Learn more about alerts & reminders 
+          {% endblocktrans %}
+        </a>
+      </div>
+    </div>{# .column #}
+
+    <div class="column">
+      <div class="alerts white-lazy-bg"
+           data-lazybg="true"></div>
+    </div>{# .column #}
+  </div>{# .grid-2 #}
+</section>{# .content #}

@@ -70,6 +70,12 @@ def commcare_integration(request):
 
 
 @enable_ab_test(DEMO_WORKFLOW_V2)
+def commcare_messaging(request):
+    context = _get_global_context()
+    return render(request, 'pages/commcare/commcare_messaging.html', context)
+
+
+@enable_ab_test(DEMO_WORKFLOW_V2)
 def commcare_onboarding(request):
     context = _get_global_context()
     return render(request, 'pages/commcare/commcare_onboarding.html', context)

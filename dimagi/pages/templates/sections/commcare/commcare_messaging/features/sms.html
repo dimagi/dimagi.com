@@ -1,0 +1,34 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="content pad-vert-medium content-width-large blue-theme">
+  <div class="grid-2-at-small">
+    <div class="column pad-top-medium align-left">
+      <h3>
+        {% blocktrans %}
+          SMS Surveys
+        {% endblocktrans %}
+      </h3>
+      <p>
+        {% blocktrans %}
+          Collect data and gather feedback from beneficiaries with 2-way SMS
+          surveys that can create new cases or supplement existing case information.
+        {% endblocktrans %}
+      </p>
+      <div class="align-left pad-top-base">
+        <a class="arrow"
+           href="https://confluence.dimagi.com/display/commcarepublic/U.S.+COVID-19+Local+Response+System"
+           target="_blank">
+          {% blocktrans %}
+            Learn more about SMS surveys
+          {% endblocktrans %}
+        </a>
+      </div>
+    </div>{# .column #}
+
+    <div class="column">
+      <div class="sms white-lazy-bg"
+           data-lazybg="true"></div>
+    </div>{# .column #}
+  </div>{# .grid-2 #}
+</section>{# .content #}

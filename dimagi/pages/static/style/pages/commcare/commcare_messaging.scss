@@ -1,0 +1,29 @@
+@import 'app/mixins/background';
+@import 'app/variables/colors';
+@import 'app/variables/sizes';
+@import 'app/variables/type';
+
+.home-page {
+  @include make-bg(hero, '../../pages/home/hero');
+}
+
+.hero h1 {
+  max-width: 100%;
+}
+
+.video-intro .image {
+  @include background-cover('../../../pages/commcare/commcare_messaging/messaging-video.jpg');
+  height: 170px;
+  width: 250px;
+}
+
+.response {
+  $_base-height: 195px;
+  $_height-by-size: (
+    small: 410px,
+    medium: 290px,
+  );
+  @include make-bg(sms, '../../../pages/covid_19/resources/local_response/response', $_base-height, $_height-by-size);
+  @include make-bg(broadcast, '../../../pages/covid_19/resources/template/template', $_base-height, $_height-by-size);
+  @include make-bg(alerts, '../../../pages/covid_19/resources/template/template', $_base-height, $_height-by-size);
+}

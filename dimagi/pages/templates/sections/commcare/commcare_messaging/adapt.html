@@ -1,0 +1,30 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="adapt-to-remote border-top accent-gray-bg blue-theme"
+         id="adapt-to-remote">
+  <div class="content pad-vert-medium">
+    <div class="align-center gap-bottom-small">
+      <h2 class="blue capitalize">
+        {% blocktrans %}
+          Adapt Your Programs for Remote Engagement
+        {% endblocktrans %}
+      </h2>
+    </div>{# .intro #}
+
+    <div class="content-width-large grid-2-at-medium gap-bottom-small">
+      {% include "sections/commcare/commcare_messaging/adapt/sms.html" %}
+      {% include "sections/commcare/commcare_messaging/adapt/deploy.html" %}
+    </div>{# .grid-2-at-medium #}
+
+    <div class="align-center pad-top-small">
+      <a class="arrow blue {% click_body 'impact-research' %} "
+         href="{% url 'toolkit' 'commcare-evidence-base' %}">
+        {% blocktrans %}
+          View The Research
+        {% endblocktrans %}
+      </a>
+    </div>{# .align-center #}
+    
+  </div>{# .content #}
+</section>
