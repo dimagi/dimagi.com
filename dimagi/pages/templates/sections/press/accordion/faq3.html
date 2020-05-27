@@ -12,9 +12,14 @@
 
 {% block accordion_content %}
   <p>
-    <a href="https://www.dimagi.com/team/usa/jonathanjackson/"
+    <a href="{% url 'team_member' 'usa' 'jonathanjackson' %}"
        target="_blank">Jonathan Jackson</a>
     is the Co-Founder and Chief Executive Officer of Dimagi.
+  </p>
+  <p>
+    <a href="{% url 'team_member' 'usa' 'vikram' %}"
+       target="_blank">Dr. Vikram Sheel Kumar</a>
+    is the Co-Founder and Chief Medical Officer of Dimagi.
   </p>
   <p>
     {% blocktrans %}
