@@ -3,8 +3,8 @@
 @import 'app/variables/sizes';
 @import 'app/variables/type';
 
-.home-page {
-  @include make-bg(hero, '../../pages/home/hero');
+.commcare-messaging {
+  @include make-bg(hero, '../../../pages/commcare/commcare_messaging/hero');
 }
 
 .hero h1 {
@@ -23,7 +23,19 @@
     small: 410px,
     medium: 290px,
   );
-  @include make-bg(sms, '../../../pages/covid_19/resources/local_response/response', $_base-height, $_height-by-size);
-  @include make-bg(broadcast, '../../../pages/covid_19/resources/template/template', $_base-height, $_height-by-size);
-  @include make-bg(alerts, '../../../pages/covid_19/resources/template/template', $_base-height, $_height-by-size);
+  @include make-bg(broadcast, '../../../pages/commcare/commcare_messaging/broadcast/broadcast_messages', $_base-height, $_height-by-size);
+}
+
+.response {
+  $_base-height: 195px;
+  $_height-by-size: (
+    small: 410px,
+    medium: 400px,
+  );
+  @include make-bg(sms, '../../../pages/commcare/commcare_messaging/sms/sms_surveys', $_base-height, $_height-by-size, '.png');
+  @include make-bg(alerts, '../../../pages/commcare/commcare_messaging/alerts/alerts', $_base-height, $_height-by-size, '.png');
+}
+
+.messaging-work {
+  cursor: pointer;
 }

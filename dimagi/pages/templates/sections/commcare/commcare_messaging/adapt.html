@@ -17,13 +17,8 @@
       {% include "sections/commcare/commcare_messaging/adapt/deploy.html" %}
     </div>{# .grid-2-at-medium #}
 
-    <div class="align-center pad-top-small">
-      <a class="arrow blue {% click_body 'impact-research' %} "
-         href="{% url 'toolkit' 'commcare-evidence-base' %}">
-        {% blocktrans %}
-          View The Research
-        {% endblocktrans %}
-      </a>
+    <div class="align-center pad-top-small messaging-work">
+      {% include "partials/wistia_popover.html" with wistia_id='36pgyrmnlm' text='See how it works >' %}
     </div>{# .align-center #}
     
   </div>{# .content #}
