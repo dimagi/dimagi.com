@@ -19,6 +19,13 @@
     {% endblocktrans %}
   </p>
   <p>
+    {% url 'us_covid_19' as us_covid_19 %}
+    {% blocktrans %}
+      For information specific to COVID-19 response in the United States,
+      <a href="{{ us_covid_19 }}">click here</a>.
+    {% endblocktrans %}
+  </p>
+  <p>
     {% blocktrans %}
       For any additional information, please contactus at
       <a href="mailto:press@dimagi.com">press@dimagi.com</a>.

@@ -57,6 +57,7 @@ urlpatterns = [
     url(r'^services/$', pages.services, name='services'),
     url(r'^partners/$', pages.partners, name='partners'),
     url(r'^covid-19/$', pages.covid_19, name='covid_19'),
+    url(r'^covid-19/us-response$', pages.us_covid_19, name='us_covid_19'),
     url(r'^commcare/integrations/$', pages.commcare.commcare_integration, name='commcare_integration'),
     url(r'^contact/$', pages.contact,  name='contact'),
     url(r'^focus/$', pages.focus_placeholder,  name='focus'),

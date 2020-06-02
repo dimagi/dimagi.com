@@ -51,6 +51,13 @@ def covid_19(request):
     return render(request, 'pages/covid_19.html', context)
 
 
+def us_covid_19(request):
+    context = {
+        'posts': get_json("blog/covid-19")['posts'][:4],
+    }
+    return render(request, 'pages/us_covid_19.html', context)
+
+
 def contact(request):
     return render(request, 'pages/contact.html')
 

@@ -1,0 +1,27 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="screening">
+  <div class="response-efforts pad-vert-line pad-horz-line white-bg">
+    <div class="response-efforts-screening align-center gap-top-line pad-bottom-base">
+      <div class="image response-efforts-logo"
+           data-lazybg="true"></div>
+    </div>
+    <h6 class="uppercase theme-color align-left pad-bottom-base">
+      {% blocktrans %}
+        Case Screening
+      {% endblocktrans %}
+    </h6>
+    <p>
+      {% blocktrans %}
+        The COVID-19 Local Response System enables users to screen suspected
+        cases for exposure and risk factors. Once their lab results are available,
+        the system kicks off automatic assessment, triaging, and communication
+        protocols, helping public health officials isolate cases that need
+        additional support or services. Individuals with confirmed COVID-19
+        receive emails with information on the virus and instructions to
+        prevent transmission. 
+      {% endblocktrans %}
+    </p>
+  </div>{# .response-efforts #}
+</section>

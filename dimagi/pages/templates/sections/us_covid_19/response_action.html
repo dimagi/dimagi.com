@@ -1,0 +1,29 @@
+{% load dimagidotcom %}
+{% load i18n %}
+
+<section class="response-action border-top"
+         id="demo">
+  <div class="content pad-vert-medium">
+
+    <div class="intro content-width-large">
+      <h2 class="normalcase">
+        {% blocktrans %}
+          See the Local Response System in Action
+        {% endblocktrans %}
+      </h2>
+      <p class="gap-bottom-base">
+        {% blocktrans %}
+          The team who built the COVID-19 Local Response System takes you
+          through all of its core workflows in this full demo video
+        {% endblocktrans %}
+      </p>
+    </div>{# .intro #}
+
+    <div class="content-width-large response-action-video pad-horz-small-at-small pad-horz-none-at-extra-large gap-top-small">
+      <div class="image"
+           data-lazybg="true">
+        {% include "partials/wistia_popover.html" with wistia_id='zpgl4zfgc5' play_icon_medium=True show_image=True %}
+      </div>
+    </div>{# .content-width-large #}
+  </div>{# .content #}
+</section>

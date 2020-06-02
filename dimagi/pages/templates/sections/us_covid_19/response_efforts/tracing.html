@@ -1,0 +1,27 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="tracing">
+  <div class="response-efforts pad-vert-line pad-horz-line white-bg">
+    <div class="response-efforts-tracing gap-top-line pad-bottom-base">
+      <div class="image response-efforts-logo"
+           data-lazybg="true"></div>
+    </div>
+    <h6 class="uppercase theme-color align-left pad-bottom-base">
+      {% blocktrans %}
+        Contact Tracing
+      {% endblocktrans %}
+    </h6>
+    <p>
+      {% blocktrans %}
+        Once lab-confirmed cases are identified, the system users input
+        information about these cases’ contacts. These contacts then receive
+        daily SMS text messages checking in on their health and symptoms
+        throughout the 14-day monitoring period. They can self-report
+        symptoms via text, immediately alerting public health officials
+        that follow up or testing may be required. This system does not
+        collect information about contacts' GPS locations.
+      {% endblocktrans %}
+    </p>
+  </div>{# .response-efforts #}
+</section>
