@@ -1,0 +1,80 @@
+@import 'app/mixins/background';
+@import 'app/variables/colors';
+@import 'app/variables/sizes';
+@import 'app/variables/type';
+
+
+.us-covid-19-page {
+  @include make-bg(hero, '../../pages/us_covid_19/hero/hero');
+
+  .hero h1 {
+    max-width: 90%;
+  }
+}
+
+.application-image .image.us_cdc {
+  @include background-cover('../../pages/us_covid_19/case_study/governments/us_cdc.png');
+  height: 200px;
+  background-size: contain;
+  background-position: center;
+}
+
+.application-image .image.alaska {
+  @include background-cover('../../pages/us_covid_19/case_study/governments/alaska.png');
+  height: 200px;
+  background-size: contain;
+  background-position: center;
+}
+
+.application-image .image.navajo_nation_seal {
+  @include background-cover('../../pages/us_covid_19/case_study/governments/navajo_nation_seal.png');
+  height: 200px;
+  background-size: contain;
+  background-position: center;
+}
+
+.video-intro .image {
+  @include background-cover('../../pages/us_covid_19/intro.png');
+  height: 160px;
+  width: 300px;
+}
+
+.response-efforts-screening .image {
+  @include background-cover('../../../static/pages/us_covid_19/response_efforts/screening.png');
+  height: 100px;
+  width: 111px;
+}
+
+.response-efforts-tracing .image {
+  @include background-cover('../../../static/pages/us_covid_19/response_efforts/tracing.png');
+  height: 100px;
+  width: 111px;
+}
+
+.response-efforts-logo {
+  margin: 0 auto;
+}
+
+.response-action {
+  $_base-height: 122px;
+  $_height-by-size: (
+    small: 186px,
+    medium: 298px,
+    large: 362px,
+    extra-large: 442px,
+  );
+
+  width: 100%;
+  @include make-bg(image, '../../pages/us_covid_19/video/video', $_base-height, $_height-by-size);
+}
+
+#case-study {
+  $_base-height: 190px;
+  $_height-by-size: (
+    small: 250px,
+    medium: 210px,
+    large: 210px,
+    extra-large: 230px,
+  );
+  @include make-bg(case-study-image, '../../pages/us_covid_19/case_study/hero', $_base-height, $_height-by-size);
+}
