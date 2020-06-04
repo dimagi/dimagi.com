@@ -1,28 +1,26 @@
 {% load i18n %}
 {% load dimagidotcom %}
 
-<section class="advisory border-top  blue-theme"
+<section class="advisory border-top blue-bg"
          id="advisory">
   <div class="content pad-vert-medium">
     <div class="align-center gap-bottom-small">
-      <h2 class="blue">
+      <h2 class="white">
         {% blocktrans %}
           Adapt Your Program for Remote Monitoring and Delivery
         {% endblocktrans %}
       </h2>
-      <p>
+      <p class="white">
         {% blocktrans %}
-          Learn more about how messaging with CommCare can be used as a
-          standalone data collection solution or as a way to enhance
-          existing communication channels with targeted
-          notifications or periodic reminders.
+          Learn more about how messaging is used to collect data and enhance
+          existing communication channels with program beneficiaries.
         {% endblocktrans %}
       </p>
     </div>
     <div class="contact grid-2-at-medium">
       <div class="column">
         <p class="align-right-at-medium align-center pad-bottom-base">
-          <a class="button"
+          <a class="button button-accent-gray"
             href="#demo-form-modal">
             {% blocktrans %}
               Get A Demo
@@ -32,8 +30,8 @@
       </div>
       <div class="column">
         <p class="align-left-at-medium align-center pad-bottom-base">
-          <a class="button inverted alt theme-color"
-            href="{% url 'blog_post' 'mobile-data-collection-sms' %}"">
+          <a class="button inverted alt white-theme"
+            href="{% url 'blog_post' 'mobile-data-collection-sms' %}">
             {% blocktrans %}
               Learn More
             {% endblocktrans %}
