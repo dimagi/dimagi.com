@@ -35,9 +35,11 @@
               {% endblocktrans %}
             </p>
             <ol class="gap-top-base">
+              {% url 'commcare_messaging' as messaging %}
               {% blocktrans %}
                 Send alerts to field staff when tasks are overdue, and conduct 
-                more efficient beneficiary outreach with 2-way SMS messaging.
+                more efficient beneficiary outreach with
+                <a href="{{ messaging }}">2-way SMS messaging</a>.
               {% endblocktrans %}
             </ol>
           </li>
