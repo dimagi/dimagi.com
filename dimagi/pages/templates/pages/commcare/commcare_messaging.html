@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block title %}{% blocktrans %}
+  CommCare Messaging
+{% endblocktrans %}{% endblock %}
+
+{% block description %}{% blocktrans %}
+  Transform Your Program with Remote Monitoring and Service Delivery
+{% endblocktrans %}{% endblock %}
+
+{% block body_class %}commcare-messaging tucked-hero{% endblock %}
+
+{% block stylesheets %}
+  {% compress css %}
+    <link href="{% sass_src 'style/pages/commcare/commcare_messaging.scss' %}" rel="stylesheet" media="screen" type="text/css" />
+  {% endcompress %}
+{% endblock %}
+
+{% block hero %}
+  <div id="top"></div>
+  <section class="hero hero-commcare-messaging"
+           data-lazybg="true"
+           id="hero">
+    <div class="content content-width-medium inverted align-center display-flex flex-valign-middle expand-vertical offset-top-small flex-align-center">
+      <div class="copy expand position-relative">
+        <h1>
+          {% blocktrans %}
+            Transform Your Program with <br class="hide-until-medium" />
+            Remote Monitoring and Service Delivery
+          {% endblocktrans %}
+        </h1>
+        <div class="cta pad-top-base">
+          <a class="button button-accent-gray gap-right-small-at-medium gap-right-base-at-small {% click_hero 'covid_19' %}"
+             href="#demo-form-modal">
+            {% blocktrans %}
+              Get A Demo
+            {% endblocktrans %}
+          </a>
+        </div>{# .cta #}
+        
+      </div>{# .copy #}
+    </div>{# .content #}
+  </section>
+{% endblock %}
+
+{% block content %}
+  <section class="products-commcare-container">
+    {% include "sections/commcare/commcare_messaging/sub_nav.html" %}
+    {% include "sections/commcare/commcare_messaging/overview.html" %}
+    {% include "sections/commcare/commcare_messaging/adapt.html" %}
+    {% include "sections/commcare/commcare_messaging/features.html" %}
+    {% include "sections/commcare/commcare_messaging/solutions.html" %}
+    {% include "sections/commcare/commcare_messaging/learn_more.html" %}
+  </section>
+{% endblock %}

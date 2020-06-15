@@ -6,6 +6,7 @@ from dimagi.pages.views.commcare import (
     research,
     commcare_onboarding,
     commcare_integration,
+    commcare_messaging,
     pricing,
     handle_pricing_pdf,
 )
@@ -22,6 +23,8 @@ urlpatterns = [
         name='commcare_onboarding'),
     url(r'^integrations/$', commcare_integration,
         name='commcare_integration'),
+    url(r'^messaging/$', commcare_messaging,
+        name='commcare_messaging'),
     url(r'^pricing/$', pricing,
         name='commcare_pricing'),
     url(r'^pricing/commcare-pricing-monthly.pdf$', handle_pricing_pdf(True),

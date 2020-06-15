@@ -1,0 +1,70 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="advisory border-top accent-gray-bg blue-theme"
+         id="advisory">
+  <div class="content pad-vert-medium">
+    <div class="align-center gap-bottom-small">
+      <h2 class="blue">
+        {% blocktrans %}
+          A 360° SMS Solution for your Program
+        {% endblocktrans %}
+      </h2>
+    </div>{# .intro #}
+
+    <div class="grid-3-at-medium gap-bottom-small">
+      <div class="column border-right-at-medium pad-horz-medium-at-medium pad-top-small">
+        <div class="theme-icon gap-bottom-line align-center">
+          {% include "svg/sectors/small_businesses/blcoks.html" %}
+        </div>
+        <h4 class="theme-color gap-bottom-line align-center">
+          {% blocktrans %}
+            Leverage existing CommCare apps
+          {% endblocktrans %}
+        </h4>
+        <p class="align-center">
+          {% blocktrans %}
+            Update your program without changing platforms or even apps, with
+            messaging fully integrated into the CommCare platform.
+          {% endblocktrans %}
+        </p>
+      </div>{# .column #}
+
+      <div class="column border-right-at-medium pad-horz-medium-at-medium pad-top-small">
+        <div class="theme-icon gap-bottom-line align-center">
+          {% include "svg/sectors/maternal_and_child_health/mdc-health-icon1.html" %}
+        </div>
+        <h4 class="theme-color gap-bottom-line align-center">
+          {% blocktrans %}
+            Case management via SMS
+          {% endblocktrans %}
+        </h4>
+        <p class="align-center">
+          {% blocktrans %}
+            Register new cases and track them over time with 2-way SMS
+            messaging that employs CommCare's integrated
+            case management technology.
+          {% endblocktrans %}
+        </p>
+      </div>{# .column #}
+
+      <div class="column pad-horz-medium-at-medium pad-top-small">
+        <div class="theme-icon gap-bottom-line align-center">
+          {% include "svg/covid_19/icon/info_dissemination.html" %}
+        </div>
+        <h4 class="theme-color gap-bottom-line align-center">
+          {% blocktrans %}
+            Integrations with global SMS gateways
+          {% endblocktrans %}
+        </h4>
+        <p class="align-center">
+          {% blocktrans %}
+            Leverage Dimagi's connections to in-country gateways, interoperability
+            with Telerivet, and a complete framework for custom integrations
+            with 3rd party gateways.
+          {% endblocktrans %}
+        </p>
+      </div>{# .column #}
+    </div>{# .grid-2-at-medium #} 
+  </div>{# .content #}
+</section>
