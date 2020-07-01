@@ -6,14 +6,14 @@
      class="top-banner-ad-close">
     {% include 'svg/close.html' %}
   </a>
-  <div class="content pad-vert-large">
+  <div class="content pad-vert-medium">
     <h3>
       {% blocktrans %}
-        Just Launched: New Tableau and Power BI Data Integration!
+        CommCare is used around the world for COVID-19 response.
       {% endblocktrans %}
     </h3>
     <p class="gap-bottom-none">
-      <a href="https://www.dimagi.com/blog/commcare-tableau-power-bi/"
+      <a href="{% url 'covid_19' %}"
          class="button inverted alt gap-bottom-none">
         {% trans "Learn More" %}
       </a>
