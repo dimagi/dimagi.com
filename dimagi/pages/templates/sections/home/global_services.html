@@ -1,0 +1,91 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="global-services accent-gray-bg turquoise-theme"
+         id="global-services">
+  <div class="content pad-vert-medium">
+    <div class="intro gap-bottom-small">
+      <h2 class="turquoise">
+        {% blocktrans %}
+          Our Experts Are Here to Help
+        {% endblocktrans %}
+      </h2>
+      <p>
+        {% blocktrans %}
+          Our experienced Global Services team can support all aspects of 
+          program deployment, from application design and rollout to 
+          end-user training and partner capacity building.
+        {% endblocktrans %}
+      </p>
+    </div>{# .intro #}
+
+    <div class="grid-2-at-medium gap-bottom-small">
+      <div class="column pad-top-small">
+        <div class="services white-lazy-bg"
+             data-lazybg="true"></div>
+      </div>{# .column #}
+
+      <div class="column pad-horz-medium-at-medium pad-top-small">
+        <ul class="check-list pad-bottom-small gap-top-none">
+          <li>
+            <h6 class="theme-color gap-bottom-none">
+              {% blocktrans %}
+                Leverage Our Experience
+              {% endblocktrans %}
+            </h6>
+            <p>
+              {% blocktrans %}
+                10+ years of experience on more than 650 projects
+              {% endblocktrans %}
+            </p>
+          </li>
+          <li>
+            <h6 class="theme-color gap-bottom-none">
+              {% blocktrans %}
+                Design for the User
+              {% endblocktrans %}
+            </h6>
+            <p>
+              {% blocktrans %}
+                An agile, user-centered design methodology to maximize impact
+              {% endblocktrans %}
+            </p>
+          </li>
+          <li>
+            <h6 class="theme-color gap-bottom-none">
+              {% blocktrans %}
+                Cover Any Phase
+              {% endblocktrans %}
+            </h6>
+            <p>
+              {% blocktrans %}
+                A range of services from app design to user training and analytics
+              {% endblocktrans %}
+            </p>
+          </li>
+          <li>
+            <h6 class="theme-color gap-bottom-none">
+              {% blocktrans %}
+                Build for the Future
+              {% endblocktrans %}
+            </h6>
+            <p>
+              {% blocktrans %}
+                Sustainable systems to support future growth
+              {% endblocktrans %}
+            </p>
+          </li>
+        </ul>
+      </div>{# .column #}
+    </div>{# .grid-2-at-medium #}
+
+    <p class="align-center">
+      <a class="button"
+         href="{% url 'services' %}">
+        {% blocktrans %}
+          Learn More
+        {% endblocktrans %}
+      </a>{# .button #}
+    </p>
+  </div>{# .content #}
+</section>

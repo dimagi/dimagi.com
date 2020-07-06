@@ -11,109 +11,70 @@
   max-width: 100%;
 }
 
-.build {
-  $_base-height: 122px;
+.focus-mdm {
+  $_base-height: 242px;
   $_height-by-size: (
     small: 186px,
     medium: 298px,
     large: 362px,
-    extra-large: 442px,
+    extra-large: 500px,
   );
+  @include make-bg(manage-devices, '../../pages/home/focus_mdm/dashboard', $_base-height, $_height-by-size);
 
-  width: 100%;
-  @include make-bg(image, '../../pages/home/build', $_base-height, $_height-by-size);
+  @media (min-width: $width-desktop-xl) {
+    .manage-devices {
+      width: 226%;
+    }
+  }
+  @media (max-width: $width-desktop-lg) {
+    .manage-devices {
+      width: 160%;
+    }
+  }
+  @media (max-width: $width-desktop) {
+    .manage-devices {
+      width: 160%;
+    }
+  }
+  @media (max-width: $width-mobile) {
+    .manage-devices {
+      width: 100%;
+      top: 18%;
+    }
+  }
 }
 
-.commcare-stats {
-  border-radius: $border-radius;
-}
-
-.launch-digital-intervention {
-  $_base-height: 122px;
+.video {
+  $_base-height: 195px;
   $_height-by-size: (
-    small: 186px,
-    medium: 298px,
-    large: 362px,
-    extra-large: 442px,
+    small: 410px,
+    medium: 330px,
+  );
+  @include make-bg(template, '../../pages/covid_19/resources/local_response/response', $_base-height, $_height-by-size);
+}
+
+.global-services {
+  $_base-height: 195px;
+  $_height-by-size: (
+    small: 410px,
+    medium: 270px,
+  );
+  @include make-bg(services, '../../pages/home/global_services/services', $_base-height, $_height-by-size);
+}
+
+.impact {
+  $_base-height: 87px;
+  $_height-by-size: (
+    small: 100px,
+    medium: 148px,
+    large: 14px,
+    extra-large: 238px,
   );
 
   width: 100%;
-  @include make-bg(image, '../../pages/home/launch', $_base-height, $_height-by-size);
+  @include make-bg(image, '../../pages/home/impact/launch', $_base-height, $_height-by-size);
 }
 
 .video-intro .image {
   @include background-cover('../../pages/home/video-intro-banner.jpg');
-  height: 160px;
-  width: 250px;
-}
-
-.workforce .image.testimonial1 {
-  @include background-cover('../../pages/home/workforce-1.jpg');
-}
-
-.workforce .image.testimonial2 {
-  @include background-cover('../../pages/home/workforce-2.jpg');
-}
-
-.workforce .image.testimonial3 {
-  @include background-cover('../../pages/home/workforce-3.jpg');
-}
-
-.awards {
-  $_base-height: 315px;
-  $_height-by-size: (
-    small: 360px,
-    medium: 750px,
-    large: 655px,
-    extra-large: 610px,
-  );
-  @include make-bg(image, '../../pages/home/awards', $_base-height, $_height-by-size);
-
-  @media (min-width: $width-desktop) {
-    .off-grid {
-      bottom: 0;
-      left: 0;
-      position: absolute;
-      right: auto;
-      width: 100%;
-      z-index: 1;
-    }
-
-    .content {
-      position: relative;
-      z-index: 2;
-    }
-  }
-}
-
-
-.case-management {
-  $_base-height: 290px;
-  $_height-by-size: (
-    small: 290px,
-    medium: 290px,
-    large: 290px,
-    extra-large: 292px,
-  );
-  @include make-bg(image, '../../pages/case_management/cm-cta', $_base-height, $_height-by-size, '.png');
-
-  @media (min-width: $width-desktop) {
-    .off-grid {
-      bottom: 0;
-      left: 0;
-      position: absolute;
-      right: auto;
-      width: 100%;
-      z-index: 1;
-    }
-
-    .content {
-      position: relative;
-      z-index: 2;
-    }
-  }
-
-  .bg-loader {
-    background-color: $color-accent-gray;
-  }
 }
