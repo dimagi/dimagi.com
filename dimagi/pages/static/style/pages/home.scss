@@ -12,35 +12,39 @@
 }
 
 .focus-mdm {
-  $_base-height: 242px;
+  $_base-height: 210px;
   $_height-by-size: (
-    small: 186px,
-    medium: 298px,
-    large: 362px,
-    extra-large: 500px,
+    small: 230px,
+    medium: 360px,
+    large: 360px,
+    extra-large: 450px,
   );
-  @include make-bg(manage-devices, '../../pages/home/focus_mdm/dashboard', $_base-height, $_height-by-size);
+  @include make-bg(image, '../../pages/home/focus_mdm/focus', $_base-height, $_height-by-size, '.png');
 
-  @media (min-width: $width-desktop-xl) {
-    .manage-devices {
-      width: 226%;
+  @media (min-width: $width-desktop) {
+    .off-grid {
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      right: auto;
+      width: 150%;
+      z-index: -1;
+    }
+
+    .content {
+      position: relative;
+      z-index: 2;
     }
   }
-  @media (max-width: $width-desktop-lg) {
-    .manage-devices {
-      width: 160%;
-    }
+
+  .bg-loader {
+    background-color: $color-white;
   }
-  @media (max-width: $width-desktop) {
-    .manage-devices {
-      width: 160%;
-    }
-  }
-  @media (max-width: $width-mobile) {
-    .manage-devices {
-      width: 100%;
-      top: 18%;
-    }
+}
+
+@media (min-width: $width-desktop) {
+  .focus-info {
+    width: 50%;
   }
 }
 
@@ -67,7 +71,7 @@
   $_height-by-size: (
     small: 100px,
     medium: 148px,
-    large: 14px,
+    large: 184px,
     extra-large: 238px,
   );
 

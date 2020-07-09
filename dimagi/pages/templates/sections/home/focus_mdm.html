@@ -1,24 +1,19 @@
-{% load i18n %}
 {% load dimagidotcom %}
+{% load i18n %}
 
-<section class="focus-mdm content pad-vert-medium-at-medium pad-bottom-none purple-theme">
-  <div class="grid-2-at-small">
-    <div class="column
-                pad-top-medium
-                pad-top-none-at-large
-                pad-top-none-at-medium
-                pad-top-medium-at-extra-large
-                align-left-at-medium
-                align-center">
-      <h2 class="theme-icon pad-top-medium-at-large">
+<section class="focus-mdm border-vert purple-theme">
+  <div class="content pad-bottom-medium-at-medium pad-top-small pad-top-large-at-large gap-vert-medium-at-medium">
+
+    <div class="content gap-bottom-line">
+      <h2 class="theme-icon pad-top-small-at-large">
         {% include "svg/focus_mdm/logo.html" %}
       </h2>
-      <h3>
+      <h3 class="theme-color">
         {% blocktrans %}
           Manage Your Fleet of Devices
         {% endblocktrans %}
       </h3>
-      <p>
+      <p class="focus-info">
         {% blocktrans %}
           With our mobile device management platform, you can control, 
           monitor, and enforce mobile usage restrictions that increase 
@@ -34,12 +29,9 @@
             Learn More
           {% endblocktrans %}
         </a>
-      </div>
-    </div>{# .column #}
-
-    <div class="column">
-      <div class="manage-devices white-lazy-bg"
-           data-lazybg="true"></div>
-    </div>{# .column #}
-  </div>{# .grid-2 #}
-</section>{# .content #}
+      </div
+    </div>
+  </div>{# .content #}
+  <div class="image off-grid white-lazy-bg"
+       data-lazybg="true"></div>
+</section>
