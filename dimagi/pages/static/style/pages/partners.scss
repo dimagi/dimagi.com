@@ -113,6 +113,12 @@
   width: 111px;
 }
 
+.feature-partner-im-saf .image {
+  @include background-cover('../../../static/pages/commcare/partners/featured_partners/im_saf.png');
+  height: 100px;
+  width: 120px;
+}
+
 .feature-project-logo {
   margin: 0 auto;
 }
