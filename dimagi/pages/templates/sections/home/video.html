@@ -1,38 +1,40 @@
 {% load i18n %}
 {% load dimagidotcom %}
 
-<section class="video content pad-vert-medium blue-theme">
-  <div class="grid-2-at-large grid-reverse">
-    <div class="column align-left-at-large align-center">
-      <h4 class="gap-top-small theme-icon">
-        {% include "svg/commcare/logo.html" %}
-      </h4>
-      <h3 class="blue">
-        {% blocktrans %}
-          Build Powerful Mobile and Web Apps
-        {% endblocktrans %}
-      </h3>
-      <p>
-        {% blocktrans %}
-          CommCare’s drag-and-drop application builder allows you to create 
-          mobile and web apps for frontline workers to collect accurate data 
-          and deliver effective services.
-        {% endblocktrans %}
-      </p>
-      <div class="align-left-at-large align-center pad-top-base">
-        <a class="arrow"
-           href="{% url 'commcare' %}">
+<section class="video pad-top-medium pad-bottom-small blue-theme border-bottom">
+  <div class="content">
+    <div class="grid-2-at-large grid-reverse">
+      <div class="column align-left-at-large align-center">
+        <h4 class="gap-top-small theme-icon">
+          {% include "svg/commcare/logo.html" %}
+        </h4>
+        <h3 class="blue">
           {% blocktrans %}
-            Learn More
+            Build Powerful Mobile and Web Apps
           {% endblocktrans %}
-        </a>
-      </div>
-    </div>{# .column #}
+        </h3>
+        <p>
+          {% blocktrans %}
+            CommCare’s drag-and-drop application builder allows you to create 
+            mobile and web apps for frontline workers to collect accurate data 
+            and deliver effective services.
+          {% endblocktrans %}
+        </p>
+        <div class="align-left-at-large align-center pad-top-base">
+          <a class="arrow"
+            href="{% url 'commcare' %}">
+            {% blocktrans %}
+              Learn More
+            {% endblocktrans %}
+          </a>
+        </div>
+      </div>{# .column #}
 
-    <div class="column">
-      <div class="screen pad-top-none-at-large">
-        {% include "partials/wistia_embed_autoplay.html" with wistia_id='gx2a7tvlh6' %}
-      </div>{# .screen #}
-    </div>{# .column #}
-  </div>{# .grid-2 #}
-</section>{# .content #}
+      <div class="column">
+        <div class="screen pad-top-none-at-large">
+          {% include "partials/wistia_embed_autoplay.html" with wistia_id='gx2a7tvlh6' %}
+        </div>{# .screen #}
+      </div>{# .column #}
+    </div>{# .grid-2 #}
+  </div>{# .content #}
+</section>
