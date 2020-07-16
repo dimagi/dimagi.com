@@ -233,3 +233,9 @@
     }
   }
 }
+
+// somewhat a hack to get around non-macOS machines having text overlapping flex
+// containers with wistia videos.
+.flex-video {
+  min-width: 270px;
+}
