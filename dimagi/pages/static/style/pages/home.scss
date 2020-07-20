@@ -61,12 +61,41 @@
 }
 
 .video {
-  $_base-height: 195px;
-  $_height-by-size: (
-    small: 410px,
-    medium: 330px,
-  );
-  @include make-bg(template, '../../pages/covid_19/resources/local_response/response', $_base-height, $_height-by-size);
+  @media (min-width: $width-desktop-lg) {
+    .off-grid-video {
+      bottom: 10%;
+      left: 3%;
+      position: absolute;
+      right: auto;
+      width: 50%;
+      z-index: -1;
+    }
+
+    .content {
+      position: relative;
+      z-index: 2;
+    }
+  }
+
+  @media (min-width: $width-desktop-xl) {
+    .off-grid-video {
+      bottom: 6%;
+      left: 8%;
+      position: absolute;
+      right: auto;
+      width: 44%;
+      z-index: -1;
+    }
+
+    .content {
+      position: relative;
+      z-index: 2;
+    }
+  }
+
+  .bg-loader {
+    background-color: $color-white;
+  }
 }
 
 .global-services {

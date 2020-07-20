@@ -1,40 +1,37 @@
-{% load i18n %}
 {% load dimagidotcom %}
+{% load i18n %}
 
-<section class="video pad-top-medium pad-bottom-small blue-theme border-bottom">
-  <div class="content">
-    <div class="grid-2-at-large grid-reverse">
-      <div class="column align-left-at-large align-center">
-        <h4 class="gap-top-small theme-icon">
+<section class="video border-vert purple-theme pad-left-large-at-large">
+  <div class="content-width-large pad-bottom-medium-at-large pad-top-small pad-top-large-at-large gap-vert-medium-at-medium pad-left-large-at-large pad-horz-small">
+
+    <div class="gap-bottom-line pad-left-large-at-large gap-left-large-at-large">
+      <h4 class="gap-top-small theme-icon pad-left-large-at-large gap-left-large-at-large">
           {% include "svg/commcare/logo.html" %}
         </h4>
-        <h3 class="blue">
+      <h3 class="blue pad-left-large-at-large gap-left-large-at-large">
+        {% blocktrans %}
+          Build Powerful Mobile and Web Apps
+        {% endblocktrans %}
+      </h3>
+      <p class="lead-text pad-left-large-at-large gap-left-large-at-large">
+        {% blocktrans %}
+          CommCare’s drag-and-drop application builder allows you to create 
+          mobile and web apps for frontline workers to collect accurate data 
+          and deliver effective services.
+        {% endblocktrans %}
+      </p>
+      <div class="align-left-at-medium align-center pad-top-base pad-left-large-at-large gap-left-large-at-large">
+        <a class="arrow"
+           href="{% url 'commcare' %}">
           {% blocktrans %}
-            Build Powerful Mobile and Web Apps
+            Learn More
           {% endblocktrans %}
-        </h3>
-        <p class="lead-text">
-          {% blocktrans %}
-            CommCare’s drag-and-drop application builder allows you to create 
-            mobile and web apps for frontline workers to collect accurate data 
-            and deliver effective services.
-          {% endblocktrans %}
-        </p>
-        <div class="align-left-at-large align-center pad-top-base">
-          <a class="arrow"
-            href="{% url 'commcare' %}">
-            {% blocktrans %}
-              Learn More
-            {% endblocktrans %}
-          </a>
-        </div>
-      </div>{# .column #}
-
-      <div class="column">
-        <div class="screen pad-top-none-at-large">
-          {% include "partials/wistia_embed_autoplay.html" with wistia_id='gx2a7tvlh6' %}
-        </div>{# .screen #}
-      </div>{# .column #}
-    </div>{# .grid-2 #}
+        </a>
+      </div>
+    </div>
   </div>{# .content #}
+  <div class="off-grid-video white-lazy-bg"
+       data-lazybg="true">
+    {% include "partials/wistia_embed_autoplay.html" with wistia_id='gx2a7tvlh6' %}
+  </div>
 </section>
