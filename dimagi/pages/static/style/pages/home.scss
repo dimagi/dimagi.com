@@ -28,7 +28,7 @@
       left: 0;
       position: absolute;
       right: auto;
-      width: 150%;
+      width: 149%;
       z-index: -1;
     }
 
@@ -97,11 +97,11 @@
 
   @media (min-width: $width-desktop-xl) {
     .off-grid-video {
-      bottom: 6%;
-      left: 8%;
+      bottom: 5%;
+      left: 3%;
       position: absolute;
       right: auto;
-      width: 44%;
+      width: 50%;
       z-index: -1;
     }
 
@@ -120,7 +120,7 @@
   $_base-height: 195px;
   $_height-by-size: (
     small: 410px,
-    medium: 270px,
+    medium: 316px,
   );
   @include make-bg(services, '../../pages/home/global_services/services', $_base-height, $_height-by-size);
 }
