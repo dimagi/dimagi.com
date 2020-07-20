@@ -15,15 +15,33 @@
   $_base-height: 210px;
   $_height-by-size: (
     small: 230px,
-    medium: 386px,
-    large: 440px,
+    medium: 357px,
+    large: 346px,
     extra-large: 450px,
   );
   @include make-bg(image, '../../pages/home/focus_mdm/focus', $_base-height, $_height-by-size, '.png');
 
-  @media (min-width: $width-desktop) {
+  @media (min-width: $width-desktop-lg) {
+    .off-grid {
+      bottom: 7%;
+      top: 26%;
+      left: 0;
+      position: absolute;
+      right: auto;
+      width: 150%;
+      z-index: -1;
+    }
+
+    .content {
+      position: relative;
+      z-index: 2;
+    }
+  }
+
+  @media (min-width: $width-desktop-xl) {
     .off-grid {
       bottom: 0;
+      top: 12%;
       left: 0;
       position: absolute;
       right: auto;
@@ -44,13 +62,13 @@
 
 @media (min-width: $width-desktop-lg) {
   .focus-info {
-    width: 65%;
+    width: 50%;
   }
 }
 
-@media (max-width: $width-desktop-lg) {
+@media (max-width: $width-desktop-lg - 1px) {
   .focus-info {
-    width: 50%;
+    width: 100%;
   }
 }
 
