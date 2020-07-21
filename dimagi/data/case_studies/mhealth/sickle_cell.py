@@ -25,9 +25,9 @@ STUDY = CaseStudy(
         "application at six sites across two districts in Ghana."
     ),
     partners=[
+        "Sickle Cell Foundation of Ghana",
         "Novartis, Ministry of Health (Ghana)",
         "Ghana Health Service",
-        "Sickle Cell Foundation of Ghana",
     ],
     countries=[
         ugettext_lazy("Ghana"),
