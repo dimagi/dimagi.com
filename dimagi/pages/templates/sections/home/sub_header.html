@@ -1,0 +1,57 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="sub-nav"
+         id="sub-nav">
+  <div class="content">
+    <div class="actions">
+      <a href="{{ URL_TRIAL }}"
+         class="hide-until-large {% click_subnav 'trial' %}"
+         data-kmq-external="true"
+         data-kmq-name="Clicked Start Trial - CommCare (sticky bar)"
+         target="_blank">
+        {% blocktrans %}
+          Start CommCare Trial
+        {% endblocktrans %}
+      </a>
+
+    </div>{# .actions #}
+    <a class="prompt-link {% click_subnav 'browse' %}"
+       href="#">
+      {% blocktrans %}
+        Browse
+      {% endblocktrans %}
+    </a>
+    <div class="destinations">
+      <div class="content">
+        <a href="{{ URL_TRIAL }}"
+           data-kmq-external="true"
+           data-kmq-name="Clicked Start Trial - CommCare (sticky bar mobile)"
+           class="hide-at-medium {% click_subnav 'trial-mobile' %}"
+           target="_blank">
+          {% blocktrans %}
+            Start CommCare Trial
+          {% endblocktrans %}
+        </a>
+        <a href="{% url 'commcare' %}"
+           class="{% click_subnav 'commcare' %}">
+          {% blocktrans %}
+            CommCare
+          {% endblocktrans %}
+        </a>
+        <a href="{% url 'focus_mdm' %}"
+           class="{% click_subnav 'focusmdm' %}">
+          {% blocktrans %}
+            FocusMDM
+          {% endblocktrans %}
+        </a>
+        <a href="{% url 'services' %}"
+           class="{% click_subnav 'services' %}">
+          {% blocktrans %}
+            Services
+          {% endblocktrans %}
+        </a>
+      </div>{# .content #}
+    </div>{# .destinations #}
+  </div>{# .content #}
+</section>
