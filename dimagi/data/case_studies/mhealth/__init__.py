@@ -16,6 +16,7 @@ from dimagi.data.case_studies.mhealth import (
     care_motech,
     technoserve,
     focus_mdm,
+    sickle_cell,
 )
 
 
@@ -37,4 +38,5 @@ studies = (
     care_motech,
     technoserve,
     focus_mdm,
+    sickle_cell,
 )
