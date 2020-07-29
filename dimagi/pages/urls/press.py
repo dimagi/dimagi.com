@@ -1,9 +1,8 @@
 from django.conf.urls import url
 
-from dimagi.pages.views.press import view_all
+from dimagi.pages.views.press import in_news
 
 
 urlpatterns = [
-    url(r'^$', view_all, name='press'),
-    url(r'^(?P<page>[\d]+)/$', view_all, name='press_page'),
+    url(r'^$', in_news, name='press'),
 ]

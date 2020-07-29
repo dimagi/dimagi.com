@@ -68,7 +68,23 @@
     }
   }
 
-  .accordion-arrow {
+  .accordion-faq-color {
+    .accordion-header {
+      border-radius: $border-radius $border-radius 0 0;
+    }
+
+    &:hover {
+      background-color: $color-bg;
+    }
+
+    &.collapsed {
+      .accordion-header {
+        border-radius: $border-radius;
+      }
+    }
+  }
+
+  .accordion-arrow, .accordion-faq-arrow {
     .accordion-header > *:before { // scss-lint:disable NestingDepth
       content: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCIgd2lkdGg9IjEyIiBoZWlnaHQ9IjEyIj4KICA8cG9seWxpbmUgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRkZGRkZGIiBzdHJva2Utd2lkdGg9IjQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBwb2ludHM9IgoJMTguNSw1LjggMTAsMTQuMiAxLjUsNS44ICI+PC9wb2x5bGluZT4KPC9zdmc+');
       display: block;
@@ -102,6 +118,9 @@
       background-color: $_color;
       border: none;
     }
+    .#{$_name}-theme .accordion-faq-color .accordion-header {
+      border: none;
+    }
   }
 
 }
@@ -114,4 +133,3 @@
   }
 
 }
-

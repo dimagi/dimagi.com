@@ -1,0 +1,32 @@
+{% load dimagidotcom %}
+{% load i18n %}
+
+<section  class="video-intro pad-vert-medium"
+          id="overview">
+  <div class="content content-width-large epic-content pad-horz-small-at-medium align-center">
+    <div class="grid-flex-at-medium">
+
+      <div class="column align-left-at-medium">
+        <p>
+          Dimagi is one of the world’s largest providers of technology for 
+          frontline health workers. Our open-source technology platform, 
+          <a href="{% url 'commcare' %}">CommCare</a>, is the world’s most widely-used 
+          mobile data collection and service delivery platform.
+        </p>
+        <p>
+          Currently, Dimagi and CommCare are supporting
+          <a href="{% url 'covid_19' %}">COVID-19 response</a>
+          efforts around the world. In the United States, we have
+          built a Local Response System to support public health workers
+          in counties and states across the country.
+        </p>
+      </div>{# .column #}
+
+      <div class="column video-intro">
+        <div class="image white-lazy-bg"
+             data-lazybg="true">
+      </div>
+
+    </div>{# .grid-flex-at-medium #}
+  </div>{# .content #}
+</section>

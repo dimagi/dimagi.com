@@ -14,7 +14,7 @@
 
     <div class="grid-4-at-large grid-3-at-medium grid-2-at-small grid-row-equal-heights gap-bottom-none team-grid">
       {% for employee in management %}
-        {% include "partials/team_card.html" %}
+        {% include "partials/team_card.html" with extra_slug="management" %}
       {% endfor %}
     </div>
 

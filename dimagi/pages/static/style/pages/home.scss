@@ -7,6 +7,10 @@
   @include make-bg(hero, '../../pages/home/hero');
 }
 
+.hero h1 {
+  max-width: 100%;
+}
+
 .build {
   $_base-height: 122px;
   $_height-by-size: (
@@ -18,6 +22,10 @@
 
   width: 100%;
   @include make-bg(image, '../../pages/home/build', $_base-height, $_height-by-size);
+}
+
+.commcare-stats {
+  border-radius: $border-radius;
 }
 
 .launch-digital-intervention {

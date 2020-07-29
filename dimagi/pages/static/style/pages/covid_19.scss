@@ -1,0 +1,64 @@
+@import 'app/mixins/background';
+@import 'app/variables/colors';
+@import 'app/variables/sizes';
+@import 'app/variables/type';
+
+
+.covid-19-page {
+  @include make-bg(hero, '../../pages/covid_19/hero');
+
+  .hero h1 {
+    max-width: 90%;
+  }
+}
+
+.application-image .image.cdc {
+  @include background-cover('../../pages/covid_19/CDC.png');
+  height: 200px;
+  background-size: contain;
+  background-position: center;
+}
+
+.application-image .image.ogun {
+  @include background-cover('../../pages/covid_19/san_francisco.png');
+  height: 200px;
+  background-size: contain;
+  background-position: center;
+}
+
+.application-image .image.dsti {
+  @include background-cover('../../pages/covid_19/DSTI.png');
+  height: 200px;
+  background-size: contain;
+  background-position: center;
+}
+
+.video-intro .image {
+  @include background-cover('../../pages/covid_19/covid_19_video_banner.png');
+  height: 160px;
+  width: 250px;
+}
+
+.response {
+  $_base-height: 195px;
+  $_height-by-size: (
+    small: 410px,
+    medium: 290px,
+  );
+  @include make-bg(local-response, '../../pages/covid_19/resources/local_response/response', $_base-height, $_height-by-size);
+  @include make-bg(template, '../../pages/covid_19/resources/template/template', $_base-height, $_height-by-size);
+}
+
+.resource-image .image.covid-cases {
+  @include background-cover('../../pages/covid_19/covid_cases.png');
+  height: 300px;
+  width: 300px;
+  background-size: auto 100%;
+}
+
+.resource-image .image.covid-support {
+  @include background-cover('../../pages/covid_19/covid_support.jpg');
+  height: 300px;
+  width: 300px;
+  background-size: auto 100%;
+}

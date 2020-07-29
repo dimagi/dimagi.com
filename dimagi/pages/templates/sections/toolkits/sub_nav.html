@@ -5,6 +5,16 @@
          id="sub-nav">
   <div class="content">
     <div class="actions">
+      {% if toolkit.french_download_url %}
+        <a class="primary"
+           href="#french-pdf-download-form">
+          <span>
+            {% blocktrans %}
+              TÉLÉCHARGER LE RESUMÉ
+            {% endblocktrans %}
+          </span>
+        </a>
+      {% endif %}
       <a class="primary {% click_subnav 'download' %}"
          href="#download">
         <span>

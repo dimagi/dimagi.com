@@ -2,7 +2,7 @@
 {% load dimagidotcom %}
 
 {% for office in offices %}
-<section class="{{ office.slug }} border-bottom"
+<section class="{{ office.slug }} border-bottom{% if office.slug == 'usa' or office.slug == 'africa' %} accent-gray-bg{% endif %}"
          id="{{ office.slug }}">
   <div class="content pad-vert-medium">
 

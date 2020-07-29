@@ -104,3 +104,16 @@ mobile solution.
     """),
     view_url="total-cost-ownership",
 )
+
+
+DIGITAL_HEALTH_STSTEMS = OtherToolkit(
+    name=ugettext_lazy(
+        "CommCare + DHIS2 Digital Health Systems"
+    ),
+    icon="svg/tookits/icons/dhis.html",
+    description=ugettext_lazy("""
+Learn how CommCare and DHIS2 integrate to create
+sustainable data pipelines.
+    """),
+    view_url="digital-health-systems",
+)

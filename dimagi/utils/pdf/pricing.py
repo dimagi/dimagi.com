@@ -143,17 +143,6 @@ class OverviewPageTemplate(PageTemplate):
                 stroke=1
             )
 
-        # most popular plan circle
-        canvas.setFillColor(CommCareStyle.COLOR_TURQUOISE)
-        canvas.circle(inches(2.65), inches(4.55), inches(.35), fill=1, stroke=0)
-
-        # most popular plan text
-        canvas.setFillColor(CommCareStyle.COLOR_WHITE)
-        canvas.setFont(CommCareStyle.BOLD_FONT, CommCareStyle.SIZE_SMALL)
-        canvas.drawCentredString(inches(2.65), inches(4.66), "MOST")
-        canvas.drawCentredString(inches(2.65), inches(4.51), "POPULAR")
-        canvas.drawCentredString(inches(2.65), inches(4.36), "PLAN")
-
 
 class FeatureGroupHeader(Flowable):
 
@@ -224,6 +213,8 @@ class FeatureLine(Flowable):
                 inches(.33)
             )
         else:
+            self.canv.setFillColor(CommCareStyle.COLOR_BORDER)
+            self.canv.setStrokeColor(CommCareStyle.COLOR_BORDER)
             self.canv.line(
                 x - inches(.06),
                 inches(.25),

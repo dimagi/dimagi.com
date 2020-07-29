@@ -1,0 +1,35 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="content pad-vert-medium content-width-large blue-theme">
+  <div class="grid-2-at-small grid-reverse">
+    <div class="column pad-top-medium align-left">
+      <h3>
+        {% blocktrans %}
+          Broadcast Messages
+        {% endblocktrans %}
+      </h3>
+      <p>
+        {% blocktrans %}
+          Deploy broadcast notifications or send targeted messaging campaigns.
+          Use recurring messages to increase awareness of target populations
+          or encourage behavior change.
+        {% endblocktrans %}
+      </p>
+      <div class="align-left pad-top-base">
+        <a class="arrow"
+           href="https://confluence.dimagi.com/display/commcarepublic/CommCare+Messaging"
+           target="_blank">
+          {% blocktrans %}
+            Learn more about broadcast messaging
+          {% endblocktrans %}
+        </a>
+      </div>
+    </div>{# .column #}
+
+    <div class="column">
+      <div class="broadcast white-lazy-bg"
+           data-lazybg="true"></div>
+    </div>{# .column #}
+  </div>{# .grid-2 #}
+</section>{# .content #}

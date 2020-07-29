@@ -54,6 +54,6 @@
 
 {% block modals %}
   {% for employee in management %}
-    {% include "partials/team_modal.html" with employee=employee %}
+    {% include "partials/team_modal.html" with employee=employee extra_slug='management' %}
   {% endfor %}
 {% endblock %}

@@ -1,0 +1,51 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section id="partners"
+         class="accent-gray-bg">
+  <div class="content pad-vert-small">
+    <div class="grid grid-2-at-medium grid-1-at-small grid-reverse">
+      <div class="column" id="case-study">
+        <div class="intro-image pad-top-medium">
+          <div class="case-study-image white-lazy-bg"
+               data-lazybg="true"></div>
+        </div>
+      </div> {# .column #}
+      <div class="column pad-top-medium">
+        <h3 class="blue">
+          {% blocktrans %}
+            Responding Across the United States
+          {% endblocktrans %}
+        </h3>
+        <p>
+          {% url 'commcare' as commcare %}
+          {% blocktrans %}
+            Dimagi is partnering with state and local governments across the
+            United States. One of our projects, with the San Francisco Department
+            of Public Health in California, University of California at SanFrancisco (UCSF),
+            and the CDC, recently deployed a variation of the US COVID-19 Local Response System.
+            The system was rapidly developed using <a href="{{ commcare }}">CommCare</a>,
+            allowing Department of Public Health officials and UCSF public health officials,
+            students, and librarians to easily track both COVID-19 cases and contacts over time.
+          {% endblocktrans %}
+        </p>
+        <a class="arrow {% click_body 'video-learn' %}"
+            href="https://drive.google.com/file/d/1Idm3FPO1rp1PK_1Av-rd2SQ9L4mR7xYa/view?usp=sharing"
+            target="_blank">
+          {% blocktrans %}
+            Download the case study
+          {% endblocktrans %}
+        </a>
+      </div>{# .column #}
+    </div>
+    <div>
+      <div class="content content-width-large pad-top-small">
+        <div class="grid-2-at-small grid-3-at-large grid-col-space-medium grid-row-space-small">
+          {% include "sections/us_covid_19/case_study/governments/alaska.html" %}
+          {% include "sections/us_covid_19/case_study/governments/cdc.html" %}
+          {% include "sections/us_covid_19/case_study/governments/navajo.html" %}
+        </div>
+      </div>
+    </div>    
+  </div>
+</section>

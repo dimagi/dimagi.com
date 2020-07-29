@@ -16,6 +16,12 @@
   }
 }
 
+@media (min-width: $width-desktop) {
+  .feature-projects {
+    height: 500px;
+  }
+}
+
 .plan-highlight {
   &:before { // scss-lint:disable PropertyCount
     border: 4px solid $color-turquoise;

@@ -91,19 +91,19 @@
     large: 290px,
     extra-large: 290px,
   );
-  @include make-bg(phone-image, '../../../pages/sectors/reproductive-health/part3/phone', $_base-height, $_height-by-size);
+  @include make-bg(phone-image, '../../../pages/sectors/maternal-and-newborn-health/news/phone', $_base-height, $_height-by-size, '.png');
 
   @media (min-width: $width-desktop) {
     .off-grid {
       top: 10%;
       left: 0;
       position: absolute;
-      background-size: auto 0%;
-      background-position: center;
-      background-repeat: no-repeat;
       right: auto;
       width: 120%;
       z-index: 1;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: auto 0%;
     }
 
     .content {

@@ -1,0 +1,34 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="overview pad-top-small pad-bottom-large"
+         id="onboarding">
+  <div class="content">
+    <div class="onboarding">
+      <h2 class="blue">
+        {% blocktrans %}
+          Onboarding Options
+        {% endblocktrans %}
+      </h2>
+      <p>
+        {% blocktrans %}
+          New to CommCare? Get advice and guidance from our experienced
+          Customer Success team to get your project started on the right foot.
+        {% endblocktrans %}
+      </p>
+    </div>
+    <div class="onboarding-packages gap-top-medium gap-bottom-line">
+      {% include "sections/commcare/product_onboarding/package.html" %}
+    </div>
+    <div class="align-center pad-top-medium">
+      <p>
+        <a class="button blue-bg"
+           href="{% url 'commcare_onboarding' %}">
+          {% blocktrans %}
+            Learn More
+          {% endblocktrans %}
+        </a>
+      </p>
+    </div>
+  </div>
+</section>

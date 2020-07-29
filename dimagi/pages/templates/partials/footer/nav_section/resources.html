@@ -8,6 +8,14 @@
 
 {% block links %}
   <li>
+    <a href="{% url 'covid_19' %}"
+       class="{% click_footer 'covid-19' %}">
+      {% blocktrans %}
+        COVID-19 Response
+      {% endblocktrans %}
+    </a>
+  </li>
+  <li>
     <a href="{% url 'blog_home' %}"
        class="{% click_footer 'blog' %}">
       {% blocktrans %}

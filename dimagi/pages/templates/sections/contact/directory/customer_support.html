@@ -13,13 +13,18 @@
 {% block description %}
   <p class="gap-bottom-base">
     {% blocktrans %}
-      Available for paying customers on a Standard plan or higher.
+      CommCare customers on a Standard plan or higher have access to 
+      guaranteed support.
     {% endblocktrans %}
   </p>
-  <p class="gap-bottom-base">
-    <a class="orange {% click_body 'directory-support' %}"
-       href="mailto:CommCareHQ-Support@Dimagi.com">
-      CommCareHQ-Support@Dimagi.com
-    </a>
+  <p>
+    {% blocktrans %}
+      Simply use Dimagi’s 
+      <a class="orange {{ click_users }}"
+         href="https://dimagi-dev.atlassian.net/servicedesk/customer/portals"
+         target="_blank">
+        Service Desk</a> to submit 
+      a question to our technical support or account management teams.
+    {% endblocktrans %}
   </p>
 {% endblock %}

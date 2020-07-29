@@ -1,0 +1,15 @@
+{% extends "sections/commcare/commcare_messaging/adapt/_base.html" %}
+{% load i18n %}
+
+{% block icon %}
+  {% include "svg/commcare/messaging/sms.html" %}
+{% endblock %}
+
+{% block header %}{% blocktrans %}
+  Skip in-person visits by collecting survey data over SMS
+{% endblocktrans %}{% endblock %}
+
+{% block content %}{% blocktrans %}
+  Reach beneficiaries directly—without physical interaction—and collect data
+  or deliver services with 1- and 2-way SMS messaging.
+{% endblocktrans %}{% endblock %}

@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block body_class %}awards-page tucked-hero{% endblock %}
+
+{% block title %}{% blocktrans %}
+  Awards & Working Groups
+{% endblocktrans %}{% endblock %}
+
+{% block description %}{% blocktrans %}
+  Earning recognition and fostering collaboration around the world
+{% endblocktrans %}{% endblock %}
+
+{% block stylesheets %}
+  {% compress css %}
+    <link href="{% sass_src 'style/pages/awards.scss' %}" rel="stylesheet" media="screen" type="text/css" />
+  {% endcompress %}
+{% endblock %}
+
+{% block hero %}
+  <div class="orange-theme">
+    <section class="hero hero-awards"
+             data-lazybg="true"
+             id="hero">
+      <div class="content content-width-large inverted align-center display-flex flex-valign-middle expand-vertical offset-top-small flex-align-center">
+        <div class="copy expand position-relative">
+
+          <h1>
+            {% blocktrans %}
+              Awards & Working Groups
+            {% endblocktrans %}
+          </h1>
+
+          <div class="headline content-width-small">
+            {% blocktrans %}
+              Earning recognition and fostering collaboration around the world
+            {% endblocktrans %}
+          </div>{# .headline #}
+
+        </div>{# .copy #}
+      </div>{# .content #}
+    </section>
+  </div>
+{% endblock %}
+
+{% block content %}
+  <section class="awards-container orange-theme">
+    <div class="content pad-top-medium border-bottom pad-bottom-small">
+      {{ content | safe }}
+    </div>{# .content #}
+  </section>
+{% endblock %}

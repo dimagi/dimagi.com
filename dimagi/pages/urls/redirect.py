@@ -9,6 +9,8 @@ from dimagi.data.sectors.sector import (
 from dimagi.pages.views import redirect
 
 redirect_urlpatterns = [
+    url(r'^covid19/$', redirect.page('covid_19')),
+
     url(r'^products/$', redirect.page('commcare')),
     url(r'^smartcare/$', redirect.page('commcare')),
     url(r'^open-data-kit/$', redirect.page('commcare')),

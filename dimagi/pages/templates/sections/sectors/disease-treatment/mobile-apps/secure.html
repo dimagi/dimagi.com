@@ -1,0 +1,38 @@
+{% extends "sections/sectors/disease-treatment/mobile-apps/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block content %}
+  <h3 class="pad-top-line pad-bottom-small">
+    {% blocktrans %}
+      Prioritize follow-ups and securely share patient information
+    {% endblocktrans %}
+  </h3>
+  <div class="grid-2-at-large blue-theme grid-valign-middle grid-reverse">
+    <div class="column pad-right-medium-at-base align-left">
+      <ul class="check-list">
+        <li>
+          {% blocktrans %}
+            Prioritized triaging of patients visits at the community level
+          {% endblocktrans %}
+        </li>
+        <li>
+          {% blocktrans %}
+            Greater control over Loss to Follow-up Patients through alerts
+            for missed appointments and defaulters
+          {% endblocktrans %}
+        </li>
+        <li>
+          {% blocktrans %}
+            Referral and counter referral case sharing functionality to support
+            information sharing between health care providers between primary
+            and secondary levels of care
+          {% endblocktrans %}
+        </li>
+      </ul>
+    </div>{# .column #}
+    <div class="column secure-image white-lazy-bg"
+         data-lazybg="true">
+    </div>{# .column #}
+  </div>{# .grid-2-at-medium #}
+{% endblock %}

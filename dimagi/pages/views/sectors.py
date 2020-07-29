@@ -114,6 +114,15 @@ def programmatic_research(request):
     }
     return render(request, 'pages/sectors/programmatic_research.html', context)
 
+
+@enable_ab_test(DEMO_WORKFLOW_V2)
+def financial_inclusion(request):
+    context = {
+        'sector': 'financial_inclusion',
+    }
+    return render(request, 'pages/sectors/financial_inclusion.html', context)
+
+
 @enable_ab_test(DEMO_WORKFLOW_V2)
 def gb_violence(request):
     context = {

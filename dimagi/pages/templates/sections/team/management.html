@@ -1,0 +1,22 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="management accent-gray-bg border-vert"
+         id="management">
+  <div class="content pad-top-medium pad-bottom-large">
+    <div class="intro">
+      <h2>
+        {% blocktrans %}
+          Management
+        {% endblocktrans %}
+      </h2>
+    </div>{# .intro #}
+
+    <div class="grid-4-at-large grid-3-at-medium grid-2-at-small grid-row-equal-heights gap-bottom-none team-grid">
+      {% for employee in management %}
+        {% include "partials/team_card.html" with extra_slug="management" %}
+      {% endfor %}
+    </div>
+
+  </div> {# .content #}
+</section>

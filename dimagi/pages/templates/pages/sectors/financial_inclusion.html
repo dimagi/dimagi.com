@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+{% load capture_tags %}
+
+{% block title %}{% blocktrans %}
+  Financial Inclusion Programs
+{% endblocktrans %}{% endblock %}
+
+{% capture as page_social_card silent %}{% block social_card_image_url %}
+  {% static 'pages/sectors/financial-inclusion/intro/hero.jpg' %}
+{% endblock %}{% endcapture %}
+
+{% block body_class %}financial-inclusion-page tucked-hero{% endblock %}
+
+{% block stylesheets %}
+  {% compress css %}
+    <link href="{% sass_src 'style/pages/sectors/financial_inclusion.scss' %}" rel="stylesheet" media="screen" type="text/css" />
+  {% endcompress %}
+{% endblock %}
+
+{% block hero %}
+<div class="purple-theme">
+  <section class="hero hero-blog" id="hero"></section>
+</div>
+{% endblock %}
+
+{% block content %}
+  <section class="services-container purple-theme">
+    {% include "sections/sectors/financial_inclusion/sub_nav.html" %}
+    {% include "sections/sectors/financial_inclusion/overview.html" %}
+    {% include "sections/sectors/financial_inclusion/help_demo.html" %}
+    {% include "sections/sectors/financial_inclusion/benefit.html" %}
+    {% include "sections/sectors/education/commcare_action.html" %}
+    {% include "sections/sectors/financial_inclusion/programs.html" %}
+    {% include "sections/sectors/education/commcare_demo.html" %}
+    {% include "sections/sectors/testimonials/testimonial.html" %}
+  </section>
+{% endblock %}
+
+{% block modals %}
+<div class="modal"
+     data-dismissible="true"
+     data-size="medium"
+     id="demo-sector">
+  <div class="modal-scroll">
+    <div class="modal-wrapper">
+      <a href="#" class="modal-close-button"></a>
+      <div class="content pad-horz-medium-at-medium pad-horz-line pad-vert-none purple-theme">
+        <h3>
+          {% blocktrans %}
+            Schedule A Demo
+          {% endblocktrans %}
+        </h3>
+        <section id="demo-sector-content"></section>
+      </div>{# .content #}
+    </div>{# .modal-wrapper #}
+  </div>{# .modal-scroll #}
+</div>{# .modal #}
+
+<div class="modal"
+     data-dismissible="true"
+     data-size="medium"
+     id="hubspot-download-form-pdf-summary">
+  <div class="modal-scroll">
+    <div class="modal-wrapper">
+      <a href="#" class="modal-close-button"></a>
+      <div class="content pad-horz-medium-at-medium pad-horz-line pad-vert-none purple-theme">
+        <section id="download-pdf-summary-form-content"></section>
+      </div>{# .content #}
+    </div>{# .modal-wrapper #}
+  </div>{# .modal-scroll #}
+</div>{# .modal #}
+{% endblock %}
+
+{% block js %}
+  <!--[if lte IE 8]>
+    <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+  <![endif]-->
+  <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+  <script>
+    hbspt.forms.create({
+      portalId: "503070",
+      formId: "50e6998d-aa0f-4ca8-8681-35453a306e02",
+      target: "#download-pdf-summary-form-content",
+      css: "",
+      onFormSubmit: function () {
+        window.open('https://cdn2.hubspot.net/hubfs/503070/Sector%20PDFs/CommCare_FinancialInclusion.pdf', "_blank");
+      },
+    });
+    hbspt.forms.create({
+      portalId: "503070",
+      formId: "afb4d5a0-826f-4a56-8c21-552d4b6dafa3",
+      target: "#demo-sector-content",
+      css: "",
+    });
+  </script>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="response align-center" id="features">
+  <div class="pad-top-medium align-center gap-bottom-small">
+    <h2 class="blue capitalize">
+      {% blocktrans %}
+        CommCare's Messaging Features
+      {% endblocktrans %}
+    </h2>
+  </div>{# .intro #}
+  <div class="response align-center" id="response">
+    {% include "sections/commcare/commcare_messaging/features/sms.html" %}
+    {% include "sections/commcare/commcare_messaging/features/broadcast_messages.html" %}
+    {% include "sections/commcare/commcare_messaging/features/alerts.html" %}
+  </div>
+  <div class="cta pad-top-base pad-bottom-medium">
+    <a class="button gap-right-small-at-medium gap-right-base-at-small {% click_hero 'covid_19' %}"
+       href="#demo-form-modal">
+      {% blocktrans %}
+        Get A Demo
+      {% endblocktrans %}
+    </a>
+  </div>{# .cta #}
+</section>

@@ -38,6 +38,10 @@ def pricing(request):
     return render(request, 'pages/commcare/pricing.html', context)
 
 
+def research(request):
+    return render(request, 'pages/commcare/research.html')
+
+
 def handle_pricing_pdf(is_monthly):
 
     def pricing_pdf(request):
@@ -58,3 +62,20 @@ def handle_pricing_pdf(is_monthly):
 
 def partners(request):
     return render(request, 'pages/commcare/partners.html')
+
+@enable_ab_test(DEMO_WORKFLOW_V2)
+def commcare_integration(request):
+    context = _get_global_context()
+    return render(request, 'pages/commcare/commcare_integration.html', context)
+
+
+@enable_ab_test(DEMO_WORKFLOW_V2)
+def commcare_messaging(request):
+    context = _get_global_context()
+    return render(request, 'pages/commcare/commcare_messaging.html', context)
+
+
+@enable_ab_test(DEMO_WORKFLOW_V2)
+def commcare_onboarding(request):
+    context = _get_global_context()
+    return render(request, 'pages/commcare/commcare_onboarding.html', context)

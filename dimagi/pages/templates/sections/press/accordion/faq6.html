@@ -1,0 +1,34 @@
+{% extends "sections/press/accordion/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block accordion_collapsed %}collapsed{% endblock %}
+
+{% block accordion_header %}
+  {% blocktrans %}
+    What is Dimagi’s response to COVID-19?
+  {% endblocktrans %}
+{% endblock %}
+
+{% block accordion_content %}
+  <p>
+    {% url 'covid_19' as covid_19 %}
+    {% blocktrans %}
+      For more information on Dimagi’s response to COVID-19,
+      <a href="{{ covid_19 }}">click here</a>.
+    {% endblocktrans %}
+  </p>
+  <p>
+    {% url 'us_covid_19' as us_covid_19 %}
+    {% blocktrans %}
+      For information specific to COVID-19 response in the United States,
+      <a href="{{ us_covid_19 }}">click here</a>.
+    {% endblocktrans %}
+  </p>
+  <p>
+    {% blocktrans %}
+      For any additional information, please contactus at
+      <a href="mailto:press@dimagi.com">press@dimagi.com</a>.
+    {% endblocktrans %}
+  </p>
+{% endblock %}

@@ -1,0 +1,113 @@
+{% load dimagidotcom %}
+{% load i18n %}
+
+<section class="pad-bottom-medium"
+         id="news">
+  <div class="content pad-top-medium align-center">
+    <h2>
+      {% blocktrans %}
+        The Latest on CommCare’s Data Integrations
+      {% endblocktrans %}
+    </h2>
+    <p>
+      {% blocktrans %}
+        Updates and toolkits to help you understand your options and get started:
+      {% endblocktrans %}
+    </p>
+  </div>{# .content #}
+  <div class="content pad-top-line news-images">
+    <div class="grid grid-3-at-large grid-1-at-medium grid-row-equal-heights ">
+      <div class="column">
+        <div class="pad-bottom-base white-bg">
+          <div class="image blog1" data-lazybg="true"></div>
+          <div class="pad-line">
+            <h5>
+              <strong>
+                {% blocktrans %}
+                  Dimagi launches direct connection between CommCare and Power BI, Tableau
+                {% endblocktrans %}
+              </strong>
+            </h5>
+            <p class="pad-top-line-at-large">
+              {% blocktrans %}
+                Designed for M&E advisors and program teams alike, CommCare’s data
+                integrations establish a seamless connection with Tableau and Power BI.
+              {% endblocktrans %}
+            </p>
+            <p class="pad-top-line-at-large">
+              <a href="{% url 'blog_post' 'commcare-tableau-power-bi' %}"
+                 class="arrow link-gray read-more"
+                 target="_blank">
+                {% blocktrans %}
+                  Read More
+                {% endblocktrans %}
+              </a>
+            </p>
+          </div> {# .pad-line #}
+        </div> {# .white-bg #}
+      </div> {# .column #}
+      <div class="column">
+        <div class="pad-bottom-base white-bg">
+          <div class="image blog2" data-lazybg="true"></div>
+          <div class="pad-line">
+            <h5>
+              <strong>
+                {% blocktrans %}
+                  Leverage CommCare and DHIS2 for a sustainable digital health system
+                {% endblocktrans %}
+              </strong>
+            </h5>
+            <p>
+              {% blocktrans %}
+                Learn how CommCare and DHIS2 work together to provide an end-to-end
+                solution for mobile data collection, aggregation, storage, and
+                reporting at any scale—from a single community to nation-wide.
+              {% endblocktrans %}
+            </p>
+            <p>
+              <a href="{% url 'toolkit' 'digital-health-systems' %}"
+                 class="arrow link-gray read-more"
+                 target="_blank">
+                {% blocktrans %}
+                  Read More
+                {% endblocktrans %}
+              </a>
+            </p>
+          </div> {# .pad-line #}
+        </div> {# .white-bg #}
+      </div> {# .column #}
+      <div class="column">
+        <div class="pad-bottom-base white-bg">
+          <div class="image blog3" data-lazybg="true"></div>
+          <div class="pad-line">
+            <h5 class="pad-bottom-base-at-large pad-bottom-none-at-extra-large ">
+              <strong>
+                {% blocktrans %}
+                  Learn how to use CommCare to analyze and report on your M&E data
+                {% endblocktrans %}
+              </strong>
+            </h5>
+            <p class="pad-top-small-at-large pad-top-line-at-extra-large">
+              {% blocktrans %}
+                This Starter Guide introduces key features in CommCare for
+                effective data management, which can help lead to better
+                analysis and greater insights into performance, progress,
+                and impact. The guide is organized into two parts: Exporting
+                Data and Inspecting and Cleaning Data.
+              {% endblocktrans %}
+            </p>
+            <p>
+              <a href="{% url 'toolkit' 'commcare-managing-data' %}"
+                 class="arrow link-gray read-more"
+                 target="_blank">
+                {% blocktrans %}
+                  Read More
+                {% endblocktrans %}
+              </a>
+            </p>
+          </div> {# .pad-line #}
+        </div> {# .white-bg #}
+      </div> {# .column #}
+    </div>{# .grid #}
+  </div>{# .content #}
+</section>

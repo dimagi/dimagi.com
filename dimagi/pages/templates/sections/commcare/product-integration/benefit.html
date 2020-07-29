@@ -1,0 +1,24 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section>
+  <div id="commcare-integrations">
+    <div class="content pad-top-medium pad-bottom-small">
+      <h2 class="align-center">
+        {% blocktrans %}
+          CommCare’s data integration ecosystem
+        {% endblocktrans %}
+      </h2>
+    </div> {# .content #}
+  </div>
+  <div class="content pad-bottom-medium">
+    <div class="grid grid-2-at-large grid-1-at-medium grid-row-equal-heights ">
+      {% include 'sections/commcare/product-integration/ecosystem/excel.html' %}
+      {% include 'sections/commcare/product-integration/ecosystem/third_party.html' %}
+      {% include 'sections/commcare/product-integration/ecosystem/tableau.html' %}
+      {% include 'sections/commcare/product-integration/ecosystem/export.html' %}
+      {% include 'sections/commcare/product-integration/ecosystem/dhis2.html' %}
+      {% include 'sections/commcare/product-integration/ecosystem/webhooks.html' %}
+    </div> {# .grid #}
+  </div> {# .content .blue-theme #}
+</section>

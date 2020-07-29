@@ -49,11 +49,23 @@
 {% block content %}
   <section class="team-container orange-theme">
     {% include "sections/team/sub_nav.html" %}
+    {% include "sections/team/executive_committee.html" %}
+    {% include "sections/team/management.html" %}
+    {% include "sections/team/directors.html" %}
     {% include "sections/team/office.html" %}
   </section>
 {% endblock %}
 
 {% block modals %}
+  {% for employee in executive_committee %}
+    {% include "partials/team_modal.html" with employee=employee extra_slug='executive-committee' %}
+  {% endfor %}
+  {% for employee in management %}
+    {% include "partials/team_modal.html" with employee=employee extra_slug='management' %}
+  {% endfor %}
+  {% for employee in directors %}
+    {% include "partials/team_modal.html" with employee=employee extra_slug='director' use_alt_title='yes' %}
+  {% endfor %}
   {% for office in offices %}
     {% for employee in office.members %}
       {% include "partials/team_modal.html" with employee=employee %}

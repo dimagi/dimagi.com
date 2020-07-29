@@ -1,0 +1,82 @@
+@import 'app/mixins/background';
+@import 'app/variables/colors';
+@import 'app/variables/sizes';
+@import 'app/variables/type';
+
+
+.product-commcare-onboarding {
+  @include make-bg(hero, '../../../pages/commcare/product_onboarding/hero');
+}
+
+@media (min-width: $width-desktop) {
+  .product-commcare-onboarding .hero h1 {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 55%;
+  }
+}
+
+
+
+$_no-touch-heights: (
+    small: auto,
+    medium: 140px,
+    large: 300px,
+    extra-large: 250px,
+);
+
+$_touch-front-heights: (
+    small: auto,
+    medium: auto,
+    large: 280px,
+    extra-large: 185px,
+);
+
+@each $_size, $_width in $widths-by-size {
+  @media (min-width: $_width) {
+    .no-touch .feature-projects .flip-card {
+      height: map-get($_no-touch-heights, $_size);
+    }
+
+    .touch .feature-projects .flip-card .front { // scss-lint:disable SelectorDepth
+      height: map-get($_touch-front-heights, $_size);
+    }
+  }
+}
+
+.curriculum {
+  $_base-height: 290px;
+  $_height-by-size: (
+    small: 290px,
+    medium: 290px,
+    large: 290px,
+    extra-large: 292px,
+  );
+  @include make-bg(image, '../../../pages/commcare/product_onboarding/cta/curriculum-cta', $_base-height, $_height-by-size, '.png');
+
+  @media (min-width: $width-desktop) {
+    .off-grid {
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      right: auto;
+      width: 100%;
+      z-index: 1;
+    }
+
+    .content {
+      position: relative;
+      z-index: 2;
+    }
+  }
+
+  @media (min-width: $width-desktop-xl) {
+    .bg-loader {
+      border-top: 1px solid $color-border;
+    }
+  }
+
+  .bg-loader {
+    background-color: $color-white;
+  }
+}

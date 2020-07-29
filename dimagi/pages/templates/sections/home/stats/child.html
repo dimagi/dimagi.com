@@ -1,0 +1,14 @@
+{% extends "sections/home/stats/_base.html" %}
+{% load i18n %}
+
+{% block icon %}
+  {% include "svg/home/stats/child.html" %}
+{% endblock %}
+
+{% block header %}{% blocktrans %}
+  1 in 40
+{% endblocktrans %}{% endblock %}
+
+{% block content %}{% blocktrans %}
+  Malnourished children globally are tracked in CommCare
+{% endblocktrans %}{% endblock %}

@@ -1,0 +1,195 @@
+@import 'app/mixins/background';
+@import 'app/variables/colors';
+@import 'app/variables/sizes';
+@import 'app/variables/type';
+
+
+#education-intro {
+  $_base-height: 190px;
+  $_height-by-size: (
+    small: 280px,
+    medium: 280px,
+    large: 280px,
+    extra-large: 320px,
+  );
+  @include make-bg(hero-data-image, '../../../pages/open_source/open_source_hosting/intro/hero', $_base-height, $_height-by-size);
+}
+
+.contact {
+  $_base-height: 550px;
+  $_height-by-size: (
+    small: 620px,
+    medium: 385px,
+    large: 360px,
+    extra-large: 360px,
+  );
+  @include make-bg(epic-cover, '../../../pages/open_source/open_source_hosting/contact/hero', $_base-height, $_height-by-size);
+}
+
+.contact {
+  $_base-height: 290px;
+  $_height-by-size: (
+    small: 290px,
+    medium: 290px,
+    large: 290px,
+    extra-large: 292px,
+  );
+  @include make-bg(image, '../../../pages/open_source/open_source_hosting/contact/tablet', $_base-height, $_height-by-size, '.png');
+
+  @media (min-width: $width-desktop) {
+    .off-grid {
+      bottom: 0;
+      left: 0;
+      top: 30px;
+      position: absolute;
+      right: auto;
+      width: 100%;
+      z-index: 1;
+      background-size: auto 0%;
+    }
+
+    .content {
+      position: relative;
+      z-index: 2;
+    }
+  }
+}
+
+.contact .image {
+  background-size: auto 0%;
+}
+
+.news-images .image.developer-forum {
+  @include background-cover('../../../pages/open_source/open_source_hosting/resources/developer-forum.jpg');
+  height: 200px;
+  background-size: contain;
+  background-position: left;
+}
+
+.news-images .image.documentation {
+  @include background-cover('../../../pages/open_source/open_source_hosting/resources/documentation.jpg');
+  height: 200px;
+  background-size: contain;
+  background-position: left;
+}
+
+.news-images .image.github {
+  @include background-cover('../../../pages/open_source/open_source_hosting/resources/github.jpg');
+  height: 200px;
+  background-size: contain;
+  background-position: left;
+}
+
+.features-list li {
+  padding-left: 25px !important; // scss-lint:disable ImportantRule
+}
+
+.accordion-content .feature-row {
+  border-bottom: 1px solid $color-border;
+  padding: $space-small $space-small $space-small + 20px;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.feature-row {
+  cursor: pointer;
+  transition: background-color .5s ease-in-out;
+
+  &:hover {
+    background-color: $color-accent-gray;
+  }
+
+  .feature-standard,
+  .feature-advanced,
+  .feature-pro,
+  .feature-enterprise {
+    font-size: $font-size-small;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  @media (max-width: $width-desktop - 1px) {
+    h5 {
+      font-size: 12px;
+      line-height: 14px;
+    }
+  }
+
+  .not-included [stroke]:not([stroke="transparent"]) {
+    stroke: $color-border !important;
+  }
+}
+
+.feature-group-description {
+  background-color: $color-text;
+  border-bottom: 1px solid $color-border;
+  color: $color-white;
+  padding: $space-base $space-small;
+
+  a {
+    color: $color-blue-light;
+
+    &:hover {
+      color: $color-white;
+    }
+  }
+
+  p {
+    margin-bottom: 0;
+
+    @media (max-width: $width-desktop - 1px) {
+      text-align: center;
+    }
+  }
+}
+
+.feature-legend {
+  background-color: $color-accent-gray;
+  border: 1px solid $color-border;
+  font-size: $font-size-small;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: $space-base $space-small $space-small;
+  text-transform: uppercase;
+}
+
+.feature-key {
+  display: inline-block;
+  margin-left: $space-small;
+
+  svg {
+    margin-right: $space-base;
+  }
+}
+
+.plan-row {
+  padding: $space-line $space-small;
+
+  h3 {
+    font-size: $font-size-extra-large;
+    font-weight: 600;
+    letter-spacing: 1px;
+    line-height: 20px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+
+  .plan-column {
+    text-align: center;
+  }
+
+  @media (max-width: $width-desktop - 1px) {
+    h3,
+    p {
+      font-size: 10px;
+      line-height: 12px;
+    }
+
+    .plan-column {
+      height: 55px;
+    }
+  }
+}

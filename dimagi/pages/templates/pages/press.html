@@ -5,7 +5,7 @@
 {% block body_class %}press-page tucked-hero{% endblock %}
 
 {% block title %}{% blocktrans %}
-  Dimagi in the News
+  Pressroom
 {% endblocktrans %}{% endblock %}
 
 {% block description %}{% blocktrans %}
@@ -15,12 +15,13 @@
 
 {% block stylesheets %}
   {% compress css %}
+    <link href="{% sass_src 'style/pages/blog.scss' %}" rel="stylesheet" media="screen" type="text/css" />
     <link href="{% sass_src 'style/pages/press.scss' %}" rel="stylesheet" media="screen" type="text/css" />
   {% endcompress %}
 {% endblock %}
 
 {% block hero %}
-  <div class="orange-theme">
+  <div class="blue-theme">
     <section class="hero hero-press"
              data-lazybg="true"
              id="hero">
@@ -29,15 +30,24 @@
 
           <h1>
             {% blocktrans %}
-              Dimagi in the News
+              Pressroom
             {% endblocktrans %}
           </h1>
 
           <div class="headline content-width-small">
             {% blocktrans %}
-              For press or awards inquiries, please email info@dimagi.com.
+              Working on a story about CommCare or Dimagi?
             {% endblocktrans %}
           </div>{# .headline #}
+
+          <p class="align-center pad-top-small">
+            <a class="button button-accent-gray {% click_hero 'contact' %}"
+               href="#contact-form-modal">
+              {% blocktrans %}
+                Contact Us
+              {% endblocktrans %}
+            </a>
+          </p>
 
         </div>{# .copy #}
       </div>{# .content #}
@@ -46,9 +56,15 @@
 {% endblock %}
 
 {% block content %}
-  <section class="press-container orange-theme">
-    {% include 'sections/press/as_seen.html' %}
-    {% include 'sections/press/list.html' %}
+  <section class="press-container blue-theme">
+    {% include "sections/press/sub_nav.html" %}
+    {% include 'sections/press/overview.html' %}
+    {% include 'sections/press/faq.html' %}
+    {% include 'sections/press/brand_assets.html' %}
+    {% include 'sections/press/press_kit.html' %}
+    {% include 'sections/press/news.html' %}
     {% include 'sections/press/resources.html' %}
   </section>
 {% endblock %}
+
+{% block contact_form_id %}4da1d526-cf7d-4196-8d37-03e7de84e2b6{% endblock %}

@@ -1,0 +1,53 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="sub-nav"
+         id="sub-nav">
+  <div class="content">
+    <div class="actions">
+      <a class="primary {% click_subnav 'positions' %}"
+         href="https://drive.google.com/open?id=1NxGOheHF1rSI_IxbU26KGJpJFC_zJldo"
+         target="_blank">
+        <span>
+          {% blocktrans %}
+            DOWNLOAD PRESS KIT
+          {% endblocktrans %}
+        </span>
+      </a>
+    </div>{# .actions #}
+    <a class="prompt-link {% click_subnav 'browse' %}"
+       href="#">
+      {% blocktrans %}
+        Browse
+      {% endblocktrans %}
+    </a>
+    <div class="destinations">
+      <div class="content">
+        <a href="#overview"
+           class="{% click_subnav 'overview' %}">
+          {% blocktrans %}
+            Overview
+          {% endblocktrans %}
+        </a>
+        <a href="#faq"
+           class="{% click_subnav 'faq' %}">
+          {% blocktrans %}
+            FAQs
+          {% endblocktrans %}
+        </a>
+        <a href="#assets"
+           class="{% click_subnav 'assets' %}">
+          {% blocktrans %}
+            ASSETS
+          {% endblocktrans %}
+        </a>
+        <a href="#news"
+           class="{% click_subnav 'news' %}">
+          {% blocktrans %}
+            IN THE NEWS
+          {% endblocktrans %}
+        </a>
+      </div>{# .content #}
+    </div>{# .destinations #}
+  </div>{# .content #}
+</section>

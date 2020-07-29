@@ -43,6 +43,10 @@
   @include make-bg(hero, '../../pages/toolkits/mobile-data-collection/hero')
 }
 
+.digital-health-systems {
+  @include make-bg(hero, '../../pages/toolkits/digital-health-systems/hero')
+}
+
 //images of highlights for business-development-highlights 
 .business-development-highlights-one {
   @include background-cover('../../pages/toolkits/highlights/business-development/business-development-highlights-one.jpg');
@@ -143,6 +147,19 @@
 
 .mobile-data-collection-highlight-three{
   @include background-cover('../../pages/toolkits/highlights/mobile-data-collection/mobile-data-collection-highlight-three.jpg')
+}
+
+// images of highlights for digital health systems-highlights
+.digital-health-systems-highlights-one {
+  @include background-cover('../../pages/toolkits/highlights/digital-health-systems/highlights-one.jpg');
+}
+
+.digital-health-systems-highlights-two {
+  @include background-cover('../../pages/toolkits/highlights/digital-health-systems/highlights-two.jpg');
+}
+
+.digital-health-systems-highlights-three {
+  @include background-cover('../../pages/toolkits/highlights/digital-health-systems/highlights-three.jpg');
 }
 
 .max-width-initial {

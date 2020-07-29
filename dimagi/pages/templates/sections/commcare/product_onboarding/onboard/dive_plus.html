@@ -1,0 +1,52 @@
+{% extends 'sections/commcare/product_onboarding/onboard/_base.html' %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block feature_class %}deep-dive purple-border{% endblock %}
+{% block icon_class %}purple-icon{% endblock %}
+{% block title_class %}purple{% endblock %}
+{% block list_class %}purple-check{% endblock %}
+
+{% block icon %}
+  {% include "svg/commcare/onboarding/dive_plus.html" %}
+{% endblock %}
+
+{% block feature_title %}
+  {% blocktrans %}
+    Deep Dive Plus
+  {% endblocktrans %}
+{% endblock %}
+
+{% block feature_price %}
+  {% blocktrans %}
+    $7500
+  {% endblocktrans %}
+{% endblock %}
+
+{% block feature_description %}
+  {% blocktrans %}
+    Perfect for organizations looking to deploy multiple applications
+    or involve multiple country leads in their onboarding of CommCare.
+    Onboarding covers several training topics allowing organizations
+    to harness the power of CommCare’s most advanced self-service features.
+  {% endblocktrans %}
+{% endblock %}
+
+{% block features_list %}
+  <li>
+    {% blocktrans %}
+      20 hours of Q & A or feature-based training sessions
+    {% endblocktrans %}
+  </li>
+  <li>
+    {% blocktrans %}
+      Direct access to Customer Success Support in between sessions
+    {% endblocktrans %}
+  </li>
+  <li>
+    {% blocktrans %}
+      Advanced support for deploying multiple applications or
+      the same app across multiple geographies
+    {% endblocktrans %}
+  </li>
+{% endblock %}

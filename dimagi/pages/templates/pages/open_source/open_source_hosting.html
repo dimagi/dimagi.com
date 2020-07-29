@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block title %}{% blocktrans %}
+  CommCare by Dimagi | Open Source Hosting
+{% endblocktrans %}{% endblock %}
+
+{% block description %}{% blocktrans %}
+  The CommCare platform can be hosted in a variety of ways to best suit 
+  your program’s unique circumstances and requirements.
+{% endblocktrans %}{% endblock %}
+
+{% block body_class %}products-commcare-page tucked-hero{% endblock %}
+
+{% block stylesheets %}
+  {% compress css %}
+    <link href="{% sass_src 'style/pages/open_source/open_source_hosting.scss' %}" rel="stylesheet" media="screen" type="text/css" />
+  {% endcompress %}
+{% endblock %}
+
+{% block hero %}
+  <div class="blue-theme">
+    <section class="hero hero-blog" id="hero"></section>
+  </div>
+{% endblock %}
+
+{% block content %}
+  <section class="blue-theme">
+    {% include "sections/open_source/open_source_hosting/sub_nav.html" %}
+    {% include "sections/open_source/open_source_hosting/overview.html" %}
+    {% include "sections/open_source/open_source_hosting/summary.html" %}
+    {% include "sections/open_source/open_source_hosting/contact.html" %}
+    {% include "sections/open_source/open_source_hosting/support.html" %}
+    {% include "sections/open_source/open_source_hosting/resources.html" %}
+    {% include "sections/open_source/open_source_hosting/testimonial.html" %}
+  </section>
+{% endblock %}
+
+{% block modals %}
+    {% include "sections/open_source/open_source_hosting/detailed_comparison/modal.html" %}
+{% endblock %}

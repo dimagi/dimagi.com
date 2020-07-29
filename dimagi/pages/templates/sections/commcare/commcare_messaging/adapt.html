@@ -1,0 +1,25 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="adapt-to-remote border-top accent-gray-bg blue-theme"
+         id="adapt-to-remote">
+  <div class="content pad-vert-medium">
+    <div class="align-center gap-bottom-small">
+      <h2 class="blue capitalize">
+        {% blocktrans %}
+          Adapt Your Programs for Remote Engagement
+        {% endblocktrans %}
+      </h2>
+    </div>{# .intro #}
+
+    <div class="content-width-large grid-2-at-medium gap-bottom-small">
+      {% include "sections/commcare/commcare_messaging/adapt/sms.html" %}
+      {% include "sections/commcare/commcare_messaging/adapt/deploy.html" %}
+    </div>{# .grid-2-at-medium #}
+
+    <div class="align-center pad-top-small messaging-work">
+      {% include "partials/wistia_popover.html" with wistia_id='36pgyrmnlm' text='See how it works >' %}
+    </div>{# .align-center #}
+    
+  </div>{# .content #}
+</section>
