@@ -17,7 +17,7 @@
     small: 230px,
     medium: 357px,
     large: 346px,
-    extra-large: 450px,
+    extra-large: 445px,
   );
   @include make-bg(image, '../../pages/home/focus_mdm/focus', $_base-height, $_height-by-size, '.png');
 
@@ -41,7 +41,7 @@
   @media (min-width: $width-desktop-xl) {
     .off-grid {
       bottom: 0;
-      top: 12%;
+      top: 0;
       left: 0;
       position: absolute;
       right: auto;
@@ -97,8 +97,9 @@
 
   @media (min-width: $width-desktop-xl) {
     .off-grid-video {
-      bottom: 5%;
-      left: 3%;
+      bottom: 0;
+      top: 1%;
+      left: 2%;
       position: absolute;
       right: auto;
       width: 50%;
@@ -119,8 +120,10 @@
 .global-services {
   $_base-height: 195px;
   $_height-by-size: (
-    small: 410px,
-    medium: 316px,
+    small: 270px,
+    medium: 376px,
+    large: 316px,
+    extra-large: 316px,
   );
   @include make-bg(services, '../../pages/home/global_services/services', $_base-height, $_height-by-size);
 }
@@ -140,4 +143,8 @@
 
 .video-intro .image {
   @include background-cover('../../pages/home/video-intro-banner.jpg');
+}
+
+.service-list {
+  color: $color-text;
 }

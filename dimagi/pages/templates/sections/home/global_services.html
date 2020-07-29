@@ -1,16 +1,16 @@
 {% load i18n %}
 {% load dimagidotcom %}
 
-<section class="global-services accent-gray-bg turquoise-theme"
+<section class="global-services accent-gray-bg turquoise-theme border-bottom"
          id="global-services">
-  <div class="content lead-text pad-vert-medium">
+  <div class="content pad-vert-medium">
     <div class="gap-bottom-small content-width-medium">
       <h2 class="turquoise align-center">
         {% blocktrans %}
           Our Experts Are Here to Help
         {% endblocktrans %}
       </h2>
-      <p class="align-center">
+      <p class="align-center lead-text">
         {% blocktrans %}
           Our experienced Global Services team can support all aspects of 
           program deployment, from application design and rollout to 
@@ -20,56 +20,56 @@
     </div>{# .intro #}
 
     <div class="grid-2-at-medium gap-bottom-small">
-      <div class="column pad-top-small">
+      <div class="column pad-top-small pad-right-small">
         <div class="services white-lazy-bg"
              data-lazybg="true"></div>
       </div>{# .column #}
 
       <div class="column pad-right-medium-at-medium pad-top-small">
-        <ul class="check-list pad-bottom-small gap-top-none">
-          <li>
-            <h6 class="theme-color gap-bottom-none">
+        <ul class="check-list pad-bottom-small">
+          <li class="pad-bottom-base">
+            <h6 class="service-list gap-bottom-none">
               {% blocktrans %}
                 Leverage Our Experience
               {% endblocktrans %}
             </h6>
-            <p>
+            <p class="lead-text">
               {% blocktrans %}
                 10+ years of experience on more than 650 projects
               {% endblocktrans %}
             </p>
           </li>
-          <li>
-            <h6 class="theme-color gap-bottom-none">
+          <li class="pad-bottom-base">
+            <h6 class="service-list gap-bottom-none">
               {% blocktrans %}
                 Design for the User
               {% endblocktrans %}
             </h6>
-            <p>
+            <p class="lead-text">
               {% blocktrans %}
                 An agile, user-centered design methodology to maximize impact
               {% endblocktrans %}
             </p>
           </li>
-          <li>
-            <h6 class="theme-color gap-bottom-none">
+          <li class="pad-bottom-base">
+            <h6 class="service-list gap-bottom-none">
               {% blocktrans %}
                 Get Help at Any Stage
               {% endblocktrans %}
             </h6>
-            <p>
+            <p class="lead-text">
               {% blocktrans %}
                 A range of services from app design to user training and analytics
               {% endblocktrans %}
             </p>
           </li>
           <li>
-            <h6 class="theme-color gap-bottom-none">
+            <h6 class="service-list gap-bottom-none">
               {% blocktrans %}
                 Build for the Future
               {% endblocktrans %}
             </h6>
-            <p>
+            <p class="lead-text">
               {% blocktrans %}
                 Sustainable systems to support future growth
               {% endblocktrans %}
@@ -79,7 +79,7 @@
       </div>{# .column #}
     </div>{# .grid-2-at-medium #}
 
-    <p class="align-center">
+    <p class="align-center pad-top-small">
       <a class="arrow "
          href="{% url 'services' %}">
         {% blocktrans %}
