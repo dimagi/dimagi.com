@@ -2,18 +2,18 @@
 {% load i18n %}
 
 <section class="video border-vert blue-theme pad-left-large-at-large">
-  <div class="content pad-bottom-medium-at-large pad-top-small gap-vert-medium-at-medium">
+  <div class="content-width-large pad-bottom-medium-at-large pad-top-small gap-vert-large-at-medium">
     <div class="grid grid-2-at-large grid-1-at-medium grid-reverse">
       <div class="column">
         <div class="gap-bottom-line">
           <h4 class="align-left-at-medium align-center gap-top-small theme-icon">
             {% include "svg/commcare/logo.html" %}
           </h4>
-          <h3 class="align-left-at-medium align-center blue">
+          <h2 class="align-left-at-medium align-center blue">
             {% blocktrans %}
               Build Powerful Mobile and Web Apps
             {% endblocktrans %}
-          </h3>
+          </h2>
           <p class="align-left-at-medium align-center lead-text">
             {% blocktrans %}
               CommCare’s drag-and-drop application builder allows you to create 
@@ -35,7 +35,7 @@
       </div> {# .column #}
     </div>{# .grid #}
   </div>{# .content #}
-  <div class="off-grid-video white-lazy-bg"
+  <div class="off-grid white-lazy-bg"
        data-lazybg="true">
     {% include "partials/wistia_embed_autoplay.html" with wistia_id='gx2a7tvlh6' %}
   </div>

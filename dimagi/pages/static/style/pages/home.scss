@@ -11,6 +11,45 @@
   max-width: 100%;
 }
 
+.video {
+  @media (min-width: $width-desktop-lg) {
+    .off-grid {
+      bottom: 10%;
+      left: 3%;
+      position: absolute;
+      right: auto;
+      width: 50%;
+      z-index: -1;
+    }
+
+    .content {
+      position: relative;
+      z-index: 2;
+    }
+  }
+
+  @media (min-width: $width-desktop-xl) {
+    .off-grid {
+      bottom: 0;
+      top: 9%;
+      left: 2%;
+      position: absolute;
+      right: auto;
+      width: 50%;
+      z-index: -1;
+    }
+
+    .content {
+      position: relative;
+      z-index: 2;
+    }
+  }
+
+  .bg-loader {
+    background-color: $color-white;
+  }
+}
+
 .focus-mdm {
   $_base-height: 210px;
   $_height-by-size: (
@@ -24,7 +63,7 @@
   @media (min-width: $width-desktop-lg) {
     .off-grid {
       bottom: 7%;
-      top: 26%;
+      top: 20%;
       left: 0;
       position: absolute;
       right: auto;
@@ -41,7 +80,7 @@
   @media (min-width: $width-desktop-xl) {
     .off-grid {
       bottom: 0;
-      top: 0;
+      top: 6%;
       left: 0;
       position: absolute;
       right: auto;
@@ -62,7 +101,7 @@
 
 @media (min-width: $width-desktop-lg) {
   .focus-info {
-    width: 50%;
+    width: 45%;
   }
 }
 
@@ -75,45 +114,6 @@
 @media (max-width: $width-desktop - 1px) {
   .focus-info {
     width: 100%;
-  }
-}
-
-.video {
-  @media (min-width: $width-desktop-lg) {
-    .off-grid-video {
-      bottom: 10%;
-      left: 3%;
-      position: absolute;
-      right: auto;
-      width: 50%;
-      z-index: -1;
-    }
-
-    .content {
-      position: relative;
-      z-index: 2;
-    }
-  }
-
-  @media (min-width: $width-desktop-xl) {
-    .off-grid-video {
-      bottom: 0;
-      top: 1%;
-      left: 2%;
-      position: absolute;
-      right: auto;
-      width: 50%;
-      z-index: -1;
-    }
-
-    .content {
-      position: relative;
-      z-index: 2;
-    }
-  }
-
-  .bg-loader {
-    background-color: $color-white;
   }
 }
 
