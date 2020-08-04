@@ -1,0 +1,16 @@
+{% extends "sections/pillar/community_health_worker/chapter2/list/_base.html" %}
+{% load i18n %}
+
+{% block icon %}
+  {% include "svg/pillar/chw/chapter2/medical.html" %}
+{% endblock %}
+
+{% block heading %}{% blocktrans %}
+  Medical Supplies
+{% endblocktrans %}{% endblock %}
+
+{% block description %}{% blocktrans %}
+  CHWs can rely on local supply centers for the medical supplies they need. The
+  problem comes when they show up to find stock-outs in the facilities, whether
+  due to limited program resources or poor supply chain management.
+{% endblocktrans %}{% endblock %}

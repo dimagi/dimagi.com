@@ -1,0 +1,57 @@
+{% extends "sections/pillar/community_health_worker/chapter4/accordion/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block accordion_collapsed %}collapsed{% endblock %}
+
+{% block accordion_header %}
+  {% blocktrans %}
+    The community health worker model can help reduce costs
+  {% endblocktrans %}
+{% endblock %}
+
+{% block accordion_image_class%}costs{% endblock %}
+
+{% block accordion_content %}
+  <h4 class="purple">
+    {% blocktrans %}
+      The community health worker model can help reduce costs
+    {% endblocktrans %}
+  </h4>
+  <p class="chw-accordion-sub">
+    {% blocktrans %}
+      Measuring return on investment of outreach by Community Health Workers
+    {% endblocktrans %}
+  </p>
+  <blockquote>
+    <p class="purple">
+      {% blocktrans %}
+        After interaction with a CHW, primary and specialty care visits
+        increased and urgent care, inpatient, and outpatient behavioral
+        health care utilization decreased, resulting in a reduction of
+        monthly uncompensated costs by $14,244.
+      {% endblocktrans %}
+    </p>
+  </blockquote>
+  <p>
+    {% blocktrans %}
+      A study published in the Journal of Health Care for the Poor and
+      Underserved reviewed the potential cost savings and return on
+      investment from implementing community health worker interventions.
+      The study explains that CHW programs “are effective in improving
+      access to health care, promoting client knowledge and behavior
+      change, and contributing to improved health status of individuals,”
+      but that few studies have also appreciated the potential return on
+      investment of more than 2-to-1 that programs can achieve by using the model.
+    {% endblocktrans %}
+  </p>
+  <p>
+    <a href="https://muse.jhu.edu/article/193724/summary"
+       class="button button-purple white arrow"
+       target="_blank">
+      {% blocktrans %}
+        Learn More
+      {% endblocktrans %}
+    </a>
+  </p>
+{% endblock %}

@@ -1,0 +1,53 @@
+{% extends "sections/pillar/community_health_worker/chapter4/accordion/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block accordion_content_show %}{% endblock %}
+
+{% block accordion_header %}
+  {% blocktrans %}
+    Community health workers programs can improve health outcome
+  {% endblocktrans %}
+{% endblock %}
+
+{% block accordion_image_class%}health-outcomes{% endblock %}
+
+{% block accordion_content %}
+  <h4 class="purple">
+    {% blocktrans %}
+      Community health workers programs can improve health outcome
+    {% endblocktrans %}
+  </h4>
+  <p class="chw-accordion-sub">
+    {% blocktrans %}
+      Outcomes of Community Health Worker Interventions
+    {% endblocktrans %}
+  </p>
+  <blockquote>
+    <p class="purple chw-accordion-heading1">
+      {% blocktrans %}
+        CHWs can serve as a means of improving outcomes for underserved
+        populations for some health conditions.
+      {% endblocktrans %}
+    </p>
+  </blockquote>
+  <p>
+    {% blocktrans %}
+      A literature review by RTI International found that a community health
+      worker model will improve health outcomes for underserved or
+      low-resource communities depending on the health conditions they face.
+      For instance, CHW interventions were found to have the greatest effect
+      compared to alternatives when used for disease prevention, asthma
+      management, cervical cancer screening, and mammography screening outcomes.
+    {% endblocktrans %}
+  </p>
+  <p>
+    <a href="http://refugeehealthta.org/wp-content/uploads/2012/07/comhwork-1.pdf"
+       class="button button-purple white arrow"
+       target="_blank">
+      {% blocktrans %}
+        Learn More
+      {% endblocktrans %}
+    </a>
+  </p>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<article class="epic green-theme" id="chapter-3">
+
+  <section class="parallax-ch3-1 epic-cover"
+           data-lazybg="true">
+    <div class="content content-width-large">
+      <h1 class="white section-header" {% if request.is_amp %} amp-fx="fade-in" data-duration="1000ms" {% endif %}>
+        {% blocktrans %}
+          <span class="section-number gap-top-none">3</span>
+          <span class="pad-left-medium-at-medium">
+            National-Scale Community
+            Health Worker Initiatives
+          </span>
+        {% endblocktrans %}
+      </h1>
+    </div> {# .content #}
+  </section>  
+
+  {% include "sections/pillar/community_health_worker/chapter3/part1.html" %}
+  {% include "sections/pillar/community_health_worker/chapter3/part2.html" %}
+
+</article>

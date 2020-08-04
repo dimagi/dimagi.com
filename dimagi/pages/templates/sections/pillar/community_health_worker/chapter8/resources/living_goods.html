@@ -1,0 +1,41 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="mhp-case-study orange-lightest-bg pad-vert-small pad-horz-line gap-bottom-line">
+    <div class="grid-1">
+      <h4 class="orange-dark">
+        {% blocktrans %}
+          Living Goods’ Digital Health Guide for Community Health Worker Programs
+        {% endblocktrans %}
+      </h4>
+      <p>
+        {% blocktrans %}
+          This digital health maturity model helps governments and other community
+          health implementers grow effective digital health programs for the
+          community level. The model evaluates three domains: (1) community health
+          programs, (2) policy, funding, & technical infrastructure, and (3) existing
+          health technologies, which positions health systems on a maturity level
+          based on a 5-staged continuum scale. Along with a toolkit, the model helps
+          programs indentify areas of prioirity that inform strategy development,
+          investement cases, and a structured pathway to implementing a scalable
+          sustainable digital health program for community health.
+        {% endblocktrans %}
+      </p>
+    </div>{# .grid-1 #}
+    <div class="grid-2-at-medium grid-1-at-small pad-top-line grid-reverse">
+      <div class="column align-right">
+        {% include "svg/pillar/chw/chapter8/lg.html" %}
+      </div>
+      <div class="column">
+        <p class="pad-top-line">
+          <a href="https://livinggoods.org/maturity-model/"
+             class="button button-accent-gray arrow orange-dark read-more"
+             target="_blank">
+            {% blocktrans %}
+              Learn More
+            {% endblocktrans %}
+          </a>
+        </p>
+      </div>
+    </div>
+</section>

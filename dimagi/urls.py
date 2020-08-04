@@ -83,6 +83,8 @@ urlpatterns = [
 
     url(r'^data-collection/$',
         pillar.data_collection, name='data_collection'),
+    url(r'^community-health-worker/$',
+        pillar.community_health_worker, name='community_health_worker'),
 
     url(r'^blog/mobile-data-collection-standards/$',
         redirect.blog('mobile-data-collection-mobile-survey-design')),
