@@ -14,34 +14,24 @@
 .video {
   @media (min-width: $width-desktop-lg) {
     .off-grid {
-      bottom: 10%;
+      bottom: 20%;
       left: 3%;
       position: absolute;
       right: auto;
       width: 50%;
       z-index: -1;
     }
-
-    .content {
-      position: relative;
-      z-index: 2;
-    }
   }
 
   @media (min-width: $width-desktop-xl) {
     .off-grid {
       bottom: 0;
-      top: 9%;
+      top: 15%;
       left: 2%;
       position: absolute;
       right: auto;
       width: 50%;
       z-index: -1;
-    }
-
-    .content {
-      position: relative;
-      z-index: 2;
     }
   }
 
@@ -70,11 +60,6 @@
       width: 149%;
       z-index: -1;
     }
-
-    .content {
-      position: relative;
-      z-index: 2;
-    }
   }
 
   @media (min-width: $width-desktop-xl) {
@@ -86,11 +71,6 @@
       right: auto;
       width: 150%;
       z-index: -1;
-    }
-
-    .content {
-      position: relative;
-      z-index: 2;
     }
   }
 
