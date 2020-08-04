@@ -3,7 +3,7 @@
 
 <section class="impact align-center accent-gray-bg border-top"
          id="impact">
-  <div class="content pad-vert-medium pad">
+  <div class="content pad-vert-medium">
     <div class="content-width-medium">
       <h2 class="orange gap-top-line">
         {% blocktrans %}
@@ -24,7 +24,7 @@
            data-lazybg="true"></div>
     </div>{# .content #}
 
-    <div class="impact pad-top-small">
+    <div class="impact pad-top-small pad-bottom-line">
       <div class="impact-grid">
         <div class="grid grid-2-at-large grid-1-at-medium grid-row-equal-heights ">
           <div class="column pad-top-small blue-theme">
@@ -141,15 +141,6 @@
           </div> {# .column #}
         </div>
       </div>
-    </div>
-
-    <p class="align-center pad-top-large pad-bottom-base">
-      <a class="arrow orange {% click_body 'about' %}"
-         href="{% url 'about' %}">
-        {% blocktrans %}
-          Learn more about Dimagi and our mission
-        {% endblocktrans %}
-      </a>
-    </p>
+    </div> 
   </div>
 </section>
