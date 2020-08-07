@@ -22,14 +22,8 @@
     </a>
     <div class="destinations">
       <div class="content">
-        <a href="#executive-committee">
-          {% trans "Exec. Committee" %}
-        </a>
         <a href="#management">
           {% trans "Management" %}
-        </a>
-        <a href="#directors">
-          {% trans "Directors" %}
         </a>
         {% for office in offices %}
           <a href="#{{ office.slug }}">

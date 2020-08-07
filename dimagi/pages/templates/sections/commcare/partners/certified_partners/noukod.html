@@ -1,35 +1,39 @@
 {% load i18n %}
 {% load dimagidotcom %}
 
-<section class="oikoi">
-  <div class="feature-projects pad-vert-line pad-horz-line">
-    <div class="feature-partner-noukod align-center gap-top-medium pad-bottom-base">
-      <div class="image feature-project-logo"
-           data-lazybg="true"></div>
+<section class="noukod">
+  <div class="content-width-large feature-projects pad-vert-line pad-horz-line">
+    <div class="grid-flex-at-medium">
+      <div class="feature-partner-noukod column pad-top-small flex-align-left">
+        <div class="image"
+             data-lazybg="true"></div>
+        </div>
+      <div class="column pad-left-small">
+        <h6 class="uppercase theme-color align-left pad-bottom-base">
+          {% blocktrans %}
+            Noukod
+          {% endblocktrans %}
+        </h6>
+        <p class="align-left">
+          {% blocktrans %}
+            NouKòd (means “We Code” in Haitian Creole) is a mission driven startup 
+            dedicated to creating technology jobs in Haiti. NouKòd provides training 
+            in programming and other technical skills, and then connects creative and 
+            talented Haitian youth with technology jobs from Haitian & US-based 
+            companies. NouKòd is committed to providing equal opportunity to Haitian 
+            women and our goal is to train and employ at least 50% women.
+          {% endblocktrans %}
+        </p>
+        <p class="align-left">
+          <a class="arrow"
+             href="https://noukod.com/"
+             target="_blank">
+            {% blocktrans %}
+              Contact Noukod
+            {% endblocktrans %}
+          </a>
+        </p>
+      </div>
     </div>
-    <h6 class="align-center uppercase theme-color align-left pad-bottom-base">
-      {% blocktrans %}
-        Noukod
-      {% endblocktrans %}
-    </h6>
-    <p class="align-center content-width-small">
-      {% blocktrans %}
-        NouKòd (means “We Code” in Haitian Creole) is a mission driven startup 
-        dedicated to creating technology jobs in Haiti. NouKòd provides training 
-        in programming and other technical skills, and then connects creative and 
-        talented Haitian youth with technology jobs from Haitian & US-based 
-        companies. NouKòd is committed to providing equal opportunity to Haitian 
-        women and our goal is to train and employ at least 50% women.
-      {% endblocktrans %}
-    </p>
-    <p class="align-center">
-      <a class="button uppercase"
-         href="https://noukod.com/"
-         target="_blank">
-        {% blocktrans %}
-          Contact Noukod
-        {% endblocktrans %}
-      </a>
-    </p>
   </div>{# .feature-projects #}
-</section>
+</section>{# .noukod #}

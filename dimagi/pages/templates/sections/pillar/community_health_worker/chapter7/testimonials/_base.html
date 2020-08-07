@@ -1,0 +1,28 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<div class="carousel-slide
+            content-width-large
+            pad-horz-medium-at-medium
+            pad-horz-small
+            pad-vert-medium-at-medium
+            pad-vert-small
+            white-bg
+            border-vert
+            border-horz">
+
+  <div class="testimonial-content align-left">
+    <div class="content-width-large">
+      <blockquote>
+        <p class="content-width-medium">
+          {% block quote %}
+          {% endblock %}
+        </p>
+      </blockquote>
+      <p class="orange uppercase content-width-medium">
+        {% block author %}
+        {% endblock %}
+      </p>
+    </div>
+  </div>
+</div>

@@ -56,6 +56,18 @@
     }
   }
 
+  .accordion-color {
+    .accordion-header {
+      border-radius: $border-radius $border-radius 0 0;
+    }
+
+    &.collapsed {
+      .accordion-header {
+        border-radius: $border-radius;
+      }
+    }
+  }
+
   .accordion-faq-color {
     .accordion-header {
       border-radius: $border-radius $border-radius 0 0;
@@ -69,6 +81,27 @@
       .accordion-header {
         border-radius: $border-radius;
       }
+    }
+  }
+
+  .accordion-arrow {
+    .accordion-header > *:before { // scss-lint:disable NestingDepth
+      content: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCIgd2lkdGg9IjEyIiBoZWlnaHQ9IjEyIj4KICA8cG9seWxpbmUgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRkZGRkZGIiBzdHJva2Utd2lkdGg9IjQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBwb2ludHM9IgoJMTguNSw1LjggMTAsMTQuMiAxLjUsNS44ICI+PC9wb2x5bGluZT4KPC9zdmc+');
+      display: block;
+      float: right;
+      height: 12px;
+      margin-top: 17px;
+      margin-right: -5px;
+      width: 12px;
+      transform: rotate(180deg);
+    }
+    &.collapsed .accordion-header > *:before {
+      content: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCIgd2lkdGg9IjEyIiBoZWlnaHQ9IjEyIj4KICA8cG9seWxpbmUgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRkZGRkZGIiBzdHJva2Utd2lkdGg9IjQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBwb2ludHM9IgoJMTguNSw1LjggMTAsMTQuMiAxLjUsNS44ICI+PC9wb2x5bGluZT4KPC9zdmc+');
+      transform: none;
+      height: 12px;
+      width: 12px;
+      margin-top: -1px;
+      margin-right: -5px;
     }
   }
 
@@ -102,6 +135,10 @@
     .#{$_name}-theme .accordion-icon {
       stroke: $_color;
     }
+    .#{$_name}-theme .accordion-color .accordion-header {
+      background-color: $_color;
+      border: none;
+    }
     .#{$_name}-theme .accordion-faq-color .accordion-header {
       border: none;
     }
@@ -117,4 +154,3 @@
   }
 
 }
-

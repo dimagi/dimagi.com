@@ -1,0 +1,22 @@
+{% load dimagidotcom %}
+
+<div class="accordion accordion-color accordion-arrow gap-top-base {% block accordion_collapsed %}{% endblock %}">
+  <div class="accordion-header accordion-color-header">
+    <h4 class="pad-small white">
+      {% block accordion_header %}
+      {% endblock %}
+    </h4>
+  </div>
+  <div class="accordion-content purple-lightest-bg border-none"{% block accordion_content_show %} style="display: none;"{% endblock %}>
+    <div class="grid-flex-at-medium grid-1-at-small">
+      <div class="column-at-medium gap-bottom-none gap-top-small">
+        <div class="{% block accordion_image_class %}{% endblock %} white-lazy-bg gap-top-small gap-bottom-line"
+             data-lazybg="true"></div>
+      </div>
+      <div class="column-at-medium pad-vert-small pad-left-small pad-right-medium">
+        {% block accordion_content %}
+        {% endblock %}
+      </div>
+    </div>
+  </div>
+</div>

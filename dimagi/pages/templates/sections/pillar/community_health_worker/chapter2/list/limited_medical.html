@@ -1,0 +1,16 @@
+{% extends "sections/pillar/community_health_worker/chapter2/list/_base.html" %}
+{% load i18n %}
+
+{% block icon %}
+  {% include "svg/pillar/chw/chapter2/limited_medical.html" %}
+{% endblock %}
+
+{% block heading %}{% blocktrans %}
+  Limited medical records and patient documentation
+{% endblocktrans %}{% endblock %}
+
+{% block description %}{% blocktrans %}
+  Because of the limited medical infrastructure in the regions where the CHWs
+  work, their patients and beneficiaries will rarely have an accessible medical
+  history, decreasing their quality of care and ability to follow-up.
+{% endblocktrans %}{% endblock %}

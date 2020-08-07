@@ -1,0 +1,441 @@
+@import 'app/mixins/background';
+@import 'app/variables/colors';
+@import 'app/variables/sizes';
+@import 'app/variables/type';
+
+#intro {
+  @include make-bg(epic-cover, '../../../pages/pillar/chw/intro/hero');
+}
+
+.sub-nav-menu-active .sub-nav .dropdown {
+  height: 350px;
+}
+
+.sub-nav a:not(.button).social {
+  cursor: pointer;
+  svg * {
+    fill: $color-text;
+    transition: fill 150ms ease-in-out;
+  }
+  svg {
+  	cursor: pointer;
+    margin-top: -1px;
+    height: 20px;
+    width: 20px;
+  }
+  &:hover svg * {
+    fill: $color-blue;
+  }
+}
+
+$_max-mobile: $width-desktop - 1px;
+@media (max-width: $_max-mobile) {
+  .sub-nav-menu-active .sub-nav .dropdown {
+    height: auto;
+  }
+
+  .health-outcomes, .costs, .behaviour, .cost-effective {
+    width: auto !important;
+    margin-top: 0px !important;
+  }
+
+  .chw-challenges {
+    margin: auto;
+  
+      svg {
+        margin-left: 0px !important;
+      }
+      
+  }
+}
+
+.dropdown .social-links {
+  padding-top: $space-small;
+  .social {
+    display: inline-block;
+    padding-right: $space-base;
+  }
+}
+
+a:not(.button).tile-more {
+  background: transparent;
+  color: $color-white;
+  padding: $space-small;
+  padding-bottom: $space-small + $space-base;
+  h2 {
+    font-weight: $font-weight-medium;
+  }
+  p:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  &:hover {
+    color: $color-white;
+  }
+  &::before {
+    border-color: transparent !important;
+  }
+  &::after {
+    border-color: $color-white !important;
+  }
+}
+
+.tile-chapter {
+  position: relative;
+  &:after {
+    border-width: 10px !important; //scss-lint:disable ImportantRule
+  }
+  h2 {
+    color: $color-white;
+    font-size: $font-size-h3;
+    line-height: $line-height-header;
+  }
+  .chapter-number {
+  	color: $color-white;
+    font-size: 60px;
+    line-height: 60px;
+    position: absolute;
+    bottom: $space-small;
+  }
+}
+
+.parallax-ch1-1 {
+  @include make-parallax-bg(epic-cover, '../../../pages/pillar/chw/chapter1/hero');
+  height: auto !important; 
+}
+
+.parallax-ch2-1 {
+  @include make-parallax-bg(hero, '../../../pages/pillar/chw/chapter2/hero');
+  height: auto !important;
+}
+
+.parallax-ch3-1 {
+  @include make-parallax-bg(hero, '../../../pages/pillar/chw/chapter3/hero');
+  height: auto !important;
+}
+
+.parallax-ch4-1 {
+  @include make-parallax-bg(hero, '../../../pages/pillar/chw/chapter4/hero');
+  height: auto !important;
+}
+
+.parallax-ch5-1 {
+  @include make-parallax-bg(hero, '../../../pages/pillar/chw/chapter5/hero');
+  height: auto !important;
+}
+
+.parallax-ch6-1 {
+  @include make-parallax-bg(hero, '../../../pages/pillar/chw/chapter6/hero');
+  height: auto !important;
+}
+
+.parallax-ch7-1 {
+  @include make-parallax-bg(hero, '../../../pages/pillar/chw/chapter7/hero');
+  height: auto !important;
+}
+
+.parallax-ch8-1 {
+  @include make-parallax-bg(hero, '../../../pages/pillar/chw/chapter8/hero');
+  height: auto !important;
+}
+
+.epic {
+  $_base-height: 190px;
+  $_height-by-size: (
+    small: 249px,
+    medium: 399px,
+  );
+}
+
+#chapter-intro {
+  $_base-height: 150px;
+  $_height-by-size: (
+    small: 324px,
+    medium: 390px,
+  );
+  @include make-bg(community-image, '../../../pages/pillar/chw/numbers/numbers', $_base-height, $_height-by-size);
+}
+
+#chapter-4-accordion {
+  $_base-height: 200px;
+  $_height-by-size: (
+    small: 250px,
+    medium: 400px,
+  );
+  @include make-bg(health-outcomes, '../../../pages/pillar/chw/chapter4/evidence/health/hero', $_base-height, $_height-by-size);
+  @include make-bg(cost-effective, '../../../pages/pillar/chw/chapter4/evidence/cost-effective/hero', $_base-height, $_height-by-size);
+  @include make-bg(behaviour, '../../../pages/pillar/chw/chapter4/evidence/behaviour/hero', $_base-height, $_height-by-size);
+  @include make-bg(costs, '../../../pages/pillar/chw/chapter4/evidence/costs/hero', $_base-height, $_height-by-size);
+}
+
+.health-outcomes {
+  width: 200px;
+  margin-top: 0px !important;
+}
+
+.costs {
+  width: 200px;
+  margin-top: 0px !important;
+}
+
+.behaviour {
+  width: 200px;
+  margin-top: 0px !important;
+}
+
+.cost-effective {
+  width: 200px;
+  margin-top: 0px !important;
+}
+
+#chapter-1 {
+  $_base-height: auto;
+  $_height-by-size: (
+    small: 210px,
+    medium: 390px,
+  );
+  @include make-bg(community-image, '../../../pages/pillar/chw/chapter1/roles/health-worker', $_base-height, $_height-by-size);
+}
+
+#chapter-2 {
+  $_base-height: 190px;
+  $_height-by-size: (
+    small: 324px,
+    medium: 390px,
+  );
+  @include make-bg(child-growth-image, '../../../pages/pillar/dc/chapter2/growth', $_base-height, $_height-by-size);
+}
+
+#chapter-3 {
+  $_base-height: 247px;
+  $_height-by-size: (
+    small: 324px,
+    medium: 390px,
+  );
+  @include make-bg(agile-image, '../../../pages/pillar/dc/chapter3/align', $_base-height, $_height-by-size);
+}
+
+#chapter-4 {
+  $_base-height: 247px;
+  $_height-by-size: (
+    small: 324px,
+    medium: 390px,
+  );
+  @include make-bg(plan-image, '../../../pages/pillar/dc/chapter4/plan', $_base-height, $_height-by-size);
+}
+
+.section-header span {
+  line-height: 50px !important;
+  font-weight: 700 !important;
+}
+
+.section-number {
+  position: absolute;
+}
+
+#chapter-2 .child-growth-image .bg-loader {
+  background-size: 100% auto;
+}
+
+#chapter-3 .agile-image .bg-loader {
+  background-size: 100% auto;
+}
+
+#chapter-4 .plan-image .bg-loader {
+  background-size: 100% auto;
+}
+
+.blog_build {
+  $_base-height: 290px;
+  $_height-by-size: (
+    small: 390px,
+    medium: 390px,
+    large: 390px,
+    extra-large: 392px,
+  );
+  @include make-bg(blog_image, '../../../pages/blog/mobiledata_blog_page/blog_build/hero', $_base-height, $_height-by-size);
+  @media (min-width: $width-desktop) {
+    .off-grid {
+      bottom: 20px;
+      left: -337px;
+      position: absolute;
+      right: 0;
+      width: 100%;
+      z-index: 1;
+    }
+    
+    .content {
+      position: relative;
+      z-index: 2;
+    }
+  }
+  @media (min-width: $width-desktop-lg) {
+    .off-grid {
+      left: -180px;
+    }
+  }
+}
+
+blockquote.rowena p {
+  position: relative;
+
+  &:after{
+    position: absolute;
+    right: -10px;
+    bottom: 0;
+  }
+}
+
+.chw-border-left {
+  border-left: 5px solid turquoise;
+  padding-left: 10px;
+  line-height: 30px !important; //scss-lint:disable ImportantRule
+  margin-left: 8px;
+}
+
+.chw-tasks-card {
+  border-radius: 5px;
+  color: $color-text;
+}
+
+.chw-challenges {
+  background-color: $color-red;
+  height: 110px;
+  width: 110px;
+  border-radius: 100px;
+
+    svg {
+      margin-left: 20px;
+      margin-top: 22px;
+    }
+    
+}
+
+.chw-ethiopia-program {
+  width: 350px;
+}
+
+.chw-community ol {
+  li {
+    &:before {
+      background-color: $color-neutral;
+      color: $color-white;
+      width: 34px;;
+      height: -webkit-fill-available;
+      font-size: 25px;
+      padding-left: 10px;
+      padding-top: 28px;
+      content: counter(item) " ";
+      font-weight: bolder;
+    }
+  }
+}
+
+.mhp-case-study .image.mhp {
+  @include background-cover('../../../pages/pillar/chw/chapter6/mhp/mhp.jpg');
+}
+
+.mhp-case-study .image.mhp-map {
+  @include background-cover('../../../pages/pillar/chw/chapter6/mhp/mhp-map.jpg');
+}
+
+.tulasalud-case-study .image.tulasalud {
+  @include background-cover('../../../pages/pillar/chw/chapter6/tulasalud/tulasalud.jpg');
+}
+
+.tulasalud-case-study .image.tulasalud-map {
+  @include background-cover('../../../pages/pillar/chw/chapter6/tulasalud/tulasalud-map.jpg');
+}
+
+.lmrf-case-study .image.lmrf {
+  @include background-cover('../../../pages/pillar/chw/chapter6/lmrf/lmrf.jpg');
+}
+
+.lmrf-case-study .image.lmrf-map {
+  @include background-cover('../../../pages/pillar/chw/chapter6/lmrf/lmrf-map.jpg');
+}
+
+.gsid-case-study .image.gsid {
+  @include background-cover('../../../pages/pillar/chw/chapter6/gsid/gsid.jpg');
+}
+
+.gsid-case-study .image.gsid-map {
+  @include background-cover('../../../pages/pillar/chw/chapter6/gsid/gsid-map.jpg');
+}
+
+.video-intro .image {
+  @include background-cover('../../../pages/pillar/chw/chapter7/video.jpg');
+  height: 250px;
+  width: 270px;
+}
+
+.evideo-intro .image {
+  @include background-cover('../../../pages/pillar/chw/chapter7/evideo.jpg');
+  height: 200px;
+  width: 270px;
+}
+
+.helpful-sites .image.fhwc {
+  @include background-cover('../../../pages/pillar/chw/chapter8/helpful-sites/fhwc.jpg');
+  height: 250px;
+}
+
+.helpful-sites .image.chw {
+  @include background-cover('../../../pages/pillar/chw/chapter8/helpful-sites/chw.jpg');
+  height: 250px;
+}
+
+.helpful-sites .image.chr {
+  @include background-cover('../../../pages/pillar/chw/chapter8/helpful-sites/chr.jpg');
+  height: 250px;
+}
+
+.helpful-sites .image.ict {
+  @include background-cover('../../../pages/pillar/chw/chapter8/helpful-sites/ict.jpg');
+  height: 250px;
+}
+
+.stay-know .image.gdhn {
+  @include background-cover('../../../pages/pillar/chw/chapter8/stay-in-the-know/gdhn.jpg');
+  height: 250px;
+}
+
+.stay-know .image.hifa {
+  @include background-cover('../../../pages/pillar/chw/chapter8/stay-in-the-know/hifa.jpg');
+  height: 250px;
+}
+
+.stay-know .image.core {
+  @include background-cover('../../../pages/pillar/chw/chapter8/stay-in-the-know/core.jpg');
+  height: 250px;
+}
+
+.chw-links {
+  color: $color-text !important;
+  font-size: $font-size-small !important;
+  line-height: $space-base + 6 !important;
+  opacity: 0.7 !important;
+}
+
+.carousel-chapter-7 {
+  .carousel-slider {
+    transform: none;
+  }
+
+  .carousel-arrow .arrow-nav {
+    padding: 6px;
+  }
+}
+
+.chw-accordion-heading1 {
+  font-size: 23px !important;
+}
+
+.chw-footnotes {
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.chw-accordion-sub {
+  font-weight: 700 !important;
+}

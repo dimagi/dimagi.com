@@ -2,36 +2,40 @@
 {% load dimagidotcom %}
 
 <section class="oikoi">
-  <div class="feature-projects pad-vert-line pad-horz-line">
-    <div class="feature-partner-oikoi gap-top-medium pad-bottom-base">
-      <div class="image feature-project-logo"
-           data-lazybg="true"></div>
+  <div class="content-width-large feature-projects pad-vert-line pad-horz-line">
+    <div class="grid-flex-at-medium">
+      <div class="feature-partner-oikoi column pad-top-small flex-align-left">
+        <div class="image"
+             data-lazybg="true"></div>
+        </div>
+      <div class="column pad-left-small">
+        <h6 class="uppercase theme-color align-left pad-bottom-base">
+          {% blocktrans %}
+            OIKOI
+          {% endblocktrans %}
+        </h6>
+        <p class="align-left">
+          {% blocktrans %}
+            Oikoi integrates scientific research, emerging technologies, capacity 
+            building, and storytelling to create impact in challenging 
+            environments. Oikoi was Dimagi's first certified partner, and since 
+            2016 the company has developed CommCare apps for 37 teams, assisting 
+            or directly managing surveys in over 460,000 households across 15 
+            countries. Oikoi has trained 138 project staff and over 300 frontline 
+            workers in using CommCare—building capacity in more than 22 
+            institutions in the Asia-Pacific.
+          {% endblocktrans %}
+        </p>
+        <p class="align-left">
+          <a class="arrow"
+             href="https://oikoi.io/"
+             target="_blank">
+            {% blocktrans %}
+              Contact Oikoi
+            {% endblocktrans %}
+          </a>
+        </p>
+      </div>
     </div>
-    <h6 class="align-center uppercase theme-color align-left pad-bottom-base">
-      {% blocktrans %}
-        Oikoi
-      {% endblocktrans %}
-    </h6>
-    <p class="align-center content-width-small">
-      {% blocktrans %}
-        Oikoi integrates scientific research, emerging technologies, capacity 
-        building, and storytelling to create impact in challenging 
-        environments. Oikoi was Dimagi's first certified partner, and since 
-        2016 the company has developed CommCare apps for 37 teams, assisting 
-        or directly managing surveys in over 460,000 households across 15 
-        countries. Oikoi has trained 138 project staff and over 300 frontline 
-        workers in using CommCare—building capacity in more than 22 
-        institutions in the Asia-Pacific.
-      {% endblocktrans %}
-    </p>
-    <p class="align-center">
-      <a class="button uppercase"
-         href="https://oikoi.io/"
-         target="_blank">
-        {% blocktrans %}
-          Contact Oikoi
-        {% endblocktrans %}
-      </a>
-    </p>
   </div>{# .feature-projects #}
-</section>
+</section>{# .oikoi #}
