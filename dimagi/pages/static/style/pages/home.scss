@@ -13,25 +13,84 @@
 
 .video {
   @media (min-width: $width-desktop-lg) {
+    min-height: 580px;
+  }
+
+  @media (max-width: $width-desktop-lg) {
+    .wistia-container {
+      margin: 0 auto;
+      max-width: 700px;
+      padding-bottom: $space-base;
+    }
+  }
+  
+  @media (min-width: $width-desktop-lg) {
     .off-grid {
-      bottom: 20%;
-      left: 3%;
+      bottom: 0;
+      left: 1%;
       position: absolute;
       right: auto;
+      top: 23%;
       width: 50%;
       z-index: -1;
     }
   }
 
+  @media (min-width: 1112px) {
+    .off-grid {
+      left: 1%;
+      top: 22.5%;
+    }
+  }
+
+  @media (min-width: 1170px) {
+    .off-grid {
+      left: 1%;
+      top: 20%;
+    }
+  }
+
   @media (min-width: $width-desktop-xl) {
     .off-grid {
-      bottom: 0;
-      top: 12%;
       left: 2%;
-      position: absolute;
-      right: auto;
-      width: 50%;
-      z-index: -1;
+      top: 18%;
+    }
+  }
+
+  @media (min-width: 1330px) {
+    .off-grid {
+      top: 16%;
+    }
+  }
+
+  @media (min-width: 1370px) {
+    .off-grid {
+      top: 14%;
+    }
+  }
+
+  @media (min-width: 1430px) {
+    .off-grid {
+      top: 14%;
+    }
+  }
+
+  @media (min-width: 1447px) {
+    .off-grid {
+      top: 12%;
+    }
+  }
+
+  @media (min-width: 1530px) {
+    .off-grid {
+      top: 11%;
+    }
+  }
+
+  @media (min-width: 1590px) {
+    .wistia-container {
+      float: right;
+      width: 785px;
     }
   }
 
@@ -53,10 +112,10 @@
   @media (min-width: $width-desktop-lg) {
     .off-grid {
       bottom: 7%;
-      top: 20%;
       left: 0;
       position: absolute;
       right: auto;
+      top: 20%;
       width: 149%;
       z-index: -1;
     }
@@ -65,12 +124,15 @@
   @media (min-width: $width-desktop-xl) {
     .off-grid {
       bottom: 0;
+      left: 2.5%;
       top: 6%;
-      left: 0;
-      position: absolute;
-      right: auto;
       width: 150%;
-      z-index: -1;
+    }
+  }
+
+  @media (min-width: 1438px) {
+    .off-grid {
+      left: 0;
     }
   }
 
@@ -111,14 +173,14 @@
 .impact {
   $_base-height: 87px;
   $_height-by-size: (
-    small: 100px,
-    medium: 148px,
-    large: 184px,
+    small: 119px,
+    medium: 161px,
+    large: 198px,
     extra-large: 238px,
   );
+  @include make-bg(image, '../../pages/home/impact/launch', $_base-height, $_height-by-size);
 
   width: 100%;
-  @include make-bg(image, '../../pages/home/impact/launch', $_base-height, $_height-by-size);
 }
 
 .video-intro .image {
