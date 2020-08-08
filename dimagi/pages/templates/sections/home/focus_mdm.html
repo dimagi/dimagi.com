@@ -1,0 +1,34 @@
+{% load dimagidotcom %}
+{% load i18n %}
+
+<section class="focus-mdm purple-theme gap-right-medium-at-large gap-top-medium pad-bottom-base gap-bottom-large">
+  <div class="pad-bottom-medium-at-large pad-top-small pad-top-large-at-large">
+    <div class="content gap-bottom-line pad-left-small pad-bottom-line">
+      <h2 class="align-left-at-medium align-center theme-icon pad-top-small-at-large">
+        {% include "svg/focus_mdm/logo.html" %}
+      </h2>
+      <h2 class="focus-info align-left-at-medium align-center theme-color">
+        {% blocktrans %}
+          Manage Your Fleet of Devices
+        {% endblocktrans %}
+      </h2>
+      <p class="align-left-at-medium align-center focus-info lead-text pad-right-small">
+        {% blocktrans %}
+          With our mobile device management platform, you can control, 
+          monitor, and enforce mobile usage restrictions that increase 
+          the productivity of frontline workforces around the world.
+        {% endblocktrans %}
+      </p>
+      <div class="align-left-at-medium align-center pad-top-base">
+        <a class="arrow"
+           href="{% url 'focus_mdm' %}">
+          {% blocktrans %}
+            Learn More
+          {% endblocktrans %}
+        </a>
+      </div>
+    </div>
+  </div>{# .content #}
+  <div class="image off-grid white-lazy-bg"
+       data-lazybg="true"></div>
+</section>

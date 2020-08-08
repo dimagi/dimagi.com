@@ -16,6 +16,11 @@
     line-height: $space-line;
   }
 
+  .lead-text {
+    font-size: $font-size-large;
+    line-height: $space-line + 2px;
+  }
+
   .upperspaced {
     font-weight: $font-weight-medium;
     letter-spacing: 1px;

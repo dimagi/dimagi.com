@@ -1,38 +1,44 @@
 {% load dimagidotcom %}
 {% load i18n %}
 
-<section  class="video-intro pad-vert-medium"
-          id="video">
-  <div class="content content-width-medium pad-horz-small-at-medium align-center">
-    <div class="grid-flex-at-medium">
-
-      <div class="column flex-align-center flex-align-right-at-medium flex-video">
-        {% include "partials/wistia_popover.html" with wistia_id='9uvnpbecdy' show_play=True show_image=True %}
-      </div>{# .column #}
-
-      <div class="column flex-valign-middle-at-medium align-left-at-medium">
-        <div class="copy">
-          <h3 class="gap-bottom-base">
+<section class="video border-vert blue-theme pad-left-large-at-large">
+  <div class="content content-width-large-at-large pad-bottom-medium-at-large pad-top-small gap-vert-large-at-large">
+    <div class="grid grid-2-at-large grid-1-at-medium grid-reverse">
+      <div class="column">
+        <div class="gap-bottom-line-at-large pad-horz-small pad-right-none-at-large pad-left-base-at-large">
+          <h4 class="align-left-at-medium align-center gap-top-small theme-icon">
+            {% include "svg/commcare/logo.html" %}
+          </h4>
+          <h2 class="align-left-at-medium align-center blue">
             {% blocktrans %}
-              Technology for Social Impact
+              Build Powerful<br class="hide-at-medium" /><br class="hide-until-large" /> Mobile and Web Apps
             {% endblocktrans %}
-          </h3>
-          <p class="gap-bottom-base">
+          </h2>
+          <p class="align-left-at-medium align-center lead-text">
             {% blocktrans %}
-              Dimagi's platform, CommCare, is used by the world's leading NGOs
-              and government agencies to improve community-based data collection
-              and service delivery efforts globally.
+              CommCare’s drag-and-drop application builder allows you to create 
+              mobile and web apps for frontline workers to collect accurate data 
+              and deliver effective services.
             {% endblocktrans %}
           </p>
-          <a class="arrow {% click_body 'video-learn' %}"
-             href="{% url 'commcare' %}">
-            {% blocktrans %}
-              Learn more about CommCare
-            {% endblocktrans %}
-          </a>
-        </div>{# .copy #}
-      </div>{# .column #}
-
-    </div>{# .grid-flex-at-medium #}
+          <div class="align-left-at-medium align-center pad-top-base">
+            <a class="arrow"
+              href="{% url 'commcare' %}">
+              {% blocktrans %}
+                Learn More
+              {% endblocktrans %}
+            </a>
+          </div>
+        </div>
+      </div> {# .column #}
+      <div class="column">
+      </div> {# .column #}
+    </div>{# .grid #}
   </div>{# .content #}
+  <div class="off-grid white-lazy-bg"
+       data-lazybg="true">
+    <div class="wistia-container">
+      {% include "partials/wistia_embed_autoplay.html" with wistia_id='gx2a7tvlh6' %}
+    </div>
+  </div>
 </section>

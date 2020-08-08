@@ -11,109 +11,182 @@
   max-width: 100%;
 }
 
-.build {
-  $_base-height: 122px;
-  $_height-by-size: (
-    small: 186px,
-    medium: 298px,
-    large: 362px,
-    extra-large: 442px,
-  );
+.video {
+  @media (min-width: $width-desktop-lg) {
+    min-height: 580px;
+  }
 
-  width: 100%;
-  @include make-bg(image, '../../pages/home/build', $_base-height, $_height-by-size);
-}
-
-.commcare-stats {
-  border-radius: $border-radius;
-}
-
-.launch-digital-intervention {
-  $_base-height: 122px;
-  $_height-by-size: (
-    small: 186px,
-    medium: 298px,
-    large: 362px,
-    extra-large: 442px,
-  );
-
-  width: 100%;
-  @include make-bg(image, '../../pages/home/launch', $_base-height, $_height-by-size);
-}
-
-.video-intro .image {
-  @include background-cover('../../pages/home/video-intro-banner.jpg');
-  height: 160px;
-  width: 250px;
-}
-
-.workforce .image.testimonial1 {
-  @include background-cover('../../pages/home/workforce-1.jpg');
-}
-
-.workforce .image.testimonial2 {
-  @include background-cover('../../pages/home/workforce-2.jpg');
-}
-
-.workforce .image.testimonial3 {
-  @include background-cover('../../pages/home/workforce-3.jpg');
-}
-
-.awards {
-  $_base-height: 315px;
-  $_height-by-size: (
-    small: 360px,
-    medium: 750px,
-    large: 655px,
-    extra-large: 610px,
-  );
-  @include make-bg(image, '../../pages/home/awards', $_base-height, $_height-by-size);
-
-  @media (min-width: $width-desktop) {
-    .off-grid {
-      bottom: 0;
-      left: 0;
-      position: absolute;
-      right: auto;
-      width: 100%;
-      z-index: 1;
-    }
-
-    .content {
-      position: relative;
-      z-index: 2;
+  @media (max-width: $width-desktop-lg) {
+    .wistia-container {
+      margin: 0 auto;
+      max-width: 700px;
+      padding-bottom: $space-base;
     }
   }
-}
-
-
-.case-management {
-  $_base-height: 290px;
-  $_height-by-size: (
-    small: 290px,
-    medium: 290px,
-    large: 290px,
-    extra-large: 292px,
-  );
-  @include make-bg(image, '../../pages/case_management/cm-cta', $_base-height, $_height-by-size, '.png');
-
-  @media (min-width: $width-desktop) {
+  
+  @media (min-width: $width-desktop-lg) {
     .off-grid {
       bottom: 0;
-      left: 0;
+      left: 1%;
       position: absolute;
       right: auto;
-      width: 100%;
-      z-index: 1;
+      top: 23%;
+      width: 50%;
+      z-index: -1;
     }
+  }
 
-    .content {
-      position: relative;
-      z-index: 2;
+  @media (min-width: 1112px) {
+    .off-grid {
+      left: 1%;
+      top: 22.5%;
+    }
+  }
+
+  @media (min-width: 1170px) {
+    .off-grid {
+      left: 1%;
+      top: 20%;
+    }
+  }
+
+  @media (min-width: $width-desktop-xl) {
+    .off-grid {
+      left: 2%;
+      top: 18%;
+    }
+  }
+
+  @media (min-width: 1330px) {
+    .off-grid {
+      top: 16%;
+    }
+  }
+
+  @media (min-width: 1370px) {
+    .off-grid {
+      top: 14%;
+    }
+  }
+
+  @media (min-width: 1430px) {
+    .off-grid {
+      top: 14%;
+    }
+  }
+
+  @media (min-width: 1447px) {
+    .off-grid {
+      top: 12%;
+    }
+  }
+
+  @media (min-width: 1530px) {
+    .off-grid {
+      top: 11%;
+    }
+  }
+
+  @media (min-width: 1590px) {
+    .wistia-container {
+      float: right;
+      width: 785px;
     }
   }
 
   .bg-loader {
-    background-color: $color-accent-gray;
+    background-color: $color-white;
   }
+}
+
+.focus-mdm {
+  $_base-height: 210px;
+  $_height-by-size: (
+    small: 230px,
+    medium: 357px,
+    large: 346px,
+    extra-large: 445px,
+  );
+  @include make-bg(image, '../../pages/home/focus_mdm/focus', $_base-height, $_height-by-size, '.png');
+
+  @media (min-width: $width-desktop-lg) {
+    .off-grid {
+      bottom: 7%;
+      left: 0;
+      position: absolute;
+      right: auto;
+      top: 20%;
+      width: 149%;
+      z-index: -1;
+    }
+  }
+
+  @media (min-width: $width-desktop-xl) {
+    .off-grid {
+      bottom: 0;
+      left: 2.5%;
+      top: 6%;
+      width: 150%;
+    }
+  }
+
+  @media (min-width: 1438px) {
+    .off-grid {
+      left: 0;
+    }
+  }
+
+  .bg-loader {
+    background-color: $color-white;
+  }
+}
+
+@media (min-width: $width-desktop-lg) {
+  .focus-info {
+    width: 45%;
+  }
+}
+
+@media (max-width: $width-desktop-lg - 1px) {
+  .focus-info {
+    width: 100%;
+  }
+}
+
+@media (max-width: $width-desktop - 1px) {
+  .focus-info {
+    width: 100%;
+  }
+}
+
+.global-services {
+  $_base-height: 195px;
+  $_height-by-size: (
+    small: 270px,
+    medium: 376px,
+    large: 316px,
+    extra-large: 316px,
+  );
+  @include make-bg(services, '../../pages/home/global_services/services', $_base-height, $_height-by-size);
+}
+
+.impact {
+  $_base-height: 87px;
+  $_height-by-size: (
+    small: 119px,
+    medium: 161px,
+    large: 198px,
+    extra-large: 238px,
+  );
+  @include make-bg(image, '../../pages/home/impact/launch', $_base-height, $_height-by-size);
+
+  width: 100%;
+}
+
+.video-intro .image {
+  @include background-cover('../../pages/home/video-intro-banner.jpg');
+}
+
+.service-list {
+  color: $color-text;
 }

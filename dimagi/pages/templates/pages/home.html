@@ -10,11 +10,6 @@
   {% endcompress %}
 {% endblock %}
 
-{% block meta %}
-  <meta property="wistia:videoId" content="9uvnpbecdy" />
-  <meta property="wistia:videoTrigger" content="demo-video" />
-{% endblock %}
-
 {% block hero %}
 <section class="hero hero-home"
          data-lazybg="true"
@@ -28,10 +23,10 @@
         {% endblocktrans %}
       </h1>
 
-      <div class="headline content-width-small">
+      <div class="headline content-width-extra-small">
         {% blocktrans %}
-          Digital tools and resources to improve the speed and accuracy of
-          your COVID-19 outbreak response.
+          Digital tools to improve the efficiency of 
+          your COVID-19 outbreak response
         {% endblocktrans %}
       </div>{# .headline #}
 
@@ -51,15 +46,13 @@
 
 {% block content %}
   <section class="homepage-container">
-    {% include "sections/home/video.html" %}
     {% include "sections/home/partners.html" %}
-    {% include "sections/home/stats/impact_stats.html" %}
-    {% include "sections/home/build.html" %}
-    {% include "sections/home/launch_digital.html" %}
-    {% include "sections/home/case_management.html" %}
-    {% include "sections/home/workforce.html" %}
-    {% include "sections/home/data.html" %}
-    {% include "sections/home/awards.html" %}
-    {% include "sections/home/trial.html" %}
+    {% include "sections/home/video.html" %}
+    {% include "sections/home/global_services.html" %}
+    {% include "sections/home/focus_mdm.html" %}
+    {% include "sections/home/impact.html" %}
+    {% include "sections/home/contact.html" %}
   </section>
 {% endblock %}
+
+{% block contact_form_id %}160467c5-1ae9-401c-81f2-09334ce10b1a{% endblock %}
