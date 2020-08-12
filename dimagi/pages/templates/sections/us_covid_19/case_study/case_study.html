@@ -38,13 +38,30 @@
         </a>
       </div>{# .column #}
     </div>
-    <div>
-      <div class="content content-width-large pad-top-small">
-        <div class="grid-2-at-small grid-3-at-large grid-col-space-medium grid-row-space-small">
-          {% include "sections/us_covid_19/case_study/governments/alaska.html" %}
-          {% include "sections/us_covid_19/case_study/governments/cdc.html" %}
-          {% include "sections/us_covid_19/case_study/governments/navajo.html" %}
-        </div>
+    <div class="departments">
+      <div class="content align-center border-bottom">
+        {% include "sections/us_covid_19/case_study/departments.html" %}
+      </div>{# .content #}
+      <div class="content content-width-large pad-vert-medium">
+        <blockquote>
+          <p>
+            {% blocktrans %}
+              In the midst of an unprecedented disease outbreak, experience
+              matters. While there were no pandemic-ready, turn-key contact
+              tracing systems available, the Philadelphia Department of Public
+              Health benefited from the expertise Dimagi gained from developing
+              COVID-19 data systems for public health agencies. We are pleased
+              with the COVID-19 case investigation and contact tracing application
+              they built for us in their CommCare software system and feel it has
+              facilitated our ability to respond to the pandemic.
+            {% endblocktrans %}
+          </p>
+          <cite class="content-width-extra-small">
+            {% blocktrans %}
+              - Philadelphia Department of Public Health
+            {% endblocktrans %}
+          </cite>
+        </blockquote>
       </div>
     </div>    
   </div>
