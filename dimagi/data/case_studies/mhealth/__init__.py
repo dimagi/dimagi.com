@@ -17,6 +17,7 @@ from dimagi.data.case_studies.mhealth import (
     technoserve,
     focus_mdm,
     sickle_cell,
+    miracle_feet,
 )
 
 
@@ -39,4 +40,5 @@ studies = (
     technoserve,
     focus_mdm,
     sickle_cell,
+    miracle_feet,
 )
