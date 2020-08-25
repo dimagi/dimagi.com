@@ -11,6 +11,7 @@ from dimagi.utils.decorators.enable_ab_test import enable_ab_test
 from dimagi.utils.friendbuy_api import get_share
 from dimagi.utils.hubspot_api import update_contact
 from dimagi.utils.partners import get_logos
+from dimagi.utils.covid_partners import get_us_covid_partners
 from dimagi.data.case_management import longitudinal_data
 
 from dimagi.utils.wordpress_api import get_json
@@ -53,6 +54,7 @@ def covid_19(request):
 
 def us_covid_19(request):
     context = {
+        'partners': get_us_covid_partners(),
         'posts': get_json("blog/covid-19")['posts'][:4],
     }
     return render(request, 'pages/us_covid_19.html', context)
