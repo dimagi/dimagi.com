@@ -1,0 +1,23 @@
+{% extends "sections/us_covid_19/case_study/testimonials/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block content %}
+  <div class="testimonial-content content-width-medium align-left pad-horz-small">
+    <blockquote>
+      <p class="pad-bottom-line">
+        {% blocktrans %}
+          The powerful combination of Dimagi’s public health expertise, coupled 
+          with cloud-based technology, has allowed us to regularly improve our 
+          contact tracing application based on feedback from public health 
+          officials with speed and agility as this pandemic evolves.
+        {% endblocktrans %}  
+      </p>
+      <cite class="content-width-small">
+        {% blocktrans %}
+          - Mahesh Nattanmai, Chief Health Information Officer, New York State Department of Health
+        {% endblocktrans %}
+      </cite>
+    </blockquote>
+  </div>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "sections/us_covid_19/case_study/testimonials/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block content %}
+  <div class="testimonial-content content-width-medium align-left pad-horz-small">
+    <blockquote>
+      <p class="pad-bottom-line">
+        {% blocktrans %}
+          In the midst of an unprecedented disease outbreak, experience
+          matters. While there were no pandemic-ready, turn-key contact
+          tracing systems available, the Philadelphia Department of Public
+          Health benefited from the expertise Dimagi gained from developing
+          COVID-19 data systems for public health agencies. We are pleased
+          with the COVID-19 case investigation and contact tracing application
+          they built for us in their CommCare software system and feel it has
+          facilitated our ability to respond to the pandemic.
+        {% endblocktrans %}  
+      </p>
+      <cite class="content-width-extra-small">
+        {% blocktrans %}
+          - Philadelphia Department of Public Health
+        {% endblocktrans %}
+      </cite>
+    </blockquote>
+  </div>
+{% endblock %}
