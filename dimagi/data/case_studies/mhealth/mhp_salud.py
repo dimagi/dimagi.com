@@ -8,19 +8,21 @@ STUDY = CaseStudy(
         "MHP Salud: CommCare for an Integrated Approach to Improving "
         "Community Health"
     ),
-    summary=ugettext_lazy(
-        "For the last 35 years, nonprofit organization MHP Salud has "
-        "implemented Community Health Worker (CHW) programs to support "
-        "underserved Latino communities across the United States. From case "
-        "management for older adults to assistance navigating the Health "
-        "Insurance Marketplace, MHP Salud’s CommCare application keeps track "
-        "of participants across various community-based health initiatives, "
-        "including referrals to external organizations. MHP Salud has increased "
-        "enrollment in public assistance and health insurance programs and "
-        "continues to offer support to over 5,000 Latino Americans annually "
-        "struggling with mental health issues, chronic disease, and other "
-        "health challenges."
-    ),
+    summary=[
+        ugettext_lazy(
+            "For the last 35 years, nonprofit organization MHP Salud has "
+            "implemented Community Health Worker (CHW) programs to support "
+            "underserved Latino communities across the United States. From case "
+            "management for older adults to assistance navigating the Health "
+            "Insurance Marketplace, MHP Salud’s CommCare application keeps track "
+            "of participants across various community-based health initiatives, "
+            "including referrals to external organizations. MHP Salud has increased "
+            "enrollment in public assistance and health insurance programs and "
+            "continues to offer support to over 5,000 Latino Americans annually "
+            "struggling with mental health issues, chronic disease, and other "
+            "health challenges."
+        ),
+    ],
     partners=[
         "MHP Salud",
     ],

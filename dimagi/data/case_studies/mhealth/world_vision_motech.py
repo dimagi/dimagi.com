@@ -7,23 +7,25 @@ STUDY = CaseStudy(
     title=ugettext_lazy(
         "Deploying MOTECH Suite for MNCH & Nutrition programs in 10+ countries"
     ),
-    summary=ugettext_lazy(
-        "In an effort to supplement their global health and nutrition "
-        "programs with mobile technology, World Vision has partnered "
-        "with Dimagi and Grameen Foundation to deploy MOTECH Suite. "
-        "To date, World Vision has adapted and contextualized five "
-        "standardized mobile health (mHealth) applications in ten countries "
-        "in Africa, India, South and Southeast Asia, with plans to start "
-        "deployment to six more in 2014. These programs utilize the "
-        "applications for maternal, neonatal, and child health and "
-        "nutrition, which are designed to support Frontline Health "
-        "Workers (FHWs) to deliver these services more efficiently. The "
-        "solution serves as a job aid and monitoring tool, and includes "
-        "components to reinforce intervention protocols. The applications "
-        "leverage standardized content and collaborative design, enabling "
-        "support for FHWs and potential for stronger service delivery at "
-        "a global scale."
-    ),
+    summary=[
+        ugettext_lazy(
+            "In an effort to supplement their global health and nutrition "
+            "programs with mobile technology, World Vision has partnered "
+            "with Dimagi and Grameen Foundation to deploy MOTECH Suite. "
+            "To date, World Vision has adapted and contextualized five "
+            "standardized mobile health (mHealth) applications in ten countries "
+            "in Africa, India, South and Southeast Asia, with plans to start "
+            "deployment to six more in 2014. These programs utilize the "
+            "applications for maternal, neonatal, and child health and "
+            "nutrition, which are designed to support Frontline Health "
+            "Workers (FHWs) to deliver these services more efficiently. The "
+            "solution serves as a job aid and monitoring tool, and includes "
+            "components to reinforce intervention protocols. The applications "
+            "leverage standardized content and collaborative design, enabling "
+            "support for FHWs and potential for stronger service delivery at "
+            "a global scale."
+        ),
+    ],
     partners=[
         "World Vision",
         "Grameen Foundation",

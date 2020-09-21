@@ -7,17 +7,19 @@ STUDY = CaseStudy(
     title=ugettext_lazy(
         "Lwala Community Alliance: CommCare for Improving Vaccination Rates"
     ),
-    summary=ugettext_lazy(
-        "Lwala Community Alliance in Kenya fights high rates of maternal "
-        "mortality and HIV. Using a community-led health model and a custom "
-        "CommCare-based mobile application, Community Health Workers (CHWs) "
-        "register each pregnant woman or child under five years old into the "
-        "formal healthcare system. The application then walks the CHW through "
-        "the proper workflows for vaccinations, family planning, disease "
-        "diagnosis and treatment, or a number of other requested services. So "
-        "far, the program has reached vaccination rates of over 95% across a "
-        "population of 60,000 people."
-    ),
+    summary=[
+        ugettext_lazy(
+            "Lwala Community Alliance in Kenya fights high rates of maternal "
+            "mortality and HIV. Using a community-led health model and a custom "
+            "CommCare-based mobile application, Community Health Workers (CHWs) "
+            "register each pregnant woman or child under five years old into the "
+            "formal healthcare system. The application then walks the CHW through "
+            "the proper workflows for vaccinations, family planning, disease "
+            "diagnosis and treatment, or a number of other requested services. So "
+            "far, the program has reached vaccination rates of over 95% across a "
+            "population of 60,000 people."
+        ),
+    ],
     partners=[
         "Lwala Community Alliance",
         "Migori County Ministry of Health",

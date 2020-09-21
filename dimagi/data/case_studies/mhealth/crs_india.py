@@ -7,19 +7,21 @@ STUDY = CaseStudy(
     title=ugettext_lazy(
         "Catholic Relief Services: Reducing Maternal and Newborn Deaths (ReMiND)"
     ),
-    summary=ugettext_lazy(
-        "In 2011, Catholic Relief Services (CRS) collaborated with the "
-        "National Health Mission (NHM) in Uttar Pradesh, India to establish "
-        "the Reducing Maternal and Newborn Deaths (ReMiND) project. Its goal "
-        "was to improve the delivery of community-level prenatal and postnatal "
-        "care and support services to local mothers and families. CRS worked "
-        "with Dimagi to develop a customized, mobile health (mHealth) CommCare "
-        "application for the government’s frontline health workers. Since its "
-        "pilot deployment of 10 users, the ReMiND project has successfully "
-        "matured from an initial proof of concept to a scaled mobile tool for "
-        "community health workers covering a population of "
-        "over 300,000."
-    ),
+    summary=[
+        ugettext_lazy(
+            "In 2011, Catholic Relief Services (CRS) collaborated with the "
+            "National Health Mission (NHM) in Uttar Pradesh, India to establish "
+            "the Reducing Maternal and Newborn Deaths (ReMiND) project. Its goal "
+            "was to improve the delivery of community-level prenatal and postnatal "
+            "care and support services to local mothers and families. CRS worked "
+            "with Dimagi to develop a customized, mobile health (mHealth) CommCare "
+            "application for the government’s frontline health workers. Since its "
+            "pilot deployment of 10 users, the ReMiND project has successfully "
+            "matured from an initial proof of concept to a scaled mobile tool for "
+            "community health workers covering a population of "
+            "over 300,000."
+        ),
+    ],
     partners=[
         "Catholic Relief Services",
         "Department of Health and Family Welfare, Uttar Pradesh",

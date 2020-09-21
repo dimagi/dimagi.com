@@ -7,18 +7,20 @@ STUDY = CaseStudy(
     title=ugettext_lazy(
         "TechnoServe: Building an M&E Tools Suite"
     ),
-    summary=ugettext_lazy(
-        "TechnoServe has worked to create impact in over 30 countries for "
-        "more than 50 years. In the last 5 years, they have reached almost "
-        "half a million beneficiaries across Latin America, Africa and India "
-        "in multiple sectors, requiring an impressive combination of "
-        "expertise and flexibility. To service their projects’ M&E needs "
-        "around the world, TechnoServe has re-organized its team structure "
-        "and compiled a suite of products that allow them to capture, manage, "
-        "and analyze data from an ever-changing set of indicators. A process, "
-        "whose implementation could take six months or more, is now achievable "
-        "in half that time."
-    ),
+    summary=[
+        ugettext_lazy(
+            "TechnoServe has worked to create impact in over 30 countries for "
+            "more than 50 years. In the last 5 years, they have reached almost "
+            "half a million beneficiaries across Latin America, Africa and India "
+            "in multiple sectors, requiring an impressive combination of "
+            "expertise and flexibility. To service their projects’ M&E needs "
+            "around the world, TechnoServe has re-organized its team structure "
+            "and compiled a suite of products that allow them to capture, manage, "
+            "and analyze data from an ever-changing set of indicators. A process, "
+            "whose implementation could take six months or more, is now achievable "
+            "in half that time."
+        ),
+    ],
     partners=[
         "TechnoServe",
     ],

@@ -7,18 +7,20 @@ STUDY = CaseStudy(
     title=ugettext_lazy(
         "cStock: Supply Chains for Community Case Management"
     ),
-    summary=ugettext_lazy(
-        "In Malawi, the Ministry of Health and Population (MoHP) is "
-        "championing the strengthening of community health systems. As part "
-        "of this effort, the MoHP enlists the support of Health Surveillance "
-        "Assistants (HSAs), who assess and treat minor conditions for "
-        "children under five, which requires them to be well stocked on "
-        "essential, life-saving medicines. To help them with this, the MoHP "
-        "introduced the “cStock” tool that allowed greater visibility into "
-        "community level data continues to be implemented under the Ministry "
-        "of Health and Population leadership todate, with funding from Global "
-        "Fund that is being managed by the World Vision Malawi."
-    ),
+    summary=[
+        ugettext_lazy(
+            "In Malawi, the Ministry of Health and Population (MoHP) is "
+            "championing the strengthening of community health systems. As part "
+            "of this effort, the MoHP enlists the support of Health Surveillance "
+            "Assistants (HSAs), who assess and treat minor conditions for "
+            "children under five, which requires them to be well stocked on "
+            "essential, life-saving medicines. To help them with this, the MoHP "
+            "introduced the “cStock” tool that allowed greater visibility into "
+            "community level data continues to be implemented under the Ministry "
+            "of Health and Population leadership todate, with funding from Global "
+            "Fund that is being managed by the World Vision Malawi."
+        ),
+    ],
     partners=[
         "JSI Research & Training Institute, Inc.,",
         "Bill & Melinda Gates Foundation",
