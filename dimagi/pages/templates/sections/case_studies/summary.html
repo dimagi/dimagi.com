@@ -30,9 +30,11 @@
       </div>{# .column #}
 
       <div class="column">
-        <p>
-          {{ study.summary }}
-        </p>
+        <div class="pad-bottom-base">
+          {% for summary in study.summary %}
+            <p>{{ summary }}</p>
+          {% endfor %}
+        </div>
 
         <p class="gap-bottom-base">
           <strong>
