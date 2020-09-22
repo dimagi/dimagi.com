@@ -7,18 +7,20 @@ STUDY = CaseStudy(
     title=ugettext_lazy(
         "Terre des hommes: The Integrated eDiagnostic Approach for Child Health"
     ),
-    summary=ugettext_lazy(
-        "As part of their Integrated eDiagnostic Approach, Terre des hommes "
-        "partnered with Dimagi to create a tablet-based application known as "
-        "the Electronic Register of Consultations (REC). Built on Dimagi’s "
-        "CommCare platform, the REC aims to increase nurses’ adherence to "
-        "IMCI protocols and improve their quality of care by providing "
-        "enhanced decision support and case management capacity. More than "
-        "4,000 community health workers use the REC to treat around 200,000 "
-        "children every month in 729 clinics across the country. The program "
-        "has been so successful that it is being transitioned to "
-        "Ministry of Health ownership."
-    ),
+    summary=[
+        ugettext_lazy(
+            "As part of their Integrated eDiagnostic Approach, Terre des hommes "
+            "partnered with Dimagi to create a tablet-based application known as "
+            "the Electronic Register of Consultations (REC). Built on Dimagi’s "
+            "CommCare platform, the REC aims to increase nurses’ adherence to "
+            "IMCI protocols and improve their quality of care by providing "
+            "enhanced decision support and case management capacity. More than "
+            "4,000 community health workers use the REC to treat around 200,000 "
+            "children every month in 729 clinics across the country. The program "
+            "has been so successful that it is being transitioned to "
+            "Ministry of Health ownership."
+        ),
+    ],
     partners=[
         "Terre des Hommes",
         "Burkina Faso Ministry of Health",

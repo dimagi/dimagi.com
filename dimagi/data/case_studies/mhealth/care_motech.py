@@ -7,17 +7,19 @@ STUDY = CaseStudy(
     title=ugettext_lazy(
         "MOTECH Suite for Continuum of Care Services in India"
     ),
-    summary=ugettext_lazy(
-        "CARE India, Dimagi and Grameen Foundation deployed the MOTECH "
-        "Suite to improve delivery of family health interventions and "
-        "quality of health services in rural India. The system, called "
-        "the Continuum of Care Services (CCS), offers a comprehensive tool "
-        "for mobile workers, providing coordinated care for one million "
-        "people in Bihar, India. Its aim is to cover the 1000-day window "
-        "of pregnancy through the child’s second year of age, to deliver "
-        "‘the right messages at the right time’ to pregnant women and "
-        "newborn children within the community. "
-    ),
+    summary=[
+        ugettext_lazy(
+            "CARE India, Dimagi and Grameen Foundation deployed the MOTECH "
+            "Suite to improve delivery of family health interventions and "
+            "quality of health services in rural India. The system, called "
+            "the Continuum of Care Services (CCS), offers a comprehensive tool "
+            "for mobile workers, providing coordinated care for one million "
+            "people in Bihar, India. Its aim is to cover the 1000-day window "
+            "of pregnancy through the child’s second year of age, to deliver "
+            "‘the right messages at the right time’ to pregnant women and "
+            "newborn children within the community. "
+        ),
+    ],
     partners=[
         "Bill & Melinda Gates Foundation",
         "Government of Bihar",

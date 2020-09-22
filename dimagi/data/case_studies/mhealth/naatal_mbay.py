@@ -7,15 +7,17 @@ STUDY = CaseStudy(
     title=ugettext_lazy(
         "Naatal Mbay: CommCare for Agricultural Support"
     ),
-    summary=ugettext_lazy(
-        "Naatal Mbay, which means “making agriculture prosperous,” is a Feed "
-        "the Future project that uses digital tools to empower farmer-serving "
-        "organizations active in the rice, maize, and millet value chains in "
-        "Senegal. The program uses CommCare to track inputs and productivity, "
-        "manage loans, and collect rainfall data. CommAgri, Naatal Mbay’s digital "
-        "tool, is used by 55 cooperatives and 500 extension agents, who have "
-        "registered 68,000 farmers."
-    ),
+    summary=[
+        ugettext_lazy(
+            "Naatal Mbay, which means “making agriculture prosperous,” is a Feed "
+            "the Future project that uses digital tools to empower farmer-serving "
+            "organizations active in the rice, maize, and millet value chains in "
+            "Senegal. The program uses CommCare to track inputs and productivity, "
+            "manage loans, and collect rainfall data. CommAgri, Naatal Mbay’s digital "
+            "tool, is used by 55 cooperatives and 500 extension agents, who have "
+            "registered 68,000 farmers."
+        ),
+    ],
     partners=[
         "RTI",
         "Feed the Future",
