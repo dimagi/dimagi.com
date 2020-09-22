@@ -7,23 +7,27 @@ STUDY = CaseStudy(
     title=ugettext_lazy(
         "MiracleFeet: CommCare for Treating Congenital Defects"
     ),
-    summary=ugettext_lazy(
-        "With funding from a $1M grant from Google.org, MiracleFeet commissioned "
-        "Dimagi to create a universal tool to track treatment and program data "
-        "for clubfoot, a common and treatable birth defect historically overlooked "
-        "in many low- and middle-income countries (LMICs). Currently, only one in "
-        "five children globally has access to care—making it a leading cause of "
-        "physical disability worldwide. In ten years, MiracleFeet has developed "
-        "systems and partnerships to treat clubfoot in 27 countries, where "
-        "over 70,000 new cases occur each year. "
-        "MiracleFeet selected CommCare to create a streamlined data collection "
-        "tool, the Clubfoot Administration System (CAST), in support of its growing "
-        "global network of clinics and providers who are increasing access to this "
-        "critical treatment. Ninety-five percent of MiracleFeet-supported clinics "
-        "have adopted the application, with CAST now in use in 371 clinics across "
-        "29 countries, storing nearly 41,000 patient records that document full "
-        "treatment progress and outcomes."
-    ),
+    summary=[
+        ugettext_lazy(
+            "With funding from a $1M grant from Google.org, MiracleFeet commissioned "
+            "Dimagi to create a universal tool to track treatment and program data "
+            "for clubfoot, a common and treatable birth defect historically overlooked "
+            "in many low- and middle-income countries (LMICs). Currently, only one in "
+            "five children globally has access to care—making it a leading cause of "
+            "physical disability worldwide. In ten years, MiracleFeet has developed "
+            "systems and partnerships to treat clubfoot in 27 countries, where "
+            "over 70,000 new cases occur each year. "
+        ),
+        ugettext_lazy(
+            "MiracleFeet selected CommCare to create a streamlined data collection "
+            "tool, the Clubfoot Administration System (CAST), in support of its growing "
+            "global network of clinics and providers who are increasing access to this "
+            "critical treatment. Ninety-five percent of MiracleFeet-supported clinics "
+            "have adopted the application, with CAST now in use in 371 clinics across "
+            "29 countries, storing nearly 41,000 patient records that document full "
+            "treatment progress and outcomes."
+        ),
+    ],
     partners=[
         "MiracleFeet",
         "Google.org"
