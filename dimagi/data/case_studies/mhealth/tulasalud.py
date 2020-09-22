@@ -7,19 +7,21 @@ STUDY = CaseStudy(
     title=ugettext_lazy(
         "TulaSalud: CommCare for Improving and Monitoring Community Health"
     ),
-    summary=ugettext_lazy(
-        "Guatemala’s northern highlands has one of the highest burdens of "
-        "maternal mortality in the world due to a substantial majority of "
-        "their population living below the poverty line and a severe lack "
-        "of formal health services. To improve maternal care and reproductive "
-        "health in Guatemala, TulaSalud introduced a digital health program "
-        "for frontline health workers supported by CommCare. In collaboration "
-        "with the Guatemalan Ministry of Health, the organization has "
-        "enhanced its community-based digital health program by expanding "
-        "its network of care beyond Alta Verapaz to three additional priority "
-        "regions (Huehuetenango, Quiché, and Sololà) and increasing "
-        "accountability at all levels."
-    ),
+    summary=[
+        ugettext_lazy(
+            "Guatemala’s northern highlands has one of the highest burdens of "
+            "maternal mortality in the world due to a substantial majority of "
+            "their population living below the poverty line and a severe lack "
+            "of formal health services. To improve maternal care and reproductive "
+            "health in Guatemala, TulaSalud introduced a digital health program "
+            "for frontline health workers supported by CommCare. In collaboration "
+            "with the Guatemalan Ministry of Health, the organization has "
+            "enhanced its community-based digital health program by expanding "
+            "its network of care beyond Alta Verapaz to three additional priority "
+            "regions (Huehuetenango, Quiché, and Sololà) and increasing "
+            "accountability at all levels."
+        ),
+    ],
     partners=[
         "TulaSalud",
         "Tula Foundation",

@@ -8,15 +8,17 @@ STUDY = CaseStudy(
         "Focus Region Health Project: Reducing Stock Outs for Reproductive "
         "Health Products"
     ),
-    summary=ugettext_lazy(
-        "The Focus Region Health Project’s Early Warning System was designed "
-        "to provide real-time stock status information on reproductive health "
-        "commodities to provide early warning of a dip in supplies. Its "
-        "automated, data-focused approach fosters effective supervision of "
-        "ordering and delivery to ensure that essential health commodities are "
-        "always available by facilitating consistent, planned orders and "
-        "avoiding widespread emergency orders."
-    ),
+    summary=[
+        ugettext_lazy(
+            "The Focus Region Health Project’s Early Warning System was designed "
+            "to provide real-time stock status information on reproductive health "
+            "commodities to provide early warning of a dip in supplies. Its "
+            "automated, data-focused approach fosters effective supervision of "
+            "ordering and delivery to ensure that essential health commodities are "
+            "always available by facilitating consistent, planned orders and "
+            "avoiding widespread emergency orders."
+        ),
+    ],
     partners=[
         "JSI Research & Training Institute, Inc.",
         "Ghana Health Services",
