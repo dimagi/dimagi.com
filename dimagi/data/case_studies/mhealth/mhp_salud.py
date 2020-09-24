@@ -16,11 +16,13 @@ STUDY = CaseStudy(
             "management for older adults to assistance navigating the Health "
             "Insurance Marketplace, MHP Salud’s CommCare application keeps track "
             "of participants across various community-based health initiatives, "
-            "including referrals to external organizations. MHP Salud has increased "
-            "enrollment in public assistance and health insurance programs and "
-            "continues to offer support to over 5,000 Latino Americans annually "
-            "struggling with mental health issues, chronic disease, and other "
-            "health challenges."
+            "including referrals to external organizations."
+        ),
+        ugettext_lazy(
+            "MHP Salud has increased enrollment in public assistance and health "
+            "insurance programs and continues to offer support to over 5,000 "
+            "Latino Americans annually struggling with mental health issues, chronic "
+            "disease, and other health challenges."
         ),
     ],
     partners=[

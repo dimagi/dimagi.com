@@ -14,8 +14,10 @@ STUDY = CaseStudy(
             "communities that they serve. The CHWs use a smartphone-based "
             "application, built on the CommCare platform, to guide them through "
             "the patient consultation. The program adopted CommCare to strengthen "
-            "communication between CHWs and health facility supervisors. With "
-            "the Ministry of Health staff now taking on responsibility for "
+            "communication between CHWs and health facility supervisors. "
+        ),
+        ugettext_lazy(
+            "With the Ministry of Health staff now taking on responsibility for "
             "content design, training, rollout, and platform hosting, upSCALE "
             "has the potential to expand into other areas of the health system, "
             "with the goal of improved diagnosis, treatment, and monitoring of "

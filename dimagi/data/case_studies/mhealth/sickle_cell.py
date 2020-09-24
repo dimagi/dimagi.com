@@ -19,6 +19,8 @@ STUDY = CaseStudy(
             "that 70% of deaths associated with SCD are preventable with simple, "
             "cost-effective interventions, such as early detection through newborn screening "
             "and the subsequent provision of comprehensive care." 
+        ),
+        ugettext_lazy(
             "Since 2017, Dimagi has partnered with the Sickle Cell Foundation of "
             "Ghana (SCFG) to support the National Newborn Screening Program (NNSP) "
             "by digitizing its paper forms and serving as a job aid to its users. To "

@@ -14,8 +14,10 @@ STUDY = CaseStudy(
             "the Electronic Register of Consultations (REC). Built on Dimagi’s "
             "CommCare platform, the REC aims to increase nurses’ adherence to "
             "IMCI protocols and improve their quality of care by providing "
-            "enhanced decision support and case management capacity. More than "
-            "4,000 community health workers use the REC to treat around 200,000 "
+            "enhanced decision support and case management capacity. "
+        ),
+        ugettext_lazy(
+            "More than 4,000 community health workers use the REC to treat around 200,000 "
             "children every month in 729 clinics across the country. The program "
             "has been so successful that it is being transitioned to "
             "Ministry of Health ownership."

@@ -13,12 +13,14 @@ STUDY = CaseStudy(
             "more than 50 years. In the last 5 years, they have reached almost "
             "half a million beneficiaries across Latin America, Africa and India "
             "in multiple sectors, requiring an impressive combination of "
-            "expertise and flexibility. To service their projects’ M&E needs "
-            "around the world, TechnoServe has re-organized its team structure "
-            "and compiled a suite of products that allow them to capture, manage, "
-            "and analyze data from an ever-changing set of indicators. A process, "
-            "whose implementation could take six months or more, is now achievable "
-            "in half that time."
+            "expertise and flexibility. "
+        ),
+        ugettext_lazy(
+            "To service their projects’ M&E needs around the world, TechnoServe "
+            "has re-organized its team structure and compiled a suite of "
+            "products that allow them to capture, manage, and analyze data from "
+            "an ever-changing set of indicators. A process, whose implementation "
+            "could take six months or more, is now achievable in half that time."
         ),
     ],
     partners=[

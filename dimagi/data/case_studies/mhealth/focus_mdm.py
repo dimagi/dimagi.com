@@ -14,10 +14,14 @@ STUDY = CaseStudy(
             "positive social change by providing communities and individuals "
             "with practical tools and innovative solutions. They have extensive "
             "technical experience with mobile-based groups for those affected by HIV/AIDS."
+        ),
+        ugettext_lazy(
             "This project, starting in late 2019, creates mobile phone-based peer "
             "support groups to help HIV+ adolescents better understand and come to "
             "terms with their illness by linking them with trained peer mentors who "
             "have previously gone through similar groups as participants."
+        ),
+        ugettext_lazy(
             "SHM Foundation has partnered with Dimagi to implement FocusMDM "
             "as their preferred device management tool. The platform affords "
             "participants a degree of autonomy and to use their phones as they "
