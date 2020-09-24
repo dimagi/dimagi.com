@@ -24,6 +24,18 @@ define([
   self.current = {};
 
   function _addJob(key, value, job) {
+    if (key === 'location') {
+      // since the greenhouse api separates locaitons with a comma inside the string and a comma is used
+      // for country/state information...we have to do a bit of a hack to get things to show up properly
+      // e.g. -> 'Cambridge, MA, Delhi, India' shows up as ['Cambridge', 'MA', 'Delhi', 'India'] after the split
+      var multiLoc = _.split(value, ', ');
+      value = (multiLoc[0] + ', ' + multiLoc[1]).trim();
+      if (multiLoc.length > 2) {
+        for (var i = 3; i < multiLoc.length; i+=2) {
+          _addJob(key, (multiLoc[i-1] + ', ' + multiLoc[i]).trim(), job);
+        }
+      }
+    }
     if (self.jobsBy[key][value] === undefined) {
       self.jobsBy[key][value] = [];
     }
@@ -37,12 +49,12 @@ define([
         var fields = {};
 
         _.forEach(data.offices, function (office) {
-          fields.location = office.location;
 
           _.forEach(office.departments, function (department) {
             fields.team = department.name;
 
             _.forEach(department.jobs, function (job) {
+              fields.location = job.location.name || office.location;
               fields.role = job.title;
               fields.type = "Full-time"; // default value if no metadata found
               _.forEach(job.metadata, function (meta) {
