@@ -15,8 +15,8 @@ STUDY = CaseStudy(
             "in many low- and middle-income countries (LMICs). Currently, only one in "
             "five children globally has access to care—making it a leading cause of "
             "physical disability worldwide. In ten years, MiracleFeet has developed "
-            "systems and partnerships to treat clubfoot in 27 countries, where "
-            "over 70,000 new cases occur each year. "
+            "systems and partnerships to treat clubfoot in 29 countries, where over "
+            "75,000 new cases occur each year. "
         ),
         ugettext_lazy(
             "MiracleFeet selected CommCare to create a streamlined data collection "
