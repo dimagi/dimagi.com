@@ -30,13 +30,13 @@
       </div>{# .column #}
 
       <div class="column">
-        <div class="pad-bottom-base">
+        <div class="pad-bottom-line">
           {% for summary in study.summary %}
             <p>{{ summary }}</p>
           {% endfor %}
         </div>
 
-        <p class="gap-bottom-base">
+        <p class="gap-bottom-line">
           <strong>
             {% blocktrans %}
               Implementing Partners:
@@ -45,7 +45,7 @@
           {{ study.partners|JOIN:", " }}
         </p>
 
-        <p class="gap-bottom-base">
+        <p class="gap-bottom-line">
           <strong>
             {% blocktrans %}
               Countries:
@@ -56,7 +56,7 @@
           {% endfor %}
         </p>
 
-        <p class="gap-bottom-small">
+        <p class="gap-bottom-line">
           <strong>
             {% blocktrans %}
               Sectors:

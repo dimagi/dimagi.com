@@ -13,10 +13,12 @@ STUDY = CaseStudy(
             "With support from Econet Wireless and the Zimbabwean Ministry of "
             "Health, Global Solutions for Infectious Diseases (GSID) created a "
             "mobile system with Dimagi and ODK Diagnostics to better process "
-            "rapid diagnostic tests for HIV and malaria. The system utilizes "
-            "CommCare’s case management and reporting features to digitize health "
-            "workers’ workloads, and ODK-Dx’s ability to process, analyze, and "
-            "return RDT results with computer vision algorithms."
+            "rapid diagnostic tests for HIV and malaria. "
+        ),
+        ugettext_lazy(
+            "The system utilizes CommCare’s case management and reporting features "
+            "to digitize health workers’ workloads, and ODK-Dx’s ability to "
+            "process, analyze, and return RDT results with computer vision algorithms."
         ),
     ],
     partners=[

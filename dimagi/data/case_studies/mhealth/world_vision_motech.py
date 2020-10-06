@@ -15,11 +15,15 @@ STUDY = CaseStudy(
             "To date, World Vision has adapted and contextualized five "
             "standardized mobile health (mHealth) applications in ten countries "
             "in Africa, India, South and Southeast Asia, with plans to start "
-            "deployment to six more in 2014. These programs utilize the "
-            "applications for maternal, neonatal, and child health and "
-            "nutrition, which are designed to support Frontline Health "
-            "Workers (FHWs) to deliver these services more efficiently. The "
-            "solution serves as a job aid and monitoring tool, and includes "
+            "deployment to six more in 2014. "
+        ),
+        ugettext_lazy(
+            "These programs utilize the applications for maternal, neonatal, "
+            "and child health and nutrition, which are designed to support "
+            "Frontline Health Workers (FHWs) to deliver these services mo   re efficiently. "
+        ),
+        ugettext_lazy(
+            "The solution serves as a job aid and monitoring tool, and includes "
             "components to reinforce intervention protocols. The applications "
             "leverage standardized content and collaborative design, enabling "
             "support for FHWs and potential for stronger service delivery at "
