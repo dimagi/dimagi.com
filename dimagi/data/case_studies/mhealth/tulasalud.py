@@ -14,8 +14,10 @@ STUDY = CaseStudy(
             "their population living below the poverty line and a severe lack "
             "of formal health services. To improve maternal care and reproductive "
             "health in Guatemala, TulaSalud introduced a digital health program "
-            "for frontline health workers supported by CommCare. In collaboration "
-            "with the Guatemalan Ministry of Health, the organization has "
+            "for frontline health workers supported by CommCare."
+        ),
+        ugettext_lazy(
+            "In collaboration with the Guatemalan Ministry of Health, the organization has "
             "enhanced its community-based digital health program by expanding "
             "its network of care beyond Alta Verapaz to three additional priority "
             "regions (Huehuetenango, Quiché, and Sololà) and increasing "

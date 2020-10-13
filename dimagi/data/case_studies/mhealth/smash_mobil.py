@@ -15,10 +15,12 @@ STUDY = CaseStudy(
             "In support, they developed SMASH Mobil, an integrated mobile technology "
             "and reporting system, to mitigate the discrepancy between what was "
             "happening in the field and what was being reported, but also to "
-            "support key monitoring and evaluation efforts. The tool, supported "
-            "by the CommCare platform, runs on Android tablets and helps the "
-            "program monitor its progress in near real time, from land preparation "
-            "and planting all the way to the delivery of grain to BRANA."
+            "support key monitoring and evaluation efforts. "
+        ),
+        ugettext_lazy(
+            "The tool, supported by the CommCare platform, runs on Android tablets "
+            "and helps the program monitor its progress in near real time, from land "
+            "preparation and planting all the way to the delivery of grain to BRANA."
         ),
     ],
     partners=[

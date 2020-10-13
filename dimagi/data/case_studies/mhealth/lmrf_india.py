@@ -11,8 +11,10 @@ STUDY = CaseStudy(
         ugettext_lazy(
             "In 2013, Lata Medical Research Foundation (LMRF) partnered with "
             "Dimagi to assess CommCare’s feasibility for monitoring antenatal, "
-            "natal, and post-natal care, as well as infant nutrition, in rural "
-            "India. LMRF adopted CommCare to help accredited social health "
+            "natal, and post-natal care, as well as infant nutrition, in rural India."
+        ),
+        ugettext_lazy(
+            "LMRF adopted CommCare to help accredited social health "
             "activists (ASHAs) track pregnant women and improve their "
             "health-seeking behavior and maternal & child health outcomes by "
             "familiarizing them and their families with available public "

@@ -11,12 +11,16 @@ STUDY = CaseStudy(
         ugettext_lazy(
             "The Tanzanian Ministry of Health and Social Welfare created "
             "ILSGateway to monitor the supply of lifesaving medication at health "
-            "facilities throughout Tanzania. After struggling with delays in "
-            "stock tracking and requisition submissions, their new application "
-            "expands the accessibility and visibility of logistics data and "
-            "informs supply chain decision-making. The app monitors a set of "
-            "tracer commodities, family planning and anti-malarial medications, "
-            "and worker performance."
+            "facilities throughout Tanzania. "
+        ),
+        ugettext_lazy(
+            "After struggling with delays in stock tracking and requisition "
+            "submissions, their new application expands the accessibility and "
+            "visibility of logistics data and informs supply chain decision-making. "
+        ),
+        ugettext_lazy(
+            "The app monitors a set of tracer commodities, family planning and "
+            "anti-malarial medications, and worker performance."
         ),
     ],
     partners=[
