@@ -18,6 +18,15 @@ GROUP = FeatureGroup(
 GROUP.add_features([
     Feature(
         title=ugettext_lazy(
+            "Price per Enterprise Web Apps user"
+        ),
+        description=ugettext_lazy(
+            "Price per Enterprise Web Apps user"
+        ),
+        support=Support(False, False, False, "10 USD/month"),
+    ),
+    Feature(
+        title=ugettext_lazy(
             "Web Apps optimized for complex case management use cases"
         ),
         description=ugettext_lazy(
