@@ -21,7 +21,7 @@ GROUP.add_features([
             "Price per Enterprise Web Apps user"
         ),
         description=ugettext_lazy(
-            "Price per Enterprise Web Apps user"
+            "The monthly charge for Enterprise Web Apps users."
         ),
         support=Support(False, False, False, "10 USD/month"),
     ),
