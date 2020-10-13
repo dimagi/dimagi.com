@@ -1,0 +1,25 @@
+{% load dimagidotcom %}
+{% load i18n %}
+
+<section class="pad-bottom-base"
+         id="commcare">
+  <div class="header-card pad-top-line pad-top-small-at-large white-bg content-width-small">
+    <div class="logo pad-left-line pad-left-none-at-large">
+      <h4 class="align-center">
+        {% include "svg/home/header/commcare.html" %}
+      </h4>
+    </div>
+    <div class="info pad-left-small pad-left-none-at-large">
+      <h4 class="header-card-heading uppercase blue align-left align-center-at-large pad-top-base pad-top-line-at-large">
+        {% blocktrans %}
+          CommCare
+        {% endblocktrans %}
+      </h4>
+      <p class="home-header-tag align-left align-center-at-large pad-bottom-base">
+        {% blocktrans %}
+          No-Code App Builder
+        {% endblocktrans %}
+      </p>
+    </div>
+  </div> {# .pad-top-small #}
+</section>
