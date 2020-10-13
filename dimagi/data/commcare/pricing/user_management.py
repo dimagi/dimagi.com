@@ -63,22 +63,6 @@ GROUP.add_features([
     ),
     Feature(
         title=ugettext_lazy(
-            "App user profiles"
-        ),
-        description=mark_safe(ugettext_lazy("""CommCare apps can be automatically and 
-    dynamically customized to who the user is. This is achieved by assigning app users 
-    <a href="https://confluence.dimagi.com/display/commcarepublic/Custom+User+Data" target="_blank"> 
-    custom user data</a> and incorporating it in your app’s logic. When you have a 
-    large number of users, user types and a long list of custom user fields, assigning 
-    such individual fields to each user can be time consuming and error-prone. 
-    <a href="https://confluence.dimagi.com/display/commcarepublic/App+User+Profiles" target="_blank">
-    App User Profiles</a> eliminates these problems by giving you the ability to group 
-    custom user data into profiles and simply assign the right profile to the right user.
-        """)),
-        support=Support(False, False, False, True),
-    ),
-    Feature(
-        title=ugettext_lazy(
             "Included mobile users"
         ),
         description=ugettext_lazy(
@@ -86,7 +70,7 @@ GROUP.add_features([
             "additional charge. The Community plan allows for 10 free "
             "mobile users."
         ),
-        support=Support("125", "250", "500", "Custom"),
+        support=Support("125", "250", "500", "Unlimited / discounted"),
     ),
     Feature(
         title=ugettext_lazy(
@@ -96,6 +80,6 @@ GROUP.add_features([
             "The monthly charge for users that are created above the free "
             "Mobile User limit"
         ),
-        support=Support("2 USD/month", "2 USD/month", "2 USD/month", "Custom"),
+        support=Support("2 USD/month", "2 USD/month", "2 USD/month", "Unlimited / discounted"),
     ),
 ])
