@@ -1,7 +1,8 @@
 {% load dimagidotcom %}
 {% load i18n %}
 
-<section class="focus-mdm purple-theme gap-right-medium-at-large gap-top-medium pad-bottom-base gap-bottom-large">
+<section class="focus-mdm purple-theme gap-right-medium-at-large gap-top-medium pad-bottom-base gap-bottom-large"
+         id="home-focus">
   <div class="pad-bottom-medium-at-large pad-top-small pad-top-large-at-large">
     <div class="content gap-bottom-line pad-left-small pad-bottom-line">
       <h2 class="align-left-at-medium align-center theme-icon pad-top-small-at-large">
@@ -19,8 +20,8 @@
           the productivity of frontline workforces around the world.
         {% endblocktrans %}
       </p>
-      <div class="align-left-at-medium align-center pad-top-base">
-        <a class="arrow"
+      <div class="align-left-at-medium align-center pad-top-base hide-until-medium">
+        <a class="button"
            href="{% url 'focus_mdm' %}">
           {% blocktrans %}
             Learn More
@@ -31,4 +32,12 @@
   </div>{# .content #}
   <div class="image off-grid white-lazy-bg"
        data-lazybg="true"></div>
+  <div class="align-left-at-medium align-center pad-top-medium hide-at-medium">
+    <a class="button"
+       href="{% url 'focus_mdm' %}">
+      {% blocktrans %}
+        Learn More
+      {% endblocktrans %}
+    </a>
+  </div>
 </section>
