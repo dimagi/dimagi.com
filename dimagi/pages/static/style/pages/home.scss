@@ -197,6 +197,7 @@
 
 .header-card {
   z-index: 1;
+  border-radius: 5px;
   display: flex;
 }
 
@@ -204,10 +205,6 @@
   .header-card {
     display: block;
   }
-}
-
-.header-card-heading {
-  font-weight: 700 !important;
 }
 
 .home-header-tag {
@@ -226,6 +223,6 @@
 
 @media (min-width: 1024px) {
   .home-page .hero {
-    height: 500px;
+    height: 550px;
   }
 }

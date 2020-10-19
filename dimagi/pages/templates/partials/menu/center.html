@@ -2,5 +2,9 @@
 
 <a class="logo {% click_nav 'logo' %}"
    href="{% url 'home' %}">
-  {% include "svg/dimagi_logo.html" %}
+  {% if request.path == "/" %}
+    {% include "svg/dimagi_logo_dark.html" %}
+  {% else %}
+    {% include "svg/dimagi_logo.html" %}
+  {% endif %}
 </a>

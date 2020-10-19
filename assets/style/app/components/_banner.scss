@@ -7,10 +7,6 @@
   background-color: $_color;
   color: color-invert($_color);
 
-  [fill]:not([fill="none"]):not([fill^=url]) {
-    fill: color-invert($_color);
-  }
-
   [stroke]:not([stroke="transparent"]) {
     stroke: color-invert($_color);
   }
