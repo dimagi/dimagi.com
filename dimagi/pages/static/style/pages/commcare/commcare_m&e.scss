@@ -1,0 +1,19 @@
+@import 'app/mixins/background';
+@import 'app/variables/colors';
+@import 'app/variables/sizes';
+@import 'app/variables/type';
+
+
+.commcare-monitoring-evaluation {
+  @include make-bg(hero, '../../../pages/commcare/product_onboarding/hero');
+}
+
+@media (min-width: $width-desktop) {
+  .commcare-monitoring-evaluation .hero {
+    h1 {
+      margin-left: 0;
+      margin-right: 0;
+      max-width: 100%;
+    }
+  }
+}

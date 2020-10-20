@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block title %}{% blocktrans %}
+  CommCare for M&E
+{% endblocktrans %}{% endblock %}
+
+{% block description %}{% blocktrans %}
+  Program Monitoring and Evaluation With CommCare
+{% endblocktrans %}{% endblock %}
+
+{% block body_class %}commcare-monitoring-evaluation tucked-hero{% endblock %}
+
+{% block stylesheets %}
+  {% compress css %}
+    <link href="{% sass_src 'style/pages/commcare/commcare_m&e.scss' %}" rel="stylesheet" media="screen" type="text/css" />
+  {% endcompress %}
+{% endblock %}
+
+{% block hero %}
+  <div id="top"></div>
+  <section class="hero commcare-monitoring-evaluation"
+           data-lazybg="true"
+           id="hero">
+    <div class="content offset-top-small-at-medium align-left-at-medium align-center pad-top-large">
+      <h2 class="gap-top-small gap-top-medium-at-medium">
+        {% blocktrans %}
+          COMMCARE for M&E
+        {% endblocktrans %}
+      </h2>
+      <h1>
+        {% blocktrans %}
+          The world's most powerful mobile <br class="hide-until-medium" />
+          data collection platform.
+        {% endblocktrans %}
+      </h1>
+      <p class="cta">
+        {% trans 'Watch a demo' as video_text %}
+        {% click_hero 'video' as video_click_class %}
+        {% include "partials/wistia_popover.html" with wistia_id='fkfc3l6n2e' show_play=True text=video_text click_class=video_click_class %}
+      </p>
+    </div> {# .content #}
+  </section>
+{% endblock %}
+
+{% block content %}
+  <section class="products-commcare-container">
+  </section>
+{% endblock %}
