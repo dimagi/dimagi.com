@@ -5,7 +5,7 @@
 
 
 .commcare-monitoring-evaluation {
-  @include make-bg(hero, '../../../pages/commcare/product_onboarding/hero');
+  @include make-bg(hero, '../../../pages/commcare/monitoring_evaluation/hero');
 }
 
 @media (min-width: $width-desktop) {

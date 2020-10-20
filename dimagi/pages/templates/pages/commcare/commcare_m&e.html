@@ -31,8 +31,8 @@
       </h2>
       <h1>
         {% blocktrans %}
-          The world's most powerful mobile <br class="hide-until-medium" />
-          data collection platform.
+          Program Monitoring and <br class="hide-until-medium" />
+          Evaluation With CommCare
         {% endblocktrans %}
       </h1>
       <p class="cta">
@@ -46,5 +46,7 @@
 
 {% block content %}
   <section class="products-commcare-container">
+    {% include "sections/commcare/commcare_m&e/sub_nav.html" %}
+    {% include "sections/commcare/commcare_m&e/partners.html" %}
   </section>
 {% endblock %}

@@ -1,0 +1,46 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="sub-nav"
+         id="sub-nav">
+  <div class="content">
+    <div class="actions">
+      <a class="primary cta cta-schedule-demo"
+         href="#demo-form-modal">
+        <span>
+          {% blocktrans %}
+            Schedule a demo
+          {% endblocktrans %}
+        </span>
+      </a>
+    </div>{# .actions #}
+    <a class="prompt-link {% click_subnav 'browse' %}"
+       href="#">
+      {% blocktrans %}
+        Browse
+      {% endblocktrans %}
+    </a>
+    <div class="destinations">
+      <div class="content">
+        <a href="#key_features"
+           class="{% click_subnav 'kef_features' %}">
+          {% blocktrans %}
+            Key Features
+          {% endblocktrans %}
+        </a>
+        <a href="#testimonials"
+           class="{% click_subnav 'testimonials' %}">
+          {% blocktrans %}
+            Testimonials
+          {% endblocktrans %}
+        </a>
+        <a href="#support"
+           class="{% click_subnav 'support' %}">
+          {% blocktrans %}
+            Support
+          {% endblocktrans %}
+        </a>
+      </div>{# .content #}
+    </div>{# .destinations #}
+  </div>{# .content #}
+</section>
