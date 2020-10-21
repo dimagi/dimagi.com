@@ -1,0 +1,26 @@
+{% load dimagidotcom %}
+{% load i18n %}
+
+<section class="pad-bottom-base purple-theme"
+         id="focus">
+  <a class="tile header-card pad-top-line pad-top-small-at-large white-bg content-width-small pad-bottom-none"
+     href="#home-focus">
+    <div class="logo pad-left-line pad-left-none-at-large">
+      <h4 class="align-center">
+        {% include "svg/home/header/focus.html" %}
+      </h4>
+    </div>
+    <div class="info pad-left-line pad-left-none-at-large">
+      <h4 class="header-card-heading purple align-left align-center-at-large pad-top-base pad-top-line-at-large">
+        {% blocktrans %}
+          Focus MDM
+        {% endblocktrans %}
+      </h4>
+      <p class="home-header-tag align-left align-center-at-large pad-bottom-base">
+        {% blocktrans %}
+          Device Management Tool
+        {% endblocktrans %}
+      </p>
+    </div>
+  </a> {# .pad-top-small #}
+</section>

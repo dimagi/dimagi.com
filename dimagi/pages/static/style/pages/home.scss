@@ -190,3 +190,39 @@
 .service-list {
   color: $color-text;
 }
+
+.header-text {
+  color: $color-header !important;
+}
+
+.header-card {
+  z-index: 1;
+  border-radius: 5px;
+  display: flex;
+}
+
+@media (min-width: $width-desktop-lg) {
+  .header-card {
+    display: block;
+  }
+}
+
+.home-header-tag {
+  color: $color-text !important;
+}
+
+.home-page .hero {
+  height: 750px;
+}
+
+@media (min-width: 718px) {
+  .home-page .hero {
+    height: 700px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .home-page .hero {
+    height: 550px;
+  }
+}
