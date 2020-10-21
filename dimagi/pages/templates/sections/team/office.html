@@ -1,8 +1,8 @@
 {% load i18n %}
 {% load dimagidotcom %}
 
-{% for office in offices %}
-<section class="{{ office.slug }} border-bottom{% if office.slug == 'usa' or office.slug == 'africa' %} accent-gray-bg{% endif %}"
+{% for office in offices|dictsort:"name" %}
+<section class="{{ office.slug }} border-bottom{% if office.slug == 'india' %} accent-gray-bg{% endif %}"
          id="{{ office.slug }}">
   <div class="content pad-vert-medium">
 

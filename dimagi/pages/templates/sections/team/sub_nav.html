@@ -25,7 +25,7 @@
         <a href="#management">
           {% trans "Management" %}
         </a>
-        {% for office in offices %}
+        {% for office in offices|dictsort:"name" %}
           <a href="#{{ office.slug }}">
             {{ office.name }}
           </a>
