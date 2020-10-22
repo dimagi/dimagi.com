@@ -1,0 +1,65 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="support blue-theme" id="support">
+  <div class="content pad-vert-large gap-bottom-line">
+    <div class="gap-bottom-small gap-bottom-medium-at-medium content-width-medium">
+      <h2 class="theme-color align-center">
+        {% blocktrans %}
+          Dimagi’s Experts Are Here for You
+        {% endblocktrans %}
+      </h2>
+      <p class="align-center lead-text">
+        {% blocktrans %}
+          Whether you need support designing a mobile app for M&E or 
+          troubleshooting a data issue, Dimagi’s global team is here to help.
+        {% endblocktrans %}
+      </p>
+    </div>{# .intro #}
+
+    <div class="grid-2-at-medium gap-bottom-line">
+      <div class="column pad-right-small-at-medium">
+        <div class="services white-lazy-bg"
+             data-lazybg="true"></div>
+      </div>{# .column #}
+
+      <div class="column pad-right-medium-at-medium
+                  pad-left-small-at-medium
+                  gap-bottom-line pad-top-small
+                  pad-top-medium-at-medium pad-top-small-at-large pad-top-medium-at-extra-large">
+        <ul class="check-list">
+          <li class="pad-bottom-base">
+            <p class="gap-bottom-none">
+              {% blocktrans %}
+                <b>Technical Support</b> team available 24/7
+              {% endblocktrans %}
+            </p>
+          </li>
+          <li class="pad-bottom-base">
+            <p class="gap-bottom-none">
+              {% blocktrans %}
+                <b>Customer Success</b> team offering flexible remote trainings
+              {% endblocktrans %}
+            </p>
+          </li>
+          <li class="pad-bottom-base">
+            <p class="gap-bottom-none">
+              {% blocktrans %}
+                <b>Solutions</b> team with ICT4D experts across four continents
+              {% endblocktrans %}
+            </p>
+          </li>
+        </ul>
+        <p class="pad-top-base pad-left-small">
+          <a class="button uppercase {% click_body 'commcare_onboarding' %}"
+             href="{% url 'commcare_onboarding' %}">
+            {% blocktrans %}
+              Learn More
+            {% endblocktrans %}
+          </a>
+        </p>
+      </div>{# .column #}
+    </div>{# .grid-2-at-medium #}
+
+  </div>{# .content #}
+</section>

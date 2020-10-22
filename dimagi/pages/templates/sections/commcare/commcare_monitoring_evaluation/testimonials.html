@@ -1,0 +1,303 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="testimonial programs" 
+         data-lazybg="true" 
+         id="programs">
+  <div class="accent-gray-bg">
+    <div class="content pad-vert-small">
+      <div class="mdc-sector-program">
+        <h2 class="content-width-small align-center blue pad-top-small">
+          {% blocktrans %}
+            Trusted by Monitoring and Evaluation Teams Globally
+          {% endblocktrans %}
+        </h2>
+      </div>
+      <div class="grid grid-3-at-large grid-1-at-medium grid-row-equal-heights grid-col-space-small pad-top-medium">
+        <div class="column  pad-bottom-small ">
+          <div class="pad-bottom-base white-bg">
+            <div class="image testimonial1"
+                 data-lazybg="true"></div>
+            <div class="attribution-main pad-line pad-top-none-at-large pad-top-line-at-extra-large">
+              <p>
+                {% blocktrans %}
+                  “CRS and partners use CommCare globally to design data 
+                  collection tools for MEAL that are unique to each project.”
+                {% endblocktrans %}
+              </p>
+              <div class="attribution-heading body-color uppercase">
+                <p class="pad-bottom-base">
+                {% blocktrans %}
+                  <strong>Taralyn Lyon</strong>
+                {% endblocktrans %}
+                </p>
+              </div>
+              <p class="attribution-sub uppercase">
+                {% blocktrans %}
+                  Monitoring, Evaluation, Accountability, and Learning Advisor,
+                {% endblocktrans %}
+              </p>
+              <p class="attribution-sub uppercase">
+                {% blocktrans %}
+                  Catholic Relief Services
+                {% endblocktrans %}
+              </p>
+              <p class="pad-top-line"><a href="#agri-ep-feature-card-1" class="arrow link-blue">
+                {% blocktrans %}
+                  Read More 
+                {% endblocktrans %}
+              </a></p>
+            </div>
+          </div>
+        </div>{# .column #}
+
+        <div class="column  pad-bottom-small ">
+          <div class="pad-bottom-base white-bg">
+            <div class="image testimonial2"
+                 data-lazybg="true"></div>
+            <div class="attribution-main pad-line pad-top-none-at-large pad-top-line-at-extra-large">
+              <p>
+                {% blocktrans %}
+                  “CommCare is more than just a mobile data collection tool 
+                  and has transformed the way we use data.”
+                {% endblocktrans %}
+              </p>
+              <div class="attribution-heading body-color uppercase">
+                <p class="pad-bottom-base">
+                {% blocktrans %}
+                  <strong>Tony Tseng</strong>
+                {% endblocktrans %}
+                </p>
+              </div>
+              <p class="attribution-sub uppercase">
+                {% blocktrans %}
+                  Associate Technical Advisor, MERL Technology,
+                {% endblocktrans %}
+              </p>
+              <p class="attribution-sub uppercase">
+                {% blocktrans %}
+                  Project Concern International
+                {% endblocktrans %}
+              </p>
+              <p class="pad-top-line"><a href="#agri-ep-feature-card-2" class="arrow link-blue">
+                {% blocktrans %}
+                  Read More 
+                {% endblocktrans %}
+              </a></p>
+            </div>
+          </div>
+        </div>{# .column #}
+
+        <div class="column  pad-bottom-small ">
+          <div class="pad-bottom-base white-bg">
+            <div class="image testimonial3"
+                 data-lazybg="true"></div>
+            <div class="attribution-main pad-line pad-top-none-at-large pad-top-line-at-extra-large">
+              <p>
+                {% blocktrans %}
+                  “CommCare's features help to get the data collection 
+                  and management job done for M&E.”
+                {% endblocktrans %}
+              </p>
+              <div class="attribution-heading body-color uppercase">
+                <p class="pad-bottom-base">
+                {% blocktrans %}
+                  <strong>Arno Bratz</strong>
+                {% endblocktrans %}
+                </p>
+              </div>
+              <p class="attribution-sub uppercase">
+                {% blocktrans %}
+                  DFSA Monitoring, Evaluation and Learning Director,
+                {% endblocktrans %}
+              </p>
+              <p class="attribution-sub uppercase">
+                {% blocktrans %}
+                  Mercy Corps Uganda
+                {% endblocktrans %}
+              </p>
+              <p class="pad-top-line"><a href="#agri-ep-feature-card-3" class="arrow link-blue">
+                {% blocktrans %}
+                  Read More 
+                {% endblocktrans %}
+              </a></p>
+            </div>
+          </div>
+        </div>{# .column #}
+
+      </div>
+      <p class="pad-top-base pad-left-small align-center pad-vert-small">
+        <a class="arrow {% click_body 'case_studies' %}"
+           href="{% url 'case_studies' %}">
+          {% blocktrans %}
+            See All Case Studies
+          {% endblocktrans %}
+        </a>
+      </p>
+    </div>
+  </div>
+</section>
+
+{% block modals %}
+  <div class="modal testimonial programs"
+       data-dismissible="true"
+       data-size="medium"
+       id="agri-ep-feature-card-1">
+    <div class="modal-scroll">
+      <div class="modal-wrapper">
+        <a href="#" class="modal-close-button"></a>
+        <div class="content pad-horz-medium-at-medium pad-horz-small pad-bottom-none turquoise-theme">
+          <h4>
+            <strong class="body-color">
+              {% blocktrans %}
+                Catholic Relief Services
+              {% endblocktrans %}
+            </strong>
+          </h4>
+          <div class="grid-flex-at-large">
+            <div class="column">
+              <p class="body-color">
+                {% blocktrans %}
+                  CRS and partners use CommCare globally to design data collection 
+                  tools for MEAL that are unique to each project – allowing staff 
+                  to conduct quick one-off surveys or follow project participants 
+                  over time. The online and mobile interface is easy and flexible 
+                  to use for CRS and partner non-technical staff responsible for 
+                  designing mobile applications and also for enumerators responsible 
+                  for data collection. CommCare also improves CRS and partner digital 
+                  data collection activities in areas with limited to no data 
+                  connectivity, making it an ideal tool for use in both humanitarian 
+                  and development contexts where connectivity might be an issue. CRS 
+                  continues to expand its use of CommCare in programs globally by 
+                  building a library of template applications to use and establishing 
+                  communities of practice where like-minded staff can share their use 
+                  of CommCare and expand their knowledge.
+                {% endblocktrans %}  
+              </p>
+              <div class="attribution-heading body-color">
+                <p>
+                {% blocktrans %}
+                  <strong>Taralyn Lyon</strong>
+                {% endblocktrans %}
+                </p>
+              </div>
+              <p class="attribution-modal-sub">
+                {% blocktrans %}
+                  Monitoring, Evaluation, Accountability, and Learning Advisor 
+                  Catholic Relief Services
+                {% endblocktrans %}
+              </p>
+            </div>
+            <div class="column pad-top-none-until-large">
+              <div class="image testimonial1 crs"
+                   data-lazybg="true"></div>
+            </div>
+          </div>
+        </div>{# .content #}
+      </div>{# .modal-wrapper #}
+    </div>{# .modal-scroll #}
+  </div>{# .modal #}
+
+  <div class="modal testimonial programs"
+       data-dismissible="true"
+       data-size="medium"
+       id="agri-ep-feature-card-2">
+    <div class="modal-scroll">
+      <div class="modal-wrapper">
+        <a href="#" class="modal-close-button"></a>
+        <div class="content pad-horz-medium-at-medium pad-horz-small pad-bottom-none turquoise-theme">
+          <h4>
+            <strong class="body-color">
+              {% blocktrans %}
+                Project Concern International(PCI)
+              {% endblocktrans %}
+            </strong>
+          </h4>
+          <div class="grid-flex-at-large">
+            <div class="column">
+              <p class="body-color">
+                {% blocktrans %}
+                  CommCare is more than just a mobile data collection tool and 
+                  has not only transformed the way we think about but also the 
+                  way we use data. CommCare’s low code platform has empowered 
+                  our teams to build complex workflows to support project 
+                  specific needs and their integration with Power BI and 
+                  Tableau has elevated and democratized our data collection.
+                {% endblocktrans %}  
+              </p>
+              <div class="attribution-heading body-color">
+                <p>
+                {% blocktrans %}
+                  <strong>Tony Tseng</strong>
+                {% endblocktrans %}
+                </p>
+              </div>
+              <p class="attribution-modal-sub">
+                {% blocktrans %}
+                   Associate Technical Advisor, MERL Technology, Project Concern International
+                {% endblocktrans %}
+              </p>
+            </div>
+            <div class="column pad-top-none-until-large">
+              <div class="image testimonial2 crs"
+                   data-lazybg="true"></div>
+            </div>
+          </div>
+        </div>{# .content #}
+      </div>{# .modal-wrapper #}
+    </div>{# .modal-scroll #}
+  </div>{# .modal #}
+
+  <div class="modal testimonial programs"
+       data-dismissible="true"
+       data-size="medium"
+       id="agri-ep-feature-card-3">
+    <div class="modal-scroll">
+      <div class="modal-wrapper">
+        <a href="#" class="modal-close-button"></a>
+        <div class="content pad-horz-medium-at-medium pad-horz-small pad-bottom-none turquoise-theme">
+          <h4>
+            <strong class="body-color">
+              {% blocktrans %}
+                Mercy Corps
+              {% endblocktrans %}
+            </strong>
+          </h4>
+          <div class="grid-flex-at-large">
+            <div class="column">
+              <p class="body-color">
+                {% blocktrans %}
+                  In many of our complex development programs, we have hundreds 
+                  of frontline workers who interact with hundreds of thousands 
+                  of participants. It is not uncommon to track hundreds of 
+                  indicators across dozens of tools. CommCare's case management, 
+                  case sharing, data exports and mobile user management features 
+                  help to get the data collection and management job done for 
+                  M&E, while also enabling feedback loops and a user-friendly 
+                  application environment for frontline workers.
+                {% endblocktrans %}  
+              </p>
+              <div class="attribution-heading body-color">
+                <p>
+                {% blocktrans %}
+                  <strong>Arno Bratz</strong>
+                {% endblocktrans %}
+                </p>
+              </div>
+              <p class="attribution-modal-sub">
+                {% blocktrans %}
+                  DFSA Monitoring, Evaluation and Learning Director, Mercy Corps Uganda
+                {% endblocktrans %}
+              </p>
+            </div>
+            <div class="column pad-top-none-until-large">
+              <div class="image testimonial3 crs"
+                   data-lazybg="true"></div>
+            </div>
+          </div>
+        </div>{# .content #}
+      </div>{# .modal-wrapper #}
+    </div>{# .modal-scroll #}
+  </div>{# .modal #}
+
+{% endblock %}

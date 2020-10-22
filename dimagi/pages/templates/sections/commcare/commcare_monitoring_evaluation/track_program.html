@@ -1,0 +1,50 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="align-center blue-theme accent-gray-bg border-top" id="track_program">
+  <div class="content pad-vert-medium">
+    <h2 class="normalcase pad-bottom-small theme-color">
+        {% blocktrans %}
+          Featured Partners
+        {% endblocktrans %}
+    </h2>
+
+    <div class="grid-1-at-small grid-2-at-large grid-col-space-medium grid-row-equal-heights pad-bottom-medium">
+      {% include "sections/commcare/commcare_monitoring_evaluation/track_program/collect.html" %}
+      {% include "sections/commcare/commcare_monitoring_evaluation/track_program/optimize.html" %}
+    </div>{# .grid-2-at-small #}
+
+    <div class="report content pad-vert-small blue-theme border-all white-bg">
+      <div class="grid-2-at-small">
+        <div class="column pad-left-medium-at-medium pad-left-small pad-top-large-at-large pad-top-small-at-medium pad-top-none align-left">
+          <h3 class="theme-color">
+            {% blocktrans %}
+              Capture report-ready data
+            {% endblocktrans %}
+          </h3>
+          <p>
+            {% blocktrans %}
+              Automatically calculate indicators and metrics from data your 
+              frontline staff capture, then programmatically transform values 
+              so data is ready for reporting on day one.
+            {% endblocktrans %}
+          </p>
+        </div>{# .column #}
+        <div class="column">
+          <div class="report-ready white-lazy-bg"
+               data-lazybg="true"></div>
+        </div>{# .column #}
+      </div>{# .grid-2 #}
+    </div>{# .content #}
+
+    <p class="align-center pad-top-medium">
+      <a class="button uppercase {% click_body 'case-management' %}"
+         href="{% url 'commcare_features' %}">
+        {% blocktrans %}
+          See all features
+        {% endblocktrans %}
+      </a>
+    </p>
+
+  </div>{# .content #}
+</section>

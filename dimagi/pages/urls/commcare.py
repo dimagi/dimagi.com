@@ -9,15 +9,15 @@ from dimagi.pages.views.commcare import (
     commcare_messaging,
     pricing,
     handle_pricing_pdf,
-    mande,
+    monitoring_evaluation,
 )
 
 
 urlpatterns = [
     url(r'^$', product,
         name='commcare'),
-    url(r'^m&e/$', mande,
-        name='mande'),
+    url(r'^monitoring-evaluation/$', monitoring_evaluation,
+        name='monitoring_evaluation'),
     url(r'^features/$', product_features,
         name='commcare_features'),
     url(r'^research/$', research,

@@ -81,7 +81,7 @@ def commcare_onboarding(request):
     return render(request, 'pages/commcare/commcare_onboarding.html', context)
 
 @enable_ab_test(DEMO_WORKFLOW_V2)
-def mande(request):
+def monitoring_evaluation(request):
     context = {
         'partners': get_logos(),
     }
