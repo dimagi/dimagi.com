@@ -1,0 +1,36 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="blue-bg" id="integration">
+  <div class="content pad-vert-medium">
+    <div class="grid grid-2-at-medium grid-1-at-small white">
+      <div class="column pad-top-base pad-top-medium-at-extra-large align-left-at-medium align-center">
+        <h2 class="pad-top-base white">
+          {% blocktrans %}
+            Integrations for Deeper Analysis
+          {% endblocktrans %}
+        </h2>
+        <p>
+          {% blocktrans %}
+            CommCare integrates seamlessly into your organization’s data 
+            ecosystem with pre-built connections to your favorite M&E tools. 
+          {% endblocktrans %}
+        </p>
+        <p class="pad-top-small">
+          <a class="button white-bg blue uppercase {% click_body 'commcare_integration' %}"
+             href="{% url 'commcare_integration' %}">
+            {% blocktrans %}
+              Learn More
+            {% endblocktrans %}
+          </a>
+        </p>
+      </div>{# .column #}
+      <div class="column"
+           id="integration">
+        <div class="integrate white-lazy-bg"
+             data-lazybg="true">
+        </div>
+      </div> {# .column #}
+    </div> {# .grid #}
+  </div> {# .content #}
+</section>

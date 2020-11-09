@@ -79,3 +79,11 @@ def commcare_messaging(request):
 def commcare_onboarding(request):
     context = _get_global_context()
     return render(request, 'pages/commcare/commcare_onboarding.html', context)
+
+@enable_ab_test(DEMO_WORKFLOW_V2)
+def monitoring_evaluation(request):
+    context = {
+        'partners': get_logos(),
+    }
+    return render(request, 'pages/commcare/commcare_m&e.html', context)
+

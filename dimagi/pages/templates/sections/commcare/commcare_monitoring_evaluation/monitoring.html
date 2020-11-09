@@ -1,0 +1,35 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="monitor align-center border-top pad-bottom-line"
+         id="monitor">
+  <div class="content pad-vert-medium">
+    <div class="content-width-medium">
+      <h2 class="blue gap-top-line">
+        {% blocktrans %}
+          Efficient Program Monitoring <br class="hide-until-medium" />
+          With Data You Can Trust
+        {% endblocktrans %}
+      </h2>
+    </div>
+
+    <div class="gap-top-line">
+      <div class="image"
+           data-lazybg="true"></div>
+    </div>{# .content #}
+
+    <div class="content-width-medium pad-top-small">
+      <p class="lead-text pad-top-base">
+        {% blocktrans %}
+          Build powerful data collection apps that enable frontline teams 
+          to capture accurate data for program monitoring and evaluation.
+        {% endblocktrans %}
+      </p>
+      <p class="button">
+        {% trans 'Watch a demo' as video_text %}
+        {% include "partials/wistia_popover.html" with wistia_id='fkfc3l6n2e' text=video_text white_class='white' %}
+      </p>
+    </div>
+
+  </div>
+</section>

@@ -1,0 +1,116 @@
+@import 'app/mixins/background';
+@import 'app/variables/colors';
+@import 'app/variables/sizes';
+@import 'app/variables/type';
+
+
+.commcare-monitoring-evaluation {
+  @include make-bg(hero, '../../../pages/commcare/monitoring_evaluation/hero');
+}
+
+@media (min-width: $width-desktop) {
+  .commcare-monitoring-evaluation .hero {
+    h1 {
+      margin-left: 0;
+      margin-right: 0;
+      max-width: 100%;
+    }
+  }
+}
+
+.monitor {
+  $_base-height: 187px;
+  $_height-by-size: (
+    small: 290px,
+    medium: 376px,
+    large: 360px,
+    extra-large: 360px,
+  );
+  @include make-bg(image, '../../../pages/commcare/monitoring_evaluation/monitoring/monitor', $_base-height, $_height-by-size);
+
+  width: 100%;
+}
+
+.response {
+  $_base-height: 150px;
+  $_height-by-size: (
+    small: 210px,
+    medium: 310px,
+    large: 200px,
+    extra-large: 230px,
+  );
+  @include make-bg(clean, '../../../pages/commcare/monitoring_evaluation/collect/cleaner', $_base-height, $_height-by-size);
+  @include make-bg(optimize, '../../../pages/commcare/monitoring_evaluation/optimize/optimise', $_base-height, $_height-by-size);
+}
+
+.report {
+  $_base-height: 221px;
+  $_height-by-size: (
+    small: 210px,
+    medium: 223px,
+    large: 290px,
+    extra-large: 328px,
+  );
+  @include make-bg(report-ready, '../../../pages/commcare/monitoring_evaluation/report/hero', $_base-height, $_height-by-size);
+}
+
+#integration {
+  $_base-height: 190px;
+  $_height-by-size: (
+    small: 280px,
+    medium: 280px,
+    large: 280px,
+    extra-large: 320px,
+  );
+  @include make-bg(integrate, '../../../pages/commcare/monitoring_evaluation/integrations/integrate', $_base-height, $_height-by-size);
+}
+
+.support {
+  $_base-height: 195px;
+  $_height-by-size: (
+    small: 270px,
+    medium: 376px,
+    large: 316px,
+    extra-large: 316px,
+  );
+  @include make-bg(services, '../../../pages/commcare/monitoring_evaluation/support/services', $_base-height, $_height-by-size);
+}
+
+.programs .image.testimonial1{
+  @include background-cover('../../../pages/commcare/monitoring_evaluation/testimonial/crs.jpg');
+  height: 200px;
+  background-size: contain;
+}
+
+.programs .image.testimonial2{
+  @include background-cover('../../../pages/commcare/monitoring_evaluation/testimonial/pci.jpg');
+  height: 200px;
+  background-size: contain;
+}
+
+.programs .image.testimonial3{
+  @include background-cover('../../../pages/commcare/monitoring_evaluation/testimonial/mercycorps.jpg');
+  height: 200px;
+  background-size: contain;
+}
+
+.programs .image.testimonial1,
+.programs .image.testimonial2,
+.programs .image.testimonial3 {
+ background-position: initial;
+}
+
+.programs .image.crs{
+  width: 309px;
+}
+
+.attribution-sub {
+  font-size: 12px;
+  font-weight: 600;
+  opacity: 0.7;
+  margin-bottom: 5px;
+}
+
+.attribution-modal-sub {
+  font-weight: 400;
+}
