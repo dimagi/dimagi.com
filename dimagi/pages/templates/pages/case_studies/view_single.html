@@ -37,7 +37,13 @@
             Download the Case Study
           {% endblocktrans %}
         </h3>
-        <div id="hubspot-download-form" class="hubspot-download"></div>
+        <a class="button button-orange"
+           href="https://cta-redirect.hubspot.com/cta/redirect/503070/{{study.hubspot_form}}"
+           target="_blank">
+          {% blocktrans %}
+            Download
+          {% endblocktrans %}
+        </a>
       </div>
     </section>
 
@@ -45,20 +51,6 @@
 {% endblock %}
 
 {% block modals %}
-  <div class="modal"
-       data-dismissible="true"
-       data-size="medium"
-       id="hubspot-download-form-pdf-summary">
-    <div class="modal-scroll">
-      <div class="modal-wrapper">
-        <a href="#" class="modal-close-button"></a>
-        <div class="content pad-horz-medium-at-medium pad-horz-line pad-vert-none {{ sector.theme }}">
-          <section class="orange-theme" id="download-pdf-summary-form-content"></section>
-        </div>{# .content #}
-      </div>{# .modal-wrapper #}
-    </div>{# .modal-scroll #}
-  </div>{# .modal #}
-
   <div class="modal"
        data-dismissible="true"
        data-size="medium"
@@ -80,24 +72,6 @@
   <![endif]-->
   <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
   <script>
-    hbspt.forms.create({
-      portalId: "503070",
-      formId: "{{ study.hubspot_form }}",
-      target: "#download-pdf-summary-form-content",
-      css: "",
-      onFormSubmit: function () {
-        window.open('{{ study.download_url }}', "_blank");
-      },
-    });
-    hbspt.forms.create({
-      portalId: "503070",
-      formId: "{{ study.hubspot_form }}",
-      target: "#hubspot-download-form",
-      css: "",
-      onFormSubmit: function () {
-        window.open('{{ study.download_url }}', "_blank");
-      },
-    });
     hbspt.forms.create({
       portalId: "503070",
       formId: "{{ study.hubspot_form_language }}",

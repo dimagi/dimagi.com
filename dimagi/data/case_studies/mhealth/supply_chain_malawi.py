@@ -40,5 +40,5 @@ STUDY = CaseStudy(
     ],
     slug="mhealth-supply-chain-malawi",
     download_url="https://cdn2.hubspot.net/hubfs/503070/Case%20Studies/CommCare%20-%20cStock%20Case%20Study.pdf",
-    hubspot_form="6c75de96-f702-43f4-9a54-ba7667a4af30",
+    hubspot_form="8ec3dce3-f4f3-4105-87c5-1ba29d86457f",
 )

@@ -44,5 +44,5 @@ STUDY = CaseStudy(
     ],
     slug="mhp-salud",
     download_url="https://cdn2.hubspot.net/hubfs/503070/Case%20Studies/CommCare%20-%20MHP%20Salud%20Case%20Study.pdf",
-    hubspot_form="5bbd868a-6688-4375-a516-1b2478290407",
+    hubspot_form="cc32b07a-4bdd-46f7-8a0e-934a7312af03",
 )

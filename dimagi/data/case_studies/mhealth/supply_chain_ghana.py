@@ -39,5 +39,5 @@ STUDY = CaseStudy(
     ],
     slug="mhealth-supply-chain-ghana",
     download_url="https://cdn2.hubspot.net/hubfs/503070/Case%20Studies/CommCare%20-%20FRHP%20EWS%20Case%20Study.pdf",
-    hubspot_form="9b30bfc9-2b46-414b-b551-8a25038a1073",
+    hubspot_form="c87364f1-18d5-4355-ba2d-a6e1bcdee20c",
 )
