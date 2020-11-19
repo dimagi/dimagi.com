@@ -38,6 +38,7 @@
           {% endblocktrans %}
         </h3>
         <a class="button button-orange"
+           id="hubspot-download-cta"
            href="https://cta-redirect.hubspot.com/cta/redirect/503070/{{study.hubspot_form}}"
            target="_blank">
           {% blocktrans %}
@@ -50,36 +51,17 @@
   </section>
 {% endblock %}
 
-{% block modals %}
-  <div class="modal"
-       data-dismissible="true"
-       data-size="medium"
-       id="hubspot-download-form-french-pdf-summary">
-    <div class="modal-scroll">
-      <div class="modal-wrapper">
-        <a href="#" class="modal-close-button"></a>
-        <div class="content pad-horz-medium-at-medium pad-horz-line pad-vert-none {{ sector.theme }}">
-          <section class="orange-theme" id="download-pdf-summary-form-content-french"></section>
-        </div>{# .content #}
-      </div>{# .modal-wrapper #}
-    </div>{# .modal-scroll #}
-  </div>{# .modal #}
-{% endblock %}
-
 {% block js %}
   <!--[if lte IE 8]>
-    <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+    <script charset="utf-8" type="text/javascript" src="https://js.hscta.net/cta/current.js"></script>
   <![endif]-->
-  <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+  <script charset="utf-8" type="text/javascript" src="https://js.hscta.net/cta/current.js"></script>
   <script>
-    hbspt.forms.create({
+    hbspt.cta.load({
       portalId: "503070",
-      formId: "{{ study.hubspot_form_language }}",
-      target: "#download-pdf-summary-form-content-french",
+      formId: "{{ study.hubspot_form }}",
+      target: "#hubspot-download-cta",
       css: "",
-      onFormSubmit: function () {
-        window.open('{{ study.download_url_language }}', "_blank");
-      },
     });
   </script>
 {% endblock %}
