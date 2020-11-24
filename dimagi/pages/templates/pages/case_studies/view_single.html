@@ -37,13 +37,10 @@
             Download the Case Study
           {% endblocktrans %}
         </h3>
-        <a class="button button-orange"
-           id="hubspot-download-cta"
+        <a id="hubspot-download-cta"
            href="https://cta-redirect.hubspot.com/cta/redirect/503070/{{study.hubspot_form}}"
            target="_blank">
-          {% blocktrans %}
-            Download
-          {% endblocktrans %}
+           <img class="hs-cta-img download-hs-cta-img" id="hs-cta-img-{{ study.hubspot_form }}" src="https://no-cache.hubspot.com/cta/default/503070/{{ study.hubspot_form }}.png"  alt="Download"/>
         </a>
       </div>
     </section>
