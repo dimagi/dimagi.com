@@ -38,7 +38,7 @@
           {% endblocktrans %}
         </h3>
         {% if study.primary_cta %}
-          {% include 'partials/hubspot_cta.html' with cta_id=study.primary_cta %}
+          {% include 'partials/hubspot_cta.html' with cta_id=study.primary_cta fallback_css="button primary large" fallback_text="Download" %}
         {% else %}
           <div id="hubspot-download-form" class="hubspot-download"></div>
         {% endif %}

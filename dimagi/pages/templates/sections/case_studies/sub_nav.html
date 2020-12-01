@@ -16,7 +16,7 @@
         </a>
       {% endif %}
       {% if study.subnav_cta %}
-        {% include 'partials/hubspot_cta.html' with cta_id=study.subnav_cta %}
+        {% include 'partials/hubspot_cta.html' with cta_id=study.subnav_cta fallback_css="primary" fallback_text="Download Case Study" %}
       {% else %}
         <a class="primary"
            href="#hubspot-download-form-pdf-summary">
