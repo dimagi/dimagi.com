@@ -41,5 +41,5 @@ STUDY = CaseStudy(
     ],
     slug="technoserve",
     download_url="https://cdn2.hubspot.net/hubfs/503070/Case%20Studies/CommCare%20-%20TechnoServe%20Case%20Study.pdf",
-    hubspot_form="6b77a5ff-69bd-468d-8ef0-19f48c5ab9ee",
+    hubspot_form="78ddf7e9-5c96-4796-a895-3fad6b535963",
 )

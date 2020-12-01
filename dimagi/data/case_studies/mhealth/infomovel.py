@@ -53,5 +53,5 @@ STUDY = CaseStudy(
     ],
     slug="infomovel",
     download_url="https://f.hubspotusercontent20.net/hubfs/503070/Case%20Studies/CommCare%20-%20Infomovel%20Case%20Study.pdf",
-    hubspot_form="05811f2b-3058-4ba4-b28b-52111192ea99",
+    hubspot_form="53e6bbdf-5ce2-4a1f-b9e2-d7741c43a94a",
 )

@@ -39,5 +39,5 @@ STUDY = CaseStudy(
     ],
     slug="lwala-community-alliance",
     download_url="https://cdn2.hubspot.net/hubfs/503070/Case%20Studies/CommCare%20-%20Lwala%20Community%20Alliance%20Case%20Study.pdf",
-    hubspot_form="7f1f008a-1549-4a3a-bc17-f796f462797c",
+    hubspot_form="ee2b82a3-651c-4102-b54d-f58538356485",
 )

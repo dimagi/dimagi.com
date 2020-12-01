@@ -51,5 +51,5 @@ STUDY = CaseStudy(
     ],
     slug="sickle-cell",
     download_url="https://f.hubspotusercontent20.net/hubfs/503070/Case%20Studies/CommCare%20-%20Sickle%20Cell%20Foundation%20Case%20Study.pdf",
-    hubspot_form="57e73298-f60f-4139-9198-a62e799fa0a3",
+    hubspot_form="1c787f58-b720-4dd7-af0f-4f6b8d63093c",
 )
