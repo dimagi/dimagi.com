@@ -74,6 +74,7 @@ TEMPLATES = [
                 'dimagi.utils.context_processors.metas',
                 'dimagi.utils.context_processors.external_urls',
                 'dimagi.utils.context_processors.ab_tests',
+                'dimagi.utils.context_processors.hubspot_ctas',
             ],
             'loaders': [
                 'django.template.loaders.filesystem.Loader',

@@ -5,6 +5,7 @@ from dimagi.data.case_studies import (
     get_case_study_by_slug,
     get_case_studies_page,
 )
+from dimagi.utils.hubspot_api import activate_hubspot_cta
 
 
 def view_all(request):
@@ -22,4 +23,8 @@ def view_single(request, slug):
     context = {
         'study': study,
     }
+    if study.primary_cta:
+        cta_title = f'Case Study: {study.event_tracking_title} ({study.slug})'
+        activate_hubspot_cta(request, study.primary_cta, cta_title)
+        activate_hubspot_cta(request, study.subnav_cta, f'{cta_title} (Sub Nav)')
     return render(request, 'pages/case_studies/view_single.html', context)

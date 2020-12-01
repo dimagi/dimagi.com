@@ -41,6 +41,7 @@ STUDY = CaseStudy(
         ugettext_lazy("SMS Reminders"),
     ],
     slug="mhealth-crs-india",
-    download_url="https://cdn2.hubspot.net/hubfs/503070/Case%20Studies/CommCare%20-%20CRS%20ReMiND%20Case%20Study.pdf",
-    hubspot_form="d5f0286b-6605-4a22-a105-aedd2bbdd42e",
+    primary_cta="37a68280-3d6c-4211-b1f8-1e98a8b93b6f",
+    subnav_cta="c7531703-2b83-46eb-ace9-9646a3168967",
+    event_tracking_title="Catholic Relief Services",
 )

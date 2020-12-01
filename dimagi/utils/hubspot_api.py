@@ -24,3 +24,9 @@ def update_contact(email, properties):
     return requests.post(url, json={
         'properties': properties,
     })
+
+
+def activate_hubspot_cta(request, cta_id, tracking_name):
+    if not hasattr(request, 'hubspot_ctas'):
+        request.hubspot_ctas = {}
+    request.hubspot_ctas.update({cta_id: tracking_name})
