@@ -39,3 +39,9 @@ def ab_tests(request):
     if not hasattr(request, 'ab_test'):
         request.ab_test = {}
     return {}
+
+
+def hubspot_ctas(request):
+    if not hasattr(request, 'hubspot_ctas'):
+        request.hubspot_ctas = {}
+    return {}

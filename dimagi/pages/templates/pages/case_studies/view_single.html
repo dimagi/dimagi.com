@@ -37,28 +37,83 @@
             Download the Case Study
           {% endblocktrans %}
         </h3>
-        <a id="hubspot-download-cta"
-           href="https://cta-redirect.hubspot.com/cta/redirect/503070/{{study.hubspot_form}}"
-           target="_blank">
-           <img class="hs-cta-img download-hs-cta-img" id="hs-cta-img-{{ study.hubspot_form }}" src="https://no-cache.hubspot.com/cta/default/503070/{{ study.hubspot_form }}.png"  alt="Download"/>
-        </a>
+        {% if study.primary_cta %}
+          {% include 'partials/hubspot_cta.html' with cta_id=study.primary_cta %}
+        {% else %}
+          <div id="hubspot-download-form" class="hubspot-download"></div>
+        {% endif %}
       </div>
     </section>
 
   </section>
 {% endblock %}
 
+{% block modals %}
+  {% if not study.primary_cta %}
+    <div class="modal"
+         data-dismissible="true"
+         data-size="medium"
+         id="hubspot-download-form-pdf-summary">
+      <div class="modal-scroll">
+        <div class="modal-wrapper">
+          <a href="#" class="modal-close-button"></a>
+          <div class="content pad-horz-medium-at-medium pad-horz-line pad-vert-none {{ sector.theme }}">
+            <section class="orange-theme" id="download-pdf-summary-form-content"></section>
+          </div>{# .content #}
+        </div>{# .modal-wrapper #}
+      </div>{# .modal-scroll #}
+    </div>{# .modal #}
+
+    <div class="modal"
+         data-dismissible="true"
+         data-size="medium"
+         id="hubspot-download-form-french-pdf-summary">
+      <div class="modal-scroll">
+        <div class="modal-wrapper">
+          <a href="#" class="modal-close-button"></a>
+          <div class="content pad-horz-medium-at-medium pad-horz-line pad-vert-none {{ sector.theme }}">
+            <section class="orange-theme" id="download-pdf-summary-form-content-french"></section>
+          </div>{# .content #}
+        </div>{# .modal-wrapper #}
+      </div>{# .modal-scroll #}
+    </div>{# .modal #}
+  {% endif %}
+{% endblock %}
+
 {% block js %}
-  <!--[if lte IE 8]>
-    <script charset="utf-8" type="text/javascript" src="https://js.hscta.net/cta/current.js"></script>
-  <![endif]-->
-  <script charset="utf-8" type="text/javascript" src="https://js.hscta.net/cta/current.js"></script>
-  <script>
-    hbspt.cta.load({
-      portalId: "503070",
-      formId: "{{ study.hubspot_form }}",
-      target: "#hubspot-download-cta",
-      css: "",
-    });
-  </script>
+  {% if not study.primary_cta %}
+    <!--[if lte IE 8]>
+      <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+    <![endif]-->
+    <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+    <script>
+      hbspt.forms.create({
+        portalId: "503070",
+        formId: "{{ study.hubspot_form }}",
+        target: "#download-pdf-summary-form-content",
+        css: "",
+        onFormSubmit: function () {
+          window.open('{{ study.download_url }}', "_blank");
+        },
+      });
+      hbspt.forms.create({
+        portalId: "503070",
+        formId: "{{ study.hubspot_form }}",
+        target: "#hubspot-download-form",
+        css: "",
+        onFormSubmit: function () {
+          window.open('{{ study.download_url }}', "_blank");
+        },
+      });
+      hbspt.forms.create({
+        portalId: "503070",
+        formId: "{{ study.hubspot_form_language }}",
+        target: "#download-pdf-summary-form-content-french",
+        css: "",
+        onFormSubmit: function () {
+          window.open('{{ study.download_url_language }}', "_blank");
+        },
+      });
+    </script>
+  {% endif %}
 {% endblock %}
