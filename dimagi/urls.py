@@ -17,6 +17,7 @@ from dimagi.pages.sitemaps import (
     QuickStartSitemap,
 )
 from dimagi.pages.urls.redirect import redirect_urlpatterns
+from django.views.generic.base import RedirectView
 from dimagi.pages.views import commcare, redirect
 from dimagi.pages.views import pillar
 from dimagi.pages.urls import blog
@@ -98,6 +99,8 @@ urlpatterns = [
         redirect.blog('data-collection-data-requirements')),
     url(r'^blog/what-is-your-data-collection-process/$',
         redirect.blog('data-collection-data-collection-plan')),
+    url(r'^cloudworks/$', RedirectView.as_view(url='https://cloudworks.dimagi.com/landing')),
+
 
     url(r'^blog/', include(blog.blog_urls)),
     url(r'^about/', include(team.about_urls)),
