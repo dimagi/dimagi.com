@@ -60,6 +60,7 @@ STUDY = CaseStudy(
         ugettext_lazy("SMS reminders"),
     ],
     slug="mhealth-world-vision-motech",
-    download_url="https://www.dropbox.com/s/68duqq2gnitl9dq/mhealth-world-vision-motech.pdf?dl=1",
-    hubspot_form="e0f0bd21-d1e6-462a-b7d9-c753580394d9",
+    primary_cta="78528acc-455a-4c2c-8f98-75f77cac06ec",
+    subnav_cta="bc6549c1-3069-4093-8e92-06e9b711df01",
+    event_tracking_title="World Vision MOTECH",
 )
