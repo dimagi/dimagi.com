@@ -75,7 +75,7 @@ GROUP.add_features([
     App User Profiles</a> eliminates these problems by giving you the ability to group 
     custom user data into profiles and simply assign the right profile to the right user.
         """)),
-        support=Support(False, False, False, True),
+        support=Support(False, False, True, True),
     ),
     Feature(
         title=ugettext_lazy(
