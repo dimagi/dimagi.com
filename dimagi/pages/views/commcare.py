@@ -87,3 +87,10 @@ def monitoring_evaluation(request):
     }
     return render(request, 'pages/commcare/commcare_m&e.html', context)
 
+@enable_ab_test(DEMO_WORKFLOW_V2)
+def ict4d(request):
+    context = {
+        'partners': get_logos(),
+    }
+    return render(request, 'pages/commcare/commcare_ict4d.html', context)
+
