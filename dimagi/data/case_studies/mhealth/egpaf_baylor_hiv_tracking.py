@@ -7,6 +7,9 @@ STUDY = CaseStudy(
     title=ugettext_lazy(
         "EGPAF & Baylor University: CommCare for HIV Patient Tracking and Appointment Reminders"
     ),
+    browser_title=ugettext_lazy(
+        "EGPAF and Baylor University: CommCare for HIV Patient Tracking and Appointment Reminders"
+    ),
     summary=[
         ugettext_lazy(
             "Elizabeth Glaser Pediatric AIDS Foundation (EGPAF) and Dimagi "
