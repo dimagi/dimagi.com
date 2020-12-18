@@ -19,6 +19,7 @@ from dimagi.data.case_studies.mhealth import (
     sickle_cell,
     miracle_feet,
     infomovel,
+    egpaf_baylor_hiv_tracking,
 )
 
 
@@ -43,4 +44,5 @@ studies = (
     sickle_cell,
     miracle_feet,
     infomovel,
+    egpaf_baylor_hiv_tracking,
 )
