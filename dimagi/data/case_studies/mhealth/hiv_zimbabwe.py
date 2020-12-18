@@ -40,6 +40,7 @@ STUDY = CaseStudy(
         ugettext_lazy("Process Adherence"),
     ],
     slug="mhealth-hiv-zimbabwe",
-    download_url="https://cdn2.hubspot.net/hubfs/503070/Case%20Studies/CommCare%20-%20GSID%20RDT%20Case%20Study.pdf",
-    hubspot_form="e769deaf-7aca-4d72-9b31-7207dbb2eab3",
+    primary_cta="6c6b7a29-63c4-4c99-996a-4675929d5a95",
+    subnav_cta="d1f6cde7-968e-41e7-8a57-f7fa5273c5a7",
+    event_tracking_title="Global Solutions for Infectious Disease",
 )

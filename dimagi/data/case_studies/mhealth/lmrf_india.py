@@ -36,6 +36,7 @@ STUDY = CaseStudy(
     features=[
     ],
     slug="mhealth-lmrf-india",
-    download_url="https://cdn2.hubspot.net/hubfs/503070/Case%20Studies/CommCare%20-%20Mobile%20SAKHI%20Case%20Study.pdf",
-    hubspot_form="0480314e-ca07-4a8d-857c-15c3f94f86c7",
+    primary_cta="3d3cfad7-afdc-409f-813f-f759cab48b94",
+    subnav_cta="5b97fcda-e4d7-48b7-95cb-cd380c30f812",
+    event_tracking_title="Mobile SAKHI",
 )

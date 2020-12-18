@@ -52,6 +52,7 @@ STUDY = CaseStudy(
         ugettext_lazy("In-app Adherence Calculators"),
     ],
     slug="infomovel",
-    download_url="https://f.hubspotusercontent20.net/hubfs/503070/Case%20Studies/CommCare%20-%20Infomovel%20Case%20Study.pdf",
-    hubspot_form="53e6bbdf-5ce2-4a1f-b9e2-d7741c43a94a",
+    primary_cta="05811f2b-3058-4ba4-b28b-52111192ea99",
+    subnav_cta="3b8f3f58-6e7a-4013-ba47-f5dbeca5934a",
+    event_tracking_title="Infomovel",
 )
