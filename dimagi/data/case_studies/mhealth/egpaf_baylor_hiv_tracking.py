@@ -5,10 +5,7 @@ from dimagi.pages.models.case_studies import CaseStudy
 
 STUDY = CaseStudy(
     title=ugettext_lazy(
-        "EGPAF & Baylor University: CommCare for HIV Patient Tracking and Appointment Reminders"
-    ),
-    browser_title=ugettext_lazy(
-        "EGPAF and Baylor University: CommCare for HIV Patient Tracking and Appointment Reminders"
+        "EGPAF & Baylor College of Medicine: CommCare for HIV Patient Tracking and Appointment Reminders"
     ),
     summary=[
         ugettext_lazy(
@@ -20,7 +17,7 @@ STUDY = CaseStudy(
             "comprehensive HIV, TB prevention, and maternal and child "
             "healthcare (MCH) and treatment program. The overall aim of the "
             "project, which was later supported in two additional districts "
-            "by a team at Baylor College of Medicine Children’s Foundation, was "
+            "by a team at Baylor College of Medicine Children’s Foundation – Lesotho, was "
             "to reduce missed appointments and the number of patients that are "
             "Lost to Follow Up (LTFU), especially those in the target population "
             "of pregnant women who are receiving ART (Antiretroviral Therapy)."
@@ -38,7 +35,7 @@ STUDY = CaseStudy(
     partners=[
         "EGPAF-Lesotho",
         "Baylor College of Medicine Children’s Foundation Lesotho - ETHICS",
-        "Lesotho Network of AIDs Services Organizations (LENASO)",
+        "Lesotho Network of AIDS Services Organizations (LENASO)",
         "MOH"
     ],
     countries=[
