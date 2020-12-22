@@ -18,19 +18,6 @@
   }
 }
 
-.monitor {
-  $_base-height: 187px;
-  $_height-by-size: (
-    small: 290px,
-    medium: 376px,
-    large: 360px,
-    extra-large: 360px,
-  );
-  @include make-bg(image, '../../../pages/commcare/monitoring_evaluation/monitoring/monitor', $_base-height, $_height-by-size);
-
-  width: 100%;
-}
-
 .response {
   $_base-height: 150px;
   $_height-by-size: (
@@ -54,6 +41,15 @@
   @include make-bg(report-ready, '../../../pages/commcare/ict4d/enforce/hero', $_base-height, $_height-by-size);
 }
 
+ul.integration {
+  li {
+    &:before {
+      // Adds white color to the checklist
+      color: $color-white;
+    }
+  }
+}
+
 #integration {
   $_base-height: 190px;
   $_height-by-size: (
@@ -62,7 +58,7 @@
     large: 280px,
     extra-large: 320px,
   );
-  @include make-bg(integrate, '../../../pages/commcare/monitoring_evaluation/integrations/integrate', $_base-height, $_height-by-size);
+  @include make-bg(integrate, '../../../pages/commcare/ict4d/comprehensive-spectrum/integrate', $_base-height, $_height-by-size, '.png');
 }
 
 .support {
@@ -73,23 +69,23 @@
     large: 316px,
     extra-large: 316px,
   );
-  @include make-bg(services, '../../../pages/commcare/monitoring_evaluation/support/services', $_base-height, $_height-by-size);
+  @include make-bg(services, '../../../pages/commcare/ict4d/support/services', $_base-height, $_height-by-size);
 }
 
 .programs .image.testimonial1{
-  @include background-cover('../../../pages/commcare/monitoring_evaluation/testimonial/crs.jpg');
+  @include background-cover('../../../pages/commcare/ict4d/trust/sighsavers.jpg');
   height: 200px;
   background-size: contain;
 }
 
 .programs .image.testimonial2{
-  @include background-cover('../../../pages/commcare/monitoring_evaluation/testimonial/pci.jpg');
+  @include background-cover('../../../pages/commcare/ict4d/trust/crs.jpg');
   height: 200px;
   background-size: contain;
 }
 
 .programs .image.testimonial3{
-  @include background-cover('../../../pages/commcare/monitoring_evaluation/testimonial/mercycorps.jpg');
+  @include background-cover('../../../pages/commcare/ict4d/trust/technoserve.jpg');
   height: 200px;
   background-size: contain;
 }

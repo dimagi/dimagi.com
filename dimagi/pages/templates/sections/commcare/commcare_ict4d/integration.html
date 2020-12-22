@@ -17,16 +17,22 @@
             by giving stakeholders:
           {% endblocktrans %}
         </p>
-        <p>
-          {% blocktrans %}
-            Self service data integrations for their day-to-day data needs
-          {% endblocktrans %}
-        </p>
-        <p>
-          {% blocktrans %}
-            Custom data pipelines for their most complex and ambitious projects
-          {% endblocktrans %}
-        </p>
+        <ul class="integration check-list">
+          <li class="pad-bottom-base inverted">
+            <p>
+              {% blocktrans %}
+                Self service data integrations for their day-to-day data needs
+              {% endblocktrans %}
+            </p>
+          </li>
+          <li class="pad-bottom-base">
+            <p>
+              {% blocktrans %}
+                Custom data pipelines for their most complex and ambitious projects
+              {% endblocktrans %}
+            </p>
+          </li>
+        </ul>
         <p class="pad-top-small">
           <a class="button white-bg blue uppercase {% click_body 'commcare_integration' %}"
              href="{% url 'commcare_integration' %}">
@@ -36,7 +42,7 @@
           </a>
         </p>
       </div>{# .column #}
-      <div class="column"
+      <div class="column pad-top-medium-at-medium"
            id="integration">
         <div class="integrate white-lazy-bg"
              data-lazybg="true">
