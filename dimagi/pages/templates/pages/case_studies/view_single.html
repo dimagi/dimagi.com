@@ -3,11 +3,7 @@
 {% load dimagidotcom %}
 
 {% block title %}
-  {% if study.browser_title %}
-    {{ study.browser_title }}
-  {% else %}
-    {{ study.title }}
-  {% endif %}
+  {{ study.title|safe }}
 {% endblock %}
 
 {% block description %}
