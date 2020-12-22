@@ -36,8 +36,9 @@ STUDY = CaseStudy(
         ugettext_lazy("Area Mapper"),
     ],
     slug="naatal-mbay",
-    download_url="https://cdn2.hubspot.net/hubfs/503070/Case%20Studies/CommCare%20-%20Naatal%20Mbay%20Case%20Study.pdf",
-    hubspot_form="2f9b7c9b-1723-4273-87ff-487d6b5d0564",
+    primary_cta="f213c401-9a98-46ca-b8fb-5894cfcddfb8",
+    subnav_cta="84e5c7e3-3121-4d61-86e6-39e057e6dcfc",
+    event_tracking_title="Naatal Mbay",
     download_url_language="https://cdn2.hubspot.net/hubfs/503070/Case%20Studies/CommCare%20-%20Naatal%20Mbay%20Case%20Study_French.pdf",
     hubspot_form_language="e2e24018-df22-400a-9d05-ea207fc89db5",
 )

@@ -50,6 +50,7 @@ STUDY = CaseStudy(
         ugettext_lazy("Automatic Case Closure"),
     ],
     slug="sickle-cell",
-    download_url="https://f.hubspotusercontent20.net/hubfs/503070/Case%20Studies/CommCare%20-%20Sickle%20Cell%20Foundation%20Case%20Study.pdf",
-    hubspot_form="1c787f58-b720-4dd7-af0f-4f6b8d63093c",
+    primary_cta="57e73298-f60f-4139-9198-a62e799fa0a3",
+    subnav_cta="9acba66c-efef-40d2-a06f-defb2b4fedbf",
+    event_tracking_title="Sickle Cell Foundation",
 )

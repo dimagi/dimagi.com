@@ -49,6 +49,7 @@ STUDY = CaseStudy(
         ugettext_lazy("Performance dashboards"),
     ],
     slug="mhealth-care-motech",
-    download_url="https://www.dropbox.com/s/8hjwcjj6iyhp62x/mhealth-care-motech.pdf?dl=1",
-    hubspot_form="153598b3-35ce-4912-be6d-4525ee846d63",
+    primary_cta="661c8b30-d40c-48b8-8a07-82118ffa6d26",
+    subnav_cta="3ffaf014-69dd-450b-98e2-8f44290e3713",
+    event_tracking_title="CARE MOTECH",
 )

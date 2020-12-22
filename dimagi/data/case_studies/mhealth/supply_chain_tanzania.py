@@ -42,6 +42,7 @@ STUDY = CaseStudy(
         ugettext_lazy("Custom Reports"),
     ],
     slug="mhealth-supply-chain-tanzania",
-    download_url="https://cdn2.hubspot.net/hubfs/503070/Case%20Studies/CommCare%20-%20ILSGateway%20Case%20Study.pdf",
-    hubspot_form="95287374-5948-49e2-b67f-64e25723c355",
+    primary_cta="bd009775-6ad8-42bb-958c-c7313ec954c3",
+    subnav_cta="87425fda-d081-47e6-b25f-b73077b02214",
+    event_tracking_title=" ILSGateway",
 )

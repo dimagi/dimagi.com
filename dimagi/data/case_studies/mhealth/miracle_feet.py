@@ -45,6 +45,7 @@ STUDY = CaseStudy(
         ugettext_lazy("Case List Filters"),
     ],
     slug="miracle-feet",
-    download_url="https://f.hubspotusercontent20.net/hubfs/503070/Case%20Studies/CommCare%20-%20MiracleFeet%20Case%20Study.pdf",
-    hubspot_form="d886f97e-d29e-4ed1-a20c-70bddabc2ea7",
+    primary_cta="d6678fcd-19ba-4953-9104-ad4ce6eb8b46",
+    subnav_cta="09ce8a2d-067a-457d-891d-e2ee6938d3ce",
+    event_tracking_title="MiracleFeet",
 )

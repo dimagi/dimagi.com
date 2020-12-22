@@ -3,7 +3,7 @@
 {% load dimagidotcom %}
 
 {% block title %}
-  {{ study.title }}
+  {{ study.title|safe }}
 {% endblock %}
 
 {% block description %}

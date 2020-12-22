@@ -46,6 +46,7 @@ STUDY = CaseStudy(
         ugettext_lazy("Device Rules"),
     ],
     slug="focus_mdm",
-    download_url="https://cdn2.hubspot.net/hubfs/503070/Case%20Studies/FocusMDM%20-%20SHM%20Foundation%20Case%20Study.pdf",
-    hubspot_form="cea0b1c2-5786-4496-b731-43c26e115bbb",
+    primary_cta="acbd0ad3-4a98-4bbe-a8c4-1c075da2eefe",
+    subnav_cta="e9908815-2b09-40eb-8a82-cc93250da337",
+    event_tracking_title="SHM Foundation",
 )

@@ -47,6 +47,7 @@ STUDY = CaseStudy(
         ugettext_lazy("Referral Follow-up"),
     ],
     slug="tulasalud-mnch",
-    download_url="https://cdn2.hubspot.net/hubfs/503070/Case%20Studies/CommCare%20-%20TulaSalud%20Case%20Study.pdf",
-    hubspot_form="6735a7d4-2701-4b7f-9bf7-46183a8bba53",
+    primary_cta="4ecfc35a-3cc9-4e43-8223-25a017002a17",
+    subnav_cta="a6c3588a-d194-433d-9778-9cd84d1866e9",
+    event_tracking_title="TulaSalud",
 )

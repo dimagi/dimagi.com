@@ -11,8 +11,9 @@ class CaseStudy(object):
     def __init__(self, title=None, summary=None, partners=None, countries=None,
                  sectors=None, features=None, slug=None, download_url=None, hubspot_form=None,
                  download_url_language=None, hubspot_form_language=None,
-                 primary_cta=None, subnav_cta=None, event_tracking_title=None):
+                 primary_cta=None, subnav_cta=None, event_tracking_title=None, browser_title=None):
         self.title = title
+        self.browser_title = browser_title
         self.summary = summary
         self.partners = partners
         self.countries = countries

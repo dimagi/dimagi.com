@@ -46,6 +46,7 @@ STUDY = CaseStudy(
         ugettext_lazy("Data Validation"),
     ],
     slug="mhealth-tdh-burkinafaso",
-    download_url="https://cdn2.hubspot.net/hubfs/503070/Case%20Studies/CommCare%20-%20Terre%20des%20hommes%20Case%20Study.pdf",
-    hubspot_form="0cb7b31e-d335-437d-80a8-61f3bea7600b",
+    primary_cta="74b536b6-b601-476a-9bd2-08fc326ab597",
+    subnav_cta="37f12183-8eef-48b9-b933-a9796aab8bbf",
+    event_tracking_title="Terre des hommes",
 )
