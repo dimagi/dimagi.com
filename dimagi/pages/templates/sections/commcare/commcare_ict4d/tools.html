@@ -4,13 +4,20 @@
 <section class="tools align-center border-top pad-bottom-line"
          id="tools">
   <div class="content pad-vert-medium">
-    <div class="content-width-medium">
+    <div class="content-width-large">
       <h2 class="blue gap-top-line">
         {% blocktrans %}
           Give your teams the tool <br class="hide-until-medium" />
           they’ve been waiting for
         {% endblocktrans %}
       </h2>
+      <p class="lead-text">
+        {% blocktrans %}
+        Your teams have been waiting for a tool that actually aligns with 
+        their needs. Meet the ambitions <br class="hide-until-medium" /> of your Program and M&E teams with 
+        custom-built CommCare applications and powerful data tools.
+        {% endblocktrans %}
+      </p>
 	</div>
 	
     <div class="off-grid white-lazy-bg"
@@ -21,13 +28,6 @@
   	</div>
 
     <div class="content-width-medium">
-      <p class="lead-text">
-        {% blocktrans %}
-        Your teams have been waiting for a tool that actually aligns with 
-        their needs. Meet the ambitions of your Program and M&E teams with 
-        custom-built CommCare applications and powerful data tools.
-        {% endblocktrans %}
-      </p>
       <p class="button">
         {% trans 'Watch a demo' as video_text %}
         {% include "partials/wistia_popover.html" with wistia_id='nwsl17euy7' text=video_text white_class='white' %}

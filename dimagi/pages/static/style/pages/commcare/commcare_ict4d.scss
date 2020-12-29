@@ -43,6 +43,7 @@
 
 ul.integration {
   li {
+    margin-bottom: 10px;
     &:before {
       // Adds white color to the checklist
       color: $color-white;
