@@ -18,21 +18,21 @@
         custom-built CommCare applications and powerful data tools.
         {% endblocktrans %}
       </p>
-	</div>
+	  </div>{# .content-width-large #}
 	
     <div class="off-grid white-lazy-bg"
-       data-lazybg="true">
+         data-lazybg="true">
     	<div class="wistia-container">
-      		{% include "partials/wistia_embed_autoplay.html" with wistia_id='gx2a7tvlh6' %}
-    	</div>
-  	</div>
+      	{% include "partials/wistia_embed_autoplay.html" with wistia_id='gx2a7tvlh6' %}
+    	</div>{# .wistia-container #}
+  	</div>{# .off-grid #}
 
     <div class="content-width-medium">
       <p class="button">
         {% trans 'Watch a demo' as video_text %}
         {% include "partials/wistia_popover.html" with wistia_id='nwsl17euy7' text=video_text white_class='white' %}
       </p>
-    </div>
+    </div>{# .content-width-medium #}
 
-  </div>
+  </div>{# .content #}
 </section>

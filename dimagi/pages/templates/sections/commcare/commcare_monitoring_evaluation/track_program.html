@@ -4,15 +4,15 @@
 <section class="align-center blue-theme accent-gray-bg border-top" id="track_program">
   <div class="content pad-vert-medium">
     <h2 class="content-width-medium normalcase pad-bottom-small theme-color">
-        {% blocktrans %}
-          Keep Your Program Team On Track and Donors Informed
-        {% endblocktrans %}
+      {% blocktrans %}
+        Keep Your Program Team On Track and Donors Informed
+      {% endblocktrans %}
     </h2>
 
     <div class="grid-1-at-small grid-2-at-large grid-col-space-medium grid-row-equal-heights pad-bottom-medium">
       {% include "sections/commcare/commcare_monitoring_evaluation/track_program/collect.html" %}
       {% include "sections/commcare/commcare_monitoring_evaluation/track_program/optimize.html" %}
-    </div>{# .grid-2-at-small #}
+    </div>{# .grid-1-at-small #}
 
     <div class="report content pad-vert-small blue-theme border-all white-bg">
       <div class="grid-2-at-small">
@@ -34,8 +34,8 @@
           <div class="report-ready white-lazy-bg"
                data-lazybg="true"></div>
         </div>{# .column #}
-      </div>{# .grid-2 #}
-    </div>{# .content #}
+      </div>{# .grid-2-at-small #}
+    </div>{# .report #}
 
     <p class="align-center pad-top-medium">
       <a class="button uppercase {% click_body 'case-management' %}"
