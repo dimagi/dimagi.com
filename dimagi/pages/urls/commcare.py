@@ -10,6 +10,7 @@ from dimagi.pages.views.commcare import (
     pricing,
     handle_pricing_pdf,
     monitoring_evaluation,
+    ict4d,
 )
 
 
@@ -18,6 +19,8 @@ urlpatterns = [
         name='commcare'),
     url(r'^monitoring-evaluation/$', monitoring_evaluation,
         name='monitoring_evaluation'),
+    url(r'^ict4d/$', ict4d,
+        name='ict4d'),
     url(r'^features/$', product_features,
         name='commcare_features'),
     url(r'^research/$', research,

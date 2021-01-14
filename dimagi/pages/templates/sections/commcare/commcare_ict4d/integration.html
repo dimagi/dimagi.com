@@ -1,0 +1,53 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="blue-bg" id="integration">
+  <div class="content pad-vert-medium">
+    <div class="grid grid-2-at-medium grid-1-at-small white">
+      <div class="column pad-top-base pad-top-medium-at-extra-large align-left-at-medium align-center">
+        <h2 class="pad-top-base white">
+          {% blocktrans %}
+            Comprehensive spectrum of data tools    
+          {% endblocktrans %}
+        </h2>
+        <p>
+          {% blocktrans %}
+            When it comes to data integrations, smart ICT4D teams 
+            maximize stakeholder satisfaction at optimal costs 
+            by giving stakeholders:
+          {% endblocktrans %}
+        </p>
+        <ul class="integration check-list">
+          <li>
+            <p>
+              {% blocktrans %}
+                Self service data integrations for their day-to-day data needs
+              {% endblocktrans %}
+            </p>
+          </li>
+          <li>
+            <p>
+              {% blocktrans %}
+                Custom data pipelines for their most complex and ambitious projects
+              {% endblocktrans %}
+            </p>
+          </li>
+        </ul>
+        <p class="pad-top-small">
+          <a class="button white-bg blue uppercase {% click_body 'commcare_integration' %}"
+             href="{% url 'commcare_integration' %}">
+            {% blocktrans %}
+              Learn More
+            {% endblocktrans %}
+          </a>
+        </p>
+      </div>{# .column #}
+      <div class="column pad-top-medium-at-medium"
+           id="integration">
+        <div class="integrate white-lazy-bg"
+             data-lazybg="true">
+        </div>
+      </div> {# .column #}
+    </div> {# .grid #}
+  </div> {# .content #}
+</section>

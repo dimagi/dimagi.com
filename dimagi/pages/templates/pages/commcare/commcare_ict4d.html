@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block title %}{% blocktrans %}
+    CommCare for ICT4D Teams
+{% endblocktrans %}{% endblock %}
+
+{% block description %}{% blocktrans %}
+    Equip Your Program and M&E Teams for Success at Scale
+{% endblocktrans %}{% endblock %}
+
+{% block body_class %}commcare-ict4d tucked-hero{% endblock %}
+
+{% block stylesheets %}
+  {% compress css %}
+    <link href="{% sass_src 'style/pages/commcare/commcare_ict4d.scss' %}" rel="stylesheet" media="screen" type="text/css" />
+  {% endcompress %}
+{% endblock %}
+
+{% block hero %}
+  <div id="top"></div>
+  <section class="hero commcare-ict4d"
+           data-lazybg="true"
+           id="hero">
+    <div class="content offset-top-small-at-medium align-left-at-medium align-center pad-top-large">
+      <h2 class="gap-top-small gap-top-medium-at-medium">
+        {% blocktrans %}
+            CommCare for ICT4D Teams
+        {% endblocktrans %}
+      </h2>
+      <h1>
+        {% blocktrans %}
+          Equip Your Program and M&E Teams <br class="hide-until-medium" />
+          for Success at Scale
+        {% endblocktrans %}
+      </h1>
+      <p class="cta">
+        {% trans 'Watch a demo' as video_text %}
+        {% click_hero 'video' as video_click_class %}
+        {% include "partials/wistia_popover.html" with wistia_id='nwsl17euy7' show_play=True text=video_text click_class=video_click_class %}
+      </p>
+    </div> {# .content #}
+  </section>
+{% endblock %}
+
+{% block content %}
+	<section class="products-commcare-container">
+    {% include "sections/commcare/commcare_ict4d/sub_nav.html" %}
+    {% include "sections/commcare/commcare_ict4d/partners.html" %}
+    {% include "sections/commcare/commcare_ict4d/tools.html" %}
+    {% include "sections/commcare/commcare_ict4d/track_program.html" %}
+    {% include "sections/commcare/commcare_ict4d/integration.html" %}
+    {% include "sections/commcare/commcare_ict4d/testimonials.html" %}
+    {% include "sections/commcare/commcare_ict4d/support.html" %}
+    {% include "sections/commcare/commcare_ict4d/connect_demo.html" %}
+  </section>
+{% endblock %}
