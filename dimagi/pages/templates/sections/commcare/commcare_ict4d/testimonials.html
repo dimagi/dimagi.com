@@ -1,0 +1,285 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="testimonial programs" 
+         data-lazybg="true" 
+         id="programs">
+  <div class="accent-gray-bg">
+    <div class="content pad-vert-small">
+      <div class="mdc-sector-program">
+        <h2 class="content-width-medium align-center blue pad-top-small">
+          {% blocktrans %}
+            Trusted by ICT4D and Digital<br class="hide-until-medium" />
+            Health Teams Globally
+          {% endblocktrans %}
+        </h2>
+      </div>
+      <div class="grid grid-3-at-large grid-1-at-medium grid-row-equal-heights grid-col-space-small pad-top-medium">
+        <div class="column  pad-bottom-small ">
+          <div class="pad-bottom-base white-bg">
+            <div class="image testimonial1"
+                 data-lazybg="true"></div>
+            <div class="attribution-main pad-line pad-top-none-at-large pad-top-line-at-extra-large">
+              <p>
+                {% blocktrans %}
+                  “[CommCare] has helped us to streamline user training, 
+                  establish more consistent methodologies, and ensure we 
+                  have the right data security protocols in place”
+                {% endblocktrans %}
+              </p>
+              <div class="attribution-heading body-color uppercase">
+                <p class="pad-bottom-base">
+                {% blocktrans %}
+                  <strong>Sarah Barlett & Andy Tate</strong>
+                {% endblocktrans %}
+                </p>
+              </div>
+              <p class="attribution-sub uppercase">
+                {% blocktrans %}
+                  Digital Data Working Group Co-Chairs, Sightsavers
+                {% endblocktrans %}
+              </p>
+              <p class="pad-top-line"><a href="#agri-ep-feature-card-2" class="arrow link-blue">
+                {% blocktrans %}
+                  Read More 
+                {% endblocktrans %}
+              </a></p>
+            </div>
+          </div>
+        </div>{# .column #}
+
+        <div class="column  pad-bottom-small ">
+          <div class="pad-bottom-base white-bg">
+            <div class="image testimonial2"
+                 data-lazybg="true"></div>
+            <div class="attribution-main pad-line pad-top-none-at-large pad-top-line-at-extra-large">
+              <p>
+                {% blocktrans %}
+                  “CommCare is tailored to the international development 
+                  sector. The evidence base for global health is huge—that’s 
+                  very unique among tech vendors.”
+                {% endblocktrans %}
+              </p>
+              <div class="attribution-heading body-color uppercase">
+                <p class="pad-bottom-base">
+                {% blocktrans %}
+                  <strong>Steven Hellen</strong>
+                {% endblocktrans %}
+                </p>
+              </div>
+              <p class="attribution-sub uppercase">
+                {% blocktrans %}
+                  Director of ICT4D, Catholic Relief Services
+                {% endblocktrans %}
+              </p>
+              <p class="pad-top-line"><a href="#agri-ep-feature-card-1" class="arrow link-blue">
+                {% blocktrans %}
+                  Read More 
+                {% endblocktrans %}
+              </a></p>
+            </div>
+          </div>
+        </div>{# .column #}
+
+        <div class="column  pad-bottom-small ">
+          <div class="pad-bottom-base white-bg">
+            <div class="image testimonial3"
+                 data-lazybg="true"></div>
+            <div class="attribution-main pad-line pad-top-none-at-large pad-top-line-at-extra-large">
+              <p>
+                {% blocktrans %}
+                  “CommCare has many features that we consider integral to the 
+                  integrity of our impact data… [It] has become foundational 
+                  to our quest to maximize our effectiveness and impact.”
+                {% endblocktrans %}
+              </p>
+              <div class="attribution-heading body-color uppercase">
+                <p class="pad-bottom-base">
+                {% blocktrans %}
+                  <strong>Jim McKinney</strong>
+                {% endblocktrans %}
+                </p>
+              </div>
+              <p class="attribution-sub uppercase">
+                {% blocktrans %}
+                  Senior Director of Global IT, TechnoServe
+                {% endblocktrans %}
+              </p>
+              <p class="pad-top-line"><a href="#agri-ep-feature-card-3" class="arrow link-blue">
+                {% blocktrans %}
+                  Read More 
+                {% endblocktrans %}
+              </a></p>
+            </div>
+          </div>
+        </div>{# .column #}
+
+      </div>
+      <p class="pad-top-base pad-left-small align-center pad-vert-small">
+        <a class="arrow {% click_body 'case_studies' %}"
+           href="{% url 'case_studies' %}">
+          {% blocktrans %}
+            See All Case Studies
+          {% endblocktrans %}
+        </a>
+      </p>
+    </div>
+  </div>
+</section>
+
+{% block modals %}
+  <div class="modal testimonial programs"
+       data-dismissible="true"
+       data-size="medium"
+       id="agri-ep-feature-card-2">
+    <div class="modal-scroll">
+      <div class="modal-wrapper">
+        <a href="#" class="modal-close-button"></a>
+        <div class="content pad-horz-medium-at-medium pad-horz-small pad-bottom-none turquoise-theme">
+          <h4>
+            <strong class="body-color">
+              {% blocktrans %}
+                Sightsavers
+              {% endblocktrans %}
+            </strong>
+          </h4>
+          <div class="grid-flex-at-large">
+            <div class="column">
+              <p class="body-color">
+                {% blocktrans %}
+                  “Sightsavers is a global organization working in more than 
+                  30 countries. In 2018, we started using CommCare as a means 
+                  to standardize our approach to data collection. It has since 
+                  helped us to streamline user training, establish more 
+                  consistent methodologies, and ensure we have the right 
+                  data security protocols in place. As our organization 
+                  continues to grow the structures we've put in place using 
+                  CommCare will only become more essential”
+                {% endblocktrans %}  
+              </p>
+              <div class="attribution-heading body-color">
+                <p>
+                {% blocktrans %}
+                  <strong>Sarah Barlett & Andy Tate</strong>
+                {% endblocktrans %}
+                </p>
+              </div>
+              <p class="attribution-modal-sub">
+                {% blocktrans %}
+                  Digital Data Working Group Co-Chairs, Sightsavers
+                {% endblocktrans %}
+              </p>
+            </div>
+            <div class="column pad-top-none-until-large">
+              <div class="image testimonial1 crs"
+                   data-lazybg="true"></div>
+            </div>
+          </div>
+        </div>{# .content #}
+      </div>{# .modal-wrapper #}
+    </div>{# .modal-scroll #}
+  </div>{# .modal #}
+
+  <div class="modal testimonial programs"
+       data-dismissible="true"
+       data-size="medium"
+       id="agri-ep-feature-card-1">
+    <div class="modal-scroll">
+      <div class="modal-wrapper">
+        <a href="#" class="modal-close-button"></a>
+        <div class="content pad-horz-medium-at-medium pad-horz-small pad-bottom-none turquoise-theme">
+          <h4>
+            <strong class="body-color">
+              {% blocktrans %}
+                Catholic Relief Services
+              {% endblocktrans %}
+            </strong>
+          </h4>
+          <div class="grid-flex-at-large">
+            <div class="column">
+              <p class="body-color">
+                {% blocktrans %}
+                  “CommCare is tailored to the international development 
+                  sector. This is critical for CRS: The evidence base for 
+                  global health is huge—that’s very unique among tech vendors, 
+                  even in this sector—and CommCare’s data workflows align well 
+                  with how our M&E teams look at data.”
+                {% endblocktrans %}  
+              </p>
+              <div class="attribution-heading body-color">
+                <p>
+                {% blocktrans %}
+                  <strong>Steven Hellen</strong>
+                {% endblocktrans %}
+                </p>
+              </div>
+              <p class="attribution-modal-sub">
+                {% blocktrans %}
+                  Director of ICT4D, Catholic Relief Services
+                {% endblocktrans %}
+              </p>
+            </div>
+            <div class="column pad-top-none-until-large">
+              <div class="image testimonial2 crs"
+                   data-lazybg="true"></div>
+            </div>
+          </div>
+        </div>{# .content #}
+      </div>{# .modal-wrapper #}
+    </div>{# .modal-scroll #}
+  </div>{# .modal #}
+
+  <div class="modal testimonial programs"
+       data-dismissible="true"
+       data-size="medium"
+       id="agri-ep-feature-card-3">
+    <div class="modal-scroll">
+      <div class="modal-wrapper">
+        <a href="#" class="modal-close-button"></a>
+        <div class="content pad-horz-medium-at-medium pad-horz-small pad-bottom-none turquoise-theme">
+          <h4>
+            <strong class="body-color">
+              {% blocktrans %}
+                TechnoServe
+              {% endblocktrans %}
+            </strong>
+          </h4>
+          <div class="grid-flex-at-large">
+            <div class="column">
+              <p class="body-color">
+                {% blocktrans %}
+                  “As an organization that puts heavy emphasis on results, strong 
+                  data collection and data management tools are important for our 
+                  diverse portfolio of projects across the globe. CommCare has 
+                  many features that we consider integral to the integrity of 
+                  our impact data. We have implemented CommCare in numerous 
+                  projects around the world resulting in the ability to collect 
+                  critical monitoring and evaluation data in a timely and 
+                  efficient manner. CommCare data has become foundational to 
+                  our quest to maximize our effectiveness and impact.”
+                {% endblocktrans %}  
+              </p>
+              <div class="attribution-heading body-color">
+                <p>
+                {% blocktrans %}
+                  <strong>Jim McKinney</strong>
+                {% endblocktrans %}
+                </p>
+              </div>
+              <p class="attribution-modal-sub">
+                {% blocktrans %}
+                  Senior Director of Global IT, TechnoServe
+                {% endblocktrans %}
+              </p>
+            </div>
+            <div class="column pad-top-none-until-large">
+              <div class="image testimonial3 crs"
+                   data-lazybg="true"></div>
+            </div>
+          </div>
+        </div>{# .content #}
+      </div>{# .modal-wrapper #}
+    </div>{# .modal-scroll #}
+  </div>{# .modal #}
+
+{% endblock %}
