@@ -152,3 +152,31 @@
   );
   @include make-bg(epic-cover, '../../../pages/commcare/product/pricing/hero', $_base-height, $_height-by-size);
 }
+
+.design-tool {
+  
+  @media (min-width: $width-desktop) {
+    margin-left: 20px;
+  }
+
+  @media (min-width: $width-desktop-xl) {
+    margin-left: 90px;
+  }
+}
+
+.tools-cards {
+  
+  @media (min-width: $width-desktop) {
+    width: 205px;
+    margin-right: 20px;
+  }
+
+  @media (min-width: $width-desktop-lg) {
+    width: 269px;
+    margin-right: 20px;
+  }
+}
+
+.tools-cards:hover{
+  border: 1px solid $color-blue !important;
+}
