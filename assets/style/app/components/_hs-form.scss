@@ -66,6 +66,6 @@
   }
 
   .leadinModal-close {
-    text-align: right;
+    text-align: right !important; // scss-lint:disable ImportantRule
   }
 }
