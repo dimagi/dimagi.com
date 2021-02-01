@@ -1,0 +1,17 @@
+@import 'app/mixins/background';
+@import 'app/variables/colors';
+@import 'app/variables/sizes';
+@import 'app/variables/type';
+
+
+.commcare-vaccine-delivery {
+  @include make-bg(hero, '../../../pages/commcare/research/intro/hero');
+}
+
+@media (min-width: $width-desktop) {
+  .commcare-vaccine-delivery .hero h1 {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 65%;
+  }
+}
