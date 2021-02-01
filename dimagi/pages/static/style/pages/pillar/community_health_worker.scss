@@ -150,8 +150,8 @@ a:not(.button).tile-more {
 #chapter-intro {
   $_base-height: 150px;
   $_height-by-size: (
-    small: 324px,
-    medium: 390px,
+    small: 210px,
+    medium: 360px,
   );
   @include make-bg(community-image, '../../../pages/pillar/chw/numbers/numbers', $_base-height, $_height-by-size);
 }
