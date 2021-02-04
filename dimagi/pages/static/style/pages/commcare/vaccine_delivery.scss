@@ -5,7 +5,7 @@
 
 
 .commcare-vaccine-delivery {
-  @include make-bg(hero, '../../../pages/commcare/research/intro/hero');
+  @include make-bg(hero, '../../../pages/commcare/vaccine-delivery/hero');
 }
 
 @media (min-width: $width-desktop) {
@@ -15,3 +15,35 @@
     max-width: 65%;
   }
 }
+
+#vaccine-intro {
+    $_base-height: 200px;
+    $_height-by-size: (
+      small: 200px,
+      medium: 200px,
+      large: 200px,
+      extra-large: 200px,
+    );
+    @include make-bg(intro-image, '../../../pages/commcare/vaccine-delivery/intro/hero', $_base-height, $_height-by-size);
+  }
+
+  .support {
+    $_base-height: 195px;
+    $_height-by-size: (
+      small: 270px,
+      medium: 376px,
+      large: 316px,
+      extra-large: 316px,
+    );
+    @include make-bg(services, '../../../pages/commcare/vaccine-delivery/solutions/services', $_base-height, $_height-by-size);
+  }
+
+  .collab {
+    $_base-height: 195px;
+    $_height-by-size: (
+      small: 410px,
+      medium: 240px,
+    );
+    @include make-bg(schema, '../../../pages/commcare/vaccine-delivery/Collaborative-Approach/schema/services', $_base-height, $_height-by-size);
+    @include make-bg(workflow, '../../../pages/commcare/vaccine-delivery/Collaborative-Approach/workflows/workflow', $_base-height, $_height-by-size);
+  }

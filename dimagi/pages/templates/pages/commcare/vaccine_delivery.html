@@ -13,39 +13,43 @@
 {% block body_class %}commcare-vaccine-delivery tucked-hero{% endblock %}
 
 {% block stylesheets %}
-  {% compress css %}
-    <link href="{% sass_src 'style/pages/commcare/vaccine_delivery.scss' %}" rel="stylesheet" media="screen" type="text/css" />
-  {% endcompress %}
+	{% compress css %}
+		<link href="{% sass_src 'style/pages/commcare/vaccine_delivery.scss' %}" rel="stylesheet" media="screen"
+					type="text/css" />
+		<link href="{% sass_src 'style/pages/sectors/maternal-and-child-health.scss' %}" rel="stylesheet" media="screen"
+					type="text/css" />
+	{% endcompress %}
 {% endblock %}
 
 {% block hero %}
-  <div id="top"></div>
-  <section class="hero hero-products-commcare"
-           data-lazybg="true"
-           id="hero">
-    <div class="content align-left-at-medium inverted display-flex flex-valign-middle expand-vertical offset-top-small">
-      <div class="copy expand position-relative">
-        <h2>
-          {% blocktrans %}
-						CommCare for Vaccine Delivery
-          {% endblocktrans %}
-        </h2>
-        <h1>
-          {% blocktrans %}
-						CommCare for Equitable Vaccine Delivery
-          {% endblocktrans %}
+	<div id="top"></div>
+	<section class="hero hero-products-commcare" data-lazybg="true" id="hero">
+		<div class="content align-left-at-medium inverted display-flex flex-valign-middle expand-vertical offset-top-small">
+			<div class="copy expand position-relative">
+				<h1>
+					{% blocktrans %}
+						CommCare for Equitable <br class="hide-until-medium" />
+						Vaccine Delivery
+					{% endblocktrans %}
 				</h1>
 				<p class="cta">
 					{% trans 'Watch a demo' as video_text %}
 					{% click_hero 'video' as video_click_class %}
-					{% include "partials/wistia_popover.html" with wistia_id='fkfc3l6n2e' show_play=True text=video_text click_class=video_click_class %}
+					{% include "partials/wistia_popover.html" with wistia_id='yonc594beb' show_play=True text=video_text click_class=video_click_class %}
 				</p>
-      </div>{# .copy #}
-    </div>{# .content #}
-  </section>
+			</div>{# .copy #}
+		</div>{# .content #}
+	</section>
 {% endblock %}
 
 {% block content %}
-  <section>
-  </section>
+	<section>
+		{% include "sections/commcare/vaccine-delivery/sub_nav.html" %}
+		{% include "sections/commcare/vaccine-delivery/intro.html" %}
+		{% include "sections/commcare/vaccine-delivery/approach.html" %}
+		{% include "sections/commcare/vaccine-delivery/ecosystem.html" %}
+		{% include "sections/sectors/education/commcare_action.html" %}
+		{% include "sections/commcare/vaccine-delivery/collab.html" %}
+		{% include "sections/commcare/vaccine-delivery/covid-response.html" %}
+	</section>	
 {% endblock %}

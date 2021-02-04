@@ -1,0 +1,14 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="collab align-center blue-theme" id="collab">
+	<div class="content-width-medium pad-top-medium">
+		<h2 class="theme-color align-center">
+			{% blocktrans %}
+				A Collaborative Approach
+			{% endblocktrans %}
+		</h2>
+	</div>{# .intro #}
+  {% include "sections/commcare/vaccine-delivery/collab/schema.html" %}
+  {% include "sections/commcare/vaccine-delivery/collab/workflows.html" %}
+</section>
