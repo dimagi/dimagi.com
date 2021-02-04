@@ -47,6 +47,7 @@
   );
   @include make-bg(local-response, '../../pages/covid_19/resources/local_response/response', $_base-height, $_height-by-size);
   @include make-bg(template, '../../pages/covid_19/resources/template/template', $_base-height, $_height-by-size);
+  @include make-bg(vaccine-delivery, '../../pages/covid_19/resources/vaccine-delivery/vaccine', $_base-height, $_height-by-size);
 }
 
 .resource-image .image.covid-cases {
