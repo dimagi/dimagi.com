@@ -130,3 +130,10 @@ def gb_violence(request):
     }
     return render(request, 'pages/sectors/gb_violence.html', context)
 
+@enable_ab_test(DEMO_WORKFLOW_V2)
+def vaccine_delivery(request):
+    context = {
+        'sector': 'vaccine_delivery',
+    }
+    return render(request, 'pages/sectors/financial_inclusion.html', context)
+

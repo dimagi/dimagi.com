@@ -66,4 +66,16 @@ SECTOR.add_sub_sectors([
         theme="purple-theme",
         slug="financial-inclusion",
     ),
+    Sector(
+        name=ugettext_lazy(
+            "Vaccine Delivery"
+        ),
+        summary=ugettext_lazy(
+            "One of the main challenges of immunization worldwide is that timely coverage often drops off after the first few rounds."
+        ),
+        template="data/sectors/content/child_health.html",
+        icon="svg/sectors/urgent_response/gender_based_violence.html",
+        theme="purple-theme",
+        slug="vaccine-delivery",
+    ),
 ])

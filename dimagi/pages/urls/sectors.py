@@ -17,6 +17,7 @@ from dimagi.pages.views.sectors import (
     programmatic_research,
     financial_inclusion,
     gb_violence,
+    vaccine_delivery,
 )
 
 
@@ -49,6 +50,8 @@ urlpatterns = [
         name='sector_small_businesses'),
     url(r'^gender-based-violence/$', gb_violence,
         name='gb_violence'),
+    url(r'^vaccine-delivery/$', vaccine_delivery,
+        name='vaccine_delivery'),
     url(r'^(?P<slug>[\w-]+)/$', view_single,
         name='sector'),
 ]

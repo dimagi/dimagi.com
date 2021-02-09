@@ -22,6 +22,7 @@ from dimagi.data.sectors.sector.sub_sectors import (
     reproductive_health,
     small_businesses,
     tuberculosis,
+    vaccine_delivery,
 )
 
 
@@ -49,4 +50,5 @@ sub_sectors = (
     reproductive_health,
     small_businesses,
     tuberculosis,
+    vaccine_delivery,
 )
