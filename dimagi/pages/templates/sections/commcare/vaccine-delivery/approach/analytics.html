@@ -1,0 +1,21 @@
+{% extends "sections/commcare/vaccine-delivery/approach/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block icon %}
+  {% include "svg/commcare/vaccine-delivery/analytics.html" %}
+{% endblock %}
+
+{% block header %}
+  {% blocktrans %}
+    Analytics
+  {% endblocktrans %}
+{% endblock %}
+
+{% block content %}
+  {% blocktrans %}
+    Real-time analytics will help monitor vaccine delivery, missed
+    appointments, and lost-to-follow-up, while ensuring critical
+    segments are vaccinated first.
+  {% endblocktrans %}
+{% endblock %}

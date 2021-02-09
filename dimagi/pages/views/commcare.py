@@ -94,3 +94,6 @@ def ict4d(request):
     }
     return render(request, 'pages/commcare/commcare_ict4d.html', context)
 
+@enable_ab_test(DEMO_WORKFLOW_V2)
+def vaccine_delivery(request):
+    return render(request, 'pages/commcare/vaccine_delivery.html')

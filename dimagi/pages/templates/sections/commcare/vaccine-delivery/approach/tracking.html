@@ -1,0 +1,21 @@
+{% extends "sections/commcare/vaccine-delivery/approach/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block icon %}
+  {% include "svg/commcare/vaccine-delivery/tracking.html" %}
+{% endblock %}
+
+{% block header %}
+  {% blocktrans %}
+    Vaccine Recipient Tracking
+  {% endblocktrans %}
+{% endblock %}
+
+{% block content %}
+  {% blocktrans %}
+    Offline-capable mobile apps with built-in algorithms and
+    biometrics capabilities facilitate the screening process
+    to ensure eligibility protocols are followed.
+  {% endblocktrans %}
+{% endblock %}
