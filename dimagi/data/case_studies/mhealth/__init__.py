@@ -20,6 +20,7 @@ from dimagi.data.case_studies.mhealth import (
     miracle_feet,
     infomovel,
     egpaf_baylor_hiv_tracking,
+    suaahara_mch,
 )
 
 
@@ -45,4 +46,5 @@ studies = (
     miracle_feet,
     infomovel,
     egpaf_baylor_hiv_tracking,
+    suaahara_mch,
 )
