@@ -2,35 +2,35 @@
 {% load dimagidotcom %}
 
 <section class="approach align-center blue-theme" id="approach">
-	<div class="content pad-vert-medium pad">
-		<h2 class="blue gap-top-line">
-			{% blocktrans %}
-				A Multi-Pronged Approach – In One
-			{% endblocktrans %}
-		</h2>
-		<p class="content-width-medium">
-			{% blocktrans %}
-				Dimagi is actively developing an open-source digital solution
-				to track and support every recipient before, during, and
-				after the vaccination process.
-			{% endblocktrans %}
-		</p>
+  <div class="content pad-vert-medium pad">
+    <h2 class="blue gap-top-line">
+      {% blocktrans %}
+        A Multi-Pronged Approach – In One
+      {% endblocktrans %}
+    </h2>
+    <p class="content-width-medium">
+      {% blocktrans %}
+        Dimagi is actively developing an open-source digital solution
+        to track and support every recipient before, during, and
+        after the vaccination process.
+      {% endblocktrans %}
+    </p>
 
-		<div class="content pad-top-medium pad-horz-medium-at-large pad-horz-medium-at-extra-large">
-			<div class="grid-2-at-small grid-4-at-large grid-col-space-medium grid-row-space-small">
-				{% include "sections/commcare/vaccine-delivery/approach/tracking.html" %}
-				{% include "sections/commcare/vaccine-delivery/approach/outreach.html" %}
-				{% include "sections/commcare/vaccine-delivery/approach/messaging.html" %}
-				{% include "sections/commcare/vaccine-delivery/approach/analytics.html" %}
-			</div>
-		</div>
+    <div class="content pad-top-medium pad-horz-medium-at-large pad-horz-medium-at-extra-large">
+      <div class="grid-2-at-small grid-4-at-large grid-col-space-medium grid-row-space-small">
+        {% include "sections/commcare/vaccine-delivery/approach/tracking.html" %}
+        {% include "sections/commcare/vaccine-delivery/approach/outreach.html" %}
+        {% include "sections/commcare/vaccine-delivery/approach/messaging.html" %}
+        {% include "sections/commcare/vaccine-delivery/approach/analytics.html" %}
+      </div>
+    </div>
 
-		<p class="align-center">
-			<a class="button uppercase {% click_body 'commcare' %}" href="#contact-form-modal">
-				{% blocktrans %}
-					Get In Touch
-				{% endblocktrans %}
-			</a>
-		</p>
-	</div>
+    <p class="align-center">
+      <a class="button uppercase {% click_body 'commcare' %}" href="#contact-form-modal">
+        {% blocktrans %}
+          Get In Touch
+        {% endblocktrans %}
+      </a>
+    </p>
+  </div>
 </section>
