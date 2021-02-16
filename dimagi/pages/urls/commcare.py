@@ -11,6 +11,7 @@ from dimagi.pages.views.commcare import (
     handle_pricing_pdf,
     monitoring_evaluation,
     ict4d,
+    vaccine_delivery
 )
 
 
@@ -33,6 +34,8 @@ urlpatterns = [
         name='commcare_messaging'),
     url(r'^pricing/$', pricing,
         name='commcare_pricing'),
+    url(r'^vaccine-delivery/$', vaccine_delivery,
+        name='vaccine_delivery'),
     url(r'^pricing/commcare-pricing-monthly.pdf$', handle_pricing_pdf(True),
         name='monthly_commcare_pricing_pdf'),
     url(r'^pricing/commcare-pricing-annual.pdf$', handle_pricing_pdf(False),

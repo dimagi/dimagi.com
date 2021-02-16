@@ -1,0 +1,31 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="contact-us border-top accent-gray-bg" id="schedule">
+  <div class="content content-width-medium pad-vert-medium gap-bottom-base align-center">
+    <div class="gap-bottom-small">
+      <h3 class="slate">
+        {% blocktrans %}
+          Digital Solutions for COVID-19 Response
+        {% endblocktrans %}
+      </h3>
+      <p class="slate">
+        {% blocktrans %}
+          This vaccine delivery solution is just one component of
+          Dimagi’s larger efforts to support COVID-19 response.
+          Learn more about the rest of our efforts to contain
+          the spread of the virus.
+        {% endblocktrans %}
+      </p>
+    </div>{# .intro #}
+    <div class="column flex-align-center">
+      <p>
+        <a class="button button-slate" href="{% url 'covid_19' %}">
+          {% blocktrans %}
+            Learn More
+          {% endblocktrans %}
+        </a>
+      </p>
+    </div>{# .column #}
+  </div>{# .content #}
+</section>

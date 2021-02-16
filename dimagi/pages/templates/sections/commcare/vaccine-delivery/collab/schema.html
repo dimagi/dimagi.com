@@ -1,0 +1,37 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="content pad-vert-medium content-width-large blue-theme">
+  <div class="grid-2-at-small">
+    <div class="column align-left pad-top-small-at-large">
+      <h3>
+        {% blocktrans %}
+          Shared, Open Data Schema 
+        {% endblocktrans %}
+      </h3>
+      <p>
+        {% blocktrans %}
+          Dimagi has teamed up with other digital global goods providers,
+          including Medic Mobile and Ona, to develop a shared and open
+          data model for COVID-19 vaccine delivery. By agreeing on a
+          standard data shema now, we can harmonize efforts across
+          platforms, allowing for easier interoperability and collaboration.
+        {% endblocktrans %}
+      </p>
+      <div class="align-left pad-top-base">
+        <a class="arrow"
+           href="https://docs.google.com/document/d/1J6wrPEyJVkt2krPgnnvF_3w-UMtN_344jdRP79U_dN8/edit"
+           target="_blank">
+          {% blocktrans %}
+            Learn More
+          {% endblocktrans %}
+        </a>
+      </div>
+    </div>{# .column #}
+
+    <div class="column">
+      <div class="schema white-lazy-bg"
+           data-lazybg="true"></div>
+    </div>{# .column #}
+  </div>{# .grid-2 #}
+</section>{# .content #}

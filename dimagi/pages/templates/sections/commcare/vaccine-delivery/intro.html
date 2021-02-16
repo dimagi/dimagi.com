@@ -1,0 +1,32 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section id="vaccine-delivery-intro" data-lazybg="true" class="accent-gray-bg">
+  <div class="content pad-bottom-medium">
+    <div class="grid grid-2-at-medium grid-1-at-small">
+      <div class="column pad-top-medium" id="vaccine-intro">
+        <div class="intro-image">
+          <div class="intro-image white-lazy-bg" data-lazybg="true"></div>
+        </div>
+      </div> {# .column #}
+      <div class="column pad-top-medium-at-large pad-top-small-at-medium">
+        <div class="pad-bottom-base pad-bottom-line-at-medium pad-bottom-line-at-large pad-bottom-line-at-extra-large">
+          <h3 class="blue pad-top-small">
+            {% blocktrans %}
+              Facilitating Equitable Delivery
+            {% endblocktrans %}
+          </h3>
+        </div>
+        <p>
+          {% blocktrans %}
+            Delivering the COVID-19 vaccine is sure to be the most
+            ambitious public health campaign ever attempted. Offer
+            every group the support and guidance they need to ensure
+            the equitable delivery of the vaccine – from frontline workers
+            to program officers and, of course, the recipients themselves.
+          {% endblocktrans %}
+        </p>
+      </div>{# .column #}
+    </div>
+  </div>
+</section>
