@@ -103,9 +103,14 @@
 }
 
 .programs .image.testimonial3{
-    @include background-cover('../../../pages/sectors/vaccine_delivery/programs/BMGF_WHO.jpg');
+  @include background-cover('../../../pages/sectors/vaccine_delivery/programs/BMGF_WHO.jpg');
   height: 200px;
   background-size: contain;
+}
+
+.programs .image.testimonial3-popup{
+  @include background-cover('../../../pages/sectors/vaccine_delivery/programs/BMGF_WHO.jpg');
+  height: 250px;
 }
 
 .programs .image.testimonial1,
