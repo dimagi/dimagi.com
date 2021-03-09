@@ -65,6 +65,11 @@ def agriculture_finance(request):
 @enable_ab_test(DEMO_WORKFLOW_V2)
 def sector_reproductive_health(request):
     return render(request, 'pages/sectors/reproductive_health.html')
+
+
+@enable_ab_test(DEMO_WORKFLOW_V2)
+def vaccine_delivery(request):
+    return render(request, 'pages/sectors/vaccine_delivery.html')
   
   
 @enable_ab_test(DEMO_WORKFLOW_V2)
