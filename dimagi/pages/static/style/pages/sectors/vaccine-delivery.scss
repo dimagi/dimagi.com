@@ -1,0 +1,148 @@
+@import 'app/mixins/background';
+@import 'app/variables/colors';
+@import 'app/variables/sizes';
+@import 'app/variables/type';
+
+#ag-intro {
+  $_base-height: 190px;
+  $_height-by-size: (
+    small: 280px,
+    medium: 280px,
+    large: 280px,
+    extra-large: 320px,
+	);
+	@include make-bg(hero-data-image, '../../../pages/sectors/vaccine_delivery/intro/hero', $_base-height, $_height-by-size);
+}
+
+.part3 {
+  $_base-height: 600px;
+    $_height-by-size: (
+      small: 620px,
+      medium: 385px,
+      large: 360px,
+      extra-large: 360px,
+    );
+	  @include make-bg(epic-cover, '../../../pages/sectors/maternal-and-newborn-health/part3/hero', $_base-height, $_height-by-size);
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.commcare-text {
+  $_base-height: 290px;
+  $_height-by-size: (
+    small: 290px,
+    medium: 220px,
+    large: 290px,
+    extra-large: 290px,
+  );
+  @include make-bg(phone-image, '../../../pages/sectors/vaccine_delivery/demo/phone', $_base-height, $_height-by-size, '.png');
+
+  @media (min-width: $width-desktop) {
+    .off-grid {
+      top: 20%;
+      left: 0;
+      position: absolute;
+      right: auto;
+      width: 90%;
+      z-index: 1;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: auto 0%;
+    }
+
+    .content {
+      position: relative;
+      z-index: 2;
+    }
+  }
+
+  @media (min-width: $width-desktop-lg) {
+    .off-grid {
+      top: 10%;
+      left: 0;
+      position: absolute;
+      right: auto;
+      width: 115%;
+      z-index: 1;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: auto 0%;
+    }
+
+    .content {
+      position: relative;
+      z-index: 2;
+    }
+  }
+}
+
+.commcare-text .phone-image{
+  background-size: auto 0%;
+}
+
+.ac-part3 .phone-image .bg-loader{
+  background-color: transparent;
+}
+
+.news .image.testimonial1{
+  @include background-cover('../../../pages/sectors/vaccine_delivery/news/equitable.jpg');
+  height: 200px;
+  background-size: contain;
+  background-position: left;
+}
+
+.news .image.testimonial2{
+  @include background-cover('../../../pages/sectors/vaccine_delivery/news/biometric.jpg');
+  height: 200px;
+  background-size: contain;
+  background-position: left;
+}
+
+.news .image.testimonial3{
+  @include background-cover('../../../pages/sectors/vaccine_delivery/news/overcome.jpg');
+  height: 200px;
+  background-size: contain;
+  background-position: left;
+}
+
+.programs .image.testimonial1{
+  @include background-cover('../../../pages/sectors/vaccine_delivery/programs/eHealth_africa.jpg');
+  height: 200px;
+  background-size: contain;
+}
+
+.programs .image.testimonial2{
+  @include background-cover('../../../pages/sectors/vaccine_delivery/programs/lwala_community_alliance.jpg');
+  height: 200px;
+  background-size: contain;
+}
+
+.programs .image.testimonial3{
+  @include background-cover('../../../pages/sectors/vaccine_delivery/programs/BMGF_WHO.jpg');
+  height: 200px;
+  background-size: contain;
+}
+
+.programs .image.testimonial3-popup{
+  @include background-cover('../../../pages/sectors/vaccine_delivery/programs/BMGF_WHO.jpg');
+  height: 250px;
+}
+
+.programs .image.testimonial1,
+.programs .image.testimonial2,
+.programs .image.testimonial3 {
+ background-position: initial;
+}
+
+.programs .image.crs{
+  width: 309px;
+}
+
+.link-gray:hover,
+.link-gray:focus {
+  color: $color-blue !important;
+}

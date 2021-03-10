@@ -1,0 +1,61 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section data-lazybg="true">
+  <div class="accent-gray-bg ">
+    <div class="content align-center pad-vert-medium">
+      <div class="pad-bottom-small">
+        <h3>
+          {% blocktrans %}
+            More than 2000 projects across 80 countries rely on CommCare
+            for their mobile data collection and reporting needs.
+          {% endblocktrans %}
+        </h3>
+      </div>
+      <div class="grid grid-2-at-large grid-1-at-medium grid-row-equal-heights ">
+        <div class="column pad-left-small pad-right-small">
+          <div class="align-center">
+            {% include "svg/sectors/vaccine_delivery/partners/lwala.html" %}
+          </div>
+          <p>
+            {% blocktrans %}
+              “Through the Lwala Mobile app, CHWs have maintained a 95%
+              immunization rate. The app also eases the CHWs’ workload
+              via the Task Module to simply track referrals and follow-ups
+              for their priority clients.”
+            {% endblocktrans %}
+            <br>
+            <strong>
+              <b>
+                {% blocktrans %}
+                  - John Oyugi, CHW Supervisor, Lwala Community Alliance
+                {% endblocktrans %}
+              </b>
+            </strong>
+          </p>
+        </div> {# .column #}
+        <div class="column pad-left-small pad-right-small">
+          <div class="align-center pad-bottom-base">
+            {% include "svg/sectors/vaccine_delivery/partners/tdh.html" %}
+          </div>
+          <p>
+            {% blocktrans %}
+              “Digital tools that monitor individual-level immunization
+              data for children under 5 years of age can enable health
+              programs to better target their reminders and for the
+              Ministry of Health to better allocate human and financial resources.”
+            {% endblocktrans %}
+            <br>
+            <strong>
+              <b>
+                {% blocktrans %}
+                  - Luc Noundia Kabore, Health Program Manager, Terre des hommes
+                {% endblocktrans %}
+              </b>
+            </strong>
+          </p>
+        </div> {# .column #}
+      </div> {# .grid #}
+    </div> {# .content #}
+  </div> {# .accent-gray-bg #}
+</section>

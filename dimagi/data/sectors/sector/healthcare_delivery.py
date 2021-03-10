@@ -77,4 +77,17 @@ SECTOR.add_sub_sectors([
         slug="sector_reproductive_health",
         is_v2=True,
     ),
+    Sector(
+        name=ugettext_lazy(
+            "Vaccine Delivery"
+        ),
+        summary=ugettext_lazy(
+        "Register, identify, and follow both vaccine recipients and clinic stock.."
+        ),
+        template="data/sectors/content/vaccine_delivery.html",
+        icon="svg/sectors/healthcare/vaccine_delivery.html",
+        theme="blue-theme",
+        slug="vaccine_delivery",
+        is_v2=True,
+    ),
 ])
