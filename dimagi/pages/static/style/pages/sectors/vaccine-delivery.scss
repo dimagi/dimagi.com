@@ -35,19 +35,38 @@
   $_base-height: 290px;
   $_height-by-size: (
     small: 290px,
-    medium: 290px,
+    medium: 220px,
     large: 290px,
     extra-large: 290px,
   );
-  @include make-bg(phone-image, '../../../pages/sectors/maternal-and-newborn-health/news/phone', $_base-height, $_height-by-size, '.png');
+  @include make-bg(phone-image, '../../../pages/sectors/vaccine_delivery/demo/phone', $_base-height, $_height-by-size, '.png');
 
   @media (min-width: $width-desktop) {
+    .off-grid {
+      top: 20%;
+      left: 0;
+      position: absolute;
+      right: auto;
+      width: 90%;
+      z-index: 1;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: auto 0%;
+    }
+
+    .content {
+      position: relative;
+      z-index: 2;
+    }
+  }
+
+  @media (min-width: $width-desktop-lg) {
     .off-grid {
       top: 10%;
       left: 0;
       position: absolute;
       right: auto;
-      width: 120%;
+      width: 115%;
       z-index: 1;
       background-position: center;
       background-repeat: no-repeat;
