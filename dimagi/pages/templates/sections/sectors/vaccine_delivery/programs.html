@@ -1,0 +1,287 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="testimonial programs" 
+         data-lazybg="true" 
+         id="programs">
+  <div class="accent-gray-bg">
+    <div class="content pad-vert-small">
+      <div class="mdc-sector-program">
+        <h2 class="align-center">
+          {% blocktrans %}
+            Featured CommCare-Based 
+            <br class="hide-until-medium">Vaccine Delivery Programs
+          {% endblocktrans %}
+        </h2>
+      </div>
+      <div class="grid grid-3-at-large grid-1-at-medium grid-row-equal-heights grid-col-space-small pad-top-medium">
+        <div class="column  pad-bottom-small ">
+          <div class="pad-bottom-base white-bg">
+            <div class="image testimonial1"
+                 data-lazybg="true"></div>
+            <div class="pad-line pad-top-none-at-large pad-top-line-at-extra-large">
+              <h5><strong class="body-color">
+                {% blocktrans %}
+                  eHealth Africa’s VaxTrac: A CommCare-based Vaccine Registry.  <br>
+                  Benin, Nepal, Sierra Leone
+                {% endblocktrans %}
+              </strong></h5>
+              <p class="body-color">
+                {% blocktrans %}
+                  A custom CommCare application was integrated with VaxTrac, a biometric 
+                  system, to create a digital immunization registry.
+                {% endblocktrans %}
+              </p>
+              <p><a href="#agri-ep-feature-card-1" class="arrow link-gray">
+                {% blocktrans %}
+                  Read More 
+                {% endblocktrans %}
+              </a></p>
+            </div>
+          </div>
+        </div>{# .column #}
+
+        <div class="column pad-bottom-small">
+          <div class="pad-bottom-base white-bg">
+            <div class="image testimonial2"
+                 data-lazybg="true"></div>
+          <div class="pad-line pad-top-none-at-large pad-top-line-at-extra-large">
+            <h5>
+              <strong class="body-color">
+                {% blocktrans %}
+                  Lwala Community Alliance <br>
+                  Kenya
+                {% endblocktrans %}
+              </strong>
+            </h5>
+            <p class="body-color">
+              {% blocktrans %}
+                Lwala’s mobile app leads their community health workers through the proper 
+                workflows for vaccinations and maps regions where coverage was lowest.
+              {% endblocktrans %}
+            </p>
+            <p class="pad-top-line-at-extra-large">
+              <a href="#agri-ep-feature-card-2" class="arrow link-gray">
+                {% blocktrans %}
+                  Read More
+                {% endblocktrans %}
+              </a>
+            </p>
+          </div>
+          </div>
+        </div>{# .column #}
+
+        <div class="column pad-bottom-small">
+          <div class="pad-bottom-base white-bg">
+              <div class="image testimonial3"
+                   data-lazybg="true"></div>
+          <div class="pad-line pad-top-none-at-large pad-top-line-at-extra-large">
+            <h5>
+              <strong class="body-color">
+                {% blocktrans %}
+                  BMGF & WHO: Digital Platform for Polio Campaign Health Workers. <br>
+                  Côte D’Ivoire
+                {% endblocktrans %}
+              </strong>
+            </h5>
+            <p class="body-color">
+              {% blocktrans %}
+                Dimagi is supporting the development of a digital platform to support the dissemination of payment information to health workers.
+              {% endblocktrans %}
+            </p>
+            <p>
+              <a href="#agri-ep-feature-card-3" class="arrow link-gray">
+                {% blocktrans %}
+                  Read More
+                {% endblocktrans %}
+              </a>
+            </p>
+          </div>
+          </div>
+        </div>{# .column #}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% block modals %}
+  <div class="modal testimonial programs"
+       data-dismissible="true"
+       data-size="medium"
+       id="agri-ep-feature-card-1">
+    <div class="modal-scroll">
+      <div class="modal-wrapper">
+        <a href="#" class="modal-close-button"></a>
+        <div class="content pad-horz-medium-at-medium pad-horz-small pad-bottom-none turquoise-theme">
+          <h4>
+            <strong class="body-color">
+              {% blocktrans %}
+                eHealth Africa’s VaxTrac: A CommCare-based Vaccine Registry  <br>
+                Benin, Nepal, Sierra Leone
+              {% endblocktrans %}
+            </strong>
+          </h4>
+          <div class="grid-flex-at-large">
+            <div class="column">
+              <p class="body-color">
+                {% blocktrans %}
+                  VaxTrac, is a clinic-based vaccination registry system which health workers 
+                  can use in the field to enroll children and track their immunization records. 
+                  It eliminates the need for paper-based cohort books, tally sheets, and monthly 
+                  reporting forms and improves health workers accuracy and efficiency.
+                {% endblocktrans %}  
+              </p>
+              <p class="body-color">
+                {% blocktrans %}
+                  We have been able to help build an integration between their MOTECH server 
+                  (receiving data from CommCare server) and the government's DHIS2 server. This 
+                  has been a very good use case to show how government systems can be strengthened 
+                  through the use of a clinic-based registry, making available a very useful 
+                  dashboard to support strategic decisions on vaccination programs at government level.
+                {% endblocktrans %}
+              </p>
+              <p class="body-color">
+                {% blocktrans %}
+                  In terms of impact, 99 health centers were covered, 160 health workers 
+                  trained, 100,000 children registered, 1,000,000 vaccines doses administered 
+                  and time needed for the MoH to see data was reduced from 3 months to 7 days.
+                {% endblocktrans %}
+              </p>
+            </div>
+            <div class="column pad-top-none-until-large">
+              <div class="image testimonial1 crs"
+                   data-lazybg="true"></div>
+            </div>
+          </div>
+        </div>{# .content #}
+      </div>{# .modal-wrapper #}
+    </div>{# .modal-scroll #}
+  </div>{# .modal #}
+
+  <div class="modal testimonial programs"
+       data-dismissible="true"
+       data-size="medium"
+       id="agri-ep-feature-card-2">
+    <div class="modal-scroll">
+      <div class="modal-wrapper">
+        <a href="#" class="modal-close-button"></a>
+        <div class="content pad-horz-medium-at-medium pad-horz-line pad-vert-none turquoise-theme">
+          <h4>
+            <strong class="body-color">
+              {% blocktrans %}
+                Lwala Community Alliance <br>
+                Kenya
+              {% endblocktrans %}
+            </strong>
+          </h4>
+          <div class="grid-flex-at-large">
+            <div class="column">
+              <p class="body-color">
+                {% blocktrans %}
+                  Lwala Community Alliance in Kenya fights high rates of maternal 
+                  mortality and HIV. Using a community-led health model and a 
+                  custom CommCare-based mobile application, CHWs register each 
+                  pregnant woman or child under five years old into the formal 
+                  healthcare system. The application then walks the CHW through 
+                  the proper workflows for vaccinations, family planning, 
+                  disease diagnosis and treatment, or a number of other requested services.
+                {% endblocktrans %}  
+              </p>
+              <p class="body-color">
+                {% blocktrans %}
+                  CommCare allowed the implementing partner to do tiered targeting 
+                  where they identified regions where coverage was lowest and 
+                  held outreach events. CHWs would bring clients to a community 
+                  venue, such as a school or church, and offered them the 
+                  appropriate vaccines. For the remaining hold-outs, they 
+                  targeted individual households to provide immunizations.
+                {% endblocktrans %}
+              </p>
+              <p class="body-color">
+                {% blocktrans %}
+                  So far, the program has reached vaccination rates of over 96% 
+                  across a population of 60,000 people. Prior to 2016 the 
+                  coverage rate in the communities was in the low 60%, even 
+                  though immunizations were available through hospitals.
+                {% endblocktrans %}
+              </p>
+            </div>
+            <div class="column">
+              <div class="image testimonial2 crs"
+                   data-lazybg="true"></div>
+            </div>
+          </div>
+        </div>{# .content #}
+      </div>{# .modal-wrapper #}
+    </div>{# .modal-scroll #}
+  </div>{# .modal #}
+
+  <div class="modal testimonial programs"
+       data-dismissible="true"
+       data-size="medium"
+       id="agri-ep-feature-card-3">
+    <div class="modal-scroll">
+      <div class="modal-wrapper">
+        <a href="#" class="modal-close-button"></a>
+        <div class="content pad-horz-medium-at-medium pad-horz-line pad-vert-none turquoise-theme">
+          <h4>
+            <strong class="body-color">
+              {% blocktrans %}
+                BMGF & WHO: Digital Platform for Polio Campaign Health Workers <br>
+                Côte D’Ivoire
+              {% endblocktrans %}
+            </strong>
+          </h4>
+          <div class="grid-flex-at-large">
+            <div class="column">
+              <p class="body-color">
+                {% blocktrans %}
+                  Since July 2020, Dimagi has been working with the Bill & Melinda 
+                  Gates Foundation, The Global Eradication Initiative (GPEI), and 
+                  WHO to develop a CommCare based health workforce management system 
+                  and support its roll out in multiple African countries for the 
+                  2020 polio vaccination campaign. The project will start in 
+                  Cote D’Ivoire, before scaling to cover other countries.
+                {% endblocktrans %}  
+              </p>
+              <p class="body-color">
+                {% blocktrans %}
+                  The novel oral polio vaccine type 2 (nOPV2) is a vaccine against 
+                  circulating vaccine-derived poliovirus type 2 (cVDPV2) that is 
+                  authorized and available for use in eight initial target 
+                  countries: Côte D’Ivoire, Burkina Faso, Ethiopia, Cameroon, 
+                  Chad, Congo-Brazzaville, Mali, and South Sudan.
+                {% endblocktrans %}
+              </p>
+              <p class="body-color">
+                {% blocktrans %}
+                A key challenge with running vaccination campaigns is that campaign 
+                workers are often uncertain about how much payment they are entitled 
+                to, the status of those payments, and how to access them. These 
+                administrative and logistical challenges have ripple effects 
+                that can ultimately impact the timeliness, rigor, and quality 
+                of implementation of the broader campaign.
+                {% endblocktrans %}
+              </p>
+              <p class="body-color">
+                {% blocktrans %}
+                  The program’s goal is to stop polio outbreaks through conducting 
+                  fast and good quality polio vaccination campaigns. The role of 
+                  the technology will be to help streamline and accelerate some of 
+                  the processes such as recruitment of workers and payments. By 
+                  bringing transparency, clarity, and efficiency to the campaign with 
+                  CommCare, the program hopes to increase vaccinators' clarity and 
+                  engagement, thereby increasing the number of children vaccinated.
+                {% endblocktrans %}
+              </p>
+            </div>
+            <div class="column">
+              <div class="image testimonial3-popup crs"
+                   data-lazybg="true"></div>
+          </div>
+          </div>
+        </div>{# .content #}
+      </div>{# .modal-wrapper #}
+    </div>{# .modal-scroll #}
+  </div>{# .modal #}
+{% endblock %}
