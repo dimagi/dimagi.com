@@ -7,15 +7,14 @@ from dimagi.pages.models.toolkits import Toolkit, Highlight
 
 TOOLKIT = Toolkit(
     title=ugettext_lazy(
-        "The CommCare Evidence Base & Overview"
+        "THE COMMCARE EVIDENCE BASE OVERVIEW"
     ),
     download_title=ugettext_lazy(
         "The CommCare Evidence Base Overview"
     ),
     tagline=ugettext_lazy(
-        "Over 60 studies have assessed CommCare's impact, making it the most "
-        "evidence-based mobile platform for frontline workers in low-resource "
-        "settings."
+        "More studies have assessed CommCare's impact than any "
+        "other mobile platform for frontline workers"
     ),
     image="commcare-evidence-base",
     template="data/toolkits/summaries/commcare_evidence_base.html",
