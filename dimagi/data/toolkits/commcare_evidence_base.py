@@ -7,7 +7,7 @@ from dimagi.pages.models.toolkits import Toolkit, Highlight
 
 TOOLKIT = Toolkit(
     title=ugettext_lazy(
-        "THE COMMCARE EVIDENCE BASE OVERVIEW"
+        "The CommCare Evidence Base Overview"
     ),
     download_title=ugettext_lazy(
         "The CommCare Evidence Base Overview"
