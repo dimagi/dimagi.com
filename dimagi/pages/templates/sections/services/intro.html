@@ -1,0 +1,46 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section id="casestudies"
+         data-lazybg="true">
+  <div class="content pad-vert-medium">
+    <div class="grid grid-2-at-medium grid-1-at-small grid-reverse">
+      <div class="column" id="case-study">
+        <div class="intro-image">
+          <div class="case-study-image white-lazy-bg"
+               data-lazybg="true"></div>
+        </div>
+      </div> {# .column #}
+      <div class="column pad-top-base">
+        <h3 class="turquoise">
+          {% blocktrans %}
+            Support your team with<br class="hide-until-medium" />
+            more than an app
+          {% endblocktrans %}
+        </h3>
+        <p>
+          {% blocktrans %}
+            When it comes to ICT4D programs, our experience can’t be beat.
+            So no matter how complicated it seems, you can trust Dimagi’s
+            Solutions Delivery Team to help launch, grow, and scale your program.
+          {% endblocktrans %}
+        </p>
+        <p>
+          {% blocktrans %}
+            Our focus is on sustainable impact, so we’ll help you build both the
+            internal capacity and maintainable systems you need to ensure your
+            impact continues long after our partnership ends.
+          {% endblocktrans %}
+        </p>
+      </div>{# .column #}
+    </div>
+    <div class="align-center pad-top-medium">
+      <a class="button {% click_body 'video-learn' %}"
+          href="{% url 'programmatic_research' %}">
+        {% blocktrans %}
+          Get in touch
+        {% endblocktrans %}
+      </a>
+    </div>    
+  </div>
+</section>
