@@ -68,7 +68,7 @@ def sector_reproductive_health(request):
 
 
 @enable_ab_test(DEMO_WORKFLOW_V2)
-def vaccine_delivery(request):
+def sector_vaccine_delivery(request):
     return render(request, 'pages/sectors/vaccine_delivery.html')
   
   
