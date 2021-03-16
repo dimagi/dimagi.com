@@ -24,24 +24,39 @@
   <section class="hero hero-services"
            data-lazybg="true"
            id="hero">
-    <div class="content align-left-at-medium align-center gap-top-large gap-top-small-at-medium gap-top-line-at-large">
-      <h2 class="gap-vert-line">
-        {% blocktrans %}
-          Dimagi Global Services
-        {% endblocktrans %}
-      </h2>
-      <h1>
-        {% blocktrans %}
-          Maximize Your Impact and ICT4D Solution with our Global Services Team
-        {% endblocktrans %}
-      </h1>
-      <a class="button button-accent-gray {% click_hero 'contact' %}"
-         href="#global-services-form">
-        {% blocktrans %}
-          Contact Us
-        {% endblocktrans %}
-      </a>
-    </div> {# .content #}
+    <div class="content content-width-large inverted align-center display-flex flex-valign-middle expand-vertical offset-top-small flex-align-center">
+      <div class="copy expand position-relative">
+ 
+        <h2 class="gap-bottom-base">
+          {% blocktrans %}
+            Solutions Delivery
+          {% endblocktrans %}
+        </h2>
+
+        <h1 class="content-width-medium">
+          {% blocktrans %}
+            Your Partner for Impact
+          {% endblocktrans %}
+        </h1>
+  
+        <div class="headline content-width-medium">
+          {% blocktrans %}
+            Build sustainable programs at scale alongside <br class="hide-until-medium" />
+            a team with unmatched experience
+          {% endblocktrans %}
+        </div>{# .headline #}
+  
+        <p class="align-center pad-top-small">
+          <a href="#global-services-form"
+             class="button inverse alt {% click_hero 'demo' %}">
+            {% blocktrans %}
+              Contact Us
+            {% endblocktrans %}
+          </a>
+        </p>
+  
+      </div>{# .copy #}
+    </div>{# .content #}
   </section>
 {% endblock %}
 

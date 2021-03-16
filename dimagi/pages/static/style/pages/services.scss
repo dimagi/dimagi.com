@@ -7,14 +7,6 @@
   @include make-bg(hero, '../../pages/services/hero');
 }
 
-@media (min-width: $width-desktop) {
-  .services-page .hero h1 {
-    margin-left: 0;
-    margin-right: 0;
-    max-width: 55%;
-  }
-}
-
 .overview .image.testimonial1 {
   @include background-cover('../../pages/services/overview1.jpg');
 }
@@ -75,6 +67,3 @@ $_touch-front-heights: (
     }
   }
 }
-
-
-
