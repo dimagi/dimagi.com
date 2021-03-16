@@ -87,7 +87,7 @@ SECTOR.add_sub_sectors([
         template="data/sectors/content/vaccine_delivery.html",
         icon="svg/sectors/healthcare/vaccine_delivery.html",
         theme="blue-theme",
-        slug="vaccine_delivery",
+        slug="sector_vaccine_delivery",
         is_v2=True,
     ),
 ])
