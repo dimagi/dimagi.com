@@ -4,27 +4,29 @@
 <article class="epic part3" id="demo">
   <section class="epic-cover"
            data-lazybg="true">
-    <div class="commcare-text pad-top-base pad-top-medium-at-medium pad-top-medium-at-large pad-top-medium-at-extra-large pad-top-base-at-small pad-bottom-medium pad-left-large-at-small">
-      <div class="content content-width-medium">
-        <div class="content-width-small">
-          <h3 class="white">
-            {% blocktrans %}
-              See the Solution in Action
-            {% endblocktrans %}
-          </h3>
-          <p class="white">
-            {% blocktrans %}
-              This demo video guides you through the stages of support 
-              that the solution offers, from screening and registration 
-              to dose delivery, and follow-up.
-            {% endblocktrans %}
-            <p class="cta">
-              {% trans 'Watch Now' as video_text %}
-              {% click_hero 'video' as video_click_class %}
-              {% include "partials/wistia_popover.html" with wistia_id='u9z8sgoi35' white_class='white' show_play=True text=video_text click_class=video_click_class %}
+    <div class="commcare-text pad-top-base pad-top-medium-at-medium pad-top-medium-at-large pad-top-medium-at-extra-large pad-top-base-at-small pad-bottom-medium">
+      <div class="content content-width-medium pad-left-large-at-medium pad-left-small-until-small">
+        <div class="demo-content pad-left-large-at-medium">
+          <div class="content-width-small pad-left-large-at-medium">
+            <h3 class="white">
+              {% blocktrans %}
+                See the Solution in Action
+              {% endblocktrans %}
+            </h3>
+            <p class="white">
+              {% blocktrans %}
+                This demo video guides you through the stages of support 
+                that the solution offers, from screening and registration 
+                to dose delivery, and follow-up.
+              {% endblocktrans %}
+              <p class="cta">
+                {% trans 'Watch Now' as video_text %}
+                {% click_hero 'video' as video_click_class %}
+                {% include "partials/wistia_popover.html" with wistia_id='u9z8sgoi35' white_class='white' show_play=True text=video_text click_class=video_click_class %}
+              </p>
             </p>
-          </p>
-        </div>
+          </div>{# .content-width-small #}
+        </div>{# .demo-content #}
       </div>{# .content #}
       <div class="phone-image off-grid white-lazy-bg"
            data-lazybg="true">
