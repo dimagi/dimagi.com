@@ -7,67 +7,6 @@
   @include make-bg(hero, '../../pages/services/hero');
 }
 
-.overview .image.testimonial1 {
-  @include background-cover('../../pages/services/overview1.jpg');
-}
-
-.overview .image.testimonial2 {
-  @include background-cover('../../pages/services/overview2.jpg');
-}
-
-
-.testimonials .image.testimonial1 {
-  @include background-cover('../../pages/services/testimonials1.jpg');
-}
-
-.testimonials .image.testimonial2 {
-  @include background-cover('../../pages/services/testimonials2.jpg');
-}
-
-.packages-pricing,
-.packages-includes {
-  left: 0;
-  position: absolute;
-  width: 100%;
-
-  p {
-    margin-left: $space-small;
-    margin-right: $space-small;
-  }
-}
-
-.packages-pricing {
-  bottom: 100px;
-  color: $color-link-gray;
-  font-size: $font-size-small;
-}
-
-$_no-touch-heights: (
-    small: auto,
-    medium: 100px,
-    large: 180px,
-    extra-large: 150px,
-);
-
-$_touch-front-heights: (
-    small: auto,
-    medium: 100px,
-    large: 185px,
-    extra-large: 160px,
-);
-
-@each $_size, $_width in $widths-by-size {
-  @media (min-width: $_width) {
-    .no-touch .packages .flip-card {
-      height: map-get($_no-touch-heights, $_size);
-    }
-
-    .touch .packages .flip-card .front { // scss-lint:disable SelectorDepth
-      height: map-get($_touch-front-heights, $_size);
-    }
-  }
-}
-
 .programs .image.testimonial1{
   @include background-cover('../../pages/services/case_studies/dsti.jpg');
   height: 200px;
