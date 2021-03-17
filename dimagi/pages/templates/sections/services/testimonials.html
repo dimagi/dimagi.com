@@ -1,69 +1,77 @@
 {% load i18n %}
 {% load dimagidotcom %}
 
-<section class="testimonials border-top"
-         id="testimonials">
+<section class="team border-top"
+         id="team">
   <div class="content pad-vert-medium">
     <div class="intro content-width-medium">
-      <h2>
-        {% blocktrans %}
-          Testimonials
-        {% endblocktrans %}
-      </h2>
+        <h2 class="align-center turquoise pad-top-small">
+            {% blocktrans %}
+              Our experience is your asset
+            {% endblocktrans %}
+          </h2>
+          <p class="align-center lead-text">
+            {% blocktrans %}
+              <strong>Dimagi is more than just a technology vendor.</strong> We’re a team of 
+              physicians, software engineers, and health system architects 
+              with unrivaled experience. For you, we will be partners and 
+              collaborators – ready to work alongside you every step of the way.
+            {% endblocktrans %}
+          </p>
     </div>{# .intro #}
 
-    <div class="grid-testimonial pad-bottom-base">
+    <div class="grid-testimonial">
       <div class="column">
-        <div class="grid-2-at-medium grid-reverse">
-
+        <div class="grid-2-at-medium">
+    
           <div class="column">
             <div class="grid-1">
+    
               <div class="column">
-                <div class="aspect-ratio-square aspect-ratio-rect-at-medium theme-bg testimonial-quote">
-                  <blockquote>
-                    <p>
-                      {% blocktrans %}
-                        This program is having a tremendous impact on the
-                        lives of some of the most vulnerable women and
-                        their families in Uttar Pradesh.
-                      {% endblocktrans %}
-                    </p>
-                    <cite>
-                      {% blocktrans %}
-                        Jaya Menon, Monitoring & Evaluation Manager<br class="hide display-block-at-medium" />
-                        Catholic Relief Services
-                      {% endblocktrans %}
-                    </cite>
-                  </blockquote>
-                </div>{# .aspect-ratio-rect-at-medium #}
+                <div class="image aspect-ratio-rect teampic1"
+                     data-lazybg="true"></div>
               </div>{# .column #}
-
+    
               <div class="column">
-                <div class="grid-1">
-
+                <div class="grid-2">
+    
                   <div class="column">
-                    <div class="image aspect-ratio-rect testimonial2"
-                         data-lazybg="true"></div>{# .testimonials .image.testimonial2 {} => services.scss #}
+                    <div class="image aspect-ratio-square teampic2"
+                         data-lazybg="true"></div>
                   </div>{# .column #}
-
+    
+                  <div class="column">
+                    <div class="image aspect-ratio-square teampic3"
+                         data-lazybg="true"></div>
+                  </div>{# .column #}
+    
                 </div>{# .grid-2 #}
               </div>{# .column #}
-
+    
             </div>{# .grid-1 #}
           </div>{# .column #}
-
+    
           <div class="column">
             <div class="grid-1">
               <div class="column">
-                <div class="image aspect-ratio-square testimonial1"
-                     data-lazybg="true"></div>{# .testimonials .image.testimonial1 {} => services.scss #}
+                <div class="image aspect-ratio-square teampic4"
+                     data-lazybg="true"></div>
               </div>{# .column #}
             </div>{# .grid-1 #}
           </div>{# .column #}
-
+    
         </div>{# .grid-2-at-medium #}
       </div>{# .column #}
     </div>{# .grid-testimonial #}
+
+    <div class="align-center pad-top-medium">
+      <a class="button turquoise-bg"
+          href="{% url 'programmatic_research' %}">
+        {% blocktrans %}
+          Speak With the Team
+        {% endblocktrans %}
+      </a>
+    </div>
 
   </div> {# .content #}
 </section>

@@ -68,6 +68,50 @@ $_touch-front-heights: (
   }
 }
 
+.programs .image.testimonial1{
+  @include background-cover('../../pages/services/case_studies/dsti.jpg');
+  height: 200px;
+  background-size: contain;
+}
+
+.programs .image.testimonial2{
+  @include background-cover('../../pages/services/case_studies/abt.jpg');
+  height: 200px;
+  background-size: contain;
+}
+
+.programs .image.testimonial3{
+  @include background-cover('../../pages/services/case_studies/renew.jpg');
+  height: 200px;
+  background-size: contain;
+}
+
+.programs .image.testimonial1,
+.programs .image.testimonial2,
+.programs .image.testimonial3 {
+ background-position: initial;
+}
+
+.programs .image.crs{
+  width: 309px;
+}
+
+.team .image.teampic1 {
+  @include background-cover('../../pages/services/team/teampic1.jpg');
+}
+
+.team .image.teampic2 {
+  @include background-cover('../../pages/services/team/teampic2.jpg');
+}
+
+.team .image.teampic3 {
+  @include background-cover('../../pages/services/team/teampic3.jpg');
+}
+
+.team .image.teampic4 {
+  @include background-cover('../../pages/services/team/teampic4.jpg');
+}
+
 #case-study {
     $_base-height: 190px;
     $_height-by-size: (

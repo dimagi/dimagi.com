@@ -1,0 +1,267 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="testimonial programs turquoise-theme" 
+         data-lazybg="true" 
+         id="programs">
+  <div class="accent-gray-bg">
+    <div class="content pad-vert-small">
+      <div class="mdc-sector-program content-width-medium">
+        <h2 class="align-center turquoise pad-top-small">
+          {% blocktrans %}
+            Frontline workers lead the way
+          {% endblocktrans %}
+        </h2>
+        <p class="align-center lead-text">
+          {% blocktrans %}
+            In each of the more than 2,000 ICT4D programs we’ve supported, our 
+            focus has always been on how to aid the vital work of our end users.
+          {% endblocktrans %}
+        </p>
+      </div>
+      <div class="grid grid-3-at-large grid-1-at-medium grid-row-equal-heights grid-col-space-small pad-top-medium">
+        <div class="column  pad-bottom-small ">
+          <div class="pad-bottom-base white-bg">
+            <div class="image testimonial1"
+                 data-lazybg="true"></div>
+            <div class="attribution-main pad-line pad-top-none-at-large pad-top-line-at-extra-large">
+              <p>
+                {% blocktrans %}
+                  “[Our] partnership has ensured that evidence-based decision-making 
+                  and strategic planning are translated into effective implementation 
+                  on the ground.”
+                {% endblocktrans %}
+              </p>
+              <div class="attribution-heading body-color uppercase">
+                <p class="pad-bottom-base">
+                {% blocktrans %}
+                  <strong>Albert Acquaye</strong>
+                {% endblocktrans %}
+                </p>
+              </div>
+              <p class="attribution-sub uppercase">
+                {% blocktrans %}
+                  Senior Associate, Abt Associates
+                {% endblocktrans %}
+              </p>
+              <p class="pad-top-line"><a href="#agri-ep-feature-card-1" class="arrow link-turquoise">
+                {% blocktrans %}
+                  Read More 
+                {% endblocktrans %}
+              </a></p>
+            </div>
+          </div>
+        </div>{# .column #}
+
+        <div class="column  pad-bottom-small ">
+          <div class="pad-bottom-base white-bg">
+            <div class="image testimonial2"
+                 data-lazybg="true"></div>
+            <div class="attribution-main pad-line pad-top-none-at-large pad-top-line-at-extra-large">
+              <p>
+                {% blocktrans %}
+                  “From the onset, [Dimagi] has been a critical partner, 
+                  providing the necessary support needed.”
+                {% endblocktrans %}
+              </p>
+              <div class="attribution-heading body-color uppercase">
+                <p class="pad-bottom-base">
+                {% blocktrans %}
+                  <strong>Michala Mackay</strong>
+                {% endblocktrans %}
+                </p>
+              </div>
+              <p class="attribution-sub uppercase">
+                {% blocktrans %}
+                  Director & COO, Directorate of Science, Technology, & Innovation – Sierra Leone
+                {% endblocktrans %}
+              </p>
+              <p class="pad-top-line"><a href="#agri-ep-feature-card-2" class="arrow link-turquoise">
+                {% blocktrans %}
+                  Read More 
+                {% endblocktrans %}
+              </a></p>
+            </div>
+          </div>
+        </div>{# .column #}
+
+        <div class="column  pad-bottom-small ">
+          <div class="pad-bottom-base white-bg">
+            <div class="image testimonial3"
+                 data-lazybg="true"></div>
+            <div class="attribution-main pad-line pad-top-none-at-large pad-top-line-at-extra-large">
+              <p>
+                {% blocktrans %}
+                  “Dimagi has been responsive, flexible and easy to work with 
+                  as we've been building and setting up an application for 
+                  our organization's use in data collection.”
+                {% endblocktrans %}
+              </p>
+              <div class="attribution-heading body-color uppercase">
+                <p class="pad-bottom-base">
+                {% blocktrans %}
+                  <strong>Drew DeVries</strong>
+                {% endblocktrans %}
+                </p>
+              </div>
+              <p class="attribution-sub uppercase">
+                {% blocktrans %}
+                  Data Analyst, World Renew
+                {% endblocktrans %}
+              </p>
+              <p class="pad-top-line"><a href="#agri-ep-feature-card-3" class="arrow link-turquoise">
+                {% blocktrans %}
+                  Read More 
+                {% endblocktrans %}
+              </a></p>
+            </div>
+          </div>
+        </div>{# .column #}
+
+      </div>
+      <p class="pad-top-base pad-left-small align-center pad-vert-small">
+        <a class="button {% click_body 'case_studies' %}"
+           href="{% url 'case_studies' %}">
+          {% blocktrans %}
+            Read Our Case Studies
+          {% endblocktrans %}
+        </a>
+      </p>
+    </div>
+  </div>
+</section>
+
+{% block modals %}
+  <div class="modal testimonial programs"
+       data-dismissible="true"
+       data-size="medium"
+       id="agri-ep-feature-card-1">
+    <div class="modal-scroll">
+      <div class="modal-wrapper">
+        <a href="#" class="modal-close-button"></a>
+        <div class="content pad-horz-medium-at-medium pad-horz-small pad-bottom-none turquoise-theme">
+          <div class="grid-flex-at-large">
+            <div class="column">
+              <p class="body-color">
+                {% blocktrans %}
+                  “Dimagi continues to be our main partner in the coordination, 
+                  development, and maintenance of mHealth activities within 
+                  the PMI VectorLink Project. The CommCare application has 
+                  contributed to the improvement in speed of availability 
+                  of vector control data and has enhanced IRS field supervision. 
+                  This partnership has ensured that evidence-based decision-making 
+                  and strategic planning are translated into effective implementation 
+                  on the ground.”
+                {% endblocktrans %}  
+              </p>
+              <div class="attribution-heading body-color">
+                <p>
+                {% blocktrans %}
+                  <strong>Albert Acquaye</strong>
+                {% endblocktrans %}
+                </p>
+              </div>
+              <p class="attribution-modal-sub">
+                {% blocktrans %}
+                  Senior Associate, Abt Associates
+                {% endblocktrans %}
+              </p>
+            </div>
+            <div class="column pad-top-none-until-large">
+              <div class="image testimonial1 crs"
+                   data-lazybg="true"></div>
+            </div>
+          </div>
+        </div>{# .content #}
+      </div>{# .modal-wrapper #}
+    </div>{# .modal-scroll #}
+  </div>{# .modal #}
+
+  <div class="modal testimonial programs"
+       data-dismissible="true"
+       data-size="medium"
+       id="agri-ep-feature-card-2">
+    <div class="modal-scroll">
+      <div class="modal-wrapper">
+        <a href="#" class="modal-close-button"></a>
+        <div class="content pad-horz-medium-at-medium pad-horz-small pad-bottom-none turquoise-theme">
+          <div class="grid-flex-at-large">
+            <div class="column">
+              <p class="body-color">
+                {% blocktrans %}
+                  “From the onset, [Dimagi] has been a critical partner, 
+                  providing the necessary support needed. In additional 
+                  to the high-level technical support they have provided 
+                  to the response, their willingness to share knowledge 
+                  and build capacity in our digital transformation 
+                  process has been exemplary”
+                {% endblocktrans %}  
+              </p>
+              <div class="attribution-heading body-color">
+                <p>
+                {% blocktrans %}
+                  <strong>Michala Mackay</strong>
+                {% endblocktrans %}
+                </p>
+              </div>
+              <p class="attribution-modal-sub">
+                {% blocktrans %}
+                  Director & COO, Directorate of Science, Technology, & Innovation – Sierra Leone
+                {% endblocktrans %}
+              </p>
+            </div>
+            <div class="column pad-top-none-until-large">
+              <div class="image testimonial2 crs"
+                   data-lazybg="true"></div>
+            </div>
+          </div>
+        </div>{# .content #}
+      </div>{# .modal-wrapper #}
+    </div>{# .modal-scroll #}
+  </div>{# .modal #}
+
+  <div class="modal testimonial programs"
+       data-dismissible="true"
+       data-size="medium"
+       id="agri-ep-feature-card-3">
+    <div class="modal-scroll">
+      <div class="modal-wrapper">
+        <a href="#" class="modal-close-button"></a>
+        <div class="content pad-horz-medium-at-medium pad-horz-small pad-bottom-none turquoise-theme">
+          <div class="grid-flex-at-large">
+            <div class="column">
+              <p class="body-color">
+                {% blocktrans %}
+                  “Dimagi has been responsive, flexible and easy to work with 
+                  as we've been building and setting up an application for 
+                  our organization's use in data collection. I've appreciated 
+                  the knowledge the team has brought with pulling individuals 
+                  from all over the world to work on our project, and they've 
+                  adapted well by providing the remote and virtual support 
+                  we need in order to get ready for launch.”
+                {% endblocktrans %}  
+              </p>
+              <div class="attribution-heading body-color">
+                <p>
+                {% blocktrans %}
+                  <strong>Drew DeVries</strong>
+                {% endblocktrans %}
+                </p>
+              </div>
+              <p class="attribution-modal-sub">
+                {% blocktrans %}
+                  Data Analyst, World Renew
+                {% endblocktrans %}
+              </p>
+            </div>
+            <div class="column pad-top-none-until-large">
+              <div class="image testimonial3 crs"
+                   data-lazybg="true"></div>
+            </div>
+          </div>
+        </div>{# .content #}
+      </div>{# .modal-wrapper #}
+    </div>{# .modal-scroll #}
+  </div>{# .modal #}
+
+{% endblock %}

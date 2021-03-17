@@ -1,0 +1,37 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="objectives turquoise-light-bg border-top"
+         id="objectives">
+  <div class="content-width-large pad-top-medium pad-bottom-small align-center">
+
+    <h3 class="turquoise gap-bottom-small">
+      {% blocktrans %}
+        For health care – and beyond
+      {% endblocktrans %}
+    </h3>
+    <p class="content-width-medium pad-bottom-small">
+      {% blocktrans %}
+        Nearly two decades ago, we started by supporting small public health 
+        programs in India. Today, we’ve worked on everything from agriculture 
+        programs to financial inclusion efforts in more than 80 countries.
+      {% endblocktrans %}
+    </p>
+
+    <div class="grid-3-at-large grid-row-space-small grid-col-space-medium grid-row-equal-heights">
+      {% include "sections/services/health_care/mch.html" %}
+      {% include "sections/services/health_care/ag_extension.html" %}
+      {% include "sections/services/health_care/financial_inclusion.html" %}
+    </div>{# .grid-4-at-medium #}
+
+    <div class="align-center pad-bottom-line">
+        <a class="button turquoise-bg"
+            href="{% url 'sectors' %}">
+          {% blocktrans %}
+            See more Sectors
+          {% endblocktrans %}
+        </a>
+      </div>
+
+  </div>{# .content #}
+</section>
