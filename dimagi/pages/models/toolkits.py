@@ -12,7 +12,8 @@ class Toolkit(object):
     def __init__(self, title=None, tagline=None, template=None, slug=None,
                  download_url=None, icon=None, hubspot_form=None,
                  hubspot_formId=None, image=None, download_title=None,
-                 french_download_url=None, french_hubspot_form=None):
+                 french_download_url=None, french_hubspot_form=None,
+                 primary_cta=None, subnav_cta=None, event_tracking_title=None):
         self.other_toolkits = []
         self.highlights = []
         self.title = title
@@ -27,6 +28,9 @@ class Toolkit(object):
         self.hubspot_formId = hubspot_formId
         self.french_download_url = french_download_url
         self.french_hubspot_form = french_hubspot_form
+        self.primary_cta = primary_cta
+        self.subnav_cta = subnav_cta
+        self.event_tracking_title = event_tracking_title
 
     def add_other_toolkits(self, other_toolkits):
         self.other_toolkits.extend(other_toolkits)

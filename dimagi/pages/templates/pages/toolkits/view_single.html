@@ -45,9 +45,24 @@
     {% include 'sections/toolkits/sub_nav.html' %}
     {% include 'sections/toolkits/summary.html' %}
     {% include 'sections/toolkits/highlights.html' %}
-    {% include 'sections/toolkits/download.html' %}
     {% include 'sections/toolkits/other_toolkits.html' %}
   </section>
+{% endblock %}
+
+{% block modals %}
+  <div class="modal"
+       data-dismissible="true"
+       data-size="medium"
+       id="french-pdf-download-form">
+    <div class="modal-scroll">
+      <div class="modal-wrapper">
+        <a href="#" class="modal-close-button"></a>
+        <div class="content pad-horz-medium-at-medium pad-horz-line pad-vert-none {{ sector.theme }}">
+          <section class="orange-theme" id="download-pdf-summary-form-content-french"></section>
+        </div>{# .content #}
+      </div>{# .modal-wrapper #}
+    </div>{# .modal-scroll #}
+  </div>{# .modal #}
 {% endblock %}
 
 {% block js %}
@@ -59,14 +74,14 @@
 
     // Inline Download form.
     hbspt.forms.create({
-      portalId: "503070",
-      formId: "{{ toolkit.hubspot_form }}",
-      target: "#hubspot-download-form",
-      css: "",
-      onFormSubmit: function () {
-        window.open('{{ toolkit.download_url }}', "_blank");
-      },
-    });
+        portalId: "503070",
+        formId: "{{ toolkit.french_hubspot_form }}",
+        target: "#download-pdf-summary-form-content-french",
+        css: "",
+        onFormSubmit: function () {
+          window.open('{{ toolkit.french_download_url }}', "_blank");
+        },
+      });
 
     // Summary download form
     hbspt.forms.create({
