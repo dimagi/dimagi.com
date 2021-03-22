@@ -17,7 +17,7 @@ TOOLKIT = Toolkit(
     template="data/toolkits/summaries/managing_devices_ebook.html",
     slug="managing-devices-ebook",
     icon="svg/tookits/icons/managingdevices_scale.html",
-    download_url="https://www.dropbox.com/s/lk5gujyrk3lm7v7/Managing%20Devices%20at%20Scale.pdf?dl=1",
+    download_url="https://f.hubspotusercontent20.net/hubfs/503070/Toolkits/Dimagi%20Toolkit%20%E2%80%93%20Managing%20Devices%20At%20Scale.pdf",
     hubspot_form="186d64b8-8dcc-45d3-af92-03259efc96a8",
 )
 
