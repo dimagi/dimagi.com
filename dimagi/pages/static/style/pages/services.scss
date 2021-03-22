@@ -7,13 +7,13 @@
   @include make-bg(hero, '../../pages/services/hero');
 }
 
-.programs .image.testimonial1{
+.programs .image.testimonial2{
   @include background-cover('../../pages/services/case_studies/dsti.jpg');
   height: 200px;
   background-size: contain;
 }
 
-.programs .image.testimonial2{
+.programs .image.testimonial1{
   @include background-cover('../../pages/services/case_studies/abt.jpg');
   height: 200px;
   background-size: contain;
