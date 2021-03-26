@@ -16,25 +16,41 @@
         </p>
         {% include toolkit.template %}
       </div>{# .column #}
+
       <div class="column toolkit-pad-left-large">
-        <a class="tile align-center">
-          <div class="theme-icon gap-top-small">
-            {% include toolkit.icon %}
-          </div>
-          <h4>
-            {% if toolkit.download_title %}
-              Download {{ toolkit.download_title }}
-            {% else %}
-              Download {{ toolkit.title }}
-            {% endif %}
-          </h4>
-          {% if toolkit.primary_cta %}
-            {% include 'partials/hubspot_cta.html' with cta_id=toolkit.primary_cta fallback_css="button primary large" fallback_text="Download" %}
-          {% else %}
+        {% if toolkit.primary_cta %}
+          <div class="tile align-center tile-no-link">
+            <div class="theme-icon gap-top-small">
+              {% include toolkit.icon %}
+            </div>
+            <h4>
+              {% if toolkit.download_title %}
+                Download {{ toolkit.download_title }}
+              {% else %}
+                Download {{ toolkit.title }}
+              {% endif %}
+            </h4>
+            <p class="pad-vert-base">
+              {% include 'partials/hubspot_cta.html' with cta_id=toolkit.primary_cta fallback_css="button primary large" fallback_text="Download" %}
+            </p>
+          </div>{# div.tile #}
+        {% else %}
+          <a class="tile align-center">
+            <div class="theme-icon gap-top-small">
+              {% include toolkit.icon %}
+            </div>
+            <h4>
+              {% if toolkit.download_title %}
+                Download {{ toolkit.download_title }}
+              {% else %}
+                Download {{ toolkit.title }}
+              {% endif %}
+            </h4>
             <div id="hubspot-download-form-summary" class="hubspot-download"></div>
-          {% endif %}
-        </a>
+          </a>{# a.tile #}
+        {% endif %}
       </div>{# .column #}
+
     </div>{# .grid-2-at-medium #}
   </div>{# .content #} 
 </section>{# .overview #}
