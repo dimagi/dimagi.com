@@ -2,63 +2,54 @@
 
 WEB = [
     [
-        "svg/partner/upenn.html",
-        "svg/partner/upenn.html",
-        "svg/partner/upenn.html",
+        "svg/partner/services/tdh.html",
+        "svg/partner/services/abt.html",
+        "svg/partner/services/acdi_voca.html",
     ],
     [
-        "svg/partner/upenn.html",
-        "svg/partner/upenn.html",
-        "svg/partner/upenn.html",
-        "svg/partner/upenn.html",
+        "svg/partner/services/bmgf.html",
+        "svg/partner/services/cdc.html",
     ],
     [
-        "svg/partner/upenn.html",
-        "svg/partner/upenn.html",
+        "svg/partner/services/dai.html",
+        "svg/partner/services/fhi.html",
     ],
     [
-        "svg/partner/upenn.html",
-        "svg/partner/upenn.html",
+        "svg/partner/services/find.html",
+        "svg/partner/services/hki.html",
     ],
     [
-        "svg/partner/upenn.html",
-        "svg/partner/upenn.html",
+        "svg/partner/services/idb.html",
+        "svg/partner/services/jsi.html",
     ],
     [
-        "svg/partner/upenn.html",
-        "svg/partner/upenn.html",
+        "svg/partner/services/msh.html",
+        "svg/partner/services/uncdf.html",
     ],
 ]
 
 
 MOBILE = [
     [
-        "svg/partner/rainforest_alliance.html",
-        "svg/partner/unicef.html",
-        "svg/partner/upenn.html",
-        "svg/partner/usaid.html",
+        "svg/partner/services/abt.html",
+        "svg/partner/services/acdi_voca.html",
+        "svg/partner/services/bmgf.html",
+        "svg/partner/services/cdc.html",
     ],
     [
-        "svg/partner/bu.html",
-        "svg/partner/mercy_corps.html",
-        "svg/partner/pih.html",
-        "svg/partner/novartis.html",
-        "svg/partner/dsme.html",
+        "svg/partner/services/dai.html",
+        "svg/partner/services/fhi.html",
+        "svg/partner/services/find.html",
     ],
     [
-        "svg/partner/abt.html",
-        "svg/partner/crs.html",
-        "svg/partner/irc.html",
-        "svg/partner/oikoi.html",
-        "svg/partner/sbir.html",
+        "svg/partner/services/hki.html",
+        "svg/partner/services/idb.html",
+        "svg/partner/services/jsi.html",
     ],
     [
-        "svg/partner/gates.html",
-        "svg/partner/jhu.html",
-        "svg/partner/tdh.html",
-        "svg/partner/bwh.html",
-        "svg/partner/one_acre_fund.html",
-        "svg/partner/nih.html",
+        "svg/partner/services/msh.html",
+        "svg/partner/services/tdh.html",
+        "svg/partner/services/uncdf.html",
     ],
 ]
 
