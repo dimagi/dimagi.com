@@ -41,12 +41,14 @@
       position: relative;
     }
 
-    .button {
-      bottom: $space-small;
-      left: $space-small;
-      min-width: calc(100% - 60px);
-      position: absolute;
-      padding: 10px;
+    &:not(.tile-no-link) {
+      .button {
+        bottom: $space-small;
+        left: $space-small;
+        min-width: calc(100% - 60px);
+        position: absolute;
+        padding: 10px;
+      }
     }
   }
 

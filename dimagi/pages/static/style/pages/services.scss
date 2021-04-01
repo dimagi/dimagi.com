@@ -7,19 +7,24 @@
   @include make-bg(hero, '../../pages/services/hero');
 }
 
-.programs .image.testimonial2{
+.programs .image.testimonial2 {
   @include background-cover('../../pages/services/case_studies/dsti.jpg');
   height: 200px;
   background-size: contain;
 }
 
-.programs .image.testimonial1{
+.programs .image.testimonial1 {
   @include background-cover('../../pages/services/case_studies/abt.jpg');
   height: 200px;
   background-size: contain;
 }
 
-.programs .image.testimonial3{
+.overview .image.testimonial1 {
+  @include background-cover('../../pages/services/overview1.jpg');
+
+}
+
+.programs .image.testimonial3 {
   @include background-cover('../../pages/services/case_studies/renew.jpg');
   height: 200px;
   background-size: contain;
@@ -31,7 +36,7 @@
  background-position: initial;
 }
 
-.programs .image.crs{
+.programs .image.crs {
   width: 309px;
 }
 
@@ -60,4 +65,5 @@
       extra-large: 256px,
     );
     @include make-bg(case-study-image, '../../pages/services/intro/hero', $_base-height, $_height-by-size);
-  }
+}
+

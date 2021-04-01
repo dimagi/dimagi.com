@@ -17,10 +17,11 @@ TOOLKIT = Toolkit(
     template="data/toolkits/summaries/digital_health_systems.html",
     slug="digital-health-systems",
     icon="svg/tookits/icons/dhis.html",
-    download_url="https://cdn2.hubspot.net/hubfs/503070/Toolkits/CommCare%20Integration%20with%20DHIS2.pdf",
-    hubspot_form="81378619-a5d7-4d90-b4b0-bb49dfeb3dc9",
     french_download_url="https://cdn2.hubspot.net/hubfs/503070/Toolkits/Inte%CC%81gration%20de%20CommCare%20et%20DHIS2.pdf",
     french_hubspot_form="23a4f46d-db9d-433d-a341-c2ec8e1cacaf",
+    primary_cta="00c484a5-fc8e-4ba2-b1ae-9222d4a97a61",
+    subnav_cta="4633865c-3c47-4370-8874-740c49bd75db",
+    event_tracking_title="DHIS2 Integration ",
 )
 
 TOOLKIT.add_highlights([
