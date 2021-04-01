@@ -17,7 +17,7 @@ TOOLKIT = Toolkit(
     template="data/toolkits/summaries/total_cost_ownership.html",
     slug="total-cost-ownership",
     icon="svg/tookits/icons/total_cost_ownership_model.html",
-    download_url="https://cdn2.hubspot.net/hubfs/503070/Dimagi-CommCare-TCO-Model-2018-2.xlsx",
+    download_url="https://f.hubspotusercontent20.net/hubfs/503070/Toolkits/Dimagi-CommCare-TCO-Model-2018.xlsx",
     hubspot_form="19bbc2bc-d6a3-4831-8088-770393235a75",
 )
 
