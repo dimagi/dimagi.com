@@ -8,6 +8,7 @@ from dimagi.data.toolkits import (
     data_collection,
     mobile_data_collection,
     digital_health_systems,
+    digital_workflow_template,
 )
 
 toolkits = (
@@ -20,6 +21,7 @@ toolkits = (
     data_collection,  
     mobile_data_collection,
     digital_health_systems,
+    digital_workflow_template,
 )
 
 

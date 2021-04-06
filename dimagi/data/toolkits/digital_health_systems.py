@@ -56,4 +56,5 @@ TOOLKIT.add_other_toolkits([
     summary.MOBILE_DATA_COLLECTION,
     summary.TOTAL_COST_OWNERSHIP,
     summary.BUSINESS_DEVELOPMENT,
+    summary.DIGITAL_WORKFLOW_TEMPLATE,
 ])

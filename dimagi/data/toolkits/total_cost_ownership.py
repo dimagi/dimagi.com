@@ -68,4 +68,5 @@ TOOLKIT.add_other_toolkits([
     summary.DATA_COLLECTION,
     summary.MOBILE_DATA_COLLECTION,
     summary.DIGITAL_HEALTH_STSTEMS,
+    summary.DIGITAL_WORKFLOW_TEMPLATE,
 ])

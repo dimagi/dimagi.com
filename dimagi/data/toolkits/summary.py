@@ -117,3 +117,16 @@ sustainable data pipelines.
     """),
     view_url="digital-health-systems",
 )
+
+
+DIGITAL_WORKFLOW_TEMPLATE = OtherToolkit(
+    name=ugettext_lazy(
+        "Digital Workflow Template"
+    ),
+    icon="svg/tookits/icons/diig_workflow_toolkit.html",
+    description=ugettext_lazy("""
+This guide presents examples and templates
+to create digital workflow documentation
+    """),
+    view_url="diig-digital-workflow-template",
+)
