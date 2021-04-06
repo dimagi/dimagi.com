@@ -83,3 +83,7 @@ a.post {
   );
   @include make-bg(powerful-data-image, '../../pages/blog/cta', $_base-height, $_height-by-size, '.png');
 }
+
+.aspect-ratio-rect {
+  height: 370px;
+}
