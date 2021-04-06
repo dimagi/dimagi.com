@@ -81,6 +81,8 @@ urlpatterns = [
         redirect.page('mobile_data_collection')),
     url(r'^sectors/disease-treatment/$',
         redirect.page('sector_disease_treatment')),
+    url(r'^solutions-delivery/$',
+        redirect.page('services')),
 
     url(r'^data-collection/$',
         pillar.data_collection, name='data_collection'),
