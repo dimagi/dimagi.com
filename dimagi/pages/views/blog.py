@@ -51,7 +51,7 @@ def home(request):
     context.update({
         'recent': posts[:1],
         'recent_new': posts[1:3],
-        'others': posts[3:],
+        'others': posts[3:7],
         'popular': popular,  # todo
     })
     return render(request, 'pages/blog/home.html', context)
