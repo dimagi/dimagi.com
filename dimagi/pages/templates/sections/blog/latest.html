@@ -31,6 +31,13 @@
           {% include "partials/blog_summary.html" with post=post ratio='rect' %}
         </div>{# .column #}
       {% endfor %}
+      <div class="grid-2-at-medium grid-row-space-line">
+        {% for post in recent_new %}
+          <div class="column">
+            {% include "partials/blog_summary.html" with post=post ratio='square' %}
+          </div>{# .column #}
+        {% endfor %}
+      </div>{# .grid-2-at-medium #}
     </div>{# .grid-2-at-medium #}
 
     <div class="grid-4-at-medium grid-2-at-small grid-row-space-small">

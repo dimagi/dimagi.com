@@ -46,11 +46,12 @@ def _get_global_context():
 
 def home(request):
     posts = _get_posts(ARCHIVE)['posts']
-    popular = [BlogPost(p) for p in get_json('blog/popular', num_posts=2)['posts']]
+    popular = [BlogPost(p) for p in get_json('blog/popular', num_posts=3)['posts']]
     context = _get_global_context()
     context.update({
-        'recent': posts[:2],
-        'others': posts[2:],
+        'recent': posts[:1],
+        'recent_new': posts[1:3],
+        'others': posts[3:7],
         'popular': popular,  # todo
     })
     return render(request, 'pages/blog/home.html', context)
