@@ -13,7 +13,8 @@ class Toolkit(object):
                  download_url=None, icon=None, hubspot_form=None,
                  hubspot_formId=None, image=None, download_title=None,
                  french_download_url=None, french_hubspot_form=None,
-                 primary_cta=None, subnav_cta=None, event_tracking_title=None):
+                 primary_cta=None, subnav_cta=None, event_tracking_title=None,
+                 download_slides=None, download_slides_cta=None):
         self.other_toolkits = []
         self.highlights = []
         self.title = title
@@ -31,6 +32,8 @@ class Toolkit(object):
         self.primary_cta = primary_cta
         self.subnav_cta = subnav_cta
         self.event_tracking_title = event_tracking_title
+        self.download_slides = download_slides
+        self.download_slides_cta = download_slides_cta
 
     def add_other_toolkits(self, other_toolkits):
         self.other_toolkits.extend(other_toolkits)

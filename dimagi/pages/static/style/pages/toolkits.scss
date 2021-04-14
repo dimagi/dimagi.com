@@ -47,6 +47,10 @@
   @include make-bg(hero, '../../pages/toolkits/digital-health-systems/hero')
 }
 
+.diig-digital-workflow-template {
+    @include make-bg(hero, '../../pages/toolkits/diig-digital-workflow-template/hero')
+}
+
 //images of highlights for business-development-highlights 
 .business-development-highlights-one {
   @include background-cover('../../pages/toolkits/highlights/business-development/business-development-highlights-one.jpg');
@@ -160,6 +164,18 @@
 
 .digital-health-systems-highlights-three {
   @include background-cover('../../pages/toolkits/highlights/digital-health-systems/highlights-three.jpg');
+}
+
+.diig-digital-workflow-template-highlights-one {
+    @include background-cover('../../pages/toolkits/highlights/diig-digital-workflow-template/dwt-legend.jpg');
+}
+
+.diig-digital-workflow-template-highlights-two {
+    @include background-cover('../../pages/toolkits/highlights/diig-digital-workflow-template/template-future-state.jpg');
+}
+
+.diig-digital-workflow-template-highlights-three {
+    @include background-cover('../../pages/toolkits/highlights/diig-digital-workflow-template/vaccine-counseling.jpg');
 }
 
 .max-width-initial {

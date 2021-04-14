@@ -30,8 +30,15 @@
                 Download {{ toolkit.title }}
               {% endif %}
             </h4>
-            <p class="pad-vert-base">
-              {% include 'partials/hubspot_cta.html' with cta_id=toolkit.primary_cta fallback_css="button primary large" fallback_text="Download" %}
+            <p class="pad-top-base">
+              {% if toolkit.download_slides %}
+                {% include 'partials/hubspot_cta.html' with cta_id=toolkit.download_slides fallback_css="button primary large" fallback_text="Access Google Slides" %}
+                <p>
+                  {% include 'partials/hubspot_cta.html' with cta_id=toolkit.primary_cta fallback_css="button primary large" fallback_text="Download PPT" show_alt_btn=True %}
+                </p>
+              {% else %}
+                {% include 'partials/hubspot_cta.html' with cta_id=toolkit.primary_cta fallback_css="button primary large" fallback_text="Download" %}
+              {% endif %}
             </p>
           </div>{# div.tile #}
         {% else %}
