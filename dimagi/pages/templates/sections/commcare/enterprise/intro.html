@@ -1,0 +1,41 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section id="intro"
+         class="blue-theme border-bottom"
+         data-lazybg="true">
+  <div class="content pad-vert-medium">
+    <div class="grid grid-2-at-medium grid-1-at-small grid-reverse">
+      <div class="column" id="case-study">
+        <div class="intro-image">
+          <div class="intro-hero-image white-lazy-bg"
+               data-lazybg="true"></div>
+        </div>
+      </div> {# .column #}
+      <div class="column pad-top-base">
+        <strong>
+          {% blocktrans %}
+            Our Enterprise offering is designed for INGOs looking for a sustainable 
+            solution for last-mile mobile data collection and service delivery 
+            practices across their organization.
+          {% endblocktrans %}
+        </strong>
+        <p class="pad-top-line">
+          {% blocktrans %}
+            While INGOs achieve project-level success with the other CommCare 
+            subscriptions, the Enterprise offering allows you to sustainably 
+            replicate that same success across all projects.
+          {% endblocktrans %}
+        </p>
+        <div class="align-center pad-top-small">
+          <a class="button"
+              href="#global-services-form">
+            {% blocktrans %}
+              Talk To Us
+            {% endblocktrans %}
+          </a>
+        </div>
+      </div>{# .column #}
+    </div>
+  </div>
+</section>

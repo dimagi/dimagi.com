@@ -1,0 +1,22 @@
+{% extends "sections/commcare/enterprise/projects/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block icon %}
+  {% include "svg/commcare/enterprise/partners.html" %}
+{% endblock %}
+
+{% block heading %}
+  {% blocktrans %}
+    Partners for Every Step of the Way
+  {% endblocktrans %}
+{% endblock %}
+
+{% block content %}
+  {% blocktrans %}
+    Regular meetings with dedicated Account and Customer 
+    Success representatives offer tailored guidance to 
+    optimize your use of CommCare, and any issues you 
+    report go right to the top of our Support team’s queue.
+  {% endblocktrans %}
+{% endblock %}

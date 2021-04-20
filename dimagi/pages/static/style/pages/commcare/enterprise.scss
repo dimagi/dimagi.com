@@ -1,0 +1,29 @@
+@import 'app/mixins/background';
+@import 'app/variables/colors';
+@import 'app/variables/sizes';
+@import 'app/variables/type';
+
+.commcare-monitoring-evaluation {
+    @include make-bg(hero, '../../../pages/commcare/enterprise/banner/hero');
+  }
+  
+  @media (min-width: $width-desktop) {
+    .commcare-monitoring-evaluation .hero {
+      h1 {
+        margin-left: 0;
+        margin-right: 0;
+        max-width: 100%;
+      }
+    }
+  }
+
+  #intro {
+    $_base-height: 190px;
+    $_height-by-size: (
+      small: 250px,
+      medium: 250px,
+      large: 250px,
+      extra-large: 256px,
+    );
+    @include make-bg(intro-hero-image, '../../../pages/commcare/enterprise/intro/hero', $_base-height, $_height-by-size);
+}
