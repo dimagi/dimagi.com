@@ -38,3 +38,22 @@
     );
     @include make-bg(intro-hero-image, '../../../pages/commcare/enterprise/network/hero', $_base-height, $_height-by-size);
 }
+
+.chat-image {
+    $_base-height: 425px;
+    $_height-by-size: (
+      extra-small: 390px,
+      small: 500px,
+      medium: 520px,
+      large: 500px,
+      extra-large: 500px,
+    );
+    @include make-bg(epic-cover, '../../../pages/commcare/enterprise/chat/hero', $_base-height, $_height-by-size);
+  }
+
+  @media (min-width: $width-desktop) {
+    .chat-card {
+        width: 380px;
+        float: right;
+      }
+  }

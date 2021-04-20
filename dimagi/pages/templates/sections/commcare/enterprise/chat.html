@@ -1,0 +1,31 @@
+{% load i18n %}
+{% load dimagidotcom %}
+<article class="epic chat-image">
+  <section class="epic-cover"
+         data-lazybg="true">
+    <div class="content content-width-large-at-large content-width-small-until-medium pad-vert-small gap-top-medium-at-small border-rounded gap-top-base">
+      <div class="chat-card white-bg">
+        <h2 class="blue align-center pad-top-small">
+          {% blocktrans %}
+            Let’s chat
+          {% endblocktrans %}
+        </h2>
+        <h4 class="align-center pad-horz-small">
+          {% blocktrans %}
+            Tell us about your programs, your data, and your 
+            organization, and we’ll tell you how an Enterprise 
+            subscription of CommCare could help you.
+          {% endblocktrans %}
+        </h4>
+        <p class="align-center pad-top-line pad-bottom-medium">
+          <a class="button button-blue {% click_body 'case-management' %}"
+            href="{% url 'commcare_pricing' %}">
+            {% blocktrans %}
+              Set Up A Call
+            {% endblocktrans %}
+          </a>
+        </p>
+      </div>
+    </div>{# .content #}
+  </section>
+</article>
