@@ -1,0 +1,27 @@
+{% extends "sections/commcare/enterprise/faq/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block accordion_collapsed %}collapsed{% endblock %}
+
+{% block accordion_header %}
+  {% blocktrans %}
+    How can I create a centralized data collection platform 
+    when my organization works on unpredictable grant funding?
+  {% endblocktrans %}
+{% endblock %}
+
+{% block accordion_content %}
+  <p>
+    {% blocktrans %}
+      Lots of organizations are funded this way—including many 
+      of our existing Enterprise customers! If it’s not possible 
+      for you to centrally fund your software, you can consider 
+      back-billing the subscription fees to individual country 
+      offices or projects. In this model, each individual project 
+      still ends up paying a smaller monthly fee for more features, 
+      given the economies of scale that an organization can achieve 
+      with an Enterprise subscription.
+    {% endblocktrans %}
+  </p>
+{% endblock %}

@@ -27,3 +27,14 @@
     );
     @include make-bg(intro-hero-image, '../../../pages/commcare/enterprise/intro/hero', $_base-height, $_height-by-size);
 }
+
+#network {
+    $_base-height: 190px;
+    $_height-by-size: (
+      small: 200px,
+      medium: 200px,
+      large: 200px,
+      extra-large: 206px,
+    );
+    @include make-bg(intro-hero-image, '../../../pages/commcare/enterprise/network/hero', $_base-height, $_height-by-size);
+}

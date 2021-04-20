@@ -1,0 +1,24 @@
+{% extends "sections/commcare/enterprise/faq/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+{% url 'commcare_pricing' as pricing_url %}
+
+{% block accordion_collapsed %}collapsed{% endblock %}
+
+{% block accordion_header %}
+  {% blocktrans %}
+    How do the features on the Enterprise offering compare to the other plans?
+  {% endblocktrans %}
+{% endblock %}
+
+{% block accordion_content %}
+  <p>
+    Our Enterprise offering gives you multiple project spaces—all 
+    other plans are for one, single project space. Every project 
+    space included on an Enterprise license includes all of the 
+    features on our advanced plans, plus some custom feature flags 
+    typically only available to our Solutions customers. Compare 
+    Enterprise directly with other subscriptions
+    <a href="{% url 'commcare_pricing' %}">here</a>.
+  </p>
+{% endblock %}
