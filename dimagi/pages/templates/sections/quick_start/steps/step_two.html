@@ -1,0 +1,34 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="content pad-vert-small blue-theme">
+  <div class="grid-2-at-small grid-reverse">
+    <div class="column content-width-small pad-top-base align-right">
+      <h3 class="pad-top-medium blue">
+        {% blocktrans %}
+          Step 2: Watch the videos
+        {% endblocktrans %}
+      </h3>
+      <p class="pad-top-line">
+        {% blocktrans %}
+          This short video series shows you the basics of setting up your 
+          project spaces, building your first forms, and more.
+        {% endblocktrans %}
+      </p>
+      <p class="pad-top-line">
+        <a class="button blue-bg {% click_hero 'contact' %}"
+           href="https://tracking.cirrusinsight.com/3577d4c8-a40e-48cb-869e-3f5667870616/youtube-com-watch"
+           target="_blank">
+          {% blocktrans %}
+            Watch The Series
+          {% endblocktrans %}
+        </a>
+      </p>
+    </div>{# .column #}
+
+    <div class="column">
+      <div class="step-two white-lazy-bg gap-top-small"
+           data-lazybg="true"></div>
+    </div>{# .column #}
+  </div>{# .grid-2 #}
+</section>{# .content #}

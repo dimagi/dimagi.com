@@ -113,7 +113,7 @@ urlpatterns = [
     url(r'^focus-mdm/', include('dimagi.pages.urls.focus_mdm')),
     url(r'^open-source/', include('dimagi.pages.urls.open_source')),
     url(r'^case-studies/', include('dimagi.pages.urls.case_studies')),
-    url(r'^quick-start/', include('dimagi.pages.urls.quick_start')),
+    url(r'^getting-started/', include('dimagi.pages.urls.quick_start')),
     url(r'^toolkits/', include('dimagi.pages.urls.toolkits')),
     url(r'^sectors/', include('dimagi.pages.urls.sectors')),
     url(r'^press/', include('dimagi.pages.urls.press')),

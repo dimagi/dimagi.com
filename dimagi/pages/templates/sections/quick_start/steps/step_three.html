@@ -1,0 +1,35 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="content pad-vert-small blue-theme">
+  <div class="grid-2-at-small">
+    <div class="column content-width-small pad-top-base align-left">
+      <h3 class="pad-top-medium blue">
+        {% blocktrans %}
+          Step 3: Learn from the pros
+        {% endblocktrans %}
+      </h3>
+      <p class="pad-top-line">
+        {% blocktrans %}
+          Looking for a more personal touch? Our Customer Success 
+          team offers Onboarding Packages to support your team 
+          over the first few months of app development.
+        {% endblocktrans %}
+      </p>
+      <p class="pad-top-line">
+        <a class="button blue-bg {% click_hero 'contact' %}"
+           href="{% url 'commcare_onboarding' %}"
+           target="_blank">
+          {% blocktrans %}
+            Browse Your Options
+          {% endblocktrans %}
+        </a>
+      </p>
+    </div>{# .column #}
+
+    <div class="column">
+      <div class="step-three white-lazy-bg gap-top-small"
+           data-lazybg="true"></div>
+    </div>{# .column #}
+  </div>{# .grid-2 #}
+</section>{# .content #}

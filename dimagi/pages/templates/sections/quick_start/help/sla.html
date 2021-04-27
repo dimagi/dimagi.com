@@ -1,0 +1,27 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<div class="item">
+  <div class="theme-icon gap-bottom-line">
+    {% include "svg/quick_start/help/sla.html" %}
+  </div>
+  <h5>
+    {% blocktrans %}
+      SLA
+    {% endblocktrans %}
+  </h5>
+  <p>
+    {% blocktrans %}
+      Learn about the types of support available based on your plan.
+    {% endblocktrans %}
+  </p>
+  <p class="align-center pad-top-base">
+    <a class="link"
+       href="https://confluence.dimagi.com/display/commcarepublic/Dimagi+Support+Service+Level+Agreement+%28SLA%29+FAQ"
+       target="_blank">
+      {% blocktrans %}
+        Learn More
+      {% endblocktrans %}
+    </a>
+  </p>
+</div>{# .item #}

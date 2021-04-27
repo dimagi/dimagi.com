@@ -1,0 +1,27 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<div class="item">
+  <div class="theme-icon gap-bottom-line">
+    {% include "svg/quick_start/help/user_forum.html" %}
+  </div>
+  <h5>
+    {% blocktrans %}
+      User Forum
+    {% endblocktrans %}
+  </h5>
+  <p>
+    {% blocktrans %}
+      Learn from CommCare users just like you.
+    {% endblocktrans %}
+  </p>
+  <p class="align-center pad-top-base">
+    <a class="link"
+       href="https://forum.dimagi.com/"
+       target="_blank">
+      {% blocktrans %}
+        Learn More
+      {% endblocktrans %}
+    </a>
+  </p>
+</div>{# .item #}

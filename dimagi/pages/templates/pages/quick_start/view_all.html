@@ -7,8 +7,8 @@
 {% endblocktrans %}{% endblock %}
 
 {% block description %}{% blocktrans %}
-  Say hello to Quick Starts, your personalized guide for mobile
-  data collection with CommCare.
+  Whether you’re brand new to the platform or looking for a 
+  refresher, we’ve got what you need.
 {% endblocktrans %}{% endblock %}
 
 {% block body_class %}quick-starts-page tucked-hero{% endblock %}
@@ -26,21 +26,32 @@
   <div class="content content-width-large inverted align-center display-flex flex-valign-middle expand-vertical offset-top-small flex-align-center">
     <div class="copy expand position-relative">
 
-      <h2 class="pad-bottom-line">
-        {% include "svg/commcare/logo.html" %}
+      <h2>
+        {% blocktrans %}
+          Getting Started
+        {% endblocktrans %}
       </h2>
       <h1>
         {% blocktrans %}
-          Quick Start Guides
+          Welcome to CommCare
         {% endblocktrans %}
       </h1>
 
       <div class="headline content-width-small">
         {% blocktrans %}
-          Say hello to your personalized guides for
-          mobile data collection with CommCare. 
+          Whether you’re brand new to the platform or looking for a 
+          refresher, we’ve got what you need.
         {% endblocktrans %}
       </div>{# .headline #}
+
+      <p class="align-center pad-top-medium">
+        <a class="button alt {% click_hero 'contact' %}"
+           href="#contact-form-modal">
+          {% blocktrans %}
+            Contact Us
+          {% endblocktrans %}
+        </a>
+      </p>
 
     </div>{# .copy #}
   </div>{# .content #}
@@ -49,7 +60,9 @@
 
 {% block content %}
   <section class="quick-starts-container">
+    {% include 'sections/quick_start/steps.html' %}
     {% include 'sections/quick_start/objectives.html' %}
+    {% include 'sections/quick_start/help.html' %}
     {% include 'sections/quick_start/schedule_call_cta.html' %}
   </section>
 {% endblock %}

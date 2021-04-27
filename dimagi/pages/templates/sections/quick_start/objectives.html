@@ -5,11 +5,18 @@
          id="objectives">
   <div class="content pad-top-medium pad-bottom-small align-center">
 
-    <h3 class="gap-bottom-small">
+    <h3 class="gap-bottom-small blue">
       {% blocktrans %}
-        Choose Your Objective
+        Know where you’re going?
       {% endblocktrans %}
     </h3>
+    <p class="gap-bottom-medium">
+      {% blocktrans %}
+        If you have a specific project you’re ready to get started 
+        on, we have some quick <br class="hide-until-medium" /> 
+        start guides that might just help move things along. What are you trying to do?
+      {% endblocktrans %}
+    </p>
 
     <div class="grid-4-at-large grid-2-at-small grid-row-space-small grid-row-equal-heights">
       {% click_body 'objective-service' as click_service %}
