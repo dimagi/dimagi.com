@@ -196,10 +196,12 @@ $_height-by-size: (
 }
 
 .steps {
-    $_base-height: 195px;
+    $_base-height: 200px;
     $_height-by-size: (
       small: 410px,
-      medium: 290px,
+      medium: 350px,
+      large: 315px,
+      extra-large: 315px,
     );
     @include make-bg(step-one, '../../pages/quick_start/steps/step-one/step', $_base-height, $_height-by-size);
     @include make-bg(step-two, '../../pages/quick_start/steps/step-two/step', $_base-height, $_height-by-size);
