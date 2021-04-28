@@ -83,6 +83,8 @@ urlpatterns = [
         redirect.page('sector_disease_treatment')),
     url(r'^solutions-delivery/$',
         redirect.page('services')),
+    url(r'^quick-start/$',
+        redirect.page('quick_start')),
 
     url(r'^data-collection/$',
         pillar.data_collection, name='data_collection'),
