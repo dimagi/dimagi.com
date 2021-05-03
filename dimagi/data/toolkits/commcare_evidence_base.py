@@ -20,7 +20,7 @@ TOOLKIT = Toolkit(
     template="data/toolkits/summaries/commcare_evidence_base.html",
     slug="commcare-evidence-base",
     icon="svg/tookits/icons/commcare_evidence_base.html",
-    download_url="https://cdn2.hubspot.net/hubfs/503070/Dimagi_CommCare%20Evidence%20Base%20Overview_Aug%202019.pdf",
+    download_url="https://f.hubspotusercontent20.net/hubfs/503070/Toolkits/CommCare%20Evidence%20Base.pdf",
     hubspot_form="f9b416b1-eb8b-430b-a2b6-644481b64a69",
 )
 
