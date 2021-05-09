@@ -1,0 +1,29 @@
+{% extends 'sections/commcare/enterprise/challenges/_base.html' %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block feature_class %}fund blue-border{% endblock %}
+{% block title_class %}blue{% endblock %}
+
+{% block feature_title %}
+  {% blocktrans %}
+    Limited technical capacity?
+  {% endblocktrans %}
+{% endblock %}
+
+{% block feature_description %}
+  {% blocktrans %}
+    Technical expertise has become an absolute 
+    necessity in the modern NGO but often falls short.
+  {% endblocktrans %}
+{% endblock %}
+
+{% block features_list %}
+  <p>
+    {% blocktrans %}
+      Enjoy regular access to our product and support teams 
+      to increase your own capacity for uninterrupted 
+      technical proficiency.
+    {% endblocktrans %}
+  </p>
+{% endblock %}

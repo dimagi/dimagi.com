@@ -1,0 +1,22 @@
+{% extends "sections/commcare/enterprise/projects/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block icon %}
+  {% include "svg/commcare/enterprise/join.html" %}
+{% endblock %}
+
+{% block heading %}
+  {% blocktrans %}
+    Join a Growing Community of Experts
+  {% endblocktrans %}
+{% endblock %}
+
+{% block content %}
+  {% blocktrans %}
+    It’s hard out there on your own. Through our Community 
+    of Practice (COP) and regular webinars, we make it easy 
+    to build connections with other CommCare partners, share 
+    best practices, and celebrate your wins.
+  {% endblocktrans %}
+{% endblock %}

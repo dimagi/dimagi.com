@@ -1,0 +1,28 @@
+{% extends 'sections/commcare/enterprise/challenges/_base.html' %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block feature_class %}fund blue-border{% endblock %}
+{% block title_class %}blue{% endblock %}
+
+{% block feature_title %}
+  {% blocktrans %}
+    Low connectivity?
+  {% endblocktrans %}
+{% endblock %}
+
+{% block feature_description %}
+  {% blocktrans %}
+    Organizations offering last-mile support often suffer from 
+    inefficient service delivery and data collection in 
+    low-resource settings.
+  {% endblocktrans %}
+{% endblock %}
+
+{% block features_list %}
+  <p>
+    {% blocktrans %}
+      Arm your frontline workers with a tool built for offline settings, allowing them to collect data and advise clients without an internet connection.
+    {% endblocktrans %}
+  </p>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'sections/commcare/enterprise/challenges/_base.html' %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block feature_class %}fund blue-border{% endblock %}
+{% block title_class %}blue{% endblock %}
+
+{% block feature_title %}
+  {% blocktrans %}
+    Uninformed strategy?
+  {% endblocktrans %}
+{% endblock %}
+
+{% block feature_description %}
+  {% blocktrans %}
+    Comprehensive strategic planning is critical to 
+    fundraising, operations, and mission successes.
+  {% endblocktrans %}
+{% endblock %}
+
+{% block features_list %}
+  <p>
+    {% blocktrans %}
+      Gain enterprise data management at the HQ level that 
+      informs effective strategic planning across 
+      all your organization’s initiatives.
+    {% endblocktrans %}
+  </p>
+{% endblock %}

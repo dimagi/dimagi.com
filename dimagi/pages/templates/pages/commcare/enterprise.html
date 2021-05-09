@@ -3,7 +3,7 @@
 {% load dimagidotcom %}
 
 {% block title %}{% blocktrans %}
-  CommCare Enterprise
+  CommCare Enterprise | Building Sustainable Organizational Capacity for Impact
 {% endblocktrans %}{% endblock %}
 
 {% block description %}{% blocktrans %}
@@ -24,25 +24,25 @@
            data-lazybg="true"
            id="hero">
     <div class="content offset-top-small-at-medium align-left-at-medium align-center pad-top-large inverted">
-      <h2 class="gap-top-small gap-top-medium-at-medium">
+      <h2 class="blue gap-top-small">
         {% blocktrans %}
           CommCare Enterprise
         {% endblocktrans %}
       </h2>
-      <h1>
+      <h1 class="blue enterprise-description">
         {% blocktrans %}
-          Sustainable Success for <br class="hide-until-medium" />
-          Your Entire Organization
+          By 2025, we’ll help 100 NGOs with their missions
+          of impact by building sustainable organizational capacity.
         {% endblocktrans %}
       </h1>
-      <p class="pad-top-line">
+      <h1 class="blue font-weight-bold">
         <a href="#request-demo"
-           class="button inverse alt {% click_hero 'demo' %}">
+           class="{% click_hero 'demo' %}">
           {% blocktrans %}
-            Contact Us
+            Join us.
           {% endblocktrans %}
         </a>
-      </p>
+      </h1>
     </div> {# .content #}
   </section>
 {% endblock %}
@@ -51,9 +51,50 @@
   <section class="products-commcare-container">
     {% include "sections/commcare/enterprise/intro.html" %}
     {% include "sections/commcare/enterprise/partners.html" %}
+    {% include "sections/commcare/enterprise/challenges.html" %}
     {% include "sections/commcare/enterprise/projects.html" %}
     {% include "sections/commcare/enterprise/network.html" %}
     {% include "sections/commcare/enterprise/faq.html" %}
     {% include "sections/commcare/enterprise/chat.html" %}
   </section>
+{% endblock %}
+
+{% block modals %}
+  <div class="modal"
+       data-dismissible="true"
+       data-size="medium"
+       id="set-up-call-enterprise">
+    <div class="modal-scroll">
+      <div class="modal-wrapper">
+        <a href="#" class="modal-close-button"></a>
+        <div class="content pad-horz-medium-at-medium pad-horz-line pad-vert-none blue-theme">
+          <h3>
+            {% blocktrans %}
+              Schedule A Demo
+            {% endblocktrans %}
+          </h3>
+          <section id="set-up-call-content"></section>
+        </div>{# .content #}
+      </div>{# .modal-wrapper #}
+    </div>{# .modal-scroll #}
+  </div>{# .modal #}
+{% endblock %}
+
+{% block js %}
+  <!--[if lte IE 8]>
+    <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+  <![endif]-->
+  <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+  <script>
+    //  Download pdf summary form
+    hbspt.forms.create({
+      portalId: "503070",
+      formId: "ef203e6a-9154-4cfb-b1f8-0d5c3988212e",
+      target: "#set-up-call-content",
+      css: "",
+      onFormSubmit: function () {
+        window.open('https://cdn2.hubspot.net/hubfs/503070/Sector%20PDFs/CommCare_DiseaseTreatment.pdf', "_blank");
+      },
+    });
+  </script>
 {% endblock %}

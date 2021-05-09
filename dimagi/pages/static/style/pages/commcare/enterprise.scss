@@ -32,9 +32,9 @@
     $_base-height: 190px;
     $_height-by-size: (
       small: 200px,
-      medium: 200px,
-      large: 200px,
-      extra-large: 206px,
+      medium: 268px,
+      large: 268px,
+      extra-large: 244px,
     );
     @include make-bg(intro-hero-image, '../../../pages/commcare/enterprise/network/hero', $_base-height, $_height-by-size);
 }
@@ -57,3 +57,12 @@
         float: right;
       }
   }
+
+@media (min-width: $width-desktop) {
+  .feature-projects {
+    height: 250px;
+  }
+  .enterprise-description {
+      width: 520px;
+  }
+}

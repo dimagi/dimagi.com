@@ -4,6 +4,8 @@
    href="{% url 'home' %}">
   {% if request.path == "/" %}
     {% include "svg/dimagi_logo_dark.html" %}
+  {% elif request.path == "/commcare/enterprise/" %}
+    {% include "svg/dimagi_logo_dark.html" %}
   {% else %}
     {% include "svg/dimagi_logo.html" %}
   {% endif %}

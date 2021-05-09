@@ -1,0 +1,22 @@
+{% extends "sections/commcare/enterprise/projects/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block icon %}
+  {% include "svg/commcare/enterprise/support.html" %}
+{% endblock %}
+
+{% block heading %}
+  {% blocktrans %}
+    Receive Dedicated Customer Support
+  {% endblocktrans %}
+{% endblock %}
+
+{% block content %}
+  {% blocktrans %}
+    Organisational success requires expertise on demand. Our technical 
+    experts, key account managers, and customer success representatives 
+    will help you optimise your cost-center administration, project 
+    rollouts, and data pipeline management.
+  {% endblocktrans %}
+{% endblock %}

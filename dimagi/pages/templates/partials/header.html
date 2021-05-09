@@ -3,7 +3,7 @@
   {# This is the navigation across the top #}
   <nav class="banner"
        role="navigation">
-    <div class="content {% if request.path == "/" %} black {% endif %}">
+    <div class="content {% if request.path == "/" %} black {% endif %} {% if request.path == "/commcare/enterprise/" %} black {% endif %}">
       <div class="column column-fill flex-align-left">
         {% include "partials/menu/left.html" %}
       </div>{# .column.flex-align-left #}

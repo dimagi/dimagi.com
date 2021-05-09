@@ -1,0 +1,27 @@
+{% extends 'sections/commcare/enterprise/challenges/_base.html' %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block feature_class %}fund blue-border{% endblock %}
+{% block title_class %}blue{% endblock %}
+
+{% block feature_title %}
+  {% blocktrans %}
+    Security concerns?
+  {% endblocktrans %}
+{% endblock %}
+
+{% block feature_description %}
+  {% blocktrans %}
+    Security, regulation, and compliance are fundamental 
+    concerns when handling personal or medical data.
+  {% endblocktrans %}
+{% endblock %}
+
+{% block features_list %}
+  <p>
+    {% blocktrans %}
+      Trust CommCare’s compliance with the highest standards of data security and regulatory standards.
+    {% endblocktrans %}
+  </p>
+{% endblock %}
