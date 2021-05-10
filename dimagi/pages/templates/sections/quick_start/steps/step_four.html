@@ -1,0 +1,36 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="content pad-top-small pad-bottom-medium blue-theme">
+  <div class="grid grid-2-at-large grid-1-at-medium grid-reverse">
+    <div class="column pad-top-none pad-top-base-at-large align-left">
+      <h3 class="pad-top-none pad-top-medium-at-large blue">
+        {% blocktrans %}
+          Step 4: Browse our guides
+        {% endblocktrans %}
+      </h3>
+      <p>
+        {% blocktrans %}
+          We’ve been supporting CommCare projects for a little while 
+          now and have compiled some comprehensive documentation over 
+          the years—everything from project planning and application 
+          building to user management and data cleaning.
+        {% endblocktrans %}
+      </p>
+      <p class="pad-top-line">
+        <a class="button blue-bg {% click_hero 'contact' %}"
+           href="https://wiki.commcarehq.org/display/commcarepublic/Home"
+           target="_blank">
+          {% blocktrans %}
+            Explore The Guides
+          {% endblocktrans %}
+        </a>
+      </p>
+    </div>{# .column #}
+
+    <div class="column">
+      <div class="step-four white-lazy-bg gap-top-small"
+           data-lazybg="true"></div>
+    </div>{# .column #}
+  </div>{# .grid-2 #}
+</section>{# .content #}

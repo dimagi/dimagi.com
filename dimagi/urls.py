@@ -83,6 +83,8 @@ urlpatterns = [
         redirect.page('sector_disease_treatment')),
     url(r'^solutions-delivery/$',
         redirect.page('services')),
+    url(r'^quick-start/$',
+        redirect.page('quick_start')),
 
     url(r'^data-collection/$',
         pillar.data_collection, name='data_collection'),
@@ -113,7 +115,7 @@ urlpatterns = [
     url(r'^focus-mdm/', include('dimagi.pages.urls.focus_mdm')),
     url(r'^open-source/', include('dimagi.pages.urls.open_source')),
     url(r'^case-studies/', include('dimagi.pages.urls.case_studies')),
-    url(r'^quick-start/', include('dimagi.pages.urls.quick_start')),
+    url(r'^getting-started/', include('dimagi.pages.urls.quick_start')),
     url(r'^toolkits/', include('dimagi.pages.urls.toolkits')),
     url(r'^sectors/', include('dimagi.pages.urls.sectors')),
     url(r'^press/', include('dimagi.pages.urls.press')),
