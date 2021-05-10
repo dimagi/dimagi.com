@@ -63,6 +63,12 @@
     height: 250px;
   }
   .enterprise-description {
-      width: 520px;
+      width: 430px;
   }
 }
+
+@media (min-width: $width-desktop-lg) {
+    .enterprise-description {
+        width: 520px;
+    }
+  }
