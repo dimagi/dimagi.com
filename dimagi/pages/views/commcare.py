@@ -103,6 +103,7 @@ def vaccine_delivery(request):
 def enterprise(request):
     context = {
         'partners': get_enterprise_partners(),
+        'is_inverse_header': True,
     }
     return render(request, 'pages/commcare/enterprise.html', context)
 

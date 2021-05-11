@@ -2,9 +2,7 @@
 
 <a class="logo {% click_nav 'logo' %}"
    href="{% url 'home' %}">
-  {% if request.path == "/" %}
-    {% include "svg/dimagi_logo_dark.html" %}
-  {% elif request.path == "/commcare/enterprise/" %}
+  {% if is_inverse_header %}
     {% include "svg/dimagi_logo_dark.html" %}
   {% else %}
     {% include "svg/dimagi_logo.html" %}
