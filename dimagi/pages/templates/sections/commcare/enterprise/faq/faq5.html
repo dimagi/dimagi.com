@@ -1,0 +1,25 @@
+{% extends "sections/commcare/enterprise/faq/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block accordion_collapsed %}collapsed{% endblock %}
+
+{% block accordion_header %}
+  {% blocktrans %}
+    We are not a large team compared to organizations like 
+    CRS. Is an Enterprise subscription still an option for me?
+  {% endblocktrans %}
+{% endblock %}
+
+{% block accordion_content %}
+  <p>
+    {% blocktrans %}
+      Absolutely! The Enterprise offering is meant for any customer who 
+      wants to institutionalize the use of a mobile tool in a cost-effective, 
+      sustainable way. Even if you have as few as five projects that would 
+      need their own project space, this solution can work for you. In fact, 
+      smaller organizations may find it easier to institutionalize the use 
+      of CommCare, since there are fewer staff members globally to train.
+    {% endblocktrans %}
+  </p>
+{% endblock %}

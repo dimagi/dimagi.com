@@ -1,0 +1,29 @@
+{% extends 'sections/commcare/enterprise/challenges/_base.html' %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block feature_class %}fund blue-border{% endblock %}
+{% block title_class %}blue{% endblock %}
+
+{% block feature_title %}
+  {% blocktrans %}
+    Unreliable funding
+  {% endblocktrans %}
+{% endblock %}
+
+{% block feature_description %}
+  {% blocktrans %}
+    Many organizations struggle with locking down sustainable 
+    revenue sources to fund their programming.
+  {% endblocktrans %}
+{% endblock %}
+
+{% block features_list %}
+  <p>
+    {% blocktrans %}
+      Find a tool that can capture the data you need to make 
+      your case for long-term support and give your 
+      stakeholders peace of mind.
+    {% endblocktrans %}
+  </p>
+{% endblock %}

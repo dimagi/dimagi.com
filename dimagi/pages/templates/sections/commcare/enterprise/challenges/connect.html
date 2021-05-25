@@ -1,0 +1,30 @@
+{% extends 'sections/commcare/enterprise/challenges/_base.html' %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block feature_class %}fund blue-border{% endblock %}
+{% block title_class %}blue{% endblock %}
+
+{% block feature_title %}
+  {% blocktrans %}
+    Ineffective frontline tools
+  {% endblocktrans %}
+{% endblock %}
+
+{% block feature_description %}
+  {% blocktrans %}
+    Organizations offering last-mile support often suffer from 
+    inefficient service delivery and data collection in 
+    low-resource settings.
+  {% endblocktrans %}
+{% endblock %}
+
+{% block features_list %}
+  <p>
+    {% blocktrans %}
+      Arm your frontline workers with digital tools that were 
+      built for iNGO use-cases and have a proven track 
+      record of success at any scale.
+    {% endblocktrans %}
+  </p>
+{% endblock %}

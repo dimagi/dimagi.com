@@ -1,51 +1,90 @@
-{% extends "sections/commcare/pricing/plans/_base.html" %}
 {% load i18n %}
 {% load dimagidotcom %}
 
-{% block kissmetrics_cta %}
-Clicked Read More - Pricing (Enterprise)
-{% endblock %}
+<div class="column" id="{{ css_id }}">
+  <a class="tile {{ theme }}-border plans-tile {{ theme }}-theme {{ click_class }}"
+     href="{% url 'enterprise' %}">
 
-{% block name %}{% blocktrans %}
-  Enterprise
-{% endblocktrans %}{% endblock %}
+    <div class="pad-top-small pad-bottom-line">
+      <h3 class="{{ theme }} gap-bottom-base">
+        {% blocktrans %}
+          Enterprise
+        {% endblocktrans %}
+      </h3>
+      <div class="pricing-type pricing-type-{{ theme }}"
+           data-bind="text: paymentType, css: { monthly: showMonthly }">
+        Paying Annually
+      </div>
+    </div>{# .intro #}
 
-{% block price_monthly %}{% blocktrans %}
-  Custom
-{% endblocktrans %}{% endblock %}
+    <div class="plans-price-monthly">
+      <p class="h3
+                font-weight-medium
+                body-color
+                gap-bottom-none">
+        {% blocktrans %}
+          Custom
+        {% endblocktrans %}
+      </p>
+      <p class="body-color">
+        {% blocktrans %}
+          &nbsp;
+        {% endblocktrans %}
+      </p>
+    </div>{# .plans-price-monthly #}
 
-{% block text_monthly %}&nbsp;{% endblock %}
+    <div class="flip-card gap-top-base">
+      <div class="flipper">
+        <div class="front">
+          <p class="body-color align-left">
+            {% blocktrans %}
+              For organizations that need a sustainable path to scale
+              mobile data collection and service delivery across
+              multiple teams, programs, or countries.
+            {% endblocktrans %}
+          </p>
+        </div>{# .front #}
+        <div class="back">
+          <ul class="check-list {{ theme }}-check features-list grid-space-none body-color align-left">
+            <li>
+              {% blocktrans %}
+                All Advanced features
+              {% endblocktrans %}
+            </li>
+            <li>
+              {% blocktrans %}
+                Multiple project spaces
+              {% endblocktrans %}
+            </li>
+            <li>
+              {% blocktrans %}
+                Affordable pricing at scale
+              {% endblocktrans %}
+            </li>
+            <li>
+              {% blocktrans %}
+                Flexible billing tools
+              {% endblocktrans %}
+            </li>
+            <li>
+              {% blocktrans %}
+                Dedicated account manager
+              {% endblocktrans %}
+            </li>
+          </ul>
+        </div>{# .back #}
+      </div>{# .flipper #}
+    </div>{# .flip-card #}
 
-{% block description %}{% blocktrans %}
-  For organizations that need a sustainable path to scale
-  mobile data collection and service delivery across
-  multiple teams, programs, or countries.
-{% endblocktrans %}{% endblock %}
+    <p class="button-container gap-top-none">
+      <div class="button button-{{ theme }} cta-pricing-plans-{{ css_id }}"
+           data-kmq="true"
+           data-kmq-name="{% block kissmetrics_cta %}{% endblock %}">
+        {% blocktrans %}
+          Read More
+        {% endblocktrans %}
+      </div>{# .button #}
+    </p>
 
-{% block features %}
-  <li>
-    {% blocktrans %}
-      All Advanced features
-    {% endblocktrans %}
-  </li>
-  <li>
-    {% blocktrans %}
-      Multiple project spaces
-    {% endblocktrans %}
-  </li>
-  <li>
-    {% blocktrans %}
-      Affordable pricing at scale
-    {% endblocktrans %}
-  </li>
-  <li>
-    {% blocktrans %}
-      Flexible billing tools
-    {% endblocktrans %}
-  </li>
-  <li>
-    {% blocktrans %}
-      Dedicated account manager
-    {% endblocktrans %}
-  </li>
-{% endblock %}
+  </a>
+</div>{# .column #}

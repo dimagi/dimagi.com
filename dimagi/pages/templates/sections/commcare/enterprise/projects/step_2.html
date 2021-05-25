@@ -1,0 +1,22 @@
+{% extends "sections/commcare/enterprise/projects/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block icon %}
+  {% include "svg/commcare/enterprise/access.html" %}
+{% endblock %}
+
+{% block heading %}
+  {% blocktrans %}
+    Access All Features for All Country Offices
+  {% endblocktrans %}
+{% endblock %}
+
+{% block content %}
+  {% blocktrans %}
+    CommCare’s complete feature set allows you to develop sustainable 
+    organizational capacity and streamlines the management of your 
+    project spaces across different countries. Know that any app you 
+    build can be used by any team, anywhere.
+  {% endblocktrans %}
+{% endblock %}
