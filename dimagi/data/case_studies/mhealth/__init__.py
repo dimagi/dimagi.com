@@ -21,6 +21,7 @@ from dimagi.data.case_studies.mhealth import (
     infomovel,
     egpaf_baylor_hiv_tracking,
     suaahara_mch,
+    malaria_consortium_dhis2,
 )
 
 
@@ -47,4 +48,5 @@ studies = (
     infomovel,
     egpaf_baylor_hiv_tracking,
     suaahara_mch,
+    malaria_consortium_dhis2,
 )
