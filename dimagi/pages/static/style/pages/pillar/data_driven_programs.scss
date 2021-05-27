@@ -1,0 +1,121 @@
+@import 'app/mixins/background';
+@import 'app/variables/colors';
+@import 'app/variables/sizes';
+@import 'app/variables/type';
+
+#intro {
+  @include make-bg(epic-cover, '../../../pages/pillar/ddp/intro/hero');
+}
+
+.sub-nav-menu-active .sub-nav .dropdown {
+  height: 220px;
+}
+
+.sub-nav a:not(.button).social {
+  cursor: pointer;
+  svg * {
+    fill: $color-text;
+    transition: fill 150ms ease-in-out;
+  }
+  svg {
+  	cursor: pointer;
+    margin-top: -1px;
+    height: 20px;
+    width: 20px;
+  }
+  &:hover svg * {
+    fill: $color-blue;
+  }
+}
+
+$_max-mobile: $width-desktop - 1px;
+@media (max-width: $_max-mobile) {
+  .sub-nav-menu-active .sub-nav .dropdown {
+    height: auto;
+  }
+}
+
+.dropdown .social-links {
+  padding-top: $space-small;
+  .social {
+    display: inline-block;
+    padding-right: $space-base;
+  }
+}
+
+a:not(.button).tile-more {
+  background: transparent;
+  color: $color-white;
+  padding: $space-small;
+  padding-bottom: $space-small + $space-base;
+  h2 {
+    font-weight: $font-weight-medium;
+  }
+  p:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  &:hover {
+    color: $color-white;
+  }
+  &::before {
+    border-color: transparent !important;
+  }
+  &::after {
+    border-color: $color-white !important;
+  }
+}
+
+.tile-chapter {
+  position: relative;
+  &:after {
+    border-width: 10px !important;
+  }
+  h2 {
+    color: $color-white;
+    font-size: $font-size-h3;
+    line-height: $line-height-header;
+  }
+  .chapter-number {
+  	color: $color-white;
+    font-size: 60px;
+    line-height: 60px;
+    position: absolute;
+    bottom: $space-small;
+  }
+}
+
+.dark-gray-bg {
+  background-color: #E6E6E5 !important;
+}
+
+.epic {
+  $_base-height: 190px;
+  $_height-by-size: (
+    small: 249px,
+    medium: 399px,
+  );
+}
+
+#chapter-intro {
+  $_base-height: 190px;
+  $_height-by-size: (
+    small: 324px,
+    medium: 390px,
+  );
+  @include make-bg(make-better-image, '../../../pages/pillar/ddp/intro/start/intro', $_base-height, $_height-by-size);
+}
+
+.section-header span {
+  font-size: 57px !important;
+  line-height: 72px !important;
+  font-weight: 700 !important;
+}
+
+.section-number {
+  position: absolute;
+}
+
+#chapter-intro .make-better-image .bg-loader {
+  background-size: 100% auto;
+}

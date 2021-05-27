@@ -1,0 +1,66 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="sub-nav"
+         id="sub-nav">
+  <div class="content">
+    <div class="actions hide-until-medium">
+
+      {% facebook_link request.build_absolute_uri 'svg/footer/facebook.html' %}
+      {% linkedin_link request.build_absolute_uri 'svg/footer/linkedin.html' %}
+      {% twitter_link request.build_absolute_uri 'Community Health Worker Data Driven Program Improvements' '' 'svg/footer/twitter.html' %}
+
+    </div>{# .actions #}
+
+    <a class="dropdown-toggle"
+       href="#">
+      <span class="more-icon">{% include 'svg/more.html' %}</span>
+      {% blocktrans %}
+        Community Health Worker
+      {% endblocktrans %}
+    </a>
+
+    <div class="dropdown">
+      <div class="content">
+
+        <div class="social-links hide-at-medium">
+          {% facebook_link request.build_absolute_uri 'svg/footer/facebook.html' %}
+          {% linkedin_link request.build_absolute_uri 'svg/footer/linkedin.html' %}
+          {% twitter_link request.build_absolute_uri 'Data Driven Program Improvements' '' 'svg/footer/twitter.html' %}
+        </div>
+
+        <a href="#chapter-1">
+          {% blocktrans %}
+             Chapter 1: Roles and Responsibilities for Community Health Workers
+          {% endblocktrans %}
+        </a>
+
+        <a href="#chapter-2">
+          {% blocktrans %}
+             Chapter 2: Challenges for Community Health Workers 
+          {% endblocktrans %}
+        </a>
+
+        <a href="#chapter-3">
+          {% blocktrans %}
+             Chapter 3: National-Scale Community Health Worker Initiatives
+          {% endblocktrans %}
+        </a>
+
+        <a href="#chapter-4">
+          {% blocktrans %}
+             Chapter 4: Evidence for Community Health Workers
+          {% endblocktrans %}
+        </a>
+
+        <a href="#chapter-5">
+          {% blocktrans %}
+             Chapter 5: Community Health Workers with Mobile Data Collection
+          {% endblocktrans %}
+        </a>
+
+      </div>{# .content #}
+    </div>{# .dropdown #}
+
+  </div>{# .content #}
+</section>

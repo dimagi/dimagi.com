@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block title %}{% blocktrans %}
+  Guide to Data-Driven Program Improvements
+{% endblocktrans %}{% endblock %}
+
+{% block ampcss %}
+  .show-time-amp {
+    transition: transform 300ms 300ms,visibility 0s 600ms,-webkit-transform 300ms 300ms;
+    z-index: 3;
+  }
+  .menu-active-amp {
+    transition: transform 300ms 300ms,visibility 0s,-webkit-transform 300ms 300ms;
+    visibility: visible;
+    background-color: #1b2126;
+    box-shadow: 0 1px 0 0 rgba(255,255,255,0.12);
+    color: #6c7980;
+    left: 0;
+    padding-top: 42px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+    opacity: 1;
+  }
+  .menu-active-amp div > a {
+    color: white;
+    display: inline-block;
+    position: relative;
+  }
+  .menu-active-amp a[class*="-swatch"] {
+    padding-left: 20px;
+  }
+  .menu-active-amp a[class*="-swatch"]::before {
+    background-color: #636466;
+    border-radius: 2px;
+    content: ' ';
+    display: block;
+    height: 10px;
+    left: 0;
+    position: absolute;
+    top: 5px;
+    width: 10px;
+  }
+  .menu-active-amp a[class*="-swatch"].blue-swatch:before {
+    background-color: #004ebc;
+  }
+  .menu-active-amp a[class*="-swatch"].turquoise-swatch:before {
+    background-color: #00bdc5;
+  }
+  .menu-active-amp a[class*="-swatch"].orange-swatch:before {
+    background-color: #ff8400;
+  }
+  .menu-active-amp a[class*="-swatch"].neutral-swatch:before {
+    background-color: #685c53;
+  }
+  .menu-close-amp {
+    position: absolute;
+    z-index: 3;
+    transition: opacity 300ms 300ms,visibility 0s;
+    visibility: visible;
+    cursor: pointer;
+  }
+  .main-nav-content-hide {
+    visibility: hidden;
+    opacity: 0;
+  }
+{% endblock ampcss %}
+
+{% block ampscript %}
+  <script async custom-element="amp-fx-collection" src="https://cdn.ampproject.org/v0/amp-fx-collection-0.1.js"></script>
+  <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
+{% endblock ampscript %}
+
+{% if request.is_amp %}
+  {% block requirejs_module %}
+    {% require_module 'pillar.amp' %}
+  {% endblock %}
+{% endif %}
+
+{% block description %}{% blocktrans %}
+  Guide to Data-Driven Program Improvements
+{% endblocktrans %}{% endblock %}
+
+{% block body_class %}pillar-page{% endblock %}
+
+{% block stylesheets %}
+  {% compress css %}
+    <link href="{% sass_src 'style/pages/pillar/data_driven_programs.scss' %}" rel="stylesheet" media="screen" type="text/css" />
+  {% endcompress %}
+{% endblock %}
+
+{% block progress_bar %}
+  <progress class="progress-bar slate"></progress>
+{% endblock %}
+
+{% block article %}
+{% include "sections/pillar/data_driven_programs/intro.html" %}
+{% include "sections/pillar/data_driven_programs/sub_nav.html" %}
+{% endblock %}
