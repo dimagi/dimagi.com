@@ -1,0 +1,28 @@
+{% extends "sections/pillar/data_driven_programs/chapter1/practices/_base.html" %}
+{% load i18n %}
+
+{% block icon %}
+{% include "svg/pillar/ddp/step1/donor.html" %}
+{% endblock %}
+
+{% block heading %}{% blocktrans %}
+  4. Donor Reporting
+{% endblocktrans %}{% endblock %}
+
+{% block description %}{% blocktrans %}
+  <p>
+    In exchange for the funds and resources they offer, donors seek transparency 
+    and accountability for how these resources are used. Many donors demand detailed 
+    programmatic reports on the activities their funding supports. These reports 
+    often include metrics like “total beneficiaries reached,” which can paint a 
+    large, heartwarming picture for them.
+  </p>
+  <p>
+    These are what some might call “vanity metrics.” The total number of people 
+    you reached might give you some sense of the overall program, but it can’t 
+    help you understand exactly what you’ve done well (or poorly) or how you 
+    can do it better. But if you start to break the number down into smaller 
+    pieces and segment it—by village, by age, or by gender—that’s when you 
+    start seeing a clearer picture of a program’s true impact.
+  </p>
+{% endblocktrans %}{% endblock %}

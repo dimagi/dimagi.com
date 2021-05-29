@@ -1,0 +1,26 @@
+{% extends "sections/pillar/data_driven_programs/chapter1/practices/_base.html" %}
+{% load i18n %}
+
+{% block icon %}
+{% include "svg/pillar/ddp/step1/workforce.html" %}
+{% endblock %}
+
+{% block heading %}{% blocktrans %}
+  5. Workforce monitoring
+{% endblocktrans %}{% endblock %}
+
+{% block description %}{% blocktrans %}
+  <p>
+    What about your frontline workers? Do you monitor them to see who is 
+    submitting data, and when? Can you identify workers who might be having 
+    trouble completing their work?
+  </p>
+  <p>
+    Looking at this data regularly will help your team set expectations for 
+    how much work your frontline workforce should be doing and alert you when 
+    you should check in with certain users. We’ve added several pre-configured 
+    worker activity reports in CommCare that can tell you a lot about the 
+    work your team is doing on the ground. Don’t forget to applaud those 
+    workers who you consistently see doing great work, too!
+  </p>
+{% endblocktrans %}{% endblock %}

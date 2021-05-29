@@ -1,0 +1,23 @@
+{% extends "sections/pillar/data_driven_programs/chapter1/practices/_base.html" %}
+{% load i18n %}
+
+{% block icon %}
+{% include "svg/pillar/ddp/step1/macro.html" %}
+{% endblock %}
+
+{% block heading %}{% blocktrans %}
+  2. Macro-level, aggregate reporting
+{% endblocktrans %}{% endblock %}
+
+{% block description %}{% blocktrans %}
+  <p>
+    Macro-level, aggregate reports look at the program as a whole or by a 
+    large region, such as state or district.
+  </p>
+  <p>
+    While they may look at similar metrics (e.g. crop yields, vaccination 
+    rates, etc.), they do so through a much wider lens. In these reports, 
+    you can see whether your program is hitting its overall targets, but 
+    it doesn’t necessarily uncover a clear path to success if it’s not.
+  </p>
+{% endblocktrans %}{% endblock %}
