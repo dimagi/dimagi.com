@@ -1,0 +1,86 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="epic-content pad-top-medium"
+         id="chapter2-intro">
+  <div class="content content-width-large accent-gray-bg pad-horz-small pad-bottom-medium">
+    <h2 class="pad-top-small red align-center">
+      {% blocktrans %}
+        Establish Data-Action Triggers
+      {% endblocktrans %}
+    </h2>
+
+    <div class="content content-width-small">
+      <div class="image export-image pad-vert-small white-lazy-bg" data-lazybg="true">
+        {% include "partials/wistia_popover.html" with wistia_id='rbl3icvr1u' play_icon_medium=True show_image=True %}
+      </div>
+    </div>
+
+    <p class="pad-top-small">
+      {% blocktrans %}
+        Actually acting on what your reports tell you becomes much easier if you take 
+        the time to plan ahead. Set ranges for what “normal” data looks like and agree 
+        ahead of time on what actions should be triggered when normal thresholds are crossed.
+      {% endblocktrans %}
+    </p>
+    <p>
+      {% blocktrans %}
+        When discussing the potential actions, you first need to know what you 
+        can and cannot change in your program, keeping in mind both the scope 
+        and scale of any potential actions:
+      {% endblocktrans %}
+    </p>
+    <ul class="check-list">
+      <li>
+        <p class="gap-bottom-none">
+          {% blocktrans %}
+            What does your application development time look like? Could 
+            you release a new version of the app, if needed?
+          {% endblocktrans %}
+        </p>
+      </li>
+      <li>
+        <p class="gap-bottom-none">
+          {% blocktrans %}
+            How is your project set up to contact frontline workers and 
+            give them assistance if they’re having a hardware or 
+            software issue?
+          {% endblocktrans %}
+        </p>
+      </li>
+      <li>
+        <p class="gap-bottom-none">
+          {% blocktrans %}
+            How flexible are your frontline workers? Could you send them 
+            to alternative locations or catchment areas?
+          {% endblocktrans %}
+        </p>
+      </li>
+      <li>
+        <p class="gap-bottom-none">
+          {% blocktrans %}
+            How flexible is the budget? Do you have extra funds you 
+            could allocate to a new activity? Could you reallocate 
+            funds from one activity to another?
+          {% endblocktrans %}
+        </p>
+      </li>
+      <li>
+        <p class="gap-bottom-none">
+          {% blocktrans %}
+            Are there partner organizations working in the same space 
+            that could provide add-on services to your beneficiaries, if needed?
+          {% endblocktrans %}
+        </p>
+      </li>
+    </ul>
+    <p>
+      {% blocktrans %}
+        Once you establish these data-action triggers, the whole 
+        process becomes much simpler: Just check your automated 
+        reports every day, ready to take action. And be flexible! 
+        You can always change the parameters or actions themselves.
+      {% endblocktrans %}
+    </p>
+  </div>{# .content #}
+</section>

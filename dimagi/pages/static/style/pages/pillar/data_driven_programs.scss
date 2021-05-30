@@ -89,6 +89,30 @@ a:not(.button).tile-more {
   background-color: #E6E6E5 !important;
 }
 
+.play-icon-medium {
+  margin: 100px auto;
+}
+
+.parallax-ch1-1 {
+  @include make-parallax-bg(epic-cover, '../../../pages/pillar/dc/chapter1/hero');
+  height: auto !important;
+}
+
+.parallax-ch2-1 {
+  @include make-parallax-bg(hero, '../../../pages/pillar/dc/chapter2/hero');
+  height: auto !important;
+}
+
+.parallax-ch3-1 {
+  @include make-parallax-bg(hero, '../../../pages/pillar/dc/chapter3/hero');
+  height: auto !important;
+}
+
+.parallax-ch4-1 {
+  @include make-parallax-bg(hero, '../../../pages/pillar/dc/chapter4/hero');
+  height: auto !important;
+}
+
 .epic {
   $_base-height: 190px;
   $_height-by-size: (
@@ -120,6 +144,15 @@ a:not(.button).tile-more {
   background-size: 100% auto;
 }
 
-.parallax-ch1-1 {
-  height: 200px !important;
+.image.export-image {
+  @include background-cover('../../../pages/pillar/ddp/step2/export.jpg');
+  height: 250px;
+  width: 240px;
+}
+
+@media (min-width: $width-desktop) {
+  .image.export-image {
+    height: 250px;
+    width: 100%;
+  }
 }

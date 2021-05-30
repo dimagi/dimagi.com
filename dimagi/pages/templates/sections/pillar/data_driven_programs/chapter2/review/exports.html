@@ -1,0 +1,35 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="epic-content pad-top-none"
+         id="chapter2-intro">
+  <div class="content content-width-large accent-gray-bg pad-horz-small pad-bottom-medium">
+    <h2 class="pad-top-small red align-center">
+      {% blocktrans %}
+        Create Custom Exports
+      {% endblocktrans %}
+    </h2>
+
+    <div class="content content-width-small">
+      <div class="image export-image pad-vert-small white-lazy-bg" data-lazybg="true">
+        {% include "partials/wistia_popover.html" with wistia_id='c8qsawf1v1' play_icon_medium=True show_image=True %}
+      </div>
+    </div>
+
+    <p class="pad-top-small">
+      {% blocktrans %}
+        Custom Exports in CommCare were created specifically for this routine data 
+        monitoring. They allow you to review all of the data already being collected 
+        in your application and in the worker monitoring reports to help you find 
+        meaningful indicators.
+      {% endblocktrans %}
+    </p>
+    <p>
+      {% blocktrans %}
+        You can then refine your data exports to only report on the indicators your 
+        team cares about. You can also filter these reports to run the data for any 
+        set of groups or users—for as short or long of a time period as you’d like.
+      {% endblocktrans %}
+    </p>
+  </div>{# .content #}
+</section>
