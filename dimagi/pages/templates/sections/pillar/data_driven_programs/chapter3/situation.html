@@ -1,0 +1,171 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="epic-content pad-top-line pad-bottom-small">
+  <div>
+    <h2 class="pad-top-small"> 
+      {% blocktrans %}
+        Identify your user stories
+      {% endblocktrans %}
+    </h2>
+    <p>
+      {% blocktrans %}
+        Your data might tell you some teams are receiving too many 
+        (or more often, too few) resources. How might you be able 
+        to shift things around to make sure everyone gets what they need?
+      {% endblocktrans %}
+    </p>
+    <div class="reallocation-image white-lazy-bg gap-top-small gap-bottom-line"
+         data-lazybg="true"></div>
+  </div>
+  <div>
+    <h4 class="green pad-top-line">
+      {% blocktrans %}
+        Situation #1:
+      {% endblocktrans %}
+    </h4>
+    <p>
+      {% blocktrans %}
+        Refugee Camp A and B got allocations of sanitary napkins 
+        based on their population of women and girls last month. This 
+        week hundreds of new young girls came to Camp A.
+      {% endblocktrans %}
+    </p>
+    <p class="cta pad-top-base">
+      <a class="button alt arrow" href="#modal-suggestion-1">
+        {% blocktrans %}
+          View Suggestion
+        {% endblocktrans %}
+      </a>
+    </p>
+  </div>
+  <div class="pad-top-small">
+    <h4 class="green">
+      {% blocktrans %}
+        Situation #2:
+      {% endblocktrans %}
+    </h4>
+    <p>
+      {% blocktrans %}
+        Each legal help desk across the city has one attorney 
+        for case intake. But Desk 1 has gotten twice as many 
+        visitors as any other desk the last two weeks, meaning 
+        the average wait time for clients is 40 minutes longer 
+        than at any other Desk.
+      {% endblocktrans %}
+    </p>
+    <p class="cta pad-top-base">
+      <a class="button alt arrow" href="#modal-suggestion-2">
+        {% blocktrans %}
+          View Suggestion
+        {% endblocktrans %}
+      </a>
+    </p>
+  </div>
+</section>
+
+{% block modals %}
+  <div class="modal pad-top-medium"
+       data-dismissible="true"
+       data-size="medium"
+       id="modal-suggestion-1">
+    <div class="modal-scroll">
+      <div class="modal-wrapper">
+        <div class="grid grid-2 accent-gray-bg modal-header">
+          <div class="column content-width-small pad-top-line">
+            <h3 class="modal-header-text slate">Resource reallocation</h3>
+          </div>
+          <div class="column">
+            <a href="#" class="modal-close-button"></a>
+          </div>
+        </div>
+        <div class="content pad-horz-medium-at-medium pad-horz-line pad-top-medium programs-images">
+          <h4 class="green">
+            <strong>
+              {% blocktrans %}
+                Situation #1
+              {% endblocktrans %}
+            </strong>
+          </h4>
+          <p>
+            {% blocktrans %}
+              Refugee Camp A and B got allocations of sanitary napkins based 
+              on their population of women and girls last month. This week 
+              hundreds of new young girls came to Camp A.
+            {% endblocktrans %}
+          </p>
+          <h4 class="green">
+            <strong>
+              {% blocktrans %}
+                Suggestion:
+              {% endblocktrans %}
+            </strong>
+          </h4>
+          <p>
+            {% blocktrans %}
+              Allocation additional sanitary napkins to Camp A.
+            {% endblocktrans %}
+          </p>
+          <div class="content content-width-small">
+            <div class="image export-image pad-vert-small white-lazy-bg" data-lazybg="true">
+              {% include "partials/wistia_popover.html" with wistia_id='c8qsawf1v1' play_icon_medium=True show_image=True %}
+            </div>
+          </div>
+        </div> {# .content #}
+      </div> {# .modal-wrapper #}
+    </div> {# .modal-scroll #}
+  </div> {# .modal #}
+  <div class="modal pad-top-medium"
+       data-dismissible="true"
+       data-size="medium"
+       id="modal-suggestion-2">
+    <div class="modal-scroll">
+      <div class="modal-wrapper">
+        <div class="grid grid-2 accent-gray-bg modal-header">
+          <div class="column content-width-small pad-top-line">
+            <h3 class="modal-header-text slate">Resource reallocation</h3>
+          </div>
+          <div class="column">
+            <a href="#" class="modal-close-button"></a>
+          </div>
+        </div>
+        <div class="content pad-horz-medium-at-medium pad-horz-line pad-top-medium programs-images">
+          <h4 class="green">
+            <strong>
+              {% blocktrans %}
+                Situation #2
+              {% endblocktrans %}
+            </strong>
+          </h4>
+          <p>
+            {% blocktrans %}
+              Each legal help desk across the city has one attorney for 
+              case intake. But Desk 1 has gotten twice as many visitors 
+              as any other desk the last two weeks, meaning the average 
+              wait time for clients is 40 minutes longer than at any other Desk.
+            {% endblocktrans %}
+          </p>
+          <h4 class="green">
+            <strong>
+              {% blocktrans %}
+                Suggestion:
+              {% endblocktrans %}
+            </strong>
+          </h4>
+          <p>
+            {% blocktrans %}
+              Send another attorney to Desk 1 to help with the load. If the 
+              budget is tight, reallocate an attorney from Desk 9 (the 
+              lowest-load desk) to Desk 1 for a few days each week to help with the load.
+            {% endblocktrans %}
+          </p>
+          <div class="content content-width-small">
+            <div class="image export-image pad-vert-small white-lazy-bg" data-lazybg="true">
+              {% include "partials/wistia_popover.html" with wistia_id='c8qsawf1v1' play_icon_medium=True show_image=True %}
+            </div>
+          </div>
+        </div> {# .content #}
+      </div> {# .modal-wrapper #}
+    </div> {# .modal-scroll #}
+  </div> {# .modal #}
+{% endblock %}
