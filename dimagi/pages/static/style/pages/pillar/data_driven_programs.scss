@@ -94,22 +94,12 @@ a:not(.button).tile-more {
 }
 
 .parallax-ch1-1 {
-  @include make-parallax-bg(epic-cover, '../../../pages/pillar/dc/chapter1/hero');
+  @include make-parallax-bg(epic-cover, '../../../pages/pillar/ddp/headers/section1/hero');
   height: auto !important;
 }
 
 .parallax-ch2-1 {
-  @include make-parallax-bg(hero, '../../../pages/pillar/dc/chapter2/hero');
-  height: auto !important;
-}
-
-.parallax-ch3-1 {
-  @include make-parallax-bg(hero, '../../../pages/pillar/dc/chapter3/hero');
-  height: auto !important;
-}
-
-.parallax-ch4-1 {
-  @include make-parallax-bg(hero, '../../../pages/pillar/dc/chapter4/hero');
+  @include make-parallax-bg(epic-cover, '../../../pages/pillar/ddp/headers/section2/hero');
   height: auto !important;
 }
 
