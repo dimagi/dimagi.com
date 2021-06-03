@@ -1,0 +1,23 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<article class="epic slate-theme pad-bottom-medium" id="chapter-5">
+
+  <section class="parallax-ch5-1 epic-cover"
+           data-lazybg="true">
+    <div class="content">
+      <h1 class="white section-header pad-top-base" {% if request.is_amp %} amp-fx="fade-in" data-duration="1000ms" {% endif %}>
+        {% blocktrans %}
+          <span class="section-number">5</span>
+          <span class="pad-left-medium-at-medium">
+            What’s next?
+          </span>
+        {% endblocktrans %}
+      </h1>
+    </div> {# .content #}
+  </section>  
+  <section class="content content-width-large">
+    {% include "sections/pillar/data_driven_programs/chapter5/intro.html" %}
+  </section>
+
+</article>

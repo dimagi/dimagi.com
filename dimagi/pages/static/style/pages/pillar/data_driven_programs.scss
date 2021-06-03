@@ -106,6 +106,14 @@ a:not(.button).tile-more {
   @include make-parallax-bg(epic-cover, '../../../pages/pillar/ddp/headers/section3/hero');
   height: auto !important;
 }
+.parallax-ch4-1 {
+  @include make-parallax-bg(epic-cover, '../../../pages/pillar/ddp/headers/section4/hero');
+  height: auto !important;
+}
+.parallax-ch5-1 {
+  @include make-parallax-bg(epic-cover, '../../../pages/pillar/ddp/headers/section5/hero');
+  height: auto !important;
+}
 
 .epic {
   $_base-height: 190px;
@@ -160,6 +168,21 @@ a:not(.button).tile-more {
   @include make-bg(reallocation-image, '../../../pages/pillar/dc/chapter1/community', $_base-height, $_height-by-size);
 }
 
+.people-image {
+  @include background-cover('../../../pages/commcare/partners/featured_partners/im_saf.png');
+  height: 80px;
+  width: 80px;
+}
+
+#chapter-4 {
+  $_base-height: auto;
+  $_height-by-size: (
+    small: 324px,
+    medium: 390px,
+  );
+  @include make-bg(covid-image, '../../../pages/pillar/dc/chapter1/community', $_base-height, $_height-by-size);
+}
+
 .modal-wrapper {
   padding-top: 0px !important;
 }
@@ -170,4 +193,5 @@ a:not(.button).tile-more {
 
 .modal-header-text {
   font-weight: 500;
+  white-space: nowrap;
 }
