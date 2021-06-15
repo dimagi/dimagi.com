@@ -1,0 +1,69 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<article class="epic chat-image">
+  <section class="epic-cover"
+           data-lazybg="true">
+    <div class="content content-width-large-at-large content-width-small-until-medium pad-vert-small-at-medium pad-vert-base gap-top-medium-at-small border-rounded gap-top-base">
+      <div class="chat-card white-bg border-rounded">
+        <h2 class="blue align-center pad-top-small">
+          {% blocktrans %}
+            Download the Guide
+          {% endblocktrans %}
+        </h2>
+        <h4 class="align-center pad-horz-small">
+          {% blocktrans %}
+            Get all this advice and more in our Guide to Data-Driven 
+            Program Improvements. Step-by-step instructions and 
+            illustrative examples will get your team ready to make 
+            improvements to your own program.          
+          {% endblocktrans %}
+        </h4>
+        <p class="align-center pad-top-line pad-bottom-medium-at-medium pad-bottom-line">
+          <a class="button button-blue {% click_body 'case-management' %}"
+             href="#download-data-driven-pdf">
+            {% blocktrans %}
+              Download Now
+            {% endblocktrans %}
+          </a>
+        </p>
+      </div>
+    </div>{# .content #}
+  </section>
+</article>
+
+{% block modal %}
+  <div class="modal"
+    data-dismissible="true"
+    data-size="medium"
+    id="download-data-driven-pdf">
+    <div class="modal-scroll">
+      <div class="modal-wrapper">
+          <a href="#" class="modal-close-button"></a>
+        <div class="content pad-horz-medium pad-vert-none neutral-theme gap-top-medium">
+          <h3>
+           {% blocktrans %}
+             Download Complete Guide
+           {% endblocktrans %}
+          </h3>
+          <section id="data-driven-content"></section>
+        </div>{# .content #}
+      </div>{# .modal-wrapper #}
+    </div>{# .modal-scroll #}
+  </div>{# .modal #}
+{% endblock %}
+
+{% block js %}
+  <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+  <script>
+    hbspt.forms.create({
+      portalId: "503070",
+      formId: "a576952c-7b4b-452a-9272-f1158381f726",
+      target: "#data-driven-content",
+      css: "",
+      onFormSubmit: function () {
+        window.open("https://sites.dimagi.com/hubfs/Pillar%20Page%20PDFs/%5BDimagi%5D%20Guide%20to%20Data-Driven%20Program%20Improvements.pdf", "_blank");
+      },
+    });
+  </script>
+{% endblock %}

@@ -1,4 +1,3 @@
-@import 'app/lib/jacket';
 @import 'app/variables/colors';
 @import 'app/variables/sizes';
 @import 'app/mixins/background';
@@ -55,51 +54,8 @@
   }
 }
 
-
-.show-time a.card:after {
-  transition: border 300ms, opacity 300ms;
-}
-
-a.card:hover,
-a.card:focus {
-  color: inherit;
-  background-color: inherit;
-}
-
-a.card:hover:after,
-a.card:focus:after {
-  opacity: 1;
-}
-
-.card-notch {
-  padding-bottom: $space-base;
-
-  &::after {
-    bottom: 0;
-    content: ' ';
-    display: block;
-    left: 50%;
-    position: absolute;
-    transform: translate(-50%, -50%) rotate(135deg);
+@media (max-width: $width-desktop) {
+  .card {
+    width: 100%;
   }
-}
-
-.card-notch {
-  position: relative;
-
-  &::before,
-  &::after {
-    border-right-style: solid;
-    border-right-width: 1px;
-    border-top-style: solid;
-    border-top-width: 1px;
-    display: inline-block;
-    height: 6px;
-    pointer-events: none;
-    width: 6px;
-  }
-}
-
-.card-notch {
-  position: relative;
 }

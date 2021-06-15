@@ -49,21 +49,16 @@
         <div class="feature-partner-im-saf column pad-top-base flex-align-left-at-large align-center">
           {% include "svg/pillar/ddp/multimedia.html" %}
         </div>
-        <div class="column display-flex-at-medium pad-left-small-at-medium pad-top-small-at-large pad-top-base">
-          <p class="align-left-at-medium align-center next-video-block">
+        <div class="column display-flex-at-medium pad-left-small-at-medium pad-top-small-at-large pad-top-base align-center">
+          <p class="align-left-at-medium align-center next-video-block pad-right-line-until-medium">
             {% blocktrans %}
               Watch the entire webinar from our Customer Success team on how 
               to uncover data-driven program improvements or your team
             {% endblocktrans %}
           </p>
-          <p class="align-left-at-large align-center pad-top-base pad-bottom-small">
-            <a class="button"
-              href="http://www.imsaf.io/"
-              target="_blank">
-              {% blocktrans %}
-                Watch Now
-              {% endblocktrans %}
-            </a>
+          <p class="watch-next-review button align-center pad-top-base pad-bottom-small">
+            {% trans 'Watch Now' as video_text %}
+            {% include "partials/wistia_popover.html" with wistia_id='xnmaqyz01a' text=video_text white_class='white' %}
           </p>
         </div>
       </div>
@@ -72,7 +67,7 @@
     <div class="content-width-medium feature-projects pad-vert-line pad-horz-line accent-gray-bg gap-top-small">
       <div class="grid-flex-at-medium">
         <div class="feature-partner-im-saf column pad-top-base flex-align-left-at-large align-center">
-          {% include "svg/pillar/ddp/multimedia.html" %}
+          {% include "svg/pillar/ddp/support.html" %}
         </div>
         <div class="column display-flex-at-medium pad-left-small-at-medium pad-top-small-at-large pad-top-base">
           <p class="align-left-at-medium align-center next-video-block">
@@ -82,8 +77,7 @@
           </p>
           <p class="align-left-at-large align-center pad-bottom-small">
             <a class="button"
-              href="http://www.imsaf.io/"
-              target="_blank">
+              href="#demo-form-modal">
               {% blocktrans %}
                 Get In Touch
               {% endblocktrans %}

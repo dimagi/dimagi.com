@@ -147,40 +147,71 @@ a:not(.button).tile-more {
 }
 
 .image.export-image {
+  @include background-cover('../../../pages/pillar/ddp/step2/video/custom_exports.jpg');
+  height: 250px;
+  width: 240px;
+}
+
+.image.review-image {
+  @include background-cover('../../../pages/pillar/ddp/step2/video/review.jpg');
+  height: 250px;
+  width: 240px;
+}
+
+.image.action-image {
+  @include background-cover('../../../pages/pillar/ddp/step2/video/action.jpg');
+  height: 250px;
+  width: 240px;
+}
+
+.image.work-image {
   @include background-cover('../../../pages/pillar/ddp/step2/export.jpg');
   height: 250px;
   width: 240px;
 }
 
+.image.situation-image {
+  @include background-cover('../../../pages/pillar/ddp/step3/validation.jpg');
+  height: 250px;
+  width: 240px;
+}
+
 @media (min-width: $width-desktop) {
-  .image.export-image {
+  .image.export-image,
+  .image.review-image,
+  .image.action-image,
+  .image.work-image,
+  .image.situation-image {
     height: 250px;
     width: 100%;
   }
 }
 
 #chapter-3 {
-  $_base-height: auto;
+  $_base-height: 190px;
   $_height-by-size: (
     small: 324px,
     medium: 390px,
   );
-  @include make-bg(reallocation-image, '../../../pages/pillar/dc/chapter1/community', $_base-height, $_height-by-size);
+  @include make-bg(stories-image, '../../../pages/pillar/ddp/step3/stories/story', $_base-height, $_height-by-size);
+  @include make-bg(training-image, '../../../pages/pillar/ddp/step3/training/train', $_base-height, $_height-by-size);
+  @include make-bg(services-image, '../../../pages/pillar/ddp/step3/services/service', $_base-height, $_height-by-size);
 }
 
+
 .people-image {
-  @include background-cover('../../../pages/commcare/partners/featured_partners/im_saf.png');
+  @include background-cover('../../../pages/pillar/ddp/step4/profile.jpg');
   height: 80px;
   width: 80px;
 }
 
 #chapter-4 {
-  $_base-height: auto;
+  $_base-height: 190px;
   $_height-by-size: (
     small: 324px,
     medium: 390px,
   );
-  @include make-bg(covid-image, '../../../pages/pillar/dc/chapter1/community', $_base-height, $_height-by-size);
+  @include make-bg(covid-image, '../../../pages/pillar/ddp/step4/intro', $_base-height, $_height-by-size);
 }
 
 .modal-wrapper {
@@ -197,11 +228,18 @@ a:not(.button).tile-more {
 }
 
 .next-video-block {
-  width: 350px;
+  width: 330px;
 }
-@media (min-width: $width-mobile) {
+@media (max-width: $width-mobile) {
   .next-video-block {
     width: auto;
+  }
+}
+
+@for $i from 1 through 7 {
+  .level#{$i}-dot {
+    height: 28-$i*2px;
+    width: 28-$i*2px;
   }
 }
 
@@ -210,47 +248,66 @@ a:not(.button).tile-more {
   display: inline-block;
 }
 
-.level1-dot {
-  height: 25px;
-  width: 25px;
-}
-.level2-dot {
-  height: 24px;
-  width: 24px;
-}
-.level3-dot {
-  height: 22px;
-  width: 22px;
-}
-.level4-dot {
-  height: 20px;
-  width: 20px;
-}
-.level5-dot {
-  height: 18px;
-  width: 18px;
-}
-.level6-dot {
-  height: 16px;
-  width: 16px;
-}
-.level7-dot {
-  height: 14px;
-  width: 14px;
-}
-
-
-.tile1.arrow-bottom:after {
-  content: " ";
-  position: absolute;
-  right: 30px;
-  bottom: -15px;
-  border-top: 15px solid black;
-  border-right: 15px solid transparent;
-  border-left: 15px solid transparent;
-  border-bottom: none;
-}
-
 .info-graphic {
   margin-top: -98px;
+}
+
+.blog_build {
+  $_base-height: 290px;
+  $_height-by-size: (
+    small: 390px,
+    medium: 390px,
+    large: 390px,
+    extra-large: 392px,
+  );
+  @include make-bg(blog_image, '../../../pages/blog/mobiledata_blog_page/blog_build/hero', $_base-height, $_height-by-size);
+  @media (min-width: $width-desktop) {
+    .off-grid {
+      bottom: 20px;
+      left: -337px;
+      position: absolute;
+      right: 0;
+      width: 100%;
+      z-index: 1;
+    }
+    
+    .content {
+      position: relative;
+      z-index: 2;
+    }
+  }
+  @media (min-width: $width-desktop-lg) {
+    .off-grid {
+      left: -180px;
+    }
+  }
+}
+
+.chat-image {
+  $_base-height: 425px;
+  $_height-by-size: (
+    extra-small: 390px,
+    small: 500px,
+    medium: 520px,
+    large: 500px,
+    extra-large: 500px,
+  );
+  @include make-bg(epic-cover, '../../../pages/pillar/ddp/download/hero', $_base-height, $_height-by-size);
+}
+
+@media (min-width: $width-desktop) {
+  .chat-card {
+    width: 380px;
+    float: right;
+  }
+}
+@media (max-width: $width-desktop) {
+  .info-graphic {
+    margin-top: 0px;
+  }
+}
+
+.watch-next-review {
+  height: 40px !important; // scss-lint:disable ImportantRule
+  font-size: 11px !important; // scss-lint:disable ImportantRule
 }
