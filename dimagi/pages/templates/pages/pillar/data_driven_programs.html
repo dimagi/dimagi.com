@@ -81,7 +81,10 @@
 {% endif %}
 
 {% block description %}{% blocktrans %}
-  Guide to Data-Driven Program Improvements
+  From evaluating current data practices and reporting processes to 
+  learning how to turn those data into actionable insights that can 
+  improve your program, this guide to data-driven program improvements 
+  will help you optimize those projects that you already have in the field.
 {% endblocktrans %}{% endblock %}
 
 {% block body_class %}pillar-page{% endblock %}
@@ -89,6 +92,7 @@
 {% block stylesheets %}
   {% compress css %}
     <link href="{% sass_src 'style/pages/pillar/data_driven_programs.scss' %}" rel="stylesheet" media="screen" type="text/css" />
+    <link href="{% sass_src 'style/pages/pillar/data_driven/card.scss' %}" rel="stylesheet" media="screen" type="text/css" />
   {% endcompress %}
 {% endblock %}
 

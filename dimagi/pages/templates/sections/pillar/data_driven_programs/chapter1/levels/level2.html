@@ -1,0 +1,20 @@
+{% load dimagidotcom %}
+{% load i18n %}
+
+<div class="column turquoise-theme pad-right-line">
+  <div class="align-center pad-bottom-medium">
+    <span class="level-dot level2-dot turquoise-bg"></span>
+  </div>
+  <a class="card theme-border align-center"
+    href="#">
+    <h5 class="theme-color">
+      {% blocktrans %}
+        Macro-level, <br class="hide-until-medium" />
+        aggregate reporting
+      {% endblocktrans %}
+    </h5>
+    <p class="theme-icon">
+      {% include "svg/pillar/ddp/step1/macro.html" %}
+    </p>
+  </a>
+</div>

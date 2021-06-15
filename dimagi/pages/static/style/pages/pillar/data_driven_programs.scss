@@ -195,3 +195,62 @@ a:not(.button).tile-more {
   font-weight: 500;
   white-space: nowrap;
 }
+
+.next-video-block {
+  width: 350px;
+}
+@media (min-width: $width-mobile) {
+  .next-video-block {
+    width: auto;
+  }
+}
+
+.level-dot {
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.level1-dot {
+  height: 25px;
+  width: 25px;
+}
+.level2-dot {
+  height: 24px;
+  width: 24px;
+}
+.level3-dot {
+  height: 22px;
+  width: 22px;
+}
+.level4-dot {
+  height: 20px;
+  width: 20px;
+}
+.level5-dot {
+  height: 18px;
+  width: 18px;
+}
+.level6-dot {
+  height: 16px;
+  width: 16px;
+}
+.level7-dot {
+  height: 14px;
+  width: 14px;
+}
+
+
+.tile1.arrow-bottom:after {
+  content: " ";
+  position: absolute;
+  right: 30px;
+  bottom: -15px;
+  border-top: 15px solid black;
+  border-right: 15px solid transparent;
+  border-left: 15px solid transparent;
+  border-bottom: none;
+}
+
+.info-graphic {
+  margin-top: -98px;
+}

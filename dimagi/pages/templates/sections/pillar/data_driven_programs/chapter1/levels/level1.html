@@ -1,0 +1,25 @@
+{% load dimagidotcom %}
+{% load i18n %}
+
+<div class="column green-theme">
+  <a class="card theme-border align-center"
+    href="#">
+    <h5 class="theme-color">
+      {% blocktrans %}
+        Baseline & input <br class="hide-until-medium" />
+        reporting
+      {% endblocktrans %}
+    </h5>
+    <p class="theme-icon">
+      {% include "svg/pillar/ddp/step1/baseline.html" %}
+    </p>
+  </a>
+  <div class="pad-top-medium display-flex">
+    <p class="pad-right-line green">
+      {% blocktrans %}
+        Aggregated
+      {% endblocktrans %}
+    </p>
+    <span class="level-dot level1-dot green-bg"></span>
+  </div>
+</div>

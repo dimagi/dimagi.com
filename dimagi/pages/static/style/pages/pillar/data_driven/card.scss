@@ -1,0 +1,105 @@
+@import 'app/lib/jacket';
+@import 'app/variables/colors';
+@import 'app/variables/sizes';
+@import 'app/mixins/background';
+@import 'app/variables/type';
+
+
+.card {
+  background: $color-white;
+  display: block;
+  padding: $space-line;
+  padding-bottom: $space-medium;
+  position: relative;
+  width: 200px;
+
+  &:before { // scss-lint:disable PropertyCount
+    border: 1px solid;
+    border-radius: 5px;
+    bottom: 0;
+    content: ' ';
+    display: block;
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 99;
+  }
+
+  .theme-icon + * {
+    margin-top: $space-base;
+  }
+
+  &.full-bleed {
+    padding: 0;
+
+    .copy {
+      padding: $space-small;
+    }
+  }
+
+  .button-container {
+    height: $space-small;
+    position: relative;
+  }
+
+  &:not(.card-no-link) {
+    .button {
+      bottom: $space-small;
+      left: $space-small;
+      min-width: calc(100% - 60px);
+      position: absolute;
+      padding: 10px;
+    }
+  }
+}
+
+
+.show-time a.card:after {
+  transition: border 300ms, opacity 300ms;
+}
+
+a.card:hover,
+a.card:focus {
+  color: inherit;
+  background-color: inherit;
+}
+
+a.card:hover:after,
+a.card:focus:after {
+  opacity: 1;
+}
+
+.card-notch {
+  padding-bottom: $space-base;
+
+  &::after {
+    bottom: 0;
+    content: ' ';
+    display: block;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%) rotate(135deg);
+  }
+}
+
+.card-notch {
+  position: relative;
+
+  &::before,
+  &::after {
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-top-style: solid;
+    border-top-width: 1px;
+    display: inline-block;
+    height: 6px;
+    pointer-events: none;
+    width: 6px;
+  }
+}
+
+.card-notch {
+  position: relative;
+}

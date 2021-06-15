@@ -1,0 +1,20 @@
+{% load dimagidotcom %}
+{% load i18n %}
+
+<div class="column orange-theme">
+  <div class="align-center pad-bottom-medium">
+    <span class="level-dot level6-dot orange-bg"></span>
+  </div>
+  <a class="card theme-border align-center"
+    href="#">
+    <h5 class="theme-color">
+      {% blocktrans %}
+        Day-to-day <br class="hide-until-medium" />
+        reporting
+      {% endblocktrans %}
+    </h5>
+    <p class="theme-icon">
+      {% include "svg/pillar/ddp/step1/day.html" %}
+    </p>
+  </a>
+</div>

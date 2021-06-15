@@ -1,0 +1,20 @@
+{% load dimagidotcom %}
+{% load i18n %}
+
+<div class="column orange-theme">
+  <div class="align-center pad-bottom-medium">
+    <span class="level-dot level4-dot orange-bg"></span>
+  </div>
+  <a class="card theme-border align-center"
+    href="#">
+    <h5 class="theme-color">
+      {% blocktrans %}
+        Donor <br class="hide-until-medium" />
+        Reporting
+      {% endblocktrans %}
+    </h5>
+    <p class="theme-icon">
+      {% include "svg/pillar/ddp/step1/donor.html" %}
+    </p>
+  </a>
+</div>
