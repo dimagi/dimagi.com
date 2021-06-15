@@ -1,0 +1,29 @@
+{% extends "sections/commcare/enterprise/faq/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block accordion_collapsed %}collapsed{% endblock %}
+
+{% block accordion_header %}
+  {% blocktrans %}
+    What sort of assistance will I receive from the Customer Success team?
+  {% endblocktrans %}
+{% endblock %}
+
+{% block accordion_content %}
+  <p>
+    {% blocktrans %}
+      Your Customer Success representative is here to help your 
+      organization make the most of CommCare. On quarterly calls, 
+      we’ll discuss the status of key projects, address any pain 
+      points, and identify how Dimagi can best assist you moving 
+      forward. Special sessions on particular features, advice on 
+      application design and application building, or guidance on 
+      training best practices and rollout are all more technical 
+      aspects that we are happy to help with. Our Customer Success 
+      team is filled with our Dimagi’s most advanced application 
+      builders and implementers, and we are committed to your 
+      organization’s success!
+    {% endblocktrans %}
+  </p>
+{% endblock %}

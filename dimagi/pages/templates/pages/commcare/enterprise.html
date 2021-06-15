@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block title %}{% blocktrans %}
+  CommCare Enterprise | Building Sustainable Organizational Capacity for Impact
+{% endblocktrans %}{% endblock %}
+
+{% block description %}{% blocktrans %}
+  Sustainable Success for Your Entire Organization
+{% endblocktrans %}{% endblock %}
+
+{% block body_class %}commcare-monitoring-evaluation tucked-hero{% endblock %}
+
+{% block stylesheets %}
+  {% compress css %}
+    <link href="{% sass_src 'style/pages/commcare/enterprise.scss' %}" rel="stylesheet" media="screen" type="text/css" />
+  {% endcompress %}
+{% endblock %}
+
+{% block hero %}
+  <div id="top"></div>
+  <section class="hero commcare-monitoring-evaluation"
+           data-lazybg="true"
+           id="hero">
+    <div class="content offset-top-small-at-medium align-left-at-medium align-center pad-top-large inverted">
+      <h2 class="blue gap-top-small">
+        {% blocktrans %}
+          CommCare Enterprise for INGOs
+        {% endblocktrans %}
+      </h2>
+      <h1 class="blue enterprise-description">
+        {% blocktrans %}
+          Introduce your entire organization to a sustainable 
+          solution for last-mile mobile data collection and service delivery
+        {% endblocktrans %}
+      </h1>
+    </div> {# .content #}
+  </section>
+{% endblock %}
+
+{% block content %}
+  <section class="products-commcare-container">
+    {% include "sections/commcare/enterprise/intro.html" %}
+    {% include "sections/commcare/enterprise/partners.html" %}
+    {% include "sections/commcare/enterprise/challenges.html" %}
+    {% include "sections/commcare/enterprise/get_touch.html" %}
+    {% include "sections/commcare/enterprise/projects.html" %}
+    {% include "sections/commcare/enterprise/network.html" %}
+    {% include "sections/commcare/enterprise/faq.html" %}
+    {% include "sections/commcare/enterprise/chat.html" %}
+  </section>
+{% endblock %}
+
+{% block modals %}
+  <div class="modal"
+       data-dismissible="true"
+       data-size="medium"
+       id="set-up-call-enterprise">
+    <div class="modal-scroll">
+      <div class="modal-wrapper">
+        <a href="#" class="modal-close-button"></a>
+        <div class="content pad-horz-medium-at-medium pad-horz-line pad-vert-none blue-theme">
+          <h3>
+            {% blocktrans %}
+              Schedule A Demo
+            {% endblocktrans %}
+          </h3>
+          <section id="set-up-call-content"></section>
+        </div>{# .content #}
+      </div>{# .modal-wrapper #}
+    </div>{# .modal-scroll #}
+  </div>{# .modal #}
+{% endblock %}
+
+{% block js %}
+  <!--[if lte IE 8]>
+    <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+  <![endif]-->
+  <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+  <script>
+    //  Download pdf summary form
+    hbspt.forms.create({
+      portalId: "503070",
+      formId: "ef203e6a-9154-4cfb-b1f8-0d5c3988212e",
+      target: "#set-up-call-content",
+      css: "",
+    });
+  </script>
+{% endblock %}

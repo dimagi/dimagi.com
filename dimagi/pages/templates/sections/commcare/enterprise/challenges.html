@@ -1,0 +1,20 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<div class="accent-gray-bg border-top">
+  <div class="content challenges pad-vert-medium">
+    <h2 class="blue align-center pad-bottom-line content-width-medium">
+      {% blocktrans %}
+        INGOs face many challenges that can threaten their impact
+      {% endblocktrans %}
+    </h2>
+    <div class="grid-1-at-small grid-3-at-large grid-2-at-medium grid-row-space-small grid-row-equal-heights grid-col-space-medium">
+      {% include "sections/commcare/enterprise/challenges/fund.html" %}
+      {% include "sections/commcare/enterprise/challenges/connect.html" %}
+      {% include "sections/commcare/enterprise/challenges/security.html" %}
+      {% include "sections/commcare/enterprise/challenges/strategy.html" %}
+      {% include "sections/commcare/enterprise/challenges/support.html" %}
+      {% include "sections/commcare/enterprise/challenges/capacity.html" %}
+    </div>{# .grid-1-at-small #}
+  </div>
+</div>

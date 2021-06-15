@@ -1,0 +1,27 @@
+{% extends "sections/commcare/enterprise/faq/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+{% url 'commcare_pricing' as pricing_url %}
+
+{% block accordion_content_show %}collapsed{% endblock %}
+
+{% block accordion_header %}
+  {% blocktrans %}
+    How do the features on the Enterprise offering compare to the other plans?
+  {% endblocktrans %}
+{% endblock %}
+
+{% block accordion_content %}
+  <p>
+    Every project space included in our Enterprise subscription includes all of 
+    our features. Additionally, the feature-set of our Enterprise offering is 
+    aligned towards creating organizational value, which includes capabilities like the 
+    <a href="https://confluence.dimagi.com/display/commcarepublic/Enterprise+Features"
+       target="_blank">Enterprise Dashboard</a>, 
+    and our upcoming capabilities for Single-Sign-On and Enterprise-wide 
+    Release Management of apps. Our Enterprise partners also benefit 
+    from access to powerful features currently only available to our 
+    internal implementation teams. Compare Enterprise directly with 
+    other subscriptions <a href="{% url 'commcare_pricing' %}">here</a>.
+  </p>
+{% endblock %}

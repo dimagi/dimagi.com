@@ -1,0 +1,28 @@
+{% extends 'sections/commcare/enterprise/challenges/_base.html' %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block feature_class %}fund blue-border{% endblock %}
+{% block title_class %}blue{% endblock %}
+
+{% block feature_title %}
+  {% blocktrans %}
+    Isolation from peer INGOs
+  {% endblocktrans %}
+{% endblock %}
+
+{% block feature_description %}
+  {% blocktrans %}
+    INGOs can often feel functionally isolated within their 
+    sector, forced to overcome all their obstacles on their own.
+  {% endblocktrans %}
+{% endblock %}
+
+{% block features_list %}
+  <p>
+    {% blocktrans %}
+      Connect with fellow INGOs to share, learn, and celebrate 
+      together through CommCare’s growing community.
+    {% endblocktrans %}
+  </p>
+{% endblock %}

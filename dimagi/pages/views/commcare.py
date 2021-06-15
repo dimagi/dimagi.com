@@ -6,6 +6,7 @@ from django.shortcuts import render
 from dimagi.utils.ab_tests import DEMO_WORKFLOW_V2
 from dimagi.utils.decorators.enable_ab_test import enable_ab_test
 from dimagi.utils.partners import get_logos
+from dimagi.utils.enterprise_partners import get_enterprise_partners
 from dimagi.data.commcare.pricing import feature_groups
 from dimagi.utils.pdf.pricing import get_pricing_pdf
 
@@ -97,3 +98,12 @@ def ict4d(request):
 @enable_ab_test(DEMO_WORKFLOW_V2)
 def vaccine_delivery(request):
     return render(request, 'pages/commcare/vaccine_delivery.html')
+
+@enable_ab_test(DEMO_WORKFLOW_V2)
+def enterprise(request):
+    context = {
+        'partners': get_enterprise_partners(),
+        'is_inverse_header': True,
+    }
+    return render(request, 'pages/commcare/enterprise.html', context)
+

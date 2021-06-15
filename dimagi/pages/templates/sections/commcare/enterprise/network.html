@@ -1,0 +1,53 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section id="network"
+         class="blue-theme border-top blue-lightest-bg"
+         data-lazybg="true">
+  <div class="content-width-large pad-vert-medium">
+    <h2 class="theme-color align-center pad-bottom-small">
+      {% blocktrans %}
+        Join a Growing Network
+      {% endblocktrans %}
+    </h2>
+    <div class="content grid grid-2-at-medium grid-1-at-small grid-reverse">
+      <div class="column" id="case-study">
+        <div class="intro-image">
+          <div class="intro-hero-image white-lazy-bg aspect-ratio-rect"
+               data-lazybg="true"></div>
+        </div>
+      </div> {# .column #}
+      <div class="column pad-top-base">
+        <p>
+          {% blocktrans %}
+            Catholic Relief Services (CRS) is an international aid 
+            organization of more than <strong>5,000 employees</strong> leading relief 
+            programs that supported <strong>159 million</strong> people 
+            in <strong>114 countries</strong> in 2019.
+          {% endblocktrans %}
+        </p>
+        <p class="pad-top-base">
+          {% blocktrans %}
+            More than 300 of these programs use CommCare for frontline 
+            service delivery support and community-level data capture 
+            for monitoring and evaluation.
+          {% endblocktrans %}
+        </p>
+        <p>
+          {% blocktrans %}
+            Learn how they did it.
+          {% endblocktrans %}
+        </p>
+        <div class="align-left">
+          <a class="button"
+              href="https://sites.dimagi.com/hubfs/Case%20Studies/Case%20Study%20%E2%80%93%20CRS%20&%20CommCare%20Enterprise.pdf"
+              target="_blank">
+            {% blocktrans %}
+              Download the case study
+            {% endblocktrans %}
+          </a>
+        </div>
+      </div>{# .column #}
+    </div>{# .grid #}
+  </div>
+</section>

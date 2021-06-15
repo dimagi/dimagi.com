@@ -1,0 +1,42 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section id="intro"
+         class="blue-theme border-bottom"
+         data-lazybg="true">
+  <div class="content pad-vert-medium">
+    <div class="grid grid-2-at-medium grid-1-at-small grid-reverse">
+      <div class="column" id="case-study">
+        <div class="intro-image">
+          <div class="intro-hero-image white-lazy-bg"
+               data-lazybg="true"></div>
+        </div>
+      </div> {# .column #}
+      <div class="column pad-top-base">
+        <strong>
+          {% blocktrans %}
+            Our CommCare Enterprise offering allows INGOs to unlock all of 
+            CommCare’s features across every country office.
+          {% endblocktrans %}
+        </strong>
+        <p class="pad-top-line">
+          {% blocktrans %}
+            You’re familiar with what CommCare can do for your data collection 
+            and service delivery needs. With CommCare Enterprise, you’ll move 
+            beyond project-level administration and create an 
+            organisation-wide success story.
+
+          {% endblocktrans %}
+        </p>
+        <div class="align-left pad-top-small">
+          <a class="button"
+              href="#set-up-call-enterprise">
+            {% blocktrans %}
+              Let's talk
+            {% endblocktrans %}
+          </a>
+        </div>
+      </div>{# .column #}
+    </div>
+  </div>
+</section>

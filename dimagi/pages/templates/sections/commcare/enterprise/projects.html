@@ -1,0 +1,20 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="overview align-center blue-theme white-bg border-top" id="overview">
+  <div class="content pad-top-medium pad-bottom-small">
+    <h2 class="theme-color align-center pad-bottom-small">
+      {% blocktrans %}
+        CommCare Enterprise can help
+      {% endblocktrans %}
+    </h2>
+    <div class="grid-3-at-medium grid-row-space-medium pad-top-line grid-col-space-medium">
+      {% include "sections/commcare/enterprise/projects/step_1.html" %}
+      {% include "sections/commcare/enterprise/projects/step_2.html" %}
+      {% include "sections/commcare/enterprise/projects/step_3.html" %}
+      {% include "sections/commcare/enterprise/projects/step_4.html" %}
+      {% include "sections/commcare/enterprise/projects/step_5.html" %}
+      {% include "sections/commcare/enterprise/projects/step_6.html" %}
+    </div>{# .grid-2-at-small #}
+  </div>{# .content #}
+</section>

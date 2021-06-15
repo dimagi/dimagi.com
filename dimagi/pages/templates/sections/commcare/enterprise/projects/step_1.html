@@ -1,0 +1,22 @@
+{% extends "sections/commcare/enterprise/projects/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block icon %}
+  {% include "svg/commcare/enterprise/beyond.html" %}
+{% endblock %}
+
+{% block heading %}
+  {% blocktrans %}
+    Go Beyond Project-Level Thinking
+  {% endblocktrans %}
+{% endblock %}
+
+{% block content %}
+  {% blocktrans %}
+    A central dashboard allows HQ staff to monitor overall analytics 
+    and usage of all their project spaces, while integrations with 
+    third-party products like PowerBI, Tableau, and DHIS2 unlock 
+    powerful reporting possibilities.
+  {% endblocktrans %}
+{% endblock %}

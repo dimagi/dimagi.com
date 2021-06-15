@@ -1,0 +1,26 @@
+{% extends "sections/commcare/enterprise/faq/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block accordion_collapsed %}collapsed{% endblock %}
+
+{% block accordion_header %}
+  {% blocktrans %}
+    We do not have a central ICT4D team, how can we roll 
+    out a centralized system across our projects/country offices?
+  {% endblocktrans %}
+{% endblock %}
+
+{% block accordion_content %}
+  <p>
+    {% blocktrans %}
+      You don’t need a formal, centralized ICT4D team in order to have 
+      an Enterprise contract! We only need one person to serve as a 
+      point of contact for the subscription for issues related to 
+      billing, granting licenses to projects, etc. Otherwise, we 
+      are happy to work with a group of regional leaders on our 
+      quarterly Customer Success calls, which we have found is a 
+      great way to help foster cross-team and cross-country collaboration.
+    {% endblocktrans %}
+  </p>
+{% endblock %}

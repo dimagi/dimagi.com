@@ -1,0 +1,18 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="epic-content pad-top-base pad-bottom-small border-top"
+         id="faq">
+  <div class="content">
+    <h3 class="blue align-center pad-bottom-base">FAQs</h3>
+    <div class="accordion-group gap-bottom-line border-none"
+         id="chapter-4-accordion">
+      {% include "sections/commcare/enterprise/faq/faq2.html" %}
+      {% include "sections/commcare/enterprise/faq/faq3.html" %}
+      {% include "sections/commcare/enterprise/faq/faq4.html" %}
+      {% include "sections/commcare/enterprise/faq/faq5.html" %}
+      {% include "sections/commcare/enterprise/faq/faq6.html" %}
+    </div>
+
+  </div>{# .content #}
+</section>
