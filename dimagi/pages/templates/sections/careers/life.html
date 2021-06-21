@@ -18,13 +18,13 @@
 
     <div class="grid-4-at-medium grid-2-at-small grid-row-space-small">
       {% click_body 'life-tedx' as click_tedx %}
-      {% include "sections/careers/life/tedx_talk.html" with click_class=click_tedx %}
+      {% include "sections/careers/life/tedx_talk.html" with click_class=click_tedx video_play=True %}
       {% click_body 'life-away' as click_away %}
-      {% include "sections/careers/life/away_month.html" with click_class=click_away %}
+      {% include "sections/careers/life/away_month.html" with click_class=click_away blog_read=True %}
       {% click_body 'life-values' as click_values %}
-      {% include "sections/careers/life/core_values.html" with click_class=click_values %}
+      {% include "sections/careers/life/core_values.html" with click_class=click_values blog_read=True %}
       {% click_body 'life-services' as click_services %}
-      {% include "sections/careers/life/global_services.html" with click_class=click_services %}
+      {% include "sections/careers/life/global_services.html" with click_class=click_services blog_read=True %}
     </div>{# .grid-4-at-medium #}
 
     <p class="align-center pad-bottom-base">

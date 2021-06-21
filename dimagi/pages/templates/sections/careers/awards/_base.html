@@ -1,9 +1,7 @@
 {% load i18n %}
 
 <div class="column">
-  <a class="tile {{ click_class }}"
-     target="_blank"
-     href="{% block link %}{% endblock %}">
+  <div class="tile {{ click_class }}">
 
     <div class="aspect-ratio-square
                 gap-bottom-base
@@ -18,13 +16,5 @@
       {% block description %}{% endblock %}
     </p>
 
-    <p class="button-container gap-top-none">
-      <div class="button button-neutral">
-        {% blocktrans %}
-          Read More
-        {% endblocktrans %}
-      </div>{# .button #}
-    </p>
-
-  </a>
+  </div>
 </div>{# .column #}
