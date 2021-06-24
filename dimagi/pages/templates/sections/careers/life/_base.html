@@ -1,7 +1,7 @@
+{% load i18n %}
+
 <div class="column">
-  <a class="post {{ click_class }}"
-     target="_blank"
-     href="{% block link %}{% endblock %}">
+  <div class="post {{ click_class }}">
     <div class="aspect-ratio-square
                 gap-bottom-line
                 post-thumbnail
@@ -17,6 +17,21 @@
     <p>
       {% block area %}{% endblock %}
     </p>
-  </a>
+    
+    <a class="button-container gap-top-none"
+       target="_blank"
+       href="{% block link %}{% endblock %}">
+      <div class="button button-neutral {% if blog_read %} display-none {% endif %}">
+        {% blocktrans %}
+          Watch Now
+        {% endblocktrans %}
+      </div>{# .button #}
+      <div class="button button-neutral {% if video_play %} display-none {% endif %}">
+        {% blocktrans %}
+          Read More
+        {% endblocktrans %}
+      </div>{# .button #}
+    </a>
+  </div>
 </div>{# .column #}
 
