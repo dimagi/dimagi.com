@@ -1,9 +1,9 @@
 {% load dimagidotcom %}
 {% load i18n %}
 
-<div class="column red-theme">
-  <a class="card theme-border align-center arrow-bottom"
-    href="#">
+<div class="card-container red-theme">
+  <a class="card card-bottom theme-border align-center arrow-bottom"
+     href="#level-summary-7">
     <h5 class="theme-color">
       {% blocktrans %}
         Micro-level <br class="hide-until-medium" />
@@ -14,12 +14,12 @@
       {% include "svg/pillar/ddp/step1/micro_right.html" %}
     </p>
   </a>
-  <div class="pad-top-medium align-right hide-until-medium">
-    <span class="level-dot level7-dot red-bg"></span>
-    <p class="pad-horz-line red pull-right">
+  <div class="level-dot-container level7-dot-container">
+    <div class="level-dot level7-dot red-bg"></div>
+    <div class="dot-label dot-label-right red">
       {% blocktrans %}
         Segmented
       {% endblocktrans %}
-    </p>
+    </div>
   </div>
 </div>

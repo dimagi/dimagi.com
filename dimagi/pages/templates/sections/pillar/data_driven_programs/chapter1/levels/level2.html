@@ -1,12 +1,12 @@
 {% load dimagidotcom %}
 {% load i18n %}
 
-<div class="column turquoise-theme pad-right-line">
-  <div class="align-center pad-bottom-medium hide-until-medium">
-    <span class="level-dot level2-dot turquoise-bg"></span>
+<div class="card-container turquoise-theme gap-right-small-at-large gap-right-base-at-medium">
+  <div class="level-dot-container level2-dot-container level-dot-container-bottom hide-until-medium">
+    <div class="level-dot level2-dot turquoise-bg"></div>
   </div>
-  <a class="card theme-border align-center"
-    href="#">
+  <a class="card card-top theme-border align-center"
+     href="#level-summary-2">
     <h5 class="theme-color">
       {% blocktrans %}
         Macro-level, <br class="hide-until-medium" />
@@ -17,4 +17,7 @@
       {% include "svg/pillar/ddp/step1/macro.html" %}
     </p>
   </a>
+  <div class="level-dot-container level2-dot-container level-dot-container-bottom hide-at-medium">
+    <div class="level-dot level2-dot turquoise-bg"></div>
+  </div>
 </div>

@@ -1,12 +1,12 @@
 {% load dimagidotcom %}
 {% load i18n %}
 
-<div class="column red-dark-theme">
-  <div class="align-center pad-bottom-medium hide-until-medium">
-    <span class="level-dot level6-dot red-dark-bg"></span>
+<div class="card-container red-dark-theme">
+  <div class="level-dot-container level6-dot-container level-dot-container-bottom hide-until-medium">
+    <div class="level-dot level6-dot red-dark-bg"></div>
   </div>
-  <a class="card theme-border align-center"
-    href="#">
+  <a class="card card-top theme-border align-center"
+     href="#level-summary-6">
     <h5 class="theme-color">
       {% blocktrans %}
         Day-to-day <br class="hide-until-medium" />
@@ -17,4 +17,7 @@
       {% include "svg/pillar/ddp/step1/day.html" %}
     </p>
   </a>
+  <div class="level-dot-container level6-dot-container level-dot-container-bottom hide-at-medium">
+    <div class="level-dot level6-dot red-dark-bg"></div>
+  </div>
 </div>

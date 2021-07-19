@@ -1,9 +1,9 @@
 {% load dimagidotcom %}
 {% load i18n %}
 
-<div class="column green-theme">
-  <a class="card theme-border align-center"
-    href="baseline">
+<div class="card-container green-theme gap-right-small-at-large gap-right-base-at-medium">
+  <a class="card card-bottom theme-border align-center"
+     href="#level-summary-1">
     <h5 class="theme-color">
       {% blocktrans %}
         Baseline & input <br class="hide-until-medium" />
@@ -14,12 +14,12 @@
       {% include "svg/pillar/ddp/step1/baseline.html" %}
     </p>
   </a>
-  <div class="pad-top-medium display-flex hide-until-medium">
-    <p class="pad-right-line green">
+  <div class="level-dot-container level1-dot-container">
+    <div class="dot-label dot-label-left green">
       {% blocktrans %}
         Aggregated
       {% endblocktrans %}
-    </p>
-    <span class="level-dot level1-dot green-bg"></span>
+    </div>
+    <div class="level-dot level1-dot green-bg"></div>
   </div>
 </div>

@@ -236,16 +236,85 @@ a:not(.button).tile-more {
   }
 }
 
+.level-dot-container {
+  position: relative;
+  height: 30px;
+  margin-top: 30px;
+}
+
+.level-dot-container-bottom {
+  margin-top: 8px;
+  margin-bottom: 30px;
+}
+
 @for $i from 1 through 7 {
+  .level#{$i}-dot-container {
+    padding-top: $i * 1px;
+  }
+
   .level#{$i}-dot {
     height: 28-$i*2px;
     width: 28-$i*2px;
+    margin-left: -1px * ceil((28 - $i * 2) / 2);
+  }
+
+  .card-column .level#{$i}-dot {
+    margin-top: -1px * ceil((28 - $i * 2) / 2);
   }
 }
 
 .level-dot {
   border-radius: 50%;
-  display: inline-block;
+  display: block;
+  position: absolute;
+  left: 50%;
+}
+
+.dot-label {
+  position: absolute;
+  line-height: 30px;
+  font-size: $font-size-small;
+  text-transform: uppercase;
+  font-weight: $font-weight-bold;
+  right: 0;
+
+  &.dot-label-left {
+    top: 36px;
+  }
+
+  &.dot-label-right {
+    top: 100px;
+  }
+
+  @media (min-width: map-get($widths-by-size, 'medium')) {
+    width: 100%;
+    text-align: center;
+
+    &.dot-label-left,
+    &.dot-label-right {
+      top: 27px;
+    }
+  }
+
+  @media (min-width: map-get($widths-by-size, 'large')) {
+    width: auto;
+    text-align: left;
+
+    &.dot-label-left,
+    &.dot-label-right {
+      top: 0;
+    }
+  }
+}
+
+@media (min-width: map-get($widths-by-size, 'large')) {
+  .dot-label-left {
+    left: 0;
+  }
+
+  .dot-label-right {
+    right: 0;
+  }
 }
 
 .info-graphic {
@@ -279,4 +348,16 @@ a:not(.button).tile-more {
 .watch-next-review {
   height: 40px !important; // scss-lint:disable ImportantRule
   font-size: 11px !important; // scss-lint:disable ImportantRule
+}
+
+.card-column .level-dot-container {
+  width: 20%;
+  display: inline-block;
+  margin-top: 0;
+  height: 165px;
+  vertical-align: top;
+
+  .level-dot {
+    top: 50%;
+  }
 }

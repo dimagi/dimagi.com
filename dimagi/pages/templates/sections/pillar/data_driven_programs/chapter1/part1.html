@@ -46,18 +46,29 @@
         {% endblocktrans %}
       </p>
     </div>
-
-    <div class="content grid-4-at-large grid-1-at-medium grid-row-space-small grid-row-equal-heights pad-top-medium grid-col-space-medium gap-horz-none">
-      {% include "sections/pillar/data_driven_programs/chapter1/levels/level1.html" %}
-      {% include "sections/pillar/data_driven_programs/chapter1/levels/level3.html" %}
-      {% include "sections/pillar/data_driven_programs/chapter1/levels/level5.html" %}
-      {% include "sections/pillar/data_driven_programs/chapter1/levels/level7.html" %}
-    </div>{# .sector-group #}
-    <div class="content content-width-medium  info-graphic grid-3-at-large grid-1-at-medium grid-row-space-small grid-row-equal-heights">
-      {% include "sections/pillar/data_driven_programs/chapter1/levels/level2.html" %}
-      {% include "sections/pillar/data_driven_programs/chapter1/levels/level4.html" %}
-      {% include "sections/pillar/data_driven_programs/chapter1/levels/level6.html" %}
-    </div>{# .sector-group #}
-    
+    <div class="hide-until-medium">
+      <div class="content card-row gap-top-small">
+        {% include "sections/pillar/data_driven_programs/chapter1/levels/level1.html" %}
+        {% include "sections/pillar/data_driven_programs/chapter1/levels/level3.html" %}
+        {% include "sections/pillar/data_driven_programs/chapter1/levels/level5.html" %}
+        {% include "sections/pillar/data_driven_programs/chapter1/levels/level7.html" %}
+      </div>
+      <div class="content card-row card-row-bottom gap-bottom-small">
+        {% include "sections/pillar/data_driven_programs/chapter1/levels/level2.html" %}
+        {% include "sections/pillar/data_driven_programs/chapter1/levels/level4.html" %}
+        {% include "sections/pillar/data_driven_programs/chapter1/levels/level6.html" %}
+      </div>
+    </div>
+    <div class="hide-at-medium gap-vert-small">
+      <div class="card-column">
+        {% include "sections/pillar/data_driven_programs/chapter1/levels/level1.html" %}
+        {% include "sections/pillar/data_driven_programs/chapter1/levels/level2.html" %}
+        {% include "sections/pillar/data_driven_programs/chapter1/levels/level3.html" %}
+        {% include "sections/pillar/data_driven_programs/chapter1/levels/level4.html" %}
+        {% include "sections/pillar/data_driven_programs/chapter1/levels/level5.html" %}
+        {% include "sections/pillar/data_driven_programs/chapter1/levels/level6.html" %}
+        {% include "sections/pillar/data_driven_programs/chapter1/levels/level7.html" %}
+      </div>
+    </div>
   </div>{# .content #}
 </section>
