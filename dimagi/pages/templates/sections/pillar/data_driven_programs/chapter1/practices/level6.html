@@ -1,0 +1,29 @@
+{% extends "sections/pillar/data_driven_programs/chapter1/practices/_base.html" %}
+{% load i18n %}
+
+{% block icon %}
+{% include "svg/pillar/ddp/step1/day.html" %}
+{% endblock %}
+
+{% block css_id %}level-summary-6{% endblock %}
+
+{% block heading %}{% blocktrans %}
+  6. Day-to-day reporting
+{% endblocktrans %}{% endblock %}
+
+{% block description %}{% blocktrans %}
+  <p>
+    By aggregating all your data, high-level reports can hide time-based 
+    trends, especially those related to holidays, political events, and 
+    natural disasters.
+  </p>
+  <p>
+    By its very nature, day-to-day reporting segments your data by 
+    time, allowing you to identify potential issues earlier and take 
+    immediate corrective action. You may see certain trends emerge in 
+    these reports that you can begin to account for and plan around. For 
+    instance, on Friday you may see half as many patients coming to the 
+    clinic as any other day, so you may look to reduce staff hours or 
+    send more workers into the field.
+  </p>
+{% endblocktrans %}{% endblock %}

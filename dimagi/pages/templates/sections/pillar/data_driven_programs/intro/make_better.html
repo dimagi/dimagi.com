@@ -1,0 +1,80 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="epic-content pad-top-none pad-bottom-medium blue-theme"
+         id="chapter-intro">
+  <div class="content content-width-medium">
+    <h2 class="pad-top-medium pad-bottom-small">
+      {% blocktrans %}
+        Let’s make your programs better
+      {% endblocktrans %}
+    </h2>
+  </div>
+  <div class="content content-width-medium">
+    <p>
+      {% blocktrans %}
+        You’ve already set up a program.
+      {% endblocktrans %}
+    </p>
+    <p>
+      {% blocktrans %}
+        Your app is working. Your team is trained. Maybe you’ve even set up a regular report.
+      {% endblocktrans %}
+    </p>
+    <p>
+      {% blocktrans %}
+        Nice work! So, what’s next?
+      {% endblocktrans %}
+    </p>
+    <p>
+      {% blocktrans %}
+        Once things are moving along nicely, it’s time to make them even better. 
+        Unfortunately, nearly 50% of organizations 
+        <a href="https://www.mckinsey.com/~/media/McKinsey/Industries/Public%20and%20Social%20Sector/Our%20Insights/The%20age%20of%20analytics%20Competing%20in%20a%20data%20driven%20world/MGI-The-Age-of-Analytics-Full-report.pdf"
+           target="_blank"
+           class="slate">avoid or delay making updates</a>
+        to their applications, because they think “designing an 
+        appropriate organizational structure to support data and analytics 
+        activities” is too big of an obstacle.
+      {% endblocktrans %}
+    </p>
+    <p>
+      {% blocktrans %}
+        We hope to open your eyes to a fact that they can’t see: You’ve actually already done it.
+      {% endblocktrans %}
+    </p>
+    <p>
+      {% blocktrans %}
+        Inside the data you’ve already collected are hidden insights that can 
+        improve your program—and maybe even save it.
+      {% endblocktrans %}
+    </p>
+    <div class="make-better-image white-lazy-bg gap-top-small gap-bottom-line"
+         data-lazybg="true"></div>
+    <p>
+      In this guide, we’ll walk you through the process of evaluating your 
+      current data practices, whether that’s donor reports, 
+      <a href="{% url 'blog_post' 'data-collection-baseline-endline-surveys' %}"
+         target="_blank"
+         class="slate">baseline & endline reports</a>, or just monthly report outs to your team. Then, we’ll show you 
+      how to quickly create more regular reports of that same data. By reviewing 
+      these metrics more regularly, you’ll be able to spot potential areas 
+      that can improve not only your application but your program 
+      overall – whether it’s related to the resources you have, the workforce 
+      you support, or how you make your services available to the communities you serve.
+    </p>
+    <p>
+      {% blocktrans %}
+        This is an iterative process that will continue for the duration of your 
+        program. And if you’re anything like us, there will be things you spot 
+        the first time through that will make you want to go right back and do 
+        it again to make your program even better.
+      {% endblocktrans %}
+    </p>
+    <p>
+      {% blocktrans %}
+        Let’s get started.
+      {% endblocktrans %}
+    </p>
+  </div>{# .content #}
+</section>

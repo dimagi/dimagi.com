@@ -1,0 +1,29 @@
+{% extends "sections/pillar/data_driven_programs/chapter1/practices/_base.html" %}
+{% load i18n %}
+
+{% block icon %}
+{% include "svg/pillar/ddp/step1/micro_right.html" %}
+{% endblock %}
+
+{% block css_id %}level-summary-7{% endblock %}
+
+{% block heading %}{% blocktrans %}
+  7. Micro-level monitoring
+{% endblocktrans %}{% endblock %}
+
+{% block description %}{% blocktrans %}
+  <p>
+    Instead of looking at district or state-level reporting, could you break 
+    your data down and look at the village level? Perhaps view it by small 
+    groups of data collectors?
+  </p>
+  <p>
+    Just as monthly and quarterly reporting can hide day-to-day trends, 
+    aggregate high-level data can obscure trends in particular groups of 
+    users. In CommCare, you can download your data for a group or an 
+    individual user, allowing you to look more granularly at trends within 
+    small groups of users. This level of monitoring might allow you to spot 
+    users who need additional training or a new type of content to support 
+    them in the field.
+  </p>
+{% endblocktrans %}{% endblock %}

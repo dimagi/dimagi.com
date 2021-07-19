@@ -1,0 +1,160 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="epic-content pad-top-line pad-bottom-small border-top">
+  <div>
+    <h2 class="pad-top-small"> 
+      {% blocktrans %}
+        Modifying Services
+      {% endblocktrans %}
+    </h2>
+    <p>
+      {% blocktrans %}
+        You might find that certain populations are in dire need of 
+        the services you provide. Or maybe the people you serve need 
+        something slightly different to what you planned for. How 
+        prepared are you to adjust your services to give the right 
+        people what they need?
+      {% endblocktrans %}
+    </p>
+    <div class="services-image white-lazy-bg gap-top-small gap-bottom-line"
+         data-lazybg="true"></div>
+  </div>
+  <div>
+    <h4 class="green pad-top-line">
+      {% blocktrans %}
+        Situation #1:
+      {% endblocktrans %}
+    </h4>
+    <p>
+      {% blocktrans %}
+        Our project was meant to work with PLHIV ages 15-25, but attendance 
+        data from community meetings showed that boys and girls as young 
+        as 12 were attending meetings and needed services.
+      {% endblocktrans %}
+    </p>
+    <p class="cta pad-top-base">
+      <a class="button alt arrow" href="#modal-services-1">
+        {% blocktrans %}
+          View Suggestion
+        {% endblocktrans %}
+      </a>
+    </p>
+  </div>
+  <div class="pad-top-small pad-bottom-medium">
+    <h4 class="green">
+      {% blocktrans %}
+        Situation #2:
+      {% endblocktrans %}
+    </h4>
+    <p>
+      {% blocktrans %}
+        At every one-on-one farmer meeting, you asked farmers what 
+        their number one challenge was. Overwhelmingly, farmers 
+        said they needed access to high-powered machinery.
+      {% endblocktrans %}
+    </p>
+    <p class="cta pad-top-base">
+      <a class="button alt arrow" href="#modal-services-2">
+        {% blocktrans %}
+          View Suggestion
+        {% endblocktrans %}
+      </a>
+    </p>
+  </div>
+</section>
+
+{% block modals %}
+  <div class="modal pad-top-medium"
+       data-dismissible="true"
+       data-size="medium"
+       id="modal-services-1">
+    <div class="modal-scroll">
+      <div class="modal-wrapper">
+        <div class="grid grid-2 accent-gray-bg modal-header">
+          <div class="column content-width-small pad-top-line">
+            <h3 class="modal-header-text slate pad-left-base">Modifying Services</h3>
+          </div>
+          <div class="column">
+            <a href="#" class="modal-close-button"></a>
+          </div>
+        </div>
+        <div class="content pad-horz-medium-at-medium pad-horz-line pad-top-medium programs-images">
+          <h4 class="green">
+            <strong>
+              {% blocktrans %}
+                Situation #1
+              {% endblocktrans %}
+            </strong>
+          </h4>
+          <p>
+            {% blocktrans %}
+              Our project was meant to work with PLHIV ages 15-25, but attendance 
+              data from community meetings showed that boys and girls as young 
+              as 12 were attending meetings and needed services.
+            {% endblocktrans %}
+          </p>
+          <h4 class="green">
+            <strong>
+              {% blocktrans %}
+                Suggestion:
+              {% endblocktrans %}
+            </strong>
+          </h4>
+          <p>
+            {% blocktrans %}
+              Expand eligibility requirements for services to support 
+              children as young as 12 years old.
+            {% endblocktrans %}
+          </p>
+        </div> {# .content #}
+      </div> {# .modal-wrapper #}
+    </div> {# .modal-scroll #}
+  </div> {# .modal #}
+  <div class="modal pad-top-medium"
+       data-dismissible="true"
+       data-size="medium"
+       id="modal-services-2">
+    <div class="modal-scroll">
+      <div class="modal-wrapper">
+        <div class="grid grid-2 accent-gray-bg modal-header">
+          <div class="column content-width-small pad-top-line">
+            <h3 class="modal-header-text slate pad-left-base">Resource reallocation</h3>
+          </div>
+          <div class="column">
+            <a href="#" class="modal-close-button"></a>
+          </div>
+        </div>
+        <div class="content pad-horz-medium-at-medium pad-horz-line pad-top-medium programs-images">
+          <h4 class="green">
+            <strong>
+              {% blocktrans %}
+                Situation #2
+              {% endblocktrans %}
+            </strong>
+          </h4>
+          <p>
+            {% blocktrans %}
+              At every one-on-one farmer meeting, you asked farmers 
+              what their number one challenge was. Overwhelmingly, 
+              farmers said they needed access to high-powered machinery.
+            {% endblocktrans %}
+          </p>
+          <h4 class="green">
+            <strong>
+              {% blocktrans %}
+                Suggestion:
+              {% endblocktrans %}
+            </strong>
+          </h4>
+          <p>
+            {% blocktrans %}
+              Reallocate a portion of the program budget 
+              to help fund a community tractor.
+            {% endblocktrans %}
+          </p>
+        </div> {# .content #}
+      </div> {# .modal-wrapper #}
+    </div> {# .modal-scroll #}
+  </div> {# .modal #}
+{% endblock %}

@@ -1,0 +1,22 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<article class="epic red-theme" id="chapter-2">
+  <section class="parallax-ch2-1 epic-cover"
+           data-lazybg="true">
+    <div class="content">
+      <h1 class="white section-header pad-top-base" {% if request.is_amp %} amp-fx="fade-in" data-duration="1000ms" {% endif %}>
+        {% blocktrans %}
+          <span class="section-number">2</span>
+          <span class="pad-left-medium-at-medium">
+            Review data more regularly
+          </span>
+        {% endblocktrans %}
+      </h1>
+    </div> {# .content #}
+  </section>  
+  <section class="content content-width-medium">
+    {% include "sections/pillar/data_driven_programs/chapter2/part1.html" %}
+    {% include "sections/pillar/data_driven_programs/chapter2/part2.html" %}
+  </section>
+</article>

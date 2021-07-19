@@ -1,0 +1,210 @@
+@import 'app/variables/colors';
+@import 'app/variables/sizes';
+@import 'app/mixins/background';
+@import 'app/variables/type';
+
+.card-row {
+  position: relative;
+}
+
+$_card-row-bottom-widths: (
+  medium: 506px,
+  large: 642px,
+  extra-large: 753px,
+);
+@each $_size, $_width in $_card-row-bottom-widths {
+  @media (min-width: map-get($widths-by-size, $_size)) {
+    .card-row-bottom {
+      width: $_width;
+    }
+  }
+}
+
+
+.card-row-bottom {
+
+  @media (min-width: map-get($widths-by-size, 'medium')) {
+    margin-top: -38px;
+  }
+}
+
+
+.card-container {
+  width: 100%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+$_card-widths-by-size: (
+  medium: 159px,
+  large: 191px,
+  extra-large: 228px,
+);
+
+@each $_size, $_width in $_card-widths-by-size {
+  @media (min-width: map-get($widths-by-size, $_size)) {
+    .card-container {
+      width: $_width;
+    }
+  }
+}
+
+.card {
+  background: $color-white;
+  display: block;
+  padding: $space-line;
+  padding-bottom: $space-small;
+  padding-top: $space-small;
+  position: relative;
+  width: 100%;
+  border: 2px solid;
+  border-radius: 10px;
+  height: 220px;
+
+  @media (min-width: map-get($widths-by-size, 'large')) {
+    height: 194px;
+  }
+
+  @media (max-width: (map-get($widths-by-size, 'medium') - 1px)) {
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 50%;
+      width: 0;
+      height: 0;
+      border: 16px solid transparent;
+	  border-left-color: inherit;
+	  border-right: 0;
+      margin-top: -16px;
+      margin-right: -16px;
+    }
+
+    &:after {
+      border: 13px solid transparent;
+      border-left-color: $color-white;
+      margin-top: -13px;
+      margin-right: -26px;
+    }
+  }
+
+  @media (min-width: map-get($widths-by-size, 'medium')) {
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      width: 0;
+      height: 0;
+      border: 16px solid transparent;
+      margin-left: -16px;
+    }
+
+    &.card-bottom:before,
+    &.card-bottom:after {
+      bottom: 0;
+      border-top-color: inherit;
+      border-bottom: 0;
+      margin-bottom: -16px;
+    }
+
+    &.card-top:before,
+    &.card-top:after {
+      top: 0;
+      border-bottom-color: inherit;
+      border-top: 0;
+      margin-top: -16px;
+    }
+
+    &:after {
+      border: 13px solid transparent;
+      margin-left: -13px;
+    }
+
+    &.card-bottom:after {
+      border-top-color: $color-white;
+      border-bottom: 0;
+      margin-bottom: -13px;
+    }
+
+    &.card-top:after {
+      border-bottom-color: $color-white;
+      border-top: 0;
+      margin-top: -13px;
+    }
+
+    &.card-top {
+      padding-top: 36px;
+    }
+  }
+
+  .theme-icon + * {
+    margin-top: $space-base;
+
+    > svg {
+      height: 60px !important;
+    }
+  }
+
+  &.full-bleed {
+    padding: 0;
+
+    .copy {
+      padding: $space-small;
+    }
+  }
+
+  .button-container {
+    height: $space-small;
+    position: relative;
+  }
+
+  &:not(.card-no-link) {
+    .button {
+      bottom: $space-small;
+      left: $space-small;
+      min-width: calc(100% - 60px);
+      position: absolute;
+      padding: 10px;
+    }
+  }
+}
+
+@each $_theme, $_color in $colors-by-theme {
+  .#{$_theme}-theme {
+    .card:hover {
+      background-color: $_color;
+
+      h5.theme-color {
+        color: $color-white !important; // scss-lint:disable ImportantRule
+      }
+
+      &:after {
+        display: none;
+      }
+
+      .theme-icon [fill]:not([fill="none"]):not([fill^=url]) {
+        fill: $color-white !important; // scss-lint:disable ImportantRule
+      }
+
+      .theme-icon [stroke]:not([stroke="transparent"]) {
+        stroke: $color-white !important; // scss-lint:disable ImportantRule
+      }
+    }
+  }
+}
+
+.card-column {
+  .card-container {
+    margin-bottom: $space-small;
+    vertical-align: top;
+  }
+
+  .card {
+    display: inline-block;
+    width: 68%;
+    height: 165px;
+  }
+}
+

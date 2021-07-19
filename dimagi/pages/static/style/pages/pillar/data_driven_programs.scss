@@ -1,0 +1,363 @@
+@import 'app/mixins/background';
+@import 'app/variables/colors';
+@import 'app/variables/sizes';
+@import 'app/variables/type';
+
+#intro {
+  @include make-bg(epic-cover, '../../../pages/pillar/ddp/intro/hero');
+}
+
+.sub-nav-menu-active .sub-nav .dropdown {
+  height: 220px;
+}
+
+.sub-nav a:not(.button).social {
+  cursor: pointer;
+  svg * {
+    fill: $color-text;
+    transition: fill 150ms ease-in-out;
+  }
+  svg {
+  	cursor: pointer;
+    margin-top: -1px;
+    height: 20px;
+    width: 20px;
+  }
+  &:hover svg * {
+    fill: $color-blue;
+  }
+}
+
+$_max-mobile: $width-desktop - 1px;
+@media (max-width: $_max-mobile) {
+  .sub-nav-menu-active .sub-nav .dropdown {
+    height: auto;
+  }
+}
+
+.dropdown .social-links {
+  padding-top: $space-small;
+  .social {
+    display: inline-block;
+    padding-right: $space-base;
+  }
+}
+
+a:not(.button).tile-more {
+  background: transparent;
+  color: $color-white;
+  padding: $space-small;
+  padding-bottom: $space-small + $space-base;
+  h2 {
+    font-weight: $font-weight-medium;
+  }
+  p:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  &:hover {
+    color: $color-white;
+  }
+  &::before {
+    border-color: transparent !important;
+  }
+  &::after {
+    border-color: $color-white !important;
+  }
+}
+
+.tile-chapter {
+  position: relative;
+  &:after {
+    border-width: 10px !important;
+  }
+  h2 {
+    color: $color-white;
+    font-size: $font-size-h3;
+    line-height: $line-height-header;
+  }
+  .chapter-number {
+  	color: $color-white;
+    font-size: 60px;
+    line-height: 60px;
+    position: absolute;
+    bottom: $space-small;
+  }
+}
+
+.dark-gray-bg {
+  background-color: #E6E6E5 !important;
+}
+
+.play-icon-medium {
+  margin: 100px auto;
+}
+
+.parallax-ch1-1 {
+  @include make-parallax-bg(epic-cover, '../../../pages/pillar/ddp/headers/section1/hero');
+  height: auto !important;
+}
+
+.parallax-ch2-1 {
+  @include make-parallax-bg(epic-cover, '../../../pages/pillar/ddp/headers/section2/hero');
+  height: auto !important;
+}
+.parallax-ch3-1 {
+  @include make-parallax-bg(epic-cover, '../../../pages/pillar/ddp/headers/section3/hero');
+  height: auto !important;
+}
+.parallax-ch4-1 {
+  @include make-parallax-bg(epic-cover, '../../../pages/pillar/ddp/headers/section4/hero');
+  height: auto !important;
+}
+.parallax-ch5-1 {
+  @include make-parallax-bg(epic-cover, '../../../pages/pillar/ddp/headers/section5/hero');
+  height: auto !important;
+}
+
+.epic {
+  $_base-height: 190px;
+  $_height-by-size: (
+    small: 249px,
+    medium: 399px,
+  );
+}
+
+#chapter-intro {
+  $_base-height: 190px;
+  $_height-by-size: (
+    small: 324px,
+    medium: 390px,
+  );
+  @include make-bg(make-better-image, '../../../pages/pillar/ddp/intro/start/intro', $_base-height, $_height-by-size);
+}
+
+.section-header span {
+  font-size: 57px !important;
+  line-height: 72px !important;
+  font-weight: 700 !important;
+}
+
+.section-number {
+  position: absolute;
+}
+
+#chapter-intro .make-better-image .bg-loader {
+  background-size: 100% auto;
+}
+
+.image.export-image {
+  @include background-cover('../../../pages/pillar/ddp/step2/video/custom_exports.jpg');
+  height: 250px;
+  width: 240px;
+}
+
+.image.review-image {
+  @include background-cover('../../../pages/pillar/ddp/step2/video/review.jpg');
+  height: 250px;
+  width: 240px;
+}
+
+.image.action-image {
+  @include background-cover('../../../pages/pillar/ddp/step2/video/action.jpg');
+  height: 250px;
+  width: 240px;
+}
+
+.image.work-image {
+  @include background-cover('../../../pages/pillar/ddp/step2/export.jpg');
+  height: 250px;
+  width: 240px;
+}
+
+.image.situation-image {
+  @include background-cover('../../../pages/pillar/ddp/step3/validation.jpg');
+  height: 250px;
+  width: 240px;
+}
+
+@media (min-width: $width-desktop) {
+  .image.export-image,
+  .image.review-image,
+  .image.action-image,
+  .image.work-image,
+  .image.situation-image {
+    height: 250px;
+    width: 100%;
+  }
+}
+
+#chapter-3 {
+  $_base-height: 190px;
+  $_height-by-size: (
+    small: 324px,
+    medium: 390px,
+  );
+  @include make-bg(stories-image, '../../../pages/pillar/ddp/step3/stories/story', $_base-height, $_height-by-size);
+  @include make-bg(training-image, '../../../pages/pillar/ddp/step3/training/train', $_base-height, $_height-by-size);
+  @include make-bg(services-image, '../../../pages/pillar/ddp/step3/services/service', $_base-height, $_height-by-size);
+}
+
+
+.people-image {
+  @include background-cover('../../../pages/pillar/ddp/step4/profile.jpg');
+  height: 80px;
+  width: 80px;
+}
+
+#chapter-4 {
+  $_base-height: 190px;
+  $_height-by-size: (
+    small: 324px,
+    medium: 390px,
+  );
+  @include make-bg(covid-image, '../../../pages/pillar/ddp/step4/intro', $_base-height, $_height-by-size);
+}
+
+.modal-wrapper {
+  padding-top: 0px !important;
+}
+
+.modal-header {
+  height: 60px;
+}
+
+.modal-header-text {
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.next-video-block {
+  width: 330px;
+}
+@media (max-width: $width-mobile) {
+  .next-video-block {
+    width: auto;
+  }
+}
+
+.level-dot-container {
+  position: relative;
+  height: 30px;
+  margin-top: 30px;
+}
+
+.level-dot-container-bottom {
+  margin-top: 8px;
+  margin-bottom: 30px;
+}
+
+@for $i from 1 through 7 {
+  .level#{$i}-dot-container {
+    padding-top: $i * 1px;
+  }
+
+  .level#{$i}-dot {
+    height: 28-$i*2px;
+    width: 28-$i*2px;
+    margin-left: -1px * ceil((28 - $i * 2) / 2);
+  }
+
+  .card-column .level#{$i}-dot {
+    margin-top: -1px * ceil((28 - $i * 2) / 2);
+  }
+}
+
+.level-dot {
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+  left: 50%;
+}
+
+.dot-label {
+  position: absolute;
+  line-height: 30px;
+  font-size: $font-size-small;
+  text-transform: uppercase;
+  font-weight: $font-weight-bold;
+  right: 0;
+
+  &.dot-label-left {
+    top: 36px;
+  }
+
+  &.dot-label-right {
+    top: 100px;
+  }
+
+  @media (min-width: map-get($widths-by-size, 'medium')) {
+    width: 100%;
+    text-align: center;
+
+    &.dot-label-left,
+    &.dot-label-right {
+      top: 27px;
+    }
+  }
+
+  @media (min-width: map-get($widths-by-size, 'large')) {
+    width: auto;
+    text-align: left;
+
+    &.dot-label-left,
+    &.dot-label-right {
+      top: 0;
+    }
+  }
+}
+
+@media (min-width: map-get($widths-by-size, 'large')) {
+  .dot-label-left {
+    left: 0;
+  }
+
+  .dot-label-right {
+    right: 0;
+  }
+}
+
+.info-graphic {
+  margin-top: -98px;
+}
+
+.chat-image {
+  $_base-height: 425px;
+  $_height-by-size: (
+    extra-small: 390px,
+    small: 500px,
+    medium: 520px,
+    large: 500px,
+    extra-large: 500px,
+  );
+  @include make-bg(epic-cover, '../../../pages/pillar/ddp/download/hero', $_base-height, $_height-by-size);
+}
+
+@media (min-width: $width-desktop) {
+  .chat-card {
+    width: 380px;
+    float: right;
+  }
+}
+@media (max-width: $width-desktop) {
+  .info-graphic {
+    margin-top: 0px;
+  }
+}
+
+.watch-next-review {
+  height: 40px !important; // scss-lint:disable ImportantRule
+  font-size: 11px !important; // scss-lint:disable ImportantRule
+}
+
+.card-column .level-dot-container {
+  width: 30%;
+  display: inline-block;
+  margin-top: 0;
+  height: 165px;
+  vertical-align: top;
+
+  .level-dot {
+    top: 50%;
+  }
+}

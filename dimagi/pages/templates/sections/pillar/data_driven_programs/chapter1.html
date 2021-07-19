@@ -1,0 +1,24 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<article class="epic" id="chapter-1">
+
+  <section class="parallax-ch1-1 epic-cover"
+           data-lazybg="true">
+    <div class="content">
+      <h1 class="white section-header pad-top-base" {% if request.is_amp %} amp-fx="fade-in" data-duration="1000ms" {% endif %}>
+        {% blocktrans %}
+          <span class="section-number">1</span>
+          <span class="pad-left-medium-at-medium">
+            Evaluate Current Data Practices
+          </span>
+        {% endblocktrans %}
+      </h1>
+    </div> {# .content #}
+  </section>  
+  <section class="content">
+    {% include "sections/pillar/data_driven_programs/chapter1/part1.html" %}
+    {% include "sections/pillar/data_driven_programs/chapter1/part2.html" %}
+  </section>
+
+</article>

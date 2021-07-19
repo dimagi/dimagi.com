@@ -1,0 +1,23 @@
+{% load dimagidotcom %}
+{% load i18n %}
+
+<div class="card-container orange-theme gap-right-small-at-large gap-right-base-at-medium">
+  <div class="level-dot-container level4-dot-container level-dot-container-bottom hide-until-medium">
+    <div class="level-dot level4-dot orange-bg"></div>
+  </div>
+  <a class="card card-top theme-border align-center"
+     href="#level-summary-4">
+    <h5 class="theme-color">
+      {% blocktrans %}
+        Donor <br class="hide-until-medium" />
+        Reporting
+      {% endblocktrans %}
+    </h5>
+    <p class="theme-icon">
+      {% include "svg/pillar/ddp/step1/donor.html" %}
+    </p>
+  </a>
+  <div class="level-dot-container level4-dot-container level-dot-container-bottom hide-at-medium">
+    <div class="level-dot level4-dot orange-bg"></div>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+
+<article class="epic epic-intro blue-theme" id="intro">
+
+  <section class="epic-cover"
+           data-lazybg="true">
+    <div class="content content-width-medium pad-top-large">
+      <h1 {% if request.is_amp %} amp-fx="parallax" data-parallax-factor="1.3" {% endif %}>
+        {% blocktrans %}
+          Guide to Data-Driven 
+          Program Improvements
+        {% endblocktrans %}
+      </h1>
+    </div> {# .content #}
+  </section>
+
+  {% include "sections/pillar/data_driven_programs/intro/make_better.html" %}
+  {% include "sections/pillar/data_driven_programs/intro/program_list.html" %}
+</article>

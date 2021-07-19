@@ -25,3 +25,9 @@ def data_collection(request):
 def community_health_worker(request):
     return render(request, 'pages/pillar/community_health_worker.html')
 
+@enable_amp
+@enable_ab_test(DEMO_WORKFLOW_V2)
+@set_amp_page_type(AmpPageType.PILLAR)
+def data_driven_programs(request):
+    return render(request, 'pages/pillar/data_driven_programs.html')
+

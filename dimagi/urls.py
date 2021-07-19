@@ -90,6 +90,8 @@ urlpatterns = [
         pillar.data_collection, name='data_collection'),
     url(r'^community-health-worker/$',
         pillar.community_health_worker, name='community_health_worker'),
+    url(r'^data-driven-program-improvements/$',
+        pillar.data_driven_programs, name='data_driven_programs'),
 
     url(r'^blog/mobile-data-collection-standards/$',
         redirect.blog('mobile-data-collection-mobile-survey-design')),

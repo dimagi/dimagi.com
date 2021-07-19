@@ -1,0 +1,24 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<article class="epic green-theme" id="chapter-3">
+  <section class="parallax-ch3-1 epic-cover"
+           data-lazybg="true">
+    <div class="content">
+      <h1 class="white section-header pad-top-base" {% if request.is_amp %} amp-fx="fade-in" data-duration="1000ms" {% endif %}>
+        {% blocktrans %}
+          <span class="section-number">3</span>
+          <span class="pad-left-medium-at-medium">
+            Uncover Hidden Insights
+          </span>
+        {% endblocktrans %}
+      </h1>
+    </div> {# .content #}
+  </section>  
+  <section class="content content-width-medium">
+    {% include "sections/pillar/data_driven_programs/chapter3/intro.html" %}
+    {% include "sections/pillar/data_driven_programs/chapter3/situation.html" %}
+    {% include "sections/pillar/data_driven_programs/chapter3/training.html" %}
+    {% include "sections/pillar/data_driven_programs/chapter3/services.html" %}
+  </section>
+</article>

@@ -1,0 +1,164 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="epic-content pad-top-line pad-bottom-small border-top">
+  <div>
+    <h2 class="pad-top-small"> 
+      {% blocktrans %}
+        (Re)Training
+      {% endblocktrans %}
+    </h2>
+    <p>
+      {% blocktrans %}
+      Sometimes, you’ll see that your team just isn’t using your 
+      application quite right. Did they ever go through training? 
+      Maybe they need a refresher?
+      {% endblocktrans %}
+    </p>
+    <div class="training-image white-lazy-bg gap-top-small gap-bottom-line"
+         data-lazybg="true"></div>
+  </div>
+  <div>
+    <h4 class="green pad-top-line">
+      {% blocktrans %}
+        Situation #1:
+      {% endblocktrans %}
+    </h4>
+    <p>
+      {% blocktrans %}
+        The pre-test scores for children in School C were 30% higher 
+        than any other school. After talking with staff at School C, 
+        you realized they were administering the pre-test after 
+        reviewing the day’s lesson, instead of before.
+      {% endblocktrans %}
+    </p>
+    <p class="cta pad-top-base">
+      <a class="button alt arrow" href="#modal-training-1">
+        {% blocktrans %}
+          View Suggestion
+        {% endblocktrans %}
+      </a>
+    </p>
+  </div>
+  <div class="pad-top-small">
+    <h4 class="green">
+      {% blocktrans %}
+        Situation #2:
+      {% endblocktrans %}
+    </h4>
+    <p>
+      {% blocktrans %}
+        Users in Factory M are inputting workers’ temperatures 
+        in Fahrenheit, but in Factory L, they are inputting 
+        temperatures in Celsius.
+      {% endblocktrans %}
+    </p>
+    <p class="cta pad-top-base">
+      <a class="button alt arrow" href="#modal-training-2">
+        {% blocktrans %}
+          View Suggestion
+        {% endblocktrans %}
+      </a>
+    </p>
+  </div>
+</section>
+
+{% block modals %}
+  <div class="modal pad-top-medium"
+       data-dismissible="true"
+       data-size="medium"
+       id="modal-training-1">
+    <div class="modal-scroll">
+      <div class="modal-wrapper">
+        <div class="grid grid-2 accent-gray-bg modal-header">
+          <div class="column content-width-small pad-top-line">
+            <h3 class="modal-header-text slate pad-left-base">(Re)Training</h3>
+          </div>
+          <div class="column">
+            <a href="#" class="modal-close-button"></a>
+          </div>
+        </div>
+        <div class="content pad-horz-medium-at-medium pad-horz-line pad-top-medium programs-images">
+          <h4 class="green">
+            <strong>
+              {% blocktrans %}
+                Situation #1
+              {% endblocktrans %}
+            </strong>
+          </h4>
+          <p>
+            {% blocktrans %}
+              The pre-test scores for children in School C were 30% higher 
+              than any other school. After talking with staff at School C, 
+              you realized they were administering the pre-test after 
+              reviewing the day’s lesson, instead of before.
+            {% endblocktrans %}
+          </p>
+          <h4 class="green">
+            <strong>
+              {% blocktrans %}
+                Suggestion:
+              {% endblocktrans %}
+            </strong>
+          </h4>
+          <p>
+            {% blocktrans %}
+              Share a reminder with staff that the pre-test 
+              must come before the day’s lesson.
+            {% endblocktrans %}
+          </p>
+        </div> {# .content #}
+      </div> {# .modal-wrapper #}
+    </div> {# .modal-scroll #}
+  </div> {# .modal #}
+  <div class="modal pad-top-medium"
+       data-dismissible="true"
+       data-size="medium"
+       id="modal-training-2">
+    <div class="modal-scroll">
+      <div class="modal-wrapper">
+        <div class="grid grid-2 accent-gray-bg modal-header">
+          <div class="column content-width-small pad-top-line">
+            <h3 class="modal-header-text slate pad-left-base">(Re)Training</h3>
+          </div>
+          <div class="column">
+            <a href="#" class="modal-close-button"></a>
+          </div>
+        </div>
+        <div class="content pad-horz-medium-at-medium pad-horz-line pad-top-medium programs-images">
+          <h4 class="green">
+            <strong>
+              {% blocktrans %}
+                Situation #2
+              {% endblocktrans %}
+            </strong>
+          </h4>
+          <p>
+            {% blocktrans %}
+              Users in Factory M are inputting workers’ temperatures in 
+              Fahrenheit, but in Factory L, they are inputting temperatures in Celsius.
+            {% endblocktrans %}
+          </p>
+          <h4 class="green">
+            <strong>
+              {% blocktrans %}
+                Suggestion:
+              {% endblocktrans %}
+            </strong>
+          </h4>
+          <p>
+            {% blocktrans %}
+              Update the app to add in the words “in degrees Celsius” to 
+              the question and include a validation condition on the answer.
+            {% endblocktrans %}
+          </p>
+          <div class="content content-width-small">
+            <div class="image situation-image pad-vert-small white-lazy-bg" data-lazybg="true">
+              {% include "partials/wistia_popover.html" with wistia_id='nx1fou8tsg' play_icon_medium=True show_image=True %}
+            </div>
+          </div>
+        </div> {# .content #}
+      </div> {# .modal-wrapper #}
+    </div> {# .modal-scroll #}
+  </div> {# .modal #}
+{% endblock %}

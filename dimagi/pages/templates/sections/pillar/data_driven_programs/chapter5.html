@@ -1,0 +1,59 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<article class="epic slate-theme pad-bottom-medium" id="chapter-5">
+
+  <section class="parallax-ch5-1 epic-cover"
+           data-lazybg="true">
+    <div class="content">
+      <h1 class="white section-header pad-top-base" {% if request.is_amp %} amp-fx="fade-in" data-duration="1000ms" {% endif %}>
+        {% blocktrans %}
+          <span class="section-number">5</span>
+          <span class="pad-left-medium-at-medium">
+            What’s next?
+          </span>
+        {% endblocktrans %}
+      </h1>
+    </div> {# .content #}
+  </section>  
+  <section class="content content-width-medium">
+    {% include "sections/pillar/data_driven_programs/chapter5/intro.html" %}
+  </section>
+
+</article>
+
+{% block modals %}
+  <div class="modal"
+       data-dismissible="true"
+       data-size="medium"
+       id="get-in-touch">
+    <div class="modal-scroll">
+      <div class="modal-wrapper">
+        <a href="#" class="modal-close-button"></a>
+        <div class="content pad-horz-medium-at-medium pad-horz-small pad-vert-medium slate-theme">
+          <h3>
+            {% blocktrans %}
+              Schedule A Demo
+            {% endblocktrans %}
+          </h3>
+          <section id="get-in-touch-content"></section>
+        </div>{# .content #}
+      </div>{# .modal-wrapper #}
+    </div>{# .modal-scroll #}
+  </div>{# .modal #}
+{% endblock %}
+
+{% block js %}
+  <!--[if lte IE 8]>
+    <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+  <![endif]-->
+  <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+  <script>
+    hbspt.forms.create({
+      portalId: "503070",
+      formId: "0af51cfe-eab5-4c4f-b68d-765ea6809778",
+      target: "#get-in-touch-content",
+      css: "",
+    });
+  </script>
+{% endblock %}
