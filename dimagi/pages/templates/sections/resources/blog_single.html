@@ -1,0 +1,8 @@
+<a class="post" href="{% url 'blog_post' post.slug %}" target="_blank">
+    <div class="aspect-ratio-{{ ratio }} post-thumbnail gap-bottom-line orange-lazy-bg"
+         data-lazyplaceholder="true"
+         data-src="{{ post.thumbnail }}"></div>
+  
+    <h6>{{ post.title }}</h6>
+  </a>
+  

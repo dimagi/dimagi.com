@@ -1,5 +1,5 @@
-{% load dimagidotcom %}
 {% load i18n %}
+{% load dimagidotcom %}
 
 <section class="testimonial pad-bottom-small blog"
          id="blog">
@@ -16,53 +16,13 @@
     </p>
   </div>{# .content #}
   <div class="content">
-    <div class="grid grid-3-at-large grid-1-at-medium grid-row-equal-heights">
-      <div class="column pad-top-line">
-        <div class="news-image-testimonial">
-          <div class="image testimonial1"
-               data-lazybg="true"></div>
-          <div class="pad-line">
-            <h5>
-              <strong class="body-color">
-                {% blocktrans %}
-                  Innovation at Dimagi, Part 6: Managing the New Business Portfolio
-                {% endblocktrans %}
-              </strong>
-            </h5>
-          </div>
+    <div class="grid-3-at-medium grid-1-at-small grid-row-space-small">
+      {% for post in posts %}
+        <div class="column pad-top-base">
+          {% include "sections/resources/blog_single.html" with post=post ratio='rect' hide_cat=True %}
         </div>
-      </div>{# .column #}
-      <div class="column pad-top-line">
-        <div class="news-image-testimonial">
-          <div class="image testimonial2"
-               data-lazybg="true"></div>
-          <div class="pad-line">
-            <h5>
-              <strong class="body-color">
-                {% blocktrans %}
-                  Learning from COVID-19 and Preparing for the Future
-                {% endblocktrans %}
-              </strong>
-            </h5>
-          </div>
-        </div>
-      </div>{# .column #}
-      <div class="column pad-top-line">
-        <div class="news-image-testimonial">
-          <div class="image testimonial3"
-               data-lazybg="true"></div>
-          <div class="pad-line">
-            <h5>
-              <strong class="body-color">
-                {% blocktrans %}
-                  Embarking on the Journey to Self- Reliance in Malawi
-                {% endblocktrans %}
-              </strong>
-            </h5>
-          </div>
-        </div>
-      </div>{# .column #}
-    </div>{# .grid #}
+      {% endfor %}
+    </div>
   </div>{# .content #}
   <div class="align-center pad-bottom-small">
     <a class="arrow"
