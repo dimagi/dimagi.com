@@ -25,6 +25,13 @@
     {% endblocktrans %}
   </a>
 
+  <a class="menu-open-sibling {% click_nav 'services' %}"
+     href="{% url 'services' %}">
+    {% blocktrans %}
+      Resources
+    {% endblocktrans %}
+  </a>
+
   <a class="menu-open {% click_nav 'more' %}"
      data-drawer="menu-drawer"
      {% if request.is_amp %}

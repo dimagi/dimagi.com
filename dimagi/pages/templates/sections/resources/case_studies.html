@@ -1,0 +1,84 @@
+{% load dimagidotcom %}
+{% load i18n %}
+
+<section class="testimonial pad-bottom-small case-study"
+         id="news">
+  <div class="content pad-vert-small">
+    <h2 class="align-center">
+      {% blocktrans %}
+        Case Studies
+      {% endblocktrans %}
+    </h2>
+    <p class="align-center">
+      {% blocktrans %}
+        These comprehensive guides will help you get started and improve your programs
+      {% endblocktrans %}
+    </p>
+  </div>{# .content #}
+  <div class="content">
+    <div class="grid grid-3-at-large grid-1-at-medium grid-row-equal-heights">
+      <a href="https://dimagi.com/case-studies/lwala-community-alliance/"
+         target="_blank">
+        <div class="column pad-top-line">
+          <div class="news-image-testimonial">
+            <div class="image testimonial1"
+                data-lazybg="true"></div>
+            <div class="pad-line">
+              <h5>
+                <strong class="body-color">
+                  {% blocktrans %}
+                    Lwala Community Alliance: CommCare for Improving Vaccination Rates
+                  {% endblocktrans %}
+                </strong>
+              </h5>
+            </div>
+          </div>
+        </div>{# .column #}
+      </a>
+      <a href="https://dimagi.com/case-studies/infomovel/"
+         target="_blank">
+        <div class="column pad-top-line">
+          <div class="news-image-testimonial">
+            <div class="image testimonial2"
+                data-lazybg="true"></div>
+            <div class="pad-line">
+              <h5>
+                <strong class="body-color">
+                  {% blocktrans %}
+                    Infomovel: CommCare for HIV and TB Patient Tracking
+                  {% endblocktrans %}
+                </strong>
+              </h5>
+            </div>
+          </div>
+        </div>{# .column #}
+      </a>
+      <a href="https://dimagi.com/case-studies/mhealth-tdh-burkinafaso/"
+         target="_blank">
+        <div class="column pad-top-line">
+          <div class="news-image-testimonial">
+            <div class="image testimonial3"
+                data-lazybg="true"></div>
+            <div class="pad-line">
+              <h5>
+                <strong class="body-color">
+                  {% blocktrans %}
+                    Terre des hommes: The Integrated eDiagnostic Approach for Child Health
+                  {% endblocktrans %}
+                </strong>
+              </h5>
+            </div>
+          </div>
+        </div>{# .column #}
+      </a>
+    </div>{# .grid #}
+  </div>{# .content #}
+  <div class="align-center pad-bottom-small">
+    <a class="arrow"
+       href="{% url 'case_studies' %}">
+      {% blocktrans %}
+        view more case studies
+      {% endblocktrans %}
+    </a>
+  </div>
+</section>

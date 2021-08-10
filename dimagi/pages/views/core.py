@@ -84,6 +84,8 @@ def case_management(request):
     }
     return render(request, 'pages/case_management.html', context)
 
+def resources(request):
+    return render(request, 'pages/resources.html')
 
 @no_index
 @hide_drift

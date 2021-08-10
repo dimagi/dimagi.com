@@ -1,0 +1,35 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<a href="{% url 'blog_post' 'covid-19-pro-bono-project-highlights-2021' %}"
+   target="_blank"
+   class="epic epic-content neutral-dark-theme content-width-medium"
+   id="cms-india">
+
+  <section class="image cms-india aspect-ratio-square"
+           data-lazybg="true">
+    <div class="content pad-top-large pad-horz-line">
+      <div class="pad-top-large">
+        <div class="pad-top-large">
+          <h5 class="white pad-top-large pad-bottom-none">
+            {% blocktrans %}
+              BLOG
+            {% endblocktrans %}
+          </h5>
+          <h5 class="white">
+            {% blocktrans %}
+              A Year of COVID-19 Response With CommCare
+            {% endblocktrans %}
+          </h5>
+        </div>
+        <p class="white">
+          {% blocktrans %}
+            More than a year on from the release of our first template applications 
+            for COVID-19 response, look at how our partners have been putting 
+            them to use across the globe.
+          {% endblocktrans %}
+        </p>
+      </div>
+    </div> {# .content #}
+  </section>
+</a>

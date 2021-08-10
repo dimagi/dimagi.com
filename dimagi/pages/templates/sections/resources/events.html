@@ -1,0 +1,77 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="epic-content pad-top-small pad-bottom-small slate-theme">
+  <div class="content">
+    <h2 class="align-center pad-bottom-line">
+      {% blocktrans %}
+        Events
+      {% endblocktrans %}
+    </h2>
+    <div class="feature-projects accent-gray-bg gap-top-small pad-bottom-small">
+      <div class="grid-flex-at-medium">
+        <div class="date-block feature-partner-im-saf column pad-top-medium-at-medium flex-align-left-at-large align-center">
+          <h5 class="gap-vert-none-at-medium pad-vert-small">
+            {% blocktrans %}
+              24 June, 2021
+            {% endblocktrans %}
+          </h5>
+        </div>
+        <div class="column display-flex-at-medium pad-left-small-at-medium pad-vert-line-at-large pad-top-small pad-left-line align-center">
+          <div class="align-left-at-medium align-center next-video-block">
+            <h5>
+              {% blocktrans %}
+                Optimize your global rollout of CommCare
+              {% endblocktrans %}
+            </h5>
+            <p class="pad-right-line">
+              {% blocktrans %}
+                In this webinar, we will hear from International Rescue Committee 
+                (IRC) and Catholic Relief Services (CRS) about their global rollout 
+                of CommCare Enterprise. Why they did it and how they did it—with 
+                some priceless lessons learned along the way.
+              {% endblocktrans %}
+            </p>
+          </div>
+          <p class="watch-next-review button align-center gap-vert-small-at-medium gap-top-small gap-right-small">
+            {% trans 'View Webinar' as video_text %}
+            {% include "partials/wistia_popover.html" with wistia_id='xnmaqyz01a' text=video_text white_class='white' %}
+          </p>
+        </div>
+      </div>
+    </div>{# .feature-projects #}
+
+    <div class="feature-projects accent-gray-bg gap-top-small pad-bottom-small">
+      <div class="grid-flex-at-medium">
+        <div class="date-block feature-partner-im-saf column pad-top-medium-at-medium flex-align-left-at-large align-center">
+          <h5 class="gap-vert-none-at-medium pad-vert-small">
+            {% blocktrans %}
+              27 May, 2021
+            {% endblocktrans %}
+          </h5>
+        </div>
+        <div class="column display-flex-at-medium pad-left-small-at-medium pad-vert-line-at-large pad-top-small pad-left-line align-center">
+          <div class="align-left-at-medium align-center next-video-block">
+            <h5>
+              {% blocktrans %}
+                Learn how to build a global M&E system 
+              {% endblocktrans %}
+            </h5>
+            <p class="pad-right-line">
+              {% blocktrans %}
+                This webinar will help organizations build better systems for 
+                global monitoring and evaluation. ChildFund and GOAL Global 
+                share how they each managed to solve unique challenges with CommCare.
+              {% endblocktrans %}
+            </p>
+          </div>
+          <p class="watch-next-review button align-center gap-vert-small-at-medium gap-top-small gap-right-small">
+            {% trans 'View Webinar' as video_text %}
+            {% include "partials/wistia_popover.html" with wistia_id='xnmaqyz01a' text=video_text white_class='white' %}
+          </p>
+        </div>
+      </div>
+    </div>{# .feature-projects #}
+
+  </div>{# .content #}
+</section>

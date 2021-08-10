@@ -1,0 +1,75 @@
+{% load dimagidotcom %}
+{% load i18n %}
+
+<section class="testimonial pad-bottom-small blog"
+         id="blog">
+  <div class="content pad-vert-small">
+    <h2 class="align-center">
+      {% blocktrans %}
+        Blogs
+      {% endblocktrans %}
+    </h2>
+    <p class="align-center">
+      {% blocktrans %}
+        Read the latest about what we’re working on from our team and partners
+      {% endblocktrans %}
+    </p>
+  </div>{# .content #}
+  <div class="content">
+    <div class="grid grid-3-at-large grid-1-at-medium grid-row-equal-heights">
+      <div class="column pad-top-line">
+        <div class="news-image-testimonial">
+          <div class="image testimonial1"
+               data-lazybg="true"></div>
+          <div class="pad-line">
+            <h5>
+              <strong class="body-color">
+                {% blocktrans %}
+                  Innovation at Dimagi, Part 6: Managing the New Business Portfolio
+                {% endblocktrans %}
+              </strong>
+            </h5>
+          </div>
+        </div>
+      </div>{# .column #}
+      <div class="column pad-top-line">
+        <div class="news-image-testimonial">
+          <div class="image testimonial2"
+               data-lazybg="true"></div>
+          <div class="pad-line">
+            <h5>
+              <strong class="body-color">
+                {% blocktrans %}
+                  Learning from COVID-19 and Preparing for the Future
+                {% endblocktrans %}
+              </strong>
+            </h5>
+          </div>
+        </div>
+      </div>{# .column #}
+      <div class="column pad-top-line">
+        <div class="news-image-testimonial">
+          <div class="image testimonial3"
+               data-lazybg="true"></div>
+          <div class="pad-line">
+            <h5>
+              <strong class="body-color">
+                {% blocktrans %}
+                  Embarking on the Journey to Self- Reliance in Malawi
+                {% endblocktrans %}
+              </strong>
+            </h5>
+          </div>
+        </div>
+      </div>{# .column #}
+    </div>{# .grid #}
+  </div>{# .content #}
+  <div class="align-center pad-bottom-small">
+    <a class="arrow"
+       href="{% url 'blog_home' %}">
+      {% blocktrans %}
+        view more blogs
+      {% endblocktrans %}
+    </a>
+  </div>
+</section>

@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+{% load capture_tags %}
+
+{% block title %}{% blocktrans %}
+  Resources
+{% endblocktrans %}{% endblock %}
+
+{% block description %}{% blocktrans %}
+  Resources
+{% endblocktrans %}{% endblock %}
+
+{% block body_class %}resources-page tucked-hero{% endblock %}
+
+{% block stylesheets %}
+  {% compress css %}
+    <link href="{% sass_src 'style/pages/resources.scss' %}" rel="stylesheet" media="screen" type="text/css" />
+  {% endcompress %}
+{% endblock %}
+
+{% block hero %}
+<div class="orange-theme">
+  <section class="hero hero-blog" id="hero"></section>
+</div>
+{% endblock %}
+
+{% block content %}
+  {% include "sections/resources/intro.html" %}
+  {% include "sections/resources/guides.html" %}
+  {% include "sections/resources/blog.html" %}
+  {% include "sections/resources/events.html" %}
+  {% include "sections/resources/toolkits.html" %}
+  {% include "sections/resources/case_studies.html" %}
+  {% include "sections/resources/next-steps.html" %}
+  {% include "sections/resources/contact.html" %}
+{% endblock %}

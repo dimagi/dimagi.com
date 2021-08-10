@@ -1,0 +1,98 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="global-services border-bottom"
+         id="global-services">
+  <div class="content pad-vert-large gap-bottom-line">
+    <div class="gap-bottom-small gap-bottom-medium-at-medium content-width-medium">
+      <h2 class="slate align-center">
+        {% blocktrans %}
+          Get the Most Out of CommCare
+        {% endblocktrans %}
+      </h2>
+      <p class="align-center lead-text">
+        {% blocktrans %}
+          Explore our blogs, guides, case studies, and toolkits
+        {% endblocktrans %}
+      </p>
+    </div>{# .intro #}
+
+    <div class="grid-2-at-medium gap-bottom-line">
+      <div class="column pad-right-small-at-medium">
+        {% include "sections/resources/resources.html" %}
+      </div>{# .column #}
+
+      <div class="column pad-right-medium-at-medium pad-left-small-at-medium gap-bottom-line pad-top-line pad-top-none-at-medium">
+        <a href="{% url 'mobile_data_collection' %}"
+           target="_blank">
+          <div class="pad-bottom-line">
+            <h6 class="intro-services gap-bottom-base">
+              {% blocktrans %}
+                GUIDE
+              {% endblocktrans %}
+            </h6>
+            <h5>
+              {% blocktrans %}
+                Guide to Mobile Data Collection
+              {% endblocktrans %}
+            </h5>
+            <p class="slate font-weight-light">
+              {% blocktrans %}
+                This comprehensive guide to mobile data collection will step you through 
+                the process of implementing a successful mobile data collection 
+                program—from choosing the right tool to designing and sustaining your program.
+              {% endblocktrans %}
+            </p>
+          </div>
+        </a>
+        <a href="https://dimagi.com/case-studies/mhealth-malaria-mozambique/"
+           target="_blank">
+          <div class="border-top pad-vert-line">
+            <h6 class="intro-services gap-bottom-base">
+              {% blocktrans %}
+                CASE STUDY
+              {% endblocktrans %}
+            </h6>
+            <h5>
+              {% blocktrans %}
+                Malaria Consortium’s upSCALE Program
+              {% endblocktrans %}
+            </h5>
+            <p class="slate font-weight-light">
+              {% blocktrans %}
+                In 2016, Malaria Consortium and Dimagi built an application called 
+                upSCALE to support the agentes polivalentes elementares  (APEs) 
+                delivering their work, collecting and aggregating data from the 
+                different programme activities.
+              {% endblocktrans %}
+            </p>
+          </div>
+        </a>
+        <a href="{% url 'blog_post' 'journey-to-self-reliance-usaid-onse-malawi' %}"
+           target="_blank">
+          <div class="border-top pad-top-line">
+            <h6 class="intro-services gap-bottom-base">
+              {% blocktrans %}
+                BLOG
+              {% endblocktrans %}
+            </h6>
+            <h5>
+              {% blocktrans %}
+                Embarking on the Journey to Self- Reliance in Malawi
+              {% endblocktrans %}
+            </h5>
+            <p class="slate font-weight-light">
+              {% blocktrans %}
+                Learn how Dimagi has been hard at work to arm countries around 
+                the world with the tools and expertise they need to support 
+                their communities in need since the very beginning.
+              {% endblocktrans %}
+            </p>
+          </div>
+        </a>
+      </div>{# .column #}
+      
+    </div>{# .grid-2-at-medium #}
+
+  </div>{# .content #}
+</section>

@@ -1,0 +1,32 @@
+{% load dimagidotcom %}
+{% load i18n %}
+
+<div class="column green-theme pad-horz-small-at-large pad-horz-medium">
+  <a class="tile {{ click_class }}"
+     href="{% url 'press' %}"
+     target="_blank">
+
+    <div class="green-icon">
+      {% include "svg/resources/next_steps/press.html" %}
+    </div>
+
+    <h4 class="green pad-top-line">
+      {% blocktrans %}
+        Press & Media
+      {% endblocktrans %}
+    </h4>
+
+    <p class="body-color pad-top-line">
+      {% blocktrans %}
+        See our press archives and media resources 
+      {% endblocktrans %}
+    </p>
+
+    <p class="arrow">
+      {% blocktrans %}
+        View Press
+      {% endblocktrans %}
+    </p>
+
+  </a>
+</div>{# .column #}

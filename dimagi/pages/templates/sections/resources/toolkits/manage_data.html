@@ -1,0 +1,20 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<a href="{% url 'toolkit' 'commcare-managing-data' %}"
+   target="_blank">
+  <div class="theme-icon resource-card accent-gray-bg pad-top-small">
+    <div class="pad-top-line">
+      {% include "svg/resources/toolkits/manage_data.html" %}
+    </div>
+  </div>
+  <div class="pad-line">
+    <p>
+      <strong class="body-color pad-top-line">
+        {% blocktrans %}
+          Managing Data in CommCare
+        {% endblocktrans %}
+      </strong>
+    </p>
+  </div>
+</a>{# .item #}

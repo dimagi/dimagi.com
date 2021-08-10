@@ -1,0 +1,30 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section id="demo-section"
+         data-lazybg="true">
+  <div class="blue-bg pad-top-base pad-bottom-medium">
+    <div class="content align-center pad-top-medium">
+      <div class="get-demo">
+        <h3 class="white">
+          {% blocktrans %}
+            Looking for something specific?
+          {% endblocktrans %}
+        </h3>
+        <p class="white">
+          {% blocktrans %}
+          Cant find what you're looking for? Just dropus a line and we'll get back to you!
+          {% endblocktrans %}
+        </p>
+        <div class="cta gap-vert-line">
+          <a class="button button-accent-gray"
+             href="#contact-form-modal">
+              {% blocktrans %}
+                Contact Us
+              {% endblocktrans %}
+          </a>
+        </div>{# .cta #}
+        </div>
+    </div> {# .content #}
+  </div>
+</section>

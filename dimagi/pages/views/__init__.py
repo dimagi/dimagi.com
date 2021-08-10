@@ -2,6 +2,7 @@ from dimagi.pages.views.core import (
     home,
     services,
     partners,
+    resources,
     covid_19,
     us_covid_19,
     contact,

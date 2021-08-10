@@ -1,0 +1,20 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<a href="{% url 'toolkit' 'digital-health-systems' %}"
+   target="_blank">
+  <div class="theme-icon resource-card accent-gray-bg pad-top-small">
+    <div class="pad-top-line">
+      {% include "svg/resources/toolkits/dhis2.html" %}
+    </div>
+  </div>
+  <div class="pad-line">
+    <p>
+      <strong class="body-color pad-top-line">
+        {% blocktrans %}
+          CommCare + DHIS2 Digital Health Systems
+        {% endblocktrans %}
+      </strong>
+    </p>
+  </div>
+</a>{# .item #}
