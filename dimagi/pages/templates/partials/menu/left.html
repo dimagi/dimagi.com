@@ -56,6 +56,6 @@
   {% endblocktrans %}
 </a>
 
-<a class="menu-link menu-close pad-left-small {% click_nav 'more-close' %}" href="#" {% if request.is_amp %} [class]="close_btn" role="button" on="tap:AMP.setState({ drpdwn_cls: 'menu show-time-amp', close_btn: 'menu-link menu-close', nav_hide2: 'hide-at-large', nav_hide1: 'hide-until-large display-flex flex-valign-middle' })" {% endif %}>
+<a class="menu-link menu-close pad-left-small gap-left-line {% click_nav 'more-close' %}" href="#" {% if request.is_amp %} [class]="close_btn" role="button" on="tap:AMP.setState({ drpdwn_cls: 'menu show-time-amp', close_btn: 'menu-link menu-close', nav_hide2: 'hide-at-large', nav_hide1: 'hide-until-large display-flex flex-valign-middle' })" {% endif %}>
   {% include 'svg/close.html' %}
 </a>
