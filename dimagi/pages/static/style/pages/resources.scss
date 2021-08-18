@@ -6,7 +6,7 @@
 
 .cms-india {
   @include background-cover('../../pages/resources/intro/intro.jpg');
-  height: 484px !important;
+  height: 500px !important;
 }
 
 .cms-india .aspect-ratio-rect {
@@ -95,4 +95,9 @@
 .watch-next-review {
   height: 40px !important; // scss-lint:disable ImportantRule
   font-size: 11px !important; // scss-lint:disable ImportantRule
+}
+
+.resources-next-steps {
+  padding-left: 20px !important; // scss-lint:disable ImportantRule
+  padding-right: 20px !important; // scss-lint:disable ImportantRule
 }
