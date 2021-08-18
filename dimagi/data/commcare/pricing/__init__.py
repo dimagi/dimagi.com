@@ -7,6 +7,7 @@ from dimagi.data.commcare.pricing import (
     messaging,
     integrations,
     enterprise_web_apps,
+    enterprise_management_tools,
     security_compliance,
     support
 
@@ -22,6 +23,7 @@ feature_groups = (
     messaging,
     integrations,
     enterprise_web_apps,
+    enterprise_management_tools,
     security_compliance,
     support
 )
