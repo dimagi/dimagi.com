@@ -15,6 +15,7 @@ from dimagi.utils.covid_partners import get_us_covid_partners
 from dimagi.utils.services import get_service_partners
 from dimagi.data.case_management import longitudinal_data
 
+from dimagi.pages.views import blog
 from dimagi.utils.wordpress_api import get_json
 from dimagi.pages.models.partners import latestPartners
 
@@ -63,8 +64,9 @@ def us_covid_19(request):
 
 
 def resources(request):
+    posts = blog._get_posts(blog.ARCHIVE)['posts']
     context = {
-        'posts': get_json("blog/popular")['posts'][:3],
+        'posts': posts[:3],
     }
     return render(request, 'pages/resources.html', context)
 
