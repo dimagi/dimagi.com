@@ -25,6 +25,7 @@ TOOLKIT = Toolkit(
     french_download_url="https://sites.dimagi.com/hubfs/Toolkits/La%20Base%20de%20Evidencias%20de%20CommCare.pdf",
     french_hubspot_form="ad94e7c0-7b6d-469f-8e2e-b8d8f86e3d75",
     event_tracking_title="Evidence Base - ESP ",
+    language="spanish",
 )
 
 

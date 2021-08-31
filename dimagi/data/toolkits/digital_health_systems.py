@@ -22,6 +22,7 @@ TOOLKIT = Toolkit(
     primary_cta="00c484a5-fc8e-4ba2-b1ae-9222d4a97a61",
     subnav_cta="4633865c-3c47-4370-8874-740c49bd75db",
     event_tracking_title="DHIS2 Integration ",
+    language="french",
 )
 
 TOOLKIT.add_highlights([
