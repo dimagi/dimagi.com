@@ -41,7 +41,7 @@ def get_json(item, **kwargs):
     return data.json()
 
 
-def search_wordpress(term=None, category=None, tags=None, page=1, before=None, after=None):
+def search_wordpress(term=None, category=None, tags=None, page=1, num_posts=None, before=None, after=None):
     search_url = _get_url('blog/search/')
     query = {
         'page': page,
@@ -61,6 +61,9 @@ def search_wordpress(term=None, category=None, tags=None, page=1, before=None, a
 
     if after:
         query['after'] = after
+
+    if num_posts:
+        query['num_posts'] = num_posts
 
     data = requests.post(
         search_url,
