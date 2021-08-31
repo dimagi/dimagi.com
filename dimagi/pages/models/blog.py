@@ -1,3 +1,4 @@
+import math
 from collections import namedtuple
 
 from django.urls import reverse
@@ -26,6 +27,8 @@ class BlogPost(object):
 
         self.excerpt = data.get('excerpt')
         self.content = url_filters(data.get('content'))
+
+        self.reading_time_in_minutes = math.ceil(len(self.content.split(' ')) / 300) if self.content else 0
 
     def __str__(self):
         return "[{category} - {date}] {title}".format(
