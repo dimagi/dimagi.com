@@ -19,6 +19,7 @@ class BlogPost(object):
         self.category = get_category_by_slug(data['category'])
 
         self.authors = [Author(a) for a in data['authors']]
+        self.tags = [Tag(t) for t in data['tags']]
 
         self.date = parse_datetime(data['date_gmt'])
         self.slug = data['slug']
@@ -69,3 +70,12 @@ class Author(object):
         self.image = url_filters(data['image'])
         self.name = data['name']
         self.role = data['role']
+
+
+class Tag(object):
+
+    def __init__(self, data):
+        self.id = data['id']
+        self.slug = data['slug']
+        self.name = data['name']
+        self.total = data['total']
