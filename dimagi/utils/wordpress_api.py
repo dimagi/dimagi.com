@@ -7,13 +7,6 @@ API_URL = setting('WORDPRESS_API_URL', '')
 USER_AGENT = setting('WORDPRESS_API_USER_AGENT', '')
 
 
-class PostCategory(object):
-    STAFF = 'staff'
-    PARTNERS = 'partners'
-    TECH = 'tech'
-    PRODUCT = 'product'
-
-
 def _get_url(item):
     return "{}/{}".format(API_URL.rstrip('/'), item)
 
