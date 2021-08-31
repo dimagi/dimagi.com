@@ -98,17 +98,17 @@ def archive(request, category=None, page=None):
     context = _get_global_context()
     page = int(page or 1)
     total_posts = int(posts['total'])
-    total_pages = math.ceil(total_posts / 20)
-    total_previous = (page - 1) * 20
     context.update({
         'category': category,
         'posts': posts['posts'],
         'page': page,
-        'total_posts': total_posts,
-        'total_pages': total_pages,
-        'from_post': 1 + total_previous,
-        'to_post': len(posts['posts']) + total_previous,
     })
+    context.update(_get_totals_context(
+        page,
+        total_posts,
+        20,
+        len(posts['posts'])
+    ))
 
     if page > 1:
         if category.slug == ARCHIVE.slug:
@@ -119,7 +119,7 @@ def archive(request, category=None, page=None):
             )
         context['previous_url'] = previous_url
 
-    if page < total_pages:
+    if page < context['total_pages']:
         if category.slug == ARCHIVE.slug:
             next_url = reverse('archive_page', args=[page + 1])
         else:
