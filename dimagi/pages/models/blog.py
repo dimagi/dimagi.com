@@ -31,6 +31,9 @@ class BlogPost(object):
 
         self.reading_time_in_minutes = math.ceil(len(self.content.split(' ')) / 300) if self.content else 0
 
+        self.hide_author = data.get('hide_author') == 'yes'
+        self.hide_date = data.get('hide_date') == 'yes'
+
     def __str__(self):
         return "[{category} - {date}] {title}".format(
             category=self.category.slug,
