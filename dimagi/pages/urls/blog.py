@@ -1,7 +1,13 @@
 from django.conf.urls import url
 from django.urls import include
 
-from dimagi.pages.views.blog import archive, home, post, mobile_data_collection_blog_post
+from dimagi.pages.views.blog import (
+    archive,
+    tag_archive,
+    home,
+    post,
+    mobile_data_collection_blog_post,
+)
 from dimagi.pages.views import redirect
 
 
@@ -14,6 +20,10 @@ archive_urls = [
         name='archive_category'),
     url(r'^(?P<category>[\w-]+)/page/(?P<page>[\d]+)/$', archive,
         name='archive_category_page'),
+    url(r'^tag/(?P<tag>[\w-]+)/$', tag_archive,
+        name='blog_tag_archive'),
+    url(r'^tag/(?P<tag>[\w-]+)/page/(?P<page>[\d]+)/$', tag_archive,
+        name='blog_tag_archive_page'),
 ]
 
 

@@ -34,6 +34,27 @@ def get_json(item, **kwargs):
     return data.json()
 
 
+def get_all_tags():
+    from dimagi.pages.models.blog import Tag
+    tag_data = get_json('blog/list-tags/')
+    tags = [Tag(t) for t in tag_data['tags']]
+    return tags
+
+
+def get_tag_by_id(tag_id, available_tags):
+    try:
+        tag_id = int(tag_id)
+        tags_by_id = {tag.id: tag for tag in available_tags}
+        return tags_by_id.get(tag_id)
+    except ValueError:
+        return None
+
+
+def get_tag_by_slug(tag_slug, available_tags):
+    tags_by_slug = {tag.slug: tag for tag in available_tags}
+    return tags_by_slug.get(tag_slug)
+
+
 def search_wordpress(term=None, category=None, tags=None, page=1, num_posts=None, before=None, after=None):
     search_url = _get_url('blog/search/')
     query = {
