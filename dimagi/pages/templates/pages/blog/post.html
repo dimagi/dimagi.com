@@ -38,7 +38,7 @@
 
 {% block content %}
   <section class="blog-container orange-theme">
-    {% include 'sections/blog/sub_nav.html' %}
+    {% include 'sections/blog/sub_nav.html' with use_direct_category_link=True %}
     {% include 'sections/blog/full_post.html' %}
     {% include 'sections/blog/powerful_data.html' %}
     {% include 'sections/blog/cta.html' with hide_class=True %}
