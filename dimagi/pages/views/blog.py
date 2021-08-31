@@ -165,14 +165,25 @@ def tag_archive(request, tag, page=None):
 
 
 def post(request, slug):
-    _post = get_json('blog/post/{}/'.format(slug))
+    post_data = get_json('blog/post/{}/'.format(slug))
 
-    if _post.get('not_found'):
+    if post_data.get('not_found'):
         raise Http404()
 
-    _post = BlogPost(_post)
+    blog_post = BlogPost(post_data)
+
+    related_posts_data = search_wordpress(
+        num_posts=3,
+        category=blog_post.category.slug
+    )
+    related_posts = [BlogPost(p) for p in related_posts_data['posts']]
+
     context = _get_global_context()
-    context['post'] = _post
+    context.update({
+        'post': blog_post,
+        'related_posts': related_posts,
+    })
+    context['post'] = blog_post
     return render(request, 'pages/blog/post.html', context)
 
 

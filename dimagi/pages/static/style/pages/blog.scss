@@ -44,14 +44,78 @@ a.post {
   }
 }
 
-.post-author-image {
-  width: 80px;
-  @include background-placeholder();
+.post-content {
+  h1 {
+    font-size: 36px;
+    line-height: 46px;
+    font-weight: 500;
+    letter-spacing: 0;
+    color: $color-text-blog;
+  }
+
+  .post-author-image {
+    border-radius: 27px;
+    border: 2px solid $color-orange;
+    @include background-placeholder();
+  }
+
+  .post-author-image,
+  .post-multi-author-icon {
+    float: left;
+    width: 54px;
+    height: 54px;
+    margin-right: 20px;
+  }
+
+  .post-social-header {
+    float: right;
+    padding-top: 11px;
+  }
+
+  .author-name {
+    padding-top: 2px;
+    font-size: 16px;
+    line-height: 26px;
+    color: $color-text-blog;
+    font-weight: 500;
+  }
+
+  .post-details {
+    padding-top: 1px;
+    color: $color-text-blog-light;
+    font-size: 12px;
+    font-weight: 600;
+
+    &.post-details-author-hidden {
+      padding-top: 13px;
+    }
+  }
+
 }
 
 .post-content-text {
-  img {
-    margin: $space-base;
+  p,
+  li {
+    font-size: 19px;
+    line-height: 33px;
+    color: $color-text-blog;
+  }
+
+  li {
+    margin-bottom: 15px;
+  }
+
+  ul {
+    padding-bottom: 5px;
+  }
+
+  h2 {
+    padding-top: 30px;
+  }
+
+  hr {
+    margin-top: 30px;
+    margin-bottom: 30px;
   }
 
   .aligncenter {
@@ -69,6 +133,54 @@ a.post {
   .wp-caption-text {
     text-align: center;
     font-style: italic;;
+  }
+
+  .wp-block-image {
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    figcaption {
+      font-size: 19px;
+      line-height: 33px;
+      color: $color-text-blog;
+      padding-top: 20px;
+      font-style: italic;
+    }
+  }
+}
+
+.post-additional-details {
+  text-transform: uppercase;
+  color: $color-text-blog-light;
+  font-weight: 600;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.post-tags {
+  padding-top: 10px;
+
+  li {
+    display: inline-block;
+    padding-right: 5px;
+
+    a,
+    a:link,
+    a:visited {
+      color: $color-text-blog-light;
+      font-weight: 300;
+      font-size: 16px;
+      border: 1px solid $color-text-blog-light;
+      border-radius: 5px;
+      padding: 5px 15px;
+      transition: none !important;
+    }
+    a:hover,
+    a:active {
+      color: $color-white !important;
+      background-color: $color-orange;
+      border-color: $color-orange;
+    }
   }
 }
 
