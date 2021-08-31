@@ -18,7 +18,7 @@ class BlogPost(object):
         from dimagi.data.blog import get_category_by_slug
         self.category = get_category_by_slug(data['category'])
 
-        self.authors = map(lambda x: Author(x), data['authors'])
+        self.authors = [Author(a) for a in data['authors']]
 
         self.date = parse_datetime(data['date_gmt'])
         self.slug = data['slug']
@@ -49,6 +49,18 @@ class BlogPost(object):
     def canonical_link(self):
         from dimagi.data.blog.canonical import get_canonical_link
         return get_canonical_link(self.slug)
+
+    @property
+    def has_multiple_authors(self):
+        return len(self.authors) > 1
+
+    @property
+    def author(self):
+        return self.authors[0]
+
+    @property
+    def authors_list(self):
+        return ", ".join([a.name for a in self.authors])
 
 
 class Author(object):
