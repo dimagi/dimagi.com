@@ -1,0 +1,40 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="content pad-vert-medium content-width-large blue-theme">
+  <div>
+    <h3>
+      {% blocktrans %}
+        COVID-19 Local Response System
+      {% endblocktrans %}
+    </h3>
+  </div>
+  <div class="grid-2-at-small grid-reverse">
+    <div class="column pad-top-medium align-left">
+      <p>
+        {% blocktrans %}
+          This platform was built from CDC protocols to support frontline 
+          worker patient screening and contact tracing. Learn more about 
+          the system being used by cities and states across the US.
+        {% endblocktrans %}
+      </p>
+      <div class="align-left pad-top-base">
+        <a class="button"
+           href="{% url 'us_covid_19' %}">
+          {% blocktrans %}
+            Learn More
+          {% endblocktrans %}
+        </a>
+      </div>
+    </div>{# .column #}
+
+    <div class="column">
+      <div class="off-grid white-lazy-bg"
+         data-lazybg="true">
+      <div class="wistia-container image local-response">
+        {% include "partials/wistia_popover.html" with wistia_id='gx2a7tvlh6' play_icon_medium=True show_image=True %}
+      </div>{# .wistia-container #}
+    </div>{# .off-grid #}
+    </div>{# .column #}
+  </div>{# .grid-2 #}
+</section>{# .content #}

@@ -1,0 +1,32 @@
+@import 'app/mixins/background';
+@import 'app/variables/colors';
+@import 'app/variables/sizes';
+@import 'app/variables/type';
+
+.webinar-video-demo {
+  $_base-height: 186px;
+  $_height-by-size: (
+    small: 290px,
+    medium: 376px,
+    large: 360px,
+    extra-large: 360px,
+  );   
+  @include make-bg(image, '../../../pages/commcare/monitoring_evaluation/monitoring/monitor', $_base-height, $_height-by-size);
+}
+
+.people-image {
+  @include background-cover('../../../pages/pillar/ddp/step4/profile.jpg');
+  height: 80px;
+  width: 80px;
+}
+
+.local-response {
+  $_base-height: 186px;
+  $_height-by-size: (
+    small: 290px,
+    medium: 376px,
+    large: 360px,
+    extra-large: 360px,
+  );
+  @include make-bg(image, '../../../pages/covid_19/resources/local_response/response', $_base-height, $_height-by-size);
+}

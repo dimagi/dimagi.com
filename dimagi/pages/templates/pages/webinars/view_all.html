@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block title %}{% blocktrans %}
+  Mobile Data Collection Case Studies | CommCare in Action
+{% endblocktrans %}{% endblock %}
+
+{% block description %}{% blocktrans %}
+  Across industries, from health to agriculture, organizations
+  amplify their impact with mobile data collection. Read the 
+  mobile data collection case studies now.
+{% endblocktrans %}{% endblock %}
+
+{% block body_class %}case-studies-page tucked-hero{% endblock %}
+
+{% block stylesheets %}
+  {% compress css %}
+    <link href="{% sass_src 'style/pages/webinar/view_all.scss' %}" rel="stylesheet" media="screen" type="text/css" />
+  {% endcompress %}
+{% endblock %}
+
+{% block hero %}
+  <div class="orange-theme">
+    <section class="hero" id="hero"></section>
+  </div>
+{% endblock %}
+
+{% block content %}
+  <section class="case-studies-container">
+    {% include 'sections/webinar/intro.html' %}
+    {% include 'sections/webinar/contact.html' %}
+    {% include 'sections/webinar/other_webinars.html' %}
+  </section>
+{% endblock %}
