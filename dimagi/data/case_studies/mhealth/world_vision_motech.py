@@ -36,7 +36,6 @@ STUDY = CaseStudy(
         "Dimagi",
     ],
     countries=[
-        ugettext_lazy("Afghanistan"),
         ugettext_lazy("Burundi"),
         ugettext_lazy("India"),
         ugettext_lazy("Indonesia"),

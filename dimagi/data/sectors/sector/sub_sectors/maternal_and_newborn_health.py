@@ -94,11 +94,9 @@ deliveries as a result of due date reminders.
         description=ugettext_lazy("""
 In partnership with Dimagi and the Grameen Foundation, World Vision has deployed 
 the MOTECH Suite for maternal, newborn, and child health (MNCH) and nutrition 
-mobile applications in ten countries, including Afghanistan, Burundi, India, 
-Indonesia, Mozambique, Niger, Sierra Leone, Sri Lanka, Uganda, and Zambia. 
-These applications are designed to support CHWs to deliver MNCH and nutrition 
-services more efficiently by reinforcing intervention protocols, serving as job 
-aids and acting as monitoring tools.
+mobile applications in ten countries. These applications are designed to support 
+CHWs to deliver MNCH and nutrition services more efficiently by reinforcing 
+intervention protocols, serving as job aids and acting as monitoring tools.
         """),
     ),
     Project(
