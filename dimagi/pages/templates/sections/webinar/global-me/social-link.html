@@ -1,0 +1,25 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<div class="content-width-medium blue-theme pad-vert-small">
+  <div class="grid-2-at-small">
+    <div class="column">
+      <p>
+        <a href="{% url 'webinar_home' %}"
+           class="arrow">
+          {% blocktrans %}
+            View all webinars
+          {% endblocktrans %}
+        </a>
+      </p>
+    </div>
+    <div class="column">
+      <div class="links-social orange-theme align-right-at-medium">
+        {% twitter_link url text hashtags %}
+        {% facebook_link url %}
+        {% linkedin_link url %}
+        <span class="pad-left-base blue share-text">{% trans "Share" %}</span>
+      </div>
+    </div>
+  </div>
+</div>

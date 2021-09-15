@@ -1,11 +1,14 @@
 from django.conf.urls import url
 
-from dimagi.pages.views.webinars import view_all, view_single
+from dimagi.pages.views.webinars import (
+    webinar_home,
+    global_me
+)
 
 
 urlpatterns = [
-    url(r'^$', view_all,
-        name='webinars'),
-    url(r'^(?P<slug>[\w-]+)/$', view_single,
-        name='webinar'),
+    url(r'^$', webinar_home,
+        name='webinar_home'),
+    url(r'^Learn-how-to-build-a-global-M&E-system/$', global_me,
+        name='global_me'),
 ]

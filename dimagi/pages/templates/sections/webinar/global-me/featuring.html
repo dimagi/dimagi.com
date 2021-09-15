@@ -1,0 +1,46 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="webinar align-center pad-bottom-line blue-theme"
+         id="webinar">
+  <div class="content-width-medium pad-top-small accent-gray-bg">
+    <h6 class="slate align-left pad-left-small">
+      {% blocktrans %}
+        Featuring
+      {% endblocktrans %}
+    </h6>
+    <div class="content-width-medium feature-projects pad-top-base pad-horz-line accent-gray-bg">
+      <div class="grid-2-at-small">
+        <div class="column">
+          <div class="display-flex">
+            <div class="align-center pad-left-small pad-bottom-small">
+              {% include "svg/pillar/chw/chapter8/cdc.html" %}
+            </div>
+            <div class="align-center pad-top-line pad-left-small">
+              <h5>GOAL International</h5>
+            </div>
+          </div>
+          <div class="display-flex">
+            <div class="align-center pad-left-small pad-bottom-small">
+              {% include "svg/pillar/chw/chapter8/cdc.html" %}
+            </div>
+            <div class="align-center pad-top-line pad-left-small">
+              <h5>ChildFund</h5>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="align-left pad-top-medium-at-medium">
+            <a class="button"
+               href="{% url 'partners' %}">
+              {% blocktrans %}
+                View All Partners
+              {% endblocktrans %}
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>{# .feature-projects #}
+
+  </div>{# .content-width-medium #}
+</section>

@@ -1,30 +1,21 @@
-from django.http import Http404
+from __future__ import absolute_import
+
+from django.http import HttpResponse
 from django.shortcuts import render
 
-from dimagi.data.case_studies import (
-    get_case_study_by_slug,
-    get_case_studies_page,
-)
-from dimagi.utils.hubspot_api import activate_hubspot_cta
+from dimagi.utils.ab_tests import DEMO_WORKFLOW_V2
+from dimagi.utils.decorators.enable_ab_test import enable_ab_test
+from dimagi.utils.partners import get_logos
+from dimagi.utils.enterprise_partners import get_enterprise_partners
+from dimagi.data.commcare.pricing import feature_groups
+from dimagi.utils.pdf.pricing import get_pricing_pdf
 
 
-def view_all(request):
-    studies = get_case_studies_page(1)  # todo other pages
-    context = {
-        'studies': studies,
-    }
-    return render(request, 'pages/webinars/view_all.html', context)
+@enable_ab_test(DEMO_WORKFLOW_V2)
+def webinar_home(request):
+    return render(request, 'pages/webinars/view_all.html')
 
 
-def view_single(request, slug):
-    study = get_case_study_by_slug(slug)
-    if not study:
-        raise Http404()
-    context = {
-        'study': study,
-    }
-    if study.primary_cta:
-        cta_title = f'Case Study: {study.event_tracking_title} ({study.slug})'
-        activate_hubspot_cta(request, study.primary_cta, cta_title)
-        activate_hubspot_cta(request, study.subnav_cta, f'{cta_title} (Sub Nav)')
-    return render(request, 'pages/case_studies/view_single.html', context)
+@enable_ab_test(DEMO_WORKFLOW_V2)
+def global_me(request):
+    return render(request, 'pages/webinars/global_me.html')

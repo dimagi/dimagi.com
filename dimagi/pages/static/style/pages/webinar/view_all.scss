@@ -3,6 +3,11 @@
 @import 'app/variables/sizes';
 @import 'app/variables/type';
 
+@mixin webinar-logo-resolution {
+  height: 42px;
+  width: 100px;
+}
+
 .webinar-video-demo {
   $_base-height: 186px;
   $_height-by-size: (
@@ -10,12 +15,18 @@
     medium: 376px,
     large: 360px,
     extra-large: 360px,
-  );   
-  @include make-bg(image, '../../../pages/commcare/monitoring_evaluation/monitoring/monitor', $_base-height, $_height-by-size);
+  );
+  @include make-bg(image, '../../../pages/webinar/intro/intro', $_base-height, $_height-by-size);
 }
 
-.people-image {
-  @include background-cover('../../../pages/pillar/ddp/step4/profile.jpg');
+.people-sarah {
+  @include background-cover('../../../pages/webinar/authors/sarah.jpg');
+  height: 80px;
+  width: 80px;
+}
+
+.people-nathan {
+  @include background-cover('../../../pages/webinar/authors/nathan.jpg');
   height: 80px;
   width: 80px;
 }
@@ -23,10 +34,30 @@
 .local-response {
   $_base-height: 186px;
   $_height-by-size: (
-    small: 290px,
-    medium: 376px,
-    large: 360px,
-    extra-large: 360px,
+    small: 190px,
+    medium: 246px,
+    large: 246px,
+    extra-large: 246px,
   );
-  @include make-bg(image, '../../../pages/covid_19/resources/local_response/response', $_base-height, $_height-by-size);
+  @include make-bg(image, '../../../pages/webinar/me/global_me', $_base-height, $_height-by-size)
+}
+.data-already {
+  $_base-height: 186px;
+  $_height-by-size: (
+    small: 190px,
+    medium: 246px,
+    large: 246px,
+    extra-large: 246px,
+  );
+  @include make-bg(image, '../../../pages/webinar/data/data', $_base-height, $_height-by-size)
+}
+
+.goal {
+  @include background-cover('../../../../static/pages/webinar/partners/goal.jpg');
+  @include webinar-logo-resolution;
+}
+
+.childfund {
+  @include background-cover('../../../../static/pages/webinar/partners/Childfund.jpg');
+  @include webinar-logo-resolution;
 }
