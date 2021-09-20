@@ -142,9 +142,15 @@ a.post {
     figcaption {
       font-size: 19px;
       line-height: 33px;
-      color: $color-text-blog;
+      color: $color-text-blog-caption;
       padding-top: 20px;
       font-style: italic;
+      padding-bottom: 20px;
+    }
+
+    figure.alignleft,
+    figure.alignright {
+      float: none;
     }
   }
 }
@@ -167,7 +173,7 @@ a.post {
     a,
     a:link,
     a:visited {
-      color: $color-text-blog-light;
+      color: $color-text-blog-light !important;
       font-weight: 300;
       font-size: 16px;
       border: 1px solid $color-text-blog-light;
