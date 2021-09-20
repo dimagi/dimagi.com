@@ -80,5 +80,5 @@ class Tag(object):
     def __init__(self, data):
         self.id = data['id']
         self.slug = data['slug']
-        self.name = data['name']
+        self.name = data['name'].replace('&amp;', '&')
         self.total = data['total']
