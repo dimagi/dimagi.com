@@ -4,61 +4,72 @@
 
 <section class="post-content">
   <div class="content content-width-medium pad-vert-medium">
-    <h1 class="gap-bottom-base">
-      {{ post.title }}
-    </h1>
-    <p class="h4 gap-bottom-small">
-      {{ post.date_human }}
-    </p>
-    <p>
-      {% include 'partials/social.html' with url=request.build_absolute_uri text=post.title %}
-    </p>
-    <div class="post-content-text pad-bottom-small epic-content">
-      {{ post.content|safe }}
-    </div>
-    <div class="accent-gray-bg pad-horz-small pad-vert-line">
-      <h6>
-        {% trans "Written by" %}
-      </h6>
-      <div class="grid-3-at-medium grid-2-at-small">
-        {% for author in post.authors %}
-          <div class="column">
-            <div class="grid-flex">
-              {% if author.image %}
-                <div class="column">
-                  <div class="aspect-ratio-square post-author-image"
-                       data-lazyplaceholder="true"
-                       data-src="{{ author.image }}"></div>
-                </div>{# .column #}
-              {% endif %}
-              <div class="column">
-                <h5 class="gap-bottom-none">
-                  {{ author.name }}
-                </h5>
-                {% if author.role %}
-                  <p>{{ author.role }}</p>
-                {% endif %}
-              </div>{# .column #}
-            </div>{# .post-author #}
-          </div>{# .column #}
-        {% endfor %}
-      </div>{# .grid-3-at-medium #}
-    </div>{# .orange-bg #}
-
-    <div class="pad-top-line theme-border">
-      <div class="grid-2">
-        <div class="column">
-          <p>
-            {% include 'partials/social.html' with url=request.build_absolute_uri text=post.title %}
-          </p>
+    <header>
+      <h1 class="gap-bottom-small gap-top-base">
+        {{ post.title }}
+      </h1>
+      <div rel="thumbnail" class="post-featured-image pad-top-small pad-bottom-base">
+        <img src="{{ post.thumbnail }}" />
+      </div>
+      <div class="gap-top-small gap-bottom-small">
+        {% if not post.hide_author %}
+          {% if post.has_multiple_authors %}
+            <div class="post-multi-author-icon orange-icon">
+              {% include "svg/blog/icon/blog_authors.html" %}
+            </div>
+          {% else %}
+            <div class="post-author-image"
+                 data-lazyplaceholder="true"
+                 data-src="{{ post.author.image }}"></div>
+          {% endif %}
+        {% endif %}
+        <div class="post-social-header">
+          {% include 'partials/social.html' with url=request.build_absolute_uri text=post.title %}
         </div>
-        <div class="column align-right">
-          {% blocktrans %}Read more from{% endblocktrans %}<br />
-          <a href="{% url 'archive_category' post.category.slug %}">
-            {{ post.category.name }}
-          </a>
+        <div class="post-info-container">
+          {% if not post.hide_author %}
+            <div rel="author" class="author-name">
+              {{ post.authors_list}}
+            </div>
+          {% endif %}
+          <div class="post-details {% if post.hide_author %}post-details-author-hidden{% endif %}">
+            {% if not post.hide_date %}{{ post.date_human }};{% endif %}
+            {{ post.reading_time_in_minutes }} min read
+          </div>
         </div>
       </div>
+    </header>
+
+    <div class="post-content-text pad-top-small pad-bottom-small epic-content">
+      {{ post.content|safe }}
     </div>
+
+    <h4 class="post-additional-details pad-top-medium">
+      {% trans "Share" %}
+    </h4>
+    <div class="pad-bottom-base">
+      {% include 'partials/social.html' with url=request.build_absolute_uri text=post.title %}
+    </div>
+
+    <h4 class="post-additional-details pad-top-small">
+      {% trans "Tags" %}
+    </h4>
+    <ul class="post-tags inline-list gap-bottom-line">
+      {% for tag in post.tags %}
+        <li><a href="{% url 'blog_tag_archive' tag.slug %}">{{ tag.name }}</a></li>
+      {% endfor %}
+    </ul>
+
+    <h4 class="post-additional-details pad-top-small">
+      {% trans "Similar Articles" %}
+    </h4>
+    <div class="grid-3-at-medium grid-2-at-small grid-row-space-small">
+      {% for related_post in related_posts %}
+        <div class="column">
+          {% include "partials/blog_summary.html" with post=related_post ratio='square' %}
+        </div>
+      {% endfor %}
+    </div>
+
   </div>{# .content #}
 </section>
