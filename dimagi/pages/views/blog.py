@@ -1,5 +1,6 @@
 from functools import wraps
 import math
+import urllib.parse
 
 from django.http import Http404
 from django.shortcuts import render
@@ -13,6 +14,10 @@ from dimagi.data.blog import (
     ARCHIVE,
 )
 from dimagi.pages.models.blog import BlogPost
+from dimagi.utils.request_helpers import (
+    get_selected_tags_from_request,
+    get_search_term_from_request,
+)
 from dimagi.utils.wordpress_api import (
     get_json,
     search_wordpress,
@@ -120,22 +125,60 @@ def home(request):
 @populate_tags_in_request
 @validate_category
 def archive(request, category=None, page=None):
+    search_term = get_search_term_from_request(request)
+    tags = get_selected_tags_from_request(request)
+    search_category = category
     category = get_category_by_slug(category or ARCHIVE.slug)
-    posts = _get_posts(category, page, 20)
-    context = _get_global_context()
+
+    context = _get_global_context(request)
     page = int(page or 1)
-    total_posts = int(posts['total'])
+    max_posts = 20
+    append_to_url = ''
+
+    if search_term or tags:
+        search_tag_ids = [t.id for t in tags] if tags is not None else None
+        search_tag_names = [f'"{t.name}"' for t in tags] if tags is not None else None
+        url_query = {
+            's': search_term or '',
+            't': ','.join([str(t) for t in search_tag_ids]) if search_tag_ids else '',
+        }
+        append_to_url = f"?{urllib.parse.urlencode(url_query)}"
+        posts = search_wordpress(
+            num_posts=max_posts,
+            page=page,
+            term=search_term,
+            category=search_category,
+            tags=search_tag_ids,
+        )
+        context.update({
+            'is_search_page': True,
+            'existing_filters': {
+                'term': search_term,
+                'tags': search_tag_ids,
+                'category': search_category or 'all',
+            },
+            'tag_summary': ', '.join(search_tag_names) if search_tag_names else None,
+        })
+        total_posts = len(posts['posts'])
+        if total_posts == max_posts:
+            # we can't easily get the total posts for a search page right now,
+            # but if it fills up, assume there might be a next page
+            total_posts = total_posts * page + 1
+    else:
+        posts = _get_posts(category, page, max_posts)
+        total_posts = int(posts['total'])
+    context.update(_get_totals_context(
+        page,
+        total_posts,
+        max_posts,
+        len(posts['posts'])
+    ))
+
     context.update({
         'category': category,
         'posts': posts['posts'],
         'page': page,
     })
-    context.update(_get_totals_context(
-        page,
-        total_posts,
-        20,
-        len(posts['posts'])
-    ))
 
     if page > 1:
         if category.slug == ARCHIVE.slug:
@@ -144,7 +187,7 @@ def archive(request, category=None, page=None):
             previous_url = reverse(
                 'archive_category_page', args=[category.slug, page - 1]
             )
-        context['previous_url'] = previous_url
+        context['previous_url'] = previous_url + append_to_url
 
     if page < context['total_pages']:
         if category.slug == ARCHIVE.slug:
@@ -153,7 +196,7 @@ def archive(request, category=None, page=None):
             next_url = reverse(
                 'archive_category_page', args=[category.slug, page + 1]
             )
-        context['next_url'] = next_url
+        context['next_url'] = next_url + append_to_url
 
     return render(request, 'pages/blog/archive.html', context)
 
