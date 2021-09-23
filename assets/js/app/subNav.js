@@ -1,3 +1,9 @@
+requirejs.config({
+  paths: {
+    knockout: "lib/knockout/knockout-latest",
+  }
+});
+
 define([
   'jquery',
   'knockout',
