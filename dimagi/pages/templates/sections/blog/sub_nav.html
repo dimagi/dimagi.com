@@ -2,6 +2,7 @@
 {% load dimagidotcom %}
 
 <section class="sub-nav"
+         data-ko="true"
          id="sub-nav">
   <div class="content">
     <div class="actions">
@@ -25,16 +26,18 @@
     <div class="destinations">
       <div class="content">
         <a href="{% url 'blog_home' %}">
-          {% blocktrans %}
-            Blog Home
-          {% endblocktrans %}
+          {% include "svg/blog/icon/nav/home.html" %} {{ filter_categories }}
         </a>
-        <a href="{% if use_direct_category_link %}{% url 'blog_home' %}{% endif %}#categories">
-          {% blocktrans %}
-            Categories
-          {% endblocktrans %}
+        <a href="#"
+           class="toggle-filters"
+           data-bind="click: toggleFilters, css: { 'has-filters': showHasFiltersAlert}">
+          {% include "svg/blog/icon/nav/filter.html" %}
         </a>
+        <div class="search-bar-container">
+          <input type="text" placeholder="{% trans "Search..." %}" data-bind="textInput: searchTerm, event: {keypress: submitSearchOnEnter}" /><button type="button" data-bind="click: submitSearch">{% include "svg/blog/icon/nav/search.html" %}</button>
+        </div>
       </div>{# .content #}
     </div>{# .destinations #}
   </div>{# .content #}
+  {% include 'sections/blog/filter_nav.html' %}
 </section>
