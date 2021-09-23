@@ -4,6 +4,7 @@ import math
 from django.http import Http404
 from django.shortcuts import render
 from django.urls import reverse
+from django.utils.translation import ugettext
 
 from dimagi.data.blog import (
     available_categories,
@@ -67,9 +68,26 @@ def _get_posts(category, page=None, num_posts=None):
     }
 
 
-def _get_global_context():
+def _get_global_context(request):
+    categories = [{
+        'name': ugettext("All Categories"),
+        'slug': 'all',
+        'url': reverse('archive'),
+    }]
+    categories.extend([{
+        'name': ugettext(c.name),
+        'slug': c.slug,
+        'url': reverse('archive_category', args=(c.slug,)),
+    } for c in nav_categories])
     return {
         'categories': nav_categories,
+        'blog_filters': {
+            'categories': categories,
+            'tags': [{
+                'name': t.name,
+                'id': t.id,
+            } for t in request.tags],
+        }
     }
 
 
@@ -89,7 +107,7 @@ def _get_totals_context(page, total_posts, posts_per_page, num_queried_posts):
 def home(request):
     posts = _get_posts(ARCHIVE)['posts']
     popular = [BlogPost(p) for p in get_json('blog/popular', num_posts=3)['posts']]
-    context = _get_global_context()
+    context = _get_global_context(request)
     context.update({
         'recent': posts[:1],
         'recent_new': posts[1:3],
@@ -151,7 +169,7 @@ def tag_archive(request, tag, page=None):
     )
     posts = search_results['posts']
 
-    context = _get_global_context()
+    context = _get_global_context(request)
     context.update({
         'tag': request.tag,
         'posts': posts,
@@ -189,7 +207,7 @@ def post(request, slug):
     )
     related_posts = [BlogPost(p) for p in related_posts_data['posts']]
 
-    context = _get_global_context()
+    context = _get_global_context(request)
     context.update({
         'post': blog_post,
         'related_posts': related_posts,
