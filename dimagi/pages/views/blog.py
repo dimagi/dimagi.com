@@ -35,14 +35,21 @@ def validate_category(fn):
     return _validate_category
 
 
+def populate_tags_in_request(fn):
+    @wraps(fn)
+    def _populate_tags(request, *args, **kwargs):
+        request.tags = get_all_tags()
+        return fn(request, *args, **kwargs)
+
+    return _populate_tags
+
+
 def process_and_validate_tag(fn):
     @wraps(fn)
     def _validate_tag(request, tag, *args, **kwargs):
-        available_tags = get_all_tags()
-        request.all_tags = available_tags
-        tag_obj = get_tag_by_id(tag, available_tags)
+        tag_obj = get_tag_by_id(tag, request.tags)
         if tag_obj is None:
-            tag_obj = get_tag_by_slug(tag, available_tags)
+            tag_obj = get_tag_by_slug(tag, request.tags)
         if tag_obj is None:
             raise Http404()
         request.tag = tag_obj
@@ -78,6 +85,7 @@ def _get_totals_context(page, total_posts, posts_per_page, num_queried_posts):
     }
 
 
+@populate_tags_in_request
 def home(request):
     posts = _get_posts(ARCHIVE)['posts']
     popular = [BlogPost(p) for p in get_json('blog/popular', num_posts=3)['posts']]
@@ -91,6 +99,7 @@ def home(request):
     return render(request, 'pages/blog/home.html', context)
 
 
+@populate_tags_in_request
 @validate_category
 def archive(request, category=None, page=None):
     category = get_category_by_slug(category or ARCHIVE.slug)
@@ -131,6 +140,7 @@ def archive(request, category=None, page=None):
     return render(request, 'pages/blog/archive.html', context)
 
 
+@populate_tags_in_request
 @process_and_validate_tag
 def tag_archive(request, tag, page=None):
     page = int(page or 1)
@@ -164,6 +174,7 @@ def tag_archive(request, tag, page=None):
     return render(request, 'pages/blog/archive.html', context)
 
 
+@populate_tags_in_request
 def post(request, slug):
     post_data = get_json('blog/post/{}/'.format(slug))
 
