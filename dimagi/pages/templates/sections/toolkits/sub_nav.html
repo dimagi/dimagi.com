@@ -5,7 +5,16 @@
          id="sub-nav">
   <div class="content">
     <div class="actions">
-      {% if toolkit.french_download_url %}
+      {% if toolkit.language == 'spanish' %}
+        <a class="primary"
+           href="#french-pdf-download-form">
+          <span>
+            {% blocktrans %}
+              Descarga en Español
+            {% endblocktrans %}
+          </span>
+        </a>
+      {% elif toolkit.language == 'french' %}
         <a class="primary"
            href="#french-pdf-download-form">
           <span>

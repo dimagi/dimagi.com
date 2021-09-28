@@ -1,3 +1,4 @@
+import math
 from collections import namedtuple
 
 from django.urls import reverse
@@ -17,7 +18,8 @@ class BlogPost(object):
         from dimagi.data.blog import get_category_by_slug
         self.category = get_category_by_slug(data['category'])
 
-        self.authors = map(lambda x: Author(x), data['authors'])
+        self.authors = [Author(a) for a in data['authors']]
+        self.tags = [Tag(t) for t in data['tags']]
 
         self.date = parse_datetime(data['date_gmt'])
         self.slug = data['slug']
@@ -26,6 +28,11 @@ class BlogPost(object):
 
         self.excerpt = data.get('excerpt')
         self.content = url_filters(data.get('content'))
+
+        self.reading_time_in_minutes = math.ceil(len(self.content.split(' ')) / 300) if self.content else 0
+
+        self.hide_author = data.get('hide_author') == 'yes'
+        self.hide_date = data.get('hide_date') == 'yes'
 
     def __str__(self):
         return "[{category} - {date}] {title}".format(
@@ -47,6 +54,18 @@ class BlogPost(object):
         from dimagi.data.blog.canonical import get_canonical_link
         return get_canonical_link(self.slug)
 
+    @property
+    def has_multiple_authors(self):
+        return len(self.authors) > 1
+
+    @property
+    def author(self):
+        return self.authors[0]
+
+    @property
+    def authors_list(self):
+        return ", ".join([a.name for a in self.authors])
+
 
 class Author(object):
 
@@ -54,3 +73,12 @@ class Author(object):
         self.image = url_filters(data['image'])
         self.name = data['name']
         self.role = data['role']
+
+
+class Tag(object):
+
+    def __init__(self, data):
+        self.id = data['id']
+        self.slug = data['slug']
+        self.name = data['name'].replace('&amp;', '&')
+        self.total = data['total']
