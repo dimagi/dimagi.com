@@ -1,12 +1,12 @@
 {% load i18n %}
 {% load dimagidotcom %}
 
-<div class="content-width-medium blue-theme pad-vert-small">
+<div class="content-width-large blue-theme pad-vert-small pad-left-small pad-left-none-at-medium">
   <div class="grid-2-at-small">
     <div class="column">
       <p>
         <a href="{% url 'webinar_home' %}"
-           class="arrow">
+           class="arrow slate">
           {% blocktrans %}
             View all webinars
           {% endblocktrans %}
@@ -18,7 +18,7 @@
         {% twitter_link url text hashtags %}
         {% facebook_link url %}
         {% linkedin_link url %}
-        <span class="pad-left-base blue share-text">{% trans "Share" %}</span>
+        <span class="pad-left-base blue slate">{% trans "Share" %}</span>
       </div>
     </div>
   </div>

@@ -40,16 +40,3 @@
   @include background-cover('../../../pages/webinar/partners/Childfund.jpg');
   @include webinar-logo-resolution;
 }
-
-// .impact {
-//   $_base-height: 186px;
-//   $_height-by-size: (
-//     small: 290px,
-//     medium: 376px,
-//     large: 360px,
-//     extra-large: 360px,
-//   );
-//   @include make-bg(image, '../../../pages/home/impact/launch', $_base-height, $_height-by-size);
-
-//   width: 100%;
-// }
