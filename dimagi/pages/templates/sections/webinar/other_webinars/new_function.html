@@ -1,0 +1,46 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="pad-vert-medium blue-theme">
+  <div class="content">
+    <div class="content-width-large align-left">
+      <h3>
+        {% blocktrans %}
+          Adding New Functionality to Your CommCare Application
+        {% endblocktrans %}
+      </h3>
+      <h6 class="blue pad-bottom-line">
+        {% blocktrans %}
+          July 9, 2020
+        {% endblocktrans %}
+      </h6>
+    </div>
+    <div class="grid-2-at-small grid-reverse">
+      <div class="column pad-top-medium align-left pad-left-small">
+        <p>
+          {% blocktrans %}
+            Learn how to build and add new functionality onto your existing app on CommCare.
+          {% endblocktrans %}
+        </p>
+        <div class="align-left pad-top-base">
+          <a class="button"
+             href="{% url 'new_function' %}">
+            {% blocktrans %}
+              View Webinar
+            {% endblocktrans %}
+          </a>
+        </div>
+      </div>{# .column #}
+  
+      <div class="column">
+        <div class="off-grid white-lazy-bg"
+           data-lazybg="true">
+        <div class="wistia-container image webinar-home-new-function-video">
+          {% include "partials/wistia_popover.html" with wistia_id='335ho8hr1a' play_icon_medium=True show_image=True %}
+        </div>{# .wistia-container #}
+      </div>{# .off-grid #}
+      
+      </div>{# .column #}
+    </div>{# .grid-2 #}
+  </div>
+</section>{# .content #}

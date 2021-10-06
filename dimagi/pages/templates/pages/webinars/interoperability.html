@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block title %}{% blocktrans %}
+  What Interoperability Actually Means
+{% endblocktrans %}{% endblock %}
+
+{% block stylesheets %}
+  {% compress css %}
+    <link href="{% sass_src 'style/pages/webinar/view_single.scss' %}" rel="stylesheet" media="screen" type="text/css" />
+  {% endcompress %}
+{% endblock %}
+
+{% block hero %}
+  <div class="orange-theme">
+    <section class="hero" id="hero"></section>
+  </div>
+{% endblock %}
+
+{% block content %}
+  <section class="case-studies-container">
+    {% include 'sections/webinar/interoperability/intro.html' %}
+    {% include 'sections/webinar/interoperability/speakers.html' %}
+    {% include 'sections/webinar/interoperability/featuring.html' %}
+    {% include 'sections/webinar/interoperability/social-link.html' %}
+    {% include 'sections/webinar/interoperability/contact.html' %}
+  </section>
+{% endblock %}
+
+{% block js %}
+  <!--[if lte IE 8]>
+  <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+  <![endif]-->
+  <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+  <script>
+    hbspt.forms.create({
+      portalId: "503070",
+      formId: "66cfcefc-cb71-4976-8e4f-874c892cba62",
+      target: "#global-webinar-home",
+      css: "",
+    });
+  </script>
+{% endblock %}
+

@@ -1,0 +1,21 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="blue-bg blog-cta"
+         id="cta">
+  <div class="content pad-vert-medium align-center">
+    <h3 class="white">
+      {% blocktrans %}
+        Couldn’t find what you were looking for?
+      {% endblocktrans %}
+    </h3>
+    <div class="align-center pad-vert-line">
+      <a class="button button-accent-gray"
+         href="{% url 'interoperability' %}">
+        {% blocktrans %}
+          View Resources
+        {% endblocktrans %}
+      </a>
+    </div>
+  </div>
+</section>

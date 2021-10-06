@@ -1,0 +1,78 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="webinar align-center pad-bottom-line blue-theme"
+         id="webinar">
+  <div class="content-width-large pad-bottom-line">
+    <div class="content-width-large pad-bottom-small">
+      <h2 class="gap-top-medium">
+        {% blocktrans %}
+          Learning From the Data You Already Have
+        {% endblocktrans %}
+      </h2>
+    </div>{# .content-width-large #}
+  
+    <div class=" content-width-large off-grid white-lazy-bg"
+         data-lazybg="true">
+      <div class="wistia-container image webinar-data-already-video">
+        {% include "partials/wistia_popover.html" with wistia_id='xnmaqyz01a' play_icon_medium=True show_image=True %}
+      </div>{# .wistia-container #}
+      <h6 class="content-width-large blue align-left pad-top-small pad-left-line">
+        {% blocktrans %}
+          Published: February 25, 2021
+        {% endblocktrans %}
+      </h6>
+    </div>{# .off-grid #}
+    <div class="grid-4-at-large">
+      <div class="column column-width-3-at-large pad-top-small align-left pad-left-small">
+        <div class="border-right-at-medium">
+          <h6 class="slate">
+            {% blocktrans %}
+              About
+            {% endblocktrans %}
+          </h6>
+          <p class="pad-right-line">
+            {% blocktrans %}
+              Nearly half of organizations working with mobile applications avoid 
+              making data-informed updates to their tools because they’re afraid 
+              of the work involved. In this webinar, Amanda Springer from MiracleFeet 
+              shares MiracleFeet’s CommCare journey, and how they used data from their 
+              CommCare app to quickly review and analyze data from their 300+ clubfoot 
+              clinics around the world when the COVID-19 pandemic hit. Learn how you can 
+              inculcate a culture of data-driven decision making like MiracleFeet’s team has.
+            {% endblocktrans %}
+          </p>
+          <p class="pad-right-line">
+            {% blocktrans %}
+              In this webinar, Amanda Springer from MiracleFeet shares MiracleFeet’s 
+              CommCare journey, and how they used data from their CommCare app to 
+              quickly review and analyze data from their 300+ clubfoot clinics around 
+              the world. When COVID-19 hit, they quickly reviewed what the data was 
+              telling them about their patients and providers to determine how to 
+              respond to local needs and what type of support to provide under 
+              changing and challenging circumstances.
+            {% endblocktrans %}
+          </p>
+        </div>
+      </div>{# .column #}
+  
+      <div class="column pad-top-small align-left">
+        <h6 class="slate">
+          {% blocktrans %}
+            Resources
+          {% endblocktrans %}
+        </h6>
+        <p>
+          <a href="https://docs.google.com/presentation/d/1jOijgklKjRCHGz36zMCiPc-7_Kw9ReEMnzkCAXxuTKk/edit?usp=sharing"
+             class="arrow blue read-more"
+             target="_blank">
+            {% blocktrans %}
+              View the presentation
+            {% endblocktrans %}
+          </a>
+        </p>
+      </div>{# .column #}
+    </div>{# .grid-2 #}
+
+  </div>{# .content-width-large #}
+</section>

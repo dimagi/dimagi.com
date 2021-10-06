@@ -1,0 +1,48 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="webinar align-center pad-bottom-line blue-theme"
+         id="webinar">
+  <div class="content-width-large pad-bottom-line">
+    <div class="content-width-large pad-bottom-small">
+      <h2 class="gap-top-medium">
+        {% blocktrans %}
+          Data Cleaning and Management with CommCare
+        {% endblocktrans %}
+      </h2>
+    </div>{# .content-width-large #}
+  
+    <div class=" content-width-large off-grid white-lazy-bg"
+         data-lazybg="true">
+      <div class="wistia-container image webinar-data-clean-video">
+        {% include "partials/wistia_popover.html" with wistia_id='qa569ksn94' play_icon_medium=True show_image=True %}
+      </div>{# .wistia-container #}
+      <h6 class="content-width-large blue align-left pad-top-small pad-left-line">
+        {% blocktrans %}
+          Published: May 5, 2020
+        {% endblocktrans %}
+      </h6>
+    </div>{# .off-grid #}
+    <div class="grid-4-at-large">
+      <div class="column column-width-3-at-large pad-top-small align-left pad-left-small">
+        <div class="border-right-at-medium">
+          <h6 class="slate">
+            {% blocktrans %}
+              About
+            {% endblocktrans %}
+          </h6>
+          <p class="pad-right-line">
+            {% blocktrans %}
+              This webinar will walk through the various ways that you can 
+              clean data in CommCare, how to troubleshoot data cleaning issues. 
+              Spend some time watching this webinar and learn how to make the 
+              most of the data you've collected with tips and best practices 
+              for data cleaning and management in CommCare.
+            {% endblocktrans %}
+          </p>
+        </div>
+      </div>{# .column #}
+    </div>{# .grid-2 #}
+
+  </div>{# .content-width-large #}
+</section>

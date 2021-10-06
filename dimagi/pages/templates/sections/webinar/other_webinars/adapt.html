@@ -1,0 +1,52 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="pad-vert-medium blue-theme accent-gray-bg">
+  <div class="content">
+    <div class="content-width-large align-left">
+      <h3>
+        {% blocktrans %}
+          Adapting Your App for COVID-19
+        {% endblocktrans %}
+      </h3>
+      <h6 class="blue pad-bottom-line">
+        {% blocktrans %}
+          October 6, 2020 
+        {% endblocktrans %}
+      </h6>
+    </div>
+    <div class="grid-2-at-small grid-reverse">
+      <div class="column pad-top-none align-left pad-left-small">
+        <p>
+          {% blocktrans %}
+            This webinar presents various ways you can adapt your application 
+            for the COVID-19 context. Many projects have had to switch to remote 
+            monitoring, or include information about COVID self-checks and 
+            preventative safety measures in their app. This webinar will 
+            teach you how to modify your application to collect data both 
+            in-person and remotely, including using SMS. We also review our 
+            home-based care app template, which is available for <a href="https://confluence.dimagi.com/display/commcarepublic/COVID-19+Template+App%3A+Home+Based+Care#COVID-19TemplateApp:HomeBasedCare-DownloadtheCommCareApplication">download here</a>.
+          {% endblocktrans %}
+        </p>
+        <div class="align-left pad-top-base">
+          <a class="button"
+             href="{% url 'adapt' %}">
+            {% blocktrans %}
+              View Webinar
+            {% endblocktrans %}
+          </a>
+        </div>
+      </div>{# .column #}
+  
+      <div class="column">
+        <div class="off-grid white-lazy-bg"
+           data-lazybg="true">
+        <div class="wistia-container image webinar-home-adapt-video">
+          {% include "partials/wistia_popover.html" with wistia_id='emyusc5tjr' play_icon_medium=True show_image=True %}
+        </div>{# .wistia-container #}
+      </div>{# .off-grid #}
+      
+      </div>{# .column #}
+    </div>{# .grid-2 #}
+  </div>
+</section>{# .content #}

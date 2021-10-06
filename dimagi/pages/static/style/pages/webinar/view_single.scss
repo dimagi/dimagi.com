@@ -8,15 +8,131 @@
   width: 100px;
 }
 
-.webinar-video-demo {
+.request-webinar-form {
+  label {
+    text-align: left;
+    color: $color-white;
+  }
+
+  .hs-richtext {
+    color: $color-white;
+    a {
+      color: $color-blue-light;
+
+      &:hover {
+        color: $color-white;
+      }
+    }
+  }
+
+  .hs-button {
+    color: $color-blue;
+    background-color: $color-white;
+  }
+
+  .submitted-message {
+    color: $color-white;
+  }
+}
+.webinar-interoperability-video {
+    $_base-height: 186px;
+    $_height-by-size: (
+      small: 290px,
+      medium: 376px,
+      large: 360px,
+      extra-large: 360px,
+    );
+  @include make-bg(image, '../../../pages/webinar/intro/intro', $_base-height, $_height-by-size);
+}
+.webinar-optimize-video {
   $_base-height: 186px;
   $_height-by-size: (
     small: 290px,
     medium: 376px,
-    large: 400px,
-    extra-large: 400px,
-  );   
-  @include make-bg(image, '../../../pages/webinar/me/global_me', $_base-height, $_height-by-size);
+    large: 360px,
+    extra-large: 360px,
+  );
+@include make-bg(image, '../../../pages/webinar/optimize/optimize', $_base-height, $_height-by-size);
+}
+.webinar-global-me-video {
+  $_base-height: 186px;
+  $_height-by-size: (
+    small: 290px,
+    medium: 376px,
+    large: 360px,
+    extra-large: 360px,
+  );
+@include make-bg(image, '../../../pages/webinar/global_me/global_me', $_base-height, $_height-by-size);
+}
+.webinar-data-already-video {
+  $_base-height: 186px;
+  $_height-by-size: (
+    small: 290px,
+    medium: 376px,
+    large: 360px,
+    extra-large: 360px,
+  );
+@include make-bg(image, '../../../pages/webinar/intro/intro', $_base-height, $_height-by-size);
+}
+.webinar-adapt-video {
+  $_base-height: 186px;
+  $_height-by-size: (
+    small: 290px,
+    medium: 376px,
+    large: 360px,
+    extra-large: 360px,
+  );
+@include make-bg(image, '../../../pages/webinar/adapt/adapt', $_base-height, $_height-by-size);
+}
+.webinar-new-function-video {
+  $_base-height: 186px;
+  $_height-by-size: (
+    small: 290px,
+    medium: 376px,
+    large: 360px,
+    extra-large: 360px,
+  );
+@include make-bg(image, '../../../pages/webinar/new_function/new_function', $_base-height, $_height-by-size);
+}
+.webinar-data-clean-video {
+  $_base-height: 186px;
+  $_height-by-size: (
+    small: 290px,
+    medium: 376px,
+    large: 360px,
+    extra-large: 360px,
+  );
+@include make-bg(image, '../../../pages/webinar/data_clean/data_clean', $_base-height, $_height-by-size);
+}
+.webinar-remote-video {
+  $_base-height: 186px;
+  $_height-by-size: (
+    small: 290px,
+    medium: 376px,
+    large: 360px,
+    extra-large: 360px,
+  );
+@include make-bg(image, '../../../pages/webinar/remote/remote', $_base-height, $_height-by-size);
+}
+.webinar-covid19-video {
+  $_base-height: 186px;
+  $_height-by-size: (
+    small: 290px,
+    medium: 376px,
+    large: 360px,
+    extra-large: 360px,
+  );
+@include make-bg(image, '../../../pages/webinar/covid19/covid19', $_base-height, $_height-by-size);
+}
+.webinar-power-bi-video {
+  $_base-height: 186px;
+  $_height-by-size: (
+    small: 290px,
+    medium: 376px,
+    large: 360px,
+    extra-large: 360px,
+  );
+@include make-bg(image, '../../../pages/webinar/power_bi/power_bi', $_base-height, $_height-by-size);
 }
 
 .people-image1 {
@@ -30,6 +146,57 @@
   height: 80px;
   width: 80px;
 }
+
+.people-amanda {
+    @include background-cover('../../../pages/webinar/authors/amanda.jpg');
+    height: 80px;
+    width: 80px;
+  }
+  .people-johnny {
+    @include background-cover('../../../pages/webinar/authors/johnny.jpg');
+    height: 80px;
+    width: 80px;
+  }
+  .people-malaram {
+    @include background-cover('../../../pages/webinar/authors/malaram.jpg');
+    height: 80px;
+    width: 80px;
+  }
+  .people-monica {
+    @include background-cover('../../../pages/webinar/authors/monica.jpg');
+    height: 80px;
+    width: 80px;
+  }
+  .people-nathan {
+    @include background-cover('../../../pages/webinar/authors/nathan.jpg');
+    height: 80px;
+    width: 80px;
+  }
+  .people-sarah {
+    @include background-cover('../../../pages/webinar/authors/sarah.jpg');
+    height: 80px;
+    width: 80px;
+  }
+  .people-tony {
+    @include background-cover('../../../pages/webinar/authors/tony.jpg');
+    height: 80px;
+    width: 80px;
+  }
+  .people-jenna {
+    @include background-cover('../../../pages/webinar/authors/jenna.jpg');
+    height: 80px;
+    width: 80px;
+  }
+  .people-mary {
+    @include background-cover('../../../pages/webinar/authors/mary.jpg');
+    height: 80px;
+    width: 80px;
+  }
+  .people-rashmi {
+    @include background-cover('../../../pages/webinar/authors/rashmi.jpg');
+    height: 80px;
+    width: 80px;
+  }
 
 .goal {
   @include background-cover('../../../pages/webinar/partners/goal.jpg');

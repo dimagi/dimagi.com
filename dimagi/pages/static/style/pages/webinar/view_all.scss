@@ -8,15 +8,32 @@
   width: 100px;
 }
 
-.webinar-video-demo {
-  $_base-height: 186px;
-  $_height-by-size: (
-    small: 290px,
-    medium: 376px,
-    large: 360px,
-    extra-large: 360px,
-  );
-  @include make-bg(image, '../../../pages/webinar/intro/intro', $_base-height, $_height-by-size);
+.request-webinar-form {
+  label {
+    text-align: left;
+    color: $color-white;
+  }
+
+  .hs-richtext {
+    color: $color-white;
+    text-align: center;
+    a {
+      color: $color-blue-light;
+
+      &:hover {
+        color: $color-white;
+      }
+    }
+  }
+
+  .hs-button {
+    color: $color-blue !important;
+    background-color: $color-white !important;
+  }
+
+  .submitted-message {
+    color: $color-white;
+  }
 }
 
 .people-sarah {
@@ -52,12 +69,128 @@
   @include make-bg(image, '../../../pages/webinar/data/data', $_base-height, $_height-by-size)
 }
 
-.goal {
-  @include background-cover('../../../../static/pages/webinar/partners/goal.jpg');
-  @include webinar-logo-resolution;
+.webinar-home-interoperability-video {
+    $_base-height: 186px;
+    $_height-by-size: (
+      small: 190px,
+      medium: 246px,
+      large: 246px,
+      extra-large: 246px,
+    );
+  @include make-bg(image, '../../../pages/webinar/intro/intro', $_base-height, $_height-by-size);
+}
+.webinar-home-optimize-video {
+  $_base-height: 186px;
+  $_height-by-size: (
+    small: 190px,
+    medium: 246px,
+    large: 246px,
+    extra-large: 246px,
+  );
+@include make-bg(image, '../../../pages/webinar/optimize/optimize', $_base-height, $_height-by-size);
+}
+.webinar-home-global-me-video {
+  $_base-height: 186px;
+  $_height-by-size: (
+    small: 190px,
+    medium: 246px,
+    large: 246px,
+    extra-large: 246px,
+  );
+@include make-bg(image, '../../../pages/webinar/global_me/global_me', $_base-height, $_height-by-size);
+}
+.webinar-home-data-already-video {
+  $_base-height: 186px;
+  $_height-by-size: (
+    small: 190px,
+    medium: 246px,
+    large: 246px,
+    extra-large: 246px,
+  );
+@include make-bg(image, '../../../pages/webinar/intro/intro', $_base-height, $_height-by-size);
+}
+.webinar-home-adapt-video {
+  $_base-height: 186px;
+  $_height-by-size: (
+    small: 190px,
+    medium: 246px,
+    large: 246px,
+    extra-large: 246px,
+  );
+@include make-bg(image, '../../../pages/webinar/adapt/adapt', $_base-height, $_height-by-size);
+}
+.webinar-home-new-function-video {
+  $_base-height: 186px;
+  $_height-by-size: (
+    small: 190px,
+    medium: 246px,
+    large: 246px,
+    extra-large: 246px,
+  );
+@include make-bg(image, '../../../pages/webinar/new_function/new_function', $_base-height, $_height-by-size);
+}
+.webinar-home-data-clean-video {
+  $_base-height: 186px;
+  $_height-by-size: (
+    small: 190px,
+    medium: 246px,
+    large: 246px,
+    extra-large: 246px,
+  );
+@include make-bg(image, '../../../pages/webinar/data_clean/data_clean', $_base-height, $_height-by-size);
+}
+.webinar-home-remote-video {
+  $_base-height: 186px;
+  $_height-by-size: (
+    small: 190px,
+    medium: 246px,
+    large: 246px,
+    extra-large: 246px,
+  );
+@include make-bg(image, '../../../pages/webinar/remote/remote', $_base-height, $_height-by-size);
+}
+.webinar-home-covid19-video {
+  $_base-height: 186px;
+  $_height-by-size: (
+    small: 190px,
+    medium: 246px,
+    large: 246px,
+    extra-large: 246px,
+  );
+@include make-bg(image, '../../../pages/webinar/covid19/covid19', $_base-height, $_height-by-size);
+}
+.webinar-home-power-bi-video {
+  $_base-height: 186px;
+  $_height-by-size: (
+    small: 190px,
+    medium: 246px,
+    large: 246px,
+    extra-large: 246px,
+  );
+@include make-bg(image, '../../../pages/webinar/power_bi/power_bi', $_base-height, $_height-by-size);
 }
 
-.childfund {
-  @include background-cover('../../../../static/pages/webinar/partners/Childfund.jpg');
-  @include webinar-logo-resolution;
-}
+.goal {
+    @include background-cover('../../../../static/pages/webinar/partners/goal.jpg');
+    @include webinar-logo-resolution;
+  }
+  
+  .childfund {
+    @include background-cover('../../../../static/pages/webinar/partners/Childfund.jpg');
+    @include webinar-logo-resolution;
+  }
+  
+  .crs {
+    @include background-cover('../../../../static/pages/webinar/partners/crs.jpg');
+    @include webinar-logo-resolution;
+  }
+  
+  .irc {
+    @include background-cover('../../../../static/pages/webinar/partners/irc.jpg');
+    @include webinar-logo-resolution;
+  }
+  
+  .miracle-feet {
+    @include background-cover('../../../../static/pages/webinar/partners/miracle-feet.jpg');
+    @include webinar-logo-resolution;
+  }

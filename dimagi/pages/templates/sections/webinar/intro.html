@@ -7,91 +7,45 @@
     <div class="content-width-large pad-bottom-small">
       <h2 class="gap-top-line neutral-dark">
         {% blocktrans %}
-          Optimize your global rollout of CommCare
+          What Interoperability Actually Means
         {% endblocktrans %}
       </h2>
     </div>{# .content-width-large #}
   
     <div class="off-grid white-lazy-bg"
          data-lazybg="true">
-      <div class="wistia-container image webinar-video-demo">
-        {% include "partials/wistia_popover.html" with wistia_id='gx2a7tvlh6' play_icon_medium=True show_image=True %}
+      <div class="wistia-container image webinar-interoperability-video">
+        {% include "partials/wistia_popover.html" with wistia_id='hmzenq3684' play_icon_medium=True show_image=True %}
       </div>{# .wistia-container #}
     </div>{# .off-grid #}
     <div class="content-width-large pad-top-small align-left pad-right-small">
       <h6 class="blue align-left pad-top-base pad-left-line">
         {% blocktrans %}
-          June 24, 2021
+          September 30, 2021
         {% endblocktrans %}
       </h6>
       <p class="pad-bottom-line pad-left-line">
         {% blocktrans %}
-          International Rescue Committee (IRC) and Catholic Relief Services (CRS) 
-          spoke about their global rollout of CommCare Enterprise: why they did it 
-          and how they did it—with some priceless lessons learned along the way.
+          The way your project looked at the start isn't what it looks like 
+          today. We know organisational needs evolve over time, from new and 
+          larger projects to changes in reporting requirements. The only way 
+          to be sure that your team can stay ahead of these changes is with 
+          an adaptable, ecosystem-driven approach. In this lively panel 
+          discussion, our partners from Trocaire, MSI, and Global Communities 
+          discuss how interoperability and integrations can grow your long-term impact.
         {% endblocktrans %}
       </p>
     </div>
 
-    <div class="content-width-medium pad-bottom-small">
-      <p class="button">
-        {% trans 'View Webinar' as video_text %}
-        {% include "partials/wistia_popover.html" with wistia_id='nwsl17euy7' text=video_text white_class='white' %}
-      </p>
-    </div>{# .content-width-medium #}
-
-    <div class="content content-width-large feature-projects pad-top-small pad-horz-line accent-gray-bg">
-      <div class="grid-flex-at-medium pad-top-small pad-left-small">
-        <div class="feature-partner-im-saf column flex-align-left-at-large align-center">
-          <div class="people-sarah white-lazy-bg"
-               data-lazybg="true"></div>
-        </div>
-        <div class="grid-2-at-medium">
-          <div class="column">
-            <p class="align-left">
-              {% blocktrans %}
-                <strong>Sarah Muffly</strong> <br />
-                Learning and Training Advisor<br />
-                IRC
-              {% endblocktrans %}
-            </p>
-          </div>
-          <div class="column display-flex">
-            <div class="align-center pad-left-small">
-              {% include "svg/webinar/crs.html" %}
-            </div>
-            <div class="align-center pad-top-small pad-left-small">
-              <h5>CRS</h5>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="grid-flex-at-medium pad-top-small pad-left-small">
-        <div class="feature-partner-im-saf column flex-align-left-at-large align-center">
-          <div class="people-nathan white-lazy-bg"
-               data-lazybg="true"></div>
-        </div>
-        <div class="grid-2-at-medium">
-          <div class="column">
-            <p class="align-left">
-              {% blocktrans %}
-                <strong>Nathan Barthel</strong> <br />
-                Senior Manager, ICT4D<br />
-                CRS
-              {% endblocktrans %}
-            </p>
-          </div>
-          <div class="column display-flex">
-            <div class="align-center pad-left-small gap-left-base">
-              {% include "svg/webinar/irc.html" %}
-            </div>
-            <div class="align-center pad-top-line pad-left-small">
-              <h5>IRC</h5>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>{# .feature-projects #}
+    <div class="align-center pad-vert-line">
+      <a class="button"
+         href="{% url 'interoperability' %}">
+        {% blocktrans %}
+          View Webinar
+        {% endblocktrans %}
+      </a>
+    </div>
+    {% include 'sections/webinar/interoperability/speakers.html' %}
 
   </div>{# .content #}
 </section>

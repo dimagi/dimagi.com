@@ -1,0 +1,60 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="pad-vert-medium blue-theme">
+  <div class="content">
+    <div class="content-width-large align-left">
+      <h3>
+        {% blocktrans %}
+          Optimize Your Global Rollout of CommCare
+        {% endblocktrans %}
+      </h3>
+      <h6 class="blue pad-bottom-line">
+        {% blocktrans %}
+          June 24, 2021
+        {% endblocktrans %}
+      </h6>
+    </div>
+    <div class="grid-2-at-small grid-reverse">
+      <div class="column pad-top-none align-left pad-left-small">
+        <p>
+          {% blocktrans %}
+            Hear from International Rescue Committee (IRC) and Catholic 
+            Relief Services (CRS) about their global rollout of CommCare 
+            Enterprise. They present insights from their global rollout, 
+            their internal operations to support employees in the 
+            institutionalisation of CommCare, and key learnings along the 
+            way. With two very different organisations, this webinar reveals 
+            valuable and actionable insights for the successful global 
+            administration and rollout of CommCare Enterprise, no matter 
+            the structure of your teams.
+          {% endblocktrans %}
+        </p>
+        <div class="integration column display-flex pad-bottom-small">
+          <div class="crs gap-left-base-at-medium"
+               data-lazybg="true"></div>
+          <div class="irc gap-left-base-at-medium"
+               data-lazybg="true"></div>
+        </div>
+        <div class="align-left pad-top-base">
+          <a class="button"
+             href="{% url 'optimize' %}">
+            {% blocktrans %}
+              View Webinar
+            {% endblocktrans %}
+          </a>
+        </div>
+      </div>{# .column #}
+  
+      <div class="column">
+        <div class="off-grid white-lazy-bg"
+           data-lazybg="true">
+        <div class="wistia-container image webinar-home-optimize-video">
+          {% include "partials/wistia_popover.html" with wistia_id='g1h9q6353u' play_icon_medium=True show_image=True %}
+        </div>{# .wistia-container #}
+      </div>{# .off-grid #}
+      
+      </div>{# .column #}
+    </div>{# .grid-2 #}
+  </div>
+</section>{# .content #}
