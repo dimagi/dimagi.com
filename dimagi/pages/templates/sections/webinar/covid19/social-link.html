@@ -15,9 +15,9 @@
     </div>
     <div class="column">
       <div class="links-social orange-theme align-right-at-medium">
-        {% twitter_link url text hashtags %}
-        {% facebook_link url %}
-        {% linkedin_link url %}
+        {% twitter_link request.build_absolute_uri 'webinars' 'webinars' %}
+        {% facebook_link request.build_absolute_uri %}
+        {% linkedin_link request.build_absolute_uri %}
         <span class="pad-left-base blue slate">{% trans "Share" %}</span>
       </div>
     </div>

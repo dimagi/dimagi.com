@@ -5,16 +5,24 @@
   {% include "../../sections/webinar/other_webinars/optimize.html" %}
   {% include "../../sections/webinar/other_webinars/global_me.html" %}
   {% include "../../sections/webinar/other_webinars/data_already.html" %}
-  {% include "../../sections/webinar/other_webinars/adapt.html" %}
-  {% include "../../sections/webinar/other_webinars/new_function.html" %}
-  {% include "../../sections/webinar/other_webinars/data_clean.html" %}
-  {% include "../../sections/webinar/other_webinars/remote.html" %}
-  {% include "../../sections/webinar/other_webinars/covid19.html" %}
-  {% include "../../sections/webinar/other_webinars/power_bi.html" %}
 
-  <div>
-    {% blocktrans %}
-      View Webinar
-    {% endblocktrans %}
+  <div class="accordion accordion-faq-color accordion-faq-arrow-webinar gap-top-base collapsed">
+    <div class="content-width-small accordion-header border-none">
+      <h4 class="pad-bottom-medium pad-top-line blue uppercase">
+        {% blocktrans %}
+          View Older Webinars
+        {% endblocktrans %}
+      </h4>
+    </div>
+    <div class="accordion-content border-none"{% block accordion_content_show %} style="display: none;"{% endblock %}>
+      <div class="pad-bottom-small">
+        {% include "../../sections/webinar/other_webinars/adapt.html" %}
+        {% include "../../sections/webinar/other_webinars/new_function.html" %}
+        {% include "../../sections/webinar/other_webinars/data_clean.html" %}
+        {% include "../../sections/webinar/other_webinars/remote.html" %}
+        {% include "../../sections/webinar/other_webinars/covid19.html" %}
+        {% include "../../sections/webinar/other_webinars/power_bi.html" %}
+      </div>
+    </div>
   </div>
 </section>
