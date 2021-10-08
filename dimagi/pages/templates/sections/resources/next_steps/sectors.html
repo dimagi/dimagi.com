@@ -1,30 +1,30 @@
 {% load dimagidotcom %}
 {% load i18n %}
 
-<div class="column blue-theme">
+<div class="column turquoise-theme">
   <a class="tile {{ click_class }} resources-next-steps"
-     href="{% url 'quick_start' %}"
+     href="{% url 'sectors' %}"
      target="_blank">
 
-    <div class="blue-icon">
+    <div class="turquoise-icon">
       {% include "svg/resources/next_steps/getting_started.html" %}
     </div>
 
-    <h4 class="blue pad-top-line">
+    <h4 class="turquoise pad-top-line">
       {% blocktrans %}
-        Getting Started
+        Sectors
       {% endblocktrans %}
     </h4>
 
     <p class="body-color pad-top-line">
       {% blocktrans %}
-        Take your first steps into the world of data collection with ease
+        Explore the various sectors leveraging CommCare
       {% endblocktrans %}
     </p>
 
     <p class="arrow">
       {% blocktrans %}
-        Get Started
+        View Sectors
       {% endblocktrans %}
     </p>
 

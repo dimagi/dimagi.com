@@ -109,3 +109,27 @@
   transition: .5s background ease-in-out;
   background-position: center;
 }
+
+.blog-heading-resources {
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 32px;
+}
+
+.blog-desc-resources {
+  font-weight: 300;
+  font-size: 14px !important;
+  line-height: 22px;
+}
+
+.event-resources {
+  font-weight: 300 !important;
+}
+
+@media (min-width: $width-desktop) {
+  .blog-heading-resources {
+    font-size: 30px !important;
+    line-height: 38px;
+    font-weight: 400;
+  }
+}
