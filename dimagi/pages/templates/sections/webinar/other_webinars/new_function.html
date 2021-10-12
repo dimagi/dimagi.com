@@ -3,7 +3,7 @@
 
 <section class="pad-vert-medium blue-theme">
   <div class="content">
-    <div class="content-at-medium align-left pad-left-line pad-left-medium-at-medium">
+    <div class="content-at-medium align-left pad-left-line pad-left-medium-at-extra-large">
       <h3>
         {% blocktrans %}
           Adding New Functionality to Your CommCare Application
@@ -15,8 +15,17 @@
         {% endblocktrans %}
       </h6>
     </div>
-    <div class="grid-2-at-small grid-reverse">
-      <div class="column pad-top-medium align-left pad-left-small">
+    <div class="grid-2-at-small">
+      <div class="column">
+        <div class="off-grid white-lazy-bg"
+           data-lazybg="true">
+        <div class="wistia-container image webinar-home-new-function-video">
+          {% include "partials/wistia_popover.html" with wistia_id='335ho8hr1a' play_icon_medium=True show_image=True %}
+        </div>{# .wistia-container #}
+      </div>{# .off-grid #}
+      
+      </div>{# .column #}
+      <div class="column pad-top-none align-left pad-left-small">
         <p>
           {% blocktrans %}
             Learn how to build and add new functionality onto your existing app on CommCare.
@@ -30,16 +39,6 @@
             {% endblocktrans %}
           </a>
         </div>
-      </div>{# .column #}
-  
-      <div class="column">
-        <div class="off-grid white-lazy-bg"
-           data-lazybg="true">
-        <div class="wistia-container image webinar-home-new-function-video">
-          {% include "partials/wistia_popover.html" with wistia_id='335ho8hr1a' play_icon_medium=True show_image=True %}
-        </div>{# .wistia-container #}
-      </div>{# .off-grid #}
-      
       </div>{# .column #}
     </div>{# .grid-2 #}
   </div>

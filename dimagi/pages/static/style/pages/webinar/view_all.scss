@@ -45,7 +45,7 @@
     float: right;
     height: 12px;
     margin-top: 5px;
-    margin-right: 70px;
+    margin-right: 120px;
     width: 12px;
     transform: rotate(180deg);
   }
@@ -56,7 +56,7 @@
     height: 12px;
     width: 12px;
     margin-top: -1px;
-    margin-right: 70px;
+    margin-right: 120px;
   }
 }
 
@@ -129,7 +129,7 @@
       large: 246px,
       extra-large: 246px,
     );
-  @include make-bg(image, '../../../pages/webinar/intro/intro', $_base-height, $_height-by-size);
+  @include make-bg(image, '../../../pages/webinar/data_already/data_already', $_base-height, $_height-by-size);
 }
 
 .webinar-home-adapt-video {
@@ -219,4 +219,31 @@
 
 .view-older-webinar {
   font-size: 14px;
+}
+
+@media (max-width: $width-desktop-lg) {
+  .accordion-faq-arrow-webinar {
+    .accordion-header>*:before {
+      // scss-lint:disable NestingDepth
+      content: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCIgd2lkdGg9IjEyIiBoZWlnaHQ9IjEyIj4KICA8cG9seWxpbmUgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDA0ZWJjIiBzdHJva2Utd2lkdGg9IjQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBwb2ludHM9IgoJMTguNSw1LjggMTAsMTQuMiAxLjUsNS44ICI+PC9wb2x5bGluZT4KPC9zdmc+');
+      display: block;
+      float: right;
+      height: 12px;
+      margin-top: 5px;
+      margin-right: 90px;
+      margin-left: -60px;
+      width: 12px;
+      transform: rotate(180deg);
+    }
+  
+    &.collapsed .accordion-header>*:before {
+      content: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCIgd2lkdGg9IjEyIiBoZWlnaHQ9IjEyIj4KICA8cG9seWxpbmUgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDA0ZWJjIiBzdHJva2Utd2lkdGg9IjQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBwb2ludHM9IgoJMTguNSw1LjggMTAsMTQuMiAxLjUsNS44ICI+PC9wb2x5bGluZT4KPC9zdmc+');
+      transform: none;
+      height: 12px;
+      width: 12px;
+      margin-top: -1px;
+      margin-right: 90px;
+      margin-left: -60px;
+    }
+  }
 }

@@ -3,7 +3,7 @@
 
 <section class="pad-vert-medium blue-theme accent-gray-bg">
   <div class="content">
-    <div class="content-at-medium align-left pad-left-line pad-left-medium-at-medium">
+    <div class="content-at-medium align-left pad-left-line pad-left-medium-at-extra-large">
       <h3>
         {% blocktrans %}
           Adapting Your App for COVID-19
@@ -15,7 +15,16 @@
         {% endblocktrans %}
       </h6>
     </div>
-    <div class="grid-2-at-small grid-reverse">
+    <div class="grid-2-at-small">
+      <div class="column">
+        <div class="off-grid white-lazy-bg"
+           data-lazybg="true">
+        <div class="wistia-container image webinar-home-adapt-video">
+          {% include "partials/wistia_popover.html" with wistia_id='emyusc5tjr' play_icon_medium=True show_image=True %}
+        </div>{# .wistia-container #}
+      </div>{# .off-grid #}
+      
+      </div>{# .column #}
       <div class="column pad-top-none align-left pad-left-small">
         <p>
           {% blocktrans %}
@@ -36,16 +45,6 @@
             {% endblocktrans %}
           </a>
         </div>
-      </div>{# .column #}
-  
-      <div class="column">
-        <div class="off-grid white-lazy-bg"
-           data-lazybg="true">
-        <div class="wistia-container image webinar-home-adapt-video">
-          {% include "partials/wistia_popover.html" with wistia_id='emyusc5tjr' play_icon_medium=True show_image=True %}
-        </div>{# .wistia-container #}
-      </div>{# .off-grid #}
-      
       </div>{# .column #}
     </div>{# .grid-2 #}
   </div>
