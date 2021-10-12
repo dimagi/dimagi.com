@@ -55,6 +55,10 @@ define([
       self.showFilters(!self.showFilters());
     };
 
+    self.closeFilters = function () {
+      self.showFilters(false);
+    };
+
     self.getCategoryUrl = function (slug) {
       var category = _.find(self.categories(), function (c) {
         return c.slug === slug;
