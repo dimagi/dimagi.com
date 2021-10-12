@@ -258,6 +258,10 @@ a.post {
   svg {
     height: 23px;
   }
+  a svg {
+    vertical-align: top;
+    margin-top: 17px;
+  }
   svg > * {
     fill: $color-text-blog-light;
     transition: fill .5s ease-in-out;
@@ -278,7 +282,7 @@ a.post {
       content: " ";
       display: block;
       position: absolute;
-      right: 0;
+      left: 18px;
       top: 20px;
       width: 8px;
       height: 8px;
@@ -368,4 +372,14 @@ a.post {
   }
 }
 
-
+.sub-nav-fixed-bottom {
+  .destinations {
+    a svg {
+      vertical-align: top;
+      margin-top: 2px;
+    }
+    a.toggle-filters:after {
+      top: 2px;
+    }
+  }
+}
