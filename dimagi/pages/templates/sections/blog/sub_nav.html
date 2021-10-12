@@ -27,12 +27,12 @@
     <div class="destinations">
       <div class="content">
         <a href="{% url 'blog_home' %}">
-          {% include "svg/blog/icon/nav/home.html" %} {{ filter_categories }}
+          {% include "svg/blog/icon/nav/home.html" %} {% trans "Home" %}
         </a>
         <a href="#"
            class="toggle-filters"
            data-bind="click: toggleFilters, css: { 'has-filters': showHasFiltersAlert}">
-          {% include "svg/blog/icon/nav/filter.html" %}
+          {% include "svg/blog/icon/nav/filter.html" %} {% trans "Filter" %}
         </a>
         <div class="search-bar-container">
           <input type="text" placeholder="{% trans "Search..." %}" data-bind="textInput: searchTerm, event: {keypress: submitSearchOnEnter}" /><button type="button" data-bind="click: submitSearch">{% include "svg/blog/icon/nav/search.html" %}</button>
