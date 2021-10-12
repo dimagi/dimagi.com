@@ -123,6 +123,10 @@ define([
         if (Modernizr.touch) {
           self.$html.addClass(self.CLASSES.FIXED_BOTTOM);
           self.fixedToBottom = true;
+
+          if (self.$subNav.data('ko')) {
+            window.subNavKoModel.activate(self.$subNav);
+          }
         } else {
           self.enableFixedNav();
         }
