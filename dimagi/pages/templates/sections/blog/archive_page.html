@@ -13,11 +13,21 @@
         {% trans "Searching for articles..." %}
       {% endif %}
     </h2>
-      {% if tag_summary %}
+      {% if tag_summary or existing_filters.category != 'all' %}
         <p class="pad-bottom-small">
-          {% blocktrans %}
-            With tags {{ tag_summary }}.
-          {% endblocktrans %}
+          {% if tag_summary and existing_filters.category != 'all' %}
+            {% blocktrans with category.name as category_name %}
+               With tags {{ tag_summary }} in category "{{ category_name }}".
+            {% endblocktrans %}
+          {% elif tag_summary %}
+            {% blocktrans %}
+               With tags {{ tag_summary }}.
+            {% endblocktrans %}
+          {% elif existing_filters.category != 'all' %}
+            {% blocktrans with category.name as category_name %}
+              In category "{{ category_name }}".
+            {% endblocktrans %}
+          {% endif %}
         </p>
       {% endif %}
   {% endif %}
