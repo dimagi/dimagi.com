@@ -31,6 +31,9 @@
               multiple="multiple"></select>
     </div>
     <div class="align-center">
+      <button type="button" class="button alt" data-bind="click: clearFilters">
+        {% trans "Clear Filter" %}
+      </button>
       <button type="button" class="button" data-bind="click: submitSearch">
         {% trans "View Articles" %}
       </button>

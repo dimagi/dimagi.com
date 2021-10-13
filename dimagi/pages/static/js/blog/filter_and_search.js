@@ -73,7 +73,21 @@ define([
             t: _.join(self.searchTags(), ','),
           };
       window.location = url + '?' + $.param(query);
+    };
 
+    self.clearFilters = function () {
+      var currentUrl = new URL(window.location.href),
+          searchedTags = currentUrl.searchParams.get('t'),
+          searchedTerm = currentUrl.searchParams.get('s');
+      if (!!searchedTags || (!!searchedTerm && self.searchCategory() !== 'all')) {
+        self.searchTags([]);
+        self.searchCategory('all');
+        self.submitSearch();
+      } else {
+        self.searchTags([]);
+        self.searchCategory('all');
+        self.closeFilters();
+      }
     };
 
     self.activate = function($parentNav) {
