@@ -1,0 +1,32 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="help align-center orange-theme" id="brief-overview">
+  <div class="content pad-top-small">
+    <div>
+      <h2>
+        {% blocktrans %}
+          Toolkits
+        {% endblocktrans %}
+      </h2>
+      <p class="align-center">
+        {% blocktrans %}
+          These interactive and informative resources can support you in implementing digital solutions
+        {% endblocktrans %}
+      </p>
+    </div>
+    <div class="grid-1-at-small grid-3-at-medium grid-col-space-large pad-top-small">
+      {% include "sections/resources/toolkits/dhis2.html" %}
+      {% include "sections/resources/toolkits/business.html" %}
+      {% include "sections/resources/toolkits/manage_data.html" %}
+    </div>{# .grid-1-at-small #}
+  </div>{# .content #}
+  <div class="align-center pad-bottom-medium">
+    <a class="arrow slate"
+       href="{% url 'covid_19' %}">
+      {% blocktrans %}
+        view more toolkits
+      {% endblocktrans %}
+    </a>
+  </div>
+</section>

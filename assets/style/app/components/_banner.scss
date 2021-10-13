@@ -39,7 +39,6 @@
 @include jacket($jacket-critical) {
   .banner .column {
     display: flex;
-    flex: 1;
     height: 100%;
     margin-left: -$banner-pad-mobile;
     margin-right: -$banner-pad-mobile;
@@ -110,6 +109,10 @@
 
 .banner a:not(.button) {
   color: inherit; // necessary to have this here so it overrides _links
+}
+
+.nav-center-to-logo {
+  margin-bottom: 8px; // To make nav links align with logo
 }
 
 @include jacket($jacket-standard) {

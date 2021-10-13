@@ -1,0 +1,32 @@
+{% load dimagidotcom %}
+{% load i18n %}
+
+<div class="column blue-theme">
+  <a class="tile {{ click_class }} resources-next-steps"
+     href="{% url 'quick_start' %}"
+     target="_blank">
+
+    <div class="blue-icon">
+      {% include "svg/resources/next_steps/getting_started.html" %}
+    </div>
+
+    <h4 class="blue pad-top-line">
+      {% blocktrans %}
+        Getting Started
+      {% endblocktrans %}
+    </h4>
+
+    <p class="body-color pad-top-line">
+      {% blocktrans %}
+        Take your first steps into the world of data collection with ease
+      {% endblocktrans %}
+    </p>
+
+    <p class="arrow link">
+      {% blocktrans %}
+        Get Started
+      {% endblocktrans %}
+    </p>
+
+  </a>
+</div>{# .column #}

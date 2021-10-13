@@ -1,0 +1,32 @@
+{% load dimagidotcom %}
+{% load i18n %}
+
+<div class="column green-theme">
+  <a class="tile {{ click_class }}"
+     href="https://wiki.commcarehq.org/display/commcarepublic/Home"
+     target="_blank">
+
+    <div class="green-icon">
+      {% include "svg/resources/next_steps/wiki.html" %}
+    </div>
+
+    <h4 class="green pad-top-line">
+      {% blocktrans %}
+        CommCare Wiki
+      {% endblocktrans %}
+    </h4>
+
+    <p class="body-color pad-top-line">
+      {% blocktrans %}
+        Read through up-to-date technical guides and advice
+      {% endblocktrans %}
+    </p>
+
+    <p class="arrow link">
+      {% blocktrans %}
+        View Wiki
+      {% endblocktrans %}
+    </p>
+
+  </a>
+</div>{# .column #}

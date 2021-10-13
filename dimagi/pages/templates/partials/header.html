@@ -4,15 +4,16 @@
   <nav class="banner"
        role="navigation">
     <div class="content {% if is_inverse_header %} black {% endif %}">
-      <div class="column column-fill flex-align-left">
-        {% include "partials/menu/left.html" %}
-      </div>{# .column.flex-align-left #}
 
-      <div class="column flex-align-center">
+      <div class="column flex-align-left">
         {% include "partials/menu/center.html" %}
       </div>{# .column.flex-align-center #}
 
-      <div class="column column-fill flex-align-right">
+      <div class="column column-fill flex-align-left pad-left-small">
+        {% include "partials/menu/left.html" %}
+      </div>{# .column.flex-align-left #}
+
+      <div class="column column-fill flex-align-right nav-center-to-logo">
         {% include "partials/menu/right.html" %}
       </div>{# .column.flex-align-right #}
     </div>{# .content #}

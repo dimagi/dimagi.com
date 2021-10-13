@@ -1,0 +1,32 @@
+{% load dimagidotcom %}
+{% load i18n %}
+
+<div class="column turquoise-theme">
+  <a class="tile {{ click_class }} resources-next-steps"
+     href="{% url 'sectors' %}"
+     target="_blank">
+
+    <div class="turquoise-icon">
+      {% include "svg/resources/next_steps/sectors.html" %}
+    </div>
+
+    <h4 class="turquoise pad-top-line">
+      {% blocktrans %}
+        Sectors
+      {% endblocktrans %}
+    </h4>
+
+    <p class="body-color pad-top-line">
+      {% blocktrans %}
+        Explore the various sectors leveraging CommCare
+      {% endblocktrans %}
+    </p>
+
+    <p class="arrow link">
+      {% blocktrans %}
+        View Sectors
+      {% endblocktrans %}
+    </p>
+
+  </a>
+</div>{# .column #}

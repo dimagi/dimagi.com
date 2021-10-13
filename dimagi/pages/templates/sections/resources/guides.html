@@ -1,0 +1,76 @@
+{% load dimagidotcom %}
+{% load i18n %}
+
+<section class="testimonial pad-bottom-small guides accent-gray-bg"
+         id="news">
+  <div class="content pad-top-medium pap-bottom-small">
+    <h2 class="align-center">
+      {% blocktrans %}
+        Guides
+      {% endblocktrans %}
+    </h2>
+    <p class="align-center">
+      {% blocktrans %}
+        These comprehensive guides take you through the steps to launching and improving your programs
+      {% endblocktrans %}
+    </p>
+  </div>{# .content #}
+  <div class="content">
+    <div class="grid grid-3-at-large grid-1-at-medium grid-row-equal-heights">
+      <a href="{% url 'mobile_data_collection'%}"
+         target="_blank">
+        <div class="column pad-top-line">
+          <div class="news-image-testimonial">
+            <div class="image testimonial1"
+                 data-lazybg="true"></div>
+            <div class="pad-vert-line">
+              <h5>
+                <h6 class="body-color">
+                  {% blocktrans %}
+                    Guide to Mobile Data Collection
+                  {% endblocktrans %}
+                </h6>
+              </h5>
+            </div>
+          </div>
+        </div>{# .column #}
+      </a>
+      <a href="{% url 'data_collection' %}"
+         target="_blank">
+        <div class="column pad-top-line">
+          <div class="news-image-testimonial">
+            <div class="image testimonial2"
+                data-lazybg="true"></div>
+            <div class="pad-vert-line">
+              <h5>
+                <h6 class="body-color">
+                  {% blocktrans %}
+                    Guide to Data Collection
+                  {% endblocktrans %}
+                </h6>
+              </h5>
+            </div>
+          </div>
+        </div>{# .column #}
+      </a>
+      <a href="{% url 'data_driven_programs' %}"
+         target="_blank">
+        <div class="column pad-top-line">
+          <div class="news-image-testimonial">
+            <div class="image testimonial3"
+                data-lazybg="true"></div>
+            <div class="pad-vert-line">
+              <h5>
+                <h6 class="body-color">
+                  {% blocktrans %}
+                    Guide to Data-Driven Program Improvements
+                  {% endblocktrans %}
+                </h6>
+              </h5>
+            </div>
+          </div>
+        </div>{# .column #}
+      </a>
+    </div>{# .grid #}
+  </div>{# .content #}
+</section>

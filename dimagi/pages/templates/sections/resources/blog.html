@@ -1,0 +1,35 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="testimonial pad-bottom-small blog"
+         id="blog">
+  <div class="content pad-vert-small">
+    <h2 class="align-center">
+      {% blocktrans %}
+        Blogs
+      {% endblocktrans %}
+    </h2>
+    <p class="align-center">
+      {% blocktrans %}
+        Read the latest about what we’re working on from our team and partners
+      {% endblocktrans %}
+    </p>
+  </div>{# .content #}
+  <div class="content">
+    <div class="grid-3-at-medium grid-1-at-small grid-row-space-small">
+      {% for post in posts %}
+        <div class="column pad-top-base">
+          {% include "sections/resources/blog_single.html" with post=post ratio='rect' hide_cat=True %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>{# .content #}
+  <div class="align-center pad-bottom-none">
+    <a class="arrow slate"
+       href="{% url 'blog_home' %}">
+      {% blocktrans %}
+        view more blogs
+      {% endblocktrans %}
+    </a>
+  </div>
+</section>
