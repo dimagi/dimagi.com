@@ -123,6 +123,7 @@ urlpatterns = [
     url(r'^sectors/', include('dimagi.pages.urls.sectors')),
     url(r'^press/', include('dimagi.pages.urls.press')),
     url(r'^terms/', include('dimagi.pages.urls.terms')),
+    url(r'^webinars/', include('dimagi.pages.urls.webinars')),
 
     url(r'^robots.txt$', TemplateView.as_view(
         template_name=get_robots(),

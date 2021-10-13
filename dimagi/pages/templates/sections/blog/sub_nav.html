@@ -29,7 +29,7 @@
             Blog Home
           {% endblocktrans %}
         </a>
-        <a href="#categories">
+        <a href="{% if use_direct_category_link %}{% url 'blog_home' %}{% endif %}#categories">
           {% blocktrans %}
             Categories
           {% endblocktrans %}

@@ -1,0 +1,68 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="webinar align-center pad-bottom-line blue-theme"
+         id="webinar">
+  <div class="content-width-large pad-bottom-line">
+    <div class="content-width-large pad-bottom-small">
+      <h2 class="gap-top-medium">
+        {% blocktrans %}
+          Optimize Your Global Rollout of CommCare
+        {% endblocktrans %}
+      </h2>
+    </div>{# .content-width-large #}
+  
+    <div class=" content-width-large off-grid white-lazy-bg"
+         data-lazybg="true">
+      <div class="wistia-container image webinar-optimize-video">
+        {% include "partials/wistia_popover.html" with wistia_id='g1h9q6353u' play_icon_medium=True show_image=True %}
+      </div>{# .wistia-container #}
+      <h6 class="content-width-large blue align-left pad-top-small pad-left-line">
+        {% blocktrans %}
+          Published: June 24, 2021
+        {% endblocktrans %}
+      </h6>
+    </div>{# .off-grid #}
+    <div class="grid-4-at-large">
+      <div class="column column-width-3-at-large pad-top-small align-left pad-left-small">
+        <div class="border-right-at-medium">
+          <h6 class="slate">
+            {% blocktrans %}
+              About
+            {% endblocktrans %}
+          </h6>
+          <p class="pad-right-line">
+            {% blocktrans %}
+              In this webinar, hear from International Rescue Committee (IRC) and 
+              Catholic Relief Services (CRS) about their global rollout of CommCare 
+              Enterprise. They present insights from their global rollout, their 
+              internal operations to support employees in the institutionalisation 
+              of CommCare, and key learnings along the way. With two very different 
+              organisations, this webinar reveals valuable and actionable insights 
+              for the successful global administration and rollout of CommCare 
+              Enterprise, no matter the structure of your teams.
+            {% endblocktrans %}
+          </p>
+        </div>
+      </div>{# .column #}
+  
+      <div class="column pad-top-small align-left">
+        <h6 class="slate">
+          {% blocktrans %}
+            Resources
+          {% endblocktrans %}
+        </h6>
+        <p>
+          <a href="https://confluence.dimagi.com/pages/viewpage.action?pageId=100172634"
+             class="arrow blue read-more"
+             target="_blank">
+            {% blocktrans %}
+              Read the Q&A from our panelists
+            {% endblocktrans %}
+          </a>
+        </p>
+      </div>{# .column #}
+    </div>{# .grid-2 #}
+
+  </div>{# .content-width-large #}
+</section>

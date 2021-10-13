@@ -1,0 +1,51 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="pad-vert-medium blue-theme">
+  <div class="content">
+    <div class="content-at-medium align-left pad-left-line pad-left-medium-at-extra-large">
+      <h3>
+        {% blocktrans %}
+          Remote Program Monitoring with CommCare
+        {% endblocktrans %}
+      </h3>
+      <h6 class="blue pad-bottom-line">
+        {% blocktrans %}
+          April 22, 2020
+        {% endblocktrans %}
+      </h6>
+    </div>
+    <div class="grid-2-at-small">
+      <div class="column">
+        <div class="off-grid white-lazy-bg"
+           data-lazybg="true">
+        <div class="wistia-container image webinar-home-remote-video">
+          {% include "partials/wistia_popover.html" with wistia_id='j3ky1zjzxq' play_icon_medium=True show_image=True %}
+        </div>{# .wistia-container #}
+      </div>{# .off-grid #}
+      
+      </div>{# .column #}
+      <div class="column pad-top-noe align-left pad-left-small">
+        <p>
+          {% blocktrans %}
+            There are many reasons that a project may shift to delivery 
+            services or collecting data remotely-- the COVID-19 pandemic 
+            is a recent example, but many projects face political instability, 
+            geographic barriers, or other obstacles that make remote monitoring 
+            a more practical way to deliver services. In this webinar, see how 
+            SMS, WhatsApp, and email messaging in CommCare can be used for 
+            remote program monitoring and contactless beneficiary engagement.
+          {% endblocktrans %}
+        </p>
+        <div class="align-left pad-top-base">
+          <a class="button"
+             href="{% url 'remote' %}">
+            {% blocktrans %}
+              View Webinar
+            {% endblocktrans %}
+          </a>
+        </div>
+      </div>{# .column #}
+    </div>{# .grid-2 #}
+  </div>
+</section>{# .content #}

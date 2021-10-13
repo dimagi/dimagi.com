@@ -1,0 +1,77 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="webinar align-center pad-bottom-line blue-theme"
+         id="webinar">
+  <div class="content-width-large pad-bottom-line">
+    <div class="content-width-large pad-bottom-small">
+      <h2 class="gap-top-medium">
+        {% blocktrans %}
+          What Interoperability Actually Means
+        {% endblocktrans %}
+      </h2>
+    </div>{# .content-width-large #}
+  
+    <div class=" content-width-large off-grid white-lazy-bg"
+         data-lazybg="true">
+      <div class="wistia-container image webinar-interoperability-video">
+        {% include "partials/wistia_popover.html" with wistia_id='hmzenq3684' play_icon_medium=True show_image=True %}
+      </div>{# .wistia-container #}
+      <h6 class="content-width-large blue align-left pad-top-small pad-left-line">
+        {% blocktrans %}
+          Published: June 24, 2021
+        {% endblocktrans %}
+      </h6>
+    </div>{# .off-grid #}
+    <div class="grid-4-at-large">
+      <div class="column column-width-3-at-large pad-top-small align-left pad-left-small">
+        <div class="border-right-at-medium">
+          <h6 class="slate">
+            {% blocktrans %}
+              About
+            {% endblocktrans %}
+          </h6>
+          <p class="pad-right-line">
+            {% blocktrans %}
+              The way your project looked at the start isn't what it looks like 
+              today. We know organisational needs evolve over time, from new 
+              and larger projects to changes in reporting requirements. The 
+              only way to be sure that your team can stay ahead of these changes 
+              is with an adaptable, ecosystem-driven approach. In this lively 
+              panel discussion, our partners from Trocaire, MSI, and Global 
+              Communities discuss how interoperability and integrations can 
+              grow your long-term impact.
+            {% endblocktrans %}
+          </p>
+        </div>
+      </div>{# .column #}
+  
+      <div class="column pad-top-small align-left">
+        <h6 class="slate">
+          {% blocktrans %}
+            Resources
+          {% endblocktrans %}
+        </h6>
+        <p>
+          <a href="https://docs.google.com/presentation/d/1EBGdhXtjkWm1lOXGXHb1So_eNbc8KdWeFl9n0qsYtCA/edit?usp=sharing"
+             class="arrow blue read-more"
+             target="_blank">
+            {% blocktrans %}
+              View the presentation
+            {% endblocktrans %}
+          </a>
+        </p>
+        <p>
+          <a href=""
+             class="arrow blue read-more"
+             target="_blank">
+            {% blocktrans %}
+              Read the Q&A's from our panelists
+            {% endblocktrans %}
+          </a>
+        </p>
+      </div>{# .column #}
+    </div>{# .grid-2 #}
+
+  </div>{# .content-width-large #}
+</section>

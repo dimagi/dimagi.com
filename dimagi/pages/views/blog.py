@@ -12,7 +12,13 @@ from dimagi.data.blog import (
     ARCHIVE,
 )
 from dimagi.pages.models.blog import BlogPost
-from dimagi.utils.wordpress_api import get_json
+from dimagi.utils.wordpress_api import (
+    get_json,
+    search_wordpress,
+    get_all_tags,
+    get_tag_by_id,
+    get_tag_by_slug,
+)
 
 from dimagi.utils.ab_tests import DEMO_WORKFLOW_V2
 from dimagi.utils.decorators.enable_ab_test import enable_ab_test
@@ -29,6 +35,22 @@ def validate_category(fn):
     return _validate_category
 
 
+def process_and_validate_tag(fn):
+    @wraps(fn)
+    def _validate_tag(request, tag, *args, **kwargs):
+        available_tags = get_all_tags()
+        request.all_tags = available_tags
+        tag_obj = get_tag_by_id(tag, available_tags)
+        if tag_obj is None:
+            tag_obj = get_tag_by_slug(tag, available_tags)
+        if tag_obj is None:
+            raise Http404()
+        request.tag = tag_obj
+        return fn(request, tag, *args, **kwargs)
+
+    return _validate_tag
+
+
 def _get_posts(category, page=None, num_posts=None):
     post_data = get_json(
         'blog/{}'.format(category.slug), page=page, num_posts=num_posts)
@@ -41,6 +63,18 @@ def _get_posts(category, page=None, num_posts=None):
 def _get_global_context():
     return {
         'categories': nav_categories,
+    }
+
+
+def _get_totals_context(page, total_posts, posts_per_page, num_queried_posts):
+    page = int(page or 1)
+    total_pages = math.ceil(total_posts / posts_per_page)
+    total_previous = (page - 1) * 20
+    return {
+        'total_posts': total_posts,
+        'total_pages': total_pages,
+        'from_post': 1 + total_previous,
+        'to_post': num_queried_posts + total_previous,
     }
 
 
@@ -64,17 +98,17 @@ def archive(request, category=None, page=None):
     context = _get_global_context()
     page = int(page or 1)
     total_posts = int(posts['total'])
-    total_pages = math.ceil(total_posts / 20)
-    total_previous = (page - 1) * 20
     context.update({
         'category': category,
         'posts': posts['posts'],
         'page': page,
-        'total_posts': total_posts,
-        'total_pages': total_pages,
-        'from_post': 1 + total_previous,
-        'to_post': len(posts['posts']) + total_previous,
     })
+    context.update(_get_totals_context(
+        page,
+        total_posts,
+        20,
+        len(posts['posts'])
+    ))
 
     if page > 1:
         if category.slug == ARCHIVE.slug:
@@ -85,7 +119,7 @@ def archive(request, category=None, page=None):
             )
         context['previous_url'] = previous_url
 
-    if page < total_pages:
+    if page < context['total_pages']:
         if category.slug == ARCHIVE.slug:
             next_url = reverse('archive_page', args=[page + 1])
         else:
@@ -97,15 +131,59 @@ def archive(request, category=None, page=None):
     return render(request, 'pages/blog/archive.html', context)
 
 
-def post(request, slug):
-    _post = get_json('blog/post/{}/'.format(slug))
+@process_and_validate_tag
+def tag_archive(request, tag, page=None):
+    page = int(page or 1)
+    search_results = search_wordpress(
+        num_posts=20,
+        page=page,
+        tags=[request.tag.id],
+    )
+    posts = search_results['posts']
 
-    if _post.get('not_found'):
+    context = _get_global_context()
+    context.update({
+        'tag': request.tag,
+        'posts': posts,
+        'page': page,
+    })
+
+    context.update(_get_totals_context(
+        page,
+        request.tag.total,
+        20,
+        len(posts)
+    ))
+
+    if page > 1:
+        context['previous_url'] = reverse('blog_tag_archive_page', args=[tag, page - 1])
+
+    if page < context['total_pages']:
+        context['next_url'] = reverse('blog_tag_archive_page', args=[tag, page + 1])
+
+    return render(request, 'pages/blog/archive.html', context)
+
+
+def post(request, slug):
+    post_data = get_json('blog/post/{}/'.format(slug))
+
+    if post_data.get('not_found'):
         raise Http404()
 
-    _post = BlogPost(_post)
+    blog_post = BlogPost(post_data)
+
+    related_posts_data = search_wordpress(
+        num_posts=3,
+        category=blog_post.category.slug
+    )
+    related_posts = [BlogPost(p) for p in related_posts_data['posts']]
+
     context = _get_global_context()
-    context['post'] = _post
+    context.update({
+        'post': blog_post,
+        'related_posts': related_posts,
+    })
+    context['post'] = blog_post
     return render(request, 'pages/blog/post.html', context)
 
 

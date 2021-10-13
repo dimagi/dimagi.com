@@ -1,0 +1,55 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="webinar align-center pad-bottom-line blue-theme"
+         id="webinar">
+  <div class="content-width-large pad-top-small accent-gray-bg">
+    <h6 class="slate align-left-at-medium align-center pad-left-small">
+      {% blocktrans %}
+        Featuring
+      {% endblocktrans %}
+    </h6>
+    <div class="grid-2-at-small">
+      <div class="column align-left pad-left-small">
+        <div class="content-width-large feature-projects pad-vert-line pad-horz-line">
+          <div class="grid-flex-at-medium">
+              <div class="feature-partner-im-saf column flex-align-left-at-large align-center">
+                {% include "svg/webinar/irc.html" %}
+              </div>
+              <div class="column">
+                <p class="pad-left-small">
+                  {% blocktrans %}
+                    <h5 class="align-left-at-medium align-center slate">International Rescue Committee</h5>
+                  {% endblocktrans %}
+                </p>
+              </div>
+            </div>
+          </div>{# .feature-projects #}
+      </div>{# .column #}
+      <div class="column align-left pad-left-small">
+        <div class="content-width-large feature-projects pad-vert-line pad-horz-line">
+          <div class="grid-flex-at-medium">
+            <div class="feature-partner-im-saf column flex-align-left-at-large align-center">
+              {% include "svg/webinar/crs.html" %}
+            </div>
+            <div class="column">
+              <p class="pad-left-small pad-top-base">
+                {% blocktrans %}
+                  <h5 class="align-left-at-medium align-center slate">Catholic Relief Services</h5>
+                {% endblocktrans %}
+              </p>
+            </div>
+          </div>
+        </div>{# .feature-projects #}
+      </div>{# .column #}
+    </div>{# .grid-2 #}
+    <div class="align-center pad-vert-small">
+      <a class="button"
+         href="{% url 'partners' %}">
+        {% blocktrans %}
+          View All Partners
+        {% endblocktrans %}
+      </a>
+    </div>
+  </div>{# .content-width-large #}
+</section>

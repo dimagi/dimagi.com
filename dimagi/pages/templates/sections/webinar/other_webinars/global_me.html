@@ -1,0 +1,56 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="pad-vert-medium blue-theme accent-gray-bg">
+  <div class="content">
+    <div class="content-at-medium align-left pad-left-line pad-left-medium-at-extra-large">
+      <h3>
+        {% blocktrans %}
+          Learn How to Build a Global M&E System
+        {% endblocktrans %}
+      </h3>
+      <h6 class="blue pad-bottom-line">
+        {% blocktrans %}
+          May 27, 2021
+        {% endblocktrans %}
+      </h6>
+    </div>
+    <div class="grid-2-at-small">
+      <div class="column">
+        <div class="off-grid white-lazy-bg"
+           data-lazybg="true">
+        <div class="wistia-container image webinar-home-global-me-video">
+          {% include "partials/wistia_popover.html" with wistia_id='2b3rbdivi8' play_icon_medium=True show_image=True %}
+        </div>{# .wistia-container #}
+      </div>{# .off-grid #}
+      
+      </div>{# .column #}
+      <div class="column pad-top-none align-left pad-left-small">
+        <p>
+          {% blocktrans %}
+            Hear real-world organizations talk about building better systems for 
+            global monitoring and evaluation. Mala Ram presents the SCORE system 
+            which GOAL built on CommCare to track cross-project indicators. Monica 
+            shows ChildFund's strategic global M&E approach on one project at scale, 
+            and discusses ChildFund’s path building both their CommCare application 
+            and their end-to-end M&E system.
+          {% endblocktrans %}
+        </p>
+        <div class="integration column display-flex pad-bottom-small">
+          <div class="goal gap-left-base-at-medium"
+               data-lazybg="true"></div>
+          <div class="childfund gap-left-base-at-medium"
+               data-lazybg="true"></div>
+        </div>
+        <div class="align-left pad-top-base">
+          <a class="button"
+             href="{% url 'global_me' %}">
+            {% blocktrans %}
+              View Webinar
+            {% endblocktrans %}
+          </a>
+        </div>
+      </div>{# .column #}
+    </div>{# .grid-2 #}
+  </div>
+</section>{# .content #}

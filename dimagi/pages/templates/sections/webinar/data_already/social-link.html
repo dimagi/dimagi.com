@@ -1,0 +1,25 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<div class="content-width-large blue-theme pad-vert-small pad-left-small pad-left-none-at-medium">
+  <div class="grid-2-at-small">
+    <div class="column">
+      <p>
+        <a href="{% url 'webinar_home' %}"
+           class="arrow slate">
+          {% blocktrans %}
+            View all webinars
+          {% endblocktrans %}
+        </a>
+      </p>
+    </div>
+    <div class="column">
+      <div class="links-social orange-theme align-right-at-medium">
+        {% twitter_link request.build_absolute_uri 'webinars' 'webinars' %}
+        {% facebook_link request.build_absolute_uri %}
+        {% linkedin_link request.build_absolute_uri %}
+        <span class="pad-left-base blue slate">{% trans "Share" %}</span>
+      </div>
+    </div>
+  </div>
+</div>
