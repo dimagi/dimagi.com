@@ -1,0 +1,54 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="pad-vert-medium blue-theme">
+  <div class="content">
+    <div class="content-at-medium align-left pad-left-line pad-left-medium-at-extra-large">
+      <h3>
+        {% blocktrans %}
+          Learning From the Data You Already Have
+        {% endblocktrans %}
+      </h3>
+      <h6 class="blue pad-bottom-line">
+        {% blocktrans %}
+          February 25, 2021
+        {% endblocktrans %}
+      </h6>
+    </div>
+    <div class="grid-2-at-small">
+      <div class="column">
+        <div class="off-grid white-lazy-bg"
+           data-lazybg="true">
+        <div class="wistia-container image webinar-home-data-already-video">
+          {% include "partials/wistia_popover.html" with wistia_id='xnmaqyz01a' play_icon_medium=True show_image=True %}
+        </div>{# .wistia-container #}
+      </div>{# .off-grid #}
+      
+      </div>{# .column #}
+      <div class="column pad-top-none align-left pad-left-small">
+        <p>
+          {% blocktrans %}
+            Nearly half of organizations working with mobile applications 
+            avoid making data-informed updates to their tools because 
+            they’re afraid of the work involved. But what if we told you 
+            that you’ve already done the hard work? This webinar teaches 
+            you how to evaluate your current data practices and uncover 
+            hidden insights from your existing CommCare data.
+          {% endblocktrans %}
+        </p>
+        <div class="integration column display-flex pad-bottom-small">
+          <div class="miracle-feet gap-left-base-at-medium"
+               data-lazybg="true"></div>
+        </div>
+        <div class="align-left pad-top-base">
+          <a class="button"
+             href="{% url 'data_already' %}">
+            {% blocktrans %}
+              View Webinar
+            {% endblocktrans %}
+          </a>
+        </div>
+      </div>{# .column #}
+    </div>{# .grid-2 #}
+  </div>
+</section>{# .content #}
