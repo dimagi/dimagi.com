@@ -7,6 +7,7 @@ from dimagi.pages.views.core import (
     us_covid_19,
     contact,
     proposals,
+    research_and_data,
     awards,
     case_management,
     test_404,

@@ -71,6 +71,10 @@ def resources(request):
     return render(request, 'pages/resources.html', context)
 
 
+def research_and_data(request):
+    return render(request, 'pages/research_and_data.html')
+
+
 def contact(request):
     return render(request, 'pages/contact.html')
 

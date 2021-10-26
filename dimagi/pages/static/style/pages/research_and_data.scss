@@ -1,0 +1,157 @@
+@import 'app/mixins/background';
+@import 'app/variables/colors';
+@import 'app/variables/sizes';
+@import 'app/variables/type';
+
+@mixin pdf-resolution {
+  height: 115px;
+  width: 117px;
+}
+@mixin pdf-single-resolution {
+  height: 115px;
+  width: 87px;
+}
+
+#rad-intro-img {
+  $_base-height: 190px;
+  $_height-by-size: (
+    small: 280px,
+    medium: 280px,
+    large: 280px,
+    extra-large: 320px,
+    );
+    @include make-bg(hero-data-image, '../../pages/research_and_data/intro/hero', $_base-height, $_height-by-size);
+}
+
+.rad-team-image {
+  border-radius: 100%;
+  margin: 0 auto;
+  height: 150px;
+  width: 150px;
+}
+// .rad-desc {
+//   font-size: 17px;
+//   font-weight: 400;
+// }
+
+.pdf-intro .image-1 {
+  @include background-cover('../../pages/research_and_data/pdf/1.jpg');
+  @include pdf-resolution;
+}
+.pdf-intro .image-2 {
+  @include background-cover('../../pages/research_and_data/pdf/2.jpg');
+  @include pdf-single-resolution;
+}
+.pdf-intro .image-3 {
+  @include background-cover('../../pages/research_and_data/pdf/3.jpg');
+  height: 115px;
+  width: 105px;
+}
+.pdf-intro .image-4 {
+  @include background-cover('../../pages/research_and_data/pdf/4.jpg');
+  @include pdf-single-resolution;
+}
+.pdf-intro .image-5 {
+  @include background-cover('../../pages/research_and_data/pdf/5.jpg');
+  @include pdf-resolution;
+}
+.pdf-intro .image-6 {
+  @include background-cover('../../pages/research_and_data/pdf/6.jpg');
+  @include pdf-single-resolution;
+}
+.pdf-intro .image-7 {
+  @include background-cover('../../pages/research_and_data/pdf/7.jpg');
+  @include pdf-single-resolution;
+}
+.pdf-intro .image-8 {
+  @include background-cover('../../pages/research_and_data/pdf/8.jpg');
+  @include pdf-single-resolution;
+}
+
+.rad-vikram {
+  @include background-cover('../../pages/research_and_data/team/Vikram.jpg');
+}
+.rad-neal {
+  @include background-cover('../../pages/research_and_data/team/Neal.jpg');
+}
+.rad-brian {
+  @include background-cover('../../pages/research_and_data/team/Brian.jpg');
+}
+.rad-xian {
+  @include background-cover('../../pages/research_and_data/team/Xian.jpg');
+}
+.rad-srikant {
+  @include background-cover('../../pages/research_and_data/team/Srikant.jpg');
+}
+.rad-lewis {
+  @include background-cover('../../pages/research_and_data/team/Delta.jpg');
+}
+.rad-hailey {
+  @include background-cover('../../pages/research_and_data/team/Hailey.jpg');
+}
+.rad-rob {
+  @include background-cover('../../pages/research_and_data/team/Rob.jpg');
+}
+.rad-faisal {
+  @include background-cover('../../pages/research_and_data/team/Faisal.jpg');
+}
+
+.view-older-webinar {
+  font-size: 14px;
+  margin-left: 50px;
+}
+
+.accordion-faq-arrow-webinar {
+  .accordion-header>*:before {
+    // scss-lint:disable NestingDepth
+    content: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCIgd2lkdGg9IjEyIiBoZWlnaHQ9IjEyIj4NCiAgPHBvbHlsaW5lIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0ZGOEExRiIgc3Ryb2tlLXdpZHRoPSI0IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIgcG9pbnRzPSIgIDE4LjUsNS44IDEwLDE0LjIgMS41LDUuOCAiLz4NCjwvc3ZnPg==');
+    display: block;
+    float: right;
+    height: 12px;
+    margin-top: 5px;
+    margin-right: 160px;
+    width: 12px;
+    transform: rotate(180deg);
+  }
+
+  &.collapsed .accordion-header>*:before {
+    content: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCIgd2lkdGg9IjEyIiBoZWlnaHQ9IjEyIj4NCiAgPHBvbHlsaW5lIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0ZGOEExRiIgc3Ryb2tlLXdpZHRoPSI0IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIgcG9pbnRzPSIgIDE4LjUsNS44IDEwLDE0LjIgMS41LDUuOCAiLz4NCjwvc3ZnPg==');
+    transform: none;
+    height: 12px;
+    width: 12px;
+    margin-top: -1px;
+    margin-right: 160px;
+  }
+}
+
+@media (max-width: $width-desktop-lg) {
+  .accordion-faq-arrow-webinar {
+    .accordion-header>*:before {
+      // scss-lint:disable NestingDepth
+      content: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCIgd2lkdGg9IjEyIiBoZWlnaHQ9IjEyIj4NCiAgPHBvbHlsaW5lIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0ZGOEExRiIgc3Ryb2tlLXdpZHRoPSI0IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIgcG9pbnRzPSIgIDE4LjUsNS44IDEwLDE0LjIgMS41LDUuOCAiLz4NCjwvc3ZnPg==');
+      display: block;
+      float: right;
+      height: 12px;
+      margin-top: 5px;
+      margin-right: 120px;
+      margin-left: -25px;
+      width: 12px;
+      transform: rotate(180deg);
+    }
+  
+    &.collapsed .accordion-header>*:before {
+      content: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCIgd2lkdGg9IjEyIiBoZWlnaHQ9IjEyIj4NCiAgPHBvbHlsaW5lIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0ZGOEExRiIgc3Ryb2tlLXdpZHRoPSI0IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIgcG9pbnRzPSIgIDE4LjUsNS44IDEwLDE0LjIgMS41LDUuOCAiLz4NCjwvc3ZnPg==');
+      transform: none;
+      height: 12px;
+      width: 12px;
+      margin-top: -1px;
+      margin-right: 120px;
+      margin-left: -25px;
+    }
+  }
+  .view-older-webinar {
+    font-size: 14px;
+    margin-left: 50px;
+  }
+}
+

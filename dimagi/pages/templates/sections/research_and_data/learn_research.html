@@ -1,0 +1,20 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="blue-bg blog-cta">
+  <div class="content pad-vert-medium align-center">
+    <h3 class="white">
+      {% blocktrans %}
+        Learn How You Can Use CommCare for Your Research
+      {% endblocktrans %}
+    </h3>
+    <div class="align-center pad-vert-line">
+      <a class="button button-accent-gray"
+         href="{% url 'research' %}">
+        {% blocktrans %}
+          Commcare For Research
+        {% endblocktrans %}
+      </a>
+    </div>
+  </div>
+</section>

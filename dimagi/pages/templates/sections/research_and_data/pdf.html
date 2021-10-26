@@ -1,0 +1,35 @@
+{% load dimagidotcom %}
+{% load i18n %}
+
+<section class="pdf-intro pad-bottom-medium">
+  <div class="content align-center pad-top-medium">
+    <h2 class="align-center">
+      {% blocktrans %}
+        Selected Publications
+      {% endblocktrans %}
+    </h2>
+    <div class="pad-top-line">
+      {% include "sections/research_and_data/pdf/1.html" %}
+      {% include "sections/research_and_data/pdf/2.html" %}
+      {% include "sections/research_and_data/pdf/3.html" %}
+      {% include "sections/research_and_data/pdf/4.html" %}
+      {% include "sections/research_and_data/pdf/5.html" %}
+      {% include "sections/research_and_data/pdf/6.html" %}
+    </div>{# .pad-top-line #}
+    <div class="accordion accordion-faq-color accordion-faq-arrow-webinar gap-top-base collapsed">
+      <div class="content-width-small accordion-header border-none align-center">
+        <h4 class="view-older-webinar pad-bottom-none pad-top-medium orange uppercase pad-left-medium-at-extra-large">
+          {% blocktrans %}
+            View More
+          {% endblocktrans %}
+        </h4>
+      </div>
+      <div class="accordion-content border-none"{% block accordion_content_show %} style="display: none;"{% endblock %}>
+        <div class="pad-bottom-small">
+          {% include "sections/research_and_data/pdf/7.html" %}
+          {% include "sections/research_and_data/pdf/8.html" %}
+        </div>
+      </div>
+    </div>
+  </div>{# .content #}
+</section>
