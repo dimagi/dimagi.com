@@ -72,7 +72,7 @@
     large: 360px,
     extra-large: 360px,
   );
-@include make-bg(image, '../../../pages/webinar/intro/intro', $_base-height, $_height-by-size);
+@include make-bg(image, '../../../pages/webinar/data_already/data_already', $_base-height, $_height-by-size);
 }
 .webinar-adapt-video {
   $_base-height: 186px;
