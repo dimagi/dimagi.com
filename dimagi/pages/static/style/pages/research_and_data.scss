@@ -3,10 +3,6 @@
 @import 'app/variables/sizes';
 @import 'app/variables/type';
 
-@mixin pdf-resolution {
-  height: 115px;
-  width: 117px;
-}
 @mixin pdf-single-resolution {
   height: 115px;
   width: 87px;
@@ -29,14 +25,11 @@
   height: 150px;
   width: 150px;
 }
-// .rad-desc {
-//   font-size: 17px;
-//   font-weight: 400;
-// }
 
 .pdf-intro .image-1 {
   @include background-cover('../../pages/research_and_data/pdf/1.jpg');
-  @include pdf-resolution;
+  height: 115px;
+  width: 117px;
 }
 .pdf-intro .image-2 {
   @include background-cover('../../pages/research_and_data/pdf/2.jpg');
@@ -53,7 +46,7 @@
 }
 .pdf-intro .image-5 {
   @include background-cover('../../pages/research_and_data/pdf/5.jpg');
-  @include pdf-resolution;
+  @include pdf-single-resolution;
 }
 .pdf-intro .image-6 {
   @include background-cover('../../pages/research_and_data/pdf/6.jpg');
@@ -101,57 +94,57 @@
   margin-left: 50px;
 }
 
-.accordion-faq-arrow-webinar {
-  .accordion-header>*:before {
-    // scss-lint:disable NestingDepth
-    content: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCIgd2lkdGg9IjEyIiBoZWlnaHQ9IjEyIj4NCiAgPHBvbHlsaW5lIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0ZGOEExRiIgc3Ryb2tlLXdpZHRoPSI0IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIgcG9pbnRzPSIgIDE4LjUsNS44IDEwLDE0LjIgMS41LDUuOCAiLz4NCjwvc3ZnPg==');
-    display: block;
-    float: right;
-    height: 12px;
-    margin-top: 5px;
-    margin-right: 160px;
-    width: 12px;
-    transform: rotate(180deg);
-  }
+// .accordion-faq-arrow-webinar {
+//   .accordion-header>*:before {
+//     // scss-lint:disable NestingDepth
+//     content: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCIgd2lkdGg9IjEyIiBoZWlnaHQ9IjEyIj4NCiAgPHBvbHlsaW5lIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0ZGOEExRiIgc3Ryb2tlLXdpZHRoPSI0IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIgcG9pbnRzPSIgIDE4LjUsNS44IDEwLDE0LjIgMS41LDUuOCAiLz4NCjwvc3ZnPg==');
+//     display: block;
+//     float: right;
+//     height: 12px;
+//     margin-top: 5px;
+//     margin-right: 160px;
+//     width: 12px;
+//     transform: rotate(180deg);
+//   }
 
-  &.collapsed .accordion-header>*:before {
-    content: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCIgd2lkdGg9IjEyIiBoZWlnaHQ9IjEyIj4NCiAgPHBvbHlsaW5lIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0ZGOEExRiIgc3Ryb2tlLXdpZHRoPSI0IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIgcG9pbnRzPSIgIDE4LjUsNS44IDEwLDE0LjIgMS41LDUuOCAiLz4NCjwvc3ZnPg==');
-    transform: none;
-    height: 12px;
-    width: 12px;
-    margin-top: -1px;
-    margin-right: 160px;
-  }
-}
+//   &.collapsed .accordion-header>*:before {
+//     content: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCIgd2lkdGg9IjEyIiBoZWlnaHQ9IjEyIj4NCiAgPHBvbHlsaW5lIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0ZGOEExRiIgc3Ryb2tlLXdpZHRoPSI0IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIgcG9pbnRzPSIgIDE4LjUsNS44IDEwLDE0LjIgMS41LDUuOCAiLz4NCjwvc3ZnPg==');
+//     transform: none;
+//     height: 12px;
+//     width: 12px;
+//     margin-top: -1px;
+//     margin-right: 160px;
+//   }
+// }
 
-@media (max-width: $width-desktop-lg) {
-  .accordion-faq-arrow-webinar {
-    .accordion-header>*:before {
-      // scss-lint:disable NestingDepth
-      content: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCIgd2lkdGg9IjEyIiBoZWlnaHQ9IjEyIj4NCiAgPHBvbHlsaW5lIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0ZGOEExRiIgc3Ryb2tlLXdpZHRoPSI0IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIgcG9pbnRzPSIgIDE4LjUsNS44IDEwLDE0LjIgMS41LDUuOCAiLz4NCjwvc3ZnPg==');
-      display: block;
-      float: right;
-      height: 12px;
-      margin-top: 5px;
-      margin-right: 120px;
-      margin-left: -25px;
-      width: 12px;
-      transform: rotate(180deg);
-    }
+// @media (max-width: $width-desktop-lg) {
+//   .accordion-faq-arrow-webinar {
+//     .accordion-header>*:before {
+//       // scss-lint:disable NestingDepth
+//       content: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCIgd2lkdGg9IjEyIiBoZWlnaHQ9IjEyIj4NCiAgPHBvbHlsaW5lIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0ZGOEExRiIgc3Ryb2tlLXdpZHRoPSI0IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIgcG9pbnRzPSIgIDE4LjUsNS44IDEwLDE0LjIgMS41LDUuOCAiLz4NCjwvc3ZnPg==');
+//       display: block;
+//       float: right;
+//       height: 12px;
+//       margin-top: 5px;
+//       margin-right: 120px;
+//       margin-left: -25px;
+//       width: 12px;
+//       transform: rotate(180deg);
+//     }
   
-    &.collapsed .accordion-header>*:before {
-      content: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCIgd2lkdGg9IjEyIiBoZWlnaHQ9IjEyIj4NCiAgPHBvbHlsaW5lIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0ZGOEExRiIgc3Ryb2tlLXdpZHRoPSI0IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIgcG9pbnRzPSIgIDE4LjUsNS44IDEwLDE0LjIgMS41LDUuOCAiLz4NCjwvc3ZnPg==');
-      transform: none;
-      height: 12px;
-      width: 12px;
-      margin-top: -1px;
-      margin-right: 120px;
-      margin-left: -25px;
-    }
-  }
-  .view-older-webinar {
-    font-size: 14px;
-    margin-left: 50px;
-  }
-}
+//     &.collapsed .accordion-header>*:before {
+//       content: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCIgd2lkdGg9IjEyIiBoZWlnaHQ9IjEyIj4NCiAgPHBvbHlsaW5lIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0ZGOEExRiIgc3Ryb2tlLXdpZHRoPSI0IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIgcG9pbnRzPSIgIDE4LjUsNS44IDEwLDE0LjIgMS41LDUuOCAiLz4NCjwvc3ZnPg==');
+//       transform: none;
+//       height: 12px;
+//       width: 12px;
+//       margin-top: -1px;
+//       margin-right: 120px;
+//       margin-left: -25px;
+//     }
+//   }
+//   .view-older-webinar {
+//     font-size: 14px;
+//     margin-left: 50px;
+//   }
+// }
 
