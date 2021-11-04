@@ -3,7 +3,48 @@
 
 <section class="blog-latest" id="latest">
   <div class="content pad-vert-medium">
+  {% if is_search_page %}
+    <h2>
+      {% if existing_filters.term %}
+        {% blocktrans with existing_filters.term as search_term %}
+          Searching for "{{ search_term }}"...
+        {% endblocktrans %}
+      {% else %}
+        {% trans "Searching for articles..." %}
+      {% endif %}
+    </h2>
+      {% if tag_summary or existing_filters.category != 'all' %}
+        <p class="pad-bottom-small">
+          {% if tag_summary and existing_filters.category != 'all' %}
+            {% blocktrans with category.name as category_name %}
+               With tags {{ tag_summary }} in category "{{ category_name }}".
+            {% endblocktrans %}
+          {% elif tag_summary %}
+            {% blocktrans %}
+               With tags {{ tag_summary }}.
+            {% endblocktrans %}
+          {% elif existing_filters.category != 'all' %}
+            {% blocktrans with category.name as category_name %}
+              In category "{{ category_name }}".
+            {% endblocktrans %}
+          {% endif %}
+        </p>
+      {% endif %}
+  {% endif %}
 
+    {% if not posts and is_search_page %}
+      <p>
+        {% if page == 1 %}
+          {% blocktrans %}
+            No articles match this search.
+          {% endblocktrans %}
+        {% else %}
+          {% blocktrans %}
+            There are no more articles on this page that match this search.
+          {% endblocktrans %}
+        {% endif %}
+      </p>
+    {% endif %}
     <div class="grid-4-at-medium grid-2-at-small grid-row-space-small">
       {% for post in posts %}
         <div class="column">
@@ -12,38 +53,46 @@
       {% endfor %}
     </div>
 
-    <div class="border-top theme-border gap-top-line pad-top-small">
-      <div class="grid-3">
-        <div class="column align-left">
-          {% if previous_url %}
-          <a class="arrow-left" href="{{ previous_url }}">
-            {% trans "Newer" %}
-          </a>
-          {% endif %}
+    {% if previous_url or next_url or not is_search_page %}
+      <div class="border-top theme-border gap-top-line pad-top-small">
+        <div class="grid-3">
+          <div class="column align-left">
+            {% if previous_url %}
+            <a class="arrow-left" href="{{ previous_url }}">
+              {% trans "Newer" %}
+            </a>
+            {% endif %}
+          </div>
+          <div class="column align-center">
+            <h4 class="gap-bottom-base">
+              {% if is_search_page %}
+                {% blocktrans %}
+                  Page {{ page }}
+                {% endblocktrans %}
+              {% else %}
+                {% blocktrans %}
+                  Page {{ page }} of {{ total_pages }}
+                {% endblocktrans %}
+              {% endif %}
+            </h4>
+            {% if not is_search_page %}
+              <p class="gap-top-base">
+                {% blocktrans %}
+                  Showing {{ from_post }} - {{ to_post }} of {{ total_posts }} articles
+                {% endblocktrans %}
+              </p>
+            {% endif %}
+          </div>
+          <div class="column align-right">
+            {% if next_url %}
+            <a class="arrow" href="{{ next_url }}">
+              {% trans "Older" %}
+            </a>
+            {% endif %}
+          </div>
         </div>
-        <div class="column align-center">
-          <h4 class="gap-bottom-base">
-            {% blocktrans %}
-              Page {{ page }} of {{ total_pages }}
-            {% endblocktrans %}
-          </h4>
-          <p class="gap-top-base">
-            {% blocktrans %}
-              Showing {{ from_post }} - {{ to_post }} of {{ total_posts }} articles
-            {% endblocktrans %}
-          </p>
-        </div>
-        <div class="column align-right">
-          {% if next_url %}
-          <a class="arrow" href="{{ next_url }}">
-            {% trans "Older" %}
-          </a>
-          {% endif %}
-        </div>
-
       </div>
-
-    </div>
+    {% endif %}
 
   </div>{# .content #}
 </section>

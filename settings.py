@@ -126,6 +126,7 @@ STATICFILES_DIRS = (
     ('js/lib/knockout', static_libs('knockout/build/output')),
     ('js/lib/lodash', static_libs('lodash')),
     ('js/lib/requirejs', static_libs('requirejs')),
+    ('js/lib/select2', static_libs('select2')),
 )
 STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.FileSystemFinder',

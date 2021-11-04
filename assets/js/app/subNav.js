@@ -1,11 +1,19 @@
+requirejs.config({
+  paths: {
+    knockout: "lib/knockout/knockout-latest",
+  }
+});
+
 define([
   'jquery',
+  'knockout',
   'modernizr',
   'app/constants',
   'app/pipeline',
   'app/resize',
 ], function (
     $,
+    ko,
     Modernizr,
     Constants,
     Pipeline,
@@ -65,6 +73,11 @@ define([
     $fixedNav = self.$subNav.clone();
     $fixedNav.addClass(self.CLASSES.FIXED);
     self.$subNav.after($fixedNav);
+    if (self.$subNav.data('ko')) {
+      ko.applyBindings(window.subNavKoModel, $fixedNav.get(0));
+      window.subNavKoModel.activate($fixedNav);
+      window.subNavKoModel.activate(self.$subNav);
+    }
 
     Pipeline.onScroll(function () {
       self.updateFixedNav();
@@ -110,6 +123,10 @@ define([
         if (Modernizr.touch) {
           self.$html.addClass(self.CLASSES.FIXED_BOTTOM);
           self.fixedToBottom = true;
+
+          if (self.$subNav.data('ko')) {
+            window.subNavKoModel.activate(self.$subNav);
+          }
         } else {
           self.enableFixedNav();
         }

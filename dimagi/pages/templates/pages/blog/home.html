@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "pages/blog/_base.html" %}
 {% load i18n %}
 {% load dimagidotcom %}
 
@@ -13,12 +13,6 @@
 {% endblocktrans %}{% endblock %}
 
 {% block body_class %}blog-page tucked-hero{% endblock %}
-
-{% block stylesheets %}
-  {% compress css %}
-    <link href="{% sass_src 'style/pages/blog.scss' %}" rel="stylesheet" media="screen" type="text/css" />
-  {% endcompress %}
-{% endblock %}
 
 {% block hero %}
   <div class="orange-theme">
@@ -55,7 +49,7 @@
   </section>
 {% endblock %}
 
-{% block js %}
+{% block js %}{{ block.super }}
   <!--[if lte IE 8]>
   <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
   <![endif]-->

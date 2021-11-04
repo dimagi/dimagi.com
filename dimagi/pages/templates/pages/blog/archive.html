@@ -1,10 +1,10 @@
-{% extends "base.html" %}
+{% extends "pages/blog/_base.html" %}
 {% load i18n %}
 {% load dimagidotcom %}
 
 {% block title %}
   {% if category %}
-    {{ category.name }} - {% trans 'The ICT4D Corner' %}
+    {{ category.name }} - {% trans 'The Dimagi Blog' %}
   {% endif %}
   {% if tag %}
     {{ tag.name }} {% trans 'tagged articles' %}
@@ -14,12 +14,6 @@
 {% block description %}{{ category.description|safe }}{% endblock %}
 
 {% block body_class %}blog-page tucked-hero{% endblock %}
-
-{% block stylesheets %}
-  {% compress css %}
-    <link href="{% sass_src 'style/pages/blog.scss' %}" rel="stylesheet" media="screen" type="text/css" />
-  {% endcompress %}
-{% endblock %}
 
 {% block hero %}
   <div class="orange-theme">
@@ -32,7 +26,7 @@
           {% if category %}
             <h2 class="gap-bottom-line">
               {% blocktrans %}
-                The ICT4D Corner
+                The Dimagi Blog
               {% endblocktrans %}
             </h2>
             <h1>
