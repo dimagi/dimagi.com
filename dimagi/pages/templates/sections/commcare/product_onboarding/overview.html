@@ -3,7 +3,7 @@
 
 <section class="overview pad-top-medium pad-bottom-large"
          id="onboarding_overview">
-  <div class="content">
+  <div>
     <div class="content-width-medium align-center">
       <h2 class="blue">
         {% blocktrans %}
@@ -23,8 +23,11 @@
         {% endblocktrans %}
       </p>
     </div>
-    <div class="onboarding-packages gap-top-medium gap-bottom-line">
+    <div class="content onboarding-packages gap-top-medium gap-bottom-line">
       {% include "sections/commcare/product_onboarding/package.html" %}
+    </div>
+    <div class="gap-vert-line">
+      {% include "sections/commcare/product_onboarding/training.html" %}
     </div>
   </div>
 </section>

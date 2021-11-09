@@ -48,3 +48,33 @@
     {% include "sections/commcare/product_onboarding/testimonial.html" %}
   </section>
 {% endblock %}
+{% block modals %}
+  <div class="modal"
+     data-dismissible="true"
+     data-size="medium"
+     id="onboarding-services-form">
+    <div class="modal-scroll">
+      <div class="modal-wrapper">
+        <a href="#" class="modal-close-button"></a>
+        <div class="content pad-horz-medium-at-medium pad-horz-line pad-vert-none blue-theme">
+          <section id="onboarding-services-form-content"></section>
+        </div>{# .content #}
+      </div>{# .modal-wrapper #}
+    </div>{# .modal-scroll #}
+  </div>{# .modal #}
+{% endblock %}
+
+{% block js %}
+  <!--[if lte IE 8]>
+    <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+  <![endif]-->
+  <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+  <script>
+    hbspt.forms.create({
+      portalId: "503070",
+      formId: "8c30b860-9825-4bb3-8d1a-ea314c8822ac",
+      target: "#onboarding-services-form-content",
+      css: ""
+    });
+  </script>
+{% endblock %}
