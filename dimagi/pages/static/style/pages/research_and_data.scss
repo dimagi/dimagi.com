@@ -1,0 +1,95 @@
+@import 'app/mixins/background';
+@import 'app/variables/colors';
+@import 'app/variables/sizes';
+@import 'app/variables/type';
+
+@mixin pdf-single-resolution {
+  height: 115px;
+  width: 87px;
+}
+
+#rad-intro-img {
+  $_base-height: 190px;
+  $_height-by-size: (
+    small: 280px,
+    medium: 280px,
+    large: 280px,
+    extra-large: 320px,
+    );
+    @include make-bg(hero-data-image, '../../pages/research_and_data/intro/hero', $_base-height, $_height-by-size);
+}
+
+.rad-team-image {
+  border-radius: 100%;
+  margin: 0 auto;
+  height: 150px;
+  width: 150px;
+}
+
+.pdf-intro .image-1 {
+  @include background-cover('../../pages/research_and_data/pdf/1.jpg');
+  height: 115px;
+  width: 117px;
+}
+.pdf-intro .image-2 {
+  @include background-cover('../../pages/research_and_data/pdf/2.jpg');
+  @include pdf-single-resolution;
+}
+.pdf-intro .image-3 {
+  @include background-cover('../../pages/research_and_data/pdf/3.jpg');
+  height: 115px;
+  width: 105px;
+}
+.pdf-intro .image-4 {
+  @include background-cover('../../pages/research_and_data/pdf/4.jpg');
+  @include pdf-single-resolution;
+}
+.pdf-intro .image-5 {
+  @include background-cover('../../pages/research_and_data/pdf/5.jpg');
+  @include pdf-single-resolution;
+}
+.pdf-intro .image-6 {
+  @include background-cover('../../pages/research_and_data/pdf/6.jpg');
+  @include pdf-single-resolution;
+}
+.pdf-intro .image-7 {
+  @include background-cover('../../pages/research_and_data/pdf/7.jpg');
+  @include pdf-single-resolution;
+}
+.pdf-intro .image-8 {
+  @include background-cover('../../pages/research_and_data/pdf/8.jpg');
+  @include pdf-single-resolution;
+}
+
+.rad-vikram {
+  @include background-cover('../../pages/research_and_data/team/Vikram.jpg');
+}
+.rad-neal {
+  @include background-cover('../../pages/research_and_data/team/Neal.jpg');
+}
+.rad-brian {
+  @include background-cover('../../pages/research_and_data/team/Brian.jpg');
+}
+.rad-xian {
+  @include background-cover('../../pages/research_and_data/team/Xian.jpg');
+}
+.rad-srikant {
+  @include background-cover('../../pages/research_and_data/team/Srikant.jpg');
+}
+.rad-lewis {
+  @include background-cover('../../pages/research_and_data/team/Delta.jpg');
+}
+.rad-hailey {
+  @include background-cover('../../pages/research_and_data/team/Hailey.jpg');
+}
+.rad-rob {
+  @include background-cover('../../pages/research_and_data/team/Rob.jpg');
+}
+.rad-faisal {
+  @include background-cover('../../pages/research_and_data/team/Faisal.jpg');
+}
+
+.view-older-webinar {
+  font-size: 14px;
+  margin-left: 50px;
+}

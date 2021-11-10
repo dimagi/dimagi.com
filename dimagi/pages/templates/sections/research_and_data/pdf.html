@@ -1,0 +1,31 @@
+{% load dimagidotcom %}
+{% load i18n %}
+
+<section class="pdf-intro pad-bottom-medium">
+  <div class="content align-center pad-top-medium">
+    <h2 class="align-center">
+      {% blocktrans %}
+        Selected Publications
+      {% endblocktrans %}
+    </h2>
+    <p class="align-center pad-bottom-line rad-desc">
+      {% blocktrans %}
+        RAD collaborates closely with subject matter experts across a variety of public 
+        health domains—including more than a dozen universities—to study the use and 
+        impact of digital technology on health outcomes. Through these collaborations, 
+        RAD seeks to share learnings and research studies with the broader global health, 
+        ICT4D, and informatics communities.
+      {% endblocktrans %}
+    </p>
+    <div class="pad-top-line">
+      {% include "sections/research_and_data/pdf/1.html" %}
+      {% include "sections/research_and_data/pdf/2.html" %}
+      {% include "sections/research_and_data/pdf/3.html" %}
+      {% include "sections/research_and_data/pdf/5.html" %}
+      {% include "sections/research_and_data/pdf/4.html" %}
+      {% include "sections/research_and_data/pdf/6.html" %}
+      {% include "sections/research_and_data/pdf/7.html" %}
+      {% include "sections/research_and_data/pdf/8.html" %}
+    </div>{# .pad-top-line #}
+  </div>{# .content #}
+</section>

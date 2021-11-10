@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+{% load capture_tags %}
+
+{% block title %}{% blocktrans %}
+  Dimagi Research
+{% endblocktrans %}{% endblock %}
+
+{% block description %}{% blocktrans %}
+  The Research and Data Team
+{% endblocktrans %}{% endblock %}
+
+{% block body_class %}research-and-data-page tucked-hero{% endblock %}
+
+{% block stylesheets %}
+  {% compress css %}
+    <link href="{% sass_src 'style/pages/research_and_data.scss' %}" rel="stylesheet" media="screen" type="text/css" />
+  {% endcompress %}
+{% endblock %}
+
+{% block hero %}
+<div class="orange-theme">
+  <section class="hero hero-blog" id="hero"></section>
+</div>
+{% endblock %}
+
+{% block content %}
+  {% include "sections/research_and_data/intro.html" %}
+  {% include "sections/research_and_data/team.html" %}
+  {% include "sections/research_and_data/pdf.html" %}
+  {% include "sections/research_and_data/learn_research.html" %}
+{% endblock %}
+
+{% block contact_form_id %}cb68b104-bb53-4e7b-9b3d-f1894c57eaa1{% endblock %}

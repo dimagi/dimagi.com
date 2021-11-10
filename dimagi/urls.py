@@ -57,6 +57,7 @@ urlpatterns = [
     url(r'^$', pages.home, name='home'),
     url(r'^services/$', pages.services, name='services'),
     url(r'^resources/$', pages.resources, name='resources'),
+    url(r'^research-and-data/$', pages.research_and_data, name='research_and_data'),
     url(r'^partners/$', pages.partners, name='partners'),
     url(r'^covid-19/$', pages.covid_19, name='covid_19'),
     url(r'^covid-19/us-response$', pages.us_covid_19, name='us_covid_19'),
