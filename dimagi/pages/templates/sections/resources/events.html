@@ -9,6 +9,41 @@
       {% endblocktrans %}
     </h2>
     <div class="feature-projects gap-top-small pad-bottom-small">
+        <div class="grid-flex-at-medium">
+          <div class="date-block feature-partner-im-saf column pad-top-medium-at-medium flex-align-left-at-large align-center">
+            <h5 class="gap-vert-none-at-medium pad-top-line">
+              {% blocktrans %}
+                September 30, 2021
+              {% endblocktrans %}
+            </h5>
+          </div>
+          <div class="column display-flex-at-medium pad-left-small-at-medium pad-vert-line-at-large pad-vert-small pad-left-line align-center gap-bottom-none accent-gray-bg">
+            <div class="align-left-at-medium align-center next-video-block pad-vert-line">
+              <h5>
+                {% blocktrans %}
+                  What Interoperability Actually Means
+                {% endblocktrans %}
+              </h5>
+              <p class="pad-right-line">
+                {% blocktrans %}
+                  The way your project looked at the start isn't what it looks like today. 
+                  We know organisational needs evolve over time, from new and larger projects 
+                  to changes in reporting requirements. The only way to be sure that your 
+                  team can stay ahead of these changes is with an adaptable, ecosystem-driven 
+                  approach. In this lively panel discussion, our partners from Trocaire, MSI, 
+                  and Global Communities discuss how interoperability and integrations can 
+                  grow your long-term impact.
+                {% endblocktrans %}
+              </p>
+            </div>
+            <p class="watch-next-review button align-center gap-vert-large-at-medium gap-top-small gap-right-small">
+              {% trans 'View Webinar' as video_text %}
+              {% include "partials/wistia_popover.html" with wistia_id='hmzenq3684' text=video_text white_class='white' %}
+            </p>
+          </div>
+        </div>
+      </div>{# .feature-projects #}
+    <div class="feature-projects gap-top-small pad-bottom-small">
       <div class="grid-flex-at-medium">
         <div class="date-block feature-partner-im-saf column pad-top-medium-at-medium flex-align-left-at-large align-center">
           <h5 class="gap-vert-none-at-medium pad-top-small">
@@ -17,7 +52,7 @@
             {% endblocktrans %}
           </h5>
         </div>
-        <div class="column display-flex-at-medium pad-left-small-at-medium pad-vert-line-at-large pad-top-small pad-left-line align-center gap-bottom-none accent-gray-bg">
+        <div class="column display-flex-at-medium pad-left-small-at-medium pad-vert-line-at-large pad-vert-small pad-left-line align-center gap-bottom-none accent-gray-bg">
           <div class="align-left-at-medium align-center next-video-block pad-vert-line">
             <h5>
               {% blocktrans %}
@@ -35,39 +70,7 @@
           </div>
           <p class="watch-next-review button align-center gap-top-medium gap-right-small button-webinar">
             {% trans 'View Webinar' as video_text %}
-            {% include "partials/wistia_popover.html" with wistia_id='xnmaqyz01a' text=video_text white_class='white' %}
-          </p>
-        </div>
-      </div>
-    </div>{# .feature-projects #}
-
-    <div class="feature-projects gap-top-small pad-bottom-small">
-      <div class="grid-flex-at-medium">
-        <div class="date-block feature-partner-im-saf column pad-top-medium-at-medium flex-align-left-at-large align-center">
-          <h5 class="gap-vert-none-at-medium pad-top-line">
-            {% blocktrans %}
-              27 May, 2021
-            {% endblocktrans %}
-          </h5>
-        </div>
-        <div class="column display-flex-at-medium pad-left-small-at-medium pad-vert-line-at-large pad-top-small pad-left-line align-center gap-bottom-none accent-gray-bg">
-          <div class="align-left-at-medium align-center next-video-block pad-vert-line">
-            <h5>
-              {% blocktrans %}
-                Learn how to build a global M&E system 
-              {% endblocktrans %}
-            </h5>
-            <p class="pad-right-line">
-              {% blocktrans %}
-                This webinar will help organizations build better systems for 
-                global monitoring and evaluation. ChildFund and GOAL Global 
-                share how they each managed to solve unique challenges with CommCare.
-              {% endblocktrans %}
-            </p>
-          </div>
-          <p class="watch-next-review button align-center gap-vert-small-at-medium gap-top-small gap-right-small">
-            {% trans 'View Webinar' as video_text %}
-            {% include "partials/wistia_popover.html" with wistia_id='xnmaqyz01a' text=video_text white_class='white' %}
+            {% include "partials/wistia_popover.html" with wistia_id='g1h9q6353u' text=video_text white_class='white' %}
           </p>
         </div>
       </div>

@@ -42,7 +42,7 @@ at across six program areas.
         description=ugettext_lazy("""
 Identify opportunities for growth so
 that you can manage your time and
-palnning accordingly.
+plan accordingly.
         """),
     ),
     Highlight(
