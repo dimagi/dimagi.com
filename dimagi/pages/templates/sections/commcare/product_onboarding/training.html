@@ -12,7 +12,13 @@
           {% endblocktrans %}
         </h2>
       </div>
-      <div class="grid grid-2-at-medium grid-1-at-small">
+      <div class="grid grid-2-at-medium grid-1-at-small grid-reverse">
+        <div class="column"
+             id="page-intro">
+          <div class="hero-data-image white-lazy-bg"
+               data-lazybg="true">
+          </div>
+        </div> {# .column #}
         <div class="column">
           <p>
             {% blocktrans %}
@@ -34,12 +40,6 @@
             </a>
           </div>
         </div>{# .column #}
-        <div class="column"
-             id="page-intro">
-          <div class="hero-data-image white-lazy-bg"
-               data-lazybg="true">
-          </div>
-        </div> {# .column #}
       </div> {# .grid #}
     </div> {# .content #}
   </div>
