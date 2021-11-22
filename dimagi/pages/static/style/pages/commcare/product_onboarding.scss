@@ -16,6 +16,16 @@
   }
 }
 
+#page-intro {
+  $_base-height: 190px;
+  $_height-by-size: (
+    small: 250px,
+    medium: 250px,
+    large: 250px,
+    extra-large: 256px,
+  );
+  @include make-bg(hero-data-image, '../../../pages/commcare/product_onboarding/training/hero', $_base-height, $_height-by-size);
+}
 
 
 $_no-touch-heights: (
