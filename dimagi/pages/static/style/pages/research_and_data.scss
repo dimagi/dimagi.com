@@ -88,6 +88,9 @@
 .rad-faisal {
   @include background-cover('../../pages/research_and_data/team/Faisal.jpg');
 }
+.rad-lauren {
+  @include background-cover('../../pages/research_and_data/team/Lauren.jpg');
+}
 
 .view-older-webinar {
   font-size: 14px;
