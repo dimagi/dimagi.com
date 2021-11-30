@@ -97,4 +97,17 @@ GROUP.add_features([
         """)),
         support=Support(False, False, True, True),
     ),
+    Feature(
+        title=ugettext_lazy(
+            "Certified SOC 2 compliance"
+        ),
+        description=mark_safe(ugettext_lazy("""CommCare is regularly audited 
+        for compliance with the SOC 2 data privacy and security framework. This 
+        means the communities you serve and data you collect are protected 
+        to exacting standards.<p>For organizations with Standard, Pro, Advanced, or 
+        Enterprise subscriptions our SOC 2 Type 1 Report is now available to your 
+        compliance team upon request.</p>
+        """)),
+        support=Support(True, True, True, True),
+    ),
 ])
