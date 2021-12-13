@@ -22,7 +22,7 @@
       {% endif %}
     </h4>
     <h6 class="gap-bottom-small">
-      {{ job.departments|JOIN:", " }} - {% trans "Full-time" %}
+      {{ job.departments|JOIN:", " }} - {{ job.employment_type }}
     </h6>
     <div class="application-content">
       {{ job.content|safe }}
