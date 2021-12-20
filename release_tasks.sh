@@ -1,6 +1,6 @@
 #!/bin/sh
 
-#python manage.py migrate
+python manage.py migrate
 #python manage.py build_thumbnails
 #python manage.py compilescss
 #python manage.py collectstatic --ignore=*.scss --clear --no-input
