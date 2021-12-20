@@ -1,8 +1,6 @@
 import os
 import environ
 
-from django.conf.global_settings import TEMPLATE_CONTEXT_PROCESSORS
-
 root = environ.Path(os.path.dirname(os.path.abspath(__file__)))
 base_dir = environ.Path(os.path.dirname(os.path.dirname(__file__)))
 env = environ.Env()
@@ -85,10 +83,6 @@ TEMPLATES = [
         },
     },
 ]
-
-TEMPLATE_CONTEXT_PROCESSORS += (
-    "django.template.context_processors.request",
-)
 
 WSGI_APPLICATION = 'dimagi.wsgi.application'
 
