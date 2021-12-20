@@ -1,10 +1,9 @@
 from __future__ import absolute_import
 
 from require.storage import OptimizedFilesMixin
-from storages.backends.s3boto3 import S3Boto3Storage
 
 from dimagi.utils.config import setting
-from sass_processor.storage import SassFileStorage
+from sass_processor.storage import SassFileStorage, SassS3Boto3Storage
 from compressor.storage import CompressorFileStorage
 
 STATIC_URL = setting('STATIC_URL', '')
@@ -14,10 +13,6 @@ CDN_BASE_URL = STATIC_CDN + STATIC_URL
 
 class StaticFileStorage(OptimizedFilesMixin, SassFileStorage):
     pass
-
-
-class SassS3Boto3Storage(S3Boto3Storage):
-    base_url = '{}.s3.amazonaws.com'.format(setting('AWS_STORAGE_BUCKET_NAME', ''))
 
 
 class S3BotoStorage(SassS3Boto3Storage):
