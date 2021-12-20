@@ -14,13 +14,13 @@ def enable_ab_test(ab_test_config):
             if not hasattr(request, 'ab_test'):
                 request.ab_test = {}
 
-            ab_test = AbTest(ab_test_config, request)
+            # ab_test = AbTest(ab_test_config, request)
 
-            request.ab_test_meta.append(ab_test.context)
-            request.ab_test[ab_test_config.slug] = ab_test.version()
+            # request.ab_test_meta.append(ab_test.context)
+            # request.ab_test[ab_test_config.slug] = ab_test.version()
 
             response = view_func(request, *args, **kwargs)
-            ab_test.update_response(response)
+            # ab_test.update_response(response)
             return response
         return _final_view
     return _wrapper

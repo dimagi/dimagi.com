@@ -20,6 +20,7 @@ from dimagi.utils.wordpress_api import get_json
 from dimagi.pages.models.partners import latestPartners
 
 
+@enable_ab_test(DEMO_WORKFLOW_V2)
 def home(request):
     context = {
         'partners': get_logos(),
