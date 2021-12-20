@@ -4,7 +4,7 @@ verify_ssl = true
 
 [packages]
 dj-database-url = "*"
-django = "*"
+django = "<3.0"
 gunicorn = "*"
 "psycopg2" = "*"
 django-compressor = "*"
