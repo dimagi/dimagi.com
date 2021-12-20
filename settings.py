@@ -112,7 +112,8 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 ALLOWED_HOSTS = ['*']
 
 CACHES = {
-    'default': env.cache('REDIS_TLS_URL'),
+    'default': (env.cache('REDIS_TLS_URL')
+                if DEPLOY_ENVIRONMENT == 'production' else env.cache('REDIS_URL')),
 }
 
 # Static files (CSS, JavaScript, Images)
