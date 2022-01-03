@@ -13,6 +13,7 @@ LATEST_TERMS = (
     version_3.TOS,
     version_3.BA,
     version_3.AUP,
+    version_3.FCI,
 )
 
 

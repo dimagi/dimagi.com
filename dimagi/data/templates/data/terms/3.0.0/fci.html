@@ -1,0 +1,648 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="policy">
+  <div class="content pad-vert-medium content-width-medium">
+    <div class="align-center pad-bottom-line">
+      <h2 class="blue">
+        {% blocktrans %}
+          Dimagi Financial Conflict of Interest Policy for PHS Funded Research
+        {% endblocktrans %}
+      </h2>
+    </div>{# .intro #}
+
+    <p>
+      {% blocktrans %}
+        Questions or Comments relating to this policy should be addressed to 
+        Dimagi’s Corporate Operations team at corporate-ops@dimagi.com.
+      {% endblocktrans %}
+    </p>
+
+    <ol>
+      <li>
+        <strong>
+          {% blocktrans %}
+            Purpose
+          {% endblocktrans %}
+        </strong>
+        <ol>
+          <p>
+            {% blocktrans %}
+              Dimagi, Inc. (“Dimagi”) is committed to maintaining objectivity in its research activities. This document was
+              developed to promote objectivity in research by establishing standards that provide a reasonable expectation 
+              ensuring the design, conduct and reporting of research funded by the government will be free from any bias 
+              resulting from a Financial Conflict of Interest of any Investigator. It establishes a process of Disclosure 
+              and independent review when an Investigator has a Significant Financial Interest (SFI). If Dimagi determines 
+              that such an interest might reasonably appear to affect the Research directly and significantly, Dimagi will 
+              develop a mitigation plan to manage or eliminate the conflict.This set forth Policy implements Financial 
+              Conflicts of Interest (FCOI) Disclosure requirements found in 42 CFR Part 50 and 45 CFR Part 94, both of 
+              which are applicable to Research funded by the U.S. Public Health Service (PHS).
+            {% endblocktrans %}
+          </p>
+        </ol>{# Purpose #}
+      </li>
+      <li>
+        <strong>
+          {% blocktrans %}
+            Scope
+          {% endblocktrans %}
+        </strong>
+        <p>
+          {% blocktrans %}
+            These requirements are applicable to all Research projects for which Dimagi 
+            submits a proposal to or receives Research funding from PHS; with the 
+            exception of Phase I Small Business Innovation Research (SBIR) or Small 
+            Business Technology Transfer (STTR) program applications or awards, where 
+            this policy does not apply.
+          {% endblocktrans %}
+        </p>
+      </li>{# Scope #}
+
+      <li>
+        <strong>
+          {% blocktrans %}
+            Definitions
+          {% endblocktrans %}
+        </strong>
+        <ol>
+          <li>
+            {% blocktrans %}
+              <b>Clinical Trial</b> means any PHS-sponsored research study that involves 
+              interaction with human subjects and the concurrent investigative use of 
+              drugs, biologics, devices or medical or other clinical procedures, 
+              such as surgery.
+            {% endblocktrans %}
+          </li>
+          <li>
+            {% blocktrans %}
+              <b>Disclosure</b> means means disclosure of Financial Interests as per this Policy via the <a href="https://docs.google.com/document/d/1iFQ730ERp19YtSKJW05MmJJObF7FWJkC/edit"
+              target="_blank">Dimagi FCOI Disclosure Form</a>.
+            {% endblocktrans %}
+          </li>
+          <li>
+            {% blocktrans %}
+              <b>Family</b> means any member of the Investigator’s immediate 
+              family, specifically, any dependent children and spouse.
+            {% endblocktrans %}
+          </li>
+          <li>
+            {% blocktrans %}
+              <b>Financial Interest</b> means any interest of economic 
+              value in or relationship with an entity, whether private 
+              or public, including, but not limited to, ownership of 
+              stocks, bonds, stock options, partnership or other equity 
+              interests, rights to patent or royalty payments, receipt 
+              of consulting fees, speaking fees, salary, loans, gifts, 
+              lectureship fees, compensation for serving on boards of 
+              directors, scientific and other advisory boards, reimbursed 
+              or sponsored travel expenses related to Investigator’s Company 
+              Responsibilities, or other remuneration. Financial Interest does NOT include:
+            {% endblocktrans %}
+            <ol>
+              <li>
+                {% blocktrans %}
+                  salary, royalties, or other remuneration from the Institution;
+                {% endblocktrans %}
+              </li>
+              <li>
+                {% blocktrans %}
+                  income from the authorship of academic or scholarly works;
+                {% endblocktrans %}
+              </li>
+              <li>
+                {% blocktrans %}
+                  income from seminars, lectures, or teaching engagements sponsored 
+                  by or from advisory committees or review panels for U.S. Federal, 
+                  state or local governmental agencies; U.S. institutions of higher 
+                  education; research institutes affiliated with institutions of 
+                  higher education, academic teaching hospitals, and medical centers; or                
+                {% endblocktrans %}
+              </li>
+              <li>
+                {% blocktrans %}
+                  equity interests or income from investment vehicles, such as mutual 
+                  funds and retirement accounts, so long as the Investigator does not 
+                  directly control the investment decisions made in these vehicles.                
+                {% endblocktrans %}
+              </li>
+            </ol>
+            <p class="pad-top-line">
+              {% blocktrans %}
+                For Investigators, this definition also includes any reimbursed or 
+                sponsored travel undertaken by the Investigator and related to his/her 
+                institutional responsibilities. This includes travel that is paid on 
+                behalf of the Investigator as well as travel that is reimbursed, even if 
+                the exact monetary value is not readily available.  It excludes travel 
+                reimbursed or sponsored by U.S. Federal, state or local governmental 
+                agencies, U.S. institutions of higher education, research institutes 
+                affiliated with institutions of higher education, academic teaching 
+                hospitals, and medical centers.
+              {% endblocktrans %}
+            </p>
+          </li>{# Financial Interest #}
+          <li>
+            {% blocktrans %}
+              <b> Financial Conflict of Interest (FCOI)</b> means a Significant 
+              Financial Interest (or, where the Institutional Official requires
+               Disclosure  of other Financial Interests, a  Financial Interest)  
+               that the Institution reasonably determines could directly and 
+               significantly affect the design, conduct or reporting of 
+               PHS- sponsored research.
+            {% endblocktrans %}
+          </li>
+          <li>
+            {% blocktrans %}
+              <b>Institutional Official</b> means the individual within the Institution 
+              that is responsible for the solicitation and review of Disclosures of 
+              significant financial interests including those of the Investigator’s 
+              Family related  to  the  Investigator’s  institutional responsibilities. 
+              For  the  purposes  of  this  policy,  the Institutional Official is 
+              designated as Krishna Swamy, Senior Director of Corporate Operations.
+            {% endblocktrans %}
+          </li>
+          <li>
+            {% blocktrans %}
+              <b>Institutional Responsibilities</b> means an Investigator’s professional 
+              responsibilities performed on behalf of Dimagi.
+            {% endblocktrans %}
+          </li>
+          <li>
+            {% blocktrans %}
+              <b>Investigator</b> means any individual who is responsible for the design, 
+              conduct, or reporting of PHS sponsored research, or proposals for such funding. 
+              This definition is not limited to those titled or budgeted as principal 
+              Investigator or co-Investigator on a particular proposal, and may include 
+              postdoctoral associates, senior  scientists, or  graduate students. The 
+              definition may also  include collaborators or consultants as appropriate.
+            {% endblocktrans %}
+          </li>
+          <li>
+            {% blocktrans %}
+              <b>Key Personnel</b> means the Project Investigator and any other personnel 
+              considered to be essential to work performance.
+            {% endblocktrans %}
+          </li>
+          <li>
+            {% blocktrans %}
+              <b>PHS</b> means the Public Health Service of the U.S. Department of Health 
+              and Human Services, and any components of the PHS to which the authority 
+              involved may be delegated. The components of the PHS include, but are not 
+              limited to, the Administration for Children and Families, Administration on 
+              Aging, Agency for Healthcare Research and Quality, Agency for Toxic Substances 
+              and Disease Registry, Centers for Disease Control and Prevention, Federal 
+              Occupational Health, Food and Drug Administration, Health Resources and 
+              Services Administration, Indian Health Service, National Institutes of 
+              Health, and Substance Abuse and Mental Health Services Administration.
+            {% endblocktrans %}
+          </li>
+          <li>
+            {% blocktrans %}
+              <b>PHS Awarding Component</b> means the organizational unit of the 
+              PHS that funds the Research.
+            {% endblocktrans %}
+          </li>
+          <li>
+            {% blocktrans %}
+              <b>Research</b> means a systematic investigation, study or experiment 
+              designed to develop or contribute to generalizable knowledge relating 
+              broadly to public health, including behavioral and social-sciences 
+              research. The term encompasses basic and applied research as well 
+              as product development (e.g., a tool for screening or diagnostic testing).
+            {% endblocktrans %}
+          </li>
+          <li>
+            {% blocktrans %}
+              <b>Significant Financial Interest:</b> means one or more of the 
+              following Financial Interests of an Investigator or their Family 
+              that reasonably appears to be related to such Investigator’s 
+              Institutional Responsibilities:
+            {% endblocktrans %}
+            <ol>
+              <li>
+                {% blocktrans %}
+                  With regard to any publicly traded entity, a significant 
+                  financial interest exists if the value of any remuneration 
+                  received from the entity in the twelve months preceding the 
+                  Disclosure and the value of any equity interest in the entity 
+                  as of the date of Disclosure, when aggregated, exceeds $5,000. 
+                  For purposes of this definition, remuneration includes salary 
+                  and any payment for services not otherwise identified as salary 
+                  (e.g., Consulting fees, honoraria, paid authorship); equity 
+                  interest includes any stock, stock option, or other ownership 
+                  interest, as determined through reference to public prices or 
+                  other reasonable measures of fair market value.
+                {% endblocktrans %}
+              </li>
+              <li>
+                {% blocktrans %}
+                  With regard to any non-publicly traded entity, a significant 
+                  financial interest exists if the value of any remuneration 
+                  received from the entity in the twelve months preceding the 
+                  Disclosure, when aggregated, exceeds $5,000, or when the 
+                  Investigator (or the Investigator’s spouse or dependent children) 
+                  holds any equity interest (e.g., stock, stock option or other ownership interest);
+                {% endblocktrans %}
+              </li>
+              <li>
+                {% blocktrans %}
+                  Intellectual property rights and interests (e.g., patents, copyrights), 
+                  upon receipt of income related to such rights and interests.
+                {% endblocktrans %}
+              </li>
+            </ol>
+          </li>
+        </ol>
+      </li>
+
+      <li>
+        <strong>
+          {% blocktrans %}
+            Financial Conflict of Interest
+          {% endblocktrans %}
+        </strong>
+        <p>
+          {% blocktrans %}
+            This policy is predicated on the expectation that Investigators should 
+            conduct their affairs so as to avoid or minimize FCOIs, and must respond 
+            appropriately when FCOIs arise. To that end, this policy informs Investigators 
+            about situations that generate FCOIs related to research, provides mechanisms 
+            for Investigators and the Institution to manage those FCOIs that arise, and 
+            describes situations that are prohibited.  Every Investigator has an obligation 
+            to become familiar with, and abide by, the provisions of this policy. If a 
+            situation raising questions of FCOI arises, an Investigator should discuss 
+            the situation with the Institutional Official.
+          {% endblocktrans %}
+        </p>
+        <ol>
+          <li>
+            <strong>
+              {% blocktrans %}
+                Disclosure of Financial Interests
+              {% endblocktrans %}
+            </strong>
+            <p>
+              {% blocktrans %}
+                All Investigators are required to disclose their outside Financial 
+                Interests as defined above to the Institution on an annual and on 
+                an ad hoc basis, as described below.  The Institutional Official 
+                is responsible for the distribution, receipt, processing, review 
+                and retention of Disclosure forms.
+              {% endblocktrans %}
+            </p>
+            <ol>
+              <li>
+                <strong>
+                  {% blocktrans %}
+                    Annual Disclosures
+                  {% endblocktrans %}
+                </strong>
+                <p>
+                  {% blocktrans %}
+                    All Investigators must disclose their Significant Financial 
+                    Interests that are related to the Investigator’s institutional 
+                    responsibilities to the Institution, through the Institutional 
+                    Official, on an annual basis.  All forms should be submitted 
+                    to the Institutional Official or designee as determined by the Institution.
+                  {% endblocktrans %}
+                </p>
+              </li>
+              <li>
+                <strong>
+                  {% blocktrans %}
+                    Ad hoc Disclosures
+                  {% endblocktrans %}
+                </strong>
+                <p>
+                  {% blocktrans %}
+                    In addition to annual Disclosure, certain situations require ad hoc 
+                    Disclosure.  All Investigators must disclose their Significant Financial 
+                    Interests to the Institution, through the Institutional Official, 
+                    within 30 days of their initial appointment or employment.
+                  {% endblocktrans %}
+                </p>
+                <p>
+                  {% blocktrans %}
+                    Prior to entering into PHS-sponsored projects or applications for 
+                    PHS-sponsored projects, where the Investigator has a Significant 
+                    Financial Interest, the Investigator must affirm the currency of 
+                    the annual Disclosure or submit to the Institutional Official an 
+                    ad hoc updated Disclosure of his or her Significant Financial 
+                    Interests with the outside entity.  The Institution will not submit 
+                    a research proposal unless the Investigator(s) have submitted such ad hoc Disclosures.
+                  {% endblocktrans %}
+                </p>
+                <p>
+                  {% blocktrans %}
+                    In addition, all Investigators must submit to the Institutional 
+                    Official an ad hoc Disclosure of any Significant Financial Interest 
+                    they acquire or discover during the course of the year within thirty 
+                    (30) days of discovering or acquiring the Significant Financial Interest.
+                  {% endblocktrans %}
+                </p>
+              </li>
+              <li>
+                <strong>
+                  {% blocktrans %}
+                    Travel
+                  {% endblocktrans %}
+                </strong>
+                <p>
+                  {% blocktrans %}
+                    Investigators must also disclose reimbursed or sponsored travel related 
+                    to their institutional responsibilities, as defined above in the definition 
+                    of Financial Interest and Significant Financial Interest.  Such Disclosures 
+                    must include, at a minimum, the purpose of the trip, the identity of the 
+                    sponsor/organizer, the destination, the duration, and, if known, the 
+                    monetary value. The Institutional Official will determine if additional 
+                    information is needed (e.g., the monetary value if not already disclosed) 
+                    to determine whether the travel constitutes a Financial Conflict of 
+                    Interest with the Investigator’s research.
+                  {% endblocktrans %}
+                </p>
+              </li>
+            </ol>
+          </li>
+          <li>
+            <strong>
+              {% blocktrans %}
+                Review and Decision of the Institution Official
+              {% endblocktrans %}
+            </strong>
+              <p>
+                {% blocktrans %}
+                  If the Disclosure form reveals a Significant Financial Interest, it will 
+                  be reviewed promptly by the Institutional Official or designee for a 
+                  determination of whether it constitutes a Financial Conflict of Interest. If 
+                  a Financial Conflict of Interest exists, the Institutional Official will take 
+                  action to manage the Financial Conflict of Interest including the reduction 
+                  or elimination of the conflict, as appropriate.
+                {% endblocktrans %}
+              </p>
+              <p>
+                {% blocktrans %}
+                  A Financial Conflict of Interest will exist when the Institutional Official 
+                  or designee determines that a Significant Financial Interest could directly 
+                  and significantly affect the design, conduct, or reporting of PHS- sponsored 
+                  research.  If the Institutional Official determines that there is a Financial 
+                  Conflict of Interest that can be managed, he or she must develop and implement 
+                  a written management plan.  The affected Investigator must formally agree to 
+                  the proposed management strategies and sign the written management plan before 
+                  any related PHS-sponsored research goes forward.
+                {% endblocktrans %}
+              </p>
+              <p>
+                {% blocktrans %}
+                  The Institutional Official will periodically review the ongoing activity, 
+                  monitor the conduct of the activity (including use of students and postdoctoral 
+                  appointees), to ensure open and timely dissemination of the research results, 
+                  and to otherwise oversee compliance with the management plan.
+                {% endblocktrans %}
+              </p>
+          </li>
+          <li>
+            <strong>
+              {% blocktrans %}
+                Clinical Trials
+              {% endblocktrans %}
+            </strong>
+              <p>
+                {% blocktrans %}
+                  <b>Review of Significant Financial Interests Related to Clinical Trials</b> Clinical 
+                  trials involve particularly sensitive issues if the Investigator has a Financial 
+                  Interest related to the clinical trial.
+                {% endblocktrans %}
+              </p>
+              <ol>
+                <li>
+                  {% blocktrans %}
+                    In the event of non-compliance with reporting and/or management of a Financial 
+                    Conflict of Interest involving a  PHS-sponsored  clinical research  
+                    project whose  purpose  is  to  evaluate  the safety  or effectiveness 
+                    of a drug, medical device, or treatment as required by this Policy, the 
+                    Investigator must disclose the Financial Conflicts of Interest in each 
+                    public presentation of the results of the affected PHS-sponsored research 
+                    and request an addendum to previously published presentations.
+                  {% endblocktrans %}
+                </li>
+              </ol>
+          </li>
+          <li>
+            <strong>
+              {% blocktrans %}
+                Reporting to PHS
+              {% endblocktrans %}
+            </strong>
+              <p>
+                {% blocktrans %}
+                  The institutional Official will report Financial Conflicts of Interest or 
+                  non-compliance to PHS in accordance with PHS regulations. If the funding 
+                  for the Research is made available from a prime PHS-awardee, such reports 
+                  shall be made to the prime awardee prior to the expenditure of any funds 
+                  and within 60 days of any subsequently identified Financial Conflict of 
+                  Interest such that the prime awardee may fulfill their reporting obligations to the PHS.
+                {% endblocktrans %}
+              </p>
+          </li>
+          <li>
+            <strong>
+              {% blocktrans %}
+                Investigator Non-Compliance
+              {% endblocktrans %}
+            </strong>
+              <ol>
+                <li>
+                  <strong>
+                    {% blocktrans %}
+                      Disciplinary Action
+                    {% endblocktrans %}
+                  </strong>
+                  <p>
+                    {% blocktrans %}
+                      In the event of an Investigator’s failure to comply with this Policy, the 
+                      Institutional official may suspend all relevant activities or take other 
+                      disciplinary action until the matter is resolved or other action deemed 
+                      appropriate by the Institutional Official is implemented.
+                    {% endblocktrans %}
+                  </p>
+                  <p>
+                    {% blocktrans %}
+                      A Institutional Official’s decision to impose sanctions on an Investigator 
+                      because of failure to comply with this Policy, or failure to comply 
+                      with the decision of the Institutional Official, will be described in 
+                      a written explanation of the decision to the Investigator and, where 
+                      applicable, the IRB, and will notify the individual of the right to 
+                      appeal the decision.  The Institution will promptly notify the PHS 
+                      Awarding Component of the action taken or to be taken.  If the 
+                      funding for the research is made available from a prime PHS awardee, 
+                      such notification shall be made promptly to the prime awardee for reporting to PHS.
+                    {% endblocktrans %}
+                  </p>
+                </li>
+                <li>
+                  <strong>
+                    {% blocktrans %}
+                      Retrospective Review
+                    {% endblocktrans %}
+                  </strong>
+                  <p>
+                    {% blocktrans %}
+                      In addition, if the Institutional Official determines that a Financial 
+                      Conflict of Interest was not identified or managed in a timely manner, 
+                      including but not limited to an Investigator’s failure to disclose a 
+                      Significant Financial Interest that is determined to be a Financial 
+                      Conflict of Interest, or failure by an Investigator to materially 
+                      comply with a management plan for a Financial Conflict of Interest, 
+                      the Institutional Official or a committee appointed by the Institutional 
+                      Official will complete a retrospective review of the Investigator’s 
+                      activities and the PHS-sponsored research project to determine whether 
+                      the research conducted during the period of non-compliance was biased 
+                      in the design, conduct or reporting of the research.
+                    {% endblocktrans %}
+                  </p>
+                  <p>
+                    {% blocktrans %}
+                      Documentation of the retrospective review shall include the project 
+                      number, project title, PI, name of Investigator with the Financial 
+                      Conflict of Interest, name of the entity with which the Investigator 
+                      has the Financial Conflict of Interest, reason(s) for the retrospective 
+                      review, detailed methodology used for the retrospective review, and 
+                      findings and conclusions of the review.
+                    {% endblocktrans %}
+                  </p>
+                  <p>
+                    {% blocktrans %}
+                      The Institutional Official will update any previously submitted report 
+                      to the PHS or the prime PHS-awardee relating to the research, specifying 
+                      the actions that will be taken to manage the Financial Conflict of 
+                      Interest going forward. This retrospective review will be completed in 
+                      the manner and within the time frame established in PHS regulations. If 
+                      bias is found, the Institution will promptly notify the PHS Awarding 
+                      Component and submit a mitigation report in accordance with the PHS 
+                      regulations.  The mitigation report will identify elements documented 
+                      in the retrospective review, a description of the impact of the bias 
+                      on the research project and the plan of action to eliminate or mitigate 
+                      the effect of the bias.
+                    {% endblocktrans %}
+                  </p>
+                </li>
+              </ol>
+          </li>
+          <li>
+            <strong>
+              {% blocktrans %}
+                Training
+              {% endblocktrans %}
+            </strong>
+              <p>
+                {% blocktrans %}
+                  Each Investigator must complete training on this Policy, the Investigator’s 
+                  responsibilities regarding Disclosure and the PHS regulations prior to 
+                  engaging in research funded by PHS, and at least every four years thereafter. 
+                  They must also complete training within a reasonable period of time as 
+                  determined by the Institutional Official in the event that this Policy 
+                  is substantively amended in a manner that affects the requirements of 
+                  Investigators, if the Investigator is new to the institution, or if it 
+                  is determined that the Investigator has not complied with this policy or 
+                  with a management plan related to their activities.
+                {% endblocktrans %}
+              </p>
+          </li>
+          <li>
+            <strong>
+              {% blocktrans %}
+                Record Retention
+              {% endblocktrans %}
+            </strong>
+              <p>
+                {% blocktrans %}
+                  The Institutional Official will retain all Disclosure forms, conflict 
+                  management plans, and related documents for a period of three years from 
+                  the date the final expenditure report is submitted to the PHS or to the 
+                  prime PHS awardee, unless any litigation, claim, financial management 
+                  review, or audit is started before the expiration of the three year 
+                  period, the records shall be retained until all litigation, claims or 
+                  audit findings involving the records have been resolved and final action taken.
+                {% endblocktrans %}
+              </p>
+          </li>
+          <li>
+            <strong>
+              {% blocktrans %}
+                Confidentiality
+              {% endblocktrans %}
+            </strong>
+              <p>
+                {% blocktrans %}
+                  To the extent permitted by law, all Disclosure forms, conflict management plans, 
+                  and related information will be confidential.  However, the Institution may be 
+                  required to  make such information available to the PHS Awarding Component and/or 
+                  HHS, to a requestor of information concerning Financial Conflict of Interest 
+                  related to PHS funding or to the primary entity who made the funding available to 
+                  the Institution, if requested or required. If the Institution is requested to 
+                  provide Disclosure forms, conflict management plans, and related information to 
+                  an outside entity, the Investigator will be informed of this Disclosure.
+                {% endblocktrans %}
+              </p>
+          </li>
+          <li>
+            <strong>
+              {% blocktrans %}
+                Public Accessibility
+              {% endblocktrans %}
+            </strong>
+              <p>
+                {% blocktrans %}
+                  Prior to the expenditure of funds, the Institution will publish on a 
+                  publicly-accessible website or respond to any requestor within five 
+                  business days of the request, information concerning any Significant 
+                  Financial Interest that meets the following criteria:
+                {% endblocktrans %}
+              </p>
+              <ol>
+                <li>
+                  {% blocktrans %}
+                    The Significant Financial Interest was disclosed and is 
+                    still held by the senior and Key Personnel;
+                  {% endblocktrans %}
+                </li>
+                <li>
+                  {% blocktrans %}
+                    A determination has been made that the Significant Financial 
+                    Interest is related to the PHS- funded research; and
+                  {% endblocktrans %}
+                </li>
+                <li>
+                  {% blocktrans %}
+                    A determination has been made that the Significant Financial 
+                    Interest is a Financial Conflict of Interest.
+                  {% endblocktrans %}
+                </li>
+              </ol>
+              <p>
+                {% blocktrans %}
+                  The information to be made available shall be consistent 
+                  with the requirements of the PHS regulation.
+                {% endblocktrans %}
+              </p>
+          </li>
+          <li>
+            <strong>
+              {% blocktrans %}
+                Regulatory Authority
+              {% endblocktrans %}
+            </strong>
+              <p>
+                {% blocktrans %}
+                  This policy implements the requirements of 42 CFR 50 Subpart F and 45 CFR 94; 
+                  where there are substantive differences between this policy and the 
+                  requirements, the requirements shall take precedence.
+                {% endblocktrans %}
+              </p>
+          </li>
+        </ol>
+      </li>
+
+    </ol>
+
+  </div>{# .content #}
+</section>
