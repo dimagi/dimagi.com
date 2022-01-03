@@ -3,7 +3,7 @@ from __future__ import absolute_import
 from require.storage import OptimizedFilesMixin
 
 from dimagi.utils.config import setting
-from sass_processor.storage import SassS3Boto3Storage, SassFileStorage
+from sass_processor.storage import SassFileStorage, SassS3Boto3Storage
 from compressor.storage import CompressorFileStorage
 
 STATIC_URL = setting('STATIC_URL', '')

@@ -230,7 +230,9 @@ def click_footer(slug):
 
 
 def _get_url_slug(context):
-    request = context['request']
+    request = context.get('request')
+    if request is None:
+        return ""
     path_info = request.META['PATH_INFO'].strip('/')
     return 'home' if path_info == '' else path_info.replace('/', '-')
 
