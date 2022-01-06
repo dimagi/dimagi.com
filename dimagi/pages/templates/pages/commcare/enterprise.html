@@ -71,6 +71,19 @@
       </div>{# .modal-wrapper #}
     </div>{# .modal-scroll #}
   </div>{# .modal #}
+  <div class="modal"
+        data-dismissible="true"
+        data-size="medium"
+        id="download-enterprise-pdf">
+    <div class="modal-scroll">
+      <div class="modal-wrapper">
+        <a href="#" class="modal-close-button"></a>
+        <div class="content pad-horz-medium-at-medium pad-horz-line pad-vert-none blue-theme">
+          <section class="blue-theme" id="download-enterprise-pdf-content"></section>
+        </div>{# .content #}
+      </div>{# .modal-wrapper #}
+    </div>{# .modal-scroll #}
+  </div>{# .modal #}
 {% endblock %}
 
 {% block js %}
@@ -85,6 +98,15 @@
       formId: "ef203e6a-9154-4cfb-b1f8-0d5c3988212e",
       target: "#set-up-call-content",
       css: "",
+    });
+    hbspt.forms.create({
+      portalId: "503070",
+      formId: "0c3f9937-a12c-4949-84a8-d7a462ac7497",
+      target: "#download-enterprise-pdf-content",
+      css: "",
+      onFormSubmit: function () {
+        window.open('https://f.hubspotusercontent20.net/hubfs/503070/CommCare%20Security.pdf', "_blank");
+      },
     });
   </script>
 {% endblock %}

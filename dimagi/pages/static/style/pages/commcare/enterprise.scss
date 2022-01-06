@@ -51,6 +51,9 @@
     @include make-bg(epic-cover, '../../../pages/commcare/enterprise/chat/hero', $_base-height, $_height-by-size);
   }
 
+.learn-more-pointer {
+  cursor: pointer;
+}
   @media (min-width: $width-desktop) {
     .chat-card {
         width: 380px;
