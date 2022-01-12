@@ -32,3 +32,9 @@ AUP = Term(
     slug='aup',
     version=VERSION_3,
 )
+
+FCI = Term(
+    title=_("Financial Conflict of Interest"),
+    slug='fci',
+    version=VERSION_3,
+)

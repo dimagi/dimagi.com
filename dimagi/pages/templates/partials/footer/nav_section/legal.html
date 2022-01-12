@@ -39,4 +39,12 @@
       {% endblocktrans %}
     </a>
   </li>
+  <li>
+    <a href="{% url 'terms' 'latest' 'fci' %}"
+       class="{% click_footer 'fci' %}">
+      {% blocktrans %}
+        Financial Conflict of Interest
+      {% endblocktrans %}
+    </a>
+  </li>
 {% endblock %}
