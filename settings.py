@@ -111,9 +111,10 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 # Allow all host headers
 ALLOWED_HOSTS = ['*']
 
+HEROKU_REDIS_URL = 'HEROKU_REDIS_TEAL_TLS_URL' if DEPLOY_ENVIRONMENT == 'production' else 'REDIS_URL'
+
 CACHES = {
-    'default': (env.cache('REDIS_TLS_URL')
-                if DEPLOY_ENVIRONMENT == 'production' else env.cache('REDIS_URL')),
+    'default': env.cache(HEROKU_REDIS_URL),
 }
 
 # Static files (CSS, JavaScript, Images)
