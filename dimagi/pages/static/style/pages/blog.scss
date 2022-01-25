@@ -383,3 +383,10 @@ a.post {
     }
   }
 }
+
+ul>li::before {
+  content: '';
+}
+ul.inline-list>li {
+  display: inline-block;
+}

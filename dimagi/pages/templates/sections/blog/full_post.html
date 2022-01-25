@@ -56,7 +56,7 @@
     </h4>
     <ul class="post-tags inline-list gap-bottom-line">
       {% for tag in post.tags %}
-        <li><a href="{% url 'blog_tag_archive' tag.slug %}">{{ tag.name }}</a></li>
+        <li class="gap-bottom-small"><a href="{% url 'blog_tag_archive' tag.slug %}">{{ tag.name }}</a></li>
       {% endfor %}
     </ul>
 
