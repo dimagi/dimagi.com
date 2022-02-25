@@ -150,6 +150,10 @@
     @include background-cover('../../../../static/pages/commcare/product-integration/webhooks.jpg');
     @include integration-logo-resolution;
   }
+  .fhir {
+    @include background-cover('../../../../static/pages/commcare/product-integration/fhir.jpg');
+    @include integration-logo-resolution;
+  }
 }
 
 .integration {
