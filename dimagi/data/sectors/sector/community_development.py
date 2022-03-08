@@ -66,4 +66,15 @@ SECTOR.add_sub_sectors([
         theme="purple-theme",
         slug="financial-inclusion",
     ),
+    Sector(
+        name=ugettext_lazy(
+            "Logistics & Supply Chain Mgmt"
+        ),
+        summary=ugettext_lazy(
+            "Inform and empower supervisors and supply officers with key supply information."
+        ),
+        icon="svg/sectors/community_dev/supply_chain.html",
+        theme="purple-theme",
+        slug="logistics",
+    ),
 ])
