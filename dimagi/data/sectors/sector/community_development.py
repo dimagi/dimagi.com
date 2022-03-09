@@ -68,7 +68,7 @@ SECTOR.add_sub_sectors([
     ),
     Sector(
         name=ugettext_lazy(
-            "Logistics & Supply Chain Mgmt"
+            "Logistics & Supply Chain Management"
         ),
         summary=ugettext_lazy(
             "Inform and empower supervisors and supply officers with key supply information."
