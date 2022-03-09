@@ -21,20 +21,38 @@
 
 {% block hero %}
  <div id="top"></div>
-  <section class="hero hero-about"
+  <section class="hero hero-about orange-theme"
            data-lazybg="true"
            id="hero">
     <div class="content align-left-at-medium align-center">
-      <h2 class="gap-vert-line-at-medium gap-top-large">
+      <h2 class="gap-bottom-base gap-top-medium">
         {% blocktrans %}
           About Dimagi
         {% endblocktrans %}
       </h2>
-      <h1>
+
+      <h1 class="content-width-medium">
         {% blocktrans %}
-          Empowering You to Make a Difference Through Social Impact Technology
+          Digital solutions for frontline impact
         {% endblocktrans %}
       </h1>
+
+      <div class="headline">
+        {% blocktrans %}
+          Dimagi is a certified Benefit Corporation and leading 
+          social enterprise helping<br class="hide-until-medium" />
+          organizations maximize the impact of their frontline workforces.
+        {% endblocktrans %}
+      </div>{# .headline #}
+
+      <p class="pad-top-medium">
+        <a href="#global-services-form"
+           class="button {% click_hero 'demo' %}">
+          {% blocktrans %}
+            Contact Us
+          {% endblocktrans %}
+        </a>
+      </p>
     </div> {# .content #}
   </section>
 {% endblock %}
