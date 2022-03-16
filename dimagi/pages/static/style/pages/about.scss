@@ -3,12 +3,66 @@
 @import 'app/variables/sizes';
 @import 'app/variables/type';
 
+@mixin svg-style {
+  border-radius: 50%;
+  opacity: 0.8;
+  padding: 10px;
+  height: 90px;
+  width: 90px;
+}
+
+
 .about-page {
   @include make-bg(hero, '../../pages/about/hero');
 }
 
 .team-page {
   @include make-bg(hero, '../../pages/team/hero');
+}
+
+.border-custom {
+  border: 3px solid #EDF3FA;
+}
+
+.about-pillars .wellbeing svg {
+  background-color: $color-orange-lightest;
+  @include svg-style;
+}
+.about-pillars .inclusive svg {
+  background-color: $color-purple-lightest;
+  @include svg-style;
+}
+.about-pillars .robust svg {
+  background-color: $color-blue-lightest;
+  @include svg-style;
+}
+.about-pillars .market-driven svg {
+  background-color: $color-green-light;
+  @include svg-style;
+}
+.team {
+  $_base-height: 187px;
+  $_height-by-size: (
+    small: 290px,
+    medium: 376px,
+    large: 360px,
+    extra-large: 460px,
+  );
+  @include make-bg(map-image, '../../pages/about/people_map/map', $_base-height, $_height-by-size);
+
+  width: 100%;
+}
+
+#chapter-4-accordion {
+  $_base-height: 200px;
+  $_height-by-size: (
+    small: 250px,
+    medium: 400px,
+  );
+  @include make-bg(health-outcomes, '../../../pages/pillar/chw/chapter4/evidence/health/hero', $_base-height, $_height-by-size);
+  @include make-bg(cost-effective, '../../../pages/pillar/chw/chapter4/evidence/cost-effective/hero', $_base-height, $_height-by-size);
+  @include make-bg(behaviour, '../../../pages/pillar/chw/chapter4/evidence/behaviour/hero', $_base-height, $_height-by-size);
+  @include make-bg(costs, '../../../pages/pillar/chw/chapter4/evidence/costs/hero', $_base-height, $_height-by-size);
 }
 
 .mission {
@@ -66,6 +120,9 @@
 
 .team .image.teampic4 {
   @include background-cover('../../pages/about/teampic4.jpg');
+}
+.team .image.teampic5 {
+  @include background-cover('../../pages/about/teampic5.jpg');
 }
 
 .employee-image {

@@ -1,0 +1,31 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="story"
+         id="story">
+  <div class="content pad-bottom-medium">
+    <div class="content-width-large">
+      <h3 class="align-center">
+        {% blocktrans %}
+          Our Story
+        {% endblocktrans %}
+      </h3>
+      <p class="align-center">
+        {% blocktrans %}
+          Dimagi’s story is one of resilience and well-timed pivots 
+          combined with an unshakable commitment to positive impact 
+          on our end users and their communities.
+        {% endblocktrans %}
+      </p>
+    </div>
+    {% include "sections/about/timeline.html" %}
+    <div class="column align-center pad-top-small">
+      <a class="arrow"
+         href="{% url 'archive' %}">
+        {% blocktrans %}
+          Hear the full story from CEO, Jonathan Jackson
+        {% endblocktrans %}
+      </a>
+    </div>{# .column #}
+  </div> {# .content #}
+</section>

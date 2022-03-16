@@ -3,8 +3,8 @@
 
 <section class="team"
          id="team">
-  <div class="content pad-vert-medium">
-    <div class="intro">
+  <div class="content pad-bottom-small">
+    <div class="align-center content-width-medium pad-bottom-small">
       <h2>
         {% blocktrans %}
           Our Team
@@ -21,13 +21,27 @@
 
     {% include "sections/about/team/grid.html" %}
 
-    <p class="align-center gap-top-small gap-bottom-base">
-      <a class="arrow {% click_body 'team-employees' %}" href="{% url 'team' %}">
+    <div class="content-width-medium pad-top-medium">
+      <p class="align-center pad-bottom-small">
         {% blocktrans %}
-          See all Dimagi employees
+          Dimagi is a global organization with a remote friendly work 
+          culture. We work from 18 countries and counting, as well 
+          as offices in Cambridge, MA, Cape Town, South Africa and Delhi, India
+        {% endblocktrans %}
+      </p>
+    </div>
+    <div class="gap-top-line">
+      <div class="map-image"
+           data-lazybg="true"></div>
+    </div>{# .gap-top-line #}
+    <div class="align-center pad-vert-small">
+      <a class="button"
+         href="{% url 'partners' %}">
+        {% blocktrans %}
+          All Team Members
         {% endblocktrans %}
       </a>
-    </p>
+    </div>
 
   </div> {# .content #}
 </section>
