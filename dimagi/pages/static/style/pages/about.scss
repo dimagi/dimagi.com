@@ -53,18 +53,73 @@
   width: 100%;
 }
 
-#chapter-4-accordion {
-  $_base-height: 200px;
-  $_height-by-size: (
-    small: 250px,
-    medium: 400px,
-  );
-  @include make-bg(health-outcomes, '../../../pages/pillar/chw/chapter4/evidence/health/hero', $_base-height, $_height-by-size);
-  @include make-bg(cost-effective, '../../../pages/pillar/chw/chapter4/evidence/cost-effective/hero', $_base-height, $_height-by-size);
-  @include make-bg(behaviour, '../../../pages/pillar/chw/chapter4/evidence/behaviour/hero', $_base-height, $_height-by-size);
-  @include make-bg(costs, '../../../pages/pillar/chw/chapter4/evidence/costs/hero', $_base-height, $_height-by-size);
+.timeline .image{
+  @include background-cover('../../pages/about/our-story.jpg');
 }
 
+.timeline-image {
+  width: 300px;
+  height: 400px;
+  margin-top: 0px !important;
+}
+
+ul.timeline-list > li:nth-child(4)::before,
+ul.timeline-list > li:nth-child(8)::before,
+ul.timeline-list > li:nth-child(12)::before{ // scss-lint:disable PropertyCount
+  color: $color-blue;
+}
+ul.timeline-list > li:nth-child(2)::before,
+ul.timeline-list > li:nth-child(6)::before,
+ul.timeline-list > li:nth-child(10)::before{ // scss-lint:disable PropertyCount
+  color: $color-orange;
+}
+
+.vertical-line {
+  border-left: 2px dashed #D4D4D4;
+  height: 70px;
+  margin-left: -26.5px;
+  margin-top: 14px;
+}
+
+.heading-vertical-line {
+  margin-top: -60px;
+}
+@media (min-width: $width-mobile) {
+  .vertical-line {
+    border-left: 2px dashed #D4D4D4;
+    height: 90px;
+    margin-left: -26.5px;
+    margin-top: 14px;
+  }
+  
+  .heading-vertical-line {
+    margin-top: -50px;
+  }
+}
+@media (min-width: $width-desktop) {
+  .vertical-line {
+    border-left: 2px dashed #D4D4D4;
+    height: 80px;
+    margin-left: -26.5px;
+    margin-top: 14px;
+  }
+  
+  .heading-vertical-line {
+    margin-top: -50px;
+  }
+}
+@media (min-width: $width-desktop-lg) {
+  .vertical-line {
+    border-left: 2px dashed #D4D4D4;
+    height: 70px;
+    margin-left: -26.5px;
+    margin-top: 14px;
+  }
+  
+  .heading-vertical-line {
+    margin-top: -60px;
+  }
+}
 .mission {
   $_base-height: 400px;
   $_height-by-size: (
