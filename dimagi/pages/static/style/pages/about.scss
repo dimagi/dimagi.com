@@ -11,6 +11,23 @@
   width: 90px;
 }
 
+.mission-heading {
+  line-height: 134% !important;   
+}
+.tools-cards-vision:hover {
+  background-color: $color-white !important;
+  border-top: 3px solid $color-blue-lightest !important;
+  border-bottom: 3px solid $color-blue-lightest !important;
+  border-left: 3px solid $color-blue-lightest !important;
+}
+
+.tools-cards-mission:hover {
+  background-color: $color-blue-lightest !important;
+}
+
+.story-year {
+  padding-left: 25px;
+}
 
 .about-page {
   @include make-bg(hero, '../../pages/about/hero');
@@ -21,7 +38,7 @@
 }
 
 .border-custom {
-  border: 3px solid #EDF3FA;
+  border: 3px solid $color-blue-lightest;
 }
 
 .about-pillars .wellbeing svg {

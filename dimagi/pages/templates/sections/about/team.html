@@ -1,32 +1,33 @@
 {% load i18n %}
 {% load dimagidotcom %}
 
-<section class="team"
+<section class="team "
          id="our_team">
-  <div class="content pad-bottom-small pad-top-small">
-    <div class="align-center content-width-medium pad-bottom-small">
-      <h2>
-        {% blocktrans %}
-          Our Team
-        {% endblocktrans %}
-      </h2>
-      <p>
-        {% blocktrans %}
-          We are a team of social impact professionals: data geeks, doctors,
-          former consultants, public health professionals, and everything in between.
-          We share a passion for social impact technology and helping those in need. 
-        {% endblocktrans %}
-      </p>
-    </div>{# .intro #}
+  <div class="pad-bottom-small pad-top-small">
+    <div class="accent-gray-bg pad-bottom-line">
+      <div class="align-center content-width-medium pad-vert-small">
+        <h2>
+          {% blocktrans %}
+            Our Team
+          {% endblocktrans %}
+        </h2>
+        <p>
+          {% blocktrans %}
+            We are a diverse group of problem solvers, technologists, 
+            public health professionals, and social impact enthusiasts 
+            coming together to create a more equitable world 
+          {% endblocktrans %}
+        </p>
+        {% include "sections/about/team/grid.html" %}
+      </div>{# .intro #}
+    </div>
 
-    {% include "sections/about/team/grid.html" %}
-
-    <div class="content-width-medium pad-top-medium">
+    <div class="content-width-medium pad-top-small">
       <p class="align-center pad-bottom-small">
         {% blocktrans %}
-          Dimagi is a global organization with a remote friendly work 
-          culture. We work from 18 countries and counting, as well 
-          as offices in Cambridge, MA, Cape Town, South Africa and Delhi, India
+          We work from all over the world including offices in Cambridge, 
+          Massachusetts, <br class="hide-until-medium" />
+          Cape Town, South Africa, and Delhi, India.
         {% endblocktrans %}
       </p>
     </div>
