@@ -93,7 +93,7 @@ ul.timeline-list > li:nth-child(10)::before{ // scss-lint:disable PropertyCount
 
 .vertical-line {
   border-left: 2px dashed #D4D4D4;
-  height: 70px;
+  height: 100px;
   margin-left: -26.5px;
   margin-top: 14px;
 }
@@ -128,7 +128,7 @@ ul.timeline-list > li:nth-child(10)::before{ // scss-lint:disable PropertyCount
 @media (min-width: $width-desktop-lg) {
   .vertical-line {
     border-left: 2px dashed #D4D4D4;
-    height: 70px;
+    height: 80px;
     margin-left: -26.5px;
     margin-top: 14px;
   }
