@@ -3,8 +3,21 @@
 @import 'app/variables/sizes';
 @import 'app/variables/type';
 
-@mixin svg-style {
+@mixin svg-style-lg {
   width: 50%;
+  padding: 20px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+@mixin svg-style-mobile {
+  width: 50%;
+  padding: 40px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+@mixin svg-style-tab {
+  width: 80%;
   padding: 20px;
   border-radius: 50%;
   margin: 0 auto;
@@ -26,25 +39,21 @@
   @include make-bg(hero, '../../pages/team/hero');
 }
 
-.border-custom {
-  border: 3px solid $color-blue-lightest;
-}
-
 .about-pillars .wellbeing svg {
   background-color: $color-orange-lightest;
-  @include svg-style;
+  @include svg-style-mobile;
 }
 .about-pillars .inclusive {
   background-color: $color-purple-lightest;
-  @include svg-style;
+  @include svg-style-mobile;
 }
 .about-pillars .robust svg {
   background-color: $color-blue-lightest;
-  @include svg-style;
+  @include svg-style-mobile;
 }
 .about-pillars .market-driven {
-  background-color: $color-green-light;
-  @include svg-style;
+  background-color: #F6FBF4;
+  @include svg-style-mobile;
 }
 .team {
   $_base-height: 187px;
@@ -79,6 +88,13 @@ ul.timeline-list > li:before{ // scss-lint:disable PropertyCount
   margin-left: -26.5px;
   margin-top: 14px;
 }
+.vertical-line-last {
+  background-image: url(/static/pages/about/timeline.jpg);
+  width: 78px;
+  height: 100px;
+  margin-left: -75px;
+  margin-top: 14px;
+}
 
 .heading-vertical-line {
   margin-top: -60px;
@@ -94,6 +110,22 @@ ul.timeline-list > li:before{ // scss-lint:disable PropertyCount
   .heading-vertical-line {
     margin-top: -50px;
   }
+  .about-pillars .wellbeing svg {
+    background-color: $color-orange-lightest;
+    @include svg-style-mobile;
+ }
+ .about-pillars .inclusive {
+    background-color: $color-purple-lightest;
+    @include svg-style-mobile;
+ }
+ .about-pillars .robust svg {
+    background-color: $color-blue-lightest;
+    @include svg-style-mobile;
+ }
+ .about-pillars .market-driven {
+    background-color: #F6FBF4;
+    @include svg-style-mobile;
+ }
 }
 @media (min-width: $width-desktop) {
   .vertical-line {
@@ -102,9 +134,32 @@ ul.timeline-list > li:before{ // scss-lint:disable PropertyCount
     margin-left: -26.5px;
     margin-top: 14px;
   }
+  .vertical-line-last {
+    background-image: url(/static/pages/about/timeline.jpg);
+    width: 67px;
+    height: 100px;
+    margin-left: -75px;
+    margin-top: 14px;
+  }
   
   .heading-vertical-line {
     margin-top: -50px;
+  }
+  .about-pillars .wellbeing svg {
+    background-color: $color-orange-lightest;
+    @include svg-style-tab;
+  }
+  .about-pillars .inclusive {
+   background-color: $color-purple-lightest;
+   @include svg-style-tab;
+  }
+  .about-pillars .robust svg {
+   background-color: $color-blue-lightest;
+   @include svg-style-tab;
+  }
+  .about-pillars .market-driven {
+   background-color: #F6FBF4;
+   @include svg-style-tab;
   }
 }
 @media (min-width: $width-desktop-lg) {
@@ -114,9 +169,32 @@ ul.timeline-list > li:before{ // scss-lint:disable PropertyCount
     margin-left: -26.5px;
     margin-top: 14px;
   }
+  .vertical-line-last {
+    background-image: url(/static/pages/about/timeline.jpg);
+    width: 50px;
+    height: 100px;
+    margin-left: -75px;
+    margin-top: 14px;
+  }
   
   .heading-vertical-line {
     margin-top: -60px;
+  }
+  .about-pillars .wellbeing svg {
+    background-color: $color-orange-lightest;
+    @include svg-style-lg;
+  }
+  .about-pillars .inclusive {
+   background-color: $color-purple-lightest;
+   @include svg-style-lg;
+  }
+  .about-pillars .robust svg {
+   background-color: $color-blue-lightest;
+   @include svg-style-lg;
+  }
+  .about-pillars .market-driven {
+   background-color: #F6FBF4;
+   @include svg-style-lg;
   }
 }
 .mission {
