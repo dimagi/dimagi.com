@@ -32,7 +32,7 @@ GROUP.add_features([
     ),
     Feature(
         title=ugettext_lazy(
-            "Mobile Reporting "
+            "Mobile Reporting"
         ),
         description=format_html(ugettext_lazy(
             "Amplify the effectiveness of your programs by empowering your "
@@ -44,7 +44,7 @@ GROUP.add_features([
     ),
     Feature(
         title=ugettext_lazy(
-            "Mobile Reporting "
+            "Turnkey DHIS2 Integration"
         ),
         description=format_html(ugettext_lazy(
             "CommCare and DHIS2 work together to provide an end-to-end solution for mobile "
