@@ -11,11 +11,16 @@
 }
 @mixin svg-style-mobile {
   width: 50%;
+  padding: 60px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+@mixin svg-style {
+  width: 50%;
   padding: 40px;
   border-radius: 50%;
   margin: 0 auto;
 }
-
 @mixin svg-style-tab {
   width: 80%;
   padding: 20px;
@@ -41,19 +46,19 @@
 
 .about-pillars .wellbeing svg {
   background-color: $color-orange-lightest;
-  @include svg-style-mobile;
+  @include svg-style;
 }
 .about-pillars .inclusive {
   background-color: $color-purple-lightest;
-  @include svg-style-mobile;
+  @include svg-style;
 }
 .about-pillars .robust svg {
   background-color: $color-blue-lightest;
-  @include svg-style-mobile;
+  @include svg-style;
 }
 .about-pillars .market-driven {
   background-color: #F6FBF4;
-  @include svg-style-mobile;
+  @include svg-style;
 }
 .team {
   $_base-height: 187px;
