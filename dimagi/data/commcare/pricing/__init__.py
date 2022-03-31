@@ -9,8 +9,8 @@ from dimagi.data.commcare.pricing import (
     enterprise_web_apps,
     enterprise_management_tools,
     security_compliance,
-    support
-
+    support,
+    early_access_program,
 )
 
 
@@ -25,5 +25,6 @@ feature_groups = (
     enterprise_web_apps,
     enterprise_management_tools,
     security_compliance,
-    support
+    support,
+    early_access_program,
 )
