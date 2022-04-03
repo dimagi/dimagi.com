@@ -3,6 +3,39 @@
 @import 'app/variables/sizes';
 @import 'app/variables/type';
 
+@mixin svg-style-lg {
+  width: 50%;
+  padding: 20px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+@mixin svg-style-mobile {
+  width: 50%;
+  padding: 60px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+@mixin svg-style {
+  width: 50%;
+  padding: 40px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+@mixin svg-style-tab {
+  width: 80%;
+  padding: 20px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.mission-heading {
+  line-height: 134% !important;   
+}
+
+.story-year {
+  padding-left: 25px;
+}
+
 .about-page {
   @include make-bg(hero, '../../pages/about/hero');
 }
@@ -11,6 +44,164 @@
   @include make-bg(hero, '../../pages/team/hero');
 }
 
+.about-pillars .wellbeing svg {
+  background-color: $color-orange-lightest;
+  @include svg-style;
+}
+.about-pillars .inclusive {
+  background-color: $color-purple-lightest;
+  @include svg-style;
+}
+.about-pillars .robust svg {
+  background-color: $color-blue-lightest;
+  @include svg-style;
+}
+.about-pillars .market-driven {
+  background-color: #F6FBF4;
+  @include svg-style;
+}
+.team {
+  $_base-height: 187px;
+  $_height-by-size: (
+    small: 290px,
+    medium: 376px,
+    large: 360px,
+    extra-large: 460px,
+  );
+  @include make-bg(map-image, '../../pages/about/people_map/map', $_base-height, $_height-by-size);
+
+  width: 100%;
+}
+
+.timeline .image{
+  @include background-cover('../../pages/about/our-story.jpg');
+}
+
+.timeline-image {
+  width: 300px;
+  height: 400px;
+  margin-top: 0px !important;
+}
+
+ul.timeline-list > li:before{ // scss-lint:disable PropertyCount
+  color: $color-blue;
+}
+
+.vertical-line {
+  border-left: 2px dashed #D4D4D4;
+  height: 100px;
+  margin-left: -26.5px;
+  margin-top: 14px;
+}
+.vertical-line-last {
+  background-image: url(/static/pages/about/timeline.jpg);
+  width: 78px;
+  height: 100px;
+  margin-left: -75px;
+  margin-top: 14px;
+}
+
+.heading-vertical-line {
+  margin-top: -60px;
+}
+@media (min-width: $width-mobile) {
+  .vertical-line {
+    border-left: 2px dashed #D4D4D4;
+    height: 90px;
+    margin-left: -26.5px;
+    margin-top: 14px;
+  }
+  
+  .heading-vertical-line {
+    margin-top: -50px;
+  }
+  .about-pillars .wellbeing svg {
+    background-color: $color-orange-lightest;
+    @include svg-style-mobile;
+ }
+ .about-pillars .inclusive {
+    background-color: $color-purple-lightest;
+    @include svg-style-mobile;
+ }
+ .about-pillars .robust svg {
+    background-color: $color-blue-lightest;
+    @include svg-style-mobile;
+ }
+ .about-pillars .market-driven {
+    background-color: #F6FBF4;
+    @include svg-style-mobile;
+ }
+}
+@media (min-width: $width-desktop) {
+  .vertical-line {
+    border-left: 2px dashed #D4D4D4;
+    height: 80px;
+    margin-left: -26.5px;
+    margin-top: 14px;
+  }
+  .vertical-line-last {
+    background-image: url(/static/pages/about/timeline.jpg);
+    width: 67px;
+    height: 100px;
+    margin-left: -75px;
+    margin-top: 14px;
+  }
+  
+  .heading-vertical-line {
+    margin-top: -50px;
+  }
+  .about-pillars .wellbeing svg {
+    background-color: $color-orange-lightest;
+    @include svg-style-tab;
+  }
+  .about-pillars .inclusive {
+   background-color: $color-purple-lightest;
+   @include svg-style-tab;
+  }
+  .about-pillars .robust svg {
+   background-color: $color-blue-lightest;
+   @include svg-style-tab;
+  }
+  .about-pillars .market-driven {
+   background-color: #F6FBF4;
+   @include svg-style-tab;
+  }
+}
+@media (min-width: $width-desktop-lg) {
+  .vertical-line {
+    border-left: 2px dashed #D4D4D4;
+    height: 80px;
+    margin-left: -26.5px;
+    margin-top: 14px;
+  }
+  .vertical-line-last {
+    background-image: url(/static/pages/about/timeline.jpg);
+    width: 50px;
+    height: 100px;
+    margin-left: -75px;
+    margin-top: 14px;
+  }
+  
+  .heading-vertical-line {
+    margin-top: -60px;
+  }
+  .about-pillars .wellbeing svg {
+    background-color: $color-orange-lightest;
+    @include svg-style-lg;
+  }
+  .about-pillars .inclusive {
+   background-color: $color-purple-lightest;
+   @include svg-style-lg;
+  }
+  .about-pillars .robust svg {
+   background-color: $color-blue-lightest;
+   @include svg-style-lg;
+  }
+  .about-pillars .market-driven {
+   background-color: #F6FBF4;
+   @include svg-style-lg;
+  }
+}
 .mission {
   $_base-height: 400px;
   $_height-by-size: (
@@ -66,6 +257,9 @@
 
 .team .image.teampic4 {
   @include background-cover('../../pages/about/teampic4.jpg');
+}
+.team .image.teampic5 {
+  @include background-cover('../../pages/about/teampic5.jpg');
 }
 
 .employee-image {

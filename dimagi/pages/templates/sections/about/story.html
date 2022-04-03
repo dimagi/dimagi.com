@@ -1,0 +1,32 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="story accent-gray-bg"
+         id="our_story">
+  <div class="content pad-vert-small">
+    <div class="content-width-large">
+      <h2 class="align-center pad-top-small">
+        {% blocktrans %}
+          Our Story
+        {% endblocktrans %}
+      </h2>
+      <p class="align-center">
+        {% blocktrans %}
+          Dimagi’s story is one of resilience and well-timed pivots 
+          combined with an unshakable commitment<br class="hide-until-medium" />
+          to positive impact on our end users and their communities.
+        {% endblocktrans %}
+      </p>
+    </div>
+    {% include "sections/about/timeline.html" %}
+    <div class="column align-center pad-vert-small">
+      <a class="arrow"
+         href="https://aidevolved.com/podcast/jon-jackson/"
+         target="_blank">
+        {% blocktrans %}
+          Hear the full story from CEO, Jonathan Jackson
+        {% endblocktrans %}
+      </a>
+    </div>{# .column #}
+  </div> {# .content #}
+</section>

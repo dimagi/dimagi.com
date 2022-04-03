@@ -1,33 +1,48 @@
 {% load i18n %}
 {% load dimagidotcom %}
 
-<section class="team"
-         id="team">
-  <div class="content pad-vert-medium">
-    <div class="intro">
-      <h2>
+<section class="team "
+         id="our_team">
+  <div class="pad-bottom-small pad-top-small">
+    <div class="accent-gray-bg pad-bottom-line">
+      <div class="align-center content-width-medium pad-vert-small">
+        <h2 class="pad-top-small">
+          {% blocktrans %}
+            Our Team
+          {% endblocktrans %}
+        </h2>
+        <p class="pad-horz-small">
+          {% blocktrans %}
+            We are a diverse group of problem solvers, technologists, 
+            public health professionals, and social impact enthusiasts 
+            coming together to create a more equitable world 
+          {% endblocktrans %}
+        </p>
+        {% include "sections/about/team/grid.html" %}
+      </div>{# .intro #}
+    </div>
+
+    <div class="content-width-medium pad-top-small">
+      <p class="align-center pad-bottom-small pad-horz-small">
         {% blocktrans %}
-          Our Team
-        {% endblocktrans %}
-      </h2>
-      <p>
-        {% blocktrans %}
-          We are a team of social impact professionals: data geeks, doctors,
-          former consultants, public health professionals, and everything in between.
-          We share a passion for social impact technology and helping those in need. 
+          We work from all over the world including offices in Cambridge, 
+          Massachusetts, <br class="hide-until-medium" />
+          Cape Town, <br class="hide-at-small" />South Africa, and Delhi, India.
         {% endblocktrans %}
       </p>
-    </div>{# .intro #}
-
-    {% include "sections/about/team/grid.html" %}
-
-    <p class="align-center gap-top-small gap-bottom-base">
-      <a class="arrow {% click_body 'team-employees' %}" href="{% url 'team' %}">
+    </div>
+    <div class="gap-top-line gap-horz-small">
+      <div class="map-image"
+           data-lazybg="true"></div>
+    </div>{# .gap-top-line #}
+    <div class="align-center pad-vert-small">
+      <a class="button"
+         href="{% url 'team' %}">
         {% blocktrans %}
-          See all Dimagi employees
+          All Team Members
         {% endblocktrans %}
       </a>
-    </p>
+    </div>
 
   </div> {# .content #}
 </section>
