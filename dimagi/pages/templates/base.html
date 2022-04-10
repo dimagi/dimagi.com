@@ -38,13 +38,7 @@
     <!-- <meta property="dimagi:downloadFormId" content="{% block download_form_id %}6d2f8b0a-f085-4a9a-be6e-383f02b1769f{% endblock %}"> -->
     <meta property="dimagi:callToActionEvents" content="{{ request.hubspot_ctas|JSON|META_STR }}">
 
-    {% if request.ab_test.demo_workflow_mar2019 %}
-      {% if request.ab_test.demo_workflow_mar2019 == 'variant' %}
-        <meta property="dimagi:demoFormId" content="fafedecc-c3d8-4e10-a3fe-bd8978162da1">
-      {% else %}
-        <meta property="dimagi:demoFormId" content="8a721256-2974-4a79-8088-eb4720f8b290">
-      {% endif %}
-    {% endif %}
+    <meta property="dimagi:demoFormId" content="f321b284-dc0a-48ff-b304-c27c5d39bb2a">
 
     <meta property="dimagi:isAmp" content="{{ request.is_amp|BOOL }}">
     <meta property="dimagi:ampPageType" content="{{ request.amp_page_type }}">
