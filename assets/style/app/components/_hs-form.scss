@@ -10,9 +10,18 @@
     max-width: inherit !important; // scss-lint:disable ImportantRule
   }
 
-  .hs-form .input .hs-input {
+  .hs-form .input .hs-input input[type=text] {
     margin-right: 20px !important; // scss-lint:disable ImportantRule
     width: calc(100% - 20px) !important; // scss-lint:disable ImportantRule
+  }
+
+  .hs-form .input .hs-input input[type=checkbox] {
+    margin-right: 20px !important; // scss-lint:disable ImportantRule
+    width: auto !important; // scss-lint:disable ImportantRule
+  }
+
+  ul>li::before, ul.bullet>li::before {
+    content: '' !important;
   }
 
   .hs-form label,
@@ -68,13 +77,4 @@
   .leadinModal-close {
     text-align: right !important; // scss-lint:disable ImportantRule
   }
-}
-fieldset.form-columns-1 input[type=checkbox], fieldset.form-columns-1 input[type=radio] {
-  width: auto !important;
-}
-ul>li::before, ul.bullet>li::before {
-  content: '' !important;
-}
-label input .hs-input {
-  width: auto !important;
 }
