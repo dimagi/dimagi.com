@@ -69,9 +69,12 @@
     text-align: right !important; // scss-lint:disable ImportantRule
   }
 }
-.hs-form-f321b284-dc0a-48ff-b304-c27c5d39bb2a_786a6711-abd2-459a-82fc-1ab8808377b6 fieldset.form-columns-1 input[type=checkbox], .hs-form-f321b284-dc0a-48ff-b304-c27c5d39bb2a_786a6711-abd2-459a-82fc-1ab8808377b6 fieldset.form-columns-1 input[type=radio] {
+fieldset.form-columns-1 input[type=checkbox], fieldset.form-columns-1 input[type=radio] {
   width: auto !important;
 }
 ul>li::before, ul.bullet>li::before {
   content: '' !important;
+}
+label input .hs-input {
+  width: auto !important;
 }
