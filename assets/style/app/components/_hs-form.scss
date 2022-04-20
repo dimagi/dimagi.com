@@ -23,6 +23,12 @@
   ul>li::before, ul.bullet>li::before {
     content: '' !important;
   }
+  .hs-form-booleancheckbox {
+    padding-left: 0px !important;
+  }
+  .hs-firstname, .hs-company {
+    padding-right: 10px !important;
+  }
 
   .hs-form label,
   .hs-form legend,

@@ -306,6 +306,7 @@ $font-size-banner: 13px;
   .no-touch .sub-nav:not(.sub-nav-fixed) {
     bottom: auto;
     position: relative;
+    z-index: 0;
   }
 
   .sub-nav-fixed-top .sub-nav:not(.sub-nav-fixed) .destinations {

@@ -96,6 +96,7 @@ a:not(.button).tile-more {
 .parallax-ch1-1 {
   @include make-parallax-bg(epic-cover, '../../../pages/pillar/ddp/headers/section1/hero');
   height: auto !important;
+  z-index: 0;
 }
 
 .parallax-ch2-1 {
