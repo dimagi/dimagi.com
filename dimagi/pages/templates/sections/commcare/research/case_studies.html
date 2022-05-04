@@ -1,48 +1,192 @@
 {% load i18n %}
 {% load dimagidotcom %}
 
-<section id="casestudies"
-         data-lazybg="true">
-  <div class="content pad-vert-medium">
-    <div class="pad-vert-base pad-bottom-line-at-medium pad-bottom-line-at-large pad-bottom-small-at-extra-large">
-      <h3 class="blue pad-left-line content-width-medium align-center">
-        {% blocktrans %}
-          CommCare Works for Researchers
-        {% endblocktrans %}
-      </h3>
+<section class="testimonial programs" 
+         data-lazybg="true" 
+         id="testimonials">
+  <div class="accent-gray-bg">
+    <div class="content pad-vert-small">
+      <div class="mdc-sector-program">
+        <h2 class="content-width-medium align-center blue pad-top-small">
+          {% blocktrans %}
+            Trusted by Universities & <br class="hide-until-medium" />
+            Research Teams Globally
+          {% endblocktrans %}
+        </h2>
+        <p class="content-width-medium align-center">
+          {% url 'toolkit' 'commcare-evidence-base' as evidence_base_tool %}
+          {% blocktrans %}
+            CommCare is both the most widely-used and most-widely researched
+            digital tool for frontline work. If you would like to learn more
+            about CommCare’s impact on frontline programs, visit our <a href="{{ evidence_base_tool }}">evidence
+            base</a> here.  Read below to learn about some of the exciting
+            studies our partners are leading across the world.
+          {% endblocktrans %}
+        </p>
+      </div>
+      <div class="grid grid-2-at-large grid-1-at-medium grid-row-equal-heights grid-col-space-small pad-top-medium">
+        <div class="column  pad-bottom-small ">
+          <div class="pad-bottom-base white-bg">
+            <div class="image testimonial-1"
+                 data-lazybg="true"></div>
+            <div class="attribution-main pad-line pad-top-none-at-large pad-top-line-at-extra-large">
+              <h5>
+                <strong class="body-color">
+                  {% blocktrans %}
+                    Empowering Community Health Workers with Mobile Technology
+                    to Treat Chronic Diseases in Rural Guatemala 
+                  {% endblocktrans %}
+                </strong>
+              </h5>
+              <p>
+                {% blocktrans %}
+                  “CommCare has streamlined our ability to collect, review, 
+                  and analyze data across various projects, including child 
+                  nutrition surveillance and type 2 diabetes management. The 
+                  intuitive user interface makes it simple to train our team 
+                  of community health workers, and the ability to incorporate 
+                  decision-support protocols and branching logic within 
+                  CommCare has allowed them to provide services with 
+                  remote physician supervision typically reserved for 
+                  more highly trained personnel.” 
+                {% endblocktrans %}
+              </p>
+              <div class="attribution-heading body-color uppercase">
+                <p class="pad-bottom-base">
+                {% blocktrans %}
+                  <strong> Alejandro Chavez</strong>
+                {% endblocktrans %}
+                </p>
+              </div>
+              <p class="attribution-sub uppercase">
+                {% blocktrans %}
+                  Data Analyst & Consultant for Mobile Technology in Rural Health Settings
+                {% endblocktrans %}
+              </p>
+            </div>
+          </div>
+        </div>{# .column #}
+        <div class="column  pad-bottom-small ">
+          <div class="pad-bottom-base white-bg">
+            <div class="image testimonial-2"
+                 data-lazybg="true"></div>
+            <div class="attribution-main pad-line pad-top-none-at-large pad-top-line-at-extra-large">
+              <h5>
+                <strong class="body-color">
+                  {% blocktrans %}
+                    A New Opportunity for Patient Identification & Tracking With Ear Biometrics
+                  {% endblocktrans %}
+                </strong>
+              </h5>
+              <p>
+                {% blocktrans %}
+                  “We created forms in CommCare that helped us track infants longitudinally, 
+                  capturing ear data every month.  Based on the way we were able to set up 
+                  registration, we could send out automatic reminders to patients when they 
+                  were due at the clinic for their next follow-up, as well as auto-populate 
+                  the correct form based on the infant’s date of birth captured on 
+                  registration.  Since this study was aimed at determining ear growth 
+                  over the course of the first 9 months of life, we used specific 
+                  follow-up forms to group our data for analysis.”
+                {% endblocktrans %}
+              </p>
+              <div class="attribution-heading body-color uppercase">
+                <p class="pad-bottom-base">
+                {% blocktrans %}
+                  <strong>Lauren Etter</strong>
+                {% endblocktrans %}
+                </p>
+              </div>
+              <p class="attribution-sub uppercase">
+                {% blocktrans %}
+                  Research Assistant & Project Manager, Boston University School of Public Health
+                {% endblocktrans %}
+              </p>
+            </div>
+          </div>
+        </div>{# .column #}
+        <div class="column  pad-bottom-small ">
+          <div class="pad-bottom-base white-bg">
+            <div class="image testimonial-3"
+                 data-lazybg="true"></div>
+            <div class="attribution-main pad-line pad-top-none-at-large pad-top-line-at-extra-large">
+              <h5>
+                <strong class="body-color">
+                  {% blocktrans %}
+                    Multiple Studies In Uganda Leveraged CommCare to Support 
+                    CHWs and Power SMS Interventions
+                  {% endblocktrans %}
+                </strong>
+              </h5>
+              <p>
+                {% blocktrans %}
+                  “CommCare has helped ease our data collection and improve our 
+                  communication with frontline health workers. CommCare is easy 
+                  for our community health workers to use and works well for 
+                  implementation science research by providing a real-world 
+                  data tool. CommCare has helped us to provide better feedback 
+                  on health worker performance and improve our data quality.” 
+                {% endblocktrans %}
+              </p>
+              <div class="attribution-heading body-color uppercase">
+                <p class="pad-bottom-base">
+                {% blocktrans %}
+                  <strong> Amanda Gupta</strong>
+                {% endblocktrans %}
+                </p>
+              </div>
+              <p class="attribution-sub uppercase">
+                {% blocktrans %}
+                  Research Associate, Yale School of Public Health and Uganda 
+                  Tuberculosis Research Consortium (U-TIRC)
+                {% endblocktrans %}
+              </p>
+            </div>
+          </div>
+        </div>{# .column #}
+        <div class="column  pad-bottom-small ">
+          <div class="pad-bottom-base white-bg">
+            <div class="image testimonial-4"
+                 data-lazybg="true"></div>
+            <div class="attribution-main pad-line pad-top-none-at-large pad-top-line-at-extra-large">
+              <h5>
+                <strong class="body-color">
+                  {% blocktrans %}
+                    A Large-Scale HIV Behavioral Intervention Trial for Youth 
+                    at risk of HIV in the USA Built an Electronic Data 
+                    Collection System on CommCare
+                  {% endblocktrans %}
+                </strong>
+              </h5>
+              <p>
+                {% blocktrans %}
+                  “We recently used CommCare for electronic data collection and 
+                  monitoring in a large multi-site longitudinal study to evaluate 
+                  the impact of HIV interventions in two US cities. Studies of 
+                  this magnitude and complexity are always accompanied by 
+                  challenges. Thanks to thoughtful input from the Dimagi team on 
+                  the front end and the robustness and flexibility of the CommCare 
+                  system, the development of data collection protocols to meet our 
+                  needs and data collection were not part of those challenges.” 
+                {% endblocktrans %}
+              </p>
+              <div class="attribution-heading body-color uppercase">
+                <p class="pad-bottom-base">
+                {% blocktrans %}
+                  <strong>W. Scott Comulada</strong>
+                {% endblocktrans %}
+                </p>
+              </div>
+              <p class="attribution-sub uppercase">
+                {% blocktrans %}
+                  DrPH, Professor-in-Residence, UCLA Department of Psychiatry and Biobehavioral Sciences
+                {% endblocktrans %}
+              </p>
+            </div>
+          </div>
+        </div>{# .column #}
+      </div>
     </div>
-    <div class="grid grid-2-at-medium grid-1-at-small">
-      <div class="column" id="case-study">
-        <div class="intro-image">
-          <div class="case-study-image white-lazy-bg"
-               data-lazybg="true"></div>
-        </div>
-      </div> {# .column #}
-      <div class="column pad-top-base">
-        <p>
-          {% blocktrans %}
-            Researchers around the world use CommCare to bring efficiency,
-            visibility, and scalability to their field-based studies. For
-            instance, in 2016, The Harvard T.H. Chan School of Public Health
-            used CommCare to study the causal effect of a FIGO intervention
-            on the uptake and continued use of postpartum IUDs (PPIUDs) by
-            recent mothers and the effect on their subsequent pregnancy
-            status and births.
-          {% endblocktrans %}
-        </p>
-        <p>
-          {% blocktrans %}
-            Learn more about some of our featured research projects along
-            with advice from our research partners.
-          {% endblocktrans %}
-        </p>
-        <a class="arrow {% click_body 'video-learn' %}"
-            href="{% url 'programmatic_research' %}">
-          {% blocktrans %}
-            Learn more
-          {% endblocktrans %}
-        </a>
-      </div>{# .column #}
-    </div>      
   </div>
 </section>
+

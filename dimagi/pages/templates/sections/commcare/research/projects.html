@@ -1,33 +1,53 @@
 {% load i18n %}
 {% load dimagidotcom %}
 
-<section class="testimonials border-top"
-         id="projects">
+<section class="align-center blue-theme accent-gray-bg border-top" id="key-features">
   <div class="content pad-vert-medium">
-    <div class="pad-bottom-medium  content-width-large align-center">
-      <h2 class="blue">
+    <h2 class="content-width-medium normalcase pad-bottom-small theme-color">
         {% blocktrans %}
-          Use CommCare to support all your research needs
+          Field-tested tools for data collection <br class="hide-until-medium" />
+          and service delivery at scale
         {% endblocktrans %}
-      </h2>
-      <p class="content-width-medium">
-        {% blocktrans %}
-          CommCare is a flexible and powerful tool for researchers, supporting
-          virtually any study design with a mobile application tailored to your needs.
-        {% endblocktrans %}
-      </p>
-    </div>
+    </h2>
 
-    <div class="carousel carousel-fade-inactive carousel-numbered carousel-features">
-      <div class="carousel-container">
-        <div class="spinner spinner-large"></div>
-        <div class="carousel-slider">
-          {% include "sections/commcare/research/projects/evaluation.html" %}
-          {% include "sections/commcare/research/projects/study.html" %}
-          {% include "sections/commcare/research/projects/tech.html" %}
-        </div>{# .carousel-slider #}
-      </div>{# .carousel-container #}
-    </div>{# .carousel #}
+    <div class="grid-1-at-small grid-2-at-large grid-col-space-medium grid-row-equal-heights pad-bottom-medium">
+      {% include "sections/commcare/research/projects/tech.html" %}
+      {% include "sections/commcare/research/projects/study.html" %}
+    </div>{# .grid-2-at-small #}
+
+    <div class="report content pad-vert-small blue-theme border-all white-bg">
+      <div class="grid-2-at-small">
+        <div class="column pad-left-medium-at-medium pad-horz-line align-left-at-medium align-center-at-small pad-top-large-at-large pad-top-small-at-medium pad-top-none">
+          <h3 class="theme-color">
+            {% blocktrans %}
+                Comply with strict regulatory & security standards
+            {% endblocktrans %}
+          </h3>
+          <p>
+            {% blocktrans %}
+                Make your IT Security team happy. With CommCare, your data
+                is always encrypted and stored in a HIPAA, GDPR, and SOC2
+                compliant environment. Tighten security further with roles-based
+                data access, data de-identification, two-factor authentication,
+                and more. CommCare is also 21 CFR Part 11-ready.
+            {% endblocktrans %}
+          </p>
+        </div>{# .column #}
+        <div class="column pad-left-line">
+          <div class="report-ready white-lazy-bg"
+               data-lazybg="true"></div>
+        </div>{# .column #}
+      </div>{# .grid-2 #}
+    </div>{# .content #}
+
+    <p class="align-center pad-top-medium">
+      <a class="button uppercase {% click_body 'case-management' %}"
+         href="{% url 'commcare_features' %}">
+        {% blocktrans %}
+          See all features
+        {% endblocktrans %}
+      </a>
+    </p>
 
   </div>{# .content #}
 </section>
