@@ -10,9 +10,24 @@
     max-width: inherit !important; // scss-lint:disable ImportantRule
   }
 
-  .hs-form .input .hs-input {
+  .hs-form .input .hs-input input[type=text] {
     margin-right: 20px !important; // scss-lint:disable ImportantRule
     width: calc(100% - 20px) !important; // scss-lint:disable ImportantRule
+  }
+
+  .hs-form .input .hs-input input[type=checkbox] {
+    margin-right: 20px !important; // scss-lint:disable ImportantRule
+    width: auto !important; // scss-lint:disable ImportantRule
+  }
+
+  ul>li::before, ul.bullet>li::before {
+    content: '' !important;
+  }
+  .hs-form-booleancheckbox {
+    padding-left: 0px !important;
+  }
+  .hs-firstname, .hs-company {
+    padding-right: 10px !important;
   }
 
   .hs-form label,

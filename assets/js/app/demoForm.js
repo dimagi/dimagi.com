@@ -33,6 +33,7 @@ define([
                 portalId: apiId,
                 formId: demoFormId,
                 target: "#demo-form-content",
+                sfdcCampaignId: "70167000001RoCCAA0",
                 css: "",
                 onFormReady: function () {
                     var $hubspotFormModal = $('#demo-form-modal'),
