@@ -1,0 +1,41 @@
+{% extends "sections/commcare/research/evidence/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block image_class%}empower{% endblock %}
+
+{% block content %}
+  <div class="testimonial-content content-width-medium align-left pad-horz-base">
+    <h6 class="blue testimonial-org">
+      {% blocktrans %}
+        Empowering Community Health Workers with Mobile Technology
+        to Treat Chronic Diseases in Rural Guatemala 
+      {% endblocktrans %}
+    </h6>
+    <p>
+      {% blocktrans %}
+        “CommCare has streamlined our ability to collect, review, 
+        and analyze data across various projects, including child 
+        nutrition surveillance and type 2 diabetes management. The 
+        intuitive user interface makes it simple to train our team 
+        of community health workers, and the ability to incorporate 
+        decision-support protocols and branching logic within 
+        CommCare has allowed them to provide services with 
+        remote physician supervision typically reserved for 
+        more highly trained personnel.”
+      {% endblocktrans %}  
+    </p>
+    <div class="attribution-heading body-color uppercase">
+      <p class="pad-bottom-base">
+      {% blocktrans %}
+        <strong> Alejandro Chavez</strong>
+      {% endblocktrans %}
+      </p>
+    </div>
+    <p class="attribution-sub uppercase">
+      {% blocktrans %}
+        Data Analyst & Consultant for Mobile Technology in Rural Health Settings
+      {% endblocktrans %}
+    </p>
+  </div>
+{% endblock %}

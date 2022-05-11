@@ -1,0 +1,39 @@
+{% extends "sections/commcare/research/evidence/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block image_class%}studies{% endblock %}
+
+{% block content %}
+  <div class="testimonial-content content-width-medium align-left pad-horz-medium">
+    <h6 class="blue testimonial-org">
+      {% blocktrans %}
+        Multiple Studies In Uganda Leveraged CommCare to Support 
+        CHWs and Power SMS Interventions
+      {% endblocktrans %}
+    </h6>
+    <p>
+      {% blocktrans %}
+        “CommCare has helped ease our data collection and improve our 
+        communication with frontline health workers. CommCare is easy 
+        for our community health workers to use and works well for 
+        implementation science research by providing a real-world 
+        data tool. CommCare has helped us to provide better feedback 
+        on health worker performance and improve our data quality.”
+      {% endblocktrans %}  
+    </p>
+    <div class="attribution-heading body-color uppercase">
+      <p class="pad-bottom-base">
+      {% blocktrans %}
+        <strong> Amanda Gupta</strong>
+      {% endblocktrans %}
+      </p>
+    </div>
+    <p class="attribution-sub uppercase">
+      {% blocktrans %}
+        Research Associate, Yale School of Public Health and Uganda 
+        Tuberculosis Research Consortium (U-TIRC)
+      {% endblocktrans %}
+    </p>
+  </div>
+{% endblock %}

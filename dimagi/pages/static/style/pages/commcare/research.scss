@@ -41,9 +41,8 @@
     small: 250px,
     medium: 300px,
   );
-  @include make-bg(evaluations, '../../../pages/commcare/research/projects/evaluations', $_base-height, $_height-by-size);
-  @include make-bg(studies, '../../../pages/commcare/research/projects/studies', $_base-height, $_height-by-size);
-  @include make-bg(intervention, '../../../pages/commcare/research/projects/intervention', $_base-height, $_height-by-size);
+  @include make-bg(studies, '../../../pages/commcare/research/study', $_base-height, $_height-by-size);
+  @include make-bg(intervention, '../../../pages/commcare/research/ucla', $_base-height, $_height-by-size);
 }
 
 #case-study {
@@ -78,17 +77,29 @@ ul.integration {
   @include make-bg(integrate, '../../../pages/commcare/ict4d/comprehensive-spectrum/integrate', $_base-height, $_height-by-size, '.png');
 }
 
-.evaluations {
+.empower {
+  @include background-cover('../../../pages/commcare/research/study.jpg');
+  height: 250px;
+  width: 200px;
+  margin-top: 0px !important;
+}
+
+.opportunity {
+  @include background-cover('../../../pages/commcare/research/ear.jpg');
+  height: 300px;
   width: 200px;
   margin-top: 0px !important;
 }
 
 .studies {
+  @include background-cover('../../../pages/commcare/research/uganda.jpg');
+  height: 260px;
   width: 200px;
   margin-top: 0px !important;
 }
-
-.intervention {
+.large-scale {
+  @include background-cover('../../../pages/commcare/research/ucla.jpg');
+  height: 260px;
   width: 200px;
   margin-top: 0px !important;
 }
