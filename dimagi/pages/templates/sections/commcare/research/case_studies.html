@@ -1,48 +1,41 @@
 {% load i18n %}
 {% load dimagidotcom %}
 
-<section id="casestudies"
-         data-lazybg="true">
-  <div class="content pad-vert-medium">
-    <div class="pad-vert-base pad-bottom-line-at-medium pad-bottom-line-at-large pad-bottom-small-at-extra-large">
-      <h3 class="blue pad-left-line content-width-medium align-center">
-        {% blocktrans %}
-          CommCare Works for Researchers
-        {% endblocktrans %}
-      </h3>
+<section class="testimonial programs" 
+         data-lazybg="true" 
+         id="testimonials">
+  <div class="accent-gray-bg">
+    <div class="content pad-vert-small">
+      <div class="mdc-sector-program">
+        <h2 class="content-width-medium align-center blue pad-top-small">
+          {% blocktrans %}
+            Trusted by Universities & <br class="hide-until-medium" />
+            Research Teams Globally
+          {% endblocktrans %}
+        </h2>
+        <p class="content-width-medium align-center pad-bottom-small">
+          {% url 'toolkit' 'commcare-evidence-base' as evidence_base_tool %}
+          {% blocktrans %}
+            CommCare is both the most widely-used and most-widely researched
+            digital tool for frontline work. If you would like to learn more
+            about CommCare’s impact on frontline programs, visit our <a href="{{ evidence_base_tool }}">evidence
+            base</a> here.  Read below to learn about some of the exciting
+            studies our partners are leading across the world.
+          {% endblocktrans %}
+        </p>
+      </div>
+      <div class="content-width-large carousel carousel-fade-inactive carousel-numbered carousel-features">
+        <div class="carousel-container">
+          <div class="spinner spinner-large"></div>
+          <div class="carousel-slider">
+            {% include "sections/commcare/research/evidence/empower.html" %}
+            {% include "sections/commcare/research/evidence/opportunity.html" %}
+            {% include "sections/commcare/research/evidence/studies.html" %}
+            {% include "sections/commcare/research/evidence/large_scale.html" %}
+          </div>{# .carousel-slider #}
+        </div>{# .carousel-container #}
+      </div>{# .carousel #}
     </div>
-    <div class="grid grid-2-at-medium grid-1-at-small">
-      <div class="column" id="case-study">
-        <div class="intro-image">
-          <div class="case-study-image white-lazy-bg"
-               data-lazybg="true"></div>
-        </div>
-      </div> {# .column #}
-      <div class="column pad-top-base">
-        <p>
-          {% blocktrans %}
-            Researchers around the world use CommCare to bring efficiency,
-            visibility, and scalability to their field-based studies. For
-            instance, in 2016, The Harvard T.H. Chan School of Public Health
-            used CommCare to study the causal effect of a FIGO intervention
-            on the uptake and continued use of postpartum IUDs (PPIUDs) by
-            recent mothers and the effect on their subsequent pregnancy
-            status and births.
-          {% endblocktrans %}
-        </p>
-        <p>
-          {% blocktrans %}
-            Learn more about some of our featured research projects along
-            with advice from our research partners.
-          {% endblocktrans %}
-        </p>
-        <a class="arrow {% click_body 'video-learn' %}"
-            href="{% url 'programmatic_research' %}">
-          {% blocktrans %}
-            Learn more
-          {% endblocktrans %}
-        </a>
-      </div>{# .column #}
-    </div>      
   </div>
 </section>
+

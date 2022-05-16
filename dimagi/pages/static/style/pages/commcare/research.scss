@@ -41,9 +41,8 @@
     small: 250px,
     medium: 300px,
   );
-  @include make-bg(evaluations, '../../../pages/commcare/research/projects/evaluations', $_base-height, $_height-by-size);
-  @include make-bg(studies, '../../../pages/commcare/research/projects/studies', $_base-height, $_height-by-size);
-  @include make-bg(intervention, '../../../pages/commcare/research/projects/intervention', $_base-height, $_height-by-size);
+  @include make-bg(studies, '../../../pages/commcare/research/study', $_base-height, $_height-by-size);
+  @include make-bg(intervention, '../../../pages/commcare/research/ucla', $_base-height, $_height-by-size);
 }
 
 #case-study {
@@ -57,17 +56,50 @@
   @include make-bg(case-study-image, '../../../pages/commcare/research/case_study/hero', $_base-height, $_height-by-size);
 }
 
-.evaluations {
+ul.integration {
+  li {
+    margin-bottom: 10px;
+    &:before {
+      // Adds white color to the checklist
+      color: $color-white;
+    }
+  }
+}
+
+#integration {
+  $_base-height: 190px;
+  $_height-by-size: (
+    small: 280px,
+    medium: 280px,
+    large: 280px,
+    extra-large: 320px,
+  );
+  @include make-bg(integrate, '../../../pages/commcare/ict4d/comprehensive-spectrum/integrate', $_base-height, $_height-by-size, '.png');
+}
+
+.empower {
+  @include background-cover('../../../pages/commcare/research/study.jpg');
+  height: 250px;
+  width: 200px;
+  margin-top: 0px !important;
+}
+
+.opportunity {
+  @include background-cover('../../../pages/commcare/research/ear.jpg');
+  height: 240px;
   width: 200px;
   margin-top: 0px !important;
 }
 
 .studies {
+  @include background-cover('../../../pages/commcare/research/uganda.jpg');
+  height: 240px;
   width: 200px;
   margin-top: 0px !important;
 }
-
-.intervention {
+.large-scale {
+  @include background-cover('../../../pages/commcare/research/ucla.jpg');
+  height: 260px;
   width: 200px;
   margin-top: 0px !important;
 }
@@ -86,4 +118,58 @@ $_max-mobile: $width-desktop - 1px;
     width: auto !important;
     margin-top: 0px !important;
   }
+}
+
+.response {
+  $_base-height: 150px;
+  $_height-by-size: (
+    small: 210px,
+    medium: 310px,
+    large: 200px,
+    extra-large: 230px,
+  );
+  @include make-bg(survey, '../../../pages/commcare/ict4d/survey/survey', $_base-height, $_height-by-size);
+  @include make-bg(no-code, '../../../pages/commcare/ict4d/no-code/nocode', $_base-height, $_height-by-size);
+}
+
+.report {
+  $_base-height: 221px;
+  $_height-by-size: (
+    small: 210px,
+    medium: 223px,
+    large: 290px,
+    extra-large: 328px,
+  );
+  @include make-bg(report-ready, '../../../pages/commcare/ict4d/enforce/hero', $_base-height, $_height-by-size);
+}
+
+.programs .image.testimonial-1{
+  @include background-cover('../../../pages/commcare/research/study.jpg');
+  height: 200px;
+  background-size: contain;
+}
+.programs .image.testimonial-2{
+  @include background-cover('../../../pages/commcare/research/ear.jpg');
+  height: 200px;
+  background-size: contain;
+}
+.programs .image.testimonial-3{
+  @include background-cover('../../../pages/commcare/research/uganda.jpg');
+  height: 200px;
+  background-size: contain;
+}
+.programs .image.testimonial-4{
+  @include background-cover('../../../pages/commcare/research/ucla.jpg');
+  height: 200px;
+  background-size: contain;
+}
+.support {
+  $_base-height: 195px;
+  $_height-by-size: (
+    small: 270px,
+    medium: 376px,
+    large: 316px,
+    extra-large: 316px,
+  );
+  @include make-bg(services, '../../../pages/commcare/ict4d/support/services', $_base-height, $_height-by-size);
 }

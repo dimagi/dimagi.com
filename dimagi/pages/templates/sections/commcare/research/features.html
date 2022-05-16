@@ -1,8 +1,36 @@
 {% load i18n %}
 {% load dimagidotcom %}
 
-<section class="research-features align-center" id="key-features">
-  {% include "sections/commcare/research/features/collect.html" %}
-  {% include "sections/commcare/research/features/protocol.html" %}
-  {% include "sections/commcare/research/features/secure.html" %}
+<section class="research-features align-center border-top pad-bottom-line"
+         id="research-features">
+  <div class="content pad-bottom-medium pad-top-small">
+    <div class="content-width-large pad-bottom-small">
+      <h2 class="blue gap-top-line">
+        {% blocktrans %}
+          Work Efficiently with Data You Can Trust
+        {% endblocktrans %}
+      </h2>
+      <p class="lead-text">
+        {% blocktrans %}
+          Build powerful mobile apps that empower your frontline<br class="hide-until-medium" />
+          teams to capture accurate data or build impactful interventions.
+        {% endblocktrans %}
+      </p>
+    </div>{# .content-width-large #}
+  
+    <div class="content-width-large off-grid white-lazy-bg"
+         data-lazybg="true">
+      <div class="wistia-container">
+        {% include "partials/wistia_embed_autoplay.html" with wistia_id='3p3get3okj' %}
+      </div>{# .wistia-container #}
+    </div>{# .off-grid #}
+
+    <div class="content-width-medium pad-top-small">
+      <p class="button">
+        {% trans 'Watch a demo' as video_text %}
+        {% include "partials/wistia_popover.html" with wistia_id='3p3get3okj' text=video_text white_class='white' %}
+      </p>
+    </div>{# .content-width-medium #}
+
+  </div>{# .content #}
 </section>
