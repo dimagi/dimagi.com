@@ -197,7 +197,30 @@
     height: 80px;
     width: 80px;
   }
-
+.people-buddha_thakuri {
+  @include background-cover('../../../pages/webinar/authors/buddha_thakuri.jpg');
+  height: 80px;
+  width: 80px;
+  border-radius: 50px;
+}
+.people-daniela_sarzosa {
+  @include background-cover('../../../pages/webinar/authors/daniela_sarzosa.jpg');
+  height: 80px;
+  width: 80px;
+  border-radius: 50px;
+}
+.people-rajeev_dhungel {
+  @include background-cover('../../../pages/webinar/authors/rajeev_dhungel.jpg');
+  height: 80px;
+  width: 80px;
+  border-radius: 50px;
+}
+.people-raneem_safi {
+  @include background-cover('../../../pages/webinar/authors/raneem_safi.jpg');
+  height: 80px;
+  width: 80px;
+  border-radius: 50px;
+}
 .goal {
   @include background-cover('../../../pages/webinar/partners/goal.jpg');
   @include webinar-logo-resolution;
