@@ -39,24 +39,21 @@
           {% endblocktrans %}
         </h1>
 
-        <p class="content-width-medium">
+        <p class="content-width-medium pad-top-base">
           {% blocktrans %}
             Manage vaccine delivery with an application on CommCare
           {% endblocktrans %}
         </p>
 
-        <div class="grid-2 content-width-medium">
-          <p class="align-center pad-top-small">
-            <a href="#global-services-form"
-              class="button inverse alt {% click_hero 'demo' %}">
-              {% blocktrans %}
-                Watch a demo
-              {% endblocktrans %}
-            </a>
+        <div class="copy grid-2 content-width-medium pad-top-small">
+          <p class="button cta inverted alt {% click_hero 'contact' %} vd-demo-button">
+            {% trans 'Watch a demo' as video_text %}
+            {% click_hero 'video' as video_click_class %}
+            {% include "partials/wistia_popover.html" with wistia_id='yonc594beb' show_play=True text=video_text click_class=video_click_class %}
           </p>
-          <p class="align-center pad-top-small">
-            <a href="#global-services-form"
-              class="link inverse alt {% click_hero 'demo' %}">
+          <p class="align-center pad-top-small learn-btn">
+            <a href="{% url 'commcare' %}"
+              class="arrow {% click_hero 'demo' %}">
               {% blocktrans %}
                 Learn more about CommCare
               {% endblocktrans %}
@@ -74,9 +71,11 @@
     {% include "sections/commcare/vaccine-delivery/sub_nav.html" %}
     {% include "sections/commcare/vaccine-delivery/intro.html" %}
     {% include "sections/commcare/vaccine-delivery/approach.html" %}
-    {% include "sections/commcare/vaccine-delivery/demo.html" %}
-    {% include "sections/commcare/vaccine-delivery/ecosystem.html" %}
-    {% include "sections/commcare/vaccine-delivery/collab.html" %}
+    {% include "sections/commcare/vaccine-delivery/features.html" %}
+    {% include "sections/commcare/vaccine-delivery/solution_action.html" %}
+    {% include "sections/commcare/vaccine-delivery/success.html" %}
+    {% include "sections/commcare/vaccine-delivery/read_more.html" %}
+    {% include "sections/commcare/vaccine-delivery/build.html" %}
     {% include "sections/commcare/vaccine-delivery/covid-response.html" %}
   </section>
 {% endblock %}
