@@ -1,0 +1,146 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% url 'commcare_integration' as url %}
+
+<section class="advisory border-top blue-theme"
+         id="advisory">
+  <div class="content pad-vert-medium">
+    <h2 class="content-width-large blue gap-top-line align-center">
+      {% blocktrans %}
+        Build Customizable Frontline Solutions for Any Team
+      {% endblocktrans %}
+    </h2>
+    <p class="content-width-large lead-text pad-bottom-small align-center">
+      {% blocktrans %}
+        CommCare allows you to build custom solutions without compromising 
+        on the unique needs of your team. <br class="hide-until-medium" />
+        Whether you’re evaluating a program or supporting frontline 
+        workers, CommCare can help.
+      {% endblocktrans %}
+    </p>
+
+    <div class="grid grid-3-at-large grid-1-at-medium grid-row-equal-heights grid-col-space-small">
+      <div class="column">
+        <div class="tools-cards border-rounded-large column border-all align-center pad-horz-small-at-medium pad-top-small white-bg pad-bottom-small">
+          <div class="theme-icon gap-bottom-line align-center">
+            {% include 'svg/commcare/icon/monitor_teams.html' %}
+          </div>
+          <h5 class="theme-color gap-bottom-line">
+            {% blocktrans %}
+              Collect data offline on web or app
+            {% endblocktrans %}
+          </h5>
+          <p class="body-color font-weight-light">
+            {% blocktrans %}
+              Commcare has proven capabilities at scale as a best-in-class frontline
+              data collection and service delivery tool. Case management allows
+              tracking data over time.
+            {% endblocktrans %}
+          </p>
+        </div>{# .column #}
+      </div>
+      <div class="column">
+        <div class="tools-cards border-rounded-large column border-all align-center pad-horz-small-at-medium pad-top-small white-bg pad-bottom-small">
+          <div class="theme-icon gap-bottom-line align-center">
+            {% include 'svg/commcare/icon/monitor_teams.html' %}
+          </div>
+          <h5 class="theme-color gap-bottom-line">
+            {% blocktrans %}
+              Provide job aid to Frontline Workers
+            {% endblocktrans %}
+          </h5>
+          <p class="body-color font-weight-light">
+            {% blocktrans %}
+              Intelligent form design empowers frontline health workers with 
+              guidance and important prompts. Supervisor dashboards and case 
+              management capabilities included.
+            {% endblocktrans %}
+          </p>
+        </div>{# .column #}
+      </div>
+      <div class="column">
+        <div class="tools-cards border-rounded-large column border-all align-center pad-horz-small-at-medium pad-top-small white-bg pad-bottom-small">
+          <div class="theme-icon gap-bottom-line align-center">
+            {% include 'svg/commcare/icon/monitor_teams.html' %}
+          </div>
+          <h5 class="theme-color gap-bottom-line">
+            {% blocktrans %}
+              Customize and scale with ease
+            {% endblocktrans %}
+          </h5>
+          <p class="body-color font-weight-light">
+            {% blocktrans %}
+              It is possible to start small and scale, both in complexity and reach. Updates can be pushed to apps with immediate effect.
+            {% endblocktrans %}
+          </p>
+        </div>{# .column #}
+      </div>
+      <div class="column">
+        <div class="tools-cards border-rounded-large column border-all align-center pad-horz-small-at-medium pad-top-small white-bg pad-bottom-small">
+          <div class="theme-icon gap-bottom-line align-center">
+            {% include 'svg/commcare/icon/monitor_teams.html' %}
+          </div>
+          <h5 class="theme-color gap-bottom-line">
+            {% blocktrans %}
+              Stay secure and compliant
+            {% endblocktrans %}
+          </h5>
+          <p class="body-color font-weight-light">
+            {% blocktrans %}
+              SOC 2 Level 2 certified cloud at an enterprise-grade ISO
+              27001-compliant data center (AWS). GDPR and HIPAA compliant.
+            {% endblocktrans %}
+          </p>
+        </div>{# .column #}
+      </div>
+      <div class="column">
+        <div class="tools-cards border-rounded-large column border-all align-center pad-horz-small-at-medium pad-top-small white-bg pad-bottom-small">
+          <div class="theme-icon gap-bottom-line align-center">
+            {% include 'svg/commcare/icon/monitor_teams.html' %}
+          </div>
+          <h5 class="theme-color gap-bottom-line">
+            {% blocktrans %}
+              Maximize software interoperability
+            {% endblocktrans %}
+          </h5>
+          <p class="body-color font-weight-light">
+            {% blocktrans %}
+              CommCare has a rich <a href="{{ url }}" target="_blank">ecosystem of integrations</a> to ensure interoperability
+              with third party data tools and reporting options. Implementation support
+              and documentation available.
+            {% endblocktrans %}
+          </p>
+        </div>{# .column #}
+      </div>
+      <div class="column">
+        <div class="tools-cards border-rounded-large column border-all align-center pad-horz-small-at-medium pad-top-small white-bg pad-bottom-small">
+          <div class="theme-icon gap-bottom-line align-center">
+            {% include 'svg/commcare/icon/monitor_teams.html' %}
+          </div>
+          <h5 class="theme-color gap-bottom-line">
+            {% blocktrans %}
+              Build with confidence and support
+            {% endblocktrans %}
+          </h5>
+          <p class="body-color font-weight-light">
+            {% blocktrans %}
+              CommCare offers product training, implementation guidance, and
+              rich documentation. Template Apps, onboarding packages, and
+              expert support available.
+            {% endblocktrans %}
+          </p>
+        </div>{# .column #}
+      </div>
+    </div>{# .grid-3-at-medium #}
+    <p class="align-center pad-top-small learn-btn">
+      <a href="{% url 'commcare' %}"
+        class="blue arrow {% click_hero 'demo' %}">
+        {% blocktrans %}
+          Learn more about CommCare
+        {% endblocktrans %}
+      </a>
+    </p> 
+  </div>{# .content #}
+</section>
+
