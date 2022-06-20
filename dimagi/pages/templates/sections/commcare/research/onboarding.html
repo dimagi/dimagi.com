@@ -5,27 +5,11 @@
   <div class="content pad-vert-medium">
     <div class="grid grid-2-at-medium grid-1-at-small white">
       <div class="column pad-top-base pad-top-medium-at-extra-large align-left-at-medium align-center">
-        <h2 class="pad-top-base white">
+        <h2 class="pad-top-small white">
           {% blocktrans %}
-            CommCare integrates into your organization’s data ecosystem to enable:   
+            Powering a range of research, CommCare advances global development research  
           {% endblocktrans %}
         </h2>
-        <ul class="integration check-list">
-          <li>
-            <p>
-              {% blocktrans %}
-                Self-service data workflows for day-to-day data needs
-              {% endblocktrans %}
-            </p>
-          </li>
-          <li>
-            <p>
-              {% blocktrans %}
-                Custom data pipelines for more complex or ambitious projects
-              {% endblocktrans %}
-            </p>
-          </li>
-        </ul>
         <p class="pad-top-small">
           <a class="button white-bg blue uppercase {% click_body 'commcare_integration' %}"
              href="{% url 'commcare_integration' %}">
