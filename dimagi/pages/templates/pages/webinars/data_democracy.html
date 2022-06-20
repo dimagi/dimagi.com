@@ -3,10 +3,8 @@
 {% load dimagidotcom %}
 
 {% block title %}{% blocktrans %}
-  Webinars
+  How to Build Data Democracy With an Analytics Ecosystem
 {% endblocktrans %}{% endblock %}
-
-{% block body_class %}case-studies-page tucked-hero{% endblock %}
 
 {% block stylesheets %}
   {% compress css %}
@@ -22,10 +20,11 @@
 
 {% block content %}
   <section class="case-studies-container">
-    {% include 'sections/webinar/intro.html' %}
-    {% include 'sections/webinar/contact.html' %}
-    {% include 'sections/webinar/other_webinars.html' %}
-    {% include 'sections/webinar/breif_webinars.html' %}
+    {% include 'sections/webinar/data_democracy/intro.html' %}
+    {% include 'sections/webinar/data_democracy/speakers.html' %}
+    {% include 'sections/webinar/data_democracy/featuring.html' %}
+    {% include 'sections/webinar/data_democracy/social-link.html' %}
+    {% include 'sections/webinar/data_democracy/contact.html' %}
   </section>
 {% endblock %}
 
@@ -43,3 +42,4 @@
     });
   </script>
 {% endblock %}
+

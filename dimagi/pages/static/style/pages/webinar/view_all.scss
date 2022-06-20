@@ -141,7 +141,15 @@
     );
   @include make-bg(image, '../../../pages/webinar/adapt/adapt', $_base-height, $_height-by-size);
 }
-
+.webinar-home-inter-video {
+    $_base-height: 186px;
+    $_height-by-size: (small: 190px,
+        medium: 246px,
+        large: 246px,
+        extra-large: 246px,
+      );
+      @include make-bg(image, '../../../pages/webinar/intro/intro', $_base-height, $_height-by-size);
+  }
 .webinar-home-new-function-video {
   $_base-height: 186px;
   $_height-by-size: (small: 190px,

@@ -1,0 +1,66 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="webinar align-center pad-bottom-line blue-theme"
+         id="webinar">
+  <div class="content-width-large pad-bottom-line">
+    <div class="content-width-large pad-bottom-small">
+      <h2 class="gap-top-medium">
+        {% blocktrans %}
+          How to Build Data Democracy With an Analytics Ecosystem
+        {% endblocktrans %}
+      </h2>
+    </div>{# .content-width-large #}
+  
+    <div class=" content-width-large off-grid white-lazy-bg"
+         data-lazybg="true">
+      <div class="wistia-container image webinar-data-democracy-video">
+        {% include "partials/wistia_popover.html" with wistia_id='uahen8i6un' play_icon_medium=True show_image=True %}
+      </div>{# .wistia-container #}
+      <h6 class="content-width-large blue align-left pad-top-small pad-left-line">
+        {% blocktrans %}
+          March 31, 2022
+        {% endblocktrans %}
+      </h6>
+    </div>{# .off-grid #}
+    <div class="grid-4-at-large">
+      <div class="column column-width-3-at-large pad-top-small align-left pad-left-small">
+        <div class="border-right-at-medium">
+          <h6 class="slate">
+            {% blocktrans %}
+              About
+            {% endblocktrans %}
+          </h6>
+          <p class="pad-right-line">
+            {% blocktrans %}
+              Too often, data collection programs yield valuable data
+              to only a few stakeholders at the HQ level. With Data
+              Democracy, more people gain access to actionable insights, enabling
+              your organization to unlock more value from your data. Hear from
+              our partners that have developed better reporting and analytics
+              tools to democratize data in their own organizations.
+            {% endblocktrans %}
+          </p>
+        </div>
+      </div>{# .column #}
+  
+      <div class="column pad-top-small align-left">
+        <h6 class="slate">
+          {% blocktrans %}
+            Resources
+          {% endblocktrans %}
+        </h6>
+        <p>
+          <a href="https://sites.dimagi.com/commcare-early-access-program"
+             class="arrow blue read-more"
+             target="_blank">
+            {% blocktrans %}
+              Early Access Program
+            {% endblocktrans %}
+          </a>
+        </p>
+      </div>{# .column #}
+    </div>{# .grid-2 #}
+
+  </div>{# .content-width-large #}
+</section>
