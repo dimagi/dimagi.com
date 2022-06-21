@@ -302,3 +302,22 @@ $_width in $widths-by-size {
     }
   }
 }
+
+.tile {
+  background: $color-white;
+  display: block;
+  padding: $space-small;
+  padding-bottom: $space-small * 2;
+  position: relative;
+
+  &:not(.tile-no-link) {
+    .button {
+      bottom: $space-small;
+      left: $space-small;
+      min-width: 50% !important;
+      position: inherit !important;
+      padding: 10px;
+      text-align: center !important;
+    }
+  }
+}
