@@ -8,11 +8,17 @@
   @include make-bg(hero, '../../../pages/commcare/vaccine-delivery/hero');
 }
 
+.second-header {
+  font-weight: 300 !important; // scss-lint:disable ImportantRule
+  letter-spacing: 0px !important; // scss-lint:disable ImportantRule
+  text-transform: lowercase !important; // scss-lint:disable ImportantRule
+}
+
 @media (min-width: $width-desktop) {
   .commcare-vaccine-delivery .hero h1 {
     margin-left: 0;
     margin-right: 0;
-    max-width: 100% !important;
+    max-width: 100% !important; // scss-lint:disable ImportantRule
   }
 }
 
@@ -85,11 +91,17 @@
   @include background-cover('../../../pages/commcare/vaccine-delivery/features/details/vaccine.jpg');
   height: 250px;
 }
-.partners-action-crs .image {
-  @include background-cover('../../../pages/commcare/partners/video/crs.jpg');
-  height: 250px;
-  width: auto;
-}
+
+.partners-action-crs {
+    $_base-height: 180px;
+    $_height-by-size: (
+      small: 200px,
+      medium: 230px,
+      large: 230px,
+      extra-large: 250px,
+    );
+    @include make-bg(image, '../../../pages/commcare/vaccine-delivery/demo_video/video', $_base-height, $_height-by-size);
+  }
 .blockquote-custom {
   font-size: 18px;
   line-height: 1.6;
@@ -188,10 +200,10 @@
 }
 
 .part3 {
-  $_base-height: 500px;
+  $_base-height: 160px;
   $_height-by-size: (
-    small: 560px,
-    medium: 385px,
+    small: 160px,
+    medium: 250px,
     large: 320,
     extra-large: 320px,
   );
