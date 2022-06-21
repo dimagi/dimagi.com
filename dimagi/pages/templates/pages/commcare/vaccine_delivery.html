@@ -3,11 +3,13 @@
 {% load dimagidotcom %}
 
 {% block title %}{% blocktrans %}
-  CommCare for Vaccine Delivery
+  Vaccine delivery solutions for frontline health workers
 {% endblocktrans %}{% endblock %}
 
 {% block description %}{% blocktrans %}
-  CommCare for Equitable Vaccine Delivery
+  Dimagi’s Vaccine Solution equips organizations and governments with 
+  tools to deliver vaccines to communities through networks of 
+  frontline health workers.
 {% endblocktrans %}{% endblock %}
 
 {% block body_class %}commcare-vaccine-delivery tucked-hero{% endblock %}
@@ -39,11 +41,11 @@
           {% endblocktrans %}
         </h1>
 
-        <p class="content-width-medium pad-top-base">
+        <h2 class="second-header content-width-medium pad-top-base">
           {% blocktrans %}
             Manage vaccine delivery with an application on CommCare
           {% endblocktrans %}
-        </p>
+        </h2>
 
         <div class="copy grid-2 content-width-medium pad-top-small">
           <p class="button cta inverted alt {% click_hero 'contact' %} vd-demo-button">
@@ -79,3 +81,5 @@
     {% include "sections/commcare/vaccine-delivery/covid-response.html" %}
   </section>
 {% endblock %}
+
+{% block contact_form_id %}277eb03e-7196-4488-9967-c66221fe709c{% endblock %}
