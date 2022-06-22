@@ -35,6 +35,10 @@ def services(request):
     }
     return render(request, 'pages/services.html', context)
 
+def india(request):
+    return render(request, 'pages/india.html')
+
+
 
 def partners(request):
     _latest = get_json("blog/latest-partners")
