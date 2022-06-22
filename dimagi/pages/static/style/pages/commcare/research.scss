@@ -74,12 +74,12 @@ ul.integration {
     large: 280px,
     extra-large: 320px,
   );
-  @include make-bg(integrate, '../../../pages/commcare/ict4d/comprehensive-spectrum/integrate', $_base-height, $_height-by-size, '.png');
+  @include make-bg(integrate, '../../../pages/commcare/ict4d/comprehensive-spectrum/integration', $_base-height, $_height-by-size, '.png');
 }
 
 .empower {
   @include background-cover('../../../pages/commcare/research/study.jpg');
-  height: 250px;
+  height: 275px;
   width: 200px;
   margin-top: 0px !important;
 }
