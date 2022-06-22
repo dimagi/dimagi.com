@@ -1,0 +1,69 @@
+@import 'app/mixins/background';
+@import 'app/variables/colors';
+@import 'app/variables/sizes';
+@import 'app/variables/type';
+
+.india-page {
+  @include make-bg(hero, '../../pages/services/hero');
+}
+
+.programs .image.testimonial2 {
+  @include background-cover('../../pages/services/case_studies/dsti.jpg');
+  height: 200px;
+  background-size: contain;
+}
+
+.programs .image.testimonial1 {
+  @include background-cover('../../pages/services/case_studies/abt.jpg');
+  height: 200px;
+  background-size: contain;
+}
+
+.overview .image.testimonial1 {
+  @include background-cover('../../pages/services/overview1.jpg');
+
+}
+
+.programs .image.testimonial3 {
+  @include background-cover('../../pages/services/case_studies/renew.jpg');
+  height: 200px;
+  background-size: contain;
+}
+
+.programs .image.testimonial1,
+.programs .image.testimonial2,
+.programs .image.testimonial3 {
+ background-position: initial;
+}
+
+.programs .image.crs {
+  width: 309px;
+}
+
+.team .image.teampic1 {
+  @include background-cover('../../pages/services/team/teampic1.jpg');
+}
+
+.team .image.teampic2 {
+  @include background-cover('../../pages/services/team/teampic2.jpg');
+}
+
+.team .image.teampic3 {
+  @include background-cover('../../pages/services/team/teampic3.jpg');
+}
+
+.team .image.teampic4 {
+  @include background-cover('../../pages/services/team/teampic4.jpg');
+}
+
+#case-study {
+    $_base-height: 190px;
+    $_height-by-size: (
+      small: 250px,
+      medium: 250px,
+      large: 250px,
+      extra-large: 256px,
+    );
+    @include make-bg(case-study-image, '../../pages/services/intro/hero', $_base-height, $_height-by-size);
+}
+
