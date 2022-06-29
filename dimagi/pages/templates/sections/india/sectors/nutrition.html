@@ -1,0 +1,32 @@
+{% load dimagidotcom %}
+{% load i18n %}
+
+<div class="column blue-theme">
+  <a class="tile {{ click_class }} accent-gray-bg"
+     href="{% url 'sector' 'nutrition' %}">
+
+    <div class="theme-icon">
+      {% include 'svg/sectors/healthcare/nutrition.html' %}
+    </div>
+
+    <h4 class="blue pad-top-line">
+      {% blocktrans %}
+        Nutrition
+      {% endblocktrans %}
+    </h4>
+
+    <p class="body-color">
+      {% blocktrans %}
+        Support and track nutrition program performance
+        with mobile data collection.
+      {% endblocktrans %}
+    </p>
+
+    <p class="link pad-top-base">
+      {% blocktrans %}
+        Learn More
+      {% endblocktrans %}
+    </p>
+
+  </a>
+</div>{# .column #}
