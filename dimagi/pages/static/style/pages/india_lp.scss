@@ -14,7 +14,23 @@
 }
 
 .programs .image.testimonial1 {
-  @include background-cover('../../pages/services/case_studies/abt.jpg');
+  @include background-cover('../../pages/services/case_studies/dsti.jpg');
+  height: 200px;
+  background-size: contain;
+}
+
+.programs .image.award1 {
+  @include background-cover('../../pages/india/awards/phc.jpg');
+  height: 200px;
+  background-size: contain;
+}
+.programs .image.award2 {
+  @include background-cover('../../pages/india/awards/lifestyle.jpg');
+  height: 200px;
+  background-size: contain;
+}
+.programs .image.award3 {
+  @include background-cover('../../pages/india/awards/innovation.jpg');
   height: 200px;
   background-size: contain;
 }
@@ -56,7 +72,7 @@
   @include background-cover('../../pages/services/team/teampic4.jpg');
 }
 
-#case-study {
+#intro-india {
     $_base-height: 190px;
     $_height-by-size: (
       small: 250px,
@@ -64,6 +80,9 @@
       large: 250px,
       extra-large: 256px,
     );
-    @include make-bg(case-study-image, '../../pages/services/intro/hero', $_base-height, $_height-by-size);
+    @include make-bg(intro-image, '../../pages/india/intro/intro', $_base-height, $_height-by-size);
 }
 
+.tile {
+  padding: 30px 10px 30px 10px;
+}
