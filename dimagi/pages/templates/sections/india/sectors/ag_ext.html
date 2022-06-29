@@ -1,0 +1,32 @@
+{% load dimagidotcom %}
+{% load i18n %}
+
+<div class="column blue-theme">
+  <a class="tile {{ click_class }} accent-gray-bg"
+     href="{% url 'sector' 'agricultural-extension-programs' %}">
+
+    <div class="theme-icon">
+      {% include 'svg/sectors/agriculture/agricultural_extension_programs.html' %}
+    </div>
+
+    <h4 class="blue pad-top-line">
+      {% blocktrans %}
+        Agricultural Extension
+      {% endblocktrans %}
+    </h4>
+
+    <p class="body-color">
+      {% blocktrans %}
+        Support and improve farmer training programs
+        with mobile data collection.
+      {% endblocktrans %}
+    </p>
+
+    <p class="link pad-top-base">
+      {% blocktrans %}
+        Learn More
+      {% endblocktrans %}
+    </p>
+
+  </a>
+</div>{# .column #}
