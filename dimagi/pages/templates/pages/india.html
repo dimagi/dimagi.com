@@ -15,7 +15,7 @@
 
 {% block stylesheets %}
   {% compress css %}
-    <link href="{% sass_src 'style/pages/india.scss' %}" rel="stylesheet" media="screen" type="text/css" />
+    <link href="{% sass_src 'style/pages/india_lp.scss' %}" rel="stylesheet" media="screen" type="text/css" />
   {% endcompress %}
 {% endblock %}
 
@@ -40,8 +40,8 @@
           {% endblocktrans %}
         </div>{# .headline #}
   
-        <p class="align-center pad-top-small">
-          <a href="#global-services-form"
+        <p class="align-center pad-top-medium">
+          <a href="#global-india-form"
              class="button inverse alt {% click_hero 'demo' %}">
             {% blocktrans %}
               Contact Us
@@ -56,11 +56,11 @@
 
 {% block content %}
   <section class="services-container">
-    {% include "sections/services/intro.html" %}
-    {% include "sections/services/health_care.html" %}
-    {% include "sections/services/case_studies.html" %}
-    {% include "sections/services/partners.html" %}
-    {% include "sections/services/testimonials.html" %}
+    {% include "sections/india/intro.html" %}
+    {% include "sections/india/sectors.html" %}
+    {% include "sections/india/partners.html" %}
+    {% include "sections/india/impact.html" %}
+    {% include "sections/india/awards.html" %}
   </section>
 {% endblock %}
 
@@ -68,7 +68,7 @@
   <div class="modal"
      data-dismissible="true"
      data-size="medium"
-     id="global-services-form">
+     id="global-india-form">
     <div class="modal-scroll">
       <div class="modal-wrapper">
         <a href="#" class="modal-close-button"></a>
@@ -78,7 +78,7 @@
               Contact Our Solutions Delivery Team
             {% endblocktrans %}
           </h3>
-          <section id="global-services-form-content"></section>
+          <section id="india-form-content"></section>
         </div>{# .content #}
       </div>{# .modal-wrapper #}
     </div>{# .modal-scroll #}
@@ -93,8 +93,8 @@
   <script>
     hbspt.forms.create({
       portalId: "503070",
-      formId: "afb4d5a0-826f-4a56-8c21-552d4b6dafa3",
-      target: "#global-services-form-content",
+      formId: "e7eceb51-d1c8-4ca4-bd43-fb7511578f53",
+      target: "#india-form-content",
       css: ""
     });
   </script>

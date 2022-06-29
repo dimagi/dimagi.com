@@ -1,0 +1,26 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="objectives white-bg border-top"
+         id="objectives">
+  <div class="content pad-top-medium pad-bottom-small align-center">
+
+    <h2 class="body-color gap-bottom-small">
+      {% blocktrans %}
+        Sectors We Work In
+      {% endblocktrans %}
+    </h2>
+
+    <div class="grid grid-4-at-extra-large grid-2-at-medium grid-2-at-small grid-row-space-small grid-row-equal-heights">
+      {% include "sections/india/sectors/mch.html" %}
+      {% include "sections/india/sectors/nutrition.html" %}
+      {% include "sections/india/sectors/ag_ext.html" %}
+      {% include "sections/india/sectors/reproductive_health.html" %}
+      {% include "sections/india/sectors/vaccine.html" %}
+      {% include "sections/india/sectors/covid_response.html" %}
+      {% include "sections/india/sectors/education.html" %}
+      {% include "sections/india/sectors/finance.html" %}
+    </div>{# .grid-4-at-medium #}
+
+  </div>{# .content #}
+</section>
