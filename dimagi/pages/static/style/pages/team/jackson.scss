@@ -1,0 +1,52 @@
+@import 'app/mixins/background';
+@import 'app/variables/colors';
+@import 'app/variables/sizes';
+@import 'app/variables/type';
+
+.jackson-page {
+  @include make-bg(hero, '../../../pages/about/hero');
+}
+#intro-profile {
+  $_base-height: 190px;
+  $_height-by-size: (
+    small: 250px,
+    medium: 250px,
+    large: 250px,
+    extra-large: 256px,
+  );
+  @include make-bg(intro-profile-image, '../../../pages/team/jackson/intro/intro', $_base-height, $_height-by-size);
+}
+.intro-profile-image {
+  width: 260px;
+}
+
+.news-images .image.blog1 {
+  @include background-cover('../../../pages/sectors/agricultural-finance/news/blog1.jpg');
+  height: 200px;
+  background-size: contain;
+  background-position: left;
+}
+
+.news-images .image.blog2 {
+  @include background-cover('../../../pages/sectors/agricultural-finance/news/blog2.jpg');
+  height: 200px;
+  background-size: contain;
+  background-position: left;
+}
+
+.news-images .image.blog3 {
+  @include background-cover('../../../pages/sectors/agricultural-finance/news/blog3.jpg');
+  height: 200px;
+  background-size: contain;
+  background-position: left;
+}
+
+
+@media (min-width: $width-desktop) {
+  .jackson-page .hero h1,
+  .team-page .hero h1 {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 55%;
+  }
+}
