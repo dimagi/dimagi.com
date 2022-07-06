@@ -52,3 +52,7 @@ def team_member(request, office, slug):
         'employee': member,
     }
     return render(request, 'pages/team/member.html', context)
+
+def jackson_profile(request):
+    return render(request, 'pages/team/jackson_profile.html')
+
