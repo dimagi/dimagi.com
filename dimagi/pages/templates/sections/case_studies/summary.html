@@ -34,6 +34,19 @@
           {% for summary in study.summary %}
             <p>{{ summary }}</p>
           {% endfor %}
+          <p>
+            {{ study.summary_list_description }}
+          </p>
+          {% if study.summary_list %}
+            <ul class="check-list body-color">
+              {% for list in study.summary_list %}
+                <li>{{ list }}</li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+          {% for item in study.summary_after_list %}
+            <p>{{ item }}</p>
+          {% endfor %}
         </div>
 
         <p class="gap-bottom-line">
