@@ -152,32 +152,7 @@
     {% endif %}
   </head>
   <body class="{% block body_class %}{% endblock %}">
-    {% if request.is_amp %}
-      {% if meta.analytics.GTM %}
-        <!-- Google Tag Manager -->
-        <amp-analytics type="googleanalytics" id="analytics1">
-          <script type="application/json">
-            {
-            "vars": {
-                "account": "{{ meta.analytics.GTM }}"
-              },
-              "triggers": {
-                "trackPageview": {
-                  "on": "visible",
-                  "request": "pageview"
-                }
-              }
-            }
-          </script>
-        </amp-analytics>
-        <!-- End Google Tag Manager -->
-      {% endif %}
-    {% endif %}
     {% if meta.analytics.GTM %}
-      <!-- Google Tag Manager (noscript) -->
-      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ meta.analytics.GTM }}"
-      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-      <!-- End Google Tag Manager (noscript) -->
       <!-- Global site tag (gtag.js) - Google Ads -->
       <script async src="https://www.googletagmanager.com/gtag/js?id=AW-10845316652"></script>
       <script>
