@@ -23,6 +23,7 @@ from dimagi.data.case_studies.mhealth import (
     care_motech,
     technoserve,
     abt_associates_vectorlink,
+    madagascar,
 )
 
 
@@ -51,4 +52,5 @@ studies = (
     care_motech,
     technoserve,
     abt_associates_vectorlink,
+    madagascar,
 )
