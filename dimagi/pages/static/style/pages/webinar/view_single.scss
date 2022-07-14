@@ -17,7 +17,7 @@
   .hs-richtext {
     color: $color-white;
     a {
-      color: $color-blue-light;
+      color: $color-white !important; // scss-lint:disable ImportantRule
 
       &:hover {
         color: $color-white;
@@ -256,7 +256,7 @@
       text-align: center;
   
       a {
-        color: $color-blue-light;
+        color: $color-white !important; // scss-lint:disable ImportantRule
   
         &:hover {
           color: $color-white;
@@ -265,8 +265,8 @@
     }
   
     .hs-button {
-      color: $color-blue !important;
-      background-color: $color-white !important;
+      color: $color-blue !important; // scss-lint:disable ImportantRule
+      background-color: $color-white !important; // scss-lint:disable ImportantRule
     }
   
     .submitted-message {
