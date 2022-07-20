@@ -4,7 +4,7 @@
 @import 'app/variables/type';
 
 .india-page {
-  @include make-bg(hero, '../../pages/services/hero');
+  @include make-bg(hero, '../../pages/india/hero');
 }
 
 .programs .image.testimonial2 {
