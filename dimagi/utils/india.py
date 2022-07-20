@@ -2,47 +2,51 @@
 
 WEB = [
     [
-        "svg/partner/usaid.html",
-        "svg/partner/tdh.html",
+        "svg/partner/india/usaid.html",
+        "svg/partner/india/pathfinder.html",
     ],
     [
-        "svg/partner/services/bmgf.html",
+        "svg/partner/india/tdh.html",
+        "svg/partner/india/jnj.html",
+        "svg/partner/india/ipe.html",
     ],
     [
-        "svg/partner/tdh.html",
-        "svg/partner/usaid.html",
+        "svg/partner/india/crs.html",
+        "svg/partner/india/tdh.html",
     ],
     [
-        "svg/partner/crs.html",
-        "svg/partner/usaid.html",
+        "svg/partner/india/gates.html",
+        "svg/partner/india/usaid.html",
     ],
     [
-        "svg/partner/services/bmgf.html",
-        "svg/partner/usaid.html",
+        "svg/partner/india/ipe.html",
+        "svg/partner/india/jnj.html",
+        "svg/partner/india/crs.html",
     ],
     [
-        "svg/partner/crs.html",
-        "svg/partner/tdh.html",
+        "svg/partner/india/pathfinder.html",
+        "svg/partner/india/gates.html",
     ],
 ]
 
 
 MOBILE = [
     [
-        "svg/partner/usaid.html",
-        "svg/partner/tdh.html",
+        "svg/partner/india/usaid.html",
+        "svg/partner/india/pathfinder.html",
     ],
     [
-        "svg/partner/services/bmgf.html",
+        "svg/partner/india/tdh.html",
+        "svg/partner/india/jnj.html",
     ],
     [
-        "svg/partner/tdh.html",
-        "svg/partner/usaid.html",
+        "svg/partner/india/crs.html",
+        "svg/partner/india/usaid.html",
     ],
     [
-        "svg/partner/crs.html",
-        "svg/partner/usaid.html",
-    ], 
+        "svg/partner/india/gates.html",
+        "svg/partner/india/usaid.html",
+    ],
 ]
 
 
