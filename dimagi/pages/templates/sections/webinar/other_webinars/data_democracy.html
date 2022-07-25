@@ -1,0 +1,57 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="pad-vert-medium blue-theme white-bg">
+  <div class="content">
+    <div class="content-at-medium align-left pad-left-line pad-left-medium-at-extra-large">
+      <h3>
+        {% blocktrans %}
+          How to Build Data Democracy With an Analytics Ecosystem
+        {% endblocktrans %}
+      </h3>
+      <h6 class="blue pad-bottom-line">
+        {% blocktrans %}
+          March 31, 2022
+        {% endblocktrans %}
+      </h6>
+    </div>
+    <div class="grid-2-at-small">
+      <div class="column">
+        <div class="off-grid white-lazy-bg"
+           data-lazybg="true">
+        <div class="wistia-container image webinar-home-data-democracy-video">
+          {% include "partials/wistia_popover.html" with wistia_id='uahen8i6un' play_icon_medium=True show_image=True %}
+        </div>{# .wistia-container #}
+      </div>{# .off-grid #}
+      
+      </div>{# .column #}
+
+      <div class="column pad-top-none align-left pad-left-small">
+        <p>
+          {% blocktrans %}
+            Too often, data collection programs yield valuable data
+            to only a few stakeholders at the HQ level. With Data
+            Democracy, more people gain access to actionable insights, enabling
+            your organization to unlock more value from your data. Hear from
+            our partners that have developed better reporting and analytics
+            tools to democratize data in their own organizations.
+          {% endblocktrans %}
+        </p>
+        <div class="integration column display-flex pad-bottom-small">
+            {% include "svg/webinar/global.html" %}
+            <div class="pad-left-medium">
+              {% include "svg/webinar/world_vision_home.html" %}
+            </div>
+        </div>
+        <div class="align-left pad-top-base">
+          <a class="button"
+             href="{% url 'data_democracy' %}">
+            {% blocktrans %}
+              View Webinar
+            {% endblocktrans %}
+          </a>
+        </div>
+      </div>{# .column #}
+    </div>{# .grid-2 #}
+  </div>
+</section>{# .content #}

@@ -34,6 +34,16 @@
     color: $color-white;
   }
 }
+.webinar-frontline-video {
+    $_base-height: 186px;
+    $_height-by-size: (
+      small: 290px,
+      medium: 376px,
+      large: 360px,
+      extra-large: 360px,
+    );
+  @include make-bg(image, '../../../pages/webinar/frontline/intro', $_base-height, $_height-by-size);
+}
 .webinar-data-democracy-video {
     $_base-height: 186px;
     $_height-by-size: (
@@ -225,6 +235,18 @@
   width: 80px;
   border-radius: 50px;
 }
+.people-amanda_gupta {
+  @include background-cover('../../../pages/webinar/authors/amanda_gupta.jpg');
+  height: 80px;
+  width: 80px;
+  border-radius: 50px;
+}
+.people-elodie_lebas {
+  @include background-cover('../../../pages/webinar/authors/elodie_lebas.jpg');
+  height: 80px;
+  width: 80px;
+  border-radius: 50px;
+}
 .people-raneem_safi {
   @include background-cover('../../../pages/webinar/authors/raneem_safi.jpg');
   height: 80px;
@@ -338,6 +360,16 @@
       );
       @include make-bg(image, '../../../pages/webinar/interoperability/intro', $_base-height, $_height-by-size);
   }
+  .webinar-home-data-democracy-video {
+    $_base-height: 186px;
+    $_height-by-size: (
+      small: 190px,
+      medium: 190px,
+      large: 190px,
+      extra-large: 190px,
+    );
+  @include make-bg(image, '../../../pages/webinar/intro/intro', $_base-height, $_height-by-size);
+}
   
   .webinar-home-optimize-video {
     $_base-height: 186px;

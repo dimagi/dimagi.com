@@ -1,0 +1,70 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="webinar align-center pad-bottom-line blue-theme"
+         id="webinar">
+  <div class="content-width-large pad-bottom-line">
+    <div class="content-width-large pad-bottom-small">
+      <h2 class="gap-top-medium">
+        {% blocktrans %}
+            From Studies to Practice: Building Digital
+            Solutions to Advance Frontline Research
+        {% endblocktrans %}
+      </h2>
+    </div>{# .content-width-large #}
+  
+    <div class=" content-width-large off-grid white-lazy-bg"
+         data-lazybg="true">
+      <div class="wistia-container image webinar-frontline-video">
+        {% include "partials/wistia_popover.html" with wistia_id='lwacafe3gy' play_icon_medium=True show_image=True %}
+      </div>{# .wistia-container #}
+      <h6 class="content-width-large blue align-left pad-top-small pad-left-line">
+        {% blocktrans %}
+          Published: June 23, 2022
+        {% endblocktrans %}
+      </h6>
+    </div>{# .off-grid #}
+    <div class="content grid-4-at-large">
+      <div class="column column-width-3-at-large pad-top-small align-left pad-left-small">
+        <div class="border-right-at-medium">
+          <h6 class="slate">
+            {% blocktrans %}
+              About
+            {% endblocktrans %}
+          </h6>
+          <p class="pad-right-line">
+            {% blocktrans %}
+              Rigorous research is indispensable for understanding and building
+              better solutions to global development challenges –– and so is the
+              translation of research from studies to programs at scale. How do
+              digital solutions accelerate the translation of frontline research?
+              What are common challenges associated with frontline research and
+              how can we overcome them? Learn from research practitioners with
+              University of California, San Francisco and Yale School of Public
+              Health and hear the official launch of the CommCare Grant for
+              Advancing Frontline Research.
+            {% endblocktrans %}
+          </p>
+        </div>
+      </div>{# .column #}
+  
+      <div class="column pad-top-small align-left">
+        <h6 class="slate">
+          {% blocktrans %}
+            Resources
+          {% endblocktrans %}
+        </h6>
+        <p>
+          <a href="{% url 'research' %}"
+             class="arrow blue read-more"
+             target="_blank">
+            {% blocktrans %}
+              CommCare Grant for Advancing Frontline Research
+            {% endblocktrans %}
+          </a>
+        </p>
+      </div>{# .column #}
+    </div>{# .grid-2 #}
+
+  </div>{# .content-width-large #}
+</section>
