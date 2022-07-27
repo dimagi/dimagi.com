@@ -7,7 +7,7 @@ from dimagi.pages.models.commcare import (
     Support,
 )
 
-EARLY_ACCESS_URL = "https://confluence.dimagi.com/display/commcarepublic/CommCare+Early+Access+Program"
+EARLY_ACCESS_URL = "https://sites.dimagi.com/commcare-early-access-program"
 
 
 GROUP = FeatureGroup(
