@@ -43,6 +43,11 @@
     ```
     cp dev.env .env
     ```
+    
+1. Initialize the database
+    ```
+    manage.py createdb
+    ```
 
 1. Run the server using
     ```
