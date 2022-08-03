@@ -1,0 +1,48 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="pad-top-small pad-bottom-large"
+         id="plan-for-development">
+  <div class="content align-center">
+    <h2 class="theme-color uppercase">
+      {% blocktrans %}
+        Recognition & Leadership
+      {% endblocktrans %}
+    </h2>
+    <div class="grid grid-flex-at-small grid-valign-middle pad-vert-line">
+        <div class="column no-shrink">
+          <div class="theme-icon epic-icon align-center align-left-at-small">
+            {% include "svg/about/profile/award.html" %}
+          </div>
+        </div>{# .column #}
+        <div class="column">
+          <h4 class="purple">
+            {% blocktrans %}
+               Repetition
+            {% endblocktrans %}
+          </h4>
+        </div>{# .column #}
+    </div>{# .grid #}
+    <div class="grid grid-flex-at-small grid-valign-middle pad-vert-line">
+        <div class="column no-shrink">
+          <div class="theme-icon epic-icon align-center align-left-at-small">
+            {% include "svg/about/profile/member.html" %}
+          </div>
+        </div>{# .column #}
+        <div class="column">
+          <h4 class="purple">
+            {% blocktrans %}
+               Resources
+            {% endblocktrans %}
+          </h4>
+          <p>
+            {% blocktrans %}
+              We develop support mechanisms to guide workers as they use the application in real time. Whether it’s a one-pager, comprehensive 
+              user manual, or in-app training module, the idea is to provide your team with the tools they need to troubleshoot any issues on their own. 
+              For more advice on how to compile a training guide for your app, check out our guide.
+            {% endblocktrans %}
+          </p>
+        </div>{# .column #}
+    </div>{# .grid #}
+  </div>
+</section>
