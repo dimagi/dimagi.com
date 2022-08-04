@@ -3,7 +3,7 @@
 {% block title %}Colors & Themes{% endblock %}
 
 {% block hero %}
-  <div class="slate-theme">
+  <div class="gray-theme">
     <section class="hero" id="hero">
       <div class="conent display-flex flex-valign-middle expand-vertical flex-align-center">
         <h1>Colors &amp; Themes</h1>
@@ -14,9 +14,10 @@
 
 {% block content %}
   <section>
-    {% include 'styleguide/sections/colors/old.html' %}
+    {% include 'styleguide/sections/colors/base.html' %}
     {% include 'styleguide/sections/colors/themes.html' %}
     {% include 'styleguide/sections/colors/accents.html' %}
     {% include 'styleguide/sections/colors/utils.html' %}
+    {% include 'styleguide/sections/colors/old.html' %}
   </section>
 {% endblock %}
