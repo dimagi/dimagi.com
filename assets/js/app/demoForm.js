@@ -55,9 +55,6 @@ define([
                     });
                 },
                 onFormSubmit: function ($form) {
-                    $('#demo-calendar-content').fadeIn();
-                    $('#demo-form-content').addClass('hide');
-
                     var email = $form.find('[name="email"]').val(),
                         firstname = $form.find('[name="firstname"]').val(),
                         lastname = $form.find('[name="lastname"]').val(),
