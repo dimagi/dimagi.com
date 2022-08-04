@@ -23,8 +23,8 @@
     }
 
     &.filled {
-      background-color: $color-text;
-      border-color: $color-text;
+      background-color: $color-text-old;
+      border-color: $color-text-old;
       color: $color-white;
     }
   }
@@ -43,7 +43,7 @@
   .inverted .badge.filled {
     background-color: $color-white;
     border-color: $color-white;
-    color: $color-text;
+    color: $color-text-old;
   }
 
   .badge.badge-default { //scss-lint:disable MergeableSelector
@@ -51,8 +51,8 @@
     color: $color-badge;
 
     &.filled {
-      background-color: $color-text;
-      border-color: $color-text;
+      background-color: $color-text-old;
+      border-color: $color-text-old;
       color: $color-white;
     }
   }
@@ -64,7 +64,7 @@
     &.filled {
       background-color: $color-white;
       border-color: $color-white;
-      color: $color-text;
+      color: $color-text-old;
     }
   }
 

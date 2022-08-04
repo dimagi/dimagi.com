@@ -58,6 +58,22 @@
     }
 
   }
+
+  .gradient-main-bg {
+    background: linear-gradient($color-secondary-light, $color-primary-light) !important; // scss-lint:disable ImportantRule
+  }
+
+  .gradient-main-reversed-bg {
+    background: linear-gradient($color-primary-light, $color-secondary-light) !important; // scss-lint:disable ImportantRule
+  }
+
+  .gradient-sideways-bg {
+    background: linear-gradient(to right, $color-secondary-light, $color-primary-light) !important; // scss-lint:disable ImportantRule
+  }
+
+  .gradient-sideways-reversed-bg {
+    background: linear-gradient(to right, $color-secondary-light, $color-primary-light) !important; // scss-lint:disable ImportantRule
+  }
 }
 
 

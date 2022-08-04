@@ -1,6 +1,8 @@
 $color-bg:              #ffffff;
 $color-bg-html:         #161b1f;
-$color-text:            #5f6a7d;
+// what should this new value be?
+$color-text:            #616161;
+$color-text-old:        #5f6a7d;
 $color-text-blog:       #4A4A51;
 $color-text-blog-light: #A9ABB4;
 $color-text-blog-caption: #6D6D73;
@@ -8,8 +10,35 @@ $color-text-blog-caption: #6D6D73;
 $color-white:           #ffffff;
 $color-black:           #000000;
 
-$color-slate:               $color-text;
+// new color palette
+$color-gray:             #6A666D;
+$color-gray-light:       lighten($color-gray, 20);
+$color-gray-lightest:    lighten($color-gray, 50);
+
+$color-primary:             #16006D;
+$color-primary-light:       #3843D0;
+$color-primary-lightest:    #8EA1FF;
+
+$color-secondary:           #E44434;
+$color-secondary-light:     #FC5F36;
+$color-secondary-lightest:  #FEAF31;
+
+$color-gradient-10:         mix($color-secondary-light, $color-primary-light, 10);
+$color-gradient-20:         mix($color-secondary-light, $color-primary-light, 20);
+$color-gradient-30:         mix($color-secondary-light, $color-primary-light, 30);
+$color-gradient-40:         mix($color-secondary-light, $color-primary-light, 40);
+$color-gradient-50:         mix($color-secondary-light, $color-primary-light, 50);
+$color-gradient-60:         mix($color-secondary-light, $color-primary-light, 60);
+$color-gradient-70:         mix($color-secondary-light, $color-primary-light, 70);
+$color-gradient-80:         mix($color-secondary-light, $color-primary-light, 80);
+$color-gradient-90:         mix($color-secondary-light, $color-primary-light, 90);
+
+
+// old color palette
+$color-slate:               $color-text-old;
 $color-slate-light:         lighten($color-slate, 20);
+
+$color-accent-gray:         #fafafa;
 
 $color-neutral-dark:        #373534;
 $color-neutral:             #685c53;
@@ -44,10 +73,14 @@ $color-red-dark:            #812627;
 $color-red:                 #e53e30;
 $color-red-light:           #efcfcb;
 
+
+
+// todo: update this after site is switched over
 $color-code-text:       $color-blue-dark;
 $color-code-bg:         #f0f0f0;
 
-$color-header:          $color-text;
+
+$color-header:          $color-text-old;
 $color-header-inverted: $color-white;
 
 $color-menu-text:       #6c7980;
@@ -56,13 +89,29 @@ $color-menu-link:       $color-white;
 
 $color-swatch-default:  #636466;
 
-$color-accent-gray:     #fafafa;
-
 $color-tap-highlight: rgba(255, 255, 255, 0);
 $color-footer-text: $color-menu-text;
-$color-footer-border: darken($color-text, 20);
+$color-footer-border: darken($color-text-old, 20);
 
 $colors-by-theme: (
+  primary: $color-primary,
+  primary-light: $color-primary-light,
+  primary-lightest: $color-primary-lightest,
+  secondary: $color-secondary,
+  secondary-light: $color-secondary-light,
+  secondary-lightest: $color-secondary-lightest,
+  gray: $color-gray,
+  gray-light: $color-gray-light,
+  gray-lightest: $color-gray-lightest,
+  gradient-10: $color-gradient-10,
+  gradient-20: $color-gradient-20,
+  gradient-30: $color-gradient-30,
+  gradient-40: $color-gradient-40,
+  gradient-50: $color-gradient-50,
+  gradient-60: $color-gradient-60,
+  gradient-70: $color-gradient-70,
+  gradient-80: $color-gradient-80,
+  gradient-90: $color-gradient-90,
   blue-dark: $color-blue-dark,
   blue: $color-blue,
   blue-light: $color-blue-light,
@@ -135,21 +184,21 @@ $color-validated: $color-green;
 
 @function color-invert($_color) {
   @if $_color == $color-accent-gray {
-    @return $color-text;
+    @return $color-text-old;
   }
   @return $color-white;
 }
 
 @function color-invert-hover($_color) {
   @if $_color == $color-accent-gray {
-    @return $color-text;
+    @return $color-text-old;
   }
   @return $color-white;
 }
 
 @function color-invert-active($_color) {
   @if $_color == $color-accent-gray {
-    @return $color-text;
+    @return $color-text-old;
   }
   @return $color-white;
 }

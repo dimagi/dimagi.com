@@ -14,7 +14,7 @@
 .sub-nav a:not(.button).social {
   cursor: pointer;
   svg * {
-    fill: $color-text;
+    fill: $color-text-old;
     transition: fill 150ms ease-in-out;
   }
   svg {

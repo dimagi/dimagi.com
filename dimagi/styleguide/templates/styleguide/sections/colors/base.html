@@ -6,47 +6,51 @@
 
     <h2>Colors</h2>
 
-    <div class="grid-4">
-      {% include 'styleguide/sections/colors/partials/swatch.html' with theme="slate" hex="5f6a7d" %}
-      {% include 'styleguide/sections/colors/partials/swatch.html' with theme="slate-light" hex="949eae" %}
-      {% include 'styleguide/sections/colors/partials/swatch.html' with theme="accent-gray" hex="fafafa" %}
-      {% include 'styleguide/sections/colors/partials/swatch.html' with theme="" hex="" %}
+    <div class="grid-3">
+      {% include 'styleguide/sections/colors/partials/swatch.html' with theme="primary" hex="16006D" %}
+      {% include 'styleguide/sections/colors/partials/swatch.html' with theme="primary-light" hex="3843D0" %}
+      {% include 'styleguide/sections/colors/partials/swatch.html' with theme="primary-lightest" hex="8EA1FF" %}
 
-      {% include 'styleguide/sections/colors/partials/swatch.html' with theme="neutral-dark" hex="373534" %}
-      {% include 'styleguide/sections/colors/partials/swatch.html' with theme="neutral" hex="685c53" %}
-      {% include 'styleguide/sections/colors/partials/swatch.html' with theme="neutral-light" hex="d6d6d4" %}
-      {% include 'styleguide/sections/colors/partials/swatch.html' with theme="neutral-lightest" hex="f7f7f6" %}
+      {% include 'styleguide/sections/colors/partials/swatch.html' with theme="secondary" hex="E44434" %}
+      {% include 'styleguide/sections/colors/partials/swatch.html' with theme="secondary-light" hex="FC5F36" %}
+      {% include 'styleguide/sections/colors/partials/swatch.html' with theme="secondary-lightest" hex="FEAF31" %}
 
-      {% include 'styleguide/sections/colors/partials/swatch.html' with theme="blue-dark" hex="002c5f" %}
-      {% include 'styleguide/sections/colors/partials/swatch.html' with theme="blue" hex="004ebc" %}
-      {% include 'styleguide/sections/colors/partials/swatch.html' with theme="blue-light" hex="bcdeff" %}
-      {% include 'styleguide/sections/colors/partials/swatch.html' with theme="blue-lightest" hex="edf3fa" %}
-
-      {% include 'styleguide/sections/colors/partials/swatch.html' with theme="purple-dark" hex="5d3f82" %}
-      {% include 'styleguide/sections/colors/partials/swatch.html' with theme="purple" hex="9060c8" %}
-      {% include 'styleguide/sections/colors/partials/swatch.html' with theme="purple-light" hex="d6c5ea" %}
-      {% include 'styleguide/sections/colors/partials/swatch.html' with theme="purple-lightest" hex="faf6ff" %}
-
-      {% include 'styleguide/sections/colors/partials/swatch.html' with theme="turquoise-dark" hex="00799a" %}
-      {% include 'styleguide/sections/colors/partials/swatch.html' with theme="turquoise" hex="00bdc5" %}
-      {% include 'styleguide/sections/colors/partials/swatch.html' with theme="turquoise-light" hex="e5f8f9" %}
-      {% include 'styleguide/sections/colors/partials/swatch.html' with theme="turquoise-lightest" hex="f2fcfc" %}
-
-      {% include 'styleguide/sections/colors/partials/swatch.html' with theme="green-dark" hex="216f00" %}
-      {% include 'styleguide/sections/colors/partials/swatch.html' with theme="green" hex="47b700" %}
-      {% include 'styleguide/sections/colors/partials/swatch.html' with theme="green-light" hex="d5eaca" %}
-      {% include 'styleguide/sections/colors/partials/swatch.html' with theme="" hex="" %}
-
-      {% include 'styleguide/sections/colors/partials/swatch.html' with theme="orange-dark" hex="994f00" %}
-      {% include 'styleguide/sections/colors/partials/swatch.html' with theme="orange" hex="ff8400" %}
-      {% include 'styleguide/sections/colors/partials/swatch.html' with theme="orange-light" hex="ffe3c2" %}
-      {% include 'styleguide/sections/colors/partials/swatch.html' with theme="orange-lightest" hex="f8f3ed" %}
-
-      {% include 'styleguide/sections/colors/partials/swatch.html' with theme="red-dark" hex="812627" %}
-      {% include 'styleguide/sections/colors/partials/swatch.html' with theme="red" hex="e53e30" %}
-      {% include 'styleguide/sections/colors/partials/swatch.html' with theme="red-light" hex="efcfcb" %}
-      {% include 'styleguide/sections/colors/partials/swatch.html' with theme="" hex="" %}
+      {% include 'styleguide/sections/colors/partials/swatch.html' with theme="gray" hex="6A666D" %}
+      {% include 'styleguide/sections/colors/partials/swatch.html' with theme="gray-light" hex="9d99a0" %}
+      {% include 'styleguide/sections/colors/partials/swatch.html' with theme="gray-lightest" hex="#e9e8ea" %}
     </div>{# .grid #}
+
+    <h3 class="pad-top-medium">Gradient Slices</h3>
+
+    <p>
+      The full gradient goes from <strong class="primary-light-color">primary-light</strong> to
+      <strong class="secondary-light-color">secondary-light</strong>.
+    </p>
+    <div class="grid-5">
+      {% include 'styleguide/sections/colors/partials/swatch.html' with theme="gradient-10" hex="4c46c1" %}
+      {% include 'styleguide/sections/colors/partials/swatch.html' with theme="gradient-20" hex="5f49b1" %}
+      {% include 'styleguide/sections/colors/partials/swatch.html' with theme="gradient-30" hex="734ba2" %}
+      {% include 'styleguide/sections/colors/partials/swatch.html' with theme="gradient-40" hex="864e92" %}
+      {% include 'styleguide/sections/colors/partials/swatch.html' with theme="gradient-50" hex="9a5183" %}
+
+      {% include 'styleguide/sections/colors/partials/swatch.html' with theme="gradient-60" hex="ae5474" %}
+      {% include 'styleguide/sections/colors/partials/swatch.html' with theme="gradient-70" hex="c15764" %}
+      {% include 'styleguide/sections/colors/partials/swatch.html' with theme="gradient-80" hex="d55955" %}
+      {% include 'styleguide/sections/colors/partials/swatch.html' with theme="gradient-90" hex="e85c45" %}
+      {% include 'styleguide/sections/colors/partials/swatch.html' with theme="secondary-light" hex="FC5F36" %}
+    </div>{# .grid #}
+
+    <h3 class="pad-top-medium">Gradient Backgrounds</h3>
+
+    <div class="grid-2">
+      {% include 'styleguide/sections/colors/partials/swatch.html' with theme="gradient-main" is_bg="true" %}
+      {% include 'styleguide/sections/colors/partials/swatch.html' with theme="gradient-main-reversed" is_bg="true" %}
+
+      {% include 'styleguide/sections/colors/partials/swatch.html' with theme="gradient-sideways" is_bg="true" %}
+      {% include 'styleguide/sections/colors/partials/swatch.html' with theme="gradient-sideways-reversed" is_bg="true" %}
+    </div>
+
+
 
   </div> {# .content #}
 </section>
