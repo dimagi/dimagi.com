@@ -10,15 +10,26 @@
 
 1. `git clone` this repo to your machine.
 
-1. Install `virtualenv` for `Python 3.6` and `pip3` and make your virtual environment. If you have `virtualenv` installed for
+1. Install [pyenv](https://github.com/pyenv/pyenv#installation) to manage python versions. ([Instructions for Ubuntu](https://ubunlog.com/en/pyenv-instala-multiples-versiones-de-python-en-tu-sistema/))
+
+    NOTE: This repository has been tested to run on Python `3.9.x`
+
+1. Install [pyenv-virtualenv](https://github.com/pyenv/pyenv-virtualenv) ([Installation instructions for Ubuntu](https://www.liquidweb.com/kb/how-to-install-pyenv-virtualenv-on-ubuntu-18-04/))
+
+
+1. Install python 3.9 with pyenv:
     ```
-    virtualenv -p python3 .venv
-    source .venv/bin/activate
+    pyenv install 3.9.11
+    ```
+
+    To set Python 3.9 as the global python, run:
+    ```
+    pyenv global 3.9.11
     ```
 
 1. Install `pipenv`
     ```
-    pip3 install pipenv
+    pip install pipenv
     ```
  
 1. Install `Pipfile` dependencies
