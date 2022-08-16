@@ -6,6 +6,12 @@
 .jackson-page {
   @include make-bg(hero, '../../../pages/about/hero');
 }
+
+.post-thumbnail {
+  @include background-placeholder();
+  background-position: center;
+}
+
 #intro-profile {
   $_base-height: 190px;
   $_height-by-size: (
