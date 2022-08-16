@@ -53,7 +53,7 @@
 
         &:hover, // scss-lint:disable NestingDepth
         &:focus {
-          color: $color-text;
+          color: $color-text-old;
         }
       }
     }

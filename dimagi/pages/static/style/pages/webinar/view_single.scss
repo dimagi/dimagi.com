@@ -17,7 +17,7 @@
   .hs-richtext {
     color: $color-white;
     a {
-      color: $color-blue-light;
+      color: $color-white !important; // scss-lint:disable ImportantRule
 
       &:hover {
         color: $color-white;
@@ -33,6 +33,16 @@
   .submitted-message {
     color: $color-white;
   }
+}
+.webinar-frontline-video {
+    $_base-height: 186px;
+    $_height-by-size: (
+      small: 290px,
+      medium: 376px,
+      large: 360px,
+      extra-large: 360px,
+    );
+  @include make-bg(image, '../../../pages/webinar/frontline/intro', $_base-height, $_height-by-size);
 }
 .webinar-data-democracy-video {
     $_base-height: 186px;
@@ -225,6 +235,18 @@
   width: 80px;
   border-radius: 50px;
 }
+.people-amanda_gupta {
+  @include background-cover('../../../pages/webinar/authors/amanda_gupta.jpg');
+  height: 80px;
+  width: 80px;
+  border-radius: 50px;
+}
+.people-elodie_lebas {
+  @include background-cover('../../../pages/webinar/authors/elodie_lebas.jpg');
+  height: 80px;
+  width: 80px;
+  border-radius: 50px;
+}
 .people-raneem_safi {
   @include background-cover('../../../pages/webinar/authors/raneem_safi.jpg');
   height: 80px;
@@ -256,7 +278,7 @@
       text-align: center;
   
       a {
-        color: $color-blue-light;
+        color: $color-white !important; // scss-lint:disable ImportantRule
   
         &:hover {
           color: $color-white;
@@ -265,8 +287,8 @@
     }
   
     .hs-button {
-      color: $color-blue !important;
-      background-color: $color-white !important;
+      color: $color-blue !important; // scss-lint:disable ImportantRule
+      background-color: $color-white !important; // scss-lint:disable ImportantRule
     }
   
     .submitted-message {
@@ -338,6 +360,16 @@
       );
       @include make-bg(image, '../../../pages/webinar/interoperability/intro', $_base-height, $_height-by-size);
   }
+  .webinar-home-data-democracy-video {
+    $_base-height: 186px;
+    $_height-by-size: (
+      small: 190px,
+      medium: 190px,
+      large: 190px,
+      extra-large: 190px,
+    );
+  @include make-bg(image, '../../../pages/webinar/intro/intro', $_base-height, $_height-by-size);
+}
   
   .webinar-home-optimize-video {
     $_base-height: 186px;

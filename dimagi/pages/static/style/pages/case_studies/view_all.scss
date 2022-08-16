@@ -26,7 +26,7 @@
 }
 
 a.study {
-  color: $color-text !important; // scss-lint:disable ImportantRule
+  color: $color-text-old !important; // scss-lint:disable ImportantRule
   font-weight: $font-weight-regular;
 
   &:hover {
