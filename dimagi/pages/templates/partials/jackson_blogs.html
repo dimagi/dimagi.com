@@ -1,0 +1,12 @@
+<a class="" href="{% url 'blog_post' post.slug %}">
+    <div class="aspect-ratio-{{ ratio }} post-thumbnail gap-bottom-line orange-lazy-bg"
+         data-lazyplaceholder="true"
+         data-src="{{ post.thumbnail }}"></div>
+  
+    <p class="blog-title">{{ post.title }}</p>
+    <p class="blog-desc">{{ post.excerpt }}</p>
+  </a>
+  <p class="pad-top-base orange font-weight-medium">
+    {{ post.date_human }}
+  </p>
+  
