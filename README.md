@@ -8,48 +8,82 @@
 
 ## Getting Started Locally
 
+
+### System Pre-Requisites
+
+1. Install Git
+
+2. Install & Run [Redis](https://redis.io/).
+
+3. Install & Run [Postgresql](https://www.postgresql.org/download/)
+
+4. Install [pyenv](https://github.com/pyenv/pyenv#installation) to manage python versions. ([Instructions for Ubuntu](https://ubunlog.com/en/pyenv-instala-multiples-versiones-de-python-en-tu-sistema/))
+
+    NOTE: This repository has been tested to run on Python `3.9.x`
+
+5. Install python 3.9 with pyenv:
+    ```
+    pyenv install 3.9.11
+    ```
+
+    To set Python 3.9 as the global python, run:
+    ```
+    pyenv global 3.9.11
+    ```
+
+6. Install [pyenv-virtualenv](https://github.com/pyenv/pyenv-virtualenv) ([Installation instructions for Ubuntu](https://www.liquidweb.com/kb/how-to-install-pyenv-virtualenv-on-ubuntu-18-04/))
+
+6. Install [Yarn](https://yarnpkg.com/en/docs/install)
+
+
+### Building the Local Environment
+
 1. `git clone` this repo to your machine.
 
-1. Install `virtualenv` for `Python 3.6` and `pip3` and make your virtual environment. If you have `virtualenv` installed for
+2. Setup your python virtual environment
     ```
-    virtualenv -p python3 .venv
-    source .venv/bin/activate
+    pyenv virtualenv 3.9.11 dimagi.com
     ```
 
-1. Install `pipenv`
+3. Activate your `python` virtual environment
+    NOTE: You will need to do this each time you plan on running this setup locally.
+    
     ```
-    pip3 install pipenv
+    pyenv activate dimagi.com
+    ```
+
+4. Install `pipenv`
+    ```
+    pip install pipenv
     ```
  
-1. Install `Pipfile` dependencies
+5. Install `Pipfile` dependencies
     ```
     pipenv install
     ```
 
-1. Install [Yarn](https://yarnpkg.com/en/docs/install) dependencies
+6. Install [Yarn](https://yarnpkg.com/en/docs/install) dependencies
     ```
     yarn install
     ```
 
-1. Install & Run [Redis](https://redis.io/).
-
-1. Install postcss
+7. Install postcss
     ```
     sudo npm install -g postcss-cli
     sudo npm install -g autoprefixer
     ```
 
-1. Create a `.env` file, and make any necessary edits.
+8. Create a `.env` file, and make any necessary edits.
     ```
     cp dev.env .env
     ```
     
-1. Initialize the database
+9. Initialize the database
     ```
     manage.py createdb
     ```
 
-1. Run the server using
+10. Run the server using
     ```
     manage.py runserver
     ```

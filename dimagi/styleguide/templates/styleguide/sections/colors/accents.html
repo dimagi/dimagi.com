@@ -4,31 +4,6 @@
          id="accents">
   <div class="content content-width-medium gap-vert-medium">
 
-    <h2>Color Accent Utilities</h2>
-
-    <p>
-      Each <code>&lt;section/&gt;</code> on a page should keep the
-      same theme colors within that section. Pages should include themes in
-      the same color family (e.g.
-      <code>blue-dark</code>, <code>blue</code>, <code>blue-light</code>).
-    </p>
-
-    <p>
-      Use color accents that are different from the parent theme with discretion.
-      If there is a style override issue with the themes&mdash;for instance if a
-      <code>blue-dark</code> theme is inside a parent with a <code>blue</code>
-      theme&mdash;the regular <code>theme-bg</code> / <code>theme-color</code>
-      classes might not work due to how the css is structured, so color accents
-      are a great way to guarantee the element is colored appropriately.
-    </p>
-
-    <p>
-      Please <strong>do not</strong> use accent colors outside of the page or
-      section's color family. (e.g. don't use <code>red-color</code> on text that
-      is inside a section styled with the <code>green</code> theme).
-    </p>
-
-
     <h3 class="gap-top-small">Background Colors</h3>
     <p>
       You can add <code>&lt;color&gt;-bg</code> to any block element to set the
@@ -37,8 +12,8 @@
     </p>
 
     <h4>Example</h4>
-    <pre>&lt;div class="tile <strong>purple-bg</strong>"&gt;&lt;/div&gt;</pre>
-    <div class="tile purple-bg"></div>
+    <pre>&lt;div class="tile <strong>gradient-60-bg</strong>"&gt;&lt;/div&gt;</pre>
+    <div class="tile gradient-60-bg"></div>
 
     <h3 class="gap-top-small">Text Colors</h3>
     <p>
@@ -50,12 +25,12 @@
     <h4>Example</h4>
     <pre class="gap-bottom-base">You can &lt;strong class="<strong>green</strong>"&gt;accent&lt;/strong&gt; any text.</pre>
     <p>
-      You can <strong class="green">accent</strong> any text.
+      You can <strong class="primary-light">accent</strong> any text.
     </p>
 
-    <pre class="gap-bottom-base">You can color your &lt;a href="#" class="<strong>red-color</strong>"&gt;links&lt;/a&gt;.</pre>
+    <pre class="gap-bottom-base">You can color your &lt;a href="#" class="<strong>secondary-color</strong>"&gt;links&lt;/a&gt;.</pre>
     <p>
-      You can color your <a href="#" class="red-color">links</a>.
+      You can color your <a href="#" class="secondary-color">links</a>.
     </p>
 
     <h3 class="gap-top-small">Icon Colors</h3>
@@ -66,8 +41,8 @@
     </p>
 
     <h4>Example</h4>
-    <pre>&lt;div class="<strong>red-icon</strong>"&gt;&lt;svg&gt;...&lt;/svg&gt;&lt;/div&gt;</pre>
-    <div class="red-icon">
+    <pre>&lt;div class="<strong>gradient-20-icon</strong>"&gt;&lt;svg&gt;...&lt;/svg&gt;&lt;/div&gt;</pre>
+    <div class="gradient-20-icon">
       {% include 'svg/case_management/mobile_archive.html' %}
     </div>
 
@@ -79,8 +54,8 @@
     </p>
 
     <h4>Example</h4>
-    <pre>&lt;button class="<strong>button-purple</strong>"&gt;A Button&lt;/button&gt;</pre>
-    <button class="button-purple">
+    <pre>&lt;button class="<strong>button-gradient-80</strong>"&gt;A Button&lt;/button&gt;</pre>
+    <button class="button-gradient-80">
       A Button
     </button>
 
@@ -93,8 +68,8 @@
     </p>
 
     <h4>Examples</h4>
-    <pre>&lt;a href="#" class="tile <strong>purple-border</strong>"&gt;&lt;/a&gt;</pre>
-    <a href="#" class="tile purple-border"></a>
+    <pre>&lt;a href="#" class="tile <strong>gradient-50-border</strong>"&gt;&lt;/a&gt;</pre>
+    <a href="#" class="tile gradient-50-border"></a>
     <p class="pad-top-base">
       Note: for <code>tile</code> this changes the <code>border</code> color only
       on hover.

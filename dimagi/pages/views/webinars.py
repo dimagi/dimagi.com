@@ -37,6 +37,11 @@ def data_democracy(request):
     return render(request, 'pages/webinars/data_democracy.html')
 
 @enable_ab_test(DEMO_WORKFLOW_V2)
+def frontline(request):
+    return render(request, 'pages/webinars/frontline.html')
+
+
+@enable_ab_test(DEMO_WORKFLOW_V2)
 def adapt(request):
     return render(request, 'pages/webinars/adapt.html')
 
