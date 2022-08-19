@@ -1,2 +1,8 @@
 /dimagi/*.jpg
 /dimagi/*.png
+/assets/thumbnails/*.jpg
+/assets/thumbnails/*.png
+/node_modules/*.jpg
+/node_modules/*.png
+/staticfiles/*.jpg
+/staticfiles/*.png
