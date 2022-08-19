@@ -1,10 +1,2 @@
-/dimagi/*.jpg
-/static/*.jpg
-/staticfiles/*.jpg
-/node_modules/*.jpg
-/assets/thumbnails/*.jpg
-/dimagi/*.png
-/static/*.png
-/staticfiles/*.png
-/node_modules/*.png
-/assets/thumbnails/*.png
+*.jpg
+*.png
