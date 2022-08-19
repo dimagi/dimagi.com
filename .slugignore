@@ -1,4 +1,5 @@
 *.jpg
 *.png
-!/assets/images
-!/app/assets/images
+!/assets/images/
+!/app/assets/images/
+!/app/assets/images/pricing-pdf-header.jpg
