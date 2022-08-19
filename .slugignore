@@ -2,6 +2,9 @@
 *.png
 !/assets/images/
 !/assets/images/pricing-pdf-header.jpg
+!assets/images/pricing-pdf-header.jpg
 !/app/assets/images/
 !/app/assets/images/pricing-pdf-header.jpg
 !*pricing-pdf-header.jpg
+!/images/pricing-pdf-header.jpg
+!*/pricing-pdf-header.jpg
