@@ -21,7 +21,7 @@ from reportlab.lib.pagesizes import letter
 
 from dimagi.utils.pdf.stylesheet import CommCareStyle
 
-HEADER_IMAGE_FILEPATH = "assets/images/pricing-pdf-header.jpg"
+HEADER_IMAGE_FILEPATH = "assets/images/pricing-pdf-header.jpeg"
 
 
 def inches(num_inches):
