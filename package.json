@@ -20,7 +20,7 @@
     "jshint": "^2.9.5",
     "knockout": "^3.4.2",
     "lodash": "^4.17.4",
-    "postcss": "^6.0.14",
+    "postcss": "^7.0.36",
     "postcss-cli": "^4.1.1",
     "requirejs": "^2.3.5",
     "rjs": "^4.0.2",
