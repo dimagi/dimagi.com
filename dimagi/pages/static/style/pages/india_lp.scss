@@ -6,15 +6,33 @@
 .india-page {
   @include make-bg(hero, '../../pages/india/hero');
 }
-
-.programs .image.testimonial2 {
-  @include background-cover('../../pages/services/case_studies/dsti.jpg');
+.programs .image.testimonial1 {
+  @include background-cover('../../pages/india/solutions/1.jpg');
   height: 200px;
   background-size: contain;
 }
-
-.programs .image.testimonial1 {
-  @include background-cover('../../pages/services/case_studies/dsti.jpg');
+.programs .image.testimonial2 {
+  @include background-cover('../../pages/india/solutions/2.jpg');
+  height: 200px;
+  background-size: contain;
+}
+.programs .image.testimonial3 {
+  @include background-cover('../../pages/india/solutions/3.jpg');
+  height: 200px;
+  background-size: contain;
+}
+.programs .image.testimonial4 {
+  @include background-cover('../../pages/india/solutions/4.jpg');
+  height: 200px;
+  background-size: contain;
+}
+.programs .image.testimonial5 {
+  @include background-cover('../../pages/india/solutions/5.jpg');
+  height: 200px;
+  background-size: contain;
+}
+.programs .image.testimonial6 {
+  @include background-cover('../../pages/india/solutions/6.jpg');
   height: 200px;
   background-size: contain;
 }
