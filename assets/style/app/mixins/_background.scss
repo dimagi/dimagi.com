@@ -28,7 +28,7 @@
 }
 
 
-@mixin background-placeholder($_bg-color: $color-text, $_bg-position: 'center') {
+@mixin background-placeholder($_bg-color: $color-text-old, $_bg-position: 'center') {
   background-position: $_bg-position;
   background-repeat: no-repeat;
   background-size: cover;

@@ -5,7 +5,7 @@
 
 @include jacket ($jacket-standard) {
   label {
-    color: $color-text;
+    color: $color-text-old;
     display: block;
     font-size: 12px;
     font-weight: $font-weight-medium;

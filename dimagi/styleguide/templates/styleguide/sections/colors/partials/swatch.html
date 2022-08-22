@@ -1,8 +1,8 @@
 <div class="column">
   {%  if theme %}
-    <div class="{{ theme }}-bg swatch">
-      <p><code>{{ theme }}</code></p>
-      <p><code>#{{ hex }}</code></p>
+    <div class="{{ theme }}-bg swatch {% if is_bg %}pad-top-large pad-bottom-large{% endif %}">
+      <p><code>{{ theme }}{% if is_bg %}-bg{% endif %}</code></p>
+      {% if hex %}<p class="uppercase"><code>#{{ hex }}</code></p>{% endif %}
     </div>
   {% endif %}
 </div>{# .column #}
