@@ -1,6 +1,9 @@
 {% load i18n %}
 {% load dimagidotcom %}
 
+{% url 'services' as services %}
+{% url 'commcare_onboarding' as commcare_onboarding %}
+
 <section class="details"
          id="details">
   <div class="content pad-vert-medium">
@@ -40,18 +43,8 @@
     </div>
 
     <p class="align-center pad-top-small-at-small">
-      {% blocktrans %}
         Need help building your CommCare mobile application?<br class="hide-until-small" />
-        Let our experienced Solutions Delivery team help you!
-      {% endblocktrans %}
-    </p>
-    <p class="align-center">
-      <a class="arrow {% click_body 'details-more' %}"
-         href="{% url 'services' %}">
-        {% blocktrans %}
-          Learn more about our Solutions Delivery
-        {% endblocktrans %}
-      </a>
+        Check out our <a href="{{ commcare_onboarding }}">CommCare Onboardings</a> or let our experienced <a href="{{ services }}">Solutions Delivery</a> team help you!
     </p>
   </div>{# .content #}
 </section>
