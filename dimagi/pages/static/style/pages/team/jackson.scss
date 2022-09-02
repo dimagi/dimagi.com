@@ -4,7 +4,7 @@
 @import 'app/variables/type';
 
 .jackson-page {
-  @include make-bg(hero, '../../../pages/about/hero');
+  @include make-bg(hero, '../../../pages/about/jackson/hero');
 }
 
 .post-thumbnail {
