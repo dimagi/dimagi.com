@@ -29,7 +29,7 @@ def external_urls(request):
         "URL_LOGIN": "https://www.commcarehq.org/accounts/login/",
         "URL_TRIAL": "https://www.commcarehq.org/register/user/",
         "FOCUS_MDM_URL_TRIAL": "https://focus.dimagi.com/signup/",
-        "FOCUS_MDM_URL_SCHEDULE_DEMO": "https://calendly.com/shabnamaggarwal",
+        "FOCUS_MDM_URL_SCHEDULE_DEMO": "https://calendly.com/tshole",
     }
 
 
