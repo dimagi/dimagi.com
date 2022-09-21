@@ -1,0 +1,163 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="pad-top-line accent-gray-bg">
+  <div class="content pad-top-small">
+    <h3 class="content-width-small align-center blue">
+      {% blocktrans %}
+        Bringing Versatility to Your Digital Health Strategy
+      {% endblocktrans %}
+    </h3>
+    <div class="content-width-medium grid grid-flex-at-small grid-valign-middle pad-top-line pad-bottom-small grid-reverse">
+        <div class="column no-shrink">
+          <div class="theme-icon epic-icon align-center align-left-at-small">
+            {% include "svg/pillar/mdc/chapter6/repetition.html" %}
+          </div>
+        </div>{# .column #}
+        <div class="column">
+          <h3 class="text-color">
+            {% blocktrans %}
+              Behavioral Health
+            {% endblocktrans %}
+          </h3>
+          <p>
+            {% blocktrans %}
+              Improve health outcomes by connecting clients in need with
+              available and appropriate behavioral and mental health treatment
+              using a tailored electronic referral process and a real-time
+              searchable bed registry
+            {% endblocktrans %}
+          </p>
+          <a class="arrow"
+             href="{% url 'commcare_features' %}">
+            {% blocktrans %}
+              Additional information
+            {% endblocktrans %}
+          </a>
+        </div>{# .column #}
+    </div>{# .grid #}
+
+    <div class="content-width-medium grid grid-flex-at-small grid-valign-middle pad-top-line pad-bottom-small">
+      <div class="column no-shrink">
+        <div class="theme-icon epic-icon align-center align-left-at-small">
+          {% include "svg/sectors/maternal_and_child_health/mdc-health-icon2.html" %}
+        </div>
+      </div>{# .column #}
+      <div class="column">
+        <h3 class="text-color">
+          {% blocktrans %}
+            Infectious Disease
+          {% endblocktrans %}
+        </h3>
+        <p>
+          {% blocktrans %}
+            Support a multitude of infectious disease (e.g. TB, HIV, E.Coli) case
+            investigation, management, and contact tracing, while also
+            tracking the lifecycle of individual clients from diagnosis, initiation
+            of treatment, adherence monitoring, and end of treatment
+          {% endblocktrans %}
+        </p>
+        <a class="arrow"
+           href="{% url 'commcare_features' %}">
+          {% blocktrans %}
+            Learn more
+          {% endblocktrans %}
+        </a>
+      </div>{# .column #}
+    </div>{# .grid #}
+
+    <div class="content-width-medium grid grid-flex-at-small grid-valign-middle pad-top-line pad-bottom-small grid-reverse">
+      <div class="column no-shrink">
+        <div class="theme-icon epic-icon align-center align-left-at-small">
+          {% include "svg/pillar/mdc/chapter6/repetition.html" %}
+        </div>
+      </div>{# .column #}
+      <div class="column">
+        <h3 class="text-color">
+          {% blocktrans %}
+            COVID-19 OutÊreak Management
+          {% endblocktrans %}
+        </h3>
+        <p>
+          {% blocktrans %}
+            Conduct COVID-19 case investigation, contact tracing, monitoring
+            & reporting, and integration with existing data systems
+          {% endblocktrans %}
+        </p>
+        <a class="arrow"
+          href="{% url 'commcare_features' %}">
+          {% blocktrans %}
+            See details
+          {% endblocktrans %}
+        </a>
+      </div>{# .column #}
+    </div>{# .grid #}
+    <div class="content-width-medium grid grid-flex-at-small grid-valign-middle pad-top-line pad-bottom-small">
+      <div class="column no-shrink">
+        <div class="theme-icon epic-icon align-center align-left-at-small">
+          {% include "svg/pillar/mdc/chapter6/repetition.html" %}
+        </div>
+      </div>{# .column #}
+      <div class="column">
+        <h3 class="text-color">
+          {% blocktrans %}
+            Video Directly Observed Therapy (VDOT/VOT)
+          {% endblocktrans %}
+        </h3>
+        <p>
+          {% blocktrans %}
+            SureAdhere by Dimagi is an evidenced-based, cost-effective
+            digital engagement platform that enables remote medication
+            adherence and treatment support for clients through secure
+            offline-capable asynchronous video and chat
+          {% endblocktrans %}
+        </p>
+        <a class="arrow"
+          href="{% url 'commcare_features' %}">
+          {% blocktrans %}
+            Find out more
+          {% endblocktrans %}
+        </a>
+      </div>{# .column #}
+    </div>{# .grid #}
+    <div class="content-width-medium grid grid-flex-at-small grid-valign-middle pad-top-line pad-bottom-small grid-reverse">
+      <div class="column no-shrink">
+        <div class="theme-icon epic-icon align-center align-left-at-small">
+          {% include "svg/pillar/mdc/chapter6/repetition.html" %}
+        </div>
+      </div>{# .column #}
+      <div class="column">
+        <h3 class="text-color">
+          {% blocktrans %}
+            Research and Innovation
+          {% endblocktrans %}
+        </h3>
+        <p>
+          {% blocktrans %}
+            Our Research and Data (RAD) team aims to advance the field of
+            digital development through rigorous investigation of how current
+            and emerging technologies are used and how they can be
+            improved to better serve the masses
+          {% endblocktrans %}
+        </p>
+        <a class="arrow"
+          href="{% url 'commcare_features' %}">
+          {% blocktrans %}
+            Additional details
+          {% endblocktrans %}
+        </a>
+      </div>{# .column #}
+    </div>{# .grid #}
+
+
+    <p class="align-center pad-vert-small">
+      <a href="{% url 'sectors' %}"
+         class="arrow">
+        {% blocktrans %}
+          See More Sectors
+        {% endblocktrans %}
+      </a>
+    </p>
+
+  </div>
+</section>

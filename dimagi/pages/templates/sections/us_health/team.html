@@ -1,0 +1,25 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="overview accent-gray-bg"
+         id="overview">
+  <div class="content pad-vert-medium align-center">
+    <div class="content-width-large">
+      <h3 class="blue pad-bottom-base">
+        {% blocktrans %}
+          Dimagi Is More Than Just A Technology Vendor.
+        {% endblocktrans %}
+      </h3>
+      <p class="content-width-large pad-bottom-small pad-horz-medium">
+        {% blocktrans %}
+          We’re a team of physicians, software engineers, and health information system architects with unrivaled experience. We
+          practice full transparency when it comes to the design, implementation, maintenance, and enhancements of programs
+          because our mission is to build and scale sustainable, high-impact digital solutions. Most importantly, we believe that 
+          exponential success is achievable through collaborative, long-term partnerships.
+        {% endblocktrans %}
+      </p>
+    </div>{# .intro #}
+
+    {% include "sections/us_health/grid.html" %}
+  </div> {# .content #}
+</section>

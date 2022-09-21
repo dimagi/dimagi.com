@@ -13,6 +13,7 @@ from dimagi.utils.hubspot_api import update_contact
 from dimagi.utils.partners import get_logos
 from dimagi.utils.covid_partners import get_us_covid_partners
 from dimagi.utils.services import get_service_partners
+from dimagi.utils.us_health_partners import get_us_health_partners
 from dimagi.data.case_management import longitudinal_data
 
 from dimagi.pages.views import blog
@@ -53,6 +54,13 @@ def covid_19(request):
         'posts': get_json("blog/covid-19")['posts'][:4],
     }
     return render(request, 'pages/covid_19.html', context)
+
+def us_health(request):
+    context = {
+        'posts': get_json("blog/covid-19")['posts'][:3],
+        'partners': get_us_health_partners(),
+    }
+    return render(request, 'pages/us_health.html', context)
 
 
 def us_covid_19(request):

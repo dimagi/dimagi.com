@@ -5,6 +5,7 @@ from dimagi.pages.views.core import (
     resources,
     covid_19,
     us_covid_19,
+    us_health,
     contact,
     proposals,
     research_and_data,

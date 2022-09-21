@@ -1,0 +1,26 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="testimonials blue-theme"
+         id="testimonials">
+  <div class="content pad-vert-small">
+    <div class="align-center">
+      <h3 class="theme-color">
+        {% blocktrans %}
+          Hear From Our Partners
+        {% endblocktrans %}
+      </h3>
+    </div>{# .intro #}
+  </div>{# .content #}
+
+  <div class="carousel carousel-fade-inactive pad-bottom-medium">
+    <div class="carousel-container">
+      <div class="spinner spinner-large"></div>
+      <div class="carousel-slider">
+        {% include "sections/us_health/testimonials/ny.html" %}
+        {% include "sections/us_health/testimonials/alaska.html" %}
+        {% include "sections/us_health/testimonials/nj.html" %}
+      </div>{# .carousel-slider #}
+    </div>{# .carousel-container #}
+  </div>{# .carousel #}
+</section>

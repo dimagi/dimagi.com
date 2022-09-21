@@ -1,0 +1,14 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="partners accent-gray-bg border-vert"
+         id="partners">
+  <div class="content pad-vert-small align-center">
+    <h3 class="blue pad-bottom-small">
+      {% blocktrans %}
+        Dimagi Supports A Range of Partners in Public Health and Social Services
+      {% endblocktrans %}
+    </h3>
+    {% include "partials/us_health_partners.html" with partners=partners %}
+  </div>{# .content #}
+</section>

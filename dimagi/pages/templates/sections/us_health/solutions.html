@@ -1,0 +1,26 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="solutions align-center blue-theme gap-bottom-small accent-gray-bg"
+         id="solutions">
+  <div class="content pad-vert-medium pad">
+    <h3 class="blue gap-top-line align-center">
+      {% blocktrans %}
+        Designing A Seamless Digital Experience
+      {% endblocktrans %}
+    </h3>
+    <p class="pad-bottom-base">
+      {% blocktrans %}
+        Amplify health programs with customizable apps for case management and service delivery
+      {% endblocktrans %}
+    </p>
+    <div class="content pad-top-small">
+      <div class="grid-2-at-small grid-4-at-large grid-row-equal-heights">
+        {% include "sections/us_health/solutions/screening_and_triage_protocols.html" %}
+        {% include "sections/us_health/solutions/surveillance_and_contact_tracing.html" %}
+        {% include "sections/us_health/solutions/information_dissemination.html" %}
+        {% include "sections/us_health/solutions/lab_tracking_and_logistics.html" %}
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,21 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="blog-latest" id="updates">
+  <div class="content pad-vert-medium">
+    <div class="align-center gap-bottom-medium">
+      <h2 class="blue">
+        {% blocktrans %}
+          Read the latest about Dimagi's COVID-19 response
+        {% endblocktrans %}
+      </h2>
+    </div>
+    <div class="grid-3-at-medium grid-1-at-small grid-row-space-small">
+      {% for post in posts %}
+        <div class="column pad-top-base">
+          {% include "partials/blog_summary.html" with post=post ratio='square' hide_cat=True %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
