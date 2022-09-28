@@ -8,15 +8,15 @@
   <div class="content pad-vert-medium">
     <h2 class="content-width-large blue gap-top-line align-center">
       {% blocktrans %}
-        Build Customizable Frontline Solutions for Any Team
+        Built on CommCare
       {% endblocktrans %}
     </h2>
     <p class="content-width-large lead-text pad-bottom-small align-center">
+      {% url 'toolkit' 'commcare-evidence-base' as evidence_base_tool %}
       {% blocktrans %}
-        CommCare allows you to build custom solutions without compromising 
-        on the unique needs of your team. <br class="hide-until-medium" />
-        Whether you’re evaluating a program or supporting frontline 
-        workers, CommCare can help.
+        The Dimagi Vaccine Solutions is built on CommCare, an established
+        Global Good that has been deployed in many countries and supported
+        by an <a href="{{ evidence_base_tool }}">evidence base</a> of peer-reviewed studies proving its impact.
       {% endblocktrans %}
     </p>
 

@@ -8,12 +8,6 @@
   @include make-bg(hero, '../../../pages/commcare/vaccine-delivery/hero');
 }
 
-.second-header {
-  font-weight: 300 !important; // scss-lint:disable ImportantRule
-  letter-spacing: 0px !important; // scss-lint:disable ImportantRule
-  text-transform: lowercase !important; // scss-lint:disable ImportantRule
-}
-
 @media (min-width: $width-desktop) {
   .commcare-vaccine-delivery .hero h1 {
     margin-left: 0;
