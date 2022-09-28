@@ -7,9 +7,12 @@
   <div class="content pad-vert-medium">
     <div class="grid grid-2-at-medium grid-1-at-small grid-reverse">
       <div class="column" id="case-study">
-        <div class="intro-image">
-          <div class="intro-hero-image white-lazy-bg"
-               data-lazybg="true"></div>
+        <div class="align-center">
+          <div class="intro-image intro-hero-image pad-top-medium-at-medium pad-top-small white-lazy-bg" data-lazybg="true">
+            <div class="pad-top-medium gap-top-base pointer">
+              {% include "partials/wistia_popover.html" with wistia_id='gl3bzwgn35' play_icon_medium=True show_image=True %}
+            </div>
+          </div>
         </div>
       </div> {# .column #}
       <div class="column pad-top-base">
@@ -35,6 +38,11 @@
               Let's talk
             {% endblocktrans %}
           </a>
+          <p class="button cta alt irc-video-button">
+            {% trans 'Watch IRC story' as video_text %}
+            {% click_hero 'video' as video_click_class %}
+            {% include "partials/wistia_popover.html" with wistia_id='gl3bzwgn35' show_play=True text=video_text click_class=video_click_class %}
+          </p>
         </div>
       </div>{# .column #}
     </div>

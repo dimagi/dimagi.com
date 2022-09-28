@@ -75,3 +75,11 @@
         width: 560px;
     }
   }
+
+.irc-video-button {
+  padding: 5px 30px !important; // scss-lint:disable ImportantRule
+  margin-left: 10px !important; // scss-lint:disable ImportantRule
+}
+.pointer {
+  cursor: pointer;
+}
