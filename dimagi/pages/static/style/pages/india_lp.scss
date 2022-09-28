@@ -6,6 +6,12 @@
 .india-page {
   @include make-bg(hero, '../../pages/india/hero');
 }
+.header-custom {
+  font-size: 40px !important;
+}
+.sub-header-custom {
+  font-size: 20px !important;
+}
 .programs .image.testimonial1 {
   @include background-cover('../../pages/india/solutions/1.jpg');
   height: 200px;
