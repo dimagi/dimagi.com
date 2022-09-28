@@ -61,6 +61,11 @@
     ```
     pipenv install
     ```
+    
+    Note: if this fails and you are on Ubuntu, you should also make sure to install the following system dependencies
+    ```
+    sudo apt-get install libpq-dev
+    ```
 
 6. Install [Yarn](https://yarnpkg.com/en/docs/install) dependencies
     ```
@@ -69,6 +74,7 @@
 
 7. Install postcss
     ```
+    sudo npm install -g fs-extra  # for ubuntu only
     sudo npm install -g postcss-cli
     sudo npm install -g autoprefixer
     ```
