@@ -1,36 +1,83 @@
 {% load i18n %}
 {% load dimagidotcom %}
 
-<section class="approach align-center blue-theme" id="approach">
-  <div class="content pad-vert-medium pad">
-    <h2 class="blue gap-top-line">
+<section class="align-center blue-theme accent-gray-bg border-top" id="track_program">
+  <div class="content pad-vert-medium">
+    <h2 class="content-width-medium normalcase theme-color">
       {% blocktrans %}
-        A Multi-Pronged Approach – In One
+        Benefits
       {% endblocktrans %}
     </h2>
     <p class="content-width-medium">
       {% blocktrans %}
-        Dimagi is actively developing an open-source digital solution
-        to track and support every recipient before, during, and
-        after the vaccination process.
+        Enable end-to-end vaccination workflows across health workers, clients
+        and government stakeholders with 3 component applications
       {% endblocktrans %}
     </p>
 
-    <div class="content pad-top-medium pad-horz-medium-at-large pad-horz-medium-at-extra-large">
-      <div class="grid-2-at-small grid-4-at-large grid-col-space-medium grid-row-space-small">
-        {% include "sections/commcare/vaccine-delivery/approach/tracking.html" %}
-        {% include "sections/commcare/vaccine-delivery/approach/outreach.html" %}
-        {% include "sections/commcare/vaccine-delivery/approach/messaging.html" %}
-        {% include "sections/commcare/vaccine-delivery/approach/analytics.html" %}
-      </div>
-    </div>
+    <div class="grid-1-at-small grid-3-at-large grid-col-space-base grid-row-equal-heights">
+      <div class="response">
+        <div class="feature-projects pad-vert-line pad-horz-line">
+          <div class="border-all white-bg">
+            <div class="content-width-extra-small align-center pad-top-small pad-horz-line">
+              <h4 class="theme-color">
+                {% blocktrans %}
+                  Efficiently manage vaccine delivery across your frontline healthcare workforce
+                {% endblocktrans %}
+              </h4>
+              <p>
+                {% blocktrans %}
+                  An application built on the open source platform CommCare allows for frontline workers to conduct community-based service delivery and counseling.
+                {% endblocktrans %}
+              </p>
+            </div>
+            <div class="efficiently gap-line"
+               data-lazybg="true"></div>
+          </div>
+        </div>{# .feature-projects #}
+      </div>{# .response #}
+      <div class="response">
+        <div class="feature-projects pad-vert-line pad-horz-line">
+          <div class="border-all white-bg">
+            <div class="content-width-extra-small align-center pad-top-small pad-horz-line">
+              <h4 class="theme-color pad-top-base">
+                {% blocktrans %}
+                  Keep clients in the loop
+                {% endblocktrans %}
+              </h4>
+              <p class="pad-top-base">
+                {% blocktrans %}
+                  Direct-to-client messaging to informs clients of upcoming vaccination appointments
+                {% endblocktrans %}
+              </p>
+            </div>
+            <div class="keep gap-line gap-top-medium"
+               data-lazybg="true"></div>
+          </div>
+        </div>{# .feature-projects #}
+      </div>{# .response #}
+      <div class="response">
+        <div class="feature-projects pad-vert-line pad-horz-line">
+          <div class="border-all white-bg">
+            <div class="content-width-extra-small align-center pad-top-small pad-horz-line">
+              <h4 class="theme-color">
+                {% blocktrans %}
+                  Visualize and report progress to all levels of stakeholders
+                {% endblocktrans %}
+              </h4>
+              <p class="pad-top-base">
+                {% blocktrans %}
+                  A dashboard built on the open source platform Superset that equips
+                  government stakeholders with campaign-related information
+                {% endblocktrans %}
+              </p>
+            </div>
+            <div class="visualise gap-line gap-top-small"
+               data-lazybg="true"></div>
+          </div>
+        </div>{# .feature-projects #}
+      </div>{# .response #}
+    </div>{# .grid-1-at-small #}
 
-    <p class="align-center">
-      <a class="button uppercase {% click_body 'commcare' %}" href="#contact-form-modal">
-        {% blocktrans %}
-          Get In Touch
-        {% endblocktrans %}
-      </a>
-    </p>
-  </div>
+  </div>{# .content #}
 </section>
