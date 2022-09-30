@@ -1,0 +1,41 @@
+{% load dimagidotcom %}
+{% load i18n %}
+
+<section class="video border-vert blue-theme pad-left-large-at-large" id="home-commcare">
+  <div class="content content-width-large-at-large pad-bottom-medium-at-large pad-top-small gap-vert-large-at-large">
+    <div class="grid grid-2-at-large grid-1-at-medium grid-reverse">
+      <div class="column">
+        <div class="gap-bottom-line-at-large pad-horz-small pad-right-none-at-large pad-left-base-at-large">
+          <h3 class="align-left-at-medium align-center gap-top-small theme-icon">
+            {% include "svg/commcare/sure_adhere_logo.html" %}
+          </h3>
+          <h2 class="align-left-at-medium align-center blue">
+            Video-Supported Care Made Simple
+          </h2>
+          <p class="align-left-at-medium align-center lead-text">
+            {% blocktrans %}
+            Provide treatment support for infectious disease and
+            behavioral health while enhancing patient experience and
+            ensuring medication adherence with our virtual care platform.
+            {% endblocktrans %}
+          </p>
+          <div class="align-left-at-medium align-center pad-top-base hide-until-medium">
+
+            <a class="button" href="https://www.sureadhere.com/ " target="_blank">
+              {% blocktrans %}
+                Learn More
+              {% endblocktrans %}
+            </a>
+          </div>
+        </div>
+      </div> {# .column #}
+      <div class="column">
+      </div> {# .column #}
+    </div>{# .grid #}
+  </div>{# .content #}
+  <div class="off-grid white-lazy-bg" data-lazybg="true">
+    <div class="wistia-container">
+      {% include "partials/wistia_embed_autoplay.html" with wistia_id='gx2a7tvlh6' %}
+    </div>
+  </div>
+</section>
