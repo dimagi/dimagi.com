@@ -1,0 +1,72 @@
+{% load dimagidotcom %}
+{% load i18n %}
+
+<section class="pad-bottom-medium"
+         id="writing">
+  <div class="content pad-vert-small align-center">
+    <h2 class="theme-color uppercase">
+      {% blocktrans %}
+        Writing
+      {% endblocktrans %}
+    </h2>
+  </div>{# .content #}
+  <div class="content pad-top-line news-images">
+    <div class="grid-3-at-medium grid-row-space-line">
+        {% for post in writings %}
+          <div class="column">
+            {% include "partials/jackson_blogs.html" with post=post ratio='square' %}
+          </div>{# .column #}
+        {% endfor %}
+      </div>{# .grid-2-at-medium #}
+    <div class="grid grid-3-at-large grid-1-at-medium grid-row-equal-heights ">
+      <div class="column">
+        <div class="pad-bottom-base white-bg">
+          <div class="image writing1 aspect-ratio-square post-thumbnail" data-lazybg="true"></div>
+          <div class="pad-vert-line">
+            <p>
+              <strong>
+                {% blocktrans %}
+                  Equitable vaccine delivery will fuel better global health processes 
+                {% endblocktrans %}
+              </strong>
+            </p>
+            <h5 class="uppercase orange">World Economic Forum</h5>
+            <h6 class="orange">11 May 2021</h6>
+          </div> {# .pad-line #}
+        </div> {# .white-bg #}
+      </div> {# .column #}
+      <div class="column">
+        <div class="pad-bottom-base white-bg">
+          <div class="image writing2 aspect-ratio-square post-thumbnail" data-lazybg="true"></div>
+          <div class="pad-vert-line">
+            <p>
+              <strong>
+                {% blocktrans %}
+                  What can technology do for global health?
+                {% endblocktrans %}
+              </strong>
+            </p>
+            <h5 class="uppercase orange">World Economic Forum</h5>
+            <h6 class="orange">4 Feb 2016</h6>
+          </div> {# .pad-line #}
+        </div> {# .white-bg #}
+      </div> {# .column #}
+      <div class="column">
+        <div class="pad-bottom-base white-bg">
+          <div class="image writing3 aspect-ratio-square post-thumbnail" data-lazybg="true"></div>
+          <div class="pad-vert-line">
+            <p>
+              <strong>
+                {% blocktrans %}
+                  Small business advice: How to run a social enterprise
+                {% endblocktrans %}
+              </strong>
+            </p>
+            <h5 class="uppercase orange">The Washington Post</h5>
+            <h6 class="orange">27 Sept 2013</h6>
+          </div> {# .pad-line #}
+        </div> {# .white-bg #}
+      </div> {# .column #}
+    </div>{# .grid #}
+  </div>{# .content #}
+</section>

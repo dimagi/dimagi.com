@@ -4,6 +4,7 @@ from dimagi.pages.views.team import (
     team,
     team_member,
     about,
+    jackson_profile,
 )
 from dimagi.pages.views import redirect
 
@@ -11,6 +12,7 @@ from dimagi.pages.views import redirect
 team_urls = [
     url(r'^$', team, name='team'),
     url(r'^india/runt_300/$', redirect.page('team')),
+    url(r'^usa/jonathanjackson/$', jackson_profile, name='jackson_profile'),
     url(r'^(?P<office>[\w-]+)/(?P<slug>[\w-]+)/$',
         team_member, name='team_member'),
 ]
