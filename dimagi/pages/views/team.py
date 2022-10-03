@@ -3,6 +3,13 @@ from django.shortcuts import render
 
 from dimagi.pages.models.team import Employee, Office
 from dimagi.utils.wordpress_api import get_json
+from dimagi.pages.views.blog import (
+    _get_posts,
+    _get_global_context,
+    populate_tags_in_request
+)
+from dimagi.pages.models.blog import BlogPost
+from dimagi.data.blog import ARCHIVE
 
 
 def _get_special_people(slug, key):
@@ -52,3 +59,14 @@ def team_member(request, office, slug):
         'employee': member,
     }
     return render(request, 'pages/team/member.html', context)
+
+@populate_tags_in_request
+def jackson_profile(request):
+    posts = _get_posts(ARCHIVE)['posts']
+    popular = [BlogPost(p) for p in get_json('blog/archive/?author=jjackson', num_posts=3)['posts']]
+    context = _get_global_context(request)
+    context.update({
+        'writings': popular[:3],
+    })
+    return render(request, 'pages/team/jackson_profile.html', context)
+

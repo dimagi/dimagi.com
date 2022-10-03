@@ -1,0 +1,46 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="align-center blue-theme accent-gray-bg border-top" id="features-vd">
+  <div class="content pad-vert-medium">
+    <h2 class="content-width-medium normalcase theme-color">
+      {% blocktrans %}
+        Features
+      {% endblocktrans %}
+    </h2>
+    <p class="content-width-medium">
+      {% blocktrans %}
+        Six micro-applications—each designed for a different immunization challenge
+      {% endblocktrans %}
+    </p>
+    <div class="grid grid-2-at-medium grid-1-at-small pad-bottom-small">
+      <div class="column pad-top-medium" id="features-intro">
+        <div class="intro-image pad-left-medium-at-medium">
+          <div class="intro-image white-lazy-bg" data-lazybg="true"></div>
+        </div>
+      </div> {# .column #}
+      <div class="column pad-top-medium-at-large pad-top-small-at-medium">
+        <p class="align-left pad-top-small">
+          {% blocktrans %}
+            We developed the Dimagi Vaccine Solution as a set of six micro-applications
+            that can be configured and deployed independently. Each micro-application is
+            designed to address a different immunization challenge and is interoperable
+            with other health systems. This gives your program the flexibility to use
+            only what’s relevant to the needs of your program and local health
+            information systems.
+          {% endblocktrans %}
+        </p>
+      </div>{# .column #}
+    </div>
+
+    <div class="grid-1-at-small grid-3-at-large grid-col-space-medium grid-row-equal-heights pad-bottom-medium">
+      {% include "sections/commcare/vaccine-delivery/features/client.html" %}
+      {% include "sections/commcare/vaccine-delivery/features/vaccine.html" %}
+      {% include "sections/commcare/vaccine-delivery/features/event.html" %}
+      {% include "sections/commcare/vaccine-delivery/features/community.html" %}
+      {% include "sections/commcare/vaccine-delivery/features/health.html" %}
+      {% include "sections/commcare/vaccine-delivery/features/stock.html" %}
+    </div>{# .grid-1-at-small #}
+
+  </div>{# .content #}
+</section>

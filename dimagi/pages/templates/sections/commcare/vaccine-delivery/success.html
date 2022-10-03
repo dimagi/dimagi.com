@@ -1,0 +1,57 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section id="vaccine-delivery-success" data-lazybg="true" class="accent-gray-bg">
+  <div class="content pad-bottom-medium">
+    <h2 class="pad-top-small theme-color align-center">
+      {% blocktrans %}
+        Demonstrated Success
+      {% endblocktrans %}
+    </h2>
+    <p class="content-width-medium pad-horz-small align-center">
+      {% blocktrans %}
+        Dimagi’s Vaccine Solution has been successfully deployed at national
+        scale in Somalia and Jamaica to manage the rollout of COVID-19
+        vaccines. Millions of COVID-19 doses have been recorded using the
+        solution in these countries.
+      {% endblocktrans %}
+    </p>
+    <div class="content grid grid-2-at-medium grid-1-at-small grid-reverse white-bg">
+      <div class="column gap-bottom-none" id="success-intro">
+        <div class="intro-image">
+          <div class="intro-image white-lazy-bg" data-lazybg="true"></div>
+        </div>
+      </div> {# .column #}
+      <div class="column pad-left-medium pad-top-small">
+        <blockquote>
+          <p class="blue blockquote-custom">
+            The goal of vaccinating some 1.9m Jamaicans is a goal that represents
+            one of the largest mobilization exercises in this country. The partnership
+            that introduced the CommCare platform in Jamaica has created a formula
+            that the world can learn from...Having this digital platform today
+            represents a real paradigm shift.
+          </p>
+        </blockquote>
+        <p class="blue gap-bottom-none">
+          {% blocktrans %}
+            Dr. the Hon. Christopher Tufton
+          {% endblocktrans %}
+        </p>
+        <p class="blue-dark">
+          {% blocktrans %}
+            Jamaica Minister of Health and Wellness
+          {% endblocktrans %}
+        </p>
+      </div>{# .column #}
+    </div>
+    <p class="align-center pad-top-medium">
+      <a href="{% url 'blog_post' 'jamaica-commcare-covid19-vaccination-platform' %}"
+        class="blue arrow {% click_hero 'demo' %}"
+        target="_blank">
+        {% blocktrans %}
+          Read More
+        {% endblocktrans %}
+      </a>
+    </p>
+  </div>
+</section>
