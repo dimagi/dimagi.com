@@ -1,0 +1,49 @@
+{% extends 'sections/commcare/product_onboarding/onboard/_base.html' %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block feature_class %}deep-dive turquoise-border{% endblock %}
+{% block icon_class %}turquoise-icon{% endblock %}
+{% block title_class %}turquoise{% endblock %}
+{% block list_class %}turquoise-check {% endblock %}
+
+{% block icon %}
+  {% include "svg/commcare/onboarding/double_gear.html" %}
+{% endblock %}
+
+{% block feature_title %}
+  {% blocktrans %}
+    Advanced Skills
+  {% endblocktrans %}
+{% endblock %}
+
+{% block feature_price %}
+  {% blocktrans %}
+    $8000
+  {% endblocktrans %}
+{% endblock %}
+
+{% block feature_description %}
+  {% blocktrans %}
+  Perfect for organizations or users who are already familiar with CommCare and have app building expertise. 
+  These sessions get deep into some of our most powerful features, and will help organizations unlock the next level of power from the product.
+  {% endblocktrans %}
+{% endblock %}
+
+{% block features_list %}
+  <li>
+    {% blocktrans %}
+        10 hours of advanced feature-based training sessions   
+    {% endblocktrans %}
+  </li>
+  <li>
+    {% blocktrans %}
+        Practical exercises given as homework at the end of each session
+    {% endblocktrans %}
+  </li>
+  <li>
+    {% blocktrans %}
+      Direct access to Customer Success Support in between sessions
+    {% endblocktrans %}
+  </li>
+{% endblock %}
