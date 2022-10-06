@@ -1,0 +1,27 @@
+{% load dimagidotcom %}
+{% load i18n %}
+
+<section class="action_partners video-intro align-center border-top pad-bottom-small" id="video-vd">
+  <h2 class="pad-top-small blue">
+    {% blocktrans %}
+      See the Solution in Action
+    {% endblocktrans %}
+  </h2>
+  <p class="content-width-medium pad-horz-small">
+    {% blocktrans %}
+      This demo video takes you through each of the micro-applications
+      and some of the key functionalities of the dashboard
+    {% endblocktrans %}
+  </p>
+  <div class="content pad-horz-small">
+    <div class="content-width-small partners-action-crs">
+      <div class="border-rounded-large image white-lazy-bg" data-lazybg="true">
+        {% include "partials/wistia_popover.html" with wistia_id='6bykwlvjfv' play_icon_medium=True show_image=True %}
+      </div>{# .image #}
+      <p class="button gap-top-small">
+        {% trans 'Watch Now' as video_text %}
+        {% include "partials/wistia_popover.html" with wistia_id='6bykwlvjfv' text=video_text white_class='white' %}
+      </p>
+    </div>{# .column #}
+  </div>{# .content #}
+</section>
