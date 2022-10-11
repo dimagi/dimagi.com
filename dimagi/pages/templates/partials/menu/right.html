@@ -1,7 +1,7 @@
 {% load i18n %}
 {% load dimagidotcom %}
 
-<a class="login-link {% click_nav 'login' %}"
+<a class="login-link gray-lightest {% click_nav 'login' %}"
    href="{{ URL_LOGIN }}">
   <div class="hide-at-medium">
     {% blocktrans %}
@@ -15,7 +15,7 @@
   </div>{# .hide-until-medium #}
 </a>
 
-<a class="trial-link cta-navigation-trial {% click_nav 'trial' %}"
+<a class="trial-link cta-navigation-trial gray-lightest {% click_nav 'trial' %}"
    {% if kmq_track_pricing_nav %}
       data-kmq-external="true"
       data-kmq-name="{{ kmq_track_pricing_nav }}"
@@ -27,7 +27,7 @@
     {% endblocktrans %}
   </div>{# .hide-at-medium #}
 
-  <div class="hide-until-medium">
+  <div class="hide-until-medium ">
     {% blocktrans %}
       Start CommCare Trial
     {% endblocktrans %}

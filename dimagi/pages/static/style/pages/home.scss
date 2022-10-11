@@ -159,6 +159,17 @@
   }
 }
 
+.sure-adhere {
+  $_base-height: 195px;
+  $_height-by-size: (
+    small: 270px,
+    medium: 376px,
+    large: 316px,
+    extra-large: 316px,
+  );
+  @include make-bg(sure-adhere, '../../pages/home/sure_adhere_images/sureadhere', $_base-height, $_height-by-size);
+}
+
 .global-services {
   $_base-height: 195px;
   $_height-by-size: (
