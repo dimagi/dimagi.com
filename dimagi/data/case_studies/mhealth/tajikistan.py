@@ -42,7 +42,6 @@ STUDY = CaseStudy(
         "Abt Associates"
     ],
     countries=[
-        ugettext_lazy("Khatlon Province"),
         ugettext_lazy("Tajikistan"),
     ],
     sectors=[
