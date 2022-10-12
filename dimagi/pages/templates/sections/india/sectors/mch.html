@@ -1,0 +1,32 @@
+{% load dimagidotcom %}
+{% load i18n %}
+
+<div class="column blue-theme">
+  <a class="tile {{ click_class }} accent-gray-bg"
+     href="{% url 'sector' 'maternal-and-child-health' %}">
+
+    <div class="theme-icon">
+      {% include 'svg/sectors/healthcare/maternal_and_childhealth.html' %}
+    </div>
+
+    <h4 class="blue pad-top-line">
+      {% blocktrans %}
+        Maternal & Child Health
+      {% endblocktrans %}
+    </h4>
+
+    <p class="body-color">
+      {% blocktrans %}
+        Mobile tools help monitor and improve maternal, 
+        antenatal, natal, and postnatal care.
+      {% endblocktrans %}
+    </p>
+
+    <p class="link pad-top-base">
+      {% blocktrans %}
+        Learn More
+      {% endblocktrans %}
+    </p>
+
+  </a>
+</div>{# .column #}
