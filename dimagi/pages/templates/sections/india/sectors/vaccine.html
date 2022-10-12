@@ -1,0 +1,31 @@
+{% load dimagidotcom %}
+{% load i18n %}
+
+<div class="column blue-theme">
+  <a class="tile {{ click_class }} accent-gray-bg"
+     href="{% url 'sector' 'vaccine-delivery' %}">
+
+    <div class="theme-icon">
+      {% include 'svg/sectors/healthcare/vaccine_delivery.html' %}
+    </div>
+
+    <h4 class="blue pad-top-line">
+      {% blocktrans %}
+        Vaccine Delivery
+      {% endblocktrans %}
+    </h4>
+
+    <p class="body-color">
+      {% blocktrans %}
+        Register, identify, and follow both vaccine recipients and clinic stock.
+      {% endblocktrans %}
+    </p>
+
+    <p class="link pad-top-base">
+      {% blocktrans %}
+        Learn More
+      {% endblocktrans %}
+    </p>
+
+  </a>
+</div>{# .column #}

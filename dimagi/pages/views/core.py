@@ -13,6 +13,7 @@ from dimagi.utils.hubspot_api import update_contact
 from dimagi.utils.partners import get_logos
 from dimagi.utils.covid_partners import get_us_covid_partners
 from dimagi.utils.services import get_service_partners
+from dimagi.utils.india import get_india_partners
 from dimagi.data.case_management import longitudinal_data
 
 from dimagi.pages.views import blog
@@ -34,6 +35,13 @@ def services(request):
         'partners': get_service_partners(),
     }
     return render(request, 'pages/services.html', context)
+
+def india(request):
+    context = {
+        'partners': get_india_partners(),
+    }
+    return render(request, 'pages/india.html', context)
+
 
 
 def partners(request):
