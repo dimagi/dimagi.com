@@ -1,0 +1,112 @@
+@import 'app/mixins/background';
+@import 'app/variables/colors';
+@import 'app/variables/sizes';
+@import 'app/variables/type';
+
+.india-page {
+  @include make-bg(hero, '../../pages/india/hero');
+}
+.header-custom {
+  font-size: 40px !important;
+}
+.sub-header-custom {
+  font-size: 20px !important;
+}
+.programs .image.testimonial1 {
+  @include background-cover('../../pages/india/solutions/1.jpg');
+  height: 200px;
+  background-size: contain;
+}
+.programs .image.testimonial2 {
+  @include background-cover('../../pages/india/solutions/2.jpg');
+  height: 200px;
+  background-size: contain;
+}
+.programs .image.testimonial3 {
+  @include background-cover('../../pages/india/solutions/3.jpg');
+  height: 200px;
+  background-size: contain;
+}
+.programs .image.testimonial4 {
+  @include background-cover('../../pages/india/solutions/4.jpg');
+  height: 200px;
+  background-size: contain;
+}
+.programs .image.testimonial5 {
+  @include background-cover('../../pages/india/solutions/5.jpg');
+  height: 200px;
+  background-size: contain;
+}
+.programs .image.testimonial6 {
+  @include background-cover('../../pages/india/solutions/6.jpg');
+  height: 200px;
+  background-size: contain;
+}
+
+.programs .image.award1 {
+  @include background-cover('../../pages/india/awards/phc.jpg');
+  height: 200px;
+  background-size: contain;
+}
+.programs .image.award2 {
+  @include background-cover('../../pages/india/awards/vodafone.jpg');
+  height: 200px;
+  background-size: contain;
+}
+.programs .image.award3 {
+  @include background-cover('../../pages/india/awards/innovation.jpg');
+  height: 200px;
+  background-size: contain;
+}
+
+.overview .image.testimonial1 {
+  @include background-cover('../../pages/services/overview1.jpg');
+
+}
+
+.programs .image.testimonial3 {
+  @include background-cover('../../pages/services/case_studies/renew.jpg');
+  height: 200px;
+  background-size: contain;
+}
+
+.programs .image.crs {
+  width: 309px;
+}
+
+.team .image.teampic1 {
+  @include background-cover('../../pages/services/team/teampic1.jpg');
+}
+
+.team .image.teampic2 {
+  @include background-cover('../../pages/services/team/teampic2.jpg');
+}
+
+.team .image.teampic3 {
+  @include background-cover('../../pages/services/team/teampic3.jpg');
+}
+
+.team .image.teampic4 {
+  @include background-cover('../../pages/services/team/teampic4.jpg');
+}
+
+#intro-india {
+    $_base-height: 190px;
+    $_height-by-size: (
+      small: 250px,
+      medium: 250px,
+      large: 250px,
+      extra-large: 256px,
+    );
+    @include make-bg(intro-image, '../../pages/india/intro/intro', $_base-height, $_height-by-size);
+}
+
+.tile {
+  padding: 30px 10px 30px 10px;
+}
+.large {
+  color: #FFFFFF !important;
+}
+.hs-input {
+  width: 100% !important;
+}

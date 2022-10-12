@@ -56,6 +56,7 @@ def get_robots():
 urlpatterns = [
     url(r'^$', pages.home, name='home'),
     url(r'^services/$', pages.services, name='services'),
+    url(r'^india/$', pages.india, name='india'),
     url(r'^resources/$', pages.resources, name='resources'),
     url(r'^research-and-data/$', pages.research_and_data, name='research_and_data'),
     url(r'^partners/$', pages.partners, name='partners'),
