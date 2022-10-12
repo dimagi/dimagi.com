@@ -1,0 +1,33 @@
+{% load dimagidotcom %}
+{% load i18n %}
+
+<div class="column blue-theme">
+  <a class="tile {{ click_class }} accent-gray-bg"
+     href="{% url 'sector' 'financial-inclusion' %}">
+
+    <div class="theme-icon">
+      {% include 'svg/sectors/community_dev/financial_inclusion.html' %}
+    </div>
+
+    <h4 class="blue pad-top-line">
+      {% blocktrans %}
+        Financial Inclusion
+      {% endblocktrans %}
+    </h4>
+
+    <p class="body-color">
+      {% blocktrans %}
+        Financial inclusion programs provide access to and delivery
+        of basic banking services to everyone in the population — especially
+        those below the poverty line.
+      {% endblocktrans %}
+    </p>
+
+    <p class="link pad-top-base">
+      {% blocktrans %}
+        Learn More
+      {% endblocktrans %}
+    </p>
+
+  </a>
+</div>{# .column #}
