@@ -3,18 +3,19 @@
 {% load dimagidotcom %}
 
 {% block title %}{% blocktrans %}
-    CommCare for ICT4D Teams
+  CommCare in the Classroom
 {% endblocktrans %}{% endblock %}
 
 {% block description %}{% blocktrans %}
-    Equip Your Program and M&E Teams for Success at Scale
+  Prepare the next generation of field-ready 
+  professionals with essential app-building skills
 {% endblocktrans %}{% endblock %}
 
-{% block body_class %}commcare-ict4d tucked-hero{% endblock %}
+{% block body_class %}commcare-classroom tucked-hero{% endblock %}
 
 {% block stylesheets %}
   {% compress css %}
-    <link href="{% sass_src 'style/pages/commcare/commcare_ict4d.scss' %}" rel="stylesheet" media="screen" type="text/css" />
+    <link href="{% sass_src 'style/pages/commcare/classroom_LP.scss' %}" rel="stylesheet" media="screen" type="text/css" />
   {% endcompress %}
 {% endblock %}
 
@@ -29,20 +30,13 @@
             CommCare in the Classroom
         {% endblocktrans %}
       </h2>
-      <h1>
+      <h1 class="gap-horz-none ">
         {% blocktrans %}
-          <!-- Equip Your Program and M&E Teams <br class="hide-until-medium" />
-          for Success at Scale -->
-          Prepare the next generation of field-ready 
-          <br/>professionals with essential app-building skills
+          Prepare the next generation of field-ready <br class="hide-until-medium" />
+          professionals with essential app-building skills
 
         {% endblocktrans %}
       </h1>
-      <!-- <p class="cta">
-        {% trans 'Watch a demo' as video_text %}
-        {% click_hero 'video' as video_click_class %}
-        {% include "partials/wistia_popover.html" with wistia_id='nwsl17euy7' show_play=True text=video_text click_class=video_click_class %}
-      </p> -->
       <p class=" pad-top-small">
         <a class="button "
            href="{% url 'services' %}">
@@ -59,10 +53,9 @@
 	<section class="products-commcare-container">
     {% include "sections/commcare/classroom_LP/sub_nav.html" %}
     {% include "sections/commcare/classroom_LP/partners.html" %}
-    {% include "sections/commcare/commcare_ict4d/tools.html" %}
-    {% include "sections/commcare/commcare_ict4d/track_program.html" %}
-    {% include "sections/commcare/commcare_ict4d/testimonials.html" %}
-    {% include "sections/commcare/commcare_ict4d/support.html" %}
-    {% include "sections/commcare/commcare_ict4d/connect_demo.html" %}
+    {% include "sections/commcare/classroom_LP/software_module.html" %}
+    {% include "sections/commcare/classroom_LP/offer.html" %}
+    {% include "sections/commcare/classroom_LP/testimonials.html" %}
+    {% include "sections/commcare/classroom_LP/contact_us.html" %}
   </section>
 {% endblock %}
