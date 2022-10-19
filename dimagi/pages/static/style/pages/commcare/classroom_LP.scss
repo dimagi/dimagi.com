@@ -1,0 +1,65 @@
+@import 'app/mixins/background';
+@import 'app/variables/colors';
+@import 'app/variables/sizes';
+@import 'app/variables/type';
+
+.commcare-classroom {
+  @include make-bg(hero, '../../../pages/commcare/classroom_LP/hero');
+}
+
+@media (min-width: $width-desktop) {
+  .commcare-classroom .hero {
+    h1 {
+      margin-left: 0;
+      margin-right: 0;
+      max-width: 100%;
+    }
+  }
+}
+
+.programs .image.testimonial1 {
+  @include background-cover('../../../pages/commcare/classroom_LP/offer/syallabus.png');
+  height: 200px;
+  background-size: contain;
+}
+
+.programs .image.testimonial2 {
+  @include background-cover('../../../pages/commcare/classroom_LP/offer/noun-teacher.png');
+  height: 200px;
+  background-size: contain;
+}
+
+.programs .image.testimonial3 {
+  @include background-cover('../../../pages/commcare/classroom_LP/offer/academy.png');
+  height: 200px;
+  background-size: contain;
+}
+
+
+.bostan-university {
+  @include background-cover('../../../pages/commcare/classroom_LP/testimonial_3_1.jpg');
+  height: 275px;
+  width: 200px;
+  margin-top: 0px !important;
+}
+
+.bostan-college {
+  @include background-cover('../../../pages/commcare/classroom_LP/testimonial_3_2.jpg');
+  height: 240px;
+  width: 200px;
+  margin-top: 0px !important;
+}
+
+.habib-university {
+  @include background-cover('../../../pages/commcare/classroom_LP/testimonial_3_3.jpg');
+  height: 240px;
+  width: 200px;
+  margin-top: 0px !important;
+}
+
+.tile:not(.tile-no-link) .button {
+  bottom: 30px;
+  left: 50px; 
+  position: absolute;
+  padding: 10px;
+}
