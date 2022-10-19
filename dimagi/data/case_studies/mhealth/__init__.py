@@ -24,6 +24,7 @@ from dimagi.data.case_studies.mhealth import (
     technoserve,
     abt_associates_vectorlink,
     madagascar,
+    tajikistan,
 )
 
 
@@ -53,4 +54,5 @@ studies = (
     technoserve,
     abt_associates_vectorlink,
     madagascar,
+    tajikistan,
 )
