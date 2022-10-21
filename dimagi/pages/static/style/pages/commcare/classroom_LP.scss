@@ -18,40 +18,40 @@
 }
 
 .programs .image.testimonial1 {
-  @include background-cover('../../../pages/commcare/classroom_LP/offer/syallabus.png');
+  @include background-cover('../../../pages/commcare/classroom_LP/offer/syallabus.jpg');
   height: 200px;
   background-size: contain;
 }
 
 .programs .image.testimonial2 {
-  @include background-cover('../../../pages/commcare/classroom_LP/offer/noun-teacher.png');
+  @include background-cover('../../../pages/commcare/classroom_LP/offer/noun-teacher.jpg');
   height: 200px;
   background-size: contain;
 }
 
 .programs .image.testimonial3 {
-  @include background-cover('../../../pages/commcare/classroom_LP/offer/academy.png');
+  @include background-cover('../../../pages/commcare/classroom_LP/offer/academy.jpg');
   height: 200px;
   background-size: contain;
 }
 
 
 .bostan-university {
-  @include background-cover('../../../pages/commcare/classroom_LP/testimonial_3_1.jpg');
+  @include background-cover('../../../pages/commcare/classroom_LP/testimonial1.jpg');
   height: 275px;
   width: 200px;
   margin-top: 0px !important;
 }
 
 .bostan-college {
-  @include background-cover('../../../pages/commcare/classroom_LP/testimonial_3_2.jpg');
+  @include background-cover('../../../pages/commcare/classroom_LP/testimonial2.jpg');
   height: 240px;
   width: 200px;
   margin-top: 0px !important;
 }
 
 .habib-university {
-  @include background-cover('../../../pages/commcare/classroom_LP/testimonial_3_3.jpg');
+  @include background-cover('../../../pages/commcare/classroom_LP/testimonial3.jpg');
   height: 240px;
   width: 200px;
   margin-top: 0px !important;
