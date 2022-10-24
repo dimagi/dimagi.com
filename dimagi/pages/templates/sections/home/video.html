@@ -3,38 +3,33 @@
 
 <section class="video border-vert blue-theme pad-left-large-at-large"
          id="home-commcare">
-  <div class="content content-width-large-at-large pad-bottom-medium-at-large pad-top-small gap-vert-large-at-large">
+  <div class="content pad-bottom-medium-at-large pad-top-small gap-vert-large-at-large">
     <div class="grid grid-2-at-large grid-1-at-medium grid-reverse">
       <div class="column">
-        <div class="gap-bottom-line-at-large pad-horz-small pad-right-none-at-large pad-left-base-at-large">
-          <h4 class="align-left-at-medium align-center gap-top-small theme-icon">
-            {% include "svg/commcare/logo.html" %}
+        <div class="content-width-large gap-bottom-line-at-large pad-horz-small pad-right-none-at-large pad-left-base-at-large">
+          <h4 class="align-left-at-medium align-center gap-top-small ">
+            {% include "svg/commcare/commcare_logo.html" %}
           </h4>
           <h2 class="align-left-at-medium align-center blue">
-            {% blocktrans %}
-              Build Powerful<br class="hide-at-medium" /><br class="hide-until-large" /> Mobile and Web Apps
-            {% endblocktrans %}
+            The Digital Platform for Impactful Frontline Work Everywhere
           </h2>
           <p class="align-left-at-medium align-center lead-text">
             {% blocktrans %}
-              CommCare’s drag-and-drop application builder allows you to create 
-              mobile and web apps for frontline workers to collect accurate data 
-              and deliver effective services.
+              The most advanced and inclusive data collection and service 
+              delivery software is also the easiest to implement and scale. 
             {% endblocktrans %}
           </p>
-          <div class="align-left-at-medium align-center pad-top-base hide-until-medium">
+          <div class="align-left-at-medium align-center pad-top-base ">
             <a class="button"
               href="{% url 'commcare' %}">
               {% blocktrans %}
                 Learn More
               {% endblocktrans %}
             </a>
-          </div>
-          <div class="align-left-at-medium align-center pad-top-small hide-until-medium">
-            <a class="arrow"
-               href="{% url 'covid_19' %}">
+            <a class="arrow gap-left-small"
+              href="#demo-form-modal">
               {% blocktrans %}
-                Learn More about CommCare for COVID-19 response
+                Schedule a demo
               {% endblocktrans %}
             </a>
           </div>
@@ -49,21 +44,5 @@
     <div class="wistia-container">
       {% include "partials/wistia_embed_autoplay.html" with wistia_id='gx2a7tvlh6' %}
     </div>
-  </div>
-  <div class="align-left-at-medium align-center pad-top-base hide-at-medium">
-    <a class="button"
-       href="{% url 'commcare' %}">
-      {% blocktrans %}
-        Learn More
-      {% endblocktrans %}
-    </a>
-  </div>
-  <div class="align-left-at-medium align-center pad-top-line pad-bottom-small hide-at-medium">
-    <a class="arrow"
-       href="{% url 'covid_19' %}">
-      {% blocktrans %}
-        Learn More about CommCare for COVID-19 response
-      {% endblocktrans %}
-    </a>
   </div>
 </section>
