@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block body_class %}india-page tucked-hero{% endblock %}
+
+{% block title %}{% blocktrans %}
+  High-impact digital solutions customized for India and Asia
+{% endblocktrans %}{% endblock %}
+
+{% block description %}{% blocktrans %}
+  Dimagi’s India Division drives excellence in the implementation of
+  digital solutions, creating unprecedented impact tailored for local market needs.
+{% endblocktrans %}{% endblock %}
+
+{% block stylesheets %}
+  {% compress css %}
+    <link href="{% sass_src 'style/pages/india_lp.scss' %}" rel="stylesheet" media="screen" type="text/css" />
+  {% endcompress %}
+{% endblock %}
+
+{% block hero %}
+  <div id="top"></div>
+  <section class="hero hero-india"
+           data-lazybg="true"
+           id="hero">
+    <div class="content content-width-large inverted align-center display-flex flex-valign-middle expand-vertical offset-top-small flex-align-center">
+      <div class="copy expand position-relative">
+
+        <h1 class="header-custom content-width-medium">
+          {% blocktrans %}
+            India Division
+          {% endblocktrans %}
+        </h1>
+  
+        <div class="sub-header-custom headline content-width-medium">
+          {% blocktrans %}
+            Designing and scaling  sustainable, high-impact digital solutions  <br class="hide-until-medium" />
+            customized for the needs of India and Asian region
+          {% endblocktrans %}
+        </div>{# .headline #}
+  
+        <p class="align-center pad-top-medium">
+          <a href="#global-india-form"
+             class="button inverse alt {% click_hero 'demo' %}">
+            {% blocktrans %}
+              Contact Us
+            {% endblocktrans %}
+          </a>
+        </p>
+  
+      </div>{# .copy #}
+    </div>{# .content #}
+  </section>
+{% endblock %}
+
+{% block content %}
+  <section class="services-container">
+    {% include "sections/india/intro.html" %}
+    {% include "sections/india/sectors.html" %}
+    {% include "sections/india/partners.html" %}
+    {% include "sections/india/impact.html" %}
+    {% include "sections/india/awards.html" %}
+  </section>
+{% endblock %}
+
+{% block modals %}
+  <div class="modal"
+     data-dismissible="true"
+     data-size="medium"
+     id="global-india-form">
+    <div class="modal-scroll">
+      <div class="modal-wrapper">
+        <a href="#" class="modal-close-button"></a>
+        <div class="content pad-horz-medium-at-medium pad-horz-line pad-vert-none blue-theme">
+          <h3>
+            {% blocktrans %}
+              Contact our India and Asia region team
+            {% endblocktrans %}
+          </h3>
+          <section id="india-form-content"></section>
+        </div>{# .content #}
+      </div>{# .modal-wrapper #}
+    </div>{# .modal-scroll #}
+  </div>{# .modal #}
+{% endblock %}
+
+{% block js %}
+  <!--[if lte IE 8]>
+    <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+  <![endif]-->
+  <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+  <script>
+    hbspt.forms.create({
+      portalId: "503070",
+      formId: "e7eceb51-d1c8-4ca4-bd43-fb7511578f53",
+      target: "#india-form-content",
+      css: ""
+    });
+  </script>
+{% endblock %}

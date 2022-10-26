@@ -1,0 +1,89 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="pad-top-small pad-bottom-large"
+         id="leadership">
+  <div class="content align-center">
+    <h2 class="theme-color uppercase">
+      {% blocktrans %}
+        Recognition & Leadership
+      {% endblocktrans %}
+    </h2>
+    <div class="grid grid-flex-at-small grid-valign-middle pad-vert-line">
+        <div class="column no-shrink">
+          <div class="theme-icon align-center align-left-at-small">
+            {% include "svg/about/profile/award.html" %}
+          </div>
+          <h5 class="orange pad-top-line uppercase">Awards</h5>
+        </div>{# .column #}
+        <div class="grid-flex border-bottom gap-left-large">
+          <div>
+            <div class="pad-small">
+              <div class="feature-partner-im-saf column flex-align-left-at-large align-center">
+                {% include "svg/about/profile/bloomberg.html" %}
+              </div>
+              <div class="column">
+                <a class="pad-left-small pad-top-base" href="https://www.bloomberg.com/news/articles/2011-06-22/americas-most-promising-social-entrepreneurs-2011" target="_blank">
+                  {% blocktrans %}
+                    <h5 class="align-left-at-medium align-center slate">Business Week Award for Top Social entrepreneur</h5>
+                  {% endblocktrans %}
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="gap-left-large">
+            <div class="pad-small">
+              <div class="feature-partner-im-saf column flex-align-left-at-large align-center">
+                {% include "svg/about/profile/sfc.html" %}
+              </div>
+              <div class="column">
+                <a class="pad-left-small pad-top-base" href="https://www.schwabfound.org/awardees/jonathan-jackson" target="_blank">
+                  {% blocktrans %}
+                    <h5 class="align-left-at-medium align-center slate">Schwab Foundation Social Entrepreneur</h5>
+                  {% endblocktrans %}
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>{# .grid #}
+    <div class="grid grid-flex-at-small grid-valign-middle pad-vert-line">
+        <div class="column no-shrink">
+          <div class="theme-icon align-center align-left-at-small">
+            {% include "svg/about/profile/member.html" %}
+          </div>
+          <h4 class="orange pad-top-line uppercase">Board Member</h4>
+        </div>{# .column #}
+        <div class="grid-flex gap-left-large">
+          <div>
+            <div class="pad-small">
+              <div class="feature-partner-im-saf column flex-align-left-at-large align-center">
+                {% include "svg/about/profile/spark.html" %}
+              </div>
+              <div class="column">
+                <a class="pad-left-small pad-top-base" href="https://www.sparkmicrogrants.org/our-team" target="_blank">
+                  {% blocktrans %}
+                    <h4 class="align-left-at-medium align-center slate">Spark Microgrants</h4>
+                  {% endblocktrans %}
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="gap-left-large">
+            <div class="pad-small">
+              <div class="feature-partner-im-saf column flex-align-left-at-large align-center">
+                {% include "svg/about/profile/simprints.html" %}
+              </div>
+              <div class="column">
+                <a class="pad-left-small pad-top-base" href="https://www.simprints.com/about" target="_blank">
+                  {% blocktrans %}
+                    <h5 class="align-left-at-medium align-center slate">SimPrints</h5>
+                  {% endblocktrans %}
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>{# .grid #}
+  </div>
+</section>

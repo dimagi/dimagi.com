@@ -16,4 +16,5 @@ from dimagi.pages.views.core import (
     referral_commcare,
     update_referral_status,
     focus_placeholder,
+    india,
 )

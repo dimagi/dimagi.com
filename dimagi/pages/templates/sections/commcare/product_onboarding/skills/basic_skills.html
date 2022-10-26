@@ -1,0 +1,49 @@
+{% extends 'sections/commcare/product_onboarding/onboard/_base.html' %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block feature_class %}quick-start green-border{% endblock %}
+{% block icon_class %}green-icon{% endblock %}
+{% block title_class %}green{% endblock %}
+{% block list_class %}green-check {% endblock %}
+
+{% block icon %}
+  {% include "svg/commcare/onboarding/start.html" %}
+{% endblock %}
+
+{% block feature_title %}
+  {% blocktrans %}
+    BASIC SKILLS
+  {% endblocktrans %}
+{% endblock %}
+
+{% block feature_price %}
+  {% blocktrans %}
+    $15,000
+  {% endblocktrans %}
+{% endblock %}
+
+{% block feature_description %}
+  {% blocktrans %}
+  Perfect for organizations who have never used CommCare before, and are trying to upskill their entire organization. 
+  This will go over the most basic, foundational skills in order to learn CommCare, covering 20 topics in 30 hours of calls.
+  {% endblocktrans %}
+{% endblock %}
+
+{% block features_list %}
+  <li>
+    {% blocktrans %}
+       30 hours of feature-based training sessions    
+    {% endblocktrans %}
+  </li>
+  <li>
+    {% blocktrans %}
+       Practical, live exercises completed during each session
+    {% endblocktrans %}
+  </li>
+  <li>
+    {% blocktrans %}
+        Direct access to Customer Success Support in between sessions
+    {% endblocktrans %}
+  </li>
+{% endblock %}
