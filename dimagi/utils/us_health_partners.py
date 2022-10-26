@@ -15,6 +15,7 @@ WEB = [
     ],
     [
         "svg/partner/services/idb.html",
+        "svg/partner/services/pih.html",
     ],
 ]
 
@@ -30,6 +31,7 @@ MOBILE = [
         "svg/partner/services/dai.html",
         "svg/partner/services/fhi.html",
         "svg/partner/services/find.html",
+        "svg/partner/services/pih.html",
     ],
     [
         "svg/partner/services/hki.html",

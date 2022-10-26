@@ -65,7 +65,7 @@ def covid_19(request):
 
 def us_health(request):
     context = {
-        'posts': get_json("blog/covid-19")['posts'][:3],
+        'posts': get_json("blog/archive/")['posts'][:2],
         'partners': get_us_health_partners(),
     }
     return render(request, 'pages/us_health.html', context)

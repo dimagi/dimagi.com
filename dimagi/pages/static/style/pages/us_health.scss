@@ -11,6 +11,10 @@
     max-width: 90%;
   }
 }
+.resource-image {
+  @include background-cover('../../pages/us_health/resource.jpg');
+  background-position: center;
+}
 .intro-section {
   $_base-height: 195px;
   $_height-by-size: (
