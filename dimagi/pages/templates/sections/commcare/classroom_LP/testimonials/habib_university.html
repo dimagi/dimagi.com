@@ -1,0 +1,34 @@
+{% extends "sections/commcare/classroom_LP/testimonials/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block image_class%}habib-university{% endblock %}
+
+{% block content %}
+<div class="testimonial-content content-width-medium align-left pad-horz-base">
+  <h6 class="blue testimonial-org">
+    {% blocktrans %}
+      Habib University
+    {% endblocktrans %}
+  </h6>
+  <p>
+    {% blocktrans %}
+      “It was a pleasure and privilege to host Dev More from Dimagi
+      to talk about Commcare in my 'Health Communication’ course held
+      at Habib University during spring semester 2022 in Pakistan.
+      The country is facing a myriad of health issues and CommCare’s
+      technological infrastructure and user-friendly design can be
+      significantly instrumental in reducing the gap between healthcare
+      providers and communities. I highly recommend CommCare for wide
+      scale use in Pakistan!”
+    {% endblocktrans %}
+  </p>
+  <div class="attribution-heading body-color uppercase">
+    <p class="pad-bottom-base">
+      {% blocktrans %}
+        <strong> Syed Ali Hussein </strong> | Assistant Professor
+      {% endblocktrans %}
+    </p>
+  </div>
+</div>
+{% endblock %}

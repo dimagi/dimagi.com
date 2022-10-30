@@ -41,6 +41,10 @@ def pricing(request):
 
 def research(request):
     return render(request, 'pages/commcare/research.html')
+    
+
+def classroom(request):
+    return render(request, 'pages/commcare/classroom.html')
 
 
 def handle_pricing_pdf(is_monthly):

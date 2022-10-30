@@ -1,0 +1,34 @@
+{% extends "sections/commcare/classroom_LP/testimonials/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block image_class%}bostan-college{% endblock %}
+
+{% block content %}
+  <div class="testimonial-content content-width-medium align-left pad-horz-base">
+    <h6 class="blue testimonial-org">
+      {% blocktrans %}
+        Boston College 
+      {% endblocktrans %}
+    </h6>
+    <p>
+      {% blocktrans %}
+        “Commcare is hands-down the most versatile & user-friendly 
+        digital health platform for practitioners and educators. 
+        I have embraced CommCare to facilitate group exercises for 
+        university learners ranging from undergraduate business 
+        students learning about mobile technology and social impact, 
+        to graduate public-health students with global health specializations.
+         Dimagi has a wealth of tutorials and guides, and their product t
+         eam is incredibly responsive and supportive to educators. ”
+      {% endblocktrans %}  
+    </p>
+    <div class="attribution-heading body-color uppercase">
+      <p class="pad-bottom-base">
+      {% blocktrans %}
+        <strong> Ryan Littman-Quinn </strong> | Managing for Social Impact Faculty & Entrepreneur-in-Residence
+      {% endblocktrans %}
+      </p>
+    </div>
+  </div>
+{% endblock %}
