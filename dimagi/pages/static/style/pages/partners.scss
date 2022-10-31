@@ -131,6 +131,36 @@
   width: 120px;
 }
 
+.feature-partner-bongo-hive .image {
+  @include background-cover('../../../static/pages/commcare/partners/featured_partners/bongo_hive.png');
+  height: 100px;
+  width: 111px;
+}
+
+.feature-partner-good-citizen .image {
+  @include background-cover('../../../static/pages/commcare/partners/featured_partners/good_citizen.png');
+  height: 100px;
+  width: 111px;
+}
+
+.feature-partner-compelling-works .image {
+  @include background-cover('../../../static/pages/commcare/partners/featured_partners/compelling_works.png');
+  height: 100px;
+  width: 111px;
+}
+
+.feature-partner-instrat .image {
+  @include background-cover('../../../static/pages/commcare/partners/featured_partners/instrat.png');
+  height: 100px;
+  width: 111px;
+}
+
+.feature-partner-it4life .image {
+  @include background-cover('../../../static/pages/commcare/partners/featured_partners/it4life.png');
+  height: 100px;
+  width: 111px;
+}
+
 .feature-project-logo {
   margin: 0 auto;
 }
