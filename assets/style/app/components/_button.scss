@@ -96,7 +96,7 @@
 
   %base-button-color {
     background-color: $_color;
-    color: color-invert($_color);
+    color: color-invert($_color) !important; // scss-lint:disable ImportantRule
   }
 
   .button {
@@ -124,7 +124,7 @@
     input[type="reset"]:hover,
     input[type="reset"]:focus {
       background-color: color-hover($_color);
-      color: color-invert($_color);
+      color: color-invert($_color) !important; // scss-lint:disable ImportantRule
     }
   }
 
@@ -135,7 +135,7 @@
     input[type="submit"]:active,
     input[type="reset"]:active {
       background-color: color-button-active($_color);
-      color: color-invert($_color);
+      color: color-invert($_color) !important; // scss-lint:disable ImportantRule
     }
   }
 
@@ -287,7 +287,7 @@
     input[type="submit"].button-#{$_theme},
     input[type="reset"].button-#{$_theme} {
       background-color: $_color;
-      color: color-invert($_color);
+      color: color-invert($_color) !important; // scss-lint:disable ImportantRule
     }
 
     .button.button-#{$_theme}:hover,
@@ -301,7 +301,7 @@
     input[type="reset"].button-#{$_theme}:hover,
     input[type="reset"].button-#{$_theme}:focus {
       background-color: color-hover($_color);
-      color: color-invert($_color);
+      color: color-invert($_color) !important; // scss-lint:disable ImportantRule
     }
 
     .button.button-#{$_theme}:active,
@@ -310,7 +310,7 @@
     input[type="submit"].button-#{$_theme}:active,
     input[type="reset"].button-#{$_theme}:active {
       background-color: color-active($_color);
-      color: color-invert($_color);
+      color: color-invert($_color) !important; // scss-lint:disable ImportantRule
     }
 
     .button.button-#{$_theme}.alt,
