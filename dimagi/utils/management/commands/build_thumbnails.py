@@ -18,22 +18,26 @@ class Command(BaseCommand):
         print("Building Thumbnails")
 
         prefix = os.getcwd()
-
+        thumbnails_needed = []
         for finder in finders.get_finders():
             for path, storage in finder.list(['.*', '*~', '* *']):
                 if not storage.location.startswith(prefix):
                     continue
+                if 'thumbnails/' in path:
+                    continue
                 if path.endswith('.jpg') or path.endswith('.png'):
                     source = os.path.join(storage.location, path)
                     dest = os.path.join(storage.location, THUMBNAIL_DIR, path)
-                    self.make_thumbnail(source, dest)
+                    thumbnails_needed.append((source, dest))
+        for info in thumbnails_needed:
+            self.make_thumbnail(info[0], info[1])
 
     def make_thumbnail(self, source, dest):
         im = Image.open(source)
         im.thumbnail((200, 200), Image.ANTIALIAS)
 
-        dest_dir = "/".join(dest.split('/')[:-1])
+        dest_dir = "/".join(dest.split('/')[:-1]) + "/"
         if not os.path.exists(dest_dir):
             os.makedirs(dest_dir)
-
+        self.stdout.write(f"building thumbnail: {dest}")
         im.save(dest, "PNG")
