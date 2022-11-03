@@ -15,7 +15,9 @@ class Command(PushStaticCommand):
     '''
 
     def handle(self, **options):
-        output = subprocess.Popen("git diff master --name-only", shell=True, stdout=subprocess.PIPE, text=True)
+        output = subprocess.Popen(
+            "git diff master --name-only", shell=True, stdout=subprocess.PIPE, universal_newlines=True
+        )
         changed_images = [s.replace('dimagi/pages/static/', '') for s in output.stdout.read().split('\n')
                           if 'static' in s and not (s.endswith('.scss') or s.endswith('.js'))]
         files_to_push = []
