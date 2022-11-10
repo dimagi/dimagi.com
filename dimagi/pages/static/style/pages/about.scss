@@ -45,11 +45,11 @@
 }
 
 .about-pillars .wellbeing svg {
-  background-color: $color-orange-lightest;
+  background-color: $color-blue-lightest;
   @include svg-style;
 }
 .about-pillars .inclusive {
-  background-color: $color-purple-lightest;
+  background-color: $color-blue-lightest;
   @include svg-style;
 }
 .about-pillars .robust svg {
@@ -57,7 +57,7 @@
   @include svg-style;
 }
 .about-pillars .market-driven {
-  background-color: #F6FBF4;
+  background-color: $color-blue-lightest;
   @include svg-style;
 }
 .team {
@@ -120,7 +120,7 @@ ul.timeline-list > li:before{ // scss-lint:disable PropertyCount
     @include svg-style-mobile;
  }
  .about-pillars .inclusive {
-    background-color: $color-purple-lightest;
+    background-color: $color-primary-lightest;
     @include svg-style-mobile;
  }
  .about-pillars .robust svg {
@@ -155,7 +155,7 @@ ul.timeline-list > li:before{ // scss-lint:disable PropertyCount
     @include svg-style-tab;
   }
   .about-pillars .inclusive {
-   background-color: $color-purple-lightest;
+   background-color: $color-primary-lightest;
    @include svg-style-tab;
   }
   .about-pillars .robust svg {
@@ -186,11 +186,11 @@ ul.timeline-list > li:before{ // scss-lint:disable PropertyCount
     margin-top: -60px;
   }
   .about-pillars .wellbeing svg {
-    background-color: $color-orange-lightest;
+    background-color: $color-blue-lightest;
     @include svg-style-lg;
   }
   .about-pillars .inclusive {
-   background-color: $color-purple-lightest;
+   background-color: $color-blue-lightest;
    @include svg-style-lg;
   }
   .about-pillars .robust svg {
@@ -198,7 +198,7 @@ ul.timeline-list > li:before{ // scss-lint:disable PropertyCount
    @include svg-style-lg;
   }
   .about-pillars .market-driven {
-   background-color: #F6FBF4;
+   background-color: $color-blue-lightest;
    @include svg-style-lg;
   }
 }
