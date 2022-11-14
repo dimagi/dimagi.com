@@ -52,14 +52,14 @@
 
 .habib-university {
   @include background-cover('../../../pages/commcare/classroom_LP/testimonial3.jpg');
-  height: 240px;
+  height: 250px;
   width: 200px;
   margin-top: 0px !important;
 }
 
 .tile:not(.tile-no-link) .button {
   bottom: 30px;
-  left: 50px; 
+  left: 30px; 
   position: absolute;
   padding: 10px;
 }
