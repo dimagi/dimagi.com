@@ -101,8 +101,12 @@ ul.timeline-list > li:before{ // scss-lint:disable PropertyCount
   margin-top: 14px;
 }
 
-.hero h2 {
-  font-weight: 500;
+.about-hero {
+  font-weight: 500 !important;
+}
+
+.our-team-background {
+  background-color : #fbfbfb !important;
 }
 
 .heading-vertical-line {
