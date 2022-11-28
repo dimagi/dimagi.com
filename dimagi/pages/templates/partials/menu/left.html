@@ -1,7 +1,7 @@
 {% load i18n %}
 {% load dimagidotcom %}
 
-<div class="hide-until-large display-flex flex-valign-middle nav-center-to-logo"
+<div class="hide-until-large display-flex flex-valign-middle nav-center-to-logo gray-lightest"
   {% if request.is_amp %}
     [class]="nav_hide1"
   {% endif %}>
@@ -52,7 +52,7 @@
   </a>
 </div>{# .hide-until-large #}
 
-<a class="menu-open hide-at-large {% click_nav 'more-mobile' %}"
+<a class="menu-open hide-at-large gray-lightest {% click_nav 'more-mobile' %}"
    data-drawer="menu-drawer"
    {% if request.is_amp %}
     [class]="nav_hide2"
