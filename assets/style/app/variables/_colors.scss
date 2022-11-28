@@ -23,6 +23,8 @@ $color-secondary:           #E44434;
 $color-secondary-light:     #FC5F36;
 $color-secondary-lightest:  #FEAF31;
 
+$color-commcare-default: #5D70D2;
+
 $color-gradient-10:         mix($color-secondary-light, $color-primary-light, 10);
 $color-gradient-20:         mix($color-secondary-light, $color-primary-light, 20);
 $color-gradient-30:         mix($color-secondary-light, $color-primary-light, 30);
@@ -100,6 +102,7 @@ $colors-by-theme: (
   secondary: $color-secondary,
   secondary-light: $color-secondary-light,
   secondary-lightest: $color-secondary-lightest,
+  commcare-default: $color-commcare-default,
   gray: $color-gray,
   gray-light: $color-gray-light,
   gray-lightest: $color-gray-lightest,
