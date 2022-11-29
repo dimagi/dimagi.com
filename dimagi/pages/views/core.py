@@ -35,12 +35,12 @@ def services(request):
     }
     return render(request, 'pages/services.html', context)
 
+
 def india(request):
     context = {
         'partners': get_india_partners(),
     }
     return render(request, 'pages/india.html', context)
-
 
 
 def partners(request):
