@@ -25,7 +25,6 @@ from dimagi.pages.models.partners import latestPartners
 def home(request):
     context = {
         'partners': get_logos(),
-        'is_inverse_header': True,
     }
     return render(request, 'pages/home.html', context)
 
@@ -36,12 +35,12 @@ def services(request):
     }
     return render(request, 'pages/services.html', context)
 
+
 def india(request):
     context = {
         'partners': get_india_partners(),
     }
     return render(request, 'pages/india.html', context)
-
 
 
 def partners(request):
