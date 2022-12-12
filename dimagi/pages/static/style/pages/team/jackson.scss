@@ -42,7 +42,7 @@
 }
 
 .news-images .image.blog2 {
-  @include background-cover('../../../pages/about/profile/podcast2.jpg');
+  @include background-cover('../../../pages/about/profile/podcast2.png');
   background-size: contain;
   background-position: left;
 }
