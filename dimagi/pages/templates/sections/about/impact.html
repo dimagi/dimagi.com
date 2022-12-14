@@ -1,10 +1,9 @@
 {% load i18n %}
 {% load dimagidotcom %}
 
-<section class="impact"
-         id="our_impact">
-  <div class="content pad-bottom-medium-at-medium pad-top-small">
-    <div class="content-width-medium align-center gap-bottom-small pad-horz-small">
+<section class="impact" id="our_impact">
+  <div class="content content-width-large-at-medium pad-bottom-medium">
+    <div class=" align-center blue-lightest-bg gap-bottom-small pad-horz-small">
       <h2 class="pad-top-small">
         {% blocktrans %}
           Our Impact
@@ -12,53 +11,137 @@
       </h2>
       <p>
         {% blocktrans %}
-        Dimagi is a <a href="https://www.bcorporation.net/en-us/find-a-b-corp/company/dimagi-inc/" target="_blank">B Corp</a> and 
-        certified Benefit Corporation, reflecting our commitment to making an impact. View 
-        our <a href="https://sites.dimagi.com/hubfs/Dimagi%20Benefit%20Report.pdf?_ga=2.153343163.223596530.1647889297-570068542.1623177327" target="_blank">Annual Benefit Report</a>.
-        {% endblocktrans %} 
+          Dimagi is a <a href="https://www.bcorporation.net/en-us/find-a-b-corp/company/dimagi-inc/" target="_blank" class ="primary-light">B
+          Corp</a> and certified Benefit Corporation, reflecting our commitment to making an impact.<br/> View
+          our <a href="https://sites.dimagi.com/hubfs/Dimagi%20Benefit%20Report.pdf?_ga=2.153343163.223596530.1647889297-570068542.1623177327"
+          target="_blank" class ="primary-light" >Annual Benefit Report</a>.
+        {% endblocktrans %}
       </p>
+
+      <div class="grid-3-at-medium gap-bottom-small">
+        <div class="column pad-horz-medium-at-medium pad-top-small">
+          <h3 class="primary-light-color gap-bottom-line align-center">
+            {% blocktrans %}
+              130+
+            {% endblocktrans %}
+          </h3>
+          <p class="align-center font-weight-medium">
+            {% blocktrans %}
+              Countries with CommCare users
+            {% endblocktrans %}
+          </p>
+        </div>{# .column #}
+
+        <div class="column pad-horz-medium-at-medium pad-top-small">
+          <h3 class="primary-light-color gap-bottom-line align-center">
+            {% blocktrans %}
+              3000+
+            {% endblocktrans %}
+          </h3>
+          <p class="align-center font-weight-medium">
+            {% blocktrans %}
+              Total projects affiliated with CommCare
+            {% endblocktrans %}
+          </p>
+        </div>{# .column #}
+
+        <div class="column pad-horz-medium-at-medium pad-top-small">
+          <h3 class="primary-light-color gap-bottom-line align-center">
+            {% blocktrans %}
+              1 Million+
+            {% endblocktrans %}
+          </h3>
+          <p class="align-center font-weight-medium">
+            {% blocktrans %}
+              Users supported with CommCare
+            {% endblocktrans %}
+          </p>
+        </div>{# .column #}
+      </div>{# .grid-2-at-medium #}
     </div>{# .intro #}
-
-    <div class="grid-3-at-medium gap-bottom-small">
-      <div class="column pad-horz-medium-at-medium pad-top-small">
-        <h3 class="theme-color gap-bottom-line align-center">
+    <div class="content-width-medium align-center pad-top-line pad-bottom-small">
+      <h3 class="mission-heading">
+        {% blocktrans %}
+          To create and scale the most impact, we evaluate <br />our work against four pillars.
+        {% endblocktrans %}
+      </h3>
+    </div>
+    <div class="design-tool content grid-4-at-medium gap-bottom-small">
+      <div class="about-pillars column align-center pad-horz-small-at-medium pad-top-small pad-bottom-small">
+        <div class="primary-light-icon wellbeing gap-bottom-line align-center">
+          {% include 'svg/about/icons/pillars/wellbeing.html' %}
+        </div>
+        <h5 class="text-color gap-bottom-line">
           {% blocktrans %}
-            130+
+            Improves wellbeing
           {% endblocktrans %}
-        </h3>
-        <p class="align-center font-weight-medium">
+        </h5>
+        <p class="body-color font-weight-light">
           {% blocktrans %}
-            Countries with CommCare users
-          {% endblocktrans %}
-        </p>
-      </div>{# .column #}
-
-      <div class="column pad-horz-medium-at-medium pad-top-small">
-        <h3 class="theme-color gap-bottom-line align-center">
-          {% blocktrans %}
-            3000+
-          {% endblocktrans %}
-        </h3>
-        <p class="align-center font-weight-medium">
-          {% blocktrans %}
-            Total projects affiliated with CommCare
+            We seek ideas that have the potential to
+            ambitiously and provably improve wellbeing.
           {% endblocktrans %}
         </p>
       </div>{# .column #}
 
-      <div class="column pad-horz-medium-at-medium pad-top-small">
-        <h3 class="theme-color gap-bottom-line align-center">
+      <div class="about-pillars column align-center pad-horz-small-at-medium pad-top-small pad-bottom-small">
+        <div class="primary-light-icon gap-bottom-line inclusive">
+          {% include 'svg/about/icons/pillars/inclusive.html' %}
+        </div>
+        <h5 class="text-color gap-bottom-line">
           {% blocktrans %}
-            1 Million+
+            Inclusive
           {% endblocktrans %}
-        </h3>
-        <p class="align-center font-weight-medium">
+        </h5>
+        <p class="body-color font-weight-light">
           {% blocktrans %}
-            Users supported with CommCare
+            We design to reach the most underserved populations,
+            especially in technically challenging contexts.
           {% endblocktrans %}
         </p>
       </div>{# .column #}
-    </div>{# .grid-2-at-medium #}
-    
+
+      <div class="about-pillars column align-center pad-horz-small-at-medium pad-top-small pad-bottom-small">
+        <div class="primary-light-icon gap-bottom-line robust">
+          {% include 'svg/about/icons/pillars/robust.html' %}
+        </div>
+        <h5 class="text-color gap-bottom-line">
+          {% blocktrans %}
+            Robust
+          {% endblocktrans %}
+        </h5>
+        <p class="body-color font-weight-light">
+          {% blocktrans %}
+            We focus on building robust technology that meets the
+            highest standards with a long-lasting foundation.
+          {% endblocktrans %}
+        </p>
+      </div>{# .column #}
+
+      <div class="about-pillars column align-center pad-horz-small-at-medium pad-top-small pad-bottom-small">
+        <div class="primary-light-icon gap-bottom-line align-center market-driven">
+          {% include 'svg/about/icons/pillars/market-driven.html' %}
+        </div>
+        <h5 class="text-color gap-bottom-line">
+          {% blocktrans %}
+            Market-driven
+          {% endblocktrans %}
+        </h5>
+        <p class="body-color font-weight-light">
+          {% blocktrans %}
+            We balance merit and market. We ensure that all work
+            has a path to scale via the market.
+          {% endblocktrans %}
+        </p>
+      </div>{# .column #}
+    </div>{# .grid-3-at-medium #}
+    <div class="align-center ">
+      <a class="button primary-bg"
+        href="https://docs.google.com/document/u/1/d/1v_ial9hXI7Hy0c_T4A1uX-VOgx4DNeKNC_o_PZy4F2k/edit">
+        {% blocktrans %}
+          Our Approach to Impact
+        {% endblocktrans %}
+      </a>
+    </div>
   </div>{# .content #}
 </section>

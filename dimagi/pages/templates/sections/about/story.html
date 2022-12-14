@@ -1,30 +1,35 @@
 {% load i18n %}
 {% load dimagidotcom %}
 
-<section class="story accent-gray-bg"
+<section class="story "
          id="our_story">
-  <div class="content pad-vert-small">
+  <div class="content pad-vert-none">
     <div class="content-width-large">
       <h2 class="align-center pad-top-small">
         {% blocktrans %}
           Our Story
         {% endblocktrans %}
       </h2>
-      <p class="align-center">
+      <p class="align-center ">
         {% blocktrans %}
           Dimagi’s story is one of resilience and well-timed pivots 
           combined with an unshakable commitment<br class="hide-until-medium" />
           to positive impact on our end users and their communities.
+            <a class = "primary-light-color"
+               href="https://anchor.fm/high-impact-growth/"
+               target="_blank">
+               Hear our story on our podcast
+            </a>
         {% endblocktrans %}
       </p>
     </div>
     {% include "sections/about/timeline.html" %}
-    <div class="column align-center pad-vert-small">
+    <div class="column align-center pad-top-medium">
       <a class="arrow"
-         href="https://aidevolved.com/podcast/jon-jackson/"
+         href="https://dimagi.com/blog/dimagis-5-year-strategy/"
          target="_blank">
         {% blocktrans %}
-          Hear the full story from CEO, Jonathan Jackson
+          Read our five-year strategy to know where we’re headed 
         {% endblocktrans %}
       </a>
     </div>{# .column #}

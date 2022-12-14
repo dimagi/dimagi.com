@@ -59,7 +59,7 @@
   }
 
   .carousel-number {
-    border: 2px solid $color-blue;
+    border: 2px solid $color-commcare-default;
     border-radius: 50%;
     cursor: pointer;
     display: inline-block;
@@ -69,7 +69,7 @@
     width: $space-small;
 
     &.selected {
-      background-color: $color-blue;
+      background-color: $color-commcare-default;
       color: $color-white;
     }
   }

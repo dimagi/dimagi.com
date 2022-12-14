@@ -3,7 +3,7 @@
 {% load dimagidotcom %}
 
 {% block title %}{% blocktrans %}
-  About Dimagi | Digital Solutions for Frontline Impact
+  About Dimagi | Software you can trust. People your people can rely on
 {% endblocktrans %}{% endblock %}
 
 {% block description %}{% blocktrans %}
@@ -23,11 +23,11 @@
 
 {% block hero %}
  <div id="top"></div>
-  <section class="hero hero-about orange-theme"
+  <section class="hero hero-about"
            data-lazybg="true"
            id="hero">
     <div class="content align-left-at-medium align-center">
-      <h2 class="gap-bottom-base gap-top-medium">
+      <h2 class="about-hero gap-bottom-base gap-top-medium">
         {% blocktrans %}
           About Dimagi
         {% endblocktrans %}
@@ -35,21 +35,21 @@
 
       <h1 class="content-width-medium">
         {% blocktrans %}
-          Digital solutions for frontline impact
+          Software you can trust. <br/>People your people can rely on.
         {% endblocktrans %}
       </h1>
 
       <div class="headline">
         {% blocktrans %}
-          Dimagi is a certified Benefit Corporation and leading 
-          social enterprise helping<br class="hide-until-medium" />
-          organizations maximize the impact of their frontline workforces.
+          Dimagi is a global social enterprise enabling impactful 
+          frontline work <br class="hide-until-medium" /> through 
+          scalable digital solutions and expert services.
         {% endblocktrans %}
       </div>{# .headline #}
 
-      <p class="pad-top-medium">
+      <p class="pad-top-medium white-theme">
         <a href="#about-us-contact-form"
-           class="button {% click_hero 'demo' %}">
+           class="button inverted alt {% click_hero 'demo' %}">
           {% blocktrans %}
             Contact Us
           {% endblocktrans %}
@@ -60,11 +60,12 @@
 {% endblock %}
 
 {% block content %}
-  <section class="about-container orange-theme">
+  <section class="about-container primary-theme">
     {% include "sections/about/sub_nav.html" %}
     {% include "sections/about/mission.html" %}
-    {% include "sections/about/story.html" %}
     {% include "sections/about/impact.html" %}
+    {% include "sections/about/story.html" %}
+    {% include "sections/about/values.html" %}
     {% include "sections/about/team.html" %}
     {% include "sections/about/resources.html" %}
   </section>
@@ -78,7 +79,7 @@
     <div class="modal-scroll">
       <div class="modal-wrapper">
         <a href="#" class="modal-close-button"></a>
-        <div class="content pad-horz-medium-at-medium pad-horz-line pad-vert-none orange-theme">
+        <div class="content pad-horz-medium-at-medium pad-horz-line pad-vert-none ">
           <h3>Contact Us</h3>
           <section id="about-us-contact-form-content"></section>
         </div>{# .content #}

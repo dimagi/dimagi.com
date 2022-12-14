@@ -1,0 +1,23 @@
+{% extends "sections/about/resources/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block icon %}
+  {% include "svg/about/icons/podcast.html" %}
+{% endblock %}
+
+{% block header %}{% blocktrans %}
+  Podcast
+{% endblocktrans %}{% endblock %}
+
+{% block content %}{% blocktrans %}
+  Hear stories from Dimagi and industry leaders on High-Impact Growth.
+{% endblocktrans %}{% endblock %}
+
+{% block link %}
+  https://anchor.fm/high-impact-growth/
+{% endblock %}
+
+{% block link_text %}{% blocktrans %}
+  Listen now 
+{% endblocktrans %}{% endblock %}

@@ -1,48 +1,47 @@
 {% load i18n %}
 {% load dimagidotcom %}
 
-<section class="team "
-         id="our_team">
+<section class="team " id="our_team">
   <div class="pad-bottom-small pad-top-small">
-    <div class="accent-gray-bg pad-bottom-line">
+    <div class="our-team-background  pad-small">
       <div class="align-center content-width-medium pad-vert-small">
-        <h2 class="pad-top-small">
+        <h2>
           {% blocktrans %}
             Our Team
           {% endblocktrans %}
         </h2>
         <p class="pad-horz-small">
           {% blocktrans %}
-            We are a diverse group of problem solvers, technologists, 
-            public health professionals, and social impact enthusiasts 
-            coming together to create a more equitable world 
+            We are a diverse group of problem solvers, technologists,
+            public health professionals, and social impact enthusiasts
+            coming together to create a more equitable world
           {% endblocktrans %}
         </p>
         {% include "sections/about/team/grid.html" %}
-      </div>{# .intro #}
-    </div>
+      </div>
 
-    <div class="content-width-medium pad-top-small">
-      <p class="align-center pad-bottom-small pad-horz-small">
-        {% blocktrans %}
-          We work from all over the world including offices in Cambridge, 
-          Massachusetts, <br class="hide-until-medium" />
-          Cape Town, <br class="hide-at-small" />South Africa, and Delhi, India.
-        {% endblocktrans %}
-      </p>
-    </div>
-    <div class="gap-top-line gap-horz-small">
-      <div class="map-image"
-           data-lazybg="true"></div>
-    </div>{# .gap-top-line #}
-    <div class="align-center pad-vert-small">
-      <a class="button"
-         href="{% url 'team' %}">
-        {% blocktrans %}
-          All Team Members
-        {% endblocktrans %}
-      </a>
-    </div>
+      <div class="tools-cards-vision column align-center pad-top-small blue-lightest-theme pad-bottom-small gap-bottom-line-at-medium gap-bottom-none">
+        <div class="content-width-medium pad-top-small">
+          <p class="align-center pad-bottom-small pad-horz-small">
+            {% blocktrans %}
+              Dimagi is a global organization with a remote-friendly work culture.
+              We work from all over the world <br class="hide-until-medium" />including offices in Cambridge,
+              Massachusetts, Cape Town, South Africa, and Delhi, India.
+            {% endblocktrans %}
+          </p>
+        </div>
+        <div class="gap-top-line gap-horz-small">
+          <div class="map-image" data-lazybg="true"></div>
+        </div>{# .gap-top-line #}
 
+      </div>
+      <div class="align-center pad-vert-small">
+        <a class="button" href="{% url 'team' %}">
+          {% blocktrans %}
+            All Team Members
+          {% endblocktrans %}
+        </a>
+      </div>
+    </div>
   </div> {# .content #}
 </section>
