@@ -1,0 +1,46 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="sub-nav"
+         id="sub-nav">
+  <div class="content">
+    <div class="actions">
+      <a class="primary {% click_subnav 'schedule-demo' %}"
+         href="#demo-form-modal">
+        <span>
+          {% blocktrans %}
+            Schedule a demo
+          {% endblocktrans %}
+        </span>
+      </a>
+    </div>{# .actions #}
+    <a class="prompt-link {% click_subnav 'browse-mobile' %}"
+       href="#">
+      {% blocktrans %}
+        Browse
+      {% endblocktrans %}
+    </a>
+    <div class="destinations">
+      <div class="content">
+        <a href="#programs"
+           class="{% click_subnav 'programs' %}">
+          {% blocktrans %}
+            What We Offer
+          {% endblocktrans %}
+        </a>
+        <a href="#testimonials"
+           class="{% click_subnav 'testimonials' %}">
+          {% blocktrans %}
+            Testimonials
+          {% endblocktrans %}
+        </a>
+        <a href="#getstarted"
+           class="{% click_subnav 'getstarted' %}">
+          {% blocktrans %}
+            Get Started
+          {% endblocktrans %}
+        </a>
+      </div>{# .content #}
+    </div>{# .destinations #}
+  </div>{# .content #}
+</section>
