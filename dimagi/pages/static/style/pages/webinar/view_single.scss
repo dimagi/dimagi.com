@@ -163,6 +163,7 @@
 
 .people-image2 {
   @include background-cover('../../../pages/webinar/authors/monica.jpg');
+  border-radius: 50%;
   height: 80px;
   width: 80px;
 }
