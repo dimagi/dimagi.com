@@ -82,7 +82,7 @@ GROUP.add_features([
         description=ugettext_lazy(
             "CommCare's integration framework enables software developers "
             "to create custom integrations between CommCare "
-            "Mobile and their own applications."
+            "Mobile and their own custom applications."
         ),
         support=Support(False, False, True, True),
     ),
