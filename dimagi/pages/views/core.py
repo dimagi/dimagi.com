@@ -82,6 +82,10 @@ def research_and_data(request):
     return render(request, 'pages/research_and_data.html')
 
 
+def all_certified_partners(request):
+    return render(request, 'pages/all_certified_partners.html')
+
+
 def contact(request):
     return render(request, 'pages/contact.html')
 

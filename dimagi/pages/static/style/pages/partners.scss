@@ -91,11 +91,6 @@
   width: 111px;
 }
 
-.feature-partner-mwcd .image {
-  @include background-cover('../../../static/pages/commcare/partners/featured_partners/gates_foundation.jpg');
-  height: 100px;
-  width: 111px;
-}
 .feature-partner-oikoi .image {
   @include background-cover('../../../static/pages/commcare/partners/featured_partners/oikoi.jpg');
   height: 100px;
@@ -113,14 +108,56 @@
   width: 111px;
 }
 
-.feature-partner-im-saf .image {
-  @include background-cover('../../../static/pages/commcare/partners/featured_partners/im_saf.png');
+.feature-partner-illimitus .image {
+  @include background-cover('../../../static/pages/commcare/partners/featured_partners/illimitus.png');
   height: 100px;
   width: 120px;
 }
 
-.feature-partner-illimitus .image {
-  @include background-cover('../../../static/pages/commcare/partners/featured_partners/illimitus.png');
+.feature-partner-fpo .image {
+  @include background-cover('../../../static/pages/commcare/partners/featured_partners/fpo.png');
+  height: 100px;
+  width: 120px;
+}
+
+.feature-partner-wcd .image {
+  @include background-cover('../../../static/pages/commcare/partners/featured_partners/wcd.png');
+  height: 100px;
+  width: 120px;
+}
+
+.feature-partner-jsi .image {
+  @include background-cover('../../../static/pages/commcare/partners/featured_partners/jsi.png');
+  height: 100px;
+  width: 120px;
+}
+
+.feature-partner-goal .image {
+  @include background-cover('../../../static/pages/commcare/partners/featured_partners/goal.png');
+  height: 100px;
+  width: 120px;
+}
+
+.feature-partner-tula .image {
+  @include background-cover('../../../static/pages/commcare/partners/featured_partners/tula.png');
+  height: 100px;
+  width: 120px;
+}
+
+.feature-partner-ss .image {
+  @include background-cover('../../../static/pages/commcare/partners/featured_partners/ss.png');
+  height: 100px;
+  width: 120px;
+}
+
+.feature-partner-child-fund .image {
+  @include background-cover('../../../static/pages/commcare/partners/featured_partners/child-fund.png');
+  height: 100px;
+  width: 120px;
+}
+
+.feature-partner-im-saf .image {
+  @include background-cover('../../../static/pages/commcare/partners/featured_partners/im_saf.png');
   height: 100px;
   width: 120px;
 }
@@ -161,6 +198,11 @@
   width: 111px;
 }
 
+.feature-partner-mwcd .image {
+  @include background-cover('../../../static/pages/commcare/partners/featured_partners/gates_foundation.jpg');
+  height: 100px;
+  width: 111px;
+}
 .feature-project-logo {
   margin: 0 auto;
 }

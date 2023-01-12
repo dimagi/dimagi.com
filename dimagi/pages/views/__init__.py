@@ -8,6 +8,7 @@ from dimagi.pages.views.core import (
     contact,
     proposals,
     research_and_data,
+    all_certified_partners,
     awards,
     case_management,
     test_404,

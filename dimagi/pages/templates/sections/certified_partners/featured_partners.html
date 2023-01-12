@@ -1,0 +1,28 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="certified_partners border-top pad-bottom-small accent-gray-bg" id="certified_partners">
+  <div class="content">
+    <div class="content pad-top-medium">
+      <h2 class="theme-color pad-bottom-line">
+        {% blocktrans %}
+          All Partners
+        {% endblocktrans %}
+      </h2>
+    </div>{# .content #}
+    <div class="content pad-top-line news-images">
+      {% include "sections/certified_partners/partners_row1.html" %}
+      {% include "sections/certified_partners/partners_row2.html" %}
+      {% include "sections/certified_partners/partners_row3.html" %}
+    </div>{# .content #}
+    <div class="content pad-top-medium align-center">
+      <p class="align-center pad-top-line">
+        <a class="button uppercase {% click_body 'latest_partners' %}" href="{% url 'all_certified_partners' %}">
+          {% blocktrans %}
+          View All Partners
+          {% endblocktrans %}
+        </a>
+      </p>
+    </div>
+  </div>
+</section>
