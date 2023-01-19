@@ -16,7 +16,7 @@ from dimagi.utils.services import get_service_partners
 from dimagi.utils.india import get_india_partners
 from dimagi.data.case_management import longitudinal_data
 
-from dimagi.pages.views import blog
+from dimagi.pages.views import blog , certified_providers
 from dimagi.utils.wordpress_api import get_json
 from dimagi.pages.models.partners import latestPartners
 
@@ -80,10 +80,6 @@ def resources(request):
 
 def research_and_data(request):
     return render(request, 'pages/research_and_data.html')
-
-
-def all_certified_partners(request):
-    return render(request, 'pages/all_certified_partners.html')
 
 
 def contact(request):

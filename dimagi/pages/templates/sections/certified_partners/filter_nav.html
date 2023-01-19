@@ -1,0 +1,42 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="blog-filters border-bottom accent-gray-bg turquoise-theme collapse-filters"
+         data-bind="css: {
+            'show-filters': showFilters,
+         }">
+  <div class="content pad-vert-small gap-bottom-line">
+    <h3 class = "turquoise">{% trans 'Sort organizations by' %}</h3>
+    <!-- <div class="gap-bottom-line">
+      <label for="filter-search-term">Search Term</label>
+      <input id="filter-search-term" type="text" placeholder="{% trans "Search..." %}" data-bind="textInput: searchTerm" />
+    </div> -->
+    <div class="gap-bottom-line">
+      <label for="filter-categories">
+        {% trans 'Categories' %}
+      </label>
+      <select id="filter-categories" data-bind="value: searchCategory, options: categories, optionsText:'name', optionsValue: 'slug'"></select>
+    </div>
+    <!-- <div class="gap-bottom-line">
+      <label for="filter-tags">
+        {% trans 'Tags' %}
+      </label>
+      <select id="filter-tags"
+              data-bind="selectedOptions: searchTags,
+                         valueAllowUnset: true,
+                         options: tags,
+                         optionsText: 'name',
+                         optionsValue: 'id',
+                         select2Update: searchTags"
+              multiple="multiple"></select>
+    </div> -->
+    <div class="align-center">
+      <button type="button" class="button " data-bind="click: submitSearch">
+        {% trans "Apply Sort" %}
+      </button>
+      <button type="button" class="button alt" data-bind="click: clearFilters">
+        {% trans "Clear Sort" %}
+      </button>
+    </div>
+  </div>
+</section>

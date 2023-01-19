@@ -2,7 +2,6 @@
 {% load dimagidotcom %}
 
 <section class="sub-nav"
-         data-ko="true"
          id="sub-nav">
   <div class="content">
     <div class="actions">
@@ -17,28 +16,30 @@
         </span>
       </a>
     </div>{# .actions #}
-    <a class="prompt-link"
-       href="#"
-       data-bind="click: closeFilters">
+    <a class="prompt-link {% click_subnav 'browse' %}"
+       href="#"  data-bind="click: closeFilters" >
       {% blocktrans %}
         Browse
       {% endblocktrans %}
     </a>
     <div class="destinations">
       <div class="content">
-        <a href="{% url 'blog_home' %}">
+        <a href="{% url 'all-certified-partners' %}">
           {% include "svg/blog/icon/nav/home.html" %} {% trans "Home" %}
         </a>
         <a href="#"
-           class="toggle-filters"
-           data-bind="click: toggleFilters, css: { 'has-filters': showHasFiltersAlert}">
-          {% include "svg/blog/icon/nav/filter.html" %} {% trans "Filter" %}
+          class="toggle-filters"
+          data-bind="click: toggleFilters, css: { 'has-filters': showHasFiltersAlert}">
+          {% include "svg/blog/icon/nav/filter.html" %} {% trans "Sort" %}
         </a>
         <div class="search-bar-container">
-          <input type="text" placeholder="{% trans "Search..." %}" data-bind="textInput: searchTerm, event: {keypress: submitSearchOnEnter}" /><button type="button" data-bind="click: submitSearch">{% include "svg/blog/icon/nav/search.html" %}</button>
+          <input type="text" placeholder="{% trans "Search..." %}" data-bind="textInput: searchTerm, event: {keypress: submitSearchOnEnter}" />
+          <button type="button" data-bind="click: submitSearch">
+            {% include "svg/blog/icon/nav/search.html" %}
+          </button>
         </div>
       </div>{# .content #}
     </div>{# .destinations #}
   </div>{# .content #}
-  {% include 'sections/blog/filter_nav.html' %}
+  {% include 'sections/certified_partners/filter_nav.html' %}
 </section>

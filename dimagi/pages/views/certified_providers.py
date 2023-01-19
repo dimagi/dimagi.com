@@ -7,13 +7,13 @@ from django.shortcuts import render
 from django.urls import reverse
 from django.utils.translation import ugettext
 
-from dimagi.data.blog import (
+from dimagi.data.certified_providers import (
     available_categories,
     nav_categories,
     get_category_by_slug,
     ARCHIVE,
 )
-from dimagi.pages.models.blog import BlogPost
+from dimagi.pages.models.certified_providers import CertifiedProvidersPost
 from dimagi.utils.request_helpers import (
     get_selected_tags_from_request,
     get_search_term_from_request,
@@ -68,7 +68,7 @@ def _get_posts(category, page=None, num_posts=None):
     post_data = get_json(
         'blog/{}'.format(category.slug), page=page, num_posts=num_posts)
     return {
-        'posts': [BlogPost(data) for data in post_data['posts']],
+        'posts': [CertifiedProvidersPost(data) for data in post_data['posts']],
         'total': post_data['total'],
     }
 
@@ -111,15 +111,15 @@ def _get_totals_context(page, total_posts, posts_per_page, num_queried_posts):
 @populate_tags_in_request
 def home(request):
     posts = _get_posts(ARCHIVE)['posts']
-    popular = [BlogPost(p) for p in get_json('blog/popular', num_posts=3)['posts']]
+    popular = [CertifiedProvidersPost(p) for p in get_json('blog/popular', num_posts=3)['posts']]
     context = _get_global_context(request)
     context.update({
         'recent': posts[:1],
         'recent_new': posts[1:3],
-        'others': posts[3:7],
+        'others': posts[:1],
         'popular': popular,  # todo
     })
-    return render(request, 'pages/blog/home.html', context)
+    return render(request, 'pages/all_certified_partners.html', context)
 
 
 @populate_tags_in_request
@@ -198,8 +198,6 @@ def archive(request, category=None, page=None):
             )
         context['next_url'] = next_url + append_to_url
 
-    print(posts)
-    
     return render(request, 'pages/blog/archive.html', context)
 
 
@@ -244,13 +242,13 @@ def post(request, slug):
     if post_data.get('not_found'):
         raise Http404()
 
-    blog_post = BlogPost(post_data)
+    blog_post = CertifiedProvidersPost(post_data)
 
     related_posts_data = search_wordpress(
         num_posts=3,
         category=blog_post.category.slug
     )
-    related_posts = [BlogPost(p) for p in related_posts_data['posts']]
+    related_posts = [CertifiedProvidersPost(p) for p in related_posts_data['posts']]
 
     context = _get_global_context(request)
     context.update({
