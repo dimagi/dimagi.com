@@ -5,8 +5,7 @@
 
 @include jacket($jacket-critical) {
   .top-banner-ad {
-    background-color: $color-blue;
-    background-image: linear-gradient($color-blue, $color-blue-dark);
+    background-color: #222222;
     color: $color-white;
     display: none;
     left: 0;
@@ -17,19 +16,21 @@
 
     h3 {
       color: $color-white;
+      font-size: 18px;
+      margin-bottom: 0px;
     }
   }
   .banner-fixed-height {
-    height: 100px;
+    height: 35px;
   }
 
   .top-banner-ad-close {
     display: block;
-    height: 60px;
+    height: 40px;
     position: absolute;
     right: 0;
     stroke: $color-white;
-    top: 20px;
+    top: 10px;
     width: 60px;
   }
 }
