@@ -50,6 +50,7 @@
   @include background-cover('../../../pages/about/profile/writing1.jpg');
   background-size: contain;
   background-position: left;
+  background-color: white;
 }
 .news-images .image.writing2 {
   @include background-cover('../../../pages/about/profile/writing2.jpg');
