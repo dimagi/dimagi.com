@@ -21,11 +21,18 @@
   font-weight: $font-weight-regular;
 }
 
+#intro-profile {
+  $_base-height: 190px;
+  $_height-by-size: (
+    small: 250px,
+    medium: 250px,
+    large: 250px,
+    extra-large: 256px,
+  );
+  @include make-bg(intro-profile-image, '../../../pages/team/jackson/intro/intro', $_base-height, $_height-by-size);
+}
 .intro-profile-image {
-  @include background-cover('../../../pages/team/jackson/jackson.jpg');
-  background-size: contain;
-  background-position: left;
-  width: 300px; 
+  width: 260px;
 }
 
 .news-images .image.blog1 {
@@ -35,7 +42,7 @@
 }
 
 .news-images .image.blog2 {
-  @include background-cover('../../../pages/about/profile/podcast2.png');
+  @include background-cover('../../../pages/about/profile/podcast2.jpg');
   background-size: contain;
   background-position: left;
 }
@@ -50,7 +57,6 @@
   @include background-cover('../../../pages/about/profile/writing1.jpg');
   background-size: contain;
   background-position: left;
-  background-color: white;
 }
 .news-images .image.writing2 {
   @include background-cover('../../../pages/about/profile/writing2.jpg');
