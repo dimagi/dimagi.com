@@ -114,12 +114,23 @@ def home(request):
     popular = [CertifiedProvidersPost(p) for p in get_json('blog/popular', num_posts=3)['posts']]
     context = _get_global_context(request)
     context.update({
-        'recent': posts[:1],
+        'recent': posts[:8],
         'recent_new': posts[1:3],
         'others': posts[:1],
         'popular': popular,  # todo
     })
     return render(request, 'pages/all_certified_partners.html', context)
+
+
+@populate_tags_in_request
+def partners(request):
+    posts = _get_posts(ARCHIVE)['posts']
+    popular = [CertifiedProvidersPost(p) for p in get_json('blog/popular', num_posts=3)['posts']]
+    context = _get_global_context(request)
+    context.update({
+        'recent_featured_partners': posts[:3],
+    })
+    return render(request, 'pages/partners.html', context)
 
 
 @populate_tags_in_request
