@@ -1,0 +1,34 @@
+{% extends "sections/commcare/classroom_LP/testimonials/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block image_class%}bostan-university{% endblock %}
+
+{% block content %}
+  <div class="testimonial-content content-width-medium align-left pad-horz-base">
+    <h6 class="blue testimonial-org">
+      {% blocktrans %}
+        Boston University School of Public Health
+      {% endblocktrans %}
+    </h6>
+    <p>
+      {% blocktrans %}
+        "CommCare is the epicenter of our course, Using Mobile 
+        Technology to Improve Health Outcomes. Working in partnership 
+        with Dimagi since the course’s inception 10 years ago, our 
+        graduate-student teams have built mobile applications using C
+        ommCare for more than 40 healthcare organizations around the world. 
+        We’ve integrated Dimagi Academy to help our student teams rapidly 
+        build their CommCare application-development skills. For our students, 
+        CommCare app-building skills are valuable in the job market."
+      {% endblocktrans %}  
+    </p>
+    <div class="attribution-heading body-color uppercase">
+      <p class="pad-bottom-base">
+      {% blocktrans %}
+        <strong> James Wolff </strong> | Associate Professor of Global Health 
+      {% endblocktrans %}
+      </p>
+    </div>
+  </div>
+{% endblock %}
