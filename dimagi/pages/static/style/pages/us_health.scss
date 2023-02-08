@@ -64,7 +64,7 @@
     }
 
     @media (min-width: $width-desktop-xl) {
-      height: 530px;
+      height: 580px;
     }
   }
 
@@ -74,19 +74,21 @@
 }
 
 .overview .image.teampic1 {
-  @include background-cover('../../pages/careers/teampic1.jpg');
+  @include background-cover('../../pages/us_health/team/team1.jpg');
+  height: 239px !important;
+  background-position: top;
 }
 
 .overview .image.teampic2 {
-  @include background-cover('../../pages/careers/teampic2.jpg');
+  @include background-cover('../../pages/us_health/team/team2.jpg');
 }
 
 .overview .image.teampic3 {
-  @include background-cover('../../pages/careers/teampic3.jpg');
+  @include background-cover('../../pages/us_health/team/team3.jpg');
 }
 
 .overview .image.teampic4 {
-  @include background-cover('../../pages/careers/teampic4.jpg');
+  @include background-cover('../../pages/us_health/team/team4.jpg');
   height: 100%;
 }
 

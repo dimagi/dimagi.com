@@ -82,3 +82,12 @@ COVID_19 = Category(
     icon="svg/blog/icon/technology.html",
     slug="covid-19",
 )
+
+US_HEALTH = Category(
+    name=ugettext_lazy("US Health"),
+    description=ugettext_lazy(
+        "Updates for Dimagi's US Health initiatives."
+    ),
+    icon="svg/blog/icon/technology.html",
+    slug="us-health",
+)

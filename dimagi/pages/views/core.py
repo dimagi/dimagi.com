@@ -18,7 +18,8 @@ from dimagi.utils.india import get_india_partners
 from dimagi.data.case_management import longitudinal_data
 
 from dimagi.pages.views import blog
-from dimagi.utils.wordpress_api import get_json
+from dimagi.pages.models.blog import BlogPost
+from dimagi.utils.wordpress_api import get_json, get_us_health_json
 from dimagi.pages.models.partners import latestPartners
 
 
@@ -63,8 +64,10 @@ def covid_19(request):
     return render(request, 'pages/covid_19.html', context)
 
 def us_health(request):
+    ushealth_blogs = get_us_health_json("blog/archive")['posts']
+    filtered_ushealth_blogs = [post for post in ushealth_blogs for tag in post['tags'] if tag['name'] == 'US Health'][:2]
     context = {
-        'posts': get_json("blog/archive/")['posts'][:2],
+        'posts': filtered_ushealth_blogs,
         'partners': get_us_health_partners(),
     }
     return render(request, 'pages/us_health.html', context)
