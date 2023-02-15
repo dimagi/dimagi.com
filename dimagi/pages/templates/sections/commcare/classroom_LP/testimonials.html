@@ -1,0 +1,34 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="testimonial programs" 
+         data-lazybg="true" 
+         id="testimonials">
+  <div class="accent-gray-bg ">
+    <div class="content pad-vert-small">
+      <div class="mdc-sector-program">
+        <h2 class="content-width-medium align-center commcare-default pad-top-small">
+          {% blocktrans %}
+            Students and Teachers Around the World Love CommCare
+          {% endblocktrans %}
+        </h2>
+        <p class="content-width-medium align-center pad-bottom-small">
+          {% url 'toolkit' 'commcare-evidence-base' as evidence_base_tool %}
+          {% blocktrans %}
+            CommCare creates valuable, hands-on learning experiences and opportunities to gain real-world skills 
+          {% endblocktrans %}
+        </p>
+      </div>
+      <div class="content-width-large carousel carousel-fade-inactive carousel-numbered carousel-features">
+        <div class="carousel-container">
+          <div class="spinner spinner-large"></div>
+          <div class="carousel-slider">
+            {% include "sections/commcare/classroom_LP/testimonials/bostan_university.html" %}
+            {% include "sections/commcare/classroom_LP/testimonials/bostan_college.html" %}
+            {% include "sections/commcare/classroom_LP/testimonials/habib_university.html" %}
+          </div>{# .carousel-slider #}
+        </div>{# .carousel-container #}
+      </div>{# .carousel #}
+    </div>
+  </div>
+</section>

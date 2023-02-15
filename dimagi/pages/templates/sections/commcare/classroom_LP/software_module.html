@@ -1,0 +1,50 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section id="overview" class="border-top commcare-default-theme">
+  <div class="content pad-vert-medium">
+    <div class="grid-2-at-medium">
+      <div class="column">
+        <h1>
+          {% blocktrans %}
+            CommCare in the Classroom
+          {% endblocktrans %}
+        </h1>
+        <h4 class ="module">
+          {% blocktrans %}
+            Leverage our freely available tools and resources to 
+            enhance the impact of your teaching and your students
+          {% endblocktrans %}
+        </h4>
+
+        <p></p>
+        <p>
+          {% blocktrans %}
+            Since 2011, CommCare has been leveraged in classrooms around the 
+            world to teach valuable real-world skills and enhance student 
+            learning. Application development and data optimization with CommCare 
+            is taught across a range of subjects including Mobile Health, Social 
+            Impact, ICT4D, Health Informatics, M&E, Health Communications and more. 
+          {% endblocktrans %}
+        </p>
+      </div>
+      <div class="column">
+        <a class="tile align-center">
+          <h4>
+            Free Software Licenses for Students & Teachers 
+          </h4>
+          <div class="gap-top-small align-center">
+            <p class="button download-btn-toolkit"
+                 href="#classroom-services-form">
+                <span>
+                  {% blocktrans %}
+                    Contact Us
+                  {% endblocktrans %}
+                </span>
+              </p>
+          </div>
+        </a>{# a.tile #}
+      </div>
+    </div>
+  </div>
+</section>

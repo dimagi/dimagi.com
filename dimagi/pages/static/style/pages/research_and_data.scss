@@ -71,23 +71,19 @@
   @include background-cover('../../pages/research_and_data/team/Brian.jpg');
 }
 .rad-xian {
-  @include background-cover('../../pages/research_and_data/team/Xian.jpg');
+  @include background-cover('../../pages/research_and_data/team/Xian.png');
 }
-.rad-srikant {
-  @include background-cover('../../pages/research_and_data/team/Srikant.jpg');
+.rad-anna_dixon {
+  @include background-cover('../../pages/research_and_data/team/anna_dixon.jpg');
 }
 .rad-lewis {
   @include background-cover('../../pages/research_and_data/team/Delta.jpg');
 }
-.rad-hailey {
-  @include background-cover('../../pages/research_and_data/team/Hailey.jpg');
-}
+
 .rad-rob {
   @include background-cover('../../pages/research_and_data/team/Rob.jpg');
 }
-.rad-faisal {
-  @include background-cover('../../pages/research_and_data/team/Faisal.jpg');
-}
+
 .rad-lauren {
   @include background-cover('../../pages/research_and_data/team/Lauren.jpg');
 }
