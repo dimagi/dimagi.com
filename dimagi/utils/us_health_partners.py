@@ -2,46 +2,44 @@
 
 WEB = [
     [
-        "svg/partner/services/tdh.html",
+        "svg/partner/ushealth/cdc.html",
+        "svg/partner/ushealth/jhu.html",
     ],
     [
-        "svg/partner/services/bmgf.html",
+        "svg/partner/ushealth/usaid.html",
+        "svg/partner/ushealth/ucsf.html",
     ],
     [
-        "svg/partner/services/dai.html",
+        "svg/partner/ushealth/nys.html",
+        "svg/partner/ushealth/gates.html",
     ],
     [
-        "svg/partner/services/find.html",
+        "svg/partner/ushealth/alaska.html",
     ],
     [
-        "svg/partner/services/idb.html",
-        "svg/partner/services/pih.html",
+        "svg/partner/ushealth/nih.html",
+        "svg/partner/ushealth/pih.html",
     ],
 ]
 
 
 MOBILE = [
     [
-        "svg/partner/services/abt.html",
-        "svg/partner/services/acdi_voca.html",
-        "svg/partner/services/bmgf.html",
-        "svg/partner/services/cdc.html",
+        "svg/partner/ushealth/cdc.html",
+        "svg/partner/ushealth/ucsf.html",
     ],
     [
-        "svg/partner/services/dai.html",
-        "svg/partner/services/fhi.html",
-        "svg/partner/services/find.html",
-        "svg/partner/services/pih.html",
+        "svg/partner/ushealth/nih.html",
+        "svg/partner/ushealth/jhu.html",
     ],
     [
-        "svg/partner/services/hki.html",
-        "svg/partner/services/idb.html",
-        "svg/partner/services/jsi.html",
+        "svg/partner/ushealth/nys.html",
+        "svg/partner/ushealth/gates.html",
     ],
     [
-        "svg/partner/services/msh.html",
-        "svg/partner/services/tdh.html",
-        "svg/partner/services/uncdf.html",
+        "svg/partner/ushealth/alaska.html",
+        "svg/partner/ushealth/usaid.html",
+        "svg/partner/ushealth/pih.html",
     ],
 ]
 
