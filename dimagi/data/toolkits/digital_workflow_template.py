@@ -17,6 +17,7 @@ TOOLKIT = Toolkit(
     template="data/toolkits/summaries/digital_workflow_template.html",
     slug="diig-digital-workflow-template",
     icon="svg/tookits/icons/diig_workflow_toolkit.html",
+    theme="orange-theme",
     primary_cta="efcab94f-e5b8-4452-b65f-6e2a726fcb6e",
     download_slides="c91aafa4-2489-44da-a89a-4313b5ccb1e2",
     subnav_cta="611518c2-9635-43fc-a097-ea6cfc285e41",
