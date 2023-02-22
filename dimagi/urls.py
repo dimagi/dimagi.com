@@ -111,7 +111,7 @@ urlpatterns = [
 
 
     url(r'^blog/', include(blog.blog_urls)),
-    url(r'^all-certified-partners/', include(certified_providers.certified_providers_urls)),
+    url(r'^commcareproviders/', include(certified_providers.certified_providers_urls)),
     url(r'^partners/', include(partners.partners_urls)),
     url(r'^about/', include(team.about_urls)),
     url(r'^team/', include(team.team_urls)),

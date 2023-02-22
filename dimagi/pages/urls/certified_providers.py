@@ -8,6 +8,6 @@ from dimagi.pages.views import redirect
 
 
 certified_providers_urls = [
-    url(r'^$', home, name='all-certified-partners'),
+    url(r'^$', home, name='commcareproviders'),
     
 ]
