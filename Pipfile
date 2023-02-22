@@ -33,4 +33,4 @@ django-user-agents = "*"
 simplejson = "==3.16.0"
 
 [requires]
-python_version = "3.6"
+python_version = "3.9.11"
