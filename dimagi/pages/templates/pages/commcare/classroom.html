@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+  {% extends "base.html" %}
 {% load i18n %}
 {% load dimagidotcom %}
 
@@ -36,9 +36,9 @@ professionals with essential app-building skills
       {% endblocktrans %}
     </h1>
     <p class=" pad-top-small">
-      <a class="button " href="#classroom-services-form">
+      <a class="button classroom" href="#classroom-services-form">
         {% blocktrans %}
-        Learn more
+          Learn more
         {% endblocktrans %}
       </a>{# .button #}
     </p>
@@ -47,7 +47,7 @@ professionals with essential app-building skills
 {% endblock %}
 
 {% block content %}
-<section class="products-commcare-container">
+<section class="products-commcare-container commcare-default-theme">
   {% include "sections/commcare/classroom_LP/sub_nav.html" %}
   {% include "sections/commcare/classroom_LP/software_module.html" %}
   {% include "sections/commcare/classroom_LP/offer.html" %}
@@ -64,7 +64,7 @@ professionals with essential app-building skills
     <div class="modal-scroll">
       <div class="modal-wrapper">
         <a href="#" class="modal-close-button"></a>
-        <div class="content pad-horz-medium-at-medium pad-horz-line pad-vert-none blue-theme">
+        <div class="content pad-horz-medium-at-medium pad-horz-line pad-vert-none commcare-default-theme">
           <section id="classroom-services-form-content"></section>
         </div>{# .content #}
       </div>{# .modal-wrapper #}
