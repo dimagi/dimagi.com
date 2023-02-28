@@ -1,62 +1,124 @@
 {% load i18n %}
 {% load dimagidotcom %}
 
-<section class="overview"
-         id="overview">
+
+<section class="overview" id="overview">
   <div class="content pad-vert-medium">
     <div class="intro content-width-medium">
       <h2>
         {% blocktrans %}
-          Make an Impact
+        Powered By a Passion for Impact
         {% endblocktrans %}
       </h2>
-      <p class="content-width-small">
+      <p class="content-width-medium">
         {% blocktrans %}
-          Join a diverse group of problem solvers and social impact 
-          enthusiasts tackling tough challenges to improve 
-          global development efforts.
+        Dimagi is more than a tech company. We are a diverse team
+        of creative problem solvers dedicated to using our skills and
+        experience to enable our partners and frontline programs to
+        deliver more impact globally. We celebrate differences, treat
+        each other with respect, and value failure as a chance to learn.
+        At Dimagi, you can be uniquely you!
         {% endblocktrans %}
       </p>
     </div>{# .intro #}
 
+
     {% include "sections/careers/overview/grid.html" %}
 
-    <div class="content-width-small align-center gap-top-medium pad-bottom-base">
-      <h3 class="gap-bottom-base">
-        {% blocktrans %}
-          Core Values
-        {% endblocktrans %}
-      </h3>
-      <h6 class="orange">
-        {% blocktrans %}
-          Impact. Team. Profit. In that order.
-        {% endblocktrans %}
-      </h6>
 
-      <p>
-        {% blocktrans %}
-          As a leading social enterprise, we care about creating an impact in the world,
-          followed by our team’s satisfaction, and then profit. This phrase is fundamental to
-          who we are as a company and how we prioritize our work.
-        {% endblocktrans %}
-      </p>
-
-      <p>
-        {% blocktrans %}
-          Explore our open positions below or browse available roles with our partners 
-          <a href="https://chwimpact.org/careers/" target="_blank">here</a>.
-        {% endblocktrans %}
-      </p>
-
-      <p>
-        <a href="#open-positions"
-           class="button {% click_body 'overview-positions' %}">
+    <div class="content pad-vert-small">
+      <div class="content-width-large ">
+        <h2 class="align-center primary pad-top-small">
           {% blocktrans %}
-            View Open Positions
+          Our values
+          {% endblocktrans %}
+        </h2>
+        <p class="align-center">
+          {% blocktrans %}
+          Our values serve as our operating manual defining how we get great work done together.
+          {% endblocktrans %}
+        </p>
+      </div>
+      <div class="content pad-vert-medium">
+        <div class="grid-2-at-medium">
+          <div class="column">
+            <div class="position-relative align-center height-100">
+              <div class="about-pillars column align-center pad-horz-small-at-medium ">
+                <div class=" gap-bottom-line align-center">
+                  {% include 'svg/about/icons/values/values1.html' %}
+                </div>
+              </div>{# .column #}
+            </div>
+          </div>
+          <div class="column pad-top-large align-center">
+            <h3 class="primary-color ">Impact, team, profit. In that order.</h3>
+            <p>
+              {% blocktrans %}
+              This guides everything that we do as a company.
+              We see <br class="hide-until-medium" /> that impact,
+              team and profit create a virtuous flywheel.
+              {% endblocktrans %}
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="design-tool content grid-4-at-medium gap-bottom-small">
+        <div class="about-pillars column align-center pad-horz-small-at-medium pad-bottom-small">
+          <div class=" gap-bottom-line align-center">
+            {% include 'svg/about/icons/values/values2.html' %}
+          </div>
+          <p class="primary-color font-weight-light">
+            {% blocktrans %}
+            Be bold but humble.
+            {% endblocktrans %}
+          </p>
+        </div>{# .column #}
+
+
+        <div class="about-pillars column align-center pad-horz-small-at-medium  pad-bottom-small">
+          <div class="gap-bottom-line">
+            {% include 'svg/about/icons/values/values3.html' %}
+          </div>
+          <p class="primary-color font-weight-light">
+            {% blocktrans %}
+            Lead with empathy <br /> and respect.
+            {% endblocktrans %}
+          </p>
+        </div>{# .column #}
+
+
+        <div class="about-pillars column align-center pad-horz-small-at-medium pad-bottom-small">
+          <div class=" gap-bottom-line">
+            {% include 'svg/about/icons/values/values4.html' %}
+          </div>
+          <p class="primary-color font-weight-light">
+            {% blocktrans %}
+            Evolve by openly <br />learning and sharing.
+            {% endblocktrans %}
+          </p>
+        </div>{# .column #}
+
+
+        <div class="about-pillars column align-center pad-horz-small-at-medium pad-bottom-small">
+          <div class="gap-bottom-line ">
+            {% include 'svg/about/icons/values/values5.html' %}
+          </div>
+          <p class="primary-color font-weight-light">
+            {% blocktrans %}
+            Embrace complexity <br />for impact.
+            {% endblocktrans %}
+          </p>
+        </div>{# .column #}
+      </div>{# .grid-3-at-medium #}
+      <div class="column align-center ">
+        <a class="arrow primary" href="https://dimagi.com/blog/dimagis-5-year-strategy/" target="_blank">
+          {% blocktrans %}
+          Read about our values
           {% endblocktrans %}
         </a>
-      </p>
-    </div>{# .content-width-medium #}
-
+      </div>{# .column #}
+    </div>{# .content #}
   </div> {# .content #}
 </section>

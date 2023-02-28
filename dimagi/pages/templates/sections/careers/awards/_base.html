@@ -1,7 +1,7 @@
 {% load i18n %}
 
 <div class="column">
-  <div class="tile {{ click_class }}">
+  <div class="awards-tile {{ click_class }}">
 
     <div class="aspect-ratio-square
                 gap-bottom-base
@@ -16,5 +16,9 @@
       {% block description %}{% endblock %}
     </p>
 
+    <a class="align-center { click_class }}"
+      href="{% block link %}{% endblock %}">
+        Read more
+    </a>    
   </div>
 </div>{# .column #}
