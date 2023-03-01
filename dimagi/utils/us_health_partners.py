@@ -15,6 +15,7 @@ WEB = [
     ],
     [
         "svg/partner/ushealth/alaska.html",
+        "svg/partner/ushealth/nj.html",
     ],
     [
         "svg/partner/ushealth/nih.html",
@@ -31,6 +32,7 @@ MOBILE = [
     [
         "svg/partner/ushealth/nih.html",
         "svg/partner/ushealth/jhu.html",
+        "svg/partner/ushealth/nj.html",
     ],
     [
         "svg/partner/ushealth/nys.html",
