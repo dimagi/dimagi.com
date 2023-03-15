@@ -41,11 +41,11 @@
 }
 
 .awards .image.company-culture {
-  @include background-cover('../../pages/careers/entrepreneur.jpg');
+  @include background-cover('../../pages/careers/bcorporation.png');
 }
 
-.awards .image.best-workplaces {
-  @include background-cover('../../pages/careers/bestwork.png');
+.awards .image.builtin {
+  @include background-cover('../../pages/careers/builtin.png');
 }
 
 .awards .image.b-corporation {
@@ -54,6 +54,32 @@
 
 .awards .image.top-5000 {
   @include background-cover('../../pages/careers/fastcompany.png');
+}
+
+.overview .image.team_summit {
+  @include background-cover('../../pages/careers/team_summit.jpg');
+  height : 355px;
+  width : 450px;
+}
+
+.overview .image.gso_summit {
+  @include background-cover('../../pages/careers/gso_summit.jpg');
+}
+
+.overview .image.gso {
+  @include background-cover('../../pages/careers/gso.jpg');
+}
+
+.overview .image.dei_gtd_summit {
+  @include background-cover('../../pages/careers/dei_gtd_summit.jpg');
+}
+
+.overview .image.ush_summit {
+  @include background-cover('../../pages/careers/ush_summit.jpg');
+}
+
+.overview .image.id_summit {
+  @include background-cover('../../pages/careers/id_summit.jpg');
 }
 
 .post-thumbnail {
@@ -83,20 +109,20 @@ a.post {
   }
 }
 
-.life .image.tedx-talk {
-  @include background-cover('../../pages/careers/technology.jpg');
+.life .image.technology {
+  @include background-cover('../../pages/careers/technology.png');
 }
 
-.life .image.away-month {
-  @include background-cover('../../pages/careers/awaymonth.jpg');
+.life .image.gtd-summit {
+  @include background-cover('../../pages/careers/gtd_summit.jpg');
 }
 
-.life .image.core-values {
-  @include background-cover('../../pages/careers/corevalues.jpg');
+.life .image.benefit-corp {
+  @include background-cover('../../pages/careers/benefit_corp.png');
 }
 
-.life .image.global-services {
-  @include background-cover('../../pages/careers/globalservices.jpg');
+.life .image.continuous-learning {
+  @include background-cover('../../pages/careers/continuous_learning.jpg');
 }
 
 .application-content ul > li::before { // scss-lint:disable PropertyCount
@@ -141,9 +167,74 @@ a.post {
   margin-bottom: 10px;
 }
 
-.awards-tile {
-  background: #ffffff;
-    display: block;
-    padding: 30px;
-    position: relative;
+.corila {
+  @include background-cover('../../pages/careers/testimonial1.png');
+  height: 220px;
+  width: 200px;
+  margin-top: 0px !important;
+}
+
+.corila {
+  @include background-cover('../../pages/careers/testimonial1.png');
+  height: 220px;
+  width: 200px;
+  margin-top: 0px !important;
+}
+
+.corila {
+  @include background-cover('../../pages/careers/testimonial1.png');
+  height: 220px;
+  width: 200px;
+  margin-top: 0px !important;
+}
+.tech-team {
+  padding-top : 23px;
+  margin-bottom : 10px;
+}
+
+.tech-world {
+  padding-top: 43px;
+  margin-bottom : 10px;
+}
+
+.arrow-down::after {
+  display: inline-block;
+  left : 0;
+  margin-left: 10px;
+  position: relative;
+}
+
+.testinomial-bg {
+  background-color: #f9faff !important;
+}
+
+.intro-base {
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 40em;
+  text-align: center;
+
+  h1,
+  .h1,
+  h2,
+  .h2,
+  h3,
+  .h3 {
+    font-size: 32px;
+    line-height: 40px;
+    margin-bottom: 10px;
+  }
+}
+
+.careers-video1 .image {
+  @include background-cover('../../pages/careers/video1_dimagi.png');
+  height: 250px;
+  width: auto;
+}
+
+.careers-video2 .image {
+  @include background-cover('../../pages/careers/video2_bcorp.png');
+  height: 250px;
+  width: auto;
 }

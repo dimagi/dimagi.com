@@ -5,18 +5,30 @@
          id="life">
   <div class="content pad-vert-medium">
 
-      <h3 class="gap-bottom-base align-center">
+      <h3 class="gap-bottom-base primary align-center">
         {% blocktrans %}
           Life at Dimagi
         {% endblocktrans %}
       </h3>
       <p class="align-center">
         {% blocktrans %}
-          Feel inspired by your work and your colleagues
+          Diverse, Inclusive, Collaborative. Come for the mission. Stay for the team. 
         {% endblocktrans %}
       </p>
 
-    <div class="grid-4-at-medium grid-2-at-small grid-row-space-small">
+      <div class="content-width-large carousel carousel-fade-inactive carousel-numbered carousel-features">
+        <div class="carousel-container">
+          <div class="spinner spinner-large"></div>
+          <div class="carousel-slider">
+            {% include "sections/careers/benefits/testimonials/corila.html" %} 
+            {% include "sections/careers/benefits/testimonials/corila.html" %} 
+            {% include "sections/careers/benefits/testimonials/corila.html" %}
+            {% include "sections/careers/benefits/testimonials/corila.html" %}
+          </div>{# .carousel-slider #}
+        </div>{# .carousel-container #}
+      </div>{# .carousel #}
+
+    <div class="grid-4-at-medium grid-2-at-small pad-top-small grid-row-space-small">
       {% click_body 'life-tedx' as click_tedx %}
       {% include "sections/careers/life/tedx_talk.html" with click_class=click_tedx video_play=True %}
       {% click_body 'life-away' as click_away %}
@@ -26,15 +38,6 @@
       {% click_body 'life-services' as click_services %}
       {% include "sections/careers/life/global_services.html" with click_class=click_services blog_read=True %}
     </div>{# .grid-4-at-medium #}
-
-    <p class="align-center pad-bottom-base">
-      <a href="#open-positions"
-         class="button {% click_body 'life-positions' %}">
-        {% blocktrans %}
-          View Open Positions
-        {% endblocktrans %}
-      </a>
-    </p>
 
   </div>{# .content #}
 </section>

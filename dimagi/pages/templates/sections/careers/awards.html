@@ -1,30 +1,111 @@
 {% load i18n %}
 {% load dimagidotcom %}
 
-<section class="awards accent-gray-bg border-top"
-         id="awards">
+<section class="awards accent-gray-bg border-top" id="awards">
   <div class="content pad-top-medium pad-bottom-small align-center">
 
-      <h3 class="gap-bottom-base">
-        {% blocktrans %}
-          Awards
-        {% endblocktrans %}
-      </h3>
-      <p>
-        {% blocktrans %}
-          A few trophies we are proud of
-        {% endblocktrans %}
-      </p>
+    <h3 class="gap-bottom-base primary">
+      {% blocktrans %}
+        Awards
+      {% endblocktrans %}
+    </h3>
+    <p>
+      {% blocktrans %}
+        A few trophies we are proud of
+      {% endblocktrans %}
+    </p>
 
-    <div class="grid-4-at-medium grid-2-at-small grid-row-space-small">
-      {% click_body 'awards-culture' as click_culture %}
-      {% include "sections/careers/awards/company_culture.html" with click_class=click_culture %}
-      {% click_body 'awards-workplace' as click_workplace %}
-      {% include "sections/careers/awards/best_workplace.html" with click_class=click_workplace %}
-      {% click_body 'awards-bcorp' as click_bcorp %}
-      {% include "sections/careers/awards/b_corporation.html" with click_class=click_bcorp %}
-      {% click_body 'awards-topinc' as click_topinc %}
-      {% include "sections/careers/awards/top_5000.html" with click_class=click_topinc %}
+    <div class="grid-4-at-medium grid-2-at-small grid-row-space-small ">
+      <div class="column">
+        <div class="tile pad-bottom-small">
+
+          <div class="aspect-ratio-square
+                gap-bottom-base
+                image company-culture" data-lazybg="true"></div>
+
+          <h6 class="neutral-color gap-bottom-none">
+            B Corporation
+          </h6>
+
+          <p class="body-color gap-bottom-small ">
+            Best for the World 2022
+          </p>
+
+          <a class="align-center " href="https://www.inc.com/profile/dimagi">
+            Read more
+          </a>
+        </div>
+      </div>{# .column #}
+
+      <div class="column">
+        <div class="tile pad-bottom-small">
+      
+          <div class="aspect-ratio-square
+                      gap-bottom-base
+                      image builtin"
+               data-lazybg="true"></div>
+      
+          <h6 class="neutral-color gap-bottom-none">
+            Built In
+          </h6>
+      
+          <p class="body-color gap-bottom-base">
+            Best Midsize Companies to work for 2022
+          </p>
+      
+          <a class="align-center "
+            href="https://www.builtinboston.com/awards/best-midsize-places-to-work-boston-2022">
+              Read more
+          </a>    
+        </div>
+      </div>{# .column #}
+
+      <div class="column">
+        <div class="tile pad-bottom-small">
+      
+          <div class="aspect-ratio-square
+                      gap-bottom-base
+                      image b-corporation"
+               data-lazybg="true"></div>
+      
+          <h6 class="neutral-color gap-bottom-none">
+            2022 Inc 5000
+          </h6>
+      
+          <p class="body-color gap-bottom-base ">
+            Fastest Growing Private Companies in America
+          </p>
+      
+          <a class="align-center "
+            href="https://www.bcorporation.net/en-us/find-a-b-corp/company/dimagi-inc">
+              Read more
+          </a>    
+        </div>
+      </div>{# .column #}
+
+      <div class="column">
+        <div class="tile pad-bottom-small">
+      
+          <div class="aspect-ratio-square
+                      gap-bottom-base
+                      image top-5000"
+               data-lazybg="true"></div>
+      
+          <h6 class="neutral-color gap-bottom-none">
+            Fast Company 
+          </h6>
+      
+          <p class="body-color gap-bottom-small ">
+            World Changing Ideas
+          </p>
+      
+          <a class="align-center"
+            href="https://www.fastcompany.com/90623897/see-34-ingenious-inspirational-winners-of-the-2021-world-changing-ideas-awards">
+              Read more
+          </a>    
+        </div>
+      </div>{# .column #}      
+
     </div>{# .grid-4-at-medium #}
 
   </div>{# .content #}

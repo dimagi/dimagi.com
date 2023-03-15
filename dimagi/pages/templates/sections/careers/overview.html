@@ -4,10 +4,10 @@
 
 <section class="overview" id="overview">
   <div class="content pad-vert-medium">
-    <div class="intro content-width-medium">
-      <h2>
+    <div class="intro-base content-width-medium">
+      <h2 class="primary">
         {% blocktrans %}
-        Powered By a Passion for Impact
+          Powered By a Passion for Impact
         {% endblocktrans %}
       </h2>
       <p class="content-width-medium">
@@ -22,15 +22,15 @@
       </p>
     </div>{# .intro #}
 
+    {% include "sections/careers/overview/video.html" %}
+    {% include "sections/careers/overview/values.html" %}
 
-    {% include "sections/careers/overview/grid.html" %}
 
-
-    <div class="content pad-vert-small">
+    <!-- <div class="content pad-vert-small">
       <div class="content-width-large ">
         <h2 class="align-center primary pad-top-small">
           {% blocktrans %}
-          Our values
+          Our Values
           {% endblocktrans %}
         </h2>
         <p class="align-center">
@@ -119,6 +119,6 @@
           {% endblocktrans %}
         </a>
       </div>{# .column #}
-    </div>{# .content #}
+    </div>{# .content #} -->
   </div> {# .content #}
 </section>
