@@ -95,6 +95,9 @@ define([
         self.currentLocation = ko.observable('');
 
         self.allJobs = _.uniqBy(self.allJobs, 'id');
+        
+        console.log(self.allJobs)
+        console.log(`All Roles :  ${self.roles}`)
 
         self.jobs = ko.computed(function () {
           var jobs = self.allJobs;
