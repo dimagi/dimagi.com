@@ -24,22 +24,6 @@
   stroke-width: 3;
 }
 
-.overview .image.teampic1 {
-  @include background-cover('../../pages/careers/teampic1.jpg');
-}
-
-.overview .image.teampic2 {
-  @include background-cover('../../pages/careers/teampic2.jpg');
-}
-
-.overview .image.teampic3 {
-  @include background-cover('../../pages/careers/teampic3.jpg');
-}
-
-.overview .image.teampic4 {
-  @include background-cover('../../pages/careers/teampic4.jpg');
-}
-
 .awards .image.company-culture {
   @include background-cover('../../pages/careers/bcorporation.png');
 }
