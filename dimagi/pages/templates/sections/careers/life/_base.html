@@ -8,25 +8,18 @@
                 image {% block image %}{% endblock %}"
          data-lazybg="true"></div>
 
-    <h6>
+    <h6 class ="gap-bottom-base pad-bottom-none">
       {% block name %}{% endblock %}
     </h6>
-    <p>
       {% block description %}{% endblock %}
-    </p>
-    <p>
+    <p class="gap-bottom-base">
       {% block area %}{% endblock %}
     </p>
     
-    <a class="button-container gap-top-none"
+    <a class="button-container gap-vert-none"
        target="_blank"
        href="{% block link %}{% endblock %}">
-      <div class="button button-neutral {% if blog_read %} display-none {% endif %}">
-        {% blocktrans %}
-          Watch Now
-        {% endblocktrans %}
-      </div>{# .button #}
-      <div class="button button-neutral {% if video_play %} display-none {% endif %}">
+      <div class="align-left ">
         {% blocktrans %}
           Read More
         {% endblocktrans %}
@@ -34,4 +27,3 @@
     </a>
   </div>
 </div>{# .column #}
-
