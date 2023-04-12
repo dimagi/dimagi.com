@@ -15,6 +15,16 @@
   }
 }
  
+@media (max-width: $width-mobile) {
+  .overview .image.team_summit {
+    width : 325px;
+  }
+  .testimonial-content {
+    padding-top: 10px !important;
+  }
+
+}
+
 .office-country-icon svg {
   height: 80px;
   width: 80px;
@@ -43,7 +53,7 @@
 .overview .image.team_summit {
   @include background-cover('../../pages/careers/teampic1.jpg');
   height : 355px;
-  width : 450px;
+  width : 498px;
 }
 
 .overview .image.gso_summit {
