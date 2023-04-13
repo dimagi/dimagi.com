@@ -7,6 +7,13 @@
   @include make-bg(hero, '../../pages/careers/hero');
 }
 
+@mixin svg-style {
+  width: 33%;
+  padding: 10px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
 @media (min-width: $width-desktop) {
   .careers-page .hero h1 {
     margin-left: 0;
@@ -240,4 +247,9 @@ a.post {
   @include background-cover('../../pages/careers/video2_bcorp.png');
   height: 250px;
   width: auto;
+}
+
+.icon-svg {
+  background-color: #F9FAFF;
+  @include svg-style;
 }
