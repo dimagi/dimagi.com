@@ -21,15 +21,14 @@
     max-width: 55%;
   }
 }
- 
 @media (max-width: $width-mobile) {
   .overview .image.team_summit {
-    width : 325px;
+    width : 325px !important;
   }
+
   .testimonial-content {
     padding-top: 10px !important;
   }
-
 }
 
 .office-country-icon svg {
@@ -168,26 +167,34 @@ a.post {
   margin-bottom: 10px;
 }
 
-.corila {
-  @include background-cover('../../pages/careers/testimonial1.png');
+.corlia {
+  @include background-cover('../../pages/careers/corlia.png');
   height: 220px;
   width: 200px;
   margin-top: 0px !important;
 }
 
-.corila {
-  @include background-cover('../../pages/careers/testimonial1.png');
+.kishan {
+  @include background-cover('../../pages/careers/kishan.jpeg');
   height: 220px;
   width: 200px;
   margin-top: 0px !important;
 }
 
-.corila {
-  @include background-cover('../../pages/careers/testimonial1.png');
+.penda {
+  @include background-cover('../../pages/careers/penda.jpg');
   height: 220px;
   width: 200px;
   margin-top: 0px !important;
 }
+
+.namrata {
+  @include background-cover('../../pages/careers/namrata.jpg');
+  height: 220px;
+  width: 200px;
+  margin-top: 0px !important;
+}
+
 .tech-team {
   padding-top : 23px;
   margin-bottom : 10px;
