@@ -161,6 +161,11 @@
   width: 111px;
 }
 
+.feature-partner-digital-health .image {
+  @include background-cover('../../../static/pages/commcare/partners/featured_partners/digital_health.png');
+  height: 77px;
+  width: 111px;
+}
 .feature-project-logo {
   margin: 0 auto;
 }
