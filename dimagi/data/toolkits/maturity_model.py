@@ -17,6 +17,7 @@ TOOLKIT = Toolkit(
     template="data/toolkits/summaries/maturity_model.html",
     slug="maturity-model",
     icon="svg/tookits/icons/maturity_model.html",
+    theme="orange-theme",
     download_url="https://f.hubspotusercontent20.net/hubfs/503070/Toolkits/Dimagi%20Maturity%20Model.zip",
     hubspot_form="edd74f83-1893-43a3-bb60-f31e20e5f43a",
 )
