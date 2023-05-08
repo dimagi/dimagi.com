@@ -16,6 +16,7 @@ TOOLKIT = Toolkit(
     template="data/toolkits/summaries/data_collection.html",
     slug="data-collection",
     icon="svg/tookits/icons/data_collection.html",
+    theme="primary-theme",
     download_url="https://cdn2.hubspot.net/hubfs/503070/Pillar%20Page%20PDFs/Guide%20to%20Data%20Collection.pdf",
     hubspot_form="781d61a5-25b1-4cc0-8f58-495a02f26bb1",
 )
