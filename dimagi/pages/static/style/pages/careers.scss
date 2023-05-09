@@ -21,6 +21,23 @@
     max-width: 55%;
   }
 }
+@media (max-width: 1292px) {
+  .overview .image.team_summit {
+    width : 422px !important;
+    height : 451px !important;
+  }
+}
+@media (max-width: 1023px) {
+  .overview .image.team_summit {
+    width : 330px !important;
+    height : 451px !important;
+  }
+}
+@media (max-width: 717px) {
+  .overview .image.team_summit {
+    width : 425px !important;
+  }
+}
 @media (max-width: $width-mobile) {
   .overview .image.team_summit {
     width : 325px !important;
@@ -28,6 +45,12 @@
 
   .testimonial-content {
     padding-top: 10px !important;
+  }
+}
+
+@media (max-width: 370px) {
+  .overview .image.team_summit {
+    width : 277px !important;
   }
 }
 
