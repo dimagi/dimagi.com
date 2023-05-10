@@ -76,10 +76,14 @@
   
   }
   
-  .hs-richtext p a {
+  .form-columns-1 .legal-consent-container .hs-richtext p a {
     color: $color-primary !important;
   }
 
+  .hs-form-private .legal-consent-container .hs-richtext p a {
+    font-weight: bold;
+
+  }
   .hubspot-download .hs-submit {
     display: inline-block;
     vertical-align: top;
