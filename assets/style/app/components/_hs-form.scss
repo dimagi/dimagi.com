@@ -70,6 +70,15 @@
       display: none;
     }
   }
+  .hs-button {
+    color : $color-white !important;
+    background-color: $color-primary !important;
+  
+  }
+  
+  .hs-richtext p a {
+    color: $color-primary !important;
+  }
 
   .hubspot-download .hs-submit {
     display: inline-block;
