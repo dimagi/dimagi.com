@@ -1,0 +1,33 @@
+{% extends "sections/us_health/solutions/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block icon %}
+  {% include "svg/us_health/message.html" %}
+{% endblock %}
+
+{% block header %}
+  {% blocktrans %}
+    Automate messaging to clients using SMS and email
+  {% endblocktrans %}
+{% endblock %}
+
+{% block content %}
+  <ul class="bullet">
+    <li class="align-left">
+      {% blocktrans %}
+        Easily send care instructions and alerts based on client preference
+      {% endblocktrans %}
+    </li>
+    <li class="align-left">
+      {% blocktrans %}
+        Collect asynchronous updates, returning the data directly to a client’s case
+      {% endblocktrans %}
+    </li>
+    <li class="align-left">
+      {% blocktrans %}
+        Conveniently trigger appropriate workflows
+      {% endblocktrans %}
+    </li>
+  </ul>
+{% endblock %}

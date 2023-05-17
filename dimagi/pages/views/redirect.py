@@ -61,7 +61,9 @@ def blog_category(request, category):
 
 
 def blog_tag(request, tag):
-    return HttpResponsePermanentRedirect(reverse('blog_home'))
+    return HttpResponsePermanentRedirect(
+        reverse('archive_category', args=[_map_new_categories(tag)])
+    )
 
 
 def blog_old_category(request, category):
