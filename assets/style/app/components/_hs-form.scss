@@ -89,6 +89,14 @@
     vertical-align: top;
   }
 
+  .hs-cta-node .button {
+    color : $color-white !important;
+  }
+
+  .hs-cta-node .alt{
+   color : $color-primary !important;
+  }
+  
   .hs-richtext {
     padding-bottom: $space-line;
   }
