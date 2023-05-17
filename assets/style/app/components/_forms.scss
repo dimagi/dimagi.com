@@ -314,3 +314,13 @@
   }
 
 }
+
+// hs-form buttons are overriding with their local theme since using important.
+.hs-button {
+  color : $color-white !important;
+  
+}
+
+.hs-richtext p strong a {
+  color: $color-primary !important;
+}
