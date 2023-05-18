@@ -132,6 +132,72 @@ a.post {
   }
 }
 
+@media (max-width: $width-desktop) {
+  .tech-world , .tech-team {
+    padding-top : 0px !important;
+  }
+  .bcorp{
+    padding-bottom : 0px !important;
+    margin-bottom : 10px !important;
+  }
+  .staff {
+    padding-top : 20px !important;
+    margin-bottom : 30px !important;
+  }
+}
+
+@media (max-width: 1291px)  {
+  .tech-team , .tech-world  {
+    padding-top : 22px !important;
+  }
+  .bcorp{
+    padding-bottom : 40px !important;
+    margin-bottom : 10px !important;
+  }
+  .staff {
+    padding-top : 20px !important;
+    margin-bottom : 67px !important;
+  }
+}
+
+
+@media (min-width: 718px) and (max-width: 1023px)  {
+  .tech-world {
+    padding-top : 44px !important;
+  }
+  .bcorp{
+    padding-bottom : 62px !important;
+    margin-bottom : 10px !important;
+  }
+  .staff {
+    padding-top : 20px !important;
+    margin-bottom : 71px !important;
+  }
+}
+
+@media (max-width: 717px) {
+  .tech-world , .tech-team {
+    padding-top : 0px !important;
+  }
+  .bcorp{
+    padding-bottom : 0px !important;
+    margin-bottom : 10px !important;
+  }
+  .staff {
+    margin-bottom : 28px !important;
+  }
+}
+
+@media (max-width: $width-mobile) {
+  .tech-world , .tech-team , .staff {
+    padding-top : 0px !important;
+  }
+  .staff , .bcorp{
+    padding-bottom : 0px !important;
+    margin-bottom : 10px !important;
+  }
+}
+
 .life .image.technology {
   @include background-cover('../../pages/careers/technology.png');
 }
@@ -159,7 +225,7 @@ a.post {
   height: .5em;
   top: $list-check-margin;
   transform: rotate(-45deg);
-  width: $list-check-width;
+  width: $list-check-width;  
 }
 
 .application-content em {
@@ -197,11 +263,23 @@ a.post {
   margin-top: 0px !important;
 }
 
+@media (max-width: 1023px) {
+  .corlia {
+    height : 240px !important;
+  }
+}
+
 .kishan {
   @include background-cover('../../pages/careers/kishan.jpeg');
   height: 220px;
   width: 200px;
   margin-top: 0px !important;
+}
+
+@media (max-width: 1023px) {
+  .kishan {
+    height : 240px !important;
+  }
 }
 
 .penda {
@@ -277,6 +355,26 @@ a.post {
   @include background-cover('../../pages/careers/video2_bcorp.png');
   height: 250px;
   width: auto;
+}
+
+@media (min-width: 718px) and (max-width: 1023px) {
+  .careers-video2 .image {
+    height: 200px !important;
+  }
+
+  .careers-video1 .image {
+    height: 204px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .careers-video2 .image {
+    height: 180px !important;
+  }
+
+  .careers-video1 .image {
+    height: 190px !important;
+  }
 }
 
 .icon-svg {
