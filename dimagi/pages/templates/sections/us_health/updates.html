@@ -1,0 +1,34 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="blog-latest" id="resources">
+  <div class="content pad-vert-medium">
+    <div class="align-center gap-bottom-medium">
+      <h2 class="blue">
+        {% blocktrans %}
+          Read the latest about Dimagi's COVID-19 response
+        {% endblocktrans %}
+      </h2>
+    </div>
+    <div class="grid-3-at-medium grid-1-at-small grid-row-space-small">
+      {% for post in posts %}
+        <div class="column pad-top-base">
+          {% include "partials/blog_summary.html" with post=post ratio='square' hide_cat=True %}
+        </div>
+      {% endfor %}
+      <div class="column pad-top-base">
+        <a class="post" href="https://youtu.be/H4A1Fbch4TE" target=_blank>
+          <div class="resource-image aspect-ratio-square gap-bottom-line"
+               data-lazybg="true"></div>  
+          <h6>Bringing Global Best Practices to US Public Health Response</h6>
+          <p>
+            Dimagi has developed open source digital solutions for remote areas 
+            for 20 years, and in 2020 their COVID-19 solution was scaled up by 
+            various US government bodies, revealing common themes in deploying 
+            solutions and leading to valuable lessons learned.
+          </p>
+        </a>         
+      </div>
+    </div>
+  </div>
+</section>

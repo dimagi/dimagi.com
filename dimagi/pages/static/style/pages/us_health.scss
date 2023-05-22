@@ -1,0 +1,145 @@
+@import 'app/mixins/background';
+@import 'app/variables/colors';
+@import 'app/variables/sizes';
+@import 'app/variables/type';
+
+
+.us-health-page {
+  @include make-bg(hero, '../../pages/covid_19/hero');
+
+  .hero h1 {
+    max-width: 90%;
+  }
+}
+.resource-image {
+  @include background-cover('../../pages/us_health/resource.jpg');
+  background-position: center;
+}
+.intro-section {
+  $_base-height: 195px;
+  $_height-by-size: (
+    small: 410px,
+    medium: 370px,
+  );
+  @include make-bg(local-response, '../../pages/us_health/intro/intro', $_base-height, $_height-by-size);
+}
+
+.video-section {
+  $_base-height: 187px;
+  $_height-by-size: (
+    small: 290px,
+    medium: 376px,
+    large: 360px,
+    extra-large: 460px,
+  );
+  @include make-bg(video-image, '../../pages/us_health/video/video', $_base-height, $_height-by-size);
+  @include make-bg(map-image, '../../pages/us_health/map/map', $_base-height, $_height-by-size);
+
+  width: 100%;
+}
+
+.testimonials {
+  $_sizes: (
+    extra-small: (w: 323px, h: 135px),
+    small: (w: 424px, h: 158px),
+    medium: (w: 680px, h: 277px),
+    large: (w: 868px, h: 333px),
+    extra-large: (w: 1016px, h: 408px),
+  );
+
+  .carousel-slide {
+    background-color: $color-white;
+    border: 1px solid $color-border;
+
+    @media (min-width: $width-mobile) {
+      height: 890px;
+    }
+
+    @media (min-width: $width-desktop) {
+      height: 400px;
+    }
+
+    @media (min-width: $width-desktop-lg) {
+      height: 450px;
+    }
+
+    @media (min-width: $width-desktop-xl) {
+      height: 580px;
+    }
+  }
+
+  @include make-carousel-slide(image-oikoi, $_sizes, '../../pages/us_health/partners/ny.jpg');
+  @include make-carousel-slide(image-cleaning-data, $_sizes, '../../pages/us_health/partners/alaska.jpg');
+  @include make-carousel-slide(image-delivery-services, $_sizes, '../../pages/us_health/partners/nj.jpg');
+}
+
+.overview .image.teampic1 {
+  @include background-cover('../../pages/us_health/team/team1.jpg');
+  height: 239px !important;
+  background-position: top;
+}
+
+.overview .image.teampic2 {
+  @include background-cover('../../pages/us_health/team/team2.jpg');
+}
+
+.overview .image.teampic3 {
+  @include background-cover('../../pages/us_health/team/team3.jpg');
+}
+
+.overview .image.teampic4 {
+  @include background-cover('../../pages/us_health/team/team4.jpg');
+  height: 100%;
+}
+
+.application-image .image.cdc {
+  @include background-cover('../../pages/covid_19/CDC.png');
+  height: 200px;
+  background-size: contain;
+  background-position: center;
+}
+
+.application-image .image.ogun {
+  @include background-cover('../../pages/covid_19/san_francisco.png');
+  height: 200px;
+  background-size: contain;
+  background-position: center;
+}
+
+.application-image .image.dsti {
+  @include background-cover('../../pages/covid_19/DSTI.png');
+  height: 200px;
+  background-size: contain;
+  background-position: center;
+}
+
+.video-intro .image {
+  @include background-cover('../../pages/covid_19/covid_19_video_banner.png');
+  height: 160px;
+  width: 250px;
+}
+
+.response {
+  $_base-height: 195px;
+  $_height-by-size: (
+    small: 410px,
+    medium: 290px,
+  );
+  @include make-bg(local-response, '../../pages/covid_19/resources/local_response/response', $_base-height, $_height-by-size);
+  @include make-bg(template, '../../pages/covid_19/resources/template/template', $_base-height, $_height-by-size);
+  @include make-bg(vaccine-delivery, '../../pages/covid_19/resources/vaccine-delivery/vaccine', $_base-height, $_height-by-size);
+}
+
+.resource-image .image.covid-cases {
+  @include background-cover('../../pages/covid_19/covid_cases.png');
+  height: 300px;
+  width: 300px;
+  background-size: auto 100%;
+}
+
+.resource-image .image.covid-support {
+  @include background-cover('../../pages/covid_19/covid_support.jpg');
+  height: 300px;
+  width: 300px;
+  background-size: auto 100%;
+}

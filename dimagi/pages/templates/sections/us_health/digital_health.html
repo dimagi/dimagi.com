@@ -1,0 +1,167 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="pad-top-line accent-gray-bg" id="programs">
+  <div class="content pad-top-small">
+    <h3 class="content-width-small align-center blue">
+      {% blocktrans %}
+        Supporting A Range of Critical Public Health Use Cases With A Flexible Digital Platform
+      {% endblocktrans %}
+    </h3>
+    <div class="content-width-medium grid grid-flex-at-small grid-valign-middle pad-top-line pad-bottom-small grid-reverse">
+        <div class="column no-shrink">
+          <div class="theme-icon epic-icon align-center align-left-at-small">
+            {% include "svg/us_health/service_delivery.html" %}
+          </div>
+        </div>{# .column #}
+        <div class="column">
+          <h3 class="text-color">
+            {% blocktrans %}
+              Behavioral Health
+            {% endblocktrans %}
+          </h3>
+          <p>
+            {% blocktrans %}
+              Improve health outcomes by connecting clients in need
+              with available and appropriate behavioral and mental
+              health treatment using a tailored electronic referral
+              process, real-time searchable bed registry, and
+              centralized registry of medication-assisted treatment
+            {% endblocktrans %}
+          </p>
+          <a class="arrow"
+             href="{% url 'blog_post' 'three-digital-tools-for-behavioral-health' %}"
+             target="_blank">
+            {% blocktrans %}
+              Additional information
+            {% endblocktrans %}
+          </a>
+        </div>{# .column #}
+    </div>{# .grid #}
+
+    <div class="content-width-medium grid grid-flex-at-small grid-valign-middle pad-top-line pad-bottom-small">
+      <div class="column no-shrink">
+        <div class="theme-icon epic-icon align-center align-left-at-small">
+          {% include "svg/us_health/diseases.html" %}
+        </div>
+      </div>{# .column #}
+      <div class="column">
+        <h3 class="text-color">
+          {% blocktrans %}
+            Infectious Disease
+          {% endblocktrans %}
+        </h3>
+        <p>
+          {% blocktrans %}
+            Support a multitude of infectious disease (e.g. TB, HIV, E.Coli) case
+            investigation, management, and contact tracing, while also
+            tracking the lifecycle of individual clients from diagnosis, initiation
+            of treatment, adherence monitoring, and end of treatment
+          {% endblocktrans %}
+        </p>
+        <a class="arrow"
+           href="https://sites.dimagi.com/hubfs/Disease%20Surveillance%20One%20Pager_2022.pdf"
+           target="_blank">
+          {% blocktrans %}
+            Learn more
+          {% endblocktrans %}
+        </a>
+      </div>{# .column #}
+    </div>{# .grid #}
+
+    <div class="content-width-medium grid grid-flex-at-small grid-valign-middle pad-top-line pad-bottom-small grid-reverse">
+      <div class="column no-shrink">
+        <div class="theme-icon epic-icon align-center align-left-at-small">
+          {% include "svg/us_health/biometrics.html" %}
+        </div>
+      </div>{# .column #}
+      <div class="column">
+        <h3 class="text-color">
+          {% blocktrans %}
+            COVID-19 Outbreak Management
+          {% endblocktrans %}
+        </h3>
+        <p>
+          {% blocktrans %}
+            Conduct COVID-19 case investigation, contact tracing, monitoring
+            & reporting, and integration with existing data systems
+          {% endblocktrans %}
+        </p>
+        <a class="arrow"
+          href="{% url 'us_covid_19' %}">
+          {% blocktrans %}
+            See details
+          {% endblocktrans %}
+        </a>
+      </div>{# .column #}
+    </div>{# .grid #}
+    <div class="content-width-medium grid grid-flex-at-small grid-valign-middle pad-top-line pad-bottom-small">
+      <div class="column no-shrink">
+        <div class="theme-icon epic-icon align-center align-left-at-small">
+          {% include "svg/us_health/evidence_base.html" %}
+        </div>
+      </div>{# .column #}
+      <div class="column">
+        <h3 class="text-color">
+          {% blocktrans %}
+            Video Directly Observed Therapy (VDOT/VOT)
+          {% endblocktrans %}
+        </h3>
+        <p>
+          {% blocktrans %}
+            SureAdhere by Dimagi is an evidenced-based, cost-effective
+            digital engagement platform that enables remote medication
+            adherence and treatment support for clients through secure
+            offline-capable asynchronous video and chat
+          {% endblocktrans %}
+        </p>
+        <a class="arrow"
+          href="https://www.sureadhere.com/"
+          target="_blank">
+          {% blocktrans %}
+            Find out more
+          {% endblocktrans %}
+        </a>
+      </div>{# .column #}
+    </div>{# .grid #}
+    <div class="content-width-medium grid grid-flex-at-small grid-valign-middle pad-top-line pad-bottom-small grid-reverse">
+      <div class="column no-shrink">
+        <div class="theme-icon epic-icon align-center align-left-at-small">
+          {% include "svg/us_health/research.html" %}
+        </div>
+      </div>{# .column #}
+      <div class="column">
+        <h3 class="text-color">
+          {% blocktrans %}
+            Research and Innovation
+          {% endblocktrans %}
+        </h3>
+        <p>
+          {% blocktrans %}
+            Our Research and Data (RAD) team aims to advance the field of
+            digital development through rigorous investigation of how current
+            and emerging technologies are used and how they can be
+            improved to better serve the masses
+          {% endblocktrans %}
+        </p>
+        <a class="arrow"
+          href="{% url 'research_and_data' %}">
+          {% blocktrans %}
+            Additional details
+          {% endblocktrans %}
+        </a>
+      </div>{# .column #}
+    </div>{# .grid #}
+
+
+    <p class="align-center pad-vert-small">
+      <a href="{% url 'sectors' %}"
+         class="arrow">
+        {% blocktrans %}
+          See More Sectors
+        {% endblocktrans %}
+      </a>
+    </p>
+
+  </div>
+</section>
