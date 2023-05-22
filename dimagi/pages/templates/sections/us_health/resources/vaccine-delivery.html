@@ -1,0 +1,36 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="content pad-bottom-medium content-width-large blue-theme">
+  <div class="grid-2-at-small">
+    <div class="column pad-top-medium align-left">
+      <h3>
+        {% blocktrans %}
+          COVID-19 Vaccine Delivery Solution
+        {% endblocktrans %}
+      </h3>
+      <p>
+        {% blocktrans %}
+          Delivering the COVID-19 vaccine is sure to be the most ambitious
+          public health campaign ever attempted. Offer every group the
+          support and guidance they need to ensure the equitable delivery
+          of the vaccine – from frontline workers to program officers
+          and, of course, the recipients themselves.
+        {% endblocktrans %}
+      </p>
+      <div class="align-left pad-top-base">
+        <a class="arrow"
+           href="{% url 'vaccine_delivery' %}">
+          {% blocktrans %}
+            Learn More
+          {% endblocktrans %}
+        </a>
+      </div>
+    </div>{# .column #}
+
+    <div class="column">
+      <div class="vaccine-delivery white-lazy-bg"
+           data-lazybg="true"></div>
+    </div>{# .column #}
+  </div>{# .grid-2 #}
+</section>{# .content #}

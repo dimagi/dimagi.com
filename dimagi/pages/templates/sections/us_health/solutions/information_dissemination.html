@@ -1,0 +1,33 @@
+{% extends "sections/us_health/solutions/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block icon %}
+  {% include "svg/us_health/visibility.html" %}
+{% endblock %}
+
+{% block header %}
+  {% blocktrans %}
+    Eliminate data silos for better visibility
+  {% endblocktrans %}
+{% endblock %}
+
+{% block content %}
+  <ul class="bullet">
+    <li class="align-left">
+      {% blocktrans %}
+        Integrate CommCare into existing ecosystem with ease
+      {% endblocktrans %}
+    </li>
+    <li class="align-left">
+      {% blocktrans %}
+        Facilitate real-time data exchange using flexible APIs
+      {% endblocktrans %}
+    </li>
+    <li class="align-left">
+      {% blocktrans %}
+        Connect data systems and sources efficiently
+      {% endblocktrans %}
+    </li>
+  </ul>
+{% endblock %}
