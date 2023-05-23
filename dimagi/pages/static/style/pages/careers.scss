@@ -21,19 +21,19 @@
     max-width: 55%;
   }
 }
-@media (max-width: 1292px) {
+@media (max-width: $width-desktop-xl) {
   .overview .image.team_summit {
     width : 422px !important;
     height : 451px !important;
   }
 }
-@media (max-width: 1023px) {
+@media (max-width: $width-desktop-lg) {
   .overview .image.team_summit {
     width : 330px !important;
     height : 300px !important;
   }
 }
-@media (max-width: 717px) {
+@media (max-width: $width-desktop) {
   .overview .image.team_summit {
     width : 425px !important;
   }
@@ -146,7 +146,7 @@ a.post {
   }
 }
 
-@media (max-width: 1291px)  {
+@media (max-width: $width-desktop-xl)  {
   .tech-team , .tech-world  {
     padding-top : 22px !important;
   }
@@ -161,7 +161,7 @@ a.post {
 }
 
 
-@media (min-width: 718px) and (max-width: 1023px)  {
+@media (min-width: $width-desktop) and (max-width: $width-desktop-lg)  {
   .tech-world {
     padding-top : 44px !important;
   }
@@ -175,7 +175,7 @@ a.post {
   }
 }
 
-@media (max-width: 717px) {
+@media (max-width: $width-desktop) {
   .tech-world , .tech-team {
     padding-top : 0px !important;
   }
@@ -263,7 +263,7 @@ a.post {
   margin-top: 0px !important;
 }
 
-@media (max-width: 1023px) {
+@media (max-width: $width-desktop-lg) {
   .corlia {
     height : 240px !important;
   }
@@ -276,7 +276,7 @@ a.post {
   margin-top: 0px !important;
 }
 
-@media (max-width: 1023px) {
+@media (max-width: $width-desktop-lg) {
   .kishan {
     height : 240px !important;
   }
