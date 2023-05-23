@@ -38,6 +38,10 @@
   width: 100%;
 }
 
+ul.unorderedlist>li::before {
+  content: '●' !important;
+ }
+ 
 .testimonials {
   $_sizes: (
     extra-small: (w: 323px, h: 135px),
