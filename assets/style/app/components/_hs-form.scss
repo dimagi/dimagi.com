@@ -21,8 +21,9 @@
   }
 
   ul>li::before, ul.bullet>li::before {
-    content: '●';
+    content: '';
   }
+  
   .hs-form-booleancheckbox {
     padding-left: 0px !important;
   }
