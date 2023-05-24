@@ -63,6 +63,30 @@
   stroke-width: 3;
 }
 
+@media (max-width: $width-desktop-xl) and (min-width: $width-mobile) {
+  .awards .card-4 {
+    padding-bottom : 20px !important;
+  }
+}
+
+@media (max-width: $width-desktop-lg) {
+  .awards .card-2 {
+    padding-bottom : 40px !important;
+  }
+  .awards .card-1 {
+    padding-bottom : 40px !important;
+  }
+}
+
+@media (max-width: $width-desktop) {
+  .awards .card-2 {
+    padding-bottom : 0px !important;
+  }
+  .awards .card-1 {
+    padding-bottom : 0px !important;
+  }
+}
+
 .awards .image.company-culture {
   @include background-cover('../../pages/careers/bcorporation.png');
 }
