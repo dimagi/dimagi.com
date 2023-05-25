@@ -7,11 +7,50 @@
   @include make-bg(hero, '../../pages/careers/hero');
 }
 
+@mixin svg-style {
+  width: 33%;
+  padding: 10px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
 @media (min-width: $width-desktop) {
   .careers-page .hero h1 {
     margin-left: 0;
     margin-right: 0;
     max-width: 55%;
+  }
+}
+@media (max-width: $width-desktop-xl - 1px) {
+  .overview .image.team_summit {
+    width : 422px !important;
+    height : 451px !important;
+  }
+}
+@media (max-width: $width-desktop-lg - 1px) {
+  .overview .image.team_summit {
+    width : 330px !important;
+    height : 380px !important;
+  }
+}
+@media (max-width: $width-desktop - 1px) {
+  .overview .image.team_summit {
+    width : 425px !important;
+  }
+}
+@media (max-width: $width-mobile - 1px) {
+  .overview .image.team_summit {
+    width : 325px !important;
+  }
+
+  .testimonial-content {
+    padding-top: 10px !important;
+  }
+}
+
+@media (max-width: 370px - 1px) {
+  .overview .image.team_summit {
+    width : 277px !important;
   }
 }
 
@@ -24,28 +63,36 @@
   stroke-width: 3;
 }
 
-.overview .image.teampic1 {
-  @include background-cover('../../pages/careers/teampic1.jpg');
+@media (max-width: $width-desktop-xl - 1px) and (min-width: $width-mobile - 1px) {
+  .awards .card-4 {
+    padding-bottom : 20px !important;
+  }
 }
 
-.overview .image.teampic2 {
-  @include background-cover('../../pages/careers/teampic2.jpg');
+@media (min-width: $width-desktop - 1px) and (max-width: $width-desktop-lg - 1px) {
+  .awards .card-2 {
+    padding-bottom : 40px !important;
+  }
+  .awards .card-1 {
+    padding-bottom : 40px !important;
+  }
 }
 
-.overview .image.teampic3 {
-  @include background-cover('../../pages/careers/teampic3.jpg');
-}
-
-.overview .image.teampic4 {
-  @include background-cover('../../pages/careers/teampic4.jpg');
+@media (min-width: $width-mobile - 1px) and (max-width: $width-desktop - 1px) {
+  .awards .card-2 {
+    padding-bottom : 0px !important;
+  }
+  .awards .card-1 {
+    padding-bottom : 0px !important;
+  }
 }
 
 .awards .image.company-culture {
-  @include background-cover('../../pages/careers/entrepreneur.jpg');
+  @include background-cover('../../pages/careers/bcorporation.png');
 }
 
-.awards .image.best-workplaces {
-  @include background-cover('../../pages/careers/bestwork.png');
+.awards .image.builtin {
+  @include background-cover('../../pages/careers/builtin.png');
 }
 
 .awards .image.b-corporation {
@@ -54,6 +101,32 @@
 
 .awards .image.top-5000 {
   @include background-cover('../../pages/careers/fastcompany.png');
+}
+
+.overview .image.team_summit {
+  @include background-cover('../../pages/careers/teampic_1.jpg');
+  height : 355px;
+  width : 498px;
+}
+
+.overview .image.gso_summit {
+  @include background-cover('../../pages/careers/teampic2.jpg');
+}
+
+.overview .image.gso {
+  @include background-cover('../../pages/careers/teampic3.jpg');
+}
+
+.overview .image.dei_gtd_summit {
+  @include background-cover('../../pages/careers/teampic4.jpg');
+}
+
+.overview .image.ush_summit {
+  @include background-cover('../../pages/careers/teampic5.jpg');
+}
+
+.overview .image.id_summit {
+  @include background-cover('../../pages/careers/teampic6.jpg');
 }
 
 .post-thumbnail {
@@ -83,20 +156,86 @@ a.post {
   }
 }
 
-.life .image.tedx-talk {
-  @include background-cover('../../pages/careers/technology.jpg');
+@media (max-width: $width-desktop - 1px) {
+  .tech-world , .tech-team {
+    padding-top : 0px !important;
+  }
+  .bcorp{
+    padding-bottom : 0px !important;
+    margin-bottom : 10px !important;
+  }
+  .staff {
+    padding-top : 20px !important;
+    margin-bottom : 30px !important;
+  }
 }
 
-.life .image.away-month {
-  @include background-cover('../../pages/careers/awaymonth.jpg');
+@media (max-width: $width-desktop-xl - 1px)  {
+  .tech-team , .tech-world  {
+    padding-top : 22px !important;
+  }
+  .bcorp{
+    padding-bottom : 40px !important;
+    margin-bottom : 10px !important;
+  }
+  .staff {
+    padding-top : 20px !important;
+    margin-bottom : 67px !important;
+  }
 }
 
-.life .image.core-values {
-  @include background-cover('../../pages/careers/corevalues.jpg');
+
+@media (min-width: $width-desktop - 1px) and (max-width: $width-desktop-lg - 1px)  {
+  .tech-world {
+    padding-top : 44px !important;
+  }
+  .bcorp{
+    padding-bottom : 62px !important;
+    margin-bottom : 10px !important;
+  }
+  .staff {
+    padding-top : 20px !important;
+    margin-bottom : 71px !important;
+  }
 }
 
-.life .image.global-services {
-  @include background-cover('../../pages/careers/globalservices.jpg');
+@media (max-width: $width-desktop - 1px) {
+  .tech-world , .tech-team {
+    padding-top : 0px !important;
+  }
+  .bcorp{
+    padding-bottom : 0px !important;
+    margin-bottom : 10px !important;
+  }
+  .staff {
+    margin-bottom : 28px !important;
+  }
+}
+
+@media (max-width: $width-mobile - 1px) {
+  .tech-world , .tech-team , .staff {
+    padding-top : 0px !important;
+  }
+  .staff , .bcorp{
+    padding-bottom : 0px !important;
+    margin-bottom : 10px !important;
+  }
+}
+
+.life .image.technology {
+  @include background-cover('../../pages/careers/technology.png');
+}
+
+.life .image.gtd-summit {
+  @include background-cover('../../pages/careers/gtd_summit.jpg');
+}
+
+.life .image.benefit-corp {
+  @include background-cover('../../pages/careers/benefit_corp.png');
+}
+
+.life .image.continuous-learning {
+  @include background-cover('../../pages/careers/continuous_learning.jpg');
 }
 
 .application-content ul > li::before { // scss-lint:disable PropertyCount
@@ -110,7 +249,7 @@ a.post {
   height: .5em;
   top: $list-check-margin;
   transform: rotate(-45deg);
-  width: $list-check-width;
+  width: $list-check-width;  
 }
 
 .application-content em {
@@ -139,4 +278,130 @@ a.post {
   font-size: $font-size-large;
   line-height: 20px;
   margin-bottom: 10px;
+}
+
+.corlia {
+  @include background-cover('../../pages/careers/corlia.png');
+  height: 220px;
+  width: 200px;
+  margin-top: 0px !important;
+}
+
+@media (max-width: $width-desktop-lg) {
+  .corlia {
+    height : 240px !important;
+  }
+}
+
+.kishan {
+  @include background-cover('../../pages/careers/kishan.jpeg');
+  height: 220px;
+  width: 200px;
+  margin-top: 0px !important;
+}
+
+@media (max-width: $width-desktop-lg) {
+  .kishan {
+    height : 240px !important;
+  }
+}
+
+.penda {
+  @include background-cover('../../pages/careers/penda.jpg');
+  height: 220px;
+  width: 200px;
+  margin-top: 0px !important;
+}
+
+.namrata {
+  @include background-cover('../../pages/careers/namrata.jpg');
+  height: 220px;
+  width: 200px;
+  margin-top: 0px !important;
+}
+
+.tech-team {
+  padding-top : 23px;
+  margin-bottom : 10px;
+}
+
+.tech-world {
+  padding-top: 43px;
+  margin-bottom : 10px;
+}
+
+.staff {
+  padding-top : 20px;
+  margin-bottom : 52px
+}
+
+.bcorp {
+  padding-bottom : 33px;
+}
+
+.arrow-down::after {
+  display: inline-block;
+  left : 0;
+  margin-left: 10px;
+  position: relative;
+}
+
+.testinomial-bg {
+  background-color: #f9faff !important;
+}
+
+.intro-base {
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 40em;
+  text-align: center;
+
+  h1,
+  .h1,
+  h2,
+  .h2,
+  h3,
+  .h3 {
+    font-size: 32px;
+    line-height: 40px;
+    margin-bottom: 10px;
+  }
+}
+
+.careers-video1 .image {
+  @include background-cover('../../pages/careers/video1_dimagi.png');
+  height: 250px;
+  width: auto;
+}
+
+.careers-video2 .image {
+  @include background-cover('../../pages/careers/video2_bcorp.png');
+  height: 250px;
+  width: auto;
+}
+
+@media (min-width: 718px) and (max-width: 1023px) {
+  .careers-video2 .image {
+    height: 200px !important;
+  }
+
+  .careers-video1 .image {
+    height: 204px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .careers-video2 .image {
+    height: 180px !important;
+  }
+
+  .careers-video1 .image {
+    height: 190px !important;
+  }
+}
+
+.icon-svg {
+  background-color: #F9FAFF;
+  @include svg-style;
 }

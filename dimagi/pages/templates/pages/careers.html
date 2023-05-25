@@ -46,6 +46,11 @@
           Dimagi Careers
         {% endblocktrans %}
       </h1>
+      <h4>
+        {% blocktrans %}
+          Build Your Career, Better the World
+        {% endblocktrans %}
+      </h4>
       <a class="button alt inverted {% click_hero 'view-positions' %}"
          href="#open-positions">
         {% blocktrans %}
@@ -57,13 +62,13 @@
 {% endblock %}
 
 {% block content %}
-  <section class="careers-container orange-theme">
+  <section class="careers-container primary-theme">
     {% include "sections/careers/sub_nav.html" %}
     {% include "sections/careers/overview.html" %}
     {% include "sections/careers/benefits.html" %}
     {% include "sections/careers/awards.html" %}
     {% include "sections/careers/life.html" %}
-    {% include "sections/contact/offices.html" %}
+    {% include "sections/careers/one_dimagi.html" %}
     {% include "sections/careers/open_positions.html" %}
   </section>
 {% endblock %}

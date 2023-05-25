@@ -1,0 +1,25 @@
+{% extends "sections/careers/testimonials/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block image_class%}namrata{% endblock %}
+
+{% block content %}
+  <div class="testimonial-content content-width-medium align-left pad-top-medium pad-horz-base">
+    <p>
+      {% blocktrans %}
+        “What I love the most about Dimagi is the fact that we 
+        are a very collaborative team, we work across different 
+        geographies, different time zones, and I’ve never felt 
+        that I’m talking to a stranger.”
+      {% endblocktrans %}  
+    </p>
+    <div class="attribution-heading primary pad-bottom-base uppercase">
+      <p class="pad-bottom-base">
+      {% blocktrans %}
+        <strong> NAMRATA TOMAR </strong>  |  Project Manager
+      {% endblocktrans %}
+      </p>
+    </div>
+  </div>
+{% endblock %}

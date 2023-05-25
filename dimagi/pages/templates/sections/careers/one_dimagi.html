@@ -1,0 +1,77 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="overview accent-gray-bg border-bottom"
+         id="dei-commit">
+  <div class="content pad-vert-medium gap-bottom-line">
+    <div class="gap-bottom-small gap-bottom-medium-at-medium content-width-large">
+      <h2 class="gap-bottom-base primary align-center">
+        {% blocktrans %}
+          One Dimagi
+        {% endblocktrans %}
+      </h2>
+      <p class="align-center lead-text">
+        {% blocktrans %}
+        “Lead with Empathy and Respect" is a core value at Dimagi. 
+        This value guides our external interactions and how we operate 
+        internally. As a global company that benefits from a diverse team, 
+        we are committed to creating an equitable, inclusive, and safe environment for all our team members.
+        {% endblocktrans %}
+      </p>
+    </div>{# .intro #}
+
+    <div class="grid-2-at-medium gap-bottom-line">
+      <div class="column pad-right-base-at-medium pad-left-base-at-medium gap-bottom-line pad-top-line pad-top-large-at-large">
+        <ul class="check-list">
+          <li class="pad-bottom-base">
+            <h6 class="service-list primary gap-bottom-none">
+              {% blocktrans %}
+                Creating an Inclusive Environment 
+              {% endblocktrans %}
+            </h6>
+            <p class="lead-text">
+              {% blocktrans %}
+                Anti-Bias and Inclusion Training provided across the organization
+              {% endblocktrans %}
+            </p>
+          </li>
+          <li class="pad-bottom-base">
+            <h6 class="service-list primary gap-bottom-none">
+              {% blocktrans %}
+                Listening to Our Team
+              {% endblocktrans %}
+            </h6>
+            <p class="lead-text">
+              {% blocktrans %}
+                Dimagi's Diversity, Equity, and Inclusion (DEI) council, 
+                comprising staff from across all our global teams, provides 
+                critical input and feedback on organizational culture and initiatives.
+              {% endblocktrans %}
+            </p>
+          </li>
+          <li class="pad-bottom-base">
+            <h6 class="service-list primary gap-bottom-none">
+              {% blocktrans %}
+                Increasing Equity in our People Processes
+              {% endblocktrans %}
+            </h6>
+            <p class="lead-text">
+              {% blocktrans %}
+                We work to continuously improve our recruiting, performance 
+                management, and team engagement practices to ensure that 
+                they are equitable and transparent.
+              {% endblocktrans %}
+            </p>
+          </li>
+        </ul>
+      </div>{# .column #}
+      <div class="column pad-right-small-at-medium">
+        <div class="image aspect-ratio-square team_summit"
+                     data-lazybg="true"></div>
+      </div>{# .column #}
+    </div>{# .grid-2-at-medium #}
+
+    {% include "sections/careers/one_dimagi/grid.html" %}
+
+  </div>{# .content #}
+</section>

@@ -4,15 +4,15 @@
 <section class="open-positions border-top accent-gray-bg"
          id="open-positions">
   <div class="content pad-vert-medium">
-    <div class="intro content-width-medium gap-bottom-none">
-      <h2>
+    <div class="intro-base content-width-medium gap-bottom-none">
+      <h2 class ="primary">
         {% blocktrans %}
-          Open Positions
+          Current Openings
         {% endblocktrans %}
       </h2>
       <p class="gap-bottom-none">
         {% blocktrans %}
-          View all open positions below.
+          A bold take on a better world. Join Us!
         {% endblocktrans %}
       </p>
     </div>{# .intro #}
@@ -22,7 +22,7 @@
         <div class="column">
           <label for="role-select">
             {% blocktrans %}
-            Role
+              Position
             {% endblocktrans %}
           </label>
           <select id="role-select"
@@ -33,7 +33,7 @@
         <div class="column">
           <label for="team-select">
             {% blocktrans %}
-            Division
+              Division
             {% endblocktrans %}
           </label>
           <select id="team-select"
@@ -44,7 +44,7 @@
         <div class="column">
           <label for="type-select">
             {% blocktrans %}
-            Type
+              Employment Type
             {% endblocktrans %}
           </label>
           <select id="type-select"
@@ -55,7 +55,7 @@
         <div class="column">
           <label for="location-select">
             {% blocktrans %}
-            Location
+              Location
             {% endblocktrans %}
           </label>
           <select id="location-select"
@@ -69,7 +69,7 @@
     <div class="positions-container">
       <p class="gap-bottom-none align-center" data-bind="visible: jobs().length === 0">
         {% blocktrans %}
-          No Open Positions Available
+          Join our Talent Community for future openings at Dimagi.
         {% endblocktrans %}
       </p>
       <div class="grid-4-at-medium gap-bottom-none" data-bind="foreach: jobs, visible: jobs().length > 0">
@@ -93,24 +93,25 @@
       </div>{# .grid-4 #}
     </div>{# .positions-container #}
     <p class="gap-top-line align-center">
-      Questions on the recruitment process? Check out our
-      <a class="orange {{ click_class }}"
+      Have questions about our hiring process? Check out our
+      <a class="primary {{ click_class }}"
          href="https://cdn2.hubspot.net/hubfs/503070/Dimagi_Recruitment%20FAQ.pdf"
          target="_blank"> FAQ </a>.
     </p>
-    <p class="align-center content-width-large">
-      {% blocktrans %}
-        Don't see the job you're looking for? Share your resume with 
-        us and we'll keep your contact details on file.
-      {% endblocktrans %}
-    </p>
+
     <p class="align-center">
       <a class="button {% click_body 'view-positions' %}"
-         href="mailto:recruiting@dimagi.com">
+         href="mailto:careers@dimagi.com">
         {% blocktrans %}
-          Share Resume
+          Join Our Talent Community
         {% endblocktrans %}
       </a>{# .button #}
+    </p>
+  
+    <p class="gap-top-line align-center">
+      Don’t see a job opening you would enjoy? Send your resume and field of interest to
+      <a class=" primary {% click_body 'view-positions' %}"
+         href="mailto:careers@dimagi.com"> careers@dimagi.com</a> to be kept informed about future openings.
     </p>
     <div>
       <p class="align-center content-width-large pad-top-line">
@@ -123,8 +124,35 @@
           status and will not be discriminated against on the basis of disability.
         {% endblocktrans %}
       </p>
-      <p class="align-center">
-        <a class="orange"
+      <p class="align-center content-width-large">
+        {% blocktrans %}
+          If you are interested in applying for employment and need special assistance 
+          or reasonable accommodation during the application or interview process for a 
+          posted position please contact us at 617-604-2123 or send an email to 
+          <a> accommodations@dimagi.com </a> detailing your request. 
+
+        {% endblocktrans %}
+      </p>
+      <div class="grid-1 content-width-large align-center pad-vert-base ">
+        <a class="column arrow-down button alt gap-right-small gap-left-small" onclick="toggleText()">
+          {% blocktrans %}
+            For US Applicants
+          {% endblocktrans %}
+        </a>
+      </div>
+
+      <p style="display : none" class="align-center content-width-large pad-top-line" id="usappli">
+        Dimagi maintains an Affirmative Action Plan for the purpose of proactively seeking 
+        employment of qualified protected veterans and individuals with disabilities. Upon 
+        request, Dimagi will make accessible to you its Affirmative Action Plan for protected 
+        veterans and individuals with a disability. If you are interested, please contact us 
+        at 617-649-2214 or email aaprequests@dimagi.com. We will then schedule a time for you 
+        to review the Affirmative Action Plan during normal business hours which are Monday 
+        through Friday 9:00 am to 3:00 pm Eastern time zone.Dimagi's corporate office is 
+        located at 585 Massachusetts Ave, Cambridge, MA 02139.
+      </p>
+      <p class="align-center gap-top-small">
+        <a class="primary"
             href="https://sites.dimagi.com/hubfs/Pay%20Transparency%20Nondiscrimination%20Provision.pdf"
             target="_blank">
           {% blocktrans %}
@@ -135,3 +163,17 @@
     </div>
   </div> {# .content #}
 </section>
+
+{% block js %}
+  <script>
+    function toggleText() {
+      var x = document.getElementById("usappli");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } 
+      else {
+        x.style.display = "none";
+      }
+    }
+  </script>
+{% endblock %}
