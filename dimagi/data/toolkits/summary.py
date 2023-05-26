@@ -2,17 +2,17 @@ from django.utils.translation import ugettext_lazy
 from dimagi.pages.models.toolkits import OtherToolkit
 
 
-BUSINESS_DEVELOPMENT = OtherToolkit(
-    name=ugettext_lazy(
-        "Business Development Toolkit"
-    ),
-    icon="svg/tookits/icons/business_development.html",
-    description=ugettext_lazy("""
-Use the Business Development Toolkit to develop a BD pipeline
-for your organization.
-    """),
-    view_url="business-development",
-)
+# BUSINESS_DEVELOPMENT = OtherToolkit(
+#     name=ugettext_lazy(
+#         "Business Development Toolkit"
+#     ),
+#     icon="svg/tookits/icons/business_development.html",
+#     description=ugettext_lazy("""
+# Use the Business Development Toolkit to develop a BD pipeline
+# for your organization.
+#     """),
+#     view_url="business-development",
+# )
 
 
 COMMCARE_EVIDENCE_BASE = OtherToolkit(
