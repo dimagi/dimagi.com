@@ -71,7 +71,6 @@ a 12-month period.
 
 
 TOOLKIT.add_other_toolkits([
-    # summary.BUSINESS_DEVELOPMENT,
     summary.COMMCARE_MANAGING_DATA,
     summary.MANAGING_DEVICES_EBOOK,
     summary.MATURITY_MODEL,
