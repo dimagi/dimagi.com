@@ -1,5 +1,4 @@
 from dimagi.data.toolkits import (
-    maturity_model,
     total_cost_ownership,
     commcare_evidence_base,
     business_development,
@@ -12,7 +11,6 @@ from dimagi.data.toolkits import (
 )
 
 toolkits = (
-    maturity_model,
     total_cost_ownership,
     commcare_evidence_base,
     business_development,

@@ -67,19 +67,6 @@ large-scale mobile health project.
 )
 
 
-MATURITY_MODEL = OtherToolkit(
-    name=ugettext_lazy(
-        "The Maturity Model"
-    ),
-    icon="svg/tookits/icons/maturity_model.html",
-    description=ugettext_lazy("""
-Use the Maturity Model to establish a long-term
-vision for building and scaling your mobile system.
-    """),
-    view_url="maturity-model",
-)
-
-
 MOBILE_DATA_COLLECTION = OtherToolkit(
     name=ugettext_lazy(
         "Mobile Data Collection Guide"
