@@ -55,7 +55,6 @@ Learn how to inspect and clean raw data.
 
 
 TOOLKIT.add_other_toolkits([
-    summary.BUSINESS_DEVELOPMENT,
     summary.COMMCARE_EVIDENCE_BASE,
     summary.MANAGING_DEVICES_EBOOK,
     summary.MATURITY_MODEL,

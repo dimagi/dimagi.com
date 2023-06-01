@@ -56,7 +56,6 @@ collection plan outlines.
 
 
 TOOLKIT.add_other_toolkits([
-    summary.BUSINESS_DEVELOPMENT,
     summary.COMMCARE_EVIDENCE_BASE,
     summary.COMMCARE_MANAGING_DATA,
     summary.MANAGING_DEVICES_EBOOK,
