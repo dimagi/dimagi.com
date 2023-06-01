@@ -6,22 +6,18 @@
     <div class="content pad-top-medium">
       <h2 class="theme-color pad-bottom-line">
         {% blocktrans %}
-        All Partners
+          All Partners
         {% endblocktrans %}
       </h2>
     </div>{# .content #}
     <div class="content pad-top-line news-images">
-      <div class="grid-4-at-medium grid-2-at-small grid-row-space-small">
-        {% for post in recent %}
-        <div class="column">
-          {% include "sections/certified_partners/certified_providers_summary.html" with post=post ratio='square' %}
-        </div>
-        {% endfor %}
-      </div>
+      {% include "sections/commcare_providers/partners_row1.html" %}
+      {% include "sections/commcare_providers/partners_row2.html" %}
+      {% include "sections/commcare_providers/partners_row3.html" %}
     </div>{# .content #}
     <div class="content pad-top-medium align-center">
       <p class="align-center pad-top-line">
-        <a class="button uppercase {% click_body 'latest_partners' %}" href="#">
+        <a class="button uppercase {% click_body 'latest_partners' %}" href="{% url 'commcare_providers' %}">
           {% blocktrans %}
           View All Partners
           {% endblocktrans %}

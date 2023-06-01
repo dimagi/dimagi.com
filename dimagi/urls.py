@@ -20,7 +20,7 @@ from dimagi.pages.urls.redirect import redirect_urlpatterns
 from django.views.generic.base import RedirectView
 from dimagi.pages.views import commcare, redirect
 from dimagi.pages.views import pillar
-from dimagi.pages.urls import blog , certified_providers , partners
+from dimagi.pages.urls import blog
 from dimagi.pages.urls import team
 from dimagi.utils.config import setting
 
@@ -59,6 +59,8 @@ urlpatterns = [
     url(r'^india/$', pages.india, name='india'),
     url(r'^resources/$', pages.resources, name='resources'),
     url(r'^research-and-data/$', pages.research_and_data, name='research_and_data'),
+    url(r'^partners/$', pages.partners, name='partners'),
+    url(r'^commcare-providers/$', pages.commcare_providers, name='commcare_providers'),
     url(r'^covid-19/$', pages.covid_19, name='covid_19'),
     url(r'^us-health/$', pages.us_health, name='us_health'),
     url(r'^covid-19/us-response$', pages.us_covid_19, name='us_covid_19'),
@@ -112,8 +114,6 @@ urlpatterns = [
 
 
     url(r'^blog/', include(blog.blog_urls)),
-    url(r'^commcareproviders/', include(certified_providers.certified_providers_urls)),
-    url(r'^partners/', include(partners.partners_urls)),
     url(r'^about/', include(team.about_urls)),
     url(r'^team/', include(team.team_urls)),
 

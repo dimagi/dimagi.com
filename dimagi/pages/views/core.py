@@ -31,6 +31,11 @@ def home(request):
     return render(request, 'pages/home.html', context)
 
 
+def commcare_providers(request):
+    return render(request, 'pages/all_commcare_providers.html')
+
+
+
 def services(request):
     context = {
         'partners': get_service_partners(),
