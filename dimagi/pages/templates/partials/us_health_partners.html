@@ -1,0 +1,28 @@
+
+<div class="partners js-partners-web display-block-at-medium hide">
+  <div class="grid-5">
+    {% for column in partners.web %}
+      <div class="column">
+        {% for partner in column %}
+          <div class="partner-logo{% if forloop.counter0 == 0 %} current{% endif %}">
+            {% include partner %}
+          </div>{# .logo #}
+        {% endfor %}
+      </div>{# .column #}
+    {% endfor %}
+  </div>{# .grid-4 #}
+</div>
+
+<div class="partners js-partners-mobile hide-at-medium gap-bottom-small gap-bottom-none-at-small">
+  <div class="grid-2 grid-4-at-small grid-row-space-medium">
+    {% for column in partners.mobile %}
+      <div class="column">
+        {% for partner in column %}
+          <div class="partner-logo{% if forloop.counter0 == 0 %} current{% endif %}">
+            {% include partner %}
+          </div>{# .logo #}
+        {% endfor %}
+      </div>{# .column #}
+    {% endfor %}
+  </div>{# .grid-4 #}
+</div>

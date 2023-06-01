@@ -1,0 +1,20 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="applications align-center blue-theme accent-gray-bg pad-top-large pad-bottom-medium border-top"
+         id="solutions">
+  <div class="content">
+    <h2 class="blue align-center">
+      {% blocktrans %}
+        Governments are leveraging CommCare for COVID-19 response
+      {% endblocktrans %}
+    </h2>
+  </div>
+  <div class="content content-width-large">
+    <div class="grid-2-at-small grid-3-at-large grid-col-space-medium grid-row-space-small">
+      {% include "sections/covid_19/applications/san_francisco.html" %}
+      {% include "sections/covid_19/applications/cdc.html" %}
+      {% include "sections/covid_19/applications/sierra_leone_dsti.html" %}
+    </div>
+  </div>
+</section>

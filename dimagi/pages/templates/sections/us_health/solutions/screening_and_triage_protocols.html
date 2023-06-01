@@ -1,0 +1,35 @@
+{% extends "sections/us_health/solutions/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block icon %}
+  {% include "svg/us_health/quality.html" %}
+{% endblock %}
+
+{% block header %}
+  {% blocktrans %}
+    Deliver better quality client care and service
+  {% endblocktrans %}
+{% endblock %}
+
+{% block content %}
+  <ul class="unorderedlist">
+    <li class="align-left">
+      {% blocktrans %}
+        Collect, access, and share client data instantly
+      {% endblocktrans %}
+    </li>
+    <li class="align-left">
+      {% blocktrans %}
+        Directly collaborate and coordinate care using a
+        single solution with tailored role-based experiences
+      {% endblocktrans %}
+    </li>
+    <li class="align-left">
+      {% blocktrans %}
+        Customize forms, build reusable content, and
+        access pre-build content for quicker acceleration
+      {% endblocktrans %}
+    </li>
+  </ul>
+{% endblock %}

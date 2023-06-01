@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block body_class %}us-health-page tucked-hero{% endblock %}
+
+{% block title %}{% blocktrans %}
+  DIMAGI U.S.
+{% endblocktrans %}{% endblock %}
+
+{% block description %}{% blocktrans %}
+  Your Digital Solutions Partner for Improving Health Outcomes
+{% endblocktrans %}{% endblock %}
+
+{% block stylesheets %}
+  {% compress css %}
+    <link href="{% sass_src 'style/pages/blog.scss' %}" rel="stylesheet" media="screen" type="text/css" />
+    <link href="{% sass_src 'style/pages/us_health.scss' %}" rel="stylesheet" media="screen" type="text/css" />
+  {% endcompress %}
+{% endblock %}
+
+{% block hero %}
+  <div id="top"></div>
+  <section class="hero hero-covid19"
+           data-lazybg="true"
+           id="hero">
+    <div class="content align-center">
+      <h2 class="gap-top-small">
+        {% blocktrans %}
+          DIMAGI U.S.
+        {% endblocktrans %}
+      </h2>
+      <h1 class="content-width-small">
+        {% blocktrans %}
+          Your Digital Solutions Partner for Improving Health Outcomes
+        {% endblocktrans %}
+      </h1>
+      <div class="align-center pad-top-base pad-bottom-small white ">
+        <a class="arrow"
+           href="{% url 'commcare' %}">
+          {% blocktrans %}
+            Learn more about CommCare
+          {% endblocktrans %}
+        </a>
+      </div>
+    </div> {# .content #}
+  </section>
+{% endblock %}
+
+{% block content %}
+  <section class="services-container blue-theme">
+    {% include "sections/us_health/sub_nav.html" %}
+    {% include "sections/us_health/intro.html" %}
+    {% include "sections/us_health/partners.html" %}
+    {% include "sections/us_health/solutions.html" %}
+    {% include "sections/us_health/commcare_action.html" %}
+    {% include "sections/us_health/digital_health.html" %}
+    {% include "sections/us_health/map.html" %}
+    {% include "sections/us_health/testimonials.html" %}
+    {% include "sections/us_health/team.html" %}
+    {% include "sections/us_health/updates.html" %}
+    {% include "sections/us_health/support_us.html" %}
+  </section>
+{% endblock %}
+
+{% block contact_form_id %}ecfdfa26-766a-41b5-8da6-8cd0902bed0c{% endblock %}

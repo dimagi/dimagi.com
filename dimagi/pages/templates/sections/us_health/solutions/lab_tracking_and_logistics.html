@@ -1,0 +1,34 @@
+{% extends "sections/us_health/solutions/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block icon %}
+  {% include "svg/us_health/safe.html" %}
+{% endblock %}
+
+{% block header %}
+  {% blocktrans %}
+    Keep client data safe and secure
+  {% endblocktrans %}
+{% endblock %}
+
+{% block content %}
+  <ul class="unorderedlist">
+    <li class="align-left">
+      {% blocktrans %}
+        Securely manage sensitive health information
+      {% endblocktrans %}
+    </li>
+    <li class="align-left">
+      {% blocktrans %}
+        HIPAA- and GDPR-compliant, open-source platform backed by
+        ISO 27001 environment
+      {% endblocktrans %}
+    </li>
+    <li class="align-left">
+      {% blocktrans %}
+        SOC-2 Type II compliant, NIST 800 53 aligned
+      {% endblocktrans %}
+    </li>
+  </ul>
+{% endblock %}

@@ -1,0 +1,36 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="video-section pad-vert-small content-width-large blue-theme align-center" id="video">
+  <div>
+    <div class="content-width-medium pad-top-small-at-medium">
+      <h3 class="content-width-medium blue">
+        {% blocktrans %}
+          See CommCare in Action
+        {% endblocktrans %}
+      </h3>
+      <p class="align-center pad-bottom-small pad-horz-small pad-horz-large-at-medium">
+        {% blocktrans %}
+          This demo video takes you through a quick overview of
+          how CommCare can be used for outbreak response
+        {% endblocktrans %}
+      </p>
+    </div>
+    <div>
+      <a class="border-rounded-large image play-icon-medium alt"
+         href="https://dimagi-1.wistia.com/medias/x3bm3540yr"
+         data-lazybg="true"
+         target=_blank>
+        <div class="border-rounded-large video-image white-lazy-bg" data-lazybg="true"></div>{# .image #}
+      </a>
+    </div>
+    <div class="align-center pad-top-small pad-bottom-small blue ">
+      <a class="arrow"
+         href="{% url 'commcare_features' %}">
+        {% blocktrans %}
+          See CommCare Features
+        {% endblocktrans %}
+      </a>
+    </div>
+  </div>
+</section>{# .content #}
