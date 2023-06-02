@@ -19,10 +19,6 @@
   @include make-bg(hero, '../../pages/toolkits/managing-devices-ebook/hero');
 }
 
-.maturity-model {
-  @include make-bg(hero, '../../pages/toolkits/maturity-model/hero');
-}
-
 .total-cost-ownership {
   @include make-bg(hero, '../../pages/toolkits/total-cost-ownership/hero');
 }
@@ -83,19 +79,6 @@
 
 .managing-devices-ebook-highlights-three {
   @include background-cover('../../pages/toolkits/highlights/managing-devices-ebook/managing-devices-ebook-highlights-three.jpg');
-}
-
-// images of highlights for maturity-model-highlights
-.maturity-model-highlights-one {
-  @include background-cover('../../pages/toolkits/highlights/maturity-model/maturity-model-highlights-one.jpg');
-}
-
-.maturity-model-highlights-two {
-  @include background-cover('../../pages/toolkits/highlights/maturity-model/maturity-model-highlights-two.jpg');
-}
-
-.maturity-model-highlights-three {
-  @include background-cover('../../pages/toolkits/highlights/maturity-model/maturity-model-highlights-three.jpg');
 }
 
 // images of highlights for total-cost-ownership-highlights
