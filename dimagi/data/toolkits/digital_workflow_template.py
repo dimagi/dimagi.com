@@ -54,6 +54,5 @@ TOOLKIT.add_other_toolkits([
     summary.DATA_COLLECTION,
     summary.MOBILE_DATA_COLLECTION,
     summary.TOTAL_COST_OWNERSHIP,
-    summary.BUSINESS_DEVELOPMENT,
     summary.DIGITAL_HEALTH_STSTEMS,
 ])

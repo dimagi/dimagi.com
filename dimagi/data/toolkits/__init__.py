@@ -1,7 +1,6 @@
 from dimagi.data.toolkits import (
     total_cost_ownership,
     commcare_evidence_base,
-    business_development,
     commcare_managing_data,
     managing_devices_ebook,
     data_collection,
@@ -13,7 +12,6 @@ from dimagi.data.toolkits import (
 toolkits = (
     total_cost_ownership,
     commcare_evidence_base,
-    business_development,
     commcare_managing_data,
     managing_devices_ebook,
     data_collection,  
