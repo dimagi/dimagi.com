@@ -2,19 +2,6 @@ from django.utils.translation import ugettext_lazy
 from dimagi.pages.models.toolkits import OtherToolkit
 
 
-BUSINESS_DEVELOPMENT = OtherToolkit(
-    name=ugettext_lazy(
-        "Business Development Toolkit"
-    ),
-    icon="svg/tookits/icons/business_development.html",
-    description=ugettext_lazy("""
-Use the Business Development Toolkit to develop a BD pipeline
-for your organization.
-    """),
-    view_url="business-development",
-)
-
-
 COMMCARE_EVIDENCE_BASE = OtherToolkit(
     name=ugettext_lazy(
         "The CommCare Evidence Base"
@@ -64,19 +51,6 @@ Key learnings from managing thousands of devices in a
 large-scale mobile health project.
     """),
     view_url="managing-devices-ebook",
-)
-
-
-MATURITY_MODEL = OtherToolkit(
-    name=ugettext_lazy(
-        "The Maturity Model"
-    ),
-    icon="svg/tookits/icons/maturity_model.html",
-    description=ugettext_lazy("""
-Use the Maturity Model to establish a long-term
-vision for building and scaling your mobile system.
-    """),
-    view_url="maturity-model",
 )
 
 

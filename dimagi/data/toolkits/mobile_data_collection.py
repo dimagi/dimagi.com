@@ -56,11 +56,9 @@ usability testing, and pilot programs.
 
 
 TOOLKIT.add_other_toolkits([
-    summary.BUSINESS_DEVELOPMENT,
     summary.COMMCARE_EVIDENCE_BASE,
     summary.COMMCARE_MANAGING_DATA,
     summary.MANAGING_DEVICES_EBOOK,
-    summary.MATURITY_MODEL,
     summary.DATA_COLLECTION,
     summary.TOTAL_COST_OWNERSHIP,
     summary.DIGITAL_HEALTH_STSTEMS,

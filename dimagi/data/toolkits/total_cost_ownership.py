@@ -61,11 +61,9 @@ well as your equipment.
 
 
 TOOLKIT.add_other_toolkits([
-    summary.BUSINESS_DEVELOPMENT,
     summary.COMMCARE_EVIDENCE_BASE,
     summary.COMMCARE_MANAGING_DATA,
     summary.MANAGING_DEVICES_EBOOK,
-    summary.MATURITY_MODEL,
     summary.DATA_COLLECTION,
     summary.MOBILE_DATA_COLLECTION,
     summary.DIGITAL_HEALTH_STSTEMS,
