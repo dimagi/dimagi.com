@@ -7,55 +7,60 @@ from dimagi.pages.models.toolkits import Toolkit, Highlight
 
 TOOLKIT = Toolkit(
     title=ugettext_lazy(
-        "Managing Data in CommCare"
+        "Business Development Toolkit"
     ),
     tagline=ugettext_lazy(
-        "A starter guide to inspecting, cleaning and exporting data in "
-        "CommCare."
+        "Use the Business Development Toolkit to develop a BD pipeline "
+        "for your organization."
     ),
-    image="commcare-managing-data",
-    template="data/toolkits/summaries/commcare_managing_data.html",
-    slug="commcare-managing-data",
-    icon="svg/tookits/icons/managingdata_commcare.html",
+    image="business-development",
+    template="data/toolkits/summaries/business_development.html",
+    slug="business-development",
     theme="orange-theme",
-    download_url="https://sites.dimagi.com/hubfs/Toolkits/Managing%20Data%20in%20CommCare.pdf",
-    hubspot_form="f59879b3-23cb-41a6-b4f8-e1daa8ba4141",
+    icon="svg/tookits/icons/business_development.html",
+    download_url="https://f.hubspotusercontent20.net/hubfs/503070/Toolkits/Dimagis%20BD%20Toolkit.zip",
+    hubspot_form="c5cf9f9e-75fc-4e1f-942e-8f3e4e9056a7",
 )
-
 
 TOOLKIT.add_highlights([
     Highlight(
         name=ugettext_lazy(
             "The CommCare Evidence Base"
         ),
-        highlight_image="commcare-evidence-base-highlights-one",
         description=ugettext_lazy("""
-Improve data cleanliness for accurate reporting and analysis.
+Building a business development team
+at a social enterprise? Use this guide to
+jump start your planning.
         """),
+        highlight_image="business-development-highlights-one",
     ),
     Highlight(
         name=ugettext_lazy(
             "Managing Data in CommCare"
         ),
-        highlight_image="commcare-evidence-base-highlights-two",
         description=ugettext_lazy("""
-Understand best practices for exporting data.
+Learn how to project your revenue
+and opportunities with the help of
+this guide.
         """),
+        highlight_image="business-development-highlights-two",
     ),
     Highlight(
         name=ugettext_lazy(
             "Managing Devices at Scale"
         ),
-        highlight_image="commcare-evidence-base-highlights-three",
         description=ugettext_lazy("""
-Learn how to inspect and clean raw data.
+Understand how your win-rate, total 
+expected value, and other key factors impact estimations.
         """),
+        highlight_image="business-development-highlights-three",
     ),  
 ])
 
 
 TOOLKIT.add_other_toolkits([
     summary.COMMCARE_EVIDENCE_BASE,
+    summary.COMMCARE_MANAGING_DATA,
     summary.MANAGING_DEVICES_EBOOK,
     summary.DATA_COLLECTION,
     summary.MOBILE_DATA_COLLECTION,

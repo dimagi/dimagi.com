@@ -55,7 +55,7 @@ define([
         _.forEach(data.offices, function (office) {
 
           _.forEach(office.departments, function (department) {
-            fields.team = department.name;
+            // fields.team = department.name;
 
             _.forEach(department.jobs, function (job) {
               fields.location = job.location.name || office.location;
@@ -64,6 +64,9 @@ define([
               _.forEach(job.metadata, function (meta) {
                 if (meta.name === 'Employment Type') {
                   fields.type = meta.value;
+                }
+                if (meta.name === 'Sub-Division') {
+                  fields.team = meta.value;
                 }
               });
 
