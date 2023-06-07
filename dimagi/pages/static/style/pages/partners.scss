@@ -312,7 +312,8 @@
     @include background-placeholder();
     background-position: center;
     height: 100px;
-    width: 111px;
+    width: 120px;
+    background-color: transparent !important;
   }
 .blog-filters.show-filters {
   height: auto;
