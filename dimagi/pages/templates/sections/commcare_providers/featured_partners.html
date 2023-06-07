@@ -12,17 +12,6 @@
     </div>{# .content #}
     <div class="content pad-top-line news-images">
       {% include "sections/commcare_providers/partners_row1.html" %}
-      {% include "sections/commcare_providers/partners_row2.html" %}
-      {% include "sections/commcare_providers/partners_row3.html" %}
     </div>{# .content #}
-    <div class="content pad-top-medium align-center">
-      <p class="align-center pad-top-line">
-        <a class="button uppercase {% click_body 'latest_partners' %}" href="{% url 'commcare_providers' %}">
-          {% blocktrans %}
-          View All Partners
-          {% endblocktrans %}
-        </a>
-      </p>
-    </div>
   </div>
 </section>
