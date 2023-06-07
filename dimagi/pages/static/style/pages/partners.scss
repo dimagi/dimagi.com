@@ -308,6 +308,12 @@
   background-position: center;
 }
 
+.commcare-provider-thumbnail {
+    @include background-placeholder();
+    background-position: center;
+    height: 100px;
+    width: 111px;
+  }
 .blog-filters.show-filters {
   height: auto;
   min-height: 405px;

@@ -3,23 +3,26 @@
 
 <div class="grid grid-4-at-large grid-1-at-medium grid-row-equal-heights ">
   {% for post in commcare_providers %}
-    <div class="column">
-      <div class="pad-bottom-base white-bg">
-        <div class="feature-partner-oikoi column pad-small gap-base flex-align-center accent-gray-bg">
-          <div class="image" data-lazybg="true"></div>
-        </div>
-        <div class="pad-line">
-          <h6 class="uppercase theme-color align-left pad-bottom-base">
-            <strong>{{ post.title }}</strong>
-          </h6>
-          <p>{{ post.excerpt }}</p>
-          <p class="align-left">
-            <a class="arrow" href="https://oikoi.io/" target="_blank">
-              Contact {{ post.slug }}
-            </a>
-          </p>
-        </div> {# .pad-line #}
-      </div> {# .white-bg #}
-    </div> {# .column #}
+  <div class="column">
+    <div class="post pad-bottom-base white-bg">
+      <div class="feature-partner-oikoi column pad-small gap-base flex-align-center accent-gray-bg">
+        <div class="commcare-provider-thumbnail"
+             data-lazyplaceholder="true"
+             data-src="{{ post.thumbnail }}"></div>
+      </div>
+      <div class="pad-line">
+        <h6 class="uppercase theme-color align-left pad-bottom-base">
+          <strong>{{ post.title }}</strong>
+        </h6>
+        <p>{{ post.excerpt | safe }}</p>
+        <!-- <p>{{ post.excerpt | safe }}</p> -->
+        <p class="align-left">
+          <a class="arrow" href="{{ post.slug}}" target="_blank">
+            Contact {{ post.title }}
+          </a>
+        </p>
+      </div> {# .pad-line #}
+    </div>
+  </div>
   {% endfor %}
 </div>{# .grid #}
