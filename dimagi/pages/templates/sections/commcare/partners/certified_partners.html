@@ -51,9 +51,11 @@
         <div class="grid grid-3-at-large grid-1-at-medium grid-row-equal-heights ">
           {% for partner in commcare_providers %}
             <div class="column">
-              <div class="pad-bottom-base white-bg">
+              <div class="post pad-bottom-base white-bg">
                 <div class="feature-partner-oikoi column pad-small gap-base flex-align-center accent-gray-bg">
-                  <div class="image" data-lazybg="true"></div>
+                  <div class="commcare-provider-thumbnail"
+                       data-lazyplaceholder="true"
+                       data-src="{{ partner.thumbnail }}"></div>
                 </div>
                 <div class="pad-line">
                   <h6 class="uppercase theme-color align-left pad-bottom-base">
@@ -66,7 +68,7 @@
                   </p>
                   <p class="align-left">
                     <a class="arrow" href="{{ partner.slug }}" target="_blank">
-                      Contact {{ partner.slug}}
+                      Contact {{ partner.title}}
                     </a>
                   </p>
                 </div> {# .pad-line #}
