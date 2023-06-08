@@ -47,8 +47,8 @@ STUDY = CaseStudy(
         ugettext_lazy("Visualizations"),
     ],
     slug="mhealth-onse",
-    primary_cta="66fac504-3c3b-48eb-91ee-17d7a1bbe276",
-    subnav_cta="4fcf9f51-d2d6-4729-b378-7c7ce8473a54",
-    download_url_language="https://sites.dimagi.com/hubfs/Case Studies/Case Study - RTI.pdf",
+    primary_cta="c14fb752-2564-4f52-b37e-35e05ba0c735",
+    subnav_cta="52b2fc91-77f6-4f41-a098-a2496ca59531",
+    download_url_language="https://sites.dimagi.com/hubfs/Case Studies/Case Study - ONSE Malawi CS.pdf",
     event_tracking_title="ONSE HEALTH",
 )
