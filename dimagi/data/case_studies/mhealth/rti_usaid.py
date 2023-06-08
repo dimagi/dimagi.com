@@ -44,7 +44,8 @@ STUDY = CaseStudy(
         ugettext_lazy("Mobile Reports"),
     ],
     slug="mhealth-rti",
-    primary_cta="37a68280-3d6c-4211-b1f8-1e98a8b93b6f",
-    subnav_cta="c7531703-2b83-46eb-ace9-9646a3168967",
+    primary_cta="66fac504-3c3b-48eb-91ee-17d7a1bbe276",
+    subnav_cta="4fcf9f51-d2d6-4729-b378-7c7ce8473a54",
+    download_url_language="https://sites.dimagi.com/hubfs/Case Studies/Case Study - RTI.pdf",
     event_tracking_title="RTI USAID",
 )
