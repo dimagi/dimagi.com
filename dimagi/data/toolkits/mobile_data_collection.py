@@ -15,8 +15,8 @@ TOOLKIT = Toolkit(
     image="mobile-data-collection",
     template="data/toolkits/summaries/mobile_data_collection.html",
     slug="mobile-data-collection",
-    icon="svg/tookits/icons/mobile_data_collection.html",
-    theme="orange-theme",
+    icon="svg/toolkits/icons/mobile_data_collection.html",
+    theme="primary-theme",
     download_url="https://cdn2.hubspot.net/hubfs/503070/Pillar%20Page%20PDFs/Guide%20to%20Mobile%20Data%20Collection.pdf",
     hubspot_form="a6b961bf-2a93-4d93-b2b5-46f71f82fd72",
 )
