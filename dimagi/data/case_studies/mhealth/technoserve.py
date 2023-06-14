@@ -43,4 +43,5 @@ STUDY = CaseStudy(
     primary_cta="6b77a5ff-69bd-468d-8ef0-19f48c5ab9ee",
     subnav_cta="46c4bb68-4b73-4889-8bb6-ee0354bb1dff",
     event_tracking_title="TechnoServe",
+    theme = "orange-theme",
 )

@@ -61,4 +61,5 @@ STUDY = CaseStudy(
     primary_cta="693139c3-51b7-4c58-a666-a049ee806d98",
     subnav_cta="e51a99d3-fcd6-4065-b414-774c3523e4eb",
     event_tracking_title="Abt Associates VectorLink",
+    theme = "orange-theme",
 )

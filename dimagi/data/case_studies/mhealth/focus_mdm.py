@@ -49,4 +49,5 @@ STUDY = CaseStudy(
     primary_cta="acbd0ad3-4a98-4bbe-a8c4-1c075da2eefe",
     subnav_cta="e9908815-2b09-40eb-8a82-cc93250da337",
     event_tracking_title="SHM Foundation",
+    theme = "orange-theme",
 )

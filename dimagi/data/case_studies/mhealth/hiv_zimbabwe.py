@@ -43,4 +43,5 @@ STUDY = CaseStudy(
     primary_cta="6c6b7a29-63c4-4c99-996a-4675929d5a95",
     subnav_cta="d1f6cde7-968e-41e7-8a57-f7fa5273c5a7",
     event_tracking_title="Global Solutions for Infectious Disease",
+    theme = "orange-theme",
 )

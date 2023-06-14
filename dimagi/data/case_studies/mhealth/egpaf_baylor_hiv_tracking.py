@@ -53,4 +53,5 @@ STUDY = CaseStudy(
     primary_cta="208f8f02-4458-4366-a5f0-3c57e3d25a81",
     subnav_cta="50fb7304-02e3-4be5-82b6-6961d758b409",
     event_tracking_title="EGPAF HIV Tracking",
+    theme = "orange-theme",
 )

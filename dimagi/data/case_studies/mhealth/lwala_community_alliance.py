@@ -41,4 +41,5 @@ STUDY = CaseStudy(
     primary_cta="7f1f008a-1549-4a3a-bc17-f796f462797c",
     subnav_cta="670be0f6-7fe3-492e-9463-d5c827ecd3d9",
     event_tracking_title="Lwala Community Alliance",
+    theme = "orange-theme",
 )

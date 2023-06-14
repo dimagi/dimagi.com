@@ -43,4 +43,5 @@ STUDY = CaseStudy(
     primary_cta="feb466fe-fc2c-42e6-af29-b2dd64232f53",
     subnav_cta="512be50f-8b05-45ff-aa3c-7ad6e10299eb",
     event_tracking_title="SMASH Mobil",
+    theme = "orange-theme",
 )

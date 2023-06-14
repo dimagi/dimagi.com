@@ -48,4 +48,5 @@ STUDY = CaseStudy(
     subnav_cta="4fcf9f51-d2d6-4729-b378-7c7ce8473a54",
     download_url_language="https://sites.dimagi.com/hubfs/Case Studies/Case Study - RTI.pdf",
     event_tracking_title="RTI USAID",
+    theme = "primary-theme",
 )
