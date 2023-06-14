@@ -12,15 +12,9 @@
       </div>
       <div class="pad-line">
         <h6 class="uppercase theme-color align-left pad-bottom-base">
-          <strong>{{ post.title }}</strong>
+          <strong>{{ post.title | safe }}</strong>
         </h6>
-        <p>{{ post.excerpt | safe }}</p>
-        <!-- <p>{{ post.excerpt | safe }}</p> -->
-        <p class="align-left">
-          <a class="arrow" href="{{ post.slug}}" target="_blank">
-            Contact
-          </a>
-        </p>
+        <div>{{ post.content | safe }}</div>
       </div> {# .pad-line #}
     </div>
   </div>

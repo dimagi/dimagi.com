@@ -49,13 +49,12 @@ def partners(request):
     _latest = get_json("blog/latest-partners")
     _partners_count= _latest["total"]
     _latest = latestPartners(_latest["posts"][:2])
-    all_commcare_providers = get_commcare_providers("commcare-providers")['posts']
-    filtered_commcare_providers = [post.__dict__ for post in all_commcare_providers][:3]
+    all_commcare_providers = get_commcare_providers("commcare-providers")['posts'][:3]
     context = {
         'partners': get_logos(),
         'latest_partners': _latest,
         'partners_count': _partners_count,
-        'commcare_providers': filtered_commcare_providers,
+        'commcare_providers': all_commcare_providers,
     }
     return render(request, 'pages/partners.html', context)
 
@@ -77,9 +76,8 @@ def us_health(request):
 
 def commcare_providers(request):
     all_commcare_providers = get_commcare_providers("commcare-providers")['posts']
-    filtered_commcare_providers = [post.__dict__ for post in all_commcare_providers]
     context = {
-        'commcare_providers': filtered_commcare_providers,
+        'commcare_providers': all_commcare_providers,
     }
     return render(request, 'pages/all_commcare_providers.html', context)
 

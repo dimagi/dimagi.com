@@ -60,17 +60,10 @@
                 <div class="pad-line">
                   <h6 class="uppercase theme-color align-left pad-bottom-base">
                     <strong>
-                      {{ partner.title}}  
+                      {{ partner.title | safe}}  
                     </strong>
                   </h6>
-                  <p>
-                    {{ partner.excerpt }}
-                  </p>
-                  <p class="align-left">
-                    <a class="arrow" href="{{ partner.slug }}" target="_blank">
-                      Contact {{ partner.title}}
-                    </a>
-                  </p>
+                  <div>{{ partner.content | safe }}</div>
                 </div> {# .pad-line #}
               </div> {# .white-bg #}
             </div> {# .column #}
