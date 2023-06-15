@@ -1,18 +1,18 @@
 {% load dimagidotcom %}
 {% load i18n %}
 
-<a class="tile toolkit-tile orange-border align-center ab-body--toolkits--view-{{ toolkit.slug }}" href="{% url 'toolkit' toolkit.slug %}">
-  <div class="theme-icon">
+<a class="tile toolkit-tile primary-border align-center ab-body--toolkits--view-{{ toolkit.slug }}" href="{% url 'toolkit' toolkit.slug %}">
+  <div class="primary-theme">
     {% include toolkit.icon %}
   </div>
-  <h5 class="orange">
+  <h5 class="primary">
     {{ toolkit.title }}
   </h5>
   <p class="body-color">
     {{ toolkit.tagline }}
   </p>
   <p class="cta">
-    <span class="link orange">
+    <span class="link primary">
       {% trans "View Toolkit" %}
     </span>
   </p>

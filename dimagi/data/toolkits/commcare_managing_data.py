@@ -16,8 +16,8 @@ TOOLKIT = Toolkit(
     image="commcare-managing-data",
     template="data/toolkits/summaries/commcare_managing_data.html",
     slug="commcare-managing-data",
-    icon="svg/tookits/icons/managingdata_commcare.html",
-    theme="orange-theme",
+    icon="svg/toolkits/icons/managing_data_commcare.html",
+    theme="primary-theme",
     download_url="https://sites.dimagi.com/hubfs/Toolkits/Managing%20Data%20in%20CommCare.pdf",
     hubspot_form="f59879b3-23cb-41a6-b4f8-e1daa8ba4141",
 )

@@ -16,8 +16,8 @@ TOOLKIT = Toolkit(
     image="business-development",
     template="data/toolkits/summaries/business_development.html",
     slug="business-development",
-    theme="orange-theme",
-    icon="svg/tookits/icons/business_development.html",
+    theme="primary-theme",
+    icon="svg/toolkits/icons/business_development.html",
     download_url="https://f.hubspotusercontent20.net/hubfs/503070/Toolkits/Dimagis%20BD%20Toolkit.zip",
     hubspot_form="c5cf9f9e-75fc-4e1f-942e-8f3e4e9056a7",
 )

@@ -26,7 +26,7 @@ def get_toolkit_by_slug(slug):
     return toolkit_by_slug.get(slug)
 
 
-def get_tookits_page(page):
+def get_toolkits_page(page):
     first_index = (page - 1) * 20
     last_index = max(first_index + 20, len(toolkits))
 
