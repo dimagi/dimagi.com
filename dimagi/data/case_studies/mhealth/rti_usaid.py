@@ -9,23 +9,18 @@ STUDY = CaseStudy(
     ),
     summary=[
         ugettext_lazy(
-          "RTI International launched the USAID/Cambodia-funded "
-          "Integrated Early Childhood Development (IECD) Activity "
-          "in July 2020 to support children to thrive and reach their full "
-          "developmental potential. The IECD Activity aims to promote "
-          "nurturing care for the most vulnerable newborns and young children, "
-          "starting before birth. Focus is on the early childhood years, with an "
-          "emphasis on the first 1,000 days, for more intensive nutritional, "
-          "psychosocial, and physical stimulation interventions.The IECD Activity "
-          "supports child development holistically, through a multi-sectoral approach "
-          "that includes the following: "
+          "RTI International launched the Integrated Early Childhood Development (IECD) "
+          "Activity in July 2020, funded by USAID/Cambodia. The IECD Activity supports "
+          "vulnerable newborns and young children to reach their full developmental potential "
+          "through nurturing care and intensive interventions during the first 1,000 days. "
+          "The multi-sectoral approach includes nutrition, psychosocial, and physical stimulation interventions."
 
-            "Strengthens nutrition delivery service at communities "
-            "Supports nutrition-sensitive agriculture and improved livelihoods "
-            "Improves water, sanitation, and hygiene practices among caregiver "
-            "Promotes responsive caregiving to help children meet critical cognitive, linguistic, socio-emotional, and physical developmental milestones. "
-            "Supports developmental milestone screening to enable the early identification of and interventions "
-            "for children with developmental delays or who are at risk for impairments and disabilities. "
+            "<ul class='unorderedlist'> <li> Strengthens nutrition delivery service at communities </li>"
+            "<li> Supports nutrition-sensitive agriculture and improved livelihoods </li>"
+            "<li> Improves water, sanitation, and hygiene practices among caregiver </li>"
+            "<li> Promotes responsive caregiving to help children meet critical milestones </li>"
+            "<li> Supports developmental milestone screening </li> </ul>"
+
         ),    
     ],
     partners=[
