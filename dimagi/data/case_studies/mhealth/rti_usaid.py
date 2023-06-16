@@ -14,13 +14,13 @@ STUDY = CaseStudy(
           "and young children to reach their full developmental potential through nurturing "
           "care and intensive interventions during the first 1,000 days. "
         ),
-        ugettext_lazy(   
+        ugettext_lazy(
           "The multi-sectoral approach delivers on the following: "
-            "<ul class='unorderedlist'> <li> Strengthens nutrition delivery service at communities </li>"
-            "<li> Supports nutrition-sensitive agriculture and improved livelihoods </li>"
-            "<li> Improves water, sanitation, and hygiene practices among caregiver </li>"
-            "<li> Promotes responsive caregiving to help children meet critical milestones </li>"
-            "<li> Supports developmental milestone screening </li> </ul>"
+          "(1) strengthens nutrition delivery service at communities, "
+          "(2) supports nutrition-sensitive agriculture and improved livelihoods, "
+          "(3) improves water, sanitation, and hygiene practices among caregivers, "
+          "(4) promotes responsive caregiving to help children meet critical milestones and "
+          "(5) supports developmental milestone screening."
 
         ),    
     ],
