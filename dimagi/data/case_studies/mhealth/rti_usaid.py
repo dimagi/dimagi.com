@@ -10,11 +10,12 @@ STUDY = CaseStudy(
     summary=[
         ugettext_lazy(
           "RTI International launched the Integrated Early Childhood Development (IECD) "
-          "Activity in July 2020, funded by USAID/Cambodia. The IECD Activity supports "
-          "vulnerable newborns and young children to reach their full developmental potential "
-          "through nurturing care and intensive interventions during the first 1,000 days. "
-          "The multi-sectoral approach includes nutrition, psychosocial, and physical stimulation interventions."
-
+          "Activity in July 2020, funded by USAID/Cambodia. It supports vulnerable newborns"
+          "and young children to reach their full developmental potential through nurturing "
+          "care and intensive interventions during the first 1,000 days. "
+        ),
+        ugettext_lazy(   
+          "The multi-sectoral approach delivers on the following: "
             "<ul class='unorderedlist'> <li> Strengthens nutrition delivery service at communities </li>"
             "<li> Supports nutrition-sensitive agriculture and improved livelihoods </li>"
             "<li> Improves water, sanitation, and hygiene practices among caregiver </li>"
