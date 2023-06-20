@@ -44,6 +44,10 @@
   height: 170px;
 }
 
+ul.unorderedlist>li::before {
+  content: '●' !important;
+}
+
 .part3 {
   $_base-height: 550px;
   $_height-by-size: (

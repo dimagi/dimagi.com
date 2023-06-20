@@ -6,15 +6,14 @@
 
 {% block accordion_header %}
   {% blocktrans %}
-    What is Dimagi’s mission?
+    What is Dimagi’s vision and mission?
   {% endblocktrans %}
 {% endblock %}
 
 {% block accordion_content %}
   <p>
-    {% blocktrans %}
-      To create sustainable impact for underserved populations 
-      through innovative technology solutions for frontline workforces.
-    {% endblocktrans %}
+    Our Vision: A world where all people have access to the services they need to thrive. <br/>
+    Our Mission: To build and scale sustainable, high-impact digital solutions that amplify frontline work. <br/>
+    <a href="{% url 'about' %}">Learn more.</a> 
   </p>
 {% endblock %}

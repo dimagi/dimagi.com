@@ -6,25 +6,25 @@
 
 {% block accordion_header %}
   {% blocktrans %}
-    Is CommCare an evidence-based tool?
+    What is SureAdhere? 
   {% endblocktrans %}
 {% endblock %}
 
 {% block accordion_content %}
   <p class="chw-accordion-sub">
     {% blocktrans %}
-      CommCare is the most researched mobile data collection platform and has
-      an evidence base of more than 65 peer-reviewed studies, including eight
-      randomized controlled trials. Together, these studies have demonstrated
-      CommCare’s positive impact on strengthening frontline healthcare systems,
-      frontline worker capabilities, and client results.
+      SureAdhere is Dimagi's digital adherence platform. SureAdhere is a secure mobile and 
+      web-based system which includes both a patient-facing mobile application that patients 
+      use to record and upload daily asynchronous videos on medication ingestion and/or treatment 
+      adherence, and a provider-facing, cloud-hosted, HIPAA and GDPR-compliant web application 
+      where public health staff can view asynchronous videos, document dosing histories and 
+      medication adherence and other observations. 
     {% endblocktrans %}
   </p>
   <p>
     {% url 'toolkit' 'commcare-evidence-base' as evidence_base_tool %}
     {% blocktrans %}
-      For more information on these studies and the complete CommCare evidence base,
-      <a href="{{ evidence_base_tool }}">click here</a>.
+    Learn more about SureAdhere at <a href="https://www.sureadhere.com/ ">https://www.sureadhere.com/ </a>.
     {% endblocktrans %}
   </p>
 {% endblock %}

@@ -12,30 +12,32 @@
 
 {% block accordion_content %}
   <p>
-    {% blocktrans %}
-      Our flagship technology platform, CommCare, is an open-source mobile data
-      collection and service delivery platform that is used by more than
-      700,000 frontline workers around the world. CommCare is considered a
-      leading digital health tool that has helped register more than 400 million people.
-    {% endblocktrans %}
+    <a href="{% url 'commcare' %}">CommCare </a> is the digital platform for impactful frontline work everywhere. 
+    The most widely-deployed and evidence-based platform for enabling Frontline Workers, CommCare empowers 
+    organizations to build their own digital solutions to better deliver services, manage clients, and collect data. 
+    Built from the ground up to support the complexities and idiosyncrasies of frontline work, CommCare can meet 
+    nearly every frontline use case in any setting (including offline) at any scale, from pilot to nationwide programs.
+  </p>
+  <p>
+    CommCare's unique value is its proven ability to deliver technology which is both highly impactful 
+    and highly scalable. More than one million Frontline Workers have used CommCare applications to deliver 
+    critical frontline services across numerous <a href = "https://www.dimagi.com/sectors/">sectors</a>, 
+    including health, agriculture, social services, and more. CommCare is backed by the strongest 
+    <a href="https://f.hubspotusercontent20.net/hubfs/503070/Toolkits/CommCare%20Evidence%20Base.pdf" >evidence base </a> 
+    of any digital platform for Frontline Workers,proving CommCare’s positive impact on organizational performance, frontline workers 
+    behaviors, and most importantly, client outcomes. 
   </p>
   <p>
     {% blocktrans %}
-      CommCare is a no-code platform that allows users with minimal background
-      in app development to design and build digital tools for Android, mobile
-      web, and desktop that serve the unique needs of their programs. Built to
-      be offline-first, CommCare’s case management features allow its users to
-      collect longitudinal data and offer services to their communities in the
-      most remote corners of the world. The platform also supports SMS,
-      multimedia, GPS, and multiple languages, while ensuring full
-      HIPAA and GDPR compliance.
-    {% endblocktrans %}
-  </p>
+      Designed to support teams of every size and level of digital maturity, CommCare’s technology grows with an 
+      organization’s needs. Users can rapidly launch production ready no-code applications in minutes, with confidence 
+      that their tools can be integrated into complex, at-scale ecosystems. Dimagi’s expert team delivers CommCare on an 
+      open source, professionally managed foundation which is best in its class for sustainability, support, and top-tier 
+      security that meets rigorous standards including GDPR, HIPAA, and SOC-2.
+    {%endblocktrans %}
+  </p> 
   <p>
-    {% url 'commcare' as commcare %}
-    {% blocktrans %}
-      For more information on CommCare,
-      <a href="{{ commcare }}">click here</a>.
-    {% endblocktrans %}
+      Learn more about CommCare at 
+      <a href="{% url 'commcare' %}">Dimagi.com/CommCare</a>.
   </p>
 {% endblock %}
