@@ -10,7 +10,7 @@ class CaseStudy(object):
 
     def __init__(self, title=None, summary=None, partners=None, countries=None,
                  sectors=None, features=None, slug=None, download_url=None, hubspot_form=None,
-                 download_url_language=None, hubspot_form_language=None,
+                 download_url_language=None, hubspot_form_language=None, theme=None,
                  primary_cta=None, subnav_cta=None, event_tracking_title=None, browser_title=None,
                  summary_list=None, summary_list_description=None, summary_after_list=None):
         self.title = title
@@ -31,3 +31,4 @@ class CaseStudy(object):
         self.primary_cta = primary_cta
         self.subnav_cta = subnav_cta
         self.event_tracking_title = event_tracking_title
+        self.theme = theme

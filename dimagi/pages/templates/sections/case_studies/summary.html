@@ -32,7 +32,7 @@
       <div class="column">
         <div class="pad-bottom-line">
           {% for summary in study.summary %}
-            <p>{{ summary }}</p>
+            <p>{{ summary | safe }}</p>
           {% endfor %}
           {% if study.summary_list_description %}
             <p>

@@ -49,4 +49,5 @@ STUDY = CaseStudy(
     primary_cta="74b536b6-b601-476a-9bd2-08fc326ab597",
     subnav_cta="37f12183-8eef-48b9-b933-a9796aab8bbf",
     event_tracking_title="Terre des hommes",
+    theme = "orange-theme",
 )

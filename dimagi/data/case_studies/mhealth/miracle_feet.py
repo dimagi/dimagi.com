@@ -48,4 +48,5 @@ STUDY = CaseStudy(
     primary_cta="d6678fcd-19ba-4953-9104-ad4ce6eb8b46",
     subnav_cta="09ce8a2d-067a-457d-891d-e2ee6938d3ce",
     event_tracking_title="MiracleFeet",
+    theme = "orange-theme",
 )

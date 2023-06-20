@@ -42,4 +42,5 @@ STUDY = CaseStudy(
     primary_cta="8ec3dce3-f4f3-4105-87c5-1ba29d86457f",
     subnav_cta="75b947cf-de55-43c7-b46d-ae42f49a6c7f",
     event_tracking_title="cStock",
+    theme = "orange-theme",
 )

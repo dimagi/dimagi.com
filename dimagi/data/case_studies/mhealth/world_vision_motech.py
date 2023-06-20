@@ -62,4 +62,5 @@ STUDY = CaseStudy(
     primary_cta="78528acc-455a-4c2c-8f98-75f77cac06ec",
     subnav_cta="bc6549c1-3069-4093-8e92-06e9b711df01",
     event_tracking_title="World Vision MOTECH",
+    theme = "orange-theme",
 )

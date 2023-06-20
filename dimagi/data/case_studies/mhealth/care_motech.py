@@ -52,4 +52,6 @@ STUDY = CaseStudy(
     primary_cta="661c8b30-d40c-48b8-8a07-82118ffa6d26",
     subnav_cta="3ffaf014-69dd-450b-98e2-8f44290e3713",
     event_tracking_title="CARE MOTECH",
+    theme = "orange-theme",
+
 )

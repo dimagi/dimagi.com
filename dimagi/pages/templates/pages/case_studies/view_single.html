@@ -19,13 +19,13 @@
 {% endblock %}
 
 {% block hero %}
-  <div class="orange-theme">
+  <div class="{{study.theme}}">
     <section class="hero hero-case-study" id="hero"></section>
   </div>
 {% endblock %}
 
 {% block content %}
-  <section class="case-study-container orange-theme">
+  <section class="case-study-container {{study.theme}}">
     {% include 'sections/case_studies/sub_nav.html' %}
     {% include 'sections/case_studies/summary.html' %}
 

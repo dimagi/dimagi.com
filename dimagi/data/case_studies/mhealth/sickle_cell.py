@@ -53,4 +53,5 @@ STUDY = CaseStudy(
     primary_cta="57e73298-f60f-4139-9198-a62e799fa0a3",
     subnav_cta="9acba66c-efef-40d2-a06f-defb2b4fedbf",
     event_tracking_title="Sickle Cell Foundation",
+    theme = "orange-theme",
 )
