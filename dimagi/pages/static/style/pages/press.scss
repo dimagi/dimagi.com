@@ -31,17 +31,21 @@
 
 .news-images .image.dimagi {
   @include background-cover('../../pages/press/brand/dimagi.jpg');
-  height: 170px;
+  height: 140px;
+  background-size: contain;
 }
 
 .news-images .image.commcare {
-  @include background-cover('../../pages/press/brand/commcare.jpg');
-  height: 170px;
+  @include background-cover('../../pages/press/brand/brand_guidelines.png');
+  height: 140px;
+  background-size: contain;
+
 }
 
 .news-images .image.commcare-action {
   @include background-cover('../../pages/press/brand/commcare_action.jpg');
-  height: 170px;
+  height: 140px;
+
 }
 
 ul.unorderedlist>li::before {
