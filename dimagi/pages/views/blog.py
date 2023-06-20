@@ -12,6 +12,7 @@ from dimagi.data.blog import (
     nav_categories,
     get_category_by_slug,
     ARCHIVE,
+    COMMCARE_PROVIDER,
 )
 from dimagi.pages.models.blog import BlogPost
 from dimagi.utils.request_helpers import (
@@ -67,6 +68,14 @@ def process_and_validate_tag(fn):
 def _get_posts(category, page=None, num_posts=None):
     post_data = get_json(
         'blog/{}'.format(category.slug), page=page, num_posts=num_posts)
+    return {
+        'posts': [BlogPost(data) for data in post_data['posts']],
+        'total': post_data['total'],
+    }
+
+def _get_commcare_providers(category, page=None, num_posts=None):
+    post_data = get_json(
+        'commcare-providers', page=page, num_posts=20)
     return {
         'posts': [BlogPost(data) for data in post_data['posts']],
         'total': post_data['total'],
@@ -198,6 +207,8 @@ def archive(request, category=None, page=None):
             )
         context['next_url'] = next_url + append_to_url
 
+    print(posts)
+    
     return render(request, 'pages/blog/archive.html', context)
 
 

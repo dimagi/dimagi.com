@@ -1,0 +1,22 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<div class="grid grid-4-at-large grid-1-at-medium grid-row-equal-heights ">
+  {% for post in commcare_providers %}
+  <div class="column">
+    <div class="post pad-bottom-base white-bg">
+      <div class="feature-partner-oikoi column pad-small gap-base flex-align-center accent-gray-bg">
+        <div class="commcare-provider-thumbnail"
+             data-lazyplaceholder="true"
+             data-src="{{ post.thumbnail }}"></div>
+      </div>
+      <div class="pad-line">
+        <h6 class="uppercase theme-color align-left pad-bottom-base">
+          <strong>{{ post.title | safe }}</strong>
+        </h6>
+        <div>{{ post.content | safe }}</div>
+      </div> {# .pad-line #}
+    </div>
+  </div>
+  {% endfor %}
+</div>{# .grid #}

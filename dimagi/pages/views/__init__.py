@@ -9,6 +9,7 @@ from dimagi.pages.views.core import (
     contact,
     proposals,
     research_and_data,
+    commcare_providers,
     awards,
     case_management,
     test_404,
