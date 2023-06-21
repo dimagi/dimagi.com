@@ -26,7 +26,7 @@ from dimagi.data.case_studies.mhealth import (
     madagascar,
     tajikistan,
     rti_usaid,
-    onse,
+    onse_health,
 )
 
 
@@ -58,5 +58,5 @@ studies = (
     madagascar,
     tajikistan,
     rti_usaid,
-    onse,
+    onse_health,
 )
