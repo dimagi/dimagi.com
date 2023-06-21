@@ -39,6 +39,10 @@ def get_us_health_json(tags, **kwargs):
     data = search_wordpress(num_posts= posts['total'])
     return data
 
+def get_commcare_providers(category, **kwargs):
+    posts = blog._get_commcare_providers(blog.COMMCARE_PROVIDER)
+    return posts
+
 
 def get_all_tags():
     from dimagi.pages.models.blog import Tag

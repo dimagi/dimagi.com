@@ -25,7 +25,8 @@ from dimagi.data.case_studies.mhealth import (
     abt_associates_vectorlink,
     madagascar,
     tajikistan,
-    onse_health,
+    rti_usaid,
+    onse,
 )
 
 
@@ -56,5 +57,6 @@ studies = (
     abt_associates_vectorlink,
     madagascar,
     tajikistan,
-    onse_health,
+    rti_usaid,
+    onse,
 )

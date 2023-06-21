@@ -45,4 +45,5 @@ STUDY = CaseStudy(
     primary_cta="b510f80b-492b-4691-a072-4ddd8b35d9f4",
     subnav_cta="dd431fbf-a6fa-4410-a62e-f28e8965a2e5",
     event_tracking_title="Malaria Consortium DHIS2",
+    theme = "orange-theme",
 )

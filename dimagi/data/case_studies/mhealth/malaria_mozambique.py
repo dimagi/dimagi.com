@@ -50,4 +50,5 @@ STUDY = CaseStudy(
     event_tracking_title="Malaria Consortium upSCALE",
     download_url_language="https://cdn2.hubspot.net/hubfs/503070/Case%20Studies/CommCare%20-%20Malaria%20Consortium%20Case%20Study_French.pdf",
     hubspot_form_language="8281faf9-4e54-49a9-9090-fe2fa57cf4a8",
+    theme = "orange-theme",
 )

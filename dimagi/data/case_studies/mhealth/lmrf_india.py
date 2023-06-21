@@ -39,4 +39,5 @@ STUDY = CaseStudy(
     primary_cta="3d3cfad7-afdc-409f-813f-f759cab48b94",
     subnav_cta="5b97fcda-e4d7-48b7-95cb-cd380c30f812",
     event_tracking_title="Mobile SAKHI",
+    theme = "orange-theme",
 )

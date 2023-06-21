@@ -1,0 +1,17 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="certified_partners border-top pad-bottom-small accent-gray-bg" id="certified_partners">
+  <div class="content">
+    <div class="content pad-top-medium">
+      <h2 class="theme-color pad-bottom-line">
+        {% blocktrans %}
+          All Partners
+        {% endblocktrans %}
+      </h2>
+    </div>{# .content #}
+    <div class="content pad-top-line news-images">
+      {% include "sections/commcare_providers/partners_row1.html" %}
+    </div>{# .content #}
+  </div>
+</section>

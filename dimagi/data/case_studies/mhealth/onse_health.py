@@ -51,4 +51,5 @@ STUDY = CaseStudy(
     subnav_cta="52b2fc91-77f6-4f41-a098-a2496ca59531",
     download_url_language="https://sites.dimagi.com/hubfs/Case Studies/Case Study - ONSE Malawi CS.pdf",
     event_tracking_title="ONSE HEALTH",
+    theme = "primary-theme",
 )
