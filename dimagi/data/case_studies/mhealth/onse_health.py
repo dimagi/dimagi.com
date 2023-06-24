@@ -9,22 +9,11 @@ STUDY = CaseStudy(
     ),
     summary=[
         ugettext_lazy(
-            "The digital integrated supportive supervision (ISS) is a suite of digital "
-            "supervision checklists that the Ministry of Health and Population (MoHP) in " 
-            "Malawi is using to supervise health facilities and programs. The tool was "
-            "developed by Dimagi in 2018, working as a technical partner on the USAID-supported "
-            "Organized Network of Services for Everyone’s (ONSE) Health Activity. It is used by "
-            "supervisors from district health management teams (DHMTs), and managers from zonal "
-            "and national levels of the MoHP on a quarterly basis as a standard supervision, "
-            "monitoring, oversight, and decision-making tool. "
-
-            "Each of the 29 districts in Malawi are empowered with 5 tablets preloaded with "
-            "the digital ISS app built on the CommCare platform. The integration with DHIS2 has "
-            "eliminated duplication in data collection between DHIS2 and this national supervision "
-            "tool built on CommCare. Having supported the transition to local ownership and technical "
-            "capacity transfer in hosting and application building, Dimagi has ensured that the MoHP "
-            "has the skills needed to adapt the ISS to meet emerging needs in the future and sustain "
-            "it as a government owned and managed tool. "
+            "The Ministry of Health and Population in Malawi (MoHP) uses the digital integrated supportive "
+            "supervision (ISS) developed by Dimagi to supervise health facilities and programs. The tool is" 
+            "standard for supervision, monitoring, and decision-making used by district health management "
+            "teams (DHMTs) and MoHP managers. Dimagi has supported the transition to local ownership and "
+            "technical capacity transfer for sustainability."
 
         ),
     ],
@@ -38,12 +27,12 @@ STUDY = CaseStudy(
         ugettext_lazy("Malawi"),
     ],
     sectors=[
-        ugettext_lazy("Health Systems Strengthening /cross cutting all programs"),
+        ugettext_lazy("Health Systems Strengthening"),
     ],
     features=[
         ugettext_lazy("Case management"),
         ugettext_lazy("Decision Support"),
-        ugettext_lazy("Action management"),
+        ugettext_lazy("Action Management"),
         ugettext_lazy("Visualizations"),
     ],
     slug="mhealth-onse",
