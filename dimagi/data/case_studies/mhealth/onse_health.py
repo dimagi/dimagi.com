@@ -10,7 +10,7 @@ STUDY = CaseStudy(
     summary=[
         ugettext_lazy(
             "The Ministry of Health and Population in Malawi (MoHP) uses the digital integrated supportive "
-            "supervision (ISS) developed by Dimagi to supervise health facilities and programs. The tool is" 
+            "supervision (ISS) developed by Dimagi to supervise health facilities and programs. The tool is " 
             "standard for supervision, monitoring, and decision-making used by district health management "
             "teams (DHMTs) and MoHP managers. Dimagi has supported the transition to local ownership and "
             "technical capacity transfer for sustainability."
