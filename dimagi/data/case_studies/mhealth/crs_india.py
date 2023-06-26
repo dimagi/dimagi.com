@@ -44,4 +44,5 @@ STUDY = CaseStudy(
     primary_cta="37a68280-3d6c-4211-b1f8-1e98a8b93b6f",
     subnav_cta="c7531703-2b83-46eb-ace9-9646a3168967",
     event_tracking_title="Catholic Relief Services",
+    theme = "orange-theme",
 )

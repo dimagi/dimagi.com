@@ -41,4 +41,5 @@ STUDY = CaseStudy(
     event_tracking_title="Naatal Mbay",
     download_url_language="https://cdn2.hubspot.net/hubfs/503070/Case%20Studies/CommCare%20-%20Naatal%20Mbay%20Case%20Study_French.pdf",
     hubspot_form_language="e2e24018-df22-400a-9d05-ea207fc89db5",
+    theme = "orange-theme",
 )

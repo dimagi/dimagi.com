@@ -46,4 +46,5 @@ STUDY = CaseStudy(
     primary_cta="cc32b07a-4bdd-46f7-8a0e-934a7312af03",
     subnav_cta="37eea299-19a1-4d98-8484-41ebd52114a9",
     event_tracking_title="MHP Salud",
+    theme = "orange-theme",
 )

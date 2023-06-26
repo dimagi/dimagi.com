@@ -50,4 +50,5 @@ STUDY = CaseStudy(
     primary_cta="4ecfc35a-3cc9-4e43-8223-25a017002a17",
     subnav_cta="a6c3588a-d194-433d-9778-9cd84d1866e9",
     event_tracking_title="TulaSalud",
+    theme = "orange-theme",
 )

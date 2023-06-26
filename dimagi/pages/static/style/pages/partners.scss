@@ -15,6 +15,11 @@
   }
 }
 
+.text-old{ 
+  color: #5f6a7d !important;
+
+}
+
 #partners-intro {
   $_base-height: 190px;
   $_height-by-size: (
@@ -91,11 +96,6 @@
   width: 111px;
 }
 
-.feature-partner-mwcd .image {
-  @include background-cover('../../../static/pages/commcare/partners/featured_partners/gates_foundation.jpg');
-  height: 100px;
-  width: 111px;
-}
 .feature-partner-oikoi .image {
   @include background-cover('../../../static/pages/commcare/partners/featured_partners/oikoi.jpg');
   height: 100px;
@@ -113,14 +113,56 @@
   width: 111px;
 }
 
-.feature-partner-im-saf .image {
-  @include background-cover('../../../static/pages/commcare/partners/featured_partners/im_saf.png');
+.feature-partner-illimitus .image {
+  @include background-cover('../../../static/pages/commcare/partners/featured_partners/illimitus.png');
   height: 100px;
   width: 120px;
 }
 
-.feature-partner-illimitis .image {
-  @include background-cover('../../../static/pages/commcare/partners/featured_partners/illimitis.png');
+.feature-partner-fpo .image {
+  @include background-cover('../../../static/pages/commcare/partners/featured_partners/fpo.png');
+  height: 100px;
+  width: 120px;
+}
+
+.feature-partner-wcd .image {
+  @include background-cover('../../../static/pages/commcare/partners/featured_partners/wcd.png');
+  height: 100px;
+  width: 120px;
+}
+
+.feature-partner-jsi .image {
+  @include background-cover('../../../static/pages/commcare/partners/featured_partners/jsi.png');
+  height: 100px;
+  width: 120px;
+}
+
+.feature-partner-goal .image {
+  @include background-cover('../../../static/pages/commcare/partners/featured_partners/goal.png');
+  height: 100px;
+  width: 120px;
+}
+
+.feature-partner-tula .image {
+  @include background-cover('../../../static/pages/commcare/partners/featured_partners/tula.png');
+  height: 100px;
+  width: 120px;
+}
+
+.feature-partner-ss .image {
+  @include background-cover('../../../static/pages/commcare/partners/featured_partners/ss.png');
+  height: 100px;
+  width: 120px;
+}
+
+.feature-partner-child-fund .image {
+  @include background-cover('../../../static/pages/commcare/partners/featured_partners/child-fund.png');
+  height: 100px;
+  width: 120px;
+}
+
+.feature-partner-im-saf .image {
+  @include background-cover('../../../static/pages/commcare/partners/featured_partners/im_saf.png');
   height: 100px;
   width: 120px;
 }
@@ -168,4 +210,120 @@
 }
 .feature-project-logo {
   margin: 0 auto;
+}
+
+.search-bar-container {
+  display: inline-block;
+  width: 300px;
+  vertical-align: top;
+
+  input[type="text"] {
+    background: #ffffff;
+    border: 1px solid $color-border;
+    border-radius: 3px 0 0 3px;
+    color: #5f6a7d;
+    display: inline-block;
+    font-family: "Nunito Sans",sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    height: 32px;
+    line-height: 18px;
+    margin-top: 13px;
+    outline: none;
+    padding: 10px;
+    position: relative;
+    width: 80%;
+    z-index: 0;
+    vertical-align: top;
+  }
+
+  button {
+    background-color: $color-accent-gray;
+    border: 1px solid $color-border;
+    border-left: 0;
+    border-radius: 0 3px 3px 0;
+    width: 40px;
+    height: 32px;
+    min-width: auto;
+    min-height: auto;
+    font-size: 28px;
+    padding: 0;
+    margin-top: 13px;
+    display: inline-block;
+    vertical-align: top;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: lighten($color-border, 2);
+    }
+  }
+}
+
+.destinations {
+  svg {
+    height: 23px;
+  }
+  a svg {
+    vertical-align: top;
+    margin-top: 17px;
+  }
+  svg > * {
+    fill: $color-text-blog-light;
+    transition: fill .5s ease-in-out;
+  }
+
+  a:hover,
+  button:hover {
+    svg > * {
+      fill: $color-text-blog;
+    }
+  }
+
+  a.toggle-filters {
+    position: relative;
+
+    &:after {
+      background-color: $color-red;
+      content: " ";
+      display: block;
+      position: absolute;
+      left: 18px;
+      top: 20px;
+      width: 8px;
+      height: 8px;
+      border-radius: 4px;
+      opacity: 0;
+      transition: opacity .5s ease-in-out;
+    }
+  }
+
+  a.toggle-filters.has-filters:after {
+    opacity: 1.0;
+  }
+}
+
+.post-thumbnail {
+  @include background-placeholder();
+  background-position: center;
+}
+
+.commcare-provider-thumbnail {
+    @include background-placeholder();
+    background-position: center;
+    height: 100px;
+    width: 180px;
+    background-color: transparent !important;
+    background-size: contain !important;
+  }
+.blog-filters.show-filters {
+  height: auto;
+  min-height: 405px;
+  transition: height 300ms, min-height 300ms, visibility 0s;
+  visibility: visible;
+
+  .content {
+    opacity: 1;
+    transition: opacity 300ms 300ms;
+  }
 }
