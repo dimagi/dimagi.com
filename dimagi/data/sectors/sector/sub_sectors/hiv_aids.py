@@ -24,7 +24,7 @@ SECTOR = Sector(
 
 
 SECTOR.add_case_studies([
-    mhealth.hiv_zimbabwe.STUDY,
+    
 ])
 
 

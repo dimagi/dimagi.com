@@ -26,7 +26,6 @@ SECTOR = Sector(
 
 SECTOR.add_case_studies([
     mhealth.supply_chain_ghana.STUDY,
-    mhealth.supply_chain_tanzania.STUDY,
     mhealth.supply_chain_malawi.STUDY,
 ])
 
