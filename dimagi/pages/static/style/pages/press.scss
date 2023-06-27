@@ -48,6 +48,35 @@
 
 }
 
+@media (min-width: $width-desktop - 1px) and (max-width: $width-desktop-lg - 1px)  {
+  .news-images .image.commcare {
+    height: 210px;
+    background-size: cover;
+  }
+  .news-images .image.dimagi {
+    height: 210px;
+    background-size: cover; 
+  }
+  .news-images .image.commcare-action {
+    height: 210px;
+  }
+}
+
+@media (max-width: $width-desktop)  {
+  .news-images .image.commcare {
+    height: 210px;
+    background-size: cover;
+  }
+  .news-images .image.dimagi {
+    height: 210px;
+    background-size: contain; 
+  }
+  .news-images .image.commcare-action {
+    height: 210px;
+  }
+}
+
+
 ul.unorderedlist>li::before {
   content: '●' !important;
 }
@@ -69,20 +98,21 @@ ul.unorderedlist>li::before {
     small: 290px,
     medium: 260px,
     large: 290px,
-    extra-large: 290px,
+    extra-large: 75px,
   );
-  @include make-bg(phone-image, '../../pages/press/kit/dimagi', $_base-height, $_height-by-size, '.png');
+  @include make-bg(phone-image, '../../pages/press/dimagi', $_base-height, $_height-by-size, '.png');
 
   @media (min-width: $width-desktop) {
     .off-grid {
       top: 10%;
       left: 0;
+      margin-top : 100px;
       position: absolute;
       background-size: auto 0%;
       background-position: center;
       background-repeat: no-repeat;
       right: auto;
-      width: 120%;
+      width: 66%;
       z-index: 1;
     }
 
