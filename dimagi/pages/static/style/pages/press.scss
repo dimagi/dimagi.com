@@ -93,26 +93,86 @@ ul.unorderedlist>li::before {
 }
 
 .commcare-text {
-  $_base-height: 290px;
+  $_base-height: 85px;
   $_height-by-size: (
-    small: 290px,
-    medium: 260px,
-    large: 290px,
-    extra-large: 75px,
+    small: 85px,
+    medium: 85px,
+    large: 80px,
+    extra-large: 80px,
   );
   @include make-bg(phone-image, '../../pages/press/dimagi', $_base-height, $_height-by-size, '.png');
 
-  @media (min-width: $width-desktop) {
+  @media (max-width: $width-mobile) {
     .off-grid {
-      top: 10%;
+      top: 18%;
       left: 0;
-      margin-top : 100px;
+      margin-top : 225px;
       position: absolute;
       background-size: auto 0%;
       background-position: center;
       background-repeat: no-repeat;
       right: auto;
-      width: 66%;
+      width: 100%;
+      z-index: 1;
+    }
+  }
+
+  @media (max-width: $width-desktop) and (min-width: $width-mobile) {
+    .off-grid {
+      top: 18%;
+      left: 0;
+      margin-top : 225px;
+      position: absolute;
+      background-size: auto 0%;
+      background-position: center;
+      background-repeat: no-repeat;
+      right: auto;
+      width: 100%;
+      z-index: 1;
+    }
+  }
+
+  @media (min-width: $width-desktop) and (max-width: $width-desktop-lg) {
+    .off-grid {
+      top: 10%;
+      left: 35%;
+      margin-top : 100px;
+      position: relative;
+      background-size: auto 0%;
+      background-position: center;
+      background-repeat: no-repeat;
+      right: auto;
+      width: 70%;
+      z-index: 1;
+    }
+  }
+
+  @media (min-width: $width-desktop-lg) and (max-width: $width-desktop-xl) {
+    .off-grid {
+      top: 10%;
+      left: 35%;
+      margin-top : 100px;
+      position: relative;
+      background-size: auto 0%;
+      background-position: center;
+      background-repeat: no-repeat;
+      right: auto;
+      width: 70%;
+      z-index: 1;
+    }
+  }
+
+  @media (min-width: $width-desktop-xl) {
+    .off-grid {
+      top: 13%;
+      left: 35%;
+      margin-top : 100px;
+      position: relative;
+      background-size: auto 0%;
+      background-position: center;
+      background-repeat: no-repeat;
+      right: auto;
+      width: 85%;
       z-index: 1;
     }
 
@@ -122,3 +182,4 @@ ul.unorderedlist>li::before {
     }
   }
 }
+

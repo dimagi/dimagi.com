@@ -1,34 +1,33 @@
 {% load dimagidotcom %}
 {% load i18n %}
 
+
 <article class="epic part3">
-  <section class="epic-cover"
-    data-lazybg="true">
-    <div class="commcare-text pad-top-base pad-top-medium-at-medium pad-top-medium-at-large pad-top-medium-at-extra-large pad-top-base-at-small pad-bottom-medium pad-left-large-at-small">
-      <div class="content content-width-medium">
-        <div class=" content-width-small pad-left-small">
+  <section class="epic-cover" data-lazybg="true">
+    <div class=" commcare-text grid grid-2-at-medium grid-1-at-small grid-reverse">
+      <div class="column pad-right-small-at-medium">
+        <div class=" pad-top-large pad-left-small">
           <h3 class="white mb-10">
             {% blocktrans %}
-              Press Kit
+            Press Kit
             {% endblocktrans %}
           </h3>
           <p class="white">
             {% blocktrans %}
-              Download our press kit for our brand guidelines, logos, Dimagi summary, and photos all in one place.
+            Download our press kit for our brand guidelines, logos,<br class="hide-until-large" /> Dimagi summary, and photos all in one place.
             {% endblocktrans %}
           </p>
           <a class="arrow white "
-             href="https://drive.google.com/file/d/1ddJ2TIXbGgnpEV_8EXhpJ0HUCE2IET8g/view?usp=sharing"
-             target="_blank">
+            href="https://drive.google.com/file/d/1ddJ2TIXbGgnpEV_8EXhpJ0HUCE2IET8g/view?usp=sharing" target="_blank">
             {% blocktrans %}
-              Download
+            Download
             {% endblocktrans %}
           </a>
         </div>
-      </div> {# .content #}
-      <div class="phone-image off-grid white-lazy-bg"
-        data-lazybg="true">
-      </div>
-    </div> {# .commcare-text #}
+      </div>{# .column #}
+      <div class="column" >
+          <div class="phone-image off-grid white-lazy-bg" data-lazybg="true"></div>
+      </div> {# .column #}
+    </div>
   </section>
 </article>
