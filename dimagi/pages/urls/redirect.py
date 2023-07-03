@@ -1,6 +1,5 @@
 from __future__ import absolute_import
 from django.conf.urls import url
-from dimagi.data.case_studies.mhealth import supply_chain_tanzania
 from dimagi.data.sectors.sector import (
     mlabor,
     education,
@@ -81,7 +80,6 @@ redirect_urlpatterns = [
     url(r'^education/$', redirect.sector(education.SECTOR.slug)),
     url(r'^hiv-support/$', redirect.sector(hiv_aids.SECTOR.slug)),
 
-    url(r'^commcare-tanzania/$', redirect.case_study(supply_chain_tanzania.STUDY.slug)),
 
     # Externally Linked Blog Post Redirects
     url(r'^content/rapidandroid.html$', redirect.blog('rapid-android-presented-at-unicefs-web4dev-conference')),
