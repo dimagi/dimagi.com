@@ -19,8 +19,8 @@ TOOLKIT = Toolkit(
     image="commcare-evidence-base",
     template="data/toolkits/summaries/commcare_evidence_base.html",
     slug="commcare-evidence-base",
-    icon="svg/tookits/icons/commcare_evidence_base.html",
-    theme="orange-theme",
+    icon="svg/toolkits/icons/commcare_evidence_base.html",
+    theme="primary-theme",
     download_url="https://f.hubspotusercontent20.net/hubfs/503070/Toolkits/CommCare%20Evidence%20Base.pdf",
     hubspot_form="f9b416b1-eb8b-430b-a2b6-644481b64a69",
     french_download_url="https://sites.dimagi.com/hubfs/Toolkits/La%20Base%20de%20Evidencias%20de%20CommCare.pdf",
@@ -71,10 +71,8 @@ a 12-month period.
 
 
 TOOLKIT.add_other_toolkits([
-    summary.BUSINESS_DEVELOPMENT,
     summary.COMMCARE_MANAGING_DATA,
     summary.MANAGING_DEVICES_EBOOK,
-    summary.MATURITY_MODEL,
     summary.DATA_COLLECTION,
     summary.MOBILE_DATA_COLLECTION,
     summary.TOTAL_COST_OWNERSHIP,

@@ -91,3 +91,12 @@ US_HEALTH = Category(
     icon="svg/blog/icon/technology.html",
     slug="us-health",
 )
+
+COMMCARE_PROVIDER = Category(
+    name=ugettext_lazy("Commcare Providers"),
+    description=ugettext_lazy(
+        "Find the right partner for you"
+    ),
+    icon=None,
+    slug="commcare-providers",
+)

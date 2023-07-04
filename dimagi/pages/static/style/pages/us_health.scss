@@ -24,6 +24,10 @@
   @include make-bg(local-response, '../../pages/us_health/intro/intro', $_base-height, $_height-by-size);
 }
 
+ul.unorderedlist>li::before {
+  content: '●' !important;
+}
+
 .video-section {
   $_base-height: 187px;
   $_height-by-size: (

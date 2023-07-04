@@ -1,0 +1,38 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="sub-nav"
+         id="sub-nav">
+  <div class="content">
+    <div class="actions">
+      <a href="https://sites.dimagi.com/blog/commcare-provider-program?_ga=2.98858139.427522035.1677066722-228128125.1626699913"
+         class="hide-until-large"
+         target="_blank">
+        {% blocktrans %}
+          Become a CommCare Provider
+        {% endblocktrans %}
+      </a>
+
+    </div>{# .actions #}
+    <a class="prompt-link {% click_subnav 'browse' %}"
+       href="#">
+      {% blocktrans %}
+        Browse
+      {% endblocktrans %}
+    </a>
+    <div class="destinations">
+      <div class="content">
+        <a href="https://sites.dimagi.com/blog/commcare-provider-program?_ga=2.98858139.427522035.1677066722-228128125.1626699913"
+           class="hide-at-medium"
+           target="_blank">
+          {% blocktrans %}
+            Become a CommCare Provider
+          {% endblocktrans %}
+        </a>
+        <a href="{% url 'partners' %}">
+          {% include "svg/blog/icon/nav/home.html" %} {% trans "Home" %}
+        </a>
+      </div>{# .content #}
+    </div>{# .destinations #}
+  </div>{# .content #}
+</section>

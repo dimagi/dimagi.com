@@ -87,7 +87,7 @@ GROUP.add_features([
             "Customized GDPR Data Processing Agreement"
         ),
         description=ugettext_lazy(
-            "We are fully GPDR Complaint, and offer Data Processing "
+            "We are fully GPDR Compliant, and offer Data Processing "
             "Agreements on all plans. We offer customizations to our "
             "standardized DPA only on your Advanced plan. This is primarily "
             "because customizations creates additional and permanent overhead "

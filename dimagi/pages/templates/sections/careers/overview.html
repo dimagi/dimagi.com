@@ -1,62 +1,28 @@
 {% load i18n %}
 {% load dimagidotcom %}
 
-<section class="overview"
-         id="overview">
+
+<section class="overview" id="overview">
   <div class="content pad-vert-medium">
-    <div class="intro content-width-medium">
-      <h2>
+    <div class="intro-base content-width-medium">
+      <h2 class="primary">
         {% blocktrans %}
-          Make an Impact
+          Powered By a Passion for Impact
         {% endblocktrans %}
       </h2>
-      <p class="content-width-small">
+      <p class="content-width-medium">
         {% blocktrans %}
-          Join a diverse group of problem solvers and social impact 
-          enthusiasts tackling tough challenges to improve 
-          global development efforts.
+          Dimagi is more than a tech company. We are a diverse team
+          of creative problem solvers dedicated to using our skills and
+          experience to enable our partners and frontline programs to
+          deliver more impact globally. We celebrate differences, treat
+          each other with respect, and value failure as a chance to learn.
+          At Dimagi, you can be uniquely you!
         {% endblocktrans %}
       </p>
     </div>{# .intro #}
 
-    {% include "sections/careers/overview/grid.html" %}
-
-    <div class="content-width-small align-center gap-top-medium pad-bottom-base">
-      <h3 class="gap-bottom-base">
-        {% blocktrans %}
-          Core Values
-        {% endblocktrans %}
-      </h3>
-      <h6 class="orange">
-        {% blocktrans %}
-          Impact. Team. Profit. In that order.
-        {% endblocktrans %}
-      </h6>
-
-      <p>
-        {% blocktrans %}
-          As a leading social enterprise, we care about creating an impact in the world,
-          followed by our team’s satisfaction, and then profit. This phrase is fundamental to
-          who we are as a company and how we prioritize our work.
-        {% endblocktrans %}
-      </p>
-
-      <p>
-        {% blocktrans %}
-          Explore our open positions below or browse available roles with our partners 
-          <a href="https://chwimpact.org/careers/" target="_blank">here</a>.
-        {% endblocktrans %}
-      </p>
-
-      <p>
-        <a href="#open-positions"
-           class="button {% click_body 'overview-positions' %}">
-          {% blocktrans %}
-            View Open Positions
-          {% endblocktrans %}
-        </a>
-      </p>
-    </div>{# .content-width-medium #}
-
-  </div> {# .content #}
+    {% include "sections/careers/overview/video.html" %}
+    {% include "sections/careers/overview/values.html" %}
+  </div>
 </section>

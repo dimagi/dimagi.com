@@ -41,4 +41,5 @@ STUDY = CaseStudy(
     primary_cta="c87364f1-18d5-4355-ba2d-a6e1bcdee20c",
     subnav_cta="3bbb492a-116d-4cfe-b002-66ce653cb738",
     event_tracking_title="Focus Region Health Project",
+    theme = "orange-theme",
 )

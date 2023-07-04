@@ -40,17 +40,46 @@
       </ul>
     </div>
     <div class="grid-1 grid-row-space-small grid-row-equal-heights">
-      {% include "sections/commcare/partners/certified_partners/oikoi.html" %}
-      {% include "sections/commcare/partners/certified_partners/noukod.html" %}
-      {% include "sections/commcare/partners/certified_partners/im_saf.html" %}
-      {% include "sections/commcare/partners/certified_partners/illimitis.html" %}
-      {% include "sections/commcare/partners/certified_partners/statinfo.html" %}
-      {% include "sections/commcare/partners/certified_partners/it4life.html" %}
-      {% include "sections/commcare/partners/certified_partners/bongo_hive.html" %}
-      {% include "sections/commcare/partners/certified_partners/good_citizen.html" %}
-      {% include "sections/commcare/partners/certified_partners/compelling_works.html" %}
-      {% include "sections/commcare/partners/certified_partners/in_strat.html" %}
-      {% include "sections/commcare/partners/certified_partners/digital_health.html" %}
-    </div>{# .grid-1 #}
-  </div>
-</section>
+      <div class="content-width-large">
+        <h2 class="theme-color pad-bottom-line align-center">
+          {% blocktrans %}
+            Featured Partners
+          {% endblocktrans %}
+        </h2>
+      </div>{# .content #}
+      <div class="content pad-top-line news-images">
+        <div class="grid grid-3-at-large grid-1-at-medium grid-row-equal-heights ">
+          {% for partner in commcare_providers %}
+            <div class="column">
+              <div class="post pad-bottom-base white-bg">
+                <div class="feature-partner-oikoi column pad-small gap-base flex-align-center accent-gray-bg">
+                  <div class="commcare-provider-thumbnail"
+                       data-lazyplaceholder="true"
+                       data-src="{{ partner.thumbnail }}"></div>
+                </div>
+                <div class="pad-line">
+                  <h6 class="uppercase theme-color align-left pad-bottom-base">
+                    <strong>
+                      {{ partner.title | safe}}  
+                    </strong>
+                  </h6>
+                  <div>{{ partner.content | safe }}</div>
+                </div> {# .pad-line #}
+              </div> {# .white-bg #}
+            </div> {# .column #}
+          {% endfor %}
+        </div>{# .grid #}
+      </div>{# .content #}
+      <div class="content pad-top-medium align-center">
+        <p class="align-center pad-top-line">
+          <a class="button uppercase {% click_body 'latest_partners' %}"
+          href="{% url 'commcare_providers' %}">
+            {% blocktrans %}
+              View All Partners
+            {% endblocktrans %}
+          </a>
+        </p>
+      </div>
+    </div>
+  </section>
+  

@@ -16,3 +16,7 @@
   width: 0;
   height: 0;
 }
+
+ul.unorderedlist>li::before {
+  content: '●' !important;
+}

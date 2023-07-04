@@ -1,0 +1,23 @@
+{% load dimagidotcom %}
+{% load i18n %}
+
+<section class=" action_partners video-intro align-center border-top ">
+  <div class="content grid-2-at-medium pad-bottom-base uppercase">
+    <div class="column careers-video1">
+      {% include "partials/wistia_popover.html" with wistia_id='q9ri7cqi0j' play_icon_medium=True show_image=True %}
+      <h4 class="primary-light-color pad-top-small ">
+        {% blocktrans %}
+          Why Work At Dimagi
+        {% endblocktrans %}
+      </h4>
+    </div>{# .column #}
+    <div class="column careers-video2  pad-top-small pad-top-none-at-medium">
+      {% include "partials/wistia_popover.html" with wistia_id='3qqxlk2knm' play_icon_medium=True show_image=True %}
+      <h4 class="primary-light-color pad-top-small">
+        {% blocktrans %}
+          What it means to be a B Corp at Dimagi
+        {% endblocktrans %}
+      </h4>
+    </div>{# .column #}
+  </div>{# .content #}
+</section>

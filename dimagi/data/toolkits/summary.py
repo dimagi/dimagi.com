@@ -2,24 +2,11 @@ from django.utils.translation import ugettext_lazy
 from dimagi.pages.models.toolkits import OtherToolkit
 
 
-BUSINESS_DEVELOPMENT = OtherToolkit(
-    name=ugettext_lazy(
-        "Business Development Toolkit"
-    ),
-    icon="svg/tookits/icons/business_development.html",
-    description=ugettext_lazy("""
-Use the Business Development Toolkit to develop a BD pipeline
-for your organization.
-    """),
-    view_url="business-development",
-)
-
-
 COMMCARE_EVIDENCE_BASE = OtherToolkit(
     name=ugettext_lazy(
         "The CommCare Evidence Base"
     ),
-    icon="svg/tookits/icons/commcare_evidence_base.html",
+    icon="svg/toolkits/icons/commcare_evidence_base.html",
     description=ugettext_lazy("""
 Over 60 studies have assessed CommCare's impact, making it the most
 evidence-based mobile platform for frontline workers in low-resource
@@ -33,7 +20,7 @@ COMMCARE_MANAGING_DATA = OtherToolkit(
     name=ugettext_lazy(
         "Managing Data in CommCare"
     ),
-    icon="svg/tookits/icons/managingdata_commcare.html",
+    icon="svg/toolkits/icons/managing_data_commcare.html",
     description=ugettext_lazy("""
 A starter guide to inspecting, cleaning and exporting data in
 CommCare.
@@ -46,7 +33,7 @@ DATA_COLLECTION = OtherToolkit(
     name=ugettext_lazy(
         "Data Collection Guide"
     ),
-    icon="svg/tookits/icons/data_collection.html",
+    icon="svg/toolkits/icons/data_collection.html",
     description=ugettext_lazy("""
 Use this introductory guide to data collection to organize your data collection plan.
     """),
@@ -58,7 +45,7 @@ MANAGING_DEVICES_EBOOK = OtherToolkit(
     name=ugettext_lazy(
         "Managing Devices at Scale"
     ),
-    icon="svg/tookits/icons/managingdevices_scale.html",
+    icon="svg/toolkits/icons/managingdevices_scale.html",
     description=ugettext_lazy("""
 Key learnings from managing thousands of devices in a
 large-scale mobile health project.
@@ -67,24 +54,11 @@ large-scale mobile health project.
 )
 
 
-MATURITY_MODEL = OtherToolkit(
-    name=ugettext_lazy(
-        "The Maturity Model"
-    ),
-    icon="svg/tookits/icons/maturity_model.html",
-    description=ugettext_lazy("""
-Use the Maturity Model to establish a long-term
-vision for building and scaling your mobile system.
-    """),
-    view_url="maturity-model",
-)
-
-
 MOBILE_DATA_COLLECTION = OtherToolkit(
     name=ugettext_lazy(
         "Mobile Data Collection Guide"
     ),
-    icon="svg/tookits/icons/mobile_data_collection.html",
+    icon="svg/toolkits/icons/mobile_data_collection.html",
     description=ugettext_lazy("""
 Read this guide to learn almost everything you need to know to set up your own successful 
 mobile data collection program.
@@ -97,7 +71,7 @@ TOTAL_COST_OWNERSHIP = OtherToolkit(
     name=ugettext_lazy(
         "Total Cost of Ownership Model"
     ),
-    icon="svg/tookits/icons/total_cost_ownership_model.html",
+    icon="svg/toolkits/icons/total_cost_ownership_model.html",
     description=ugettext_lazy("""
 Use the Total Cost of Ownership Model to budget for your
 mobile solution.
@@ -110,7 +84,7 @@ DIGITAL_HEALTH_STSTEMS = OtherToolkit(
     name=ugettext_lazy(
         "CommCare + DHIS2 Digital Health Systems"
     ),
-    icon="svg/tookits/icons/dhis.html",
+    icon="svg/toolkits/icons/dhis.html",
     description=ugettext_lazy("""
 Learn how CommCare and DHIS2 integrate to create
 sustainable data pipelines.
@@ -123,10 +97,10 @@ DIGITAL_WORKFLOW_TEMPLATE = OtherToolkit(
     name=ugettext_lazy(
         "Digital Workflow Template"
     ),
-    icon="svg/tookits/icons/diig_workflow_toolkit.html",
+    icon="svg/toolkits/icons/digital_workflow_toolkit.html",
     description=ugettext_lazy("""
 This guide presents examples and templates
 to create digital workflow documentation
     """),
-    view_url="diig-digital-workflow-template",
+    view_url="digital-workflow-template",
 )

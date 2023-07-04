@@ -7,10 +7,6 @@
   @include make-bg(hero, '../../pages/toolkits/hero');
 }
 
-.business-development {
-  @include make-bg(hero, '../../pages/toolkits/business-development/hero');
-}
-
 .commcare-evidence-base {
   @include make-bg(hero, '../../pages/toolkits/commcare-evidence-base/hero');
 }
@@ -21,10 +17,6 @@
 
 .managing-devices-ebook {
   @include make-bg(hero, '../../pages/toolkits/managing-devices-ebook/hero');
-}
-
-.maturity-model {
-  @include make-bg(hero, '../../pages/toolkits/maturity-model/hero');
 }
 
 .total-cost-ownership {
@@ -48,19 +40,7 @@
 }
 
 .diig-digital-workflow-template {
-    @include make-bg(hero, '../../pages/toolkits/diig-digital-workflow-template/hero')
-}
-
-//images of highlights for business-development-highlights 
-.business-development-highlights-one {
-  @include background-cover('../../pages/toolkits/highlights/business-development/business-development-highlights-one.jpg');
-}
-
-.business-development-highlights-two {
-  @include background-cover('../../pages/toolkits/highlights/business-development/business-development-highlights-two.jpg');
-}
-.business-development-highlights-three {
-  @include background-cover('../../pages/toolkits/highlights/business-development/business-development-highlights-three.jpg');
+    @include make-bg(hero, '../../pages/toolkits/digital-workflow-template/hero')
 }
 
 // images of highlights for commcare-evidence-base-highlights
@@ -99,19 +79,6 @@
 
 .managing-devices-ebook-highlights-three {
   @include background-cover('../../pages/toolkits/highlights/managing-devices-ebook/managing-devices-ebook-highlights-three.jpg');
-}
-
-// images of highlights for maturity-model-highlights
-.maturity-model-highlights-one {
-  @include background-cover('../../pages/toolkits/highlights/maturity-model/maturity-model-highlights-one.jpg');
-}
-
-.maturity-model-highlights-two {
-  @include background-cover('../../pages/toolkits/highlights/maturity-model/maturity-model-highlights-two.jpg');
-}
-
-.maturity-model-highlights-three {
-  @include background-cover('../../pages/toolkits/highlights/maturity-model/maturity-model-highlights-three.jpg');
 }
 
 // images of highlights for total-cost-ownership-highlights

@@ -45,4 +45,5 @@ STUDY = CaseStudy(
     primary_cta="bd009775-6ad8-42bb-958c-c7313ec954c3",
     subnav_cta="87425fda-d081-47e6-b25f-b73077b02214",
     event_tracking_title=" ILSGateway",
+    theme = "orange-theme",
 )

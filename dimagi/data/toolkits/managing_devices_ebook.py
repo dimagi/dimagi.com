@@ -16,8 +16,8 @@ TOOLKIT = Toolkit(
     image="managing-devices-ebook",
     template="data/toolkits/summaries/managing_devices_ebook.html",
     slug="managing-devices-ebook",
-    icon="svg/tookits/icons/managingdevices_scale.html",
-    theme="orange-theme",
+    icon="svg/toolkits/icons/managingdevices_scale.html",
+    theme="primary-theme",
     download_url="https://f.hubspotusercontent20.net/hubfs/503070/Toolkits/Dimagi%20Toolkit%20%E2%80%93%20Managing%20Devices%20At%20Scale.pdf",
     hubspot_form="186d64b8-8dcc-45d3-af92-03259efc96a8",
 )
@@ -61,10 +61,8 @@ weighs in.
 
 
 TOOLKIT.add_other_toolkits([
-    summary.BUSINESS_DEVELOPMENT,
     summary.COMMCARE_EVIDENCE_BASE,
     summary.COMMCARE_MANAGING_DATA,
-    summary.MATURITY_MODEL,
     summary.DATA_COLLECTION,
     summary.MOBILE_DATA_COLLECTION,
     summary.TOTAL_COST_OWNERSHIP,

@@ -55,4 +55,5 @@ STUDY = CaseStudy(
     primary_cta="05811f2b-3058-4ba4-b28b-52111192ea99",
     subnav_cta="3b8f3f58-6e7a-4013-ba47-f5dbeca5934a",
     event_tracking_title="Infomovel",
+    theme = "orange-theme",
 )

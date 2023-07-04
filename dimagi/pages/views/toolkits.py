@@ -2,14 +2,14 @@ from django.http import Http404
 from django.shortcuts import render
 
 from dimagi.data.toolkits import (
-    get_tookits_page,
+    get_toolkits_page,
     get_toolkit_by_slug,
 )
 
 from dimagi.utils.hubspot_api import activate_hubspot_cta
 
 def view_all(request):
-    toolkits = get_tookits_page(1)  # todo pages
+    toolkits = get_toolkits_page(1)  # todo pages
     context = {
         'toolkits': toolkits,
     }

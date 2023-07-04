@@ -16,8 +16,8 @@ TOOLKIT = Toolkit(
     image="total-cost-ownership",
     template="data/toolkits/summaries/total_cost_ownership.html",
     slug="total-cost-ownership",
-    icon="svg/tookits/icons/total_cost_ownership_model.html",
-    theme="orange-theme",
+    icon="svg/toolkits/icons/total_cost_ownership_model.html",
+    theme="primary-theme",
     download_url="https://f.hubspotusercontent20.net/hubfs/503070/Toolkits/Dimagi-CommCare-TCO-Model-2018.xlsx",
     hubspot_form="19bbc2bc-d6a3-4831-8088-770393235a75",
 )
@@ -61,11 +61,9 @@ well as your equipment.
 
 
 TOOLKIT.add_other_toolkits([
-    summary.BUSINESS_DEVELOPMENT,
     summary.COMMCARE_EVIDENCE_BASE,
     summary.COMMCARE_MANAGING_DATA,
     summary.MANAGING_DEVICES_EBOOK,
-    summary.MATURITY_MODEL,
     summary.DATA_COLLECTION,
     summary.MOBILE_DATA_COLLECTION,
     summary.DIGITAL_HEALTH_STSTEMS,

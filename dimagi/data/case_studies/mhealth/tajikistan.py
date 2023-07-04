@@ -61,4 +61,5 @@ STUDY = CaseStudy(
     primary_cta="108146c4-e622-4606-ab7f-c0285d3e94b0",
     subnav_cta="c6b75596-0711-4589-a763-c7662c5f43e7",
     event_tracking_title="Healthy Mother, Healthy Baby (HMHB) Tajikistan",
+    theme = "orange-theme",
 )

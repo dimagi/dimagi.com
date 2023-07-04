@@ -52,4 +52,5 @@ STUDY = CaseStudy(
     primary_cta="53c200e4-09a1-4733-a47a-2c9cb64cbdcc",
     subnav_cta="b33a5569-6d06-4720-b862-069b8d0d1ace",
     event_tracking_title="Suaahara II",
+    theme = "orange-theme",
 )

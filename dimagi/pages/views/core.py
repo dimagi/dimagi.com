@@ -19,7 +19,7 @@ from dimagi.data.case_management import longitudinal_data
 
 from dimagi.pages.views import blog
 from dimagi.pages.models.blog import BlogPost
-from dimagi.utils.wordpress_api import get_json, get_us_health_json
+from dimagi.utils.wordpress_api import get_json, get_us_health_json, get_commcare_providers
 from dimagi.pages.models.partners import latestPartners
 
 
@@ -49,10 +49,12 @@ def partners(request):
     _latest = get_json("blog/latest-partners")
     _partners_count= _latest["total"]
     _latest = latestPartners(_latest["posts"][:2])
+    all_commcare_providers = get_commcare_providers("commcare-providers")['posts'][:3]
     context = {
         'partners': get_logos(),
         'latest_partners': _latest,
-        'partners_count': _partners_count
+        'partners_count': _partners_count,
+        'commcare_providers': all_commcare_providers,
     }
     return render(request, 'pages/partners.html', context)
 
@@ -71,6 +73,13 @@ def us_health(request):
         'partners': get_us_health_partners(),
     }
     return render(request, 'pages/us_health.html', context)
+
+def commcare_providers(request):
+    all_commcare_providers = get_commcare_providers("commcare-providers")['posts']
+    context = {
+        'commcare_providers': all_commcare_providers,
+    }
+    return render(request, 'pages/all_commcare_providers.html', context)
 
 
 def us_covid_19(request):

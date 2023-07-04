@@ -16,8 +16,8 @@ TOOLKIT = Toolkit(
     image="maturity-model",
     template="data/toolkits/summaries/maturity_model.html",
     slug="maturity-model",
-    icon="svg/tookits/icons/maturity_model.html",
-    theme="orange-theme",
+    icon="svg/toolkits/icons/maturity_model.html",
+    theme="primary-theme",
     download_url="https://f.hubspotusercontent20.net/hubfs/503070/Toolkits/Dimagi%20Maturity%20Model.zip",
     hubspot_form="edd74f83-1893-43a3-bb60-f31e20e5f43a",
 )
@@ -61,7 +61,6 @@ in the coming years.
 
 
 TOOLKIT.add_other_toolkits([
-    summary.BUSINESS_DEVELOPMENT,
     summary.COMMCARE_EVIDENCE_BASE,
     summary.COMMCARE_MANAGING_DATA,
     summary.MANAGING_DEVICES_EBOOK,

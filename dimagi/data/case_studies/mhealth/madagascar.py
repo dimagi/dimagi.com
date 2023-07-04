@@ -61,4 +61,5 @@ STUDY = CaseStudy(
     primary_cta="18e78896-eb76-4a82-886f-ee079588e4b8",
     subnav_cta="cfdb01ba-6950-40d2-9c59-865015b44313",
     event_tracking_title="ACCESS Madagascar",
+    theme = "orange-theme",
 )
