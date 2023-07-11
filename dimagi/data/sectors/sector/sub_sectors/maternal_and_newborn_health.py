@@ -27,7 +27,6 @@ SECTOR = Sector(
 
 
 SECTOR.add_case_studies([
-    mhealth.lmrf_india.STUDY,
     mhealth.tulasalud.STUDY,
     mhealth.world_vision_motech.STUDY,
     mhealth.care_motech.STUDY,
