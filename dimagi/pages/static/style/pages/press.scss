@@ -13,6 +13,18 @@
   width: 250px;
 }
 
+@media (max-width: $width-desktop)  {
+  .video-intro .image {
+    margin-left: 80px;
+  }
+}
+
+@media (max-width: $width-mobile)  {
+  .video-intro .image {
+    margin-left: 35px;
+  }
+}
+
 .post p {
   color: $color-body-text;
   font-weight: 300;
