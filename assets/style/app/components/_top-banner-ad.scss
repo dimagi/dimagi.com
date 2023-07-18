@@ -16,12 +16,13 @@
 
     h3 {
       color: $color-white;
-      font-size: 18px;
+      font-size: 30px;
       margin-bottom: 0px;
+      margin-top: 15px;
     }
   }
   .banner-fixed-height {
-    height: 35px;
+    height: 60px;
   }
 
   .top-banner-ad-close {
@@ -32,5 +33,23 @@
     stroke: $color-white;
     top: 10px;
     width: 60px;
+  }
+}
+
+@media (max-width: $width-desktop-xl) {
+  .banner-fixed-height {
+    height: 80px;
+  }
+} 
+@media (max-width: $width-desktop) {
+  .banner-fixed-height {
+    height: 110px;
+  }
+} 
+
+@media (max-width: $width-desktop-xl) {
+  .top-banner-ad-close {
+    width: 20px;
+    height: 10px;
   }
 }
