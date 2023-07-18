@@ -6,29 +6,34 @@
 
 {% block accordion_header %}
   {% blocktrans %}
-    What is Dimagi’s response to COVID-19?
+    What is FocusMDM?  
   {% endblocktrans %}
 {% endblock %}
 
 {% block accordion_content %}
   <p>
-    {% url 'covid_19' as covid_19 %}
     {% blocktrans %}
-      For more information on Dimagi’s response to COVID-19,
-      <a href="{{ covid_19 }}">click here</a>.
+      FocusMDM is a Mobile Device Management (MDM) solution developed by Dimagi. 
+      When clients purchase and deploy devices with SIM cards to frontline staff, 
+      they expect a project's success to be inevitable. Our team at Dimagi knows 
+      that there are numerous challenges involved in data collection at the frontline, 
+      the biggest of which is often controlling and managing how devices and mobile data are used. 
+      FocusMDM enables people to: 
+        <ul class = "unorderedlist">
+          <li>Save time and money by managing their mobile workforce from afar. </li>
+          <li>Spend their time wisely with the people that need it most, and with the information that is needed to troubleshoot effectively. </li>
+          <li>If managers are concerned about their mobile workers misusing devices for non-work related activities, FocusMDM helps them manage 
+            their devices remotely and track all metrics including data usage, individual app usage, location history and aggregate views for 
+            the entire deployment. 
+          </li>
+          <li>Additionally, it allows for grouping of workers, blocking or providing access to specific apps and drill down mobile usage 
+            through Wi-Fi or data. This is a great tool to manage deployments, budgets and track device issues real-time thereby increasing 
+            productivity on the ground. 
+          </li>
+        </ul>
     {% endblocktrans %}
   </p>
   <p>
-    {% url 'us_covid_19' as us_covid_19 %}
-    {% blocktrans %}
-      For information specific to COVID-19 response in the United States,
-      <a href="{{ us_covid_19 }}">click here</a>.
-    {% endblocktrans %}
-  </p>
-  <p>
-    {% blocktrans %}
-      For any additional information, please contactus at
-      <a href="mailto:press@dimagi.com">press@dimagi.com</a>.
-    {% endblocktrans %}
+    You can learn more about FocusMDM at <a href=" https://www.dimagi.com/focus-mdm/. "> https://www.dimagi.com/focus-mdm/</a>.
   </p>
 {% endblock %}

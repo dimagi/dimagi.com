@@ -13,6 +13,18 @@
   width: 250px;
 }
 
+@media (max-width: $width-desktop)  {
+  .video-intro .image {
+    margin-left: 80px;
+  }
+}
+
+@media (max-width: $width-mobile)  {
+  .video-intro .image {
+    margin-left: 35px;
+  }
+}
+
 .post p {
   color: $color-body-text;
   font-weight: 300;
@@ -31,17 +43,54 @@
 
 .news-images .image.dimagi {
   @include background-cover('../../pages/press/brand/dimagi.jpg');
-  height: 170px;
+  height: 140px;
+  background-size: contain;
 }
 
 .news-images .image.commcare {
-  @include background-cover('../../pages/press/brand/commcare.jpg');
-  height: 170px;
+  @include background-cover('../../pages/press/brand/brand_guidelines.png');
+  height: 140px;
+  background-size: contain;
+
 }
 
 .news-images .image.commcare-action {
   @include background-cover('../../pages/press/brand/commcare_action.jpg');
-  height: 170px;
+  height: 140px;
+
+}
+
+@media (min-width: $width-desktop - 1px) and (max-width: $width-desktop-lg - 1px)  {
+  .news-images .image.commcare {
+    height: 210px;
+    background-size: cover;
+  }
+  .news-images .image.dimagi {
+    height: 210px;
+    background-size: cover; 
+  }
+  .news-images .image.commcare-action {
+    height: 210px;
+  }
+}
+
+@media (max-width: $width-desktop)  {
+  .news-images .image.commcare {
+    height: 210px;
+    background-size: cover;
+  }
+  .news-images .image.dimagi {
+    height: 210px;
+    background-size: contain; 
+  }
+  .news-images .image.commcare-action {
+    height: 210px;
+  }
+}
+
+
+ul.unorderedlist>li::before {
+  content: '●' !important;
 }
 
 .part3 {
@@ -56,25 +105,86 @@
 }
 
 .commcare-text {
-  $_base-height: 290px;
+  $_base-height: 85px;
   $_height-by-size: (
-    small: 290px,
-    medium: 260px,
-    large: 290px,
-    extra-large: 290px,
+    small: 85px,
+    medium: 85px,
+    large: 80px,
+    extra-large: 80px,
   );
-  @include make-bg(phone-image, '../../pages/press/kit/dimagi', $_base-height, $_height-by-size, '.png');
+  @include make-bg(phone-image, '../../pages/press/dimagi', $_base-height, $_height-by-size, '.png');
 
-  @media (min-width: $width-desktop) {
+  @media (max-width: $width-mobile) {
     .off-grid {
-      top: 10%;
+      top: 18%;
       left: 0;
+      margin-top : 225px;
       position: absolute;
       background-size: auto 0%;
       background-position: center;
       background-repeat: no-repeat;
       right: auto;
-      width: 120%;
+      width: 100%;
+      z-index: 1;
+    }
+  }
+
+  @media (max-width: $width-desktop) and (min-width: $width-mobile) {
+    .off-grid {
+      top: 18%;
+      left: 0;
+      margin-top : 225px;
+      position: absolute;
+      background-size: auto 0%;
+      background-position: center;
+      background-repeat: no-repeat;
+      right: auto;
+      width: 100%;
+      z-index: 1;
+    }
+  }
+
+  @media (min-width: $width-desktop) and (max-width: $width-desktop-lg) {
+    .off-grid {
+      top: 10%;
+      left: 35%;
+      margin-top : 100px;
+      position: relative;
+      background-size: auto 0%;
+      background-position: center;
+      background-repeat: no-repeat;
+      right: auto;
+      width: 70%;
+      z-index: 1;
+    }
+  }
+
+  @media (min-width: $width-desktop-lg) and (max-width: $width-desktop-xl) {
+    .off-grid {
+      top: 10%;
+      left: 35%;
+      margin-top : 100px;
+      position: relative;
+      background-size: auto 0%;
+      background-position: center;
+      background-repeat: no-repeat;
+      right: auto;
+      width: 70%;
+      z-index: 1;
+    }
+  }
+
+  @media (min-width: $width-desktop-xl) {
+    .off-grid {
+      top: 13%;
+      left: 35%;
+      margin-top : 100px;
+      position: relative;
+      background-size: auto 0%;
+      background-position: center;
+      background-repeat: no-repeat;
+      right: auto;
+      width: 85%;
       z-index: 1;
     }
 
@@ -84,3 +194,4 @@
     }
   }
 }
+
