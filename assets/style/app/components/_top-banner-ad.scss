@@ -16,13 +16,13 @@
 
     h3 {
       color: $color-white;
-      font-size: 30px;
+      font-size: 24px;
       margin-bottom: 0px;
-      margin-top: 15px;
+      margin-top: 10px;
     }
   }
   .banner-fixed-height {
-    height: 60px;
+    height: 55px;
   }
 
   .top-banner-ad-close {
@@ -38,15 +38,24 @@
 
 @media (max-width: $width-desktop-xl) {
   .banner-fixed-height {
-    height: 80px;
+    height: 55px;
+  }
+} 
+@media (max-width: $width-desktop-lg) {
+  .banner-fixed-height {
+    height: 70px;
   }
 } 
 @media (max-width: $width-desktop) {
   .banner-fixed-height {
+    height: 90px;
+  }
+} 
+@media (max-width: 536px) {
+  .banner-fixed-height {
     height: 110px;
   }
 } 
-
 @media (max-width: $width-desktop-xl) {
   .top-banner-ad-close {
     width: 20px;
