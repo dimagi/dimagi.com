@@ -5,7 +5,6 @@
 
 @include jacket($jacket-critical) {
   .top-banner-ad {
-    background-color: #222222;
     color: $color-white;
     display: none;
     left: 0;
@@ -36,29 +35,36 @@
   }
 }
 
-@media (max-width: $width-desktop-xl) {
+@media (min-width: 1099px) {
   .banner-fixed-height {
     height: 55px;
+    padding-left: 30px;
+    padding-right: 40px;
   }
 } 
-@media (max-width: $width-desktop-lg) {
+@media (min-width:606px) and (max-width: 1098px) {
   .banner-fixed-height {
-    height: 70px;
+    height: 75px;
+    padding-left: 30px;
+    padding-right: 40px;
+  }
+}
+
+@media (max-width: 606px) {
+  .banner-fixed-height {
+    height: 100px;
+    padding-left: 30px;
+    padding-right: 40px;
   }
 } 
-@media (max-width: $width-desktop) {
+@media (max-width: 425px) {
   .banner-fixed-height {
-    height: 90px;
-  }
-} 
-@media (max-width: 536px) {
-  .banner-fixed-height {
-    height: 110px;
+    height: 130px;
   }
 } 
 @media (max-width: $width-desktop-xl) {
   .top-banner-ad-close {
-    width: 20px;
-    height: 10px;
+    width: 30px;
+    padding-right: 10px;
   }
 }
