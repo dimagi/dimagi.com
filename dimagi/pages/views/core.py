@@ -79,7 +79,7 @@ def commcare_providers(request):
     context = {
         'commcare_providers': all_commcare_providers,
     }
-    return render(request, 'pages/all_commcare_providers.html', context)
+    return render(request, 'sections/commcare_providers/home.html', context)
 
 
 def us_covid_19(request):
