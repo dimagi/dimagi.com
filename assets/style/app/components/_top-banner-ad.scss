@@ -15,13 +15,13 @@
 
     h3 {
       color: $color-white;
-      font-size: 24px;
+      font-size: 20px;
       margin-bottom: 0px;
       margin-top: 10px;
     }
   }
   .banner-fixed-height {
-    height: 55px;
+    height: 50px;
   }
 
   .top-banner-ad-close {
@@ -35,14 +35,14 @@
   }
 }
 
-@media (min-width: 1099px) {
+@media (min-width: 919px) {
   .banner-fixed-height {
-    height: 55px;
+    height: 50px;
     padding-left: 30px;
     padding-right: 40px;
   }
 } 
-@media (min-width:606px) and (max-width: 1098px) {
+@media (min-width: 518px) and (max-width: 918px) {
   .banner-fixed-height {
     height: 75px;
     padding-left: 30px;
@@ -50,14 +50,14 @@
   }
 }
 
-@media (max-width: 606px) {
+@media (max-width: 517px) {
   .banner-fixed-height {
     height: 100px;
     padding-left: 30px;
     padding-right: 40px;
   }
 } 
-@media (max-width: 425px) {
+@media (max-width: 366px) {
   .banner-fixed-height {
     height: 130px;
   }
