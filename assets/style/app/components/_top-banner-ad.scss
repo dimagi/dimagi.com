@@ -5,7 +5,6 @@
 
 @include jacket($jacket-critical) {
   .top-banner-ad {
-    background-color: #222222;
     color: $color-white;
     display: none;
     left: 0;
@@ -16,12 +15,13 @@
 
     h3 {
       color: $color-white;
-      font-size: 18px;
+      font-size: 20px;
       margin-bottom: 0px;
+      margin-top: 10px;
     }
   }
   .banner-fixed-height {
-    height: 35px;
+    height: 50px;
   }
 
   .top-banner-ad-close {
@@ -32,5 +32,39 @@
     stroke: $color-white;
     top: 10px;
     width: 60px;
+  }
+}
+
+@media (min-width: 919px) {
+  .banner-fixed-height {
+    height: 50px;
+    padding-left: 30px;
+    padding-right: 40px;
+  }
+} 
+@media (min-width: 518px) and (max-width: 918px) {
+  .banner-fixed-height {
+    height: 75px;
+    padding-left: 30px;
+    padding-right: 40px;
+  }
+}
+
+@media (max-width: 517px) {
+  .banner-fixed-height {
+    height: 100px;
+    padding-left: 30px;
+    padding-right: 40px;
+  }
+} 
+@media (max-width: 366px) {
+  .banner-fixed-height {
+    height: 130px;
+  }
+} 
+@media (max-width: $width-desktop-xl) {
+  .top-banner-ad-close {
+    width: 30px;
+    padding-right: 10px;
   }
 }
