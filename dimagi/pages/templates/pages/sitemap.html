@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block body_class %}contact-page tucked-hero{% endblock %}
+
+{% block title %}{% blocktrans %}
+  Contact Dimagi
+{% endblocktrans %}{% endblock %}
+
+{% block hero %}
+  <div id="top"></div>
+  <div class="neutral-theme">
+    <section class="hero hero-contact"
+             data-lazybg="true"
+             id="hero">
+      <div class="content align-left-at-medium align-center">
+        <h2 class="gap-vert-line-at-medium gap-top-large">
+          {% blocktrans %}
+            This is demo
+          {% endblocktrans %}
+        </h2>
+        <!-- <h1>
+          {% blocktrans %}
+            Contact Us
+          {% endblocktrans %}
+        </h1>
+
+        <div class="cta gap-vert-line">
+          <a class="button button-accent-gray {% click_hero 'contact' %}"
+             href="#contact-form-modal">
+            {% blocktrans %}
+              Get in Touch
+            {% endblocktrans %}
+          </a>
+        </div>{# .home-cta #} -->
+      </div> {# .content #}
+    </section>
+  </div>
+{% endblock %}
