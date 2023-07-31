@@ -66,4 +66,15 @@ GROUP.add_features([
         """)),
         support=Support(False, False, True, True),
     ),
+    Feature(
+        title=ugettext_lazy(
+            "The Case List Explorer (CLE)"
+        ),
+        description=mark_safe(ugettext_lazy("""The Case List Explorer is a powerful feature 
+    for CommCare HQ which enables users to inspect their case data by building custom-filtered 
+    views of their cases. The Case List Explorer allows you to find and validate test data, 
+    identify cases that fit a very specific criteria, and find data anomalies and outlies.
+        """)),
+        support=Support(False, True, True, True),
+    ),
 ])
