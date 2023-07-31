@@ -134,6 +134,9 @@ def home(request):
 @populate_tags_in_request
 @validate_category
 def archive(request, category=None, page=None):
+    print('-------------------------------------------------')
+    print(request)
+    print('+++++++++++++++++++++++++++++++++++++++++')
     search_term = get_search_term_from_request(request)
     tags = get_selected_tags_from_request(request)
     search_category = category
@@ -206,8 +209,6 @@ def archive(request, category=None, page=None):
                 'archive_category_page', args=[category.slug, page + 1]
             )
         context['next_url'] = next_url + append_to_url
-
-    print(posts)
     
     return render(request, 'pages/blog/archive.html', context)
 

@@ -66,15 +66,14 @@ define([
       });
       return category.url;
     };
-
     self.submitSearch = function () {
-      var url = self.getCategoryUrl(self.searchCategory()),
-          query = {
-            s: self.searchTerm(),
-            t: _.join(self.searchTags(), ','),
-          };
-      window.location = url + '?' + $.param(query);
-    };
+        var
+            query = {
+              s: self.searchTerm(),
+              t: _.join(self.searchTags(), ','),
+            };
+        window.location = $.param(query);
+      };
 
     self.clearFilters = function () {
       var currentUrl = new URL(window.location.href),
