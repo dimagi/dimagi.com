@@ -7,7 +7,6 @@ from dimagi.pages.views.core import (
     us_covid_19,
     us_health,
     contact,
-    sitemap,
     proposals,
     research_and_data,
     commcare_providers,

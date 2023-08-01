@@ -106,10 +106,6 @@ def contact(request):
     return render(request, 'pages/contact.html')
 
 
-def sitemap(request):
-    return render(request, 'pages/sitemap.html')
-
-
 def awards(request):
     _post = get_json('blog/post/dimagi-awards/')
     context = {

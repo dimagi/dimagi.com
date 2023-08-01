@@ -82,7 +82,6 @@ class MainViewSitemap(Sitemap):
             'vaccine_delivery',
             'monitoring_evaluation',
             'commcare_features',
-            'test_sitemap',
             'sector_nutrition_programs',
             'sector_disease_treatment',
             'sector_agriculture_extension_programs',
