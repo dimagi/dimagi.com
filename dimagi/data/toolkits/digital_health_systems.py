@@ -7,11 +7,11 @@ from dimagi.pages.models.toolkits import Toolkit, Highlight
 
 TOOLKIT = Toolkit(
     title=ugettext_lazy(
-        "CommCare + DHIS2 Digital Health Systems"
+        "DHIS2 Integration: Empowering Digital Health Systems"
     ),
     tagline=ugettext_lazy(
-        "Learn how CommCare and DHIS2 integrate to create "
-        "sustainable data pipelines."
+        "Unlock the potential of digital health systems with CommCare + DHIS2." 
+        "A comprehensive toolkit for seamless integration, implementation & data management."
     ),
     image="digital-health-systems",
     template="data/toolkits/summaries/digital_health_systems.html",
