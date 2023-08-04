@@ -1,2 +1,6 @@
 User-agent: *
-Sitemap: https://dimagi.com/sitemap.xml
+Disallow: /.well-known/
+Disallow: /cgi-bin/
+Disallow: /README.md
+Allow: /
+Sitemap: https://www.dimagi.com/sitemap.xml
