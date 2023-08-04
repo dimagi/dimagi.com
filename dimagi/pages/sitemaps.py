@@ -5,7 +5,7 @@ from django.utils.dateparse import parse_datetime
 
 from dimagi.data.blog import nav_categories
 from dimagi.data.case_studies import studies
-from dimagi.data.sectors import all_sectors
+from dimagi.data.sectors import sub_sectors
 from dimagi.data.terms import PREVIOUS_TERMS, LATEST_TERMS
 from dimagi.data.toolkits import toolkits
 from dimagi.data.quick_start import all_areas
@@ -51,6 +51,47 @@ class MainViewSitemap(Sitemap):
             'home',
             'services',
             'contact',
+            'india',
+            'resources',
+            'research_and_data',
+            'partners',
+            'focus',
+            'awards',
+            'covid_19',
+            'ict4d',
+            'covid19',
+            'webinar_home',
+            'global_me',
+            'data_already',
+            'optimize',
+            'interoperability',
+            'data_democracy',
+            'frontline',
+            'adapt',
+            'new_function',
+            'data_clean',
+            'remote',
+            'power_bi',
+            'focus_mdm',
+            'focus_mdm_pricing',
+            'research',
+            'commcare_onboarding',
+            'classroom',
+            'commcare_messaging',
+            'enterprise',
+            'vaccine_delivery',
+            'monitoring_evaluation',
+            'commcare_features',
+            'sector_nutrition_programs',
+            'sector_disease_treatment',
+            'sector_agriculture_extension_programs',
+            'financial_inclusion',
+            'commcare_integration',
+            'mobile_data_collection',
+            'data_collection',
+            'community_health_worker',
+            'us_health',
+            'data_driven_programs',
             'partner_program',
             'careers',
             'commcare',
@@ -111,7 +152,7 @@ class SectorSitemap(Sitemap):
     priority = 0.5
 
     def items(self):
-        return all_sectors
+        return sub_sectors
 
     def location(self, obj):
         return reverse('sector', args=[obj.SECTOR.slug])
