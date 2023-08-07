@@ -12,6 +12,8 @@ TOOLKIT = Toolkit(
     tagline=ugettext_lazy(
         "Use this introductory guide to data collection to organize your data collection plan."
     ),
+    meta_title="Data Collection Guide",
+    meta_description="Use this introductory guide to data collection to organize your data collection plan.",
     image="data-collection",
     template="data/toolkits/summaries/data_collection.html",
     slug="data-collection",
