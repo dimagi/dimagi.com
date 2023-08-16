@@ -33,7 +33,7 @@ class MainViewSitemap(Sitemap):
             'home': 1.0,
             'commcare': 1.0,
             'commcare_pricing': 1.0,
-            'services': 1.0,
+            'services': 0.9,
             'about': 0.9,
             'contact': 0.8,
             'careers': 0.8,
@@ -43,6 +43,14 @@ class MainViewSitemap(Sitemap):
             'blog_home': 0.7,
             'archive': 0.6,
             'team': 0.9,
+            'monitoring_evaluation': 0.9,
+            'commcare_features': 0.9,
+            'ict4d': 0.9,
+            'enterprise': 0.9,
+            'mobile_data_collection': 0.9,
+            'data_collection': 0.9,
+            'community_health_worker': 0.9,
+
         }
         return view_to_priority.get(slug, 0.5)
 
