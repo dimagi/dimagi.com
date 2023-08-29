@@ -13,6 +13,8 @@ TOOLKIT = Toolkit(
         "Use the Total Cost of Ownership Model to budget for your "
         "mobile solution."
     ),
+    meta_title="Total Cost of Ownership Model",
+    meta_description="Use the Total Cost of Ownership Model to budget for your mobile solution.",
     image="total-cost-ownership",
     template="data/toolkits/summaries/total_cost_ownership.html",
     slug="total-cost-ownership",

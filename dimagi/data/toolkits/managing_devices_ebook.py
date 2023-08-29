@@ -13,6 +13,8 @@ TOOLKIT = Toolkit(
         "Key learnings from managing thousands of devices in a "
         "large-scale mobile health project."
     ),
+    meta_title="Managing Devices at Scale",
+    meta_description="Key learnings from managing thousands of devices in a large-scale mobile health project.",
     image="managing-devices-ebook",
     template="data/toolkits/summaries/managing_devices_ebook.html",
     slug="managing-devices-ebook",

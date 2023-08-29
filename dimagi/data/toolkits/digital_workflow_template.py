@@ -13,6 +13,8 @@ TOOLKIT = Toolkit(
         "This guide presents examples and templates "
         "to create digital workflow documentation."
     ),
+    meta_title="Digital Workflow Template",
+    meta_description="This guide presents examples and templates to create digital workflow documentation.",
     image="diig-digital-workflow-template",
     template="data/toolkits/summaries/digital_workflow_template.html",
     slug="diig-digital-workflow-template",

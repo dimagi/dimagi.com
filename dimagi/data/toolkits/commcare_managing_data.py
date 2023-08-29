@@ -13,6 +13,8 @@ TOOLKIT = Toolkit(
         "A starter guide to inspecting, cleaning and exporting data in "
         "CommCare."
     ),
+    meta_title="Managing Data in CommCare",
+    meta_description="A starter guide to inspecting, cleaning and exporting data in CommCare.",
     image="commcare-managing-data",
     template="data/toolkits/summaries/commcare_managing_data.html",
     slug="commcare-managing-data",
