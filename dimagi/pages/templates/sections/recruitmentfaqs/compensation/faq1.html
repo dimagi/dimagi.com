@@ -1,0 +1,20 @@
+{% extends "sections/recruitmentfaqs/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block accordion_collapsed %}collapsed{% endblock %}
+
+{% block accordion_header %}
+  {% blocktrans %}
+    How do you decide the compensation?
+  {% endblocktrans %}
+{% endblock %}
+
+{% block accordion_content %}
+  <p>
+    At Dimagi, we are transparent about salaries at all levels of the organization and have a 
+    standard, global pay scale for all positions. The compensation or salary range for the position 
+    is listed in the Job Description. Your final salary is dependent on your base location and is 
+    non-negotiable. We also provide you with the exact salary early in the recruitment process.
+  </p>
+{% endblock %}

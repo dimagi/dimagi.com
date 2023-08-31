@@ -1,0 +1,26 @@
+@import 'app/mixins/background';
+@import 'app/variables/colors';
+@import 'app/variables/sizes';
+@import 'app/variables/type';
+
+.press-page {
+  @include make-bg(hero, '../../pages/recruitment_faqs/hero');
+}
+
+.video-intro .image {
+  @include background-cover('../../pages/recruitment_faqs/overview.jpg');
+  height: 160px;
+  width: 250px;
+}
+
+@media (max-width: $width-desktop)  {
+  .video-intro .image {
+    margin-left: 80px;
+  }
+}
+
+@media (max-width: $width-mobile)  {
+  .video-intro .image {
+    margin-left: 35px;
+  }
+}

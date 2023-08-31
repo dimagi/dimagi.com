@@ -1,0 +1,21 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="epic-content pad-top-base pad-bottom-base"
+         id="compensation">
+  <div class="content">
+
+    <h2 class = "primary-color align-center">
+      {% blocktrans %}
+        Compensation and Benefits
+      {% endblocktrans %}
+    </h2>
+
+    <div class="accordion-group gap-bottom-line border-none"
+         id="chapter-4-accordion">
+      {% include "sections/recruitmentfaqs/compensation/faq1.html" %}
+      {% include "sections/recruitmentfaqs/compensation/faq2.html" %}
+    </div>
+
+  </div>{# .content #}
+</section>

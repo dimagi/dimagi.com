@@ -1,0 +1,19 @@
+{% extends "sections/recruitmentfaqs/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block accordion_collapsed %}collapsed{% endblock %}
+
+{% block accordion_header %}
+  {% blocktrans %}
+    What if I need assistance with the application or accommodation during the interview process? 
+  {% endblocktrans %}
+{% endblock %}
+
+{% block accordion_content %}
+  <p>
+    If you are interested in applying for employment and need special assistance or a reasonable 
+    accommodation during the application or interview process for a posted position, please contact 
+    us at 617-604-2123 or email <a> accommodations@dimagi.com  </a>detailing your request.
+  </p>
+{% endblock %}

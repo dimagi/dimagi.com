@@ -1,0 +1,27 @@
+{% load i18n %}
+{% load dimagidotcom %}
+<article class="epic pricing-image" id="position">
+  <section class="epic-cover"
+         data-lazybg="true">
+    <div class="content pad-vert-medium">
+      <h2 class="white align-center pad-top-base-at-medium">
+        {% blocktrans %}
+          Careers Page
+        {% endblocktrans %}
+      </h2>
+      <h4 class="white align-center">
+        {% blocktrans %}
+          Check out our Careers Page for open positions that match your skill set or join our Talent Community
+        {% endblocktrans %}
+      </h4>
+      <p class="align-center">
+        <a class="button button-accent-gray {% click_body 'case-management' %}"
+           href="{% url 'careers' %}">
+          {% blocktrans %}
+            View Open Positions
+          {% endblocktrans %}
+        </a>
+      </p>
+    </div>{# .content #}
+  </section>
+</article>
