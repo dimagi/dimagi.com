@@ -24,3 +24,15 @@
     margin-left: 35px;
   }
 }
+
+.pricing-image {
+  $_base-height: 275px;
+  $_height-by-size: (
+    extra-small: 290px,
+    small: 270px,
+    medium: 270px,
+    large: 316px,
+    extra-large: 290px,
+  );
+  @include make-bg(epic-cover, '../../pages/recruitment_faqs/careers_page/hero', $_base-height, $_height-by-size);
+}
