@@ -13,6 +13,8 @@ TOOLKIT = Toolkit(
         "Use the Maturity Model to establish a long-term "
         "vision for building and scaling your mobile system."
     ),
+    meta_title= "The Maturity Model",
+    meta_description="Use the Maturity Model to establish a long-term vision for building and scaling your mobile system.",
     image="maturity-model",
     template="data/toolkits/summaries/maturity_model.html",
     slug="maturity-model",

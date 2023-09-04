@@ -13,6 +13,8 @@ TOOLKIT = Toolkit(
         "Use the Business Development Toolkit to develop a BD pipeline "
         "for your organization."
     ),
+    meta_title="Business Development Toolkit",
+    meta_description="Use the Business Development Toolkit to develop a BD pipeline for your organization.",
     image="business-development",
     template="data/toolkits/summaries/business_development.html",
     slug="business-development",
