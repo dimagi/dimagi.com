@@ -1,0 +1,18 @@
+{% extends "sections/recruitmentfaqs/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block accordion_collapsed %}collapsed{% endblock %}
+
+{% block accordion_header %}
+  {% blocktrans %}
+    A job I applied to is no longer posted on your website. What does this mean?
+  {% endblocktrans %}
+{% endblock %}
+
+{% block accordion_content %}
+  <p>
+    If a job you applied to is no longer displayed on our website, it means we are no longer accepting 
+    any new applications for that position. We will contact you once we have reviewed your application.
+  </p>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "sections/recruitmentfaqs/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block accordion_collapsed %}collapsed{% endblock %}
+
+{% block accordion_header %}
+  {% blocktrans %}
+    What benefits does Dimagi offer? When will I be eligible to avail of the benefits?
+  {% endblocktrans %}
+{% endblock %}
+
+{% block accordion_content %}
+  <p>
+    All employees at Dimagi qualify for benefits. Click <a href="https://dimagi.com/careers/#benefits">here </a>to check out our common benefits. 
+    Each office additionally offers some country-specific perks. These are listed in the relevant job description.
+  </p>
+{% endblock %}

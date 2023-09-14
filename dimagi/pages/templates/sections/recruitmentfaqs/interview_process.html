@@ -1,0 +1,25 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="epic-content pad-top-base pad-bottom-base"
+         id="interview_process">
+  <div class="content">
+
+    <h2 class = "primary-color align-center">
+      {% blocktrans %}
+        Interview Process
+      {% endblocktrans %}
+    </h2>
+
+    <div class="accordion-group gap-bottom-line border-none"
+         id="chapter-4-accordion">
+      {% include "sections/recruitmentfaqs/interview_process/faq1.html" %}
+      {% include "sections/recruitmentfaqs/interview_process/faq2.html" %}
+      {% include "sections/recruitmentfaqs/interview_process/faq3.html" %}
+      {% include "sections/recruitmentfaqs/interview_process/faq4.html" %}
+      {% include "sections/recruitmentfaqs/interview_process/faq5.html" %}
+      {% include "sections/recruitmentfaqs/interview_process/faq6.html" %}
+    </div>
+
+  </div>{# .content #}
+</section>

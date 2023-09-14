@@ -1,0 +1,48 @@
+{% load i18n %}
+{% load dimagidotcom %}
+
+<section class="sub-nav"
+         id="sub-nav">
+  <div class="content">
+    <a class="prompt-link {% click_subnav 'browse' %}"
+       href="#">
+      {% blocktrans %}
+        Browse
+      {% endblocktrans %}
+    </a>
+    <div class="destinations">
+      <div class="content">
+        <a href="#overview"
+           class="{% click_subnav 'overview' %}">
+          {% blocktrans %}
+            Overview
+          {% endblocktrans %}
+        </a>
+        <a href="#application_process"
+           class="{% click_subnav 'application_process' %}">
+          {% blocktrans %}
+            Application Process
+          {% endblocktrans %}
+        </a>
+        <a href="#interview_process"
+           class="{% click_subnav 'interview_process' %}">
+          {% blocktrans %}
+            Interview Process
+          {% endblocktrans %}
+        </a>
+        <a href="#compensation"
+           class="{% click_subnav 'compensation' %}">
+          {% blocktrans %}
+            Compensation and Benefits
+          {% endblocktrans %}
+        </a>
+        <a href="#position"
+          class="{% click_subnav 'position' %}">
+          {% blocktrans %}
+            View Open Positions
+          {% endblocktrans %}
+        </a>
+      </div>{# .content #}
+    </div>{# .destinations #}
+  </div>{# .content #}
+</section>

@@ -1,0 +1,18 @@
+{% extends "sections/recruitmentfaqs/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block accordion_collapsed %}collapsed{% endblock %}
+
+{% block accordion_header %}
+  {% blocktrans %}
+    What if I don’t see an open role that fits my skillset? 
+  {% endblocktrans %}
+{% endblock %}
+
+{% block accordion_content %}
+  <p>
+    Join our Talent Community by emailing your resume and field of interest to <a href="mailto:careers@dimagi.com">careers@dimagi.com</a>. 
+    We will keep your information on file and contact you if there is an opening that matches your qualifications.
+  </p>
+{% endblock %}
