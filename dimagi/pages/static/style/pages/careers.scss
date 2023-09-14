@@ -89,6 +89,7 @@
 
 .awards .image.company-culture {
   @include background-cover('../../pages/careers/bcorporation.png');
+  margin-bottom: 30px !important;
 }
 
 .awards .image.builtin {
@@ -96,11 +97,12 @@
 }
 
 .awards .image.b-corporation {
-  @include background-cover('../../pages/careers/bcorp.png');
+  @include background-cover('../../pages/careers/inc_5000.png');
 }
 
 .awards .image.top-5000 {
   @include background-cover('../../pages/careers/fastcompany.png');
+  margin-bottom: 30px !important;
 }
 
 .overview .image.team_summit {
@@ -114,7 +116,7 @@
 }
 
 .overview .image.gso {
-  @include background-cover('../../pages/careers/teampic3.jpg');
+  @include background-cover('../../pages/careers/frame_3.jpg');
 }
 
 .overview .image.dei_gtd_summit {
@@ -223,11 +225,11 @@ a.post {
 }
 
 .life .image.technology {
-  @include background-cover('../../pages/careers/technology.png');
+  @include background-cover('../../pages/careers/commcare_in_classroom.png');
 }
 
 .life .image.gtd-summit {
-  @include background-cover('../../pages/careers/gtd_summit.jpg');
+  @include background-cover('../../pages/careers/themba.jpg');
 }
 
 .life .image.benefit-corp {
@@ -280,44 +282,56 @@ a.post {
   margin-bottom: 10px;
 }
 
-.corlia {
-  @include background-cover('../../pages/careers/corlia.png');
+.anamika {
+  @include background-cover('../../pages/careers/anamika.jpg');
   height: 220px;
   width: 200px;
   margin-top: 0px !important;
 }
 
 @media (max-width: $width-desktop-lg) {
-  .corlia {
-    height : 240px !important;
+  .anamika {
+    height : 260px !important;
   }
 }
 
-.kishan {
-  @include background-cover('../../pages/careers/kishan.jpeg');
+.anita {
+  @include background-cover('../../pages/careers/anita.jpg');
+  height: 240px;
+  width: 200px;
+  margin-top: 0px !important;
+}
+
+@media (max-width: $width-desktop-lg) {
+  .anita{
+    height : 260px !important;
+  }
+}
+
+.asangi {
+  @include background-cover('../../pages/careers/asangi.jpg');
+  height: 240px;
+  width: 200px;
+  margin-top: 0px !important;
+}
+
+@media (max-width: $width-desktop-lg) {
+  .asangi{
+    height : 300px !important;
+  }
+}
+
+.yomila {
+  @include background-cover('../../pages/careers/yomila.jpg');
   height: 220px;
   width: 200px;
   margin-top: 0px !important;
 }
 
 @media (max-width: $width-desktop-lg) {
-  .kishan {
-    height : 240px !important;
+  .yomila{
+    height : 260px !important;
   }
-}
-
-.penda {
-  @include background-cover('../../pages/careers/penda.jpg');
-  height: 220px;
-  width: 200px;
-  margin-top: 0px !important;
-}
-
-.namrata {
-  @include background-cover('../../pages/careers/namrata.jpg');
-  height: 220px;
-  width: 200px;
-  margin-top: 0px !important;
 }
 
 .tech-team {
