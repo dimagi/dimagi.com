@@ -1,0 +1,21 @@
+{% extends "sections/recruitmentfaqs/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block accordion_collapsed %}collapsed{% endblock %}
+
+{% block accordion_header %}
+  {% blocktrans %}
+    How do I check the status of my application?
+  {% endblocktrans %}
+{% endblock %}
+
+{% block accordion_content %}
+  <p>
+    Dimagi replies to all applicants about the status of their application regardless of 
+    the decision. Please know that we are still reviewing your application if you have 
+    not heard from us. We will reach out directly once determinations have been made, 
+    but we cannot provide individual status updates in the interim, given the number of 
+    requests we receive. Thank you for your understanding.
+  </p>
+{% endblock %}

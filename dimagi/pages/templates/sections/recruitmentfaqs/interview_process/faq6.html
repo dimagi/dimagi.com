@@ -1,0 +1,19 @@
+{% extends "sections/recruitmentfaqs/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block accordion_collapsed %}collapsed{% endblock %}
+
+{% block accordion_header %}
+  {% blocktrans %}
+    What if I have not heard back within two weeks after an interview?
+  {% endblocktrans %}
+{% endblock %}
+
+{% block accordion_content %}
+  <p>
+    Our hiring teams try their best to inform the candidates about their status, but sometimes it does get busy. 
+    We circle back to all candidates with the final decision (at all stages of the process), regardless of if 
+    they are selected or not. We will be back in touch with you as soon as we can.
+  </p>
+{% endblock %}

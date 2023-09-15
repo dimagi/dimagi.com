@@ -1,0 +1,23 @@
+{% extends "sections/recruitmentfaqs/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block accordion_collapsed %}collapsed{% endblock %}
+
+{% block accordion_header %}
+  {% blocktrans %}
+    Does Dimagi have an Affirmative Action Plan? How do I get access to it? 
+  {% endblocktrans %}
+{% endblock %}
+
+{% block accordion_content %}
+  <p>
+    For US applicants, Dimagi maintains an Affirmative Action Plan for the purpose of proactively seeking 
+    employment of qualified protected veterans and individuals with disabilities. Upon request, Dimagi 
+    will make accessible to you its Affirmative Action Plan for protected veterans and individuals with a 
+    disability. If you are interested, please contact us at 617-649-2214 or email 
+    <a href="mailto:aaprequests@dimagi.com"> aaprequests@dimagi.com. </a> We will then schedule a time for you 
+    to review the Affirmative Action Plan during normal business hours, which are Monday through Friday, 9:00 am 
+    to 3:00 pm Eastern time zone. Dimagi's corporate office is located at 585 Massachusetts Ave, Cambridge, MA 02139.
+  </p>
+{% endblock %}

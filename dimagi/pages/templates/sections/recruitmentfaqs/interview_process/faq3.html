@@ -1,0 +1,19 @@
+{% extends "sections/recruitmentfaqs/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block accordion_collapsed %}collapsed{% endblock %}
+
+{% block accordion_header %}
+  {% blocktrans %}
+    Does Dimagi conduct interviews in person or remotely?
+  {% endblocktrans %}
+{% endblock %}
+
+{% block accordion_content %}
+  <p>
+    Dimagi is a remote-friendly company. Our teams are spread across our three offices and include 
+    permanently remote employees. Hence most of the interviews will be conducted virtually over Google Meet. 
+    If you are based close to one of our offices, you might be invited for an in-person interview.
+  </p>
+{% endblock %}

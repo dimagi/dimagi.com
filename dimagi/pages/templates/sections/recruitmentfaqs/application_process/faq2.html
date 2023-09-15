@@ -1,0 +1,18 @@
+{% extends "sections/recruitmentfaqs/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block accordion_collapsed %}collapsed{% endblock %}
+
+{% block accordion_header %}
+  {% blocktrans %}
+  If a job description states one office/country, is it possible to apply and be remote?
+  {% endblocktrans %}
+{% endblock %}
+
+{% block accordion_content %}
+  <p>
+    Please check the Job description of the position you are interested in. 
+    If remote work is an option, it will be mentioned in the Job description.
+  </p>
+{% endblock %}

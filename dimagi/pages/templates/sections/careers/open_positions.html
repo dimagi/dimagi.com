@@ -94,8 +94,8 @@
     </div>{# .positions-container #}
     <p class="gap-top-line align-center">
       Have questions about our hiring process? Check out our
-      <a class="primary {{ click_class }}"
-         href="https://cdn2.hubspot.net/hubfs/503070/Dimagi_Recruitment%20FAQ.pdf"
+      <a class="primary {{ click_class }}" 
+         href="{% url 'recruitmentfaqs' %}"
          target="_blank"> FAQ </a>.
     </p>
 
@@ -129,7 +129,7 @@
           If you are interested in applying for employment and need special assistance 
           or reasonable accommodation during the application or interview process for a 
           posted position please contact us at 617-604-2123 or send an email to 
-          <a> accommodations@dimagi.com </a> detailing your request. 
+          <a href="mailto:accommodations@dimagi.com"> accommodations@dimagi.com </a> detailing your request. 
 
         {% endblocktrans %}
       </p>

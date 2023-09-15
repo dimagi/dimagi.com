@@ -1,0 +1,38 @@
+@import 'app/mixins/background';
+@import 'app/variables/colors';
+@import 'app/variables/sizes';
+@import 'app/variables/type';
+
+.press-page {
+  @include make-bg(hero, '../../pages/recruitment_faqs/hero');
+}
+
+.video-intro .image {
+  @include background-cover('../../pages/recruitment_faqs/overview.jpg');
+  height: 160px;
+  width: 250px;
+}
+
+@media (max-width: $width-desktop)  {
+  .video-intro .image {
+    margin-left: 80px;
+  }
+}
+
+@media (max-width: $width-mobile)  {
+  .video-intro .image {
+    margin-left: 35px;
+  }
+}
+
+.pricing-image {
+  $_base-height: 275px;
+  $_height-by-size: (
+    extra-small: 290px,
+    small: 270px,
+    medium: 270px,
+    large: 316px,
+    extra-large: 290px,
+  );
+  @include make-bg(epic-cover, '../../pages/recruitment_faqs/careers_page/hero', $_base-height, $_height-by-size);
+}
