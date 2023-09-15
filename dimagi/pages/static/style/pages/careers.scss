@@ -63,22 +63,59 @@
   stroke-width: 3;
 }
 
-@media (max-width: $width-desktop-xl - 1px) and (min-width: $width-mobile - 1px) {
-  .awards .card-4 {
-    padding-bottom : 20px !important;
-  }
+.awards .card-2 {
+  margin-bottom: 40px !important;
+} 
+.awards .card-3 {
+  margin-bottom: 20px !important;
 }
 
-@media (min-width: $width-desktop - 1px) and (max-width: $width-desktop-lg - 1px) {
-  .awards .card-2 {
-    padding-bottom : 40px !important;
+@media (min-width: $width-desktop-lg - 1px) and (max-width: $width-desktop-xl) {
+  .awards .card-3 {
+    padding-bottom: 20px !important;
+  }
+  .awards .card-4 {
+    margin-bottom : 20px !important;
   }
   .awards .card-1 {
     padding-bottom : 40px !important;
   }
 }
 
+@media (min-width: $width-desktop - 1px) and (max-width: $width-desktop-lg - 1px) {
+  .awards .card-3 {
+    margin-bottom: 20px !important;
+  }
+  .awards .card-2 {
+    padding-bottom : 40px !important;
+  }
+  .awards .card-1 {
+    padding-bottom : 80px !important;
+  }
+}
+
 @media (min-width: $width-mobile - 1px) and (max-width: $width-desktop - 1px) {
+  .awards .card-4 {
+    margin-bottom: 10px !important;
+  }
+  .awards .card-3 {
+    margin-bottom: 30px !important;
+  }
+  .awards .card-2 {
+    margin-bottom : 10px !important;
+  }
+  .awards .card-1 {
+    margin-bottom : 30px !important;
+  }
+}
+
+@media (max-width: $width-mobile - 1px){
+  .awards .card-4 {
+    margin-bottom: 10px !important;
+  }
+  .awards .card-3 {
+    margin-bottom: 10px !important;
+  }
   .awards .card-2 {
     padding-bottom : 0px !important;
   }
@@ -89,7 +126,7 @@
 
 .awards .image.company-culture {
   @include background-cover('../../pages/careers/bcorporation.png');
-  margin-bottom: 30px !important;
+  margin-bottom: 10px !important;
 }
 
 .awards .image.builtin {
@@ -101,8 +138,8 @@
 }
 
 .awards .image.top-5000 {
-  @include background-cover('../../pages/careers/fastcompany.png');
-  margin-bottom: 30px !important;
+  @include background-cover('../../pages/careers/climate_neutral.jpg');
+  margin-bottom: 10px !important;
 }
 
 .overview .image.team_summit {
