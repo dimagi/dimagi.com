@@ -12,7 +12,6 @@ from dimagi.data.blog import (
     nav_categories,
     get_category_by_slug,
     ARCHIVE,
-    COMMCARE_PROVIDER,
 )
 from dimagi.pages.models.blog import BlogPost
 from dimagi.utils.request_helpers import (
