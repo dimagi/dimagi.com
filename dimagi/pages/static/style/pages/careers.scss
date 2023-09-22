@@ -63,7 +63,7 @@
   stroke-width: 3;
 }
 
-.awards .card-1 {
+.card-1 {
   margin-bottom: 70px !important;
 } 
 .awards .card-2 {
@@ -74,7 +74,7 @@
 }
 
 @media (min-width: $width-desktop-lg - 1px) and (max-width: $width-desktop-xl - 1px) {
-  .awards .card-1 {
+  .card-1 {
     margin-bottom : 60px !important;
   }
   .awards .card-2 {
@@ -95,7 +95,7 @@
   .awards .card-2 {
     padding-bottom : 40px !important;
   }
-  .awards .card-1 {
+  .card-1 {
     padding-bottom : 40px !important;
   }
 }
@@ -110,7 +110,7 @@
   .awards .card-2 {
     margin-bottom : 10px !important;
   }
-  .awards .card-1 {
+  .card-1 {
     margin-bottom : 30px !important;
   }
 }
@@ -125,7 +125,7 @@
   .awards .card-2 {
     margin-bottom : 10px !important;
   }
-  .awards .card-1 {
+  .card-1 {
     margin-bottom : 10px !important;
   }
 }
