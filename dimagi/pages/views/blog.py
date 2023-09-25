@@ -12,7 +12,7 @@ from dimagi.data.blog import (
     nav_categories,
     get_category_by_slug,
     ARCHIVE,
-    COMMCARE_PROVIDER,
+    COMMCARE_PROVIDER
 )
 from dimagi.pages.models.blog import BlogPost
 from dimagi.utils.request_helpers import (
@@ -75,7 +75,7 @@ def _get_posts(category, page=None, num_posts=None):
 
 def _get_commcare_providers(category, page=None, num_posts=None):
     post_data = get_json(
-        'commcare-providers', page=page, num_posts=20)
+        category.slug, page=page, num_posts=20)
     return {
         'posts': [BlogPost(data) for data in post_data['posts']],
         'total': post_data['total'],
