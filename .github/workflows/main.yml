@@ -6,6 +6,13 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres
+        env:
+          POSTGRES_PASSWORD: postgres
+      redis:
+        image: redis
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -14,14 +21,6 @@ jobs:
         uses: actions/setup-python@v2
         with:
            python-version: 3.9.16
-
-      - services:
-        postgres:
-          image: postgres
-          env:
-            POSTGRES_PASSWORD: postgres
-        redis:
-          image: redis
 
       - name: copy env variables
         run: |
