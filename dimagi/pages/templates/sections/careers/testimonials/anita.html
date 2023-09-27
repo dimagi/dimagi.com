@@ -1,0 +1,23 @@
+{% extends "sections/careers/testimonials/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block image_class%}anita{% endblock %}
+
+{% block content %}
+  <div class="testimonial-content content-width-medium align-left pad-top-medium pad-horz-base">
+    <p>
+      {% blocktrans %}
+        “To work at Dimagi gives me the opportunity to collaborate with people who share a vision to empower. 
+        I am so lucky to wake up motivated, inspired, and proud about our work and our culture, everyday.”
+      {% endblocktrans %}  
+    </p>
+    <div class="attribution-heading primary pad-bottom-base uppercase">
+      <p class="pad-bottom-base pad-top-line">
+      {% blocktrans %}
+        <strong> ANITA KRUGER </strong>  |  Partnerships Manager
+      {% endblocktrans %}
+      </p>
+    </div>
+  </div>
+{% endblock %}

@@ -63,32 +63,76 @@
   stroke-width: 3;
 }
 
-@media (max-width: $width-desktop-xl - 1px) and (min-width: $width-mobile - 1px) {
+.card-1 {
+  margin-bottom: 70px !important;
+} 
+.awards .card-2 {
+  margin-bottom: 50px !important;
+} 
+.awards .card-3 {
+  margin-bottom: 30px !important;
+}
+
+@media (min-width: $width-desktop-lg - 1px) and (max-width: $width-desktop-xl - 1px) {
+  .card-1 {
+    margin-bottom : 60px !important;
+  }
+  .awards .card-2 {
+    margin-bottom : 40px !important;
+  }
+  .awards .card-3 {
+    padding-bottom: 10px !important;
+  }
   .awards .card-4 {
-    padding-bottom : 20px !important;
+    margin-bottom : 20px !important;
   }
 }
 
 @media (min-width: $width-desktop - 1px) and (max-width: $width-desktop-lg - 1px) {
+  .awards .card-3 {
+    margin-bottom: 30px !important;
+  }
   .awards .card-2 {
     padding-bottom : 40px !important;
   }
-  .awards .card-1 {
+  .card-1 {
     padding-bottom : 40px !important;
   }
 }
 
 @media (min-width: $width-mobile - 1px) and (max-width: $width-desktop - 1px) {
-  .awards .card-2 {
-    padding-bottom : 0px !important;
+  .awards .card-4 {
+    margin-bottom: 10px !important;
   }
-  .awards .card-1 {
-    padding-bottom : 0px !important;
+  .awards .card-3 {
+    margin-bottom: 30px !important;
+  }
+  .awards .card-2 {
+    margin-bottom : 10px !important;
+  }
+  .card-1 {
+    margin-bottom : 30px !important;
+  }
+}
+
+@media (max-width: $width-mobile - 1px){
+  .awards .card-4 {
+    margin-bottom: 10px !important;
+  }
+  .awards .card-3 {
+    margin-bottom: 10px !important;
+  }
+  .awards .card-2 {
+    margin-bottom : 10px !important;
+  }
+  .card-1 {
+    margin-bottom : 10px !important;
   }
 }
 
 .awards .image.company-culture {
   @include background-cover('../../pages/careers/bcorporation.png');
+  margin-bottom: 10px !important;
 }
 
 .awards .image.builtin {
@@ -96,11 +140,12 @@
 }
 
 .awards .image.b-corporation {
-  @include background-cover('../../pages/careers/bcorp.png');
+  @include background-cover('../../pages/careers/inc_5000.png');
 }
 
 .awards .image.top-5000 {
-  @include background-cover('../../pages/careers/fastcompany.png');
+  @include background-cover('../../pages/careers/climate_neutral.jpg');
+  margin-bottom: 10px !important;
 }
 
 .overview .image.team_summit {
@@ -114,7 +159,7 @@
 }
 
 .overview .image.gso {
-  @include background-cover('../../pages/careers/teampic3.jpg');
+  @include background-cover('../../pages/careers/frame_3.jpg');
 }
 
 .overview .image.dei_gtd_summit {
@@ -156,6 +201,10 @@ a.post {
   }
 }
 
+.tech-world {
+  margin-bottom : 30px !important;
+}
+
 @media (max-width: $width-desktop - 1px) {
   .tech-world , .tech-team {
     padding-top : 0px !important;
@@ -171,8 +220,12 @@ a.post {
 }
 
 @media (max-width: $width-desktop-xl - 1px)  {
-  .tech-team , .tech-world  {
-    padding-top : 22px !important;
+  .tech-world  {
+    padding-top : 40px !important;
+    margin-bottom : 50px !important;
+  }
+  .tech-team {
+    padding-top : 20px !important;
   }
   .bcorp{
     padding-bottom : 40px !important;
@@ -187,7 +240,11 @@ a.post {
 
 @media (min-width: $width-desktop - 1px) and (max-width: $width-desktop-lg - 1px)  {
   .tech-world {
-    padding-top : 44px !important;
+    padding-top : 45px !important;
+    margin-bottom : 25px !important;
+  }
+  .tech-team {
+    padding-top : 40px !important;
   }
   .bcorp{
     padding-bottom : 62px !important;
@@ -199,10 +256,16 @@ a.post {
   }
 }
 
-@media (max-width: $width-desktop - 1px) {
-  .tech-world , .tech-team {
+@media (min-width: $width-mobile - 1px )  and (max-width: $width-desktop - 1px ){
+  .tech-world {
+    padding-top : 0px !important;
+    padding-bottom: 20px !important;
+  }
+  .tech-team {
     padding-top : 0px !important;
   }
+}
+@media (max-width: $width-desktop - 1px) {
   .bcorp{
     padding-bottom : 0px !important;
     margin-bottom : 10px !important;
@@ -213,7 +276,12 @@ a.post {
 }
 
 @media (max-width: $width-mobile - 1px) {
-  .tech-world , .tech-team , .staff {
+  .tech-world {
+    padding-top : 0px !important;
+    margin-bottom: 0px !important;
+    padding-bottom: 10px !important;
+  }
+  .tech-team , .staff {
     padding-top : 0px !important;
   }
   .staff , .bcorp{
@@ -223,11 +291,11 @@ a.post {
 }
 
 .life .image.technology {
-  @include background-cover('../../pages/careers/technology.png');
+  @include background-cover('../../pages/careers/commcare_in_classroom.png');
 }
 
 .life .image.gtd-summit {
-  @include background-cover('../../pages/careers/gtd_summit.jpg');
+  @include background-cover('../../pages/careers/themba.jpg');
 }
 
 .life .image.benefit-corp {
@@ -280,44 +348,56 @@ a.post {
   margin-bottom: 10px;
 }
 
-.corlia {
-  @include background-cover('../../pages/careers/corlia.png');
+.anamika {
+  @include background-cover('../../pages/careers/anamika.jpg');
   height: 220px;
   width: 200px;
   margin-top: 0px !important;
 }
 
 @media (max-width: $width-desktop-lg) {
-  .corlia {
-    height : 240px !important;
+  .anamika {
+    height : 260px !important;
   }
 }
 
-.kishan {
-  @include background-cover('../../pages/careers/kishan.jpeg');
+.anita {
+  @include background-cover('../../pages/careers/anita.jpg');
+  height: 240px;
+  width: 200px;
+  margin-top: 0px !important;
+}
+
+@media (max-width: $width-desktop-lg) {
+  .anita{
+    height : 260px !important;
+  }
+}
+
+.asangi {
+  @include background-cover('../../pages/careers/asangi.jpg');
+  height: 240px;
+  width: 200px;
+  margin-top: 0px !important;
+}
+
+@media (max-width: $width-desktop-lg) {
+  .asangi{
+    height : 300px !important;
+  }
+}
+
+.yomila {
+  @include background-cover('../../pages/careers/yomila.jpg');
   height: 220px;
   width: 200px;
   margin-top: 0px !important;
 }
 
 @media (max-width: $width-desktop-lg) {
-  .kishan {
-    height : 240px !important;
+  .yomila{
+    height : 260px !important;
   }
-}
-
-.penda {
-  @include background-cover('../../pages/careers/penda.jpg');
-  height: 220px;
-  width: 200px;
-  margin-top: 0px !important;
-}
-
-.namrata {
-  @include background-cover('../../pages/careers/namrata.jpg');
-  height: 220px;
-  width: 200px;
-  margin-top: 0px !important;
 }
 
 .tech-team {

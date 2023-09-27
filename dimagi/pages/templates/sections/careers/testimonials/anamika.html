@@ -1,0 +1,24 @@
+{% extends "sections/careers/testimonials/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block image_class%}anamika{% endblock %}
+
+{% block content %}
+  <div class="testimonial-content content-width-medium align-left pad-top-medium pad-horz-base">
+    <p>
+      {% blocktrans %}
+        “Dimagi strikes a perfect balance between hard work and fun, displaying unwavering adherence 
+        to their core values: Impact > Team > Profit. Working at Dimagi is an absolute delight and 
+        has immensely helped me grow both professionally and personally.”
+      {% endblocktrans %}  
+    </p>
+    <div class="attribution-heading primary-light pad-bottom-base uppercase">
+      <p class="pad-bottom-base">
+      {% blocktrans %}
+        <strong> ANAMIKA VERMA  </strong>  |  Operations and Partnerships
+      {% endblocktrans %}
+      </p>
+    </div>
+  </div>
+{% endblock %}
