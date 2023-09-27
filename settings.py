@@ -201,7 +201,7 @@ WORDPRESS_API_USER_AGENT = env.str(
     default='dimagidotcom/prod'
 )
 
-SITE_URL = env.str('SITE_URL', default='https://dimagi.com')
+SITE_URL = env.str('SITE_URL', default='https://www.dimagi.com/')
 
 # analytics
 ANALYTICS = {
