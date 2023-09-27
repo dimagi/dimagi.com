@@ -16,6 +16,8 @@ TOOLKIT = Toolkit(
         "More studies have assessed CommCare's impact than any "
         "other mobile platform for frontline workers"
     ),
+    meta_title="The CommCare Evidence Base Overview",
+    meta_description="More studies have assessed CommCare's impact than any other mobile platform for frontline workers",
     image="commcare-evidence-base",
     template="data/toolkits/summaries/commcare_evidence_base.html",
     slug="commcare-evidence-base",

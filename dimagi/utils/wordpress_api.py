@@ -2,7 +2,6 @@ from __future__ import absolute_import
 import requests
 
 from dimagi.utils.config import setting
-from dimagi.pages.views import blog
 
 API_URL = setting('WORDPRESS_API_URL', '')
 USER_AGENT = setting('WORDPRESS_API_USER_AGENT', '')
@@ -33,16 +32,6 @@ def url_filters(content):
 def get_json(item, **kwargs):
     data = requests.get(_get_url(item), headers=_get_headers(), params=kwargs)
     return data.json()
-
-def get_us_health_json(tags, **kwargs):
-    posts = blog._get_posts(blog.ARCHIVE)
-    data = search_wordpress(num_posts= posts['total'])
-    return data
-
-def get_commcare_providers(category, **kwargs):
-    posts = blog._get_commcare_providers(blog.COMMCARE_PROVIDER)
-    return posts
-
 
 def get_all_tags():
     from dimagi.pages.models.blog import Tag

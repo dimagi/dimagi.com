@@ -1,0 +1,19 @@
+{% extends "sections/recruitmentfaqs/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block accordion_collapsed %}collapsed{% endblock %}
+
+{% block accordion_header %}
+  {% blocktrans %}
+    How long does the recruitment process usually take?
+  {% endblocktrans %}
+{% endblock %}
+
+{% block accordion_content %}
+  <p>
+    At Dimagi, we believe in doing recruitment right the first time. We want to make sure you, the candidate, 
+    are a good fit for the company and team and that we are a good fit for you. The length of the interview 
+    process varies by position, but expect the process to take about 3 - 5 weeks after the initial screening call.
+  </p>
+{% endblock %}

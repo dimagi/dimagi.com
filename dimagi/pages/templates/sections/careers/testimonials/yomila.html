@@ -1,0 +1,25 @@
+{% extends "sections/careers/testimonials/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block image_class%}yomila{% endblock %}
+
+{% block content %}
+  <div class="testimonial-content content-width-medium align-left pad-top-medium pad-horz-base">
+    <p>
+      {% blocktrans %}
+        “I love the people at Dimagi! You can be the most talented individual and 
+        even manage to accomplish great things on your own, but without a good team 
+        supporting and pushing things forward with you, the impact won't be the same. 
+        Team work makes the dream work.”
+      {% endblocktrans %}  
+    </p>
+    <div class="attribution-heading primary pad-bottom-base uppercase">
+      <p class="pad-bottom-base">
+      {% blocktrans %}
+        <strong> YOMILA SIMOES</strong>  |  Senior Project Analyst
+      {% endblocktrans %}
+      </p>
+    </div>
+  </div>
+{% endblock %}

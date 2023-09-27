@@ -11,6 +11,7 @@ from dimagi.pages.views.core import (
     research_and_data,
     commcare_providers,
     awards,
+    recruitmentfaqs,
     case_management,
     test_404,
     test_500,

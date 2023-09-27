@@ -18,8 +18,7 @@ from dimagi.utils.india import get_india_partners
 from dimagi.data.case_management import longitudinal_data
 
 from dimagi.pages.views import blog
-from dimagi.pages.models.blog import BlogPost
-from dimagi.utils.wordpress_api import get_json, get_us_health_json, get_commcare_providers
+from dimagi.utils.wordpress_api import get_json, search_wordpress
 from dimagi.pages.models.partners import latestPartners
 
 
@@ -49,7 +48,7 @@ def partners(request):
     _latest = get_json("blog/latest-partners")
     _partners_count= _latest["total"]
     _latest = latestPartners(_latest["posts"][:2])
-    all_commcare_providers = get_commcare_providers("commcare-providers")['posts'][:3]
+    all_commcare_providers = blog._get_commcare_providers(blog.COMMCARE_PROVIDER)['posts'][:3]
     context = {
         'partners': get_logos(),
         'latest_partners': _latest,
@@ -66,7 +65,8 @@ def covid_19(request):
     return render(request, 'pages/covid_19.html', context)
 
 def us_health(request):
-    ushealth_blogs = get_us_health_json("blog/archive")['posts']
+    posts = blog._get_posts(blog.ARCHIVE)
+    ushealth_blogs = search_wordpress(num_posts= posts['total'])['posts']
     filtered_ushealth_blogs = [post for post in ushealth_blogs for tag in post['tags'] if tag['name'] == 'US Health'][:2]
     context = {
         'posts': filtered_ushealth_blogs,
@@ -75,7 +75,7 @@ def us_health(request):
     return render(request, 'pages/us_health.html', context)
 
 def commcare_providers(request):
-    all_commcare_providers = get_commcare_providers("commcare-providers")['posts']
+    all_commcare_providers = blog._get_commcare_providers(blog.COMMCARE_PROVIDER)['posts']
     context = {
         'commcare_providers': all_commcare_providers,
     }
@@ -104,6 +104,10 @@ def research_and_data(request):
 
 def contact(request):
     return render(request, 'pages/contact.html')
+
+
+def recruitmentfaqs(request):
+    return render(request, 'pages/recruitmentfaqs.html')
 
 
 def awards(request):
