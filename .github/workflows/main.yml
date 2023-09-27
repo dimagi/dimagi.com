@@ -1,0 +1,45 @@
+on:
+  workflow_dispatch:
+  pull_request:
+    branches:
+      - master
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python 3.9
+        uses: actions/setup-python@v2
+        with:
+           python-version: 3.9
+
+      - name: copy env variables
+        run: |
+          cp .travis.env .env
+          curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+          echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee   /etc/apt/sources.list.d/yarn.list
+
+      - name: Install Prerequisties 
+        run: |
+          sudo apt-get install curl -y
+          sudo apt-get install  redis-server postgresql postgresql-contrib
+          sudo systemctl start postgresql
+          sudo systemctl start redis-server
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get install yarn
+          pip install pipenv
+          pipenv install
+          yarn install
+              
+      - name: Create test database
+        run: psql -c 'create database dimagidotcom_test;' -U postgres
+
+      - name: Run tests
+        run: |
+            python manage.py migrate
+            python manage.py test
+            
