@@ -1,0 +1,24 @@
+{% extends "sections/careers/testimonials/_base.html" %}
+{% load i18n %}
+{% load dimagidotcom %}
+
+{% block image_class%}asangi{% endblock %}
+
+{% block content %}
+  <div class="testimonial-content content-width-medium align-left pad-top-medium pad-horz-base">
+    <p>
+      {% blocktrans %}
+        “Being part of the Dimagi team is more than just a job for me, it’s a way to make a positive 
+        impact in the world. The work environment at Dimagi is supportive and accepting, and I am 
+        grateful for the opportunity to work with this amazing team that is making a difference.”
+      {% endblocktrans %}  
+    </p>
+    <div class="attribution-heading primary pad-bottom-base uppercase">
+      <p class="pad-bottom-base pad-top-line">
+      {% blocktrans %}
+        <strong> ASANGI JASENTHULIYANA </strong>  |   Product Marketing Manager
+      {% endblocktrans %}
+      </p>
+    </div>
+  </div>
+{% endblock %}
