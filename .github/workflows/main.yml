@@ -11,6 +11,8 @@ jobs:
         image: postgres
         env:
           POSTGRES_PASSWORD: postgres
+        ports:
+          - 5432:5432
       redis:
         image: redis
     steps:
@@ -37,9 +39,11 @@ jobs:
           yarn install
               
       - name: Create test database
-        run: psql -c 'create database dimagidotcom_test;' -U postgres
+        run: |
+          ps -ef | grep 5432 
+          psql -c 'create database dimagidotcom_test;' -U postgres
         env:
-          PGPASSWORD:: postgres
+          PGPASSWORD: postgres
 
       - name: Run tests
         run: |
