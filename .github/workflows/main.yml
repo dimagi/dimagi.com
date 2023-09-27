@@ -38,6 +38,8 @@ jobs:
               
       - name: Create test database
         run: psql -c 'create database dimagidotcom_test;' -U postgres
+        env:
+          POSTGRES_PASSWORD: postgres
 
       - name: Run tests
         run: |
