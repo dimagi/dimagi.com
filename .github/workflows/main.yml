@@ -10,6 +10,7 @@ jobs:
       postgres:
         image: postgres
         env:
+          POSTGRES_USER: postgres
           POSTGRES_PASSWORD: postgres
         ports:
           - 5432:5432
@@ -32,7 +33,9 @@ jobs:
 
       - name: Install Prerequisties 
         run: |
+          sudo apt-get update
           sudo apt-get install curl -y
+          sudo apt-get install postgresql-client -y
           sudo apt-get install yarn
           pip install pipenv
           pipenv install
@@ -41,7 +44,7 @@ jobs:
       - name: Create test database
         run: |
           ps -ef | grep 5432 
-          psql -c 'create database dimagidotcom_test;' -U postgres
+          PGPASSWORD=postgres psql -c 'create database dimagidotcom_test;' -U postgres
         env:
           PGPASSWORD: postgres
 
