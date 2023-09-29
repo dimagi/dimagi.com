@@ -47,14 +47,14 @@ jobs:
           sudo apt-get install curl -y
           sudo apt-get install postgresql-client -y
           sudo apt-get install yarn
-          pip install pipenv
-          pipenv install
-          yarn install
 
       - name: Run tests
         run: |
             pip --version
             python3 --version
+            pip install pipenv
+            pipenv install
+            yarn install
             python3 manage.py migrate
             python3 manage.py test
             
