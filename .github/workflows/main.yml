@@ -52,8 +52,10 @@ jobs:
         run: |
             pip --version
             python3 --version
-            python3.9 -m venv env
-            ps -ef | grep 5432 
+            python3.9 -m venv env 
+            sudo systemctl start postgresql.service
+            pg_isready
+            ps -ef | grep 5432
             source env/bin/activate
             pip install pipenv
             pipenv install
