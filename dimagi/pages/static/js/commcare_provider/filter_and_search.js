@@ -52,7 +52,6 @@ define([
     };
 
     self.toggleFilters = function () {
-      console.log("entered toggle filters----------------------------");
       self.showFilters(!self.showFilters());
     };
 
@@ -72,7 +71,7 @@ define([
               s: self.searchTerm(),
               t: _.join(self.searchTags(), ','),
             };
-        window.location = $.param(query);
+            window.location = 'search/?' + $.param(query);
       };
 
     self.clearFilters = function () {

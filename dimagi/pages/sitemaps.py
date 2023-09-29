@@ -141,6 +141,20 @@ class BlogPostSitemap(Sitemap):
     def lastmod(self, obj):
         return parse_datetime(obj.get('date'))
 
+class CommcareProviderSitemap(Sitemap):
+    protocol = 'https'
+    changefreq = 'never'
+    priority = 0.6
+
+    def items(self):
+        return get_json('commcare-provider/sitemap').get('posts', [])
+
+    def location(self, obj):
+        return reverse('blog_post', args=[obj.get('slug')])
+
+    def lastmod(self, obj):
+        return parse_datetime(obj.get('date'))
+
 
 class BlogArchiveCategorySitemap(Sitemap):
     protocol = 'https'

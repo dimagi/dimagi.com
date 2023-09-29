@@ -118,12 +118,12 @@ def _get_totals_context(page, total_posts, posts_per_page, num_queried_posts):
 
 
 @populate_tags_in_request
-def home(request):
+def Provider_home(request):
     print('-------------------------------------------------')
     print(request)
-    print('**********************************************')
-    posts = _get_posts(ARCHIVE)['posts']
-    popular = [BlogPost(p) for p in get_json('blog/popular', num_posts=3)['posts']]
+    print('7777777777777777777777777777777777777')
+    posts = _get_posts(COMMCARE_PROVIDER)['posts']
+    popular = [BlogPost(p) for p in posts['posts']]
     context = _get_global_context(request)
     context.update({
         'recent': posts[:1],
@@ -137,6 +137,9 @@ def home(request):
 @populate_tags_in_request
 @validate_category
 def archive(request, category=None, page=None):
+    print('-------------------------------------------------')
+    print(request)
+    print('+++++++++++++++++++++++++++++++++++++++++')
     search_term = get_search_term_from_request(request)
     tags = get_selected_tags_from_request(request)
     search_category = category
