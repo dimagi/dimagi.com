@@ -55,4 +55,4 @@ jobs:
             source env/bin/activate
             ps -ef | grep 5432
             export PGPASSWORD=postgres
-            psql -c 'create database dimagidotcom_test;' -U postgres
+            psql -h 127.0.0.1 -c 'create database dimagidotcom_test;' -U postgres
