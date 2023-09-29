@@ -50,6 +50,7 @@ jobs:
 
       - name: Run tests
         run: |
+            source bin/activate
             pip --version
             python3 --version
             pip install pipenv
