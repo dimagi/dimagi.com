@@ -7,25 +7,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
-    services:
-      postgres:
-        image: postgres
-        env:
-          POSTGRES_DB: dimagidotcom_test
-          POSTGRES_PASSWORD: postgres
-          POSTGRES_PORT: 5432
-          POSTGRES_USER: postgres
-        ports:
-          - 5432:5432
-        options: >-
-          --health-cmd pg_isready
-          --health-interval 10s
-          --health-timeout 5s
-          --health-retries 5
-      redis:
-        image: redis
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -45,21 +26,19 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install curl -y
-          sudo apt-get install postgresql-client -y
+          sudo apt-get install  redis-server postgresql postgresql-contrib
+          sudo systemctl start postgresql
+          sudo systemctl start redis-server
           sudo apt-get install yarn
 
       - name: Run tests
         run: |
             pip --version
             python3 --version
-            python3.9 -m venv env 
-            sudo systemctl start postgresql.service
-            pg_isready
-            ps -ef | grep 5432
+            python3.9 -m venv env
             source env/bin/activate
             pip install pipenv
             pipenv install
             yarn install
             python3 manage.py migrate
             python3 manage.py test
-            
