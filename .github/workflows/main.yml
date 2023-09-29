@@ -3,19 +3,29 @@ on:
   pull_request:
     branches:
       - master
+  
 jobs:
   build:
     runs-on: ubuntu-latest
+
     services:
       postgres:
         image: postgres
         env:
-          POSTGRES_USER: postgres
+          POSTGRES_DB: dimagidotcom_test
           POSTGRES_PASSWORD: postgres
+          POSTGRES_PORT: 5432
+          POSTGRES_USER: postgres
         ports:
           - 5432:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
       redis:
         image: redis
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -40,13 +50,6 @@ jobs:
           pip install pipenv
           pipenv install
           yarn install
-              
-      - name: Create test database
-        run: |
-          ps -ef | grep 5432 
-          PGPASSWORD=postgres psql -c 'create database dimagidotcom_test;' -U postgres
-        env:
-          PGPASSWORD: postgres
 
       - name: Run tests
         run: |
