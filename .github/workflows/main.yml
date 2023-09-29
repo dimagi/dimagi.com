@@ -38,6 +38,7 @@ jobs:
         run: |
           cp .travis.env .env
           echo "DATABASE_HOST=127.0.0.1" >> .env
+          echo "DATABASE_PASSWORD=postgres" >> .env
           cat .env
           curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
           echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee   /etc/apt/sources.list.d/yarn.list
