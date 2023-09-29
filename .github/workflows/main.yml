@@ -36,7 +36,7 @@ jobs:
             pip --version
             python3 --version
             python3.9 -m venv env
-            ps -ef | grep 5432
+            sudo systemctl status postgresql
             export PGPASSWORD="postgres"
             psql -c 'create database dimagidotcom_test;' -U postgres
             source env/bin/activate
