@@ -1,0 +1,65 @@
+on:
+  workflow_dispatch:
+  push: 
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    services:
+      postgres:
+        image: postgres
+        env:
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_PORT: 5432
+          POSTGRES_USER: postgres
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+      redis:
+        image: redis
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python 3.9
+        uses: actions/setup-python@v2
+        with:
+           python-version: 3.9.16
+           
+      - name: copy env variables
+        run: |
+          cp .travis.env .env
+          echo "DATABASE_HOST=127.0.0.1" >> .env
+          echo "DATABASE_PASSWORD=postgres" >> .env
+          cat .env
+          curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+          echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee   /etc/apt/sources.list.d/yarn.list
+
+      - name: Install Prerequisties 
+        run: |
+          sudo apt-get update
+          sudo apt-get install curl -y
+          sudo apt install -y postgresql postgresql-contrib
+          sudo apt-get install yarn
+          export PGPASSWORD=postgres
+          psql -h 127.0.0.1 -c 'create database dimagidotcom_test;' -U postgres
+
+      - name: Run tests
+        run: |
+            python3.9 -m venv env
+            source env/bin/activate
+            pip install pipenv
+            pipenv install
+            yarn install
+            python manage.py migrate
+            python manage.py test
+            
