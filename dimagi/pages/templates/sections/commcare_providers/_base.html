@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load dimagidotcom %}
+
+{% block meta %}
+  <meta property="dimagi:blogFilters" content="{{ blog_filters|JSON|META_STR }}">
+  {% if existing_filters %}
+    <meta property="dimagi:existingBlogFilters" content="{{ existing_filters|JSON|META_STR }}">
+  {% endif %}
+{% endblock %}
+
+{% block js %}
+  <script type="text/javascript" src="{% static 'js/commcare.js' %}"></script>
+{% endblock %}
+
+{% block stylesheets %}
+  <link href="{% static 'js/lib/select2/dist/css/select2.min.css' %}" rel="stylesheet" media="screen" type="text/css" />
+  {% compress css %}
+    <link href="{% sass_src 'style/pages/partners.scss' %}" rel="stylesheet" media="screen" type="text/css" />
+  {% endcompress %}
+{% endblock %}

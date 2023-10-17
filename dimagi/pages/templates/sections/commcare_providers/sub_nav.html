@@ -14,8 +14,9 @@
       </a>
 
     </div>{# .actions #}
-    <a class="prompt-link {% click_subnav 'browse' %}"
-       href="#">
+    <a class="prompt-link "
+       href="#"
+       data-bind="click: closeFilters">
       {% blocktrans %}
         Browse
       {% endblocktrans %}
@@ -32,7 +33,16 @@
         <a href="{% url 'partners' %}">
           {% include "svg/blog/icon/nav/home.html" %} {% trans "Home" %}
         </a>
+        <a href="#"
+           class="toggle-filters"
+           data-bind="click: toggleFilters, css: { 'has-filters': showHasFiltersAlert}">
+          {% include "svg/blog/icon/nav/filter.html" %} {% trans "Filter" %}
+        </a>
+        <div class="search-bar-container">
+          <input type="text" placeholder="{% trans "Search..." %}" data-bind="textInput: searchTerm, event: {keypress: submitSearchOnEnter}" /><button type="button" data-bind="click: submitSearch">{% include "svg/blog/icon/nav/search.html" %}</button>
+        </div>
       </div>{# .content #}
     </div>{# .destinations #}
   </div>{# .content #}
+  {% include 'sections/commcare_providers/filter_nav.html' %}
 </section>
