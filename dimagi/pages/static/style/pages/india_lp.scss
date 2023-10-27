@@ -104,6 +104,79 @@
 .tile {
   padding: 30px 10px 30px 10px;
 }
+
+.education {
+  padding-top: 40px;
+}
+.vaccine {
+  padding-top: 60px;
+}
+.covid {
+  padding-top: 60px;
+}
+@media (max-width : $width-desktop-xl) and (min-width: $width-desktop-lg) {
+  .education {
+    padding-top: 20px;
+  }
+  .vaccine {
+    padding-top: 10px;
+  }
+  .covid {
+    padding-top: 10px;
+  }
+}
+@media (max-width : $width-desktop-lg) and (min-width: $width-desktop) {
+  .education {
+    padding-top: 40px;
+  }
+  .vaccine {
+    padding-top: 10px;
+  }
+  .covid {
+    padding-top: 10px;
+  }
+}
+@media (max-width : $width-desktop) and (min-width: $width-mobile) {
+  .education {
+    padding-top: 60px;
+  }
+  .vaccine {
+    padding-top: 0px;
+  }
+  .covid {
+    padding-top: 0px;
+  }
+  .reproductive {
+    margin-bottom: 0px;
+  }
+  .nutrition {
+    margin-top : 40px;
+  }
+  .mch {
+    margin-bottom: 0px;
+  }
+}
+@media (max-width : $width-mobile) {
+  .education {
+    padding-top: 0px;
+  }
+  .vaccine {
+    padding-top: 0px;
+  }
+  .covid {
+    padding-top: 0px;
+  }
+  .reproductive {
+    margin-bottom: 10px;
+  }
+  .nutrition {
+    margin-top : 0px;
+    margin-bottom: 10px;
+  }
+  .mch {
+    margin-bottom: 10px;
+  }
+}
 .large {
   color: #FFFFFF !important;
 }
