@@ -1,23 +1,19 @@
-{% extends "sections/about/resources/_base.html" %}
-{% load i18n %}
-{% load dimagidotcom %}
-
-{% block icon %}
-  {% include "svg/about/icons/contact_us.html" %}
-{% endblock %}
-
-{% block header %}{% blocktrans %}
-  Contact Us
-{% endblocktrans %}{% endblock %}
-
-{% block content %}{% blocktrans %}
-  Let’s connect. Drop us a line or give us a call.
-{% endblocktrans %}{% endblock %}
-
-{% block link %}
-  {% url 'contact' %}
-{% endblock %}
-
-{% block link_text %}{% blocktrans %}
-  Contact us
-{% endblocktrans %}{% endblock %}
+<div class="column">
+  <a class="tile {{ click_class }}"
+     href="{% url 'contact' %}">
+    <div class="gap-bottom-base">
+      {% include "svg/about/icons/contact_us.html" %}
+    </div>
+    <h5>
+      Contact Us
+    </h5>
+    <p class="body-color contact">
+      Let’s connect. Drop us a line or give us a call.
+    </p>
+    <p class="cta">
+      <span class="link arrow">
+        Contact us
+      </span>
+    </p>
+  </a>
+</div>

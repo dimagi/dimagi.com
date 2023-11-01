@@ -1,23 +1,19 @@
-{% extends "sections/about/resources/_base.html" %}
-{% load i18n %}
-{% load dimagidotcom %}
-
-{% block icon %}
-  {% include "svg/about/icons/about.html" %}
-{% endblock %}
-
-{% block header %}{% blocktrans %}
-  About Us
-{% endblocktrans %}{% endblock %}
-
-{% block content %}{% blocktrans %}
-  We prioritize impact, team and profit. In that order. 
-{% endblocktrans %}{% endblock %}
-
-{% block link %}
-  {% url 'about' %}
-{% endblock %}
-
-{% block link_text %}{% blocktrans %}
-  Learn More
-{% endblocktrans %}{% endblock %}
+<div class="column">
+  <a class="tile {{ click_class }}"
+     href="{% url 'about' %}">
+    <div class="gap-bottom-base">
+      {% include "svg/about/icons/about.html" %}
+    </div>
+    <h5>
+      About Us
+    </h5>
+    <p class="body-color about">
+      We prioritize impact, team and profit. In that order. 
+    </p>
+    <p class="cta">
+      <span class="link arrow">
+        Learn More
+      </span>
+    </p>
+  </a>
+</div>

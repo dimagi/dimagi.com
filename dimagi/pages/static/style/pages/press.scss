@@ -195,3 +195,64 @@ ul.unorderedlist>li::before {
   }
 }
 
+.blog {
+  margin-bottom: 35px;
+}
+
+.contact {
+  margin-bottom: 35px;
+}
+
+.about {
+  margin-bottom: 30px;
+}
+
+@media (min-width: $width-desktop-lg - 1px) and (max-width: $width-desktop-xl - 1px) {
+  .blog {
+    margin-bottom: 55px;
+  }
+  .contact {
+    margin-bottom: 55px;
+  }
+    .about {
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: $width-desktop - 1px) and (max-width: $width-desktop-lg - 1px) {
+  .blog {
+    margin-bottom: 40px;
+  }
+  .contact {
+    margin-bottom: 15px;
+  }
+    .about {
+    margin-bottom: 15px;
+  }
+}
+
+@media (min-width: $width-mobile - 1px) and (max-width: $width-desktop - 1px) {
+  .blog {
+    margin-bottom: 42px;
+  }
+  .contact {
+    margin-bottom: 55px;
+  }
+    .about {
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: $width-mobile - 1px) {
+  .blog {
+    margin-bottom: 20px;
+  }
+  .contact {
+    margin-bottom: 20px;.blog {
+      margin-bottom: 35px;
+    }
+  }
+    .about {
+    margin-bottom: 20px;
+  }
+}
