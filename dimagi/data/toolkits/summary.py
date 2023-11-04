@@ -102,5 +102,5 @@ DIGITAL_WORKFLOW_TEMPLATE = OtherToolkit(
 This guide presents examples and templates
 to create digital workflow documentation
     """),
-    view_url="diig-digital-workflow-template",
+    view_url="digital-workflow-template",
 )
