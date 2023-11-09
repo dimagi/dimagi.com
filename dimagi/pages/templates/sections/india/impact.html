@@ -20,7 +20,7 @@
         </p>
       </div>
       <div class="grid grid-3-at-large grid-1-at-medium grid-row-equal-heights grid-col-space-small pad-top-medium">
-        <div class="column  pad-bottom-small ">
+        <div class="column pad-bottom-small ">
           <div class="pad-bottom-base white-bg">
             <div class="image testimonial1"
                  data-lazybg="true"></div>
@@ -31,26 +31,28 @@
                 {% endblocktrans %}
               </h6>
               <div class="body-color">
-                <p class="pad-bottom-base">
+                <p class=" namaste">
                 {% blocktrans %}
-                  Dimagi and Sangath collaborate for NAMASTE program, developing an app 
-                  to provide home-based counseling intervention for South Asian parents 
-                  of childern with austim.
+                  Dimagi and Sangath collaborate to develop NAMASTE program, funded by NIHR, UK, 
+                  using an app for home-based counseling of parents with autistic children, adressing
+                  the linited access to early detection and intervention services in South Asia.
                 {% endblocktrans %}
                 </p>
               </div>
-              <p class="pad-top-line"><a href="{% url 'blog_post' 'namaste' %}" class="arrow link-turquoise">
+              <p class="namaste_cta">
+                <a href="{% url 'blog_post' 'namaste' %}" class="arrow link-turquoise">
                 {% blocktrans %}
                   Read More 
                 {% endblocktrans %}
-              </a></p>
+                </a>
+              </p>
             </div>
           </div>
         </div>{# .column #}
 
         <div class="column  pad-bottom-small ">
           <div class="pad-bottom-base white-bg">
-            <div class="image testimonial6"
+            <div class="image testimonial2"
                  data-lazybg="true"></div>
             <div class="pad-line pad-top-none-at-large pad-top-line-at-extra-large">
               <h6>
@@ -59,11 +61,12 @@
                 {% endblocktrans %}
               </h6>
               <div class="body-color">
-                <p class="pad-bottom-base">
+                <p class="pad-bottom-base-at-extra-large pad-bottom-base-at-large pad-bottom-none-at-small resilience">
                 {% blocktrans %}
-                  Explore the progress of WellMe, Dimagi's resilience-building app for Frontline 
-                  Workers, including Pilot projects, key feedback, and the exploration of two-way 
-                  communication and extrinsic motivators.
+                  Dimagi released WellMe, a resilience-building application for Frontline Workers, 
+                  with the goal of enhancing wellbeing for these workers; the team now reflects on 
+                  the progress towards their hypotheses, the feedback from Frontline Workers, and 
+                  the questions they aim to address.
                 {% endblocktrans %}
                 </p>
               </div>
@@ -76,59 +79,33 @@
           </div>
         </div>{# .column #}
 
-        <div class="column  pad-bottom-small ">
+        <div class="column pad-bottom-small ">
           <div class="pad-bottom-base white-bg">
             <div class="image testimonial3"
                  data-lazybg="true"></div>
             <div class="pad-line pad-top-none-at-large pad-top-line-at-extra-large">
               <h6>
                 {% blocktrans %}
-                  Johnson & Johnson Foundation - Leveraging Advanced Analytics to Develop Engagement 
-                  Profiles of a Digital Resilience Message Programme and Inform Scale Efforts
+                  Johnson & Johnson Foundation: Leveraging analytics to develop engagement profiles 
+                  for a digital resilience message program, informing scale efforts.
                 {% endblocktrans %}
               </h6>
               <div class="body-color">
-                <p class="pad-bottom-base">
+                <p class="pad-bottom-line-at-extra-large pad-bottom-base-at-large">
                 {% blocktrans %}
-                  Dimagi created a universal tool to track treatment and program data
-                  for clubfoot, a common and treatable birth defect historically overlooked in many LMICs.
+                  Dimagi has partnered with the Johnson & Johnson Center for Health Worker Innovation 
+                  to develop a digital mental health toolbox for health workers in LMICs, with a focus 
+                  on resilience skills to combat stress and burnout.
                 {% endblocktrans %}
                 </p>
               </div>
-              <p class="pad-top-line"><a href="{% url 'blog_post' 'johnson-johnson-foundation-leveraging-advanced-analytics-to-develop-engagement-profiles' %}" class="arrow link-turquoise">
+              <p class="pad-top-small-at-extra-large pad-top-medium-at-large pad-top-line-at-small">
+                <a href="{% url 'blog_post' 'johnson-johnson-foundation-leveraging-advanced-analytics-to-develop-engagement-profiles' %}" class="arrow link-turquoise">
                 {% blocktrans %}
                   Read More 
                 {% endblocktrans %}
-              </a></p>
-            </div>
-          </div>
-        </div>{# .column #}
-
-        <div class="column  pad-bottom-small ">
-          <div class="pad-bottom-base white-bg">
-            <div class="image testimonial5"
-                 data-lazybg="true"></div>
-            <div class="pad-line pad-top-none-at-large pad-top-line-at-extra-large">
-              <h6>
-                {% blocktrans %}
-                  How Chatbots Can Support the Right to Health
-                {% endblocktrans %}
-              </h6>
-              <div class="body-color">
-                <p class="pad-bottom-base">
-                {% blocktrans %}
-                  In the pursuit of universal health coverage, there are many forms
-                  of direct-to-client solutions in development, such as mobile apps
-                  and chatbots. Dimagi's Director of Consumer Innovations explains
-                  our approach to developing such tools.
-                {% endblocktrans %}
-                </p>
-              </div>
-              <p class="pad-top-line"><a href="{% url 'blog_post' 'chatbots-support-the-right-to-health' %}" class="arrow link-turquoise">
-                {% blocktrans %}
-                  Read More 
-                {% endblocktrans %}
-              </a></p>
+                </a>
+              </p>
             </div>
           </div>
         </div>{# .column #}
@@ -140,11 +117,42 @@
             <div class="pad-line pad-top-none-at-large pad-top-line-at-extra-large">
               <h6>
                 {% blocktrans %}
+                  How Chatbots Can Support the Right to Health
+                {% endblocktrans %}
+              </h6>
+              <div class="body-color">
+                <p class="pad-top-line-at-extra-large card-4">
+                {% blocktrans %}
+                  In the pursuit of universal health coverage, there are many forms
+                  of direct-to-client solutions in development, such as mobile apps
+                  and chatbots. Dimagi's Director of Consumer Innovations explains
+                  our approach to developing such tools.
+                {% endblocktrans %}
+                </p>
+              </div>
+              <p class="chatbots ">
+                <a href="{% url 'blog_post' 'chatbots-support-the-right-to-health' %}" class="arrow link-turquoise">
+                  {% blocktrans %}
+                    Read More 
+                  {% endblocktrans %}
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>{# .column #}
+
+        <div class="column  pad-bottom-small ">
+          <div class="pad-bottom-base white-bg">
+            <div class="image testimonial5"
+                 data-lazybg="true"></div>
+            <div class="pad-line pad-top-none-at-large pad-top-line-at-extra-large">
+              <h6>
+                {% blocktrans %}
                   RTI International – USAID Integrated Early Childhood Development (IECD) Activity
                 {% endblocktrans %}
               </h6>
               <div class="body-color">
-                <p class="pad-bottom-base">
+                <p class="pad-top-line-at-extra-large pad-top-line-at-large">
                 {% blocktrans %}
                   RTI International (RTI), an independent nonprofit research and
                   international development institute, is embarking on a new
@@ -164,7 +172,7 @@
 
         <div class="column  pad-bottom-small ">
           <div class="pad-bottom-base white-bg">
-            <div class="image testimonial2"
+            <div class="image testimonial6"
                  data-lazybg="true"></div>
             <div class="pad-line pad-top-none-at-large pad-top-line-at-extra-large">
               <h6>
@@ -174,7 +182,7 @@
                 {% endblocktrans %}
               </h6>
               <div class="body-color">
-                <p class="pad-bottom-base">
+                <p class="pad-bottom-line">
                 {% blocktrans %}
                   Dimagi has created a new Prioritized Tasking Framework that
                   aims to help CHWs focus on service delivery, enable data-driven
@@ -182,7 +190,7 @@
                 {% endblocktrans %}
                 </p>
               </div>
-              <p class="pad-top-line"><a href="{% url 'blog_post' 'commcare-precision-tasking-framework' %}" class="arrow link-turquoise">
+              <p class="precision"><a href="{% url 'blog_post' 'commcare-precision-tasking-framework' %}" class="arrow link-turquoise">
                 {% blocktrans %}
                   Read More 
                 {% endblocktrans %}

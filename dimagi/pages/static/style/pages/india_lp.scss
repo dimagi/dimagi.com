@@ -64,12 +64,6 @@
 
 }
 
-.programs .image.testimonial3 {
-  @include background-cover('../../pages/services/case_studies/renew.jpg');
-  height: 200px;
-  background-size: contain;
-}
-
 .programs .image.crs {
   width: 309px;
 }
@@ -140,20 +134,14 @@
   .education {
     padding-top: 60px;
   }
-  .vaccine {
+  .vaccine , .covid {
     padding-top: 0px;
   }
-  .covid {
-    padding-top: 0px;
-  }
-  .reproductive {
+  .reproductive , .mch {
     margin-bottom: 0px;
   }
   .nutrition {
     margin-top : 40px;
-  }
-  .mch {
-    margin-bottom: 0px;
   }
 }
 @media (max-width : $width-mobile) {
@@ -177,6 +165,69 @@
     margin-bottom: 10px;
   }
 }
+@media (min-width : $width-desktop-xl) {
+  .chatbots {
+    padding-top: 40px;
+  }
+  .precision {
+    padding-top: 40px;
+  }
+}
+@media (max-width: $width-desktop-xl) and  (min-width : $width-desktop-lg) {
+  .chatbots {
+    padding-top: 40px;
+  }
+  .precision {
+    padding-top: 40px;
+  }
+}
+@media (max-width : $width-desktop-lg) {
+  .chatbots {
+    padding-top: 20px;
+  }
+}
+@media (max-width : $width-desktop-xl) and (min-width: $width-desktop-lg) {
+  .card-1 {
+    padding-top: 20px;
+  }
+  .card-2 {
+    padding-top: 40px;
+  }
+}
+@media (max-width : $width-desktop-xl) and (min-width: $width-desktop-lg){
+  .card-4 {
+    padding-top: 40px;
+  }
+}
+@media (min-width : $width-desktop-xl) {
+  .card-1 {
+    padding-top: 40px;
+  }
+}
+
+.namaste , .resilience {
+  padding-top : 40px;
+}
+.namaste_cta {
+  padding-top : 50px;
+}
+@media (max-width : $width-desktop-xl) and (min-width: $width-desktop-lg) {
+  .resilience {
+    padding-top : 60px;
+  }
+  .namaste_cta {
+    padding-top : 70px;
+  }
+}
+@media (max-width : $width-desktop-lg) {
+  .resilience , .namaste {
+    padding-top: 0px;
+  }
+  .namaste_cta {
+    padding-top : 20px;
+  }
+}
+
 .large {
   color: #FFFFFF !important;
 }
