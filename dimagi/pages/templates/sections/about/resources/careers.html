@@ -1,23 +1,19 @@
-{% extends "sections/about/resources/_base.html" %}
-{% load i18n %}
-{% load dimagidotcom %}
-
-{% block icon %}
-  {% include "svg/about/icons/careers.html" %}
-{% endblock %}
-
-{% block header %}{% blocktrans %}
-  Careers
-{% endblocktrans %}{% endblock %}
-
-{% block content %}{% blocktrans %}
-  We’re seeking impact-driven problem solvers.
-{% endblocktrans %}{% endblock %}
-
-{% block link %}
-  {% url 'careers' %}
-{% endblock %}
-
-{% block link_text %}{% blocktrans %}
-  See Jobs
-{% endblocktrans %}{% endblock %}
+<div class="column">
+  <a class="tile {{ click_class }}"
+     href="{% url 'careers' %}">
+    <div class="gap-bottom-base">
+      {% include "svg/about/icons/careers.html" %}
+    </div>
+    <h5>
+      Careers
+    </h5>
+    <p class="body-color careers">
+      We’re seeking impact-driven problem solvers.
+    </p>
+    <p class="cta">
+      <span class="link arrow">
+        See Jobs
+      </span>
+    </p>
+  </a>
+</div>
