@@ -316,3 +316,45 @@ ul.timeline-list > li:before{ // scss-lint:disable PropertyCount
     stroke-width: 3;
   }
 }
+
+.blog {
+  margin-bottom: 36px;
+}
+.careers {
+  margin-bottom: 36px;
+}
+.resources {
+  margin-bottom: 15px;
+}
+@media (min-width: $width-desktop-lg - 1px) and (max-width: $width-desktop-xl - 1px) {
+  .blog {
+    margin-bottom: 56px;
+  }
+  .resources {
+    margin-bottom: 36px;
+  }
+}
+@media (min-width: $width-desktop - 1px) and (max-width: $width-desktop-lg - 1px) {
+  .blog {
+    margin-bottom: 40px;
+  }
+  .careers, .resources {
+    margin-bottom: 20px;
+  }
+}
+@media (min-width: $width-mobile - 1px) and (max-width: $width-desktop - 1px) {
+  .blog {
+    margin-bottom: 55px;
+  }
+  .careers, .resources {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: $width-mobile - 1px) {
+  .blog {
+    margin-bottom: 20px;
+  }
+  .careers, .resources {
+    margin-bottom: 20px;
+  }
+}

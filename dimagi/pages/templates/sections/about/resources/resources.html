@@ -1,23 +1,19 @@
-{% extends "sections/about/resources/_base.html" %}
-{% load i18n %}
-{% load dimagidotcom %}
-
-{% block icon %}
-  {% include "svg/about/icons/resources.html" %}
-{% endblock %}
-
-{% block header %}{% blocktrans %}
-  Resources
-{% endblocktrans %}{% endblock %}
-
-{% block content %}{% blocktrans %}
-  Find the best of our guides, case studies, webinars and toolkits.
-{% endblocktrans %}{% endblock %}
-
-{% block link %}
-  {% url 'resources' %}
-{% endblock %}
-
-{% block link_text %}{% blocktrans %}
-  Explore resources
-{% endblocktrans %}{% endblock %}
+<div class="column">
+  <a class="tile {{ click_class }}"
+     href="{% url 'resources' %}">
+    <div class="gap-bottom-base">
+      {% include "svg/about/icons/resources.html" %}
+    </div>
+    <h5>
+      Resources
+    </h5>
+    <p class="body-color resources">
+      Find the best of our guides, case studies, webinars and toolkits.
+    </p>
+    <p class="cta">
+      <span class="link arrow">
+        Explore resources
+      </span>
+    </p>
+  </a>
+</div>
