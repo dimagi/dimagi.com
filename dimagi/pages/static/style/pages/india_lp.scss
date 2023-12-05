@@ -13,32 +13,32 @@
   font-size: 20px !important;
 }
 .programs .image.testimonial1 {
-  @include background-cover('../../pages/india/solutions/1.jpg');
+  @include background-cover('../../pages/india/solutions/test_1.jpg');
   height: 200px;
   background-size: contain;
 }
 .programs .image.testimonial2 {
-  @include background-cover('../../pages/india/solutions/2.jpg');
+  @include background-cover('../../pages/india/solutions/test_2.jpg');
   height: 200px;
   background-size: contain;
 }
 .programs .image.testimonial3 {
-  @include background-cover('../../pages/india/solutions/3.jpg');
+  @include background-cover('../../pages/india/solutions/test_3.jpg');
   height: 200px;
   background-size: contain;
 }
 .programs .image.testimonial4 {
-  @include background-cover('../../pages/india/solutions/4.jpg');
+  @include background-cover('../../pages/india/solutions/test_4.jpg');
   height: 200px;
   background-size: contain;
 }
 .programs .image.testimonial5 {
-  @include background-cover('../../pages/india/solutions/5.jpg');
+  @include background-cover('../../pages/india/solutions/test_5.jpg');
   height: 200px;
   background-size: contain;
 }
 .programs .image.testimonial6 {
-  @include background-cover('../../pages/india/solutions/6.jpg');
+  @include background-cover('../../pages/india/solutions/test_6.jpg');
   height: 200px;
   background-size: contain;
 }
@@ -62,12 +62,6 @@
 .overview .image.testimonial1 {
   @include background-cover('../../pages/services/overview1.jpg');
 
-}
-
-.programs .image.testimonial3 {
-  @include background-cover('../../pages/services/case_studies/renew.jpg');
-  height: 200px;
-  background-size: contain;
 }
 
 .programs .image.crs {
@@ -104,6 +98,136 @@
 .tile {
   padding: 30px 10px 30px 10px;
 }
+
+.education {
+  padding-top: 40px;
+}
+.vaccine {
+  padding-top: 60px;
+}
+.covid {
+  padding-top: 60px;
+}
+@media (max-width : $width-desktop-xl) and (min-width: $width-desktop-lg) {
+  .education {
+    padding-top: 20px;
+  }
+  .vaccine {
+    padding-top: 10px;
+  }
+  .covid {
+    padding-top: 10px;
+  }
+}
+@media (max-width : $width-desktop-lg) and (min-width: $width-desktop) {
+  .education {
+    padding-top: 40px;
+  }
+  .vaccine {
+    padding-top: 10px;
+  }
+  .covid {
+    padding-top: 10px;
+  }
+}
+@media (max-width : $width-desktop) and (min-width: $width-mobile) {
+  .education {
+    padding-top: 60px;
+  }
+  .vaccine , .covid {
+    padding-top: 0px;
+  }
+  .reproductive , .mch {
+    margin-bottom: 0px;
+  }
+  .nutrition {
+    margin-top : 40px;
+  }
+}
+@media (max-width : $width-mobile) {
+  .education {
+    padding-top: 0px;
+  }
+  .vaccine {
+    padding-top: 0px;
+  }
+  .covid {
+    padding-top: 0px;
+  }
+  .reproductive {
+    margin-bottom: 10px;
+  }
+  .nutrition {
+    margin-top : 0px;
+    margin-bottom: 10px;
+  }
+  .mch {
+    margin-bottom: 10px;
+  }
+}
+@media (min-width : $width-desktop-xl) {
+  .chatbots {
+    padding-top: 40px;
+  }
+  .precision {
+    padding-top: 40px;
+  }
+}
+@media (max-width: $width-desktop-xl) and  (min-width : $width-desktop-lg) {
+  .chatbots {
+    padding-top: 40px;
+  }
+  .precision {
+    padding-top: 40px;
+  }
+}
+@media (max-width : $width-desktop-lg) {
+  .chatbots {
+    padding-top: 20px;
+  }
+}
+@media (max-width : $width-desktop-xl) and (min-width: $width-desktop-lg) {
+  .card-1 {
+    padding-top: 20px;
+  }
+  .card-2 {
+    padding-top: 40px;
+  }
+}
+@media (max-width : $width-desktop-xl) and (min-width: $width-desktop-lg){
+  .card-4 {
+    padding-top: 40px;
+  }
+}
+@media (min-width : $width-desktop-xl) {
+  .card-1 {
+    padding-top: 40px;
+  }
+}
+
+.namaste , .resilience {
+  padding-top : 40px;
+}
+.namaste_cta {
+  padding-top : 50px;
+}
+@media (max-width : $width-desktop-xl) and (min-width: $width-desktop-lg) {
+  .resilience {
+    padding-top : 60px;
+  }
+  .namaste_cta {
+    padding-top : 70px;
+  }
+}
+@media (max-width : $width-desktop-lg) {
+  .resilience , .namaste {
+    padding-top: 0px;
+  }
+  .namaste_cta {
+    padding-top : 20px;
+  }
+}
+
 .large {
   color: #FFFFFF !important;
 }

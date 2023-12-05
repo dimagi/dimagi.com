@@ -1,13 +1,13 @@
 {% load i18n %}
 {% load dimagidotcom %}
 
-<section class="testimonial programs turquoise-theme" 
+<section class="testimonial programs blue-theme" 
          data-lazybg="true" 
          id="programs">
   <div class="accent-gray-bg">
     <div class="content pad-vert-small">
       <div class="mdc-sector-program content-width-medium">
-        <h2 class="align-center turquoise pad-top-small">
+        <h2 class="align-center blue pad-top-small">
           {% blocktrans %}
             Amplifying frontline impact
           {% endblocktrans %}
@@ -20,29 +20,32 @@
         </p>
       </div>
       <div class="grid grid-3-at-large grid-1-at-medium grid-row-equal-heights grid-col-space-small pad-top-medium">
-        <div class="column  pad-bottom-small ">
+        <div class="column pad-bottom-small ">
           <div class="pad-bottom-base white-bg">
             <div class="image testimonial1"
                  data-lazybg="true"></div>
             <div class="pad-line pad-top-none-at-large pad-top-line-at-extra-large">
               <h6>
                 {% blocktrans %}
-                  Suaahara II: CommCare for Community-Based Maternal & Child Health
+                  Neurodevelopment and Autism in South Asia: Treatment and Evidence (NAMASTE)
                 {% endblocktrans %}
               </h6>
               <div class="body-color">
-                <p class="pad-bottom-base">
+                <p class=" namaste">
                 {% blocktrans %}
-                  USAID-funded program implementing a combination of nutrition-specific
-                  and nutrition-sensitive interventions throughout Nepal.
+                  Dimagi and Sangath collaborate to develop NAMASTE program, funded by NIHR, UK, 
+                  using an app for home-based counseling of parents with autistic children, adressing
+                  the linited access to early detection and intervention services in South Asia.
                 {% endblocktrans %}
                 </p>
               </div>
-              <p class="pad-top-line"><a href="{% url 'case_study' 'suaahara-II-mch' %}" class="arrow link-turquoise">
+              <p class="namaste_cta">
+                <a href="{% url 'blog_post' 'namaste' %}" class="arrow link-blue">
                 {% blocktrans %}
                   Read More 
                 {% endblocktrans %}
-              </a></p>
+                </a>
+              </p>
             </div>
           </div>
         </div>{# .column #}
@@ -54,20 +57,20 @@
             <div class="pad-line pad-top-none-at-large pad-top-line-at-extra-large">
               <h6>
                 {% blocktrans %}
-                  CommCare Precision Tasking Framework: A Prioritized Tasking
-                  Solution for Supervisors and Health Workers
+                  WellMe: The Resilience Application for Frontline Workers
                 {% endblocktrans %}
               </h6>
               <div class="body-color">
-                <p class="pad-bottom-base">
+                <p class="pad-bottom-base-at-extra-large pad-bottom-base-at-large pad-bottom-none-at-small resilience">
                 {% blocktrans %}
-                  Dimagi has created a new Prioritized Tasking Framework that
-                  aims to help CHWs focus on service delivery, enable data-driven
-                  decision making and provide patients access to better care.
+                  Dimagi released WellMe, a resilience-building application for Frontline Workers, 
+                  with the goal of enhancing wellbeing for these workers; the team now reflects on 
+                  the progress towards their hypotheses, the feedback from Frontline Workers, and 
+                  the questions they aim to address.
                 {% endblocktrans %}
                 </p>
               </div>
-              <p class="pad-top-line"><a href="{% url 'blog_post' 'commcare-precision-tasking-framework' %}" class="arrow link-turquoise">
+              <p class="pad-top-line"><a href="{% url 'blog_post' 'wellme-update2' %}" class="arrow link-blue">
                 {% blocktrans %}
                   Read More 
                 {% endblocktrans %}
@@ -76,29 +79,33 @@
           </div>
         </div>{# .column #}
 
-        <div class="column  pad-bottom-small ">
+        <div class="column pad-bottom-small ">
           <div class="pad-bottom-base white-bg">
             <div class="image testimonial3"
                  data-lazybg="true"></div>
             <div class="pad-line pad-top-none-at-large pad-top-line-at-extra-large">
               <h6>
                 {% blocktrans %}
-                  MiracleFeet: CommCare for Treating Congenital Defects
+                  Johnson & Johnson Foundation: Leveraging analytics to develop engagement profiles 
+                  for a digital resilience message program, informing scale efforts.
                 {% endblocktrans %}
               </h6>
               <div class="body-color">
-                <p class="pad-bottom-base">
+                <p class="pad-bottom-line-at-extra-large pad-bottom-base-at-large">
                 {% blocktrans %}
-                  Dimagi created a universal tool to track treatment and program data
-                  for clubfoot, a common and treatable birth defect historically overlooked in many LMICs.
+                  Dimagi has partnered with the Johnson & Johnson Center for Health Worker Innovation 
+                  to develop a digital mental health toolbox for health workers in LMICs, with a focus 
+                  on resilience skills to combat stress and burnout.
                 {% endblocktrans %}
                 </p>
               </div>
-              <p class="pad-top-line"><a href="{% url 'case_study' 'miracle-feet' %}" class="arrow link-turquoise">
+              <p class="pad-top-small-at-extra-large pad-top-medium-at-large pad-top-line-at-small">
+                <a href="{% url 'blog_post' 'johnson-johnson-foundation-leveraging-advanced-analytics-to-develop-engagement-profiles' %}" class="arrow link-blue">
                 {% blocktrans %}
                   Read More 
                 {% endblocktrans %}
-              </a></p>
+                </a>
+              </p>
             </div>
           </div>
         </div>{# .column #}
@@ -110,24 +117,26 @@
             <div class="pad-line pad-top-none-at-large pad-top-line-at-extra-large">
               <h6>
                 {% blocktrans %}
-                  RTI International – USAID Integrated Early Childhood Development (IECD) Activity
+                  How Chatbots Can Support the Right to Health
                 {% endblocktrans %}
               </h6>
               <div class="body-color">
-                <p class="pad-bottom-base">
+                <p class="pad-top-line-at-extra-large card-4">
                 {% blocktrans %}
-                  RTI International (RTI), an independent nonprofit research and
-                  international development institute, is embarking on a new
-                  five-year project to support the Royal Government of Cambodia’s
-                  efforts to improve child development for children under five years of age.
+                  In the pursuit of universal health coverage, there are many forms
+                  of direct-to-client solutions in development, such as mobile apps
+                  and chatbots. Dimagi's Director of Consumer Innovations explains
+                  our approach to developing such tools.
                 {% endblocktrans %}
                 </p>
               </div>
-              <p class="pad-top-line"><a href="{% url 'blog_post' 'rti-international-usaid-iecd-activity' %}" class="arrow link-turquoise">
-                {% blocktrans %}
-                  Read More 
-                {% endblocktrans %}
-              </a></p>
+              <p class="chatbots ">
+                <a href="{% url 'blog_post' 'chatbots-support-the-right-to-health' %}" class="arrow link-blue">
+                  {% blocktrans %}
+                    Read More 
+                  {% endblocktrans %}
+                </a>
+              </p>
             </div>
           </div>
         </div>{# .column #}
@@ -139,20 +148,20 @@
             <div class="pad-line pad-top-none-at-large pad-top-line-at-extra-large">
               <h6>
                 {% blocktrans %}
-                  How Chatbots Can Support the Right to Health
+                  RTI International – USAID Integrated Early Childhood Development (IECD) Activity
                 {% endblocktrans %}
               </h6>
               <div class="body-color">
-                <p class="pad-bottom-base">
+                <p class="pad-top-line-at-extra-large pad-top-line-at-large">
                 {% blocktrans %}
-                  In the pursuit of universal health coverage, there are many forms
-                  of direct-to-client solutions in development, such as mobile apps
-                  and chatbots. Dimagi's Director of Consumer Innovations explains
-                  our approach to developing such tools.
+                  RTI International (RTI), an independent nonprofit research and
+                  international development institute, is embarking on a new
+                  five-year project to support the Royal Government of Cambodia’s
+                  efforts to improve child development for children under five years of age.
                 {% endblocktrans %}
                 </p>
               </div>
-              <p class="pad-top-line"><a href="{% url 'blog_post' 'chatbots-support-the-right-to-health' %}" class="arrow link-turquoise">
+              <p class="pad-top-line"><a href="{% url 'blog_post' 'rti-international-usaid-iecd-activity' %}" class="arrow link-blue">
                 {% blocktrans %}
                   Read More 
                 {% endblocktrans %}
@@ -168,20 +177,20 @@
             <div class="pad-line pad-top-none-at-large pad-top-line-at-extra-large">
               <h6>
                 {% blocktrans %}
-                  The Value of User Testing: Supporting Community Health
-                  Workers With Digital Tools in India
+                  CommCare Precision Tasking Framework: A Prioritized Tasking
+                  Solution for Supervisors and Health Workers
                 {% endblocktrans %}
               </h6>
               <div class="body-color">
-                <p class="pad-bottom-base">
+                <p class="pad-bottom-line">
                 {% blocktrans %}
-                  Dimagi has partnered with Johnson & Johnson to explore the
-                  development of an evidence-based, free, and adaptable mobile
-                  messaging framework to boost health worker resilience.
+                  Dimagi has created a new Prioritized Tasking Framework that
+                  aims to help CHWs focus on service delivery, enable data-driven
+                  decision making and provide patients access to better care.
                 {% endblocktrans %}
                 </p>
               </div>
-              <p class="pad-top-line"><a href="{% url 'blog_post' 'user-testing-chw-resilience-messaging' %}" class="arrow link-turquoise">
+              <p class="precision"><a href="{% url 'blog_post' 'commcare-precision-tasking-framework' %}" class="arrow link-blue">
                 {% blocktrans %}
                   Read More 
                 {% endblocktrans %}
