@@ -75,7 +75,7 @@ def _get_posts(category, page=None, num_posts=None):
 
 def _get_commcare_providers(category, page=None, num_posts=None):
     post_data = get_json(
-        category.slug, page=page, num_posts=20)
+        category.slug, page=page, num_posts=30)
     return {
         'posts': [BlogPost(data) for data in post_data['posts']],
         'total': post_data['total'],
