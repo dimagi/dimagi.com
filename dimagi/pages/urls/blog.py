@@ -44,5 +44,4 @@ blog_urls = [
     url(r'^mobile-data-collection-how-to-choose-the-right-tool/$', mobile_data_collection_blog_post),    
     url(r'^announcing-dimagi-south-africas-commcare-training-centre/$', redirect.page('blog_home')),
     url(r'^(?P<slug>[\w-]+)/$', post, name='blog_post'),
-    url(r'^highlights-enterprise-summit-2023/$', redirect.blog('enterprise-summit-2023')),
 ]

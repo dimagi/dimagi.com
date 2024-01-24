@@ -176,4 +176,5 @@ redirect_urlpatterns = [
     url(r'^blog/mobile-data-collection-standards/$', redirect.blog('mobile-data-collection-mobile-survey-design')),
     url(r'^blog/mobile-data-collection-design-and-test/$', redirect.blog('mobile-data-collection-mobile-survey-design')),
     url(r'^blog/mobile-data-collection-implement-and-train/$', redirect.blog('mobile-data-collection-app-deploy')),
+    url(r'^blog/highlights-enterprise-summit-2023/$', redirect.blog('enterprise-summit-2023')),
 ]
