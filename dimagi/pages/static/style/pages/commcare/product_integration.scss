@@ -131,11 +131,6 @@
     @include integration-logo-resolution;
   }
 
-  .export {
-    @include background-cover('../../../../static/pages/commcare/product-integration/exportNew.jpg');
-    @include integration-logo-resolution;
-  }
-
   .dhis2 {
     @include background-cover('../../../../static/pages/commcare/product-integration/dhis2.jpg');
     @include integration-logo-resolution;
