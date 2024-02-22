@@ -16,23 +16,16 @@
 
 .news-images .image.blog1 {
   @include background-cover('../../../pages/sectors/agriculture-extension-programs/news/blog1.jpg');
-  height: 200px;
-  background-size: contain;
-  background-position: left;
-}
-
-.news-images .image.blog2 {
-  @include background-cover('../../../pages/sectors/agriculture-extension-programs/news/blog2.jpg');
-  height: 200px;
-  background-size: contain;
-  background-position: left;
+  height: 250px;
+  background-size: cover;
+  background-position: center;
 }
 
 .news-images .image.blog3 {
   @include background-cover('../../../pages/sectors/agriculture-extension-programs/news/blog3.jpg');
-  height: 200px;
-  background-size: contain;
-  background-position: left;
+  height: 250px;
+  background-size: cover;
+  background-position: center;
 }
 
 .programs-images .image.featured-project1 {
