@@ -19,25 +19,18 @@
   @include make-bg(hero-data-image, '../../../pages/commcare/product-integration/intro/hero', $_base-height, $_height-by-size);
 }
 
-.news-images .image.blog1 {
-  @include background-cover('../../../pages/commcare/product-integration/news/powerbi.jpg');
-  height: 200px;
-  background-size: contain;
-  background-position: left;
-}
-
 .news-images .image.blog2 {
   @include background-cover('../../../pages/commcare/product-integration/news/dhis2.jpg');
-  height: 200px;
-  background-size: contain;
-  background-position: left;
+  height: 260px;
+  background-size: cover;
+  background-position: center;
 }
 
 .news-images .image.blog3 {
   @include background-cover('../../../pages/commcare/product-integration/news/report.jpg');
-  height: 200px;
-  background-size: contain;
-  background-position: left;
+  height: 260px;
+  background-size: cover;
+  background-position: center;
 }
 
 .part3 {
@@ -128,11 +121,6 @@
 
   .powerbi {
     @include background-cover('../../../../static/pages/commcare/product-integration/powerbi.jpg');
-    @include integration-logo-resolution;
-  }
-
-  .export {
-    @include background-cover('../../../../static/pages/commcare/product-integration/export.jpg');
     @include integration-logo-resolution;
   }
 
