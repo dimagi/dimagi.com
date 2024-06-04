@@ -58,7 +58,7 @@
       {% static 'pages/home/default-thumbnail-card.png' %}
     {% endblock %}{% endcapture %}
 
-    <title>{{ page_title|escape|TRIM }}</title>
+    <title>{{ page_title|safe }}</title>
     <meta name="description"
           content="{{ page_description|escape|TRIM }}">
 
