@@ -35,6 +35,11 @@ def blog(slug):
         return HttpResponsePermanentRedirect(reverse('blog_post', args=[slug]))
     return _redirect
 
+def commcare_provider(slug):
+    def _redirect(request):
+        return HttpResponsePermanentRedirect(reverse('commcare_provider', args=[slug]))
+    return _redirect
+
 
 def team_member(office, slug):
     def _redirect(request):

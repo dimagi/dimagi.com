@@ -119,6 +119,9 @@ def _get_totals_context(page, total_posts, posts_per_page, num_queried_posts):
 
 @populate_tags_in_request
 def home(request):
+    print('-------------------------------------------------')
+    print(request)
+    print('**********************************************')
     posts = _get_posts(ARCHIVE)['posts']
     popular = [BlogPost(p) for p in get_json('blog/popular', num_posts=3)['posts']]
     context = _get_global_context(request)
@@ -206,8 +209,6 @@ def archive(request, category=None, page=None):
                 'archive_category_page', args=[category.slug, page + 1]
             )
         context['next_url'] = next_url + append_to_url
-
-    print(posts)
     
     return render(request, 'pages/blog/archive.html', context)
 
